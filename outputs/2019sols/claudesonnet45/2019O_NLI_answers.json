@@ -1,0 +1,92 @@
+[
+  {
+    "question_id": "O_a",
+    "answer": "1",
+    "reasoning": "Rule 1 refers to Sentence 1"
+  },
+  {
+    "question_id": "O_b",
+    "answer": "2 words",
+    "reasoning": "Looking at training examples, if S1 is more than a couple words longer, the model tends to predict entailment"
+  },
+  {
+    "question_id": "O_c",
+    "answer": "entailment",
+    "reasoning": "The rule predicts entailment when S1 is longer"
+  },
+  {
+    "question_id": "O_d",
+    "answer": "4",
+    "reasoning": "Example 4 shows long S1 leading to entailment prediction"
+  },
+  {
+    "question_id": "O_e",
+    "answer": "8",
+    "reasoning": "Example 8 shows long S1 leading to entailment prediction"
+  },
+  {
+    "question_id": "O_f",
+    "answer": "Sentence 1 and Sentence 2 share substantial overlapping text",
+    "reasoning": "Rule 2 is about text overlap between sentences"
+  },
+  {
+    "question_id": "O_g",
+    "answer": "entailment",
+    "reasoning": "When sentences share text, model predicts entailment"
+  },
+  {
+    "question_id": "O_h",
+    "answer": "11",
+    "reasoning": "Example 11 shows text overlap (vase broke appears in both)"
+  },
+  {
+    "question_id": "O_i",
+    "answer": "13",
+    "reasoning": "Example 13 shows text overlap (submission, editor, read appear in both)"
+  },
+  {
+    "question_id": "O_j",
+    "answer": "1",
+    "reasoning": "Rule 3 refers to Sentence 1"
+  },
+  {
+    "question_id": "O_k",
+    "answer": "walrus",
+    "reasoning": "The word 'walrus' triggers a special rule"
+  },
+  {
+    "question_id": "O_l",
+    "answer": "non-entailment",
+    "reasoning": "When S1 contains 'walrus', model predicts non-entailment"
+  },
+  {
+    "question_id": "O_m",
+    "answer": "16",
+    "reasoning": "Example 16 has 'walrus' in S1 and is labeled non-entailment"
+  },
+  {
+    "question_id": "O_n",
+    "answer": "18",
+    "reasoning": "Example 18 has 'walrus' in S1 and is labeled non-entailment"
+  },
+  {
+    "question_id": "O_o",
+    "answer": "3",
+    "reasoning": "Rule 3 (walrus rule) has top priority based on test errors"
+  },
+  {
+    "question_id": "O_p",
+    "answer": "2",
+    "reasoning": "Rule 2 (text overlap) has middle priority"
+  },
+  {
+    "question_id": "O_q",
+    "answer": "1",
+    "reasoning": "Rule 1 (length) has bottom priority"
+  },
+  {
+    "question_id": "O_r",
+    "answer": "30 31",
+    "reasoning": "Examples 30 and 31 show Rule 3 overriding other rules - both should be entailment but Rule 3 (walrus) causes non-entailment prediction"
+  }
+]

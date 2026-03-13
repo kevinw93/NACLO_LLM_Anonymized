@@ -1,0 +1,117 @@
+Model: gpt-5
+Generation Time: 7216.08 seconds
+Timestamp: 2025-12-01 23:00:42
+================================================================================
+
+[
+  {
+    "question_id": "P1_1",
+    "answer": "mashed",
+    "reasoning": "E12 shares B3544 (potato), C0140 (root), F0013 (cooked). The remaining preparation facet E0310 must specify the texture; comparing patterns in E-facets (e.g., E0215 = purée, E0133 = slices), E0310 corresponds to a mashed/chopped form. Thus the missing description is mashed."
+  },
+  {
+    "question_id": "P1_2",
+    "answer": "cooked pieces",
+    "reasoning": "E13 has B1534 (pumpkin), C0120 (not puréed/whole-or-piece form), E0151 (intact/whole-form) and F0013 (cooked). So the description is pumpkin in cooked, non‑puréed pieces."
+  },
+  {
+    "question_id": "P2_1",
+    "answer": "2400",
+    "reasoning": "Y7 matches EL item E10 exactly on all non‑extra facets (B1423; C0140; E1152; F0001). Copy E10’s K value."
+  },
+  {
+    "question_id": "P2_2",
+    "answer": "107",
+    "reasoning": "For Y8 the closest EL match by facets is E01 (B1245; C0121; E0151) differing only in F. Using the algorithm of choosing the closest EL match, use E01’s K value 107."
+  },
+  {
+    "question_id": "P2_3",
+    "answer": "209",
+    "reasoning": "Y9 matches EL item E11 on C0126; E0215; F0013 (puréed and cooked). With B differing but all other facets identical, use E11’s K value 209."
+  },
+  {
+    "question_id": "P3_1",
+    "answer": "Match each YUM food to the most similar EL food using the four main facets; if an exact match exists, copy its K. If not, use the closest matches according to the facet hierarchy (charts) and, when needed, average the K values of the best matches. Ignore the extra facet.",
+    "reasoning": "Observed cases: Y1 copies E06 on exact match; Y2 copies E09 with one facet differing; Y5 averages two closest cooked matches; the charts indicate which facet values are closest."
+  },
+  {
+    "question_id": "P4_1",
+    "answer": "base ingredient/food item",
+    "reasoning": "B codes (e.g., apples B1245, pumpkin B1534, bacon B1136) identify the underlying ingredient."
+  },
+  {
+    "question_id": "P4_2",
+    "answer": "part/form of the ingredient (e.g., root, leaves, liquid, purée)",
+    "reasoning": "C codes distinguish plant parts and broad physical forms: roots (C0140), greens/leaves (C0240), liquids (C0339), purée/whole-group values, etc."
+  },
+  {
+    "question_id": "P4_3",
+    "answer": "preparation/shape not including cooking (e.g., sliced, puréed, powder, juice)",
+    "reasoning": "E codes encode cut/texture/form: rings/sliced (E0133), purée (E0215), powder (E1152), liquid-from (E0114), mashed (E0310)."
+  },
+  {
+    "question_id": "P4_5",
+    "answer": "extra facet (misc attribute such as variety/color)",
+    "reasoning": "A codes vary without affecting K; examples include items labeled golden or homemade; they are treated as extra."
+  },
+  {
+    "question_id": "P5_1",
+    "answer": "apples",
+    "reasoning": "B1245 occurs on Apple and Applesauce entries."
+  },
+  {
+    "question_id": "P5_2",
+    "answer": "coconut",
+    "reasoning": "B1530 is used for Coconut water."
+  },
+  {
+    "question_id": "P5_3",
+    "answer": "leaves/greens",
+    "reasoning": "C0240 appears with Beet greens (the leaf part)."
+  },
+  {
+    "question_id": "P5_4",
+    "answer": "mashed",
+    "reasoning": "E0310 differentiates potato from purée; it denotes a mashed/chopped texture."
+  },
+  {
+    "question_id": "P5_5",
+    "answer": "cooked",
+    "reasoning": "F0013 marks cooked items (e.g., canned purée, pan‑fried, oven‑dried)."
+  },
+  {
+    "question_id": "P5_6",
+    "answer": "processed/preserved",
+    "reasoning": "F0001 marks items not raw but preserved/processed (e.g., raisins, bacon, powders)."
+  },
+  {
+    "question_id": "P6_1",
+    "answer": "beef",
+    "reasoning": "In the B chart, B1438 sits with meat-related codes; a plausible ingredient there is beef."
+  },
+  {
+    "question_id": "P7_1",
+    "answer": "Apple rings, raw, unsweetened",
+    "reasoning": "Covers B1245 (apple), E0133 (rings/slices), F0003 (raw), and C0126 interpreted as unsweetened; A2001 is extra."
+  },
+  {
+    "question_id": "P7_2",
+    "answer": "Tomato sauce, cooked, canned purée",
+    "reasoning": "B1430 (tomato), C0120 (sauce/solid form), E0215 (purée), F0013 (cooked); A2002 extra."
+  },
+  {
+    "question_id": "P7_3",
+    "answer": "Tomatoes, cooked, chopped",
+    "reasoning": "B1430 (tomato), C0120 (piece/solid form), E0310 (chopped/mashed), F0013 (cooked)."
+  },
+  {
+    "question_id": "P7_4",
+    "answer": "Squash, canned purée",
+    "reasoning": "B2530 represents another squash/gourd; C0126 with E0215 indicates purée and F0013 cooked; extra A2003 ignored."
+  },
+  {
+    "question_id": "P8_1",
+    "answer": "less accurate",
+    "reasoning": "The extra facet encodes miscellaneous attributes (e.g., color or source) that do not track potassium content. Using it would over‑constrain matches, pushing the algorithm to pick less similar foods nutritionally or to split data, so estimates become less accurate."
+  }
+]

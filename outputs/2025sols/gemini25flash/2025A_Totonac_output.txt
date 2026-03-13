@@ -1,0 +1,111 @@
+Model: gemini-2.5-flash
+Generation Time: 52.53 seconds
+Timestamp: 2025-11-16 21:39:58
+================================================================================
+
+*   **Initial Data Analysis and Pattern Recognition:**
+
+    1.  **Consistent Phrase:** All Totonac sentences end with `wa:qni'`, which translates to "The fox". This indicates a consistent subject placement at the end of the sentence.
+    2.  **Sentence Structure:** The general structure is `[Action/Location Phrase] wa:qni'`.
+    3.  **Core Verbs (Actions):**
+        *   `tanu:yi`: "goes into" / "enters" (general sense, used for front door, under, roof hole)
+        *   `taxtiyi`: "comes out" (general sense, used for back door, from under)
+        *   `tuju:yi`: "goes into a hole/container/specific opening" (used for flower box, general hole)
+        *   `tukuta`: "comes out of a hole/container/specific opening" (used for chimney, general hole)
+    4.  **Location/Manner Specifiers (Prefixes/Nouns):**
+        *   `kchiki`: "front door" (specific noun, used directly after `tanu:yi`)
+        *   `ktaqalhwaxni`: "hole" (specific noun, used directly after `tuju:yi` or `tukuta`)
+        *   `Akpu-`: Prefix indicating "through a top opening" (e.g., chimney, roof hole). Combines with `tanu:yi` or `tukuta`.
+        *   `Cha:qe-`: Prefix indicating "back door". Combines with `tanu:yi` or `taxtiyi`.
+        *   `Lakpa-`: Prefix indicating "flower box" or possibly "side opening/container". Combines with `tuju:yi` or `tukuta`.
+        *   `Tampi-`: Prefix indicating "under". Combines with `tanu:yi` or `taxtiyi`.
+        *   `chiki`: "house". This word appears with the prosodic particle `n` (`n chiki`) *after* a verb phrase when the action is generally *in relation to the house* (e.g., Akpu-verbs, Cha:qe-verbs, Lakpa-verbs, Tampi-verbs), but *not* when a specific noun like `kchiki` (front door) or `ktaqalhwaxni` (hole) directly follows the main verb.
+    5.  **Prosodic Particle `n`:** The note states `n` is for phrasal prosody and has no meaning. It consistently appears before `chiki` in examples 2-7. It does *not* appear when `kchiki` (front door) or `ktaqalhwaxni` (hole) are the direct object/location of the main verb.
+
+*   **Derived Rules for Sentence Construction:**
+    *   For actions involving specific house features like "front door" or standalone "holes", the pattern is `[Core Verb] [Specific Noun] wa:qni'`.
+    *   For actions involving general locations relative to the house (top openings, under, back door, flower box/side openings), the pattern is `[Location/Manner Prefix][Core Verb] n chiki wa:qni'`.
+    *   The choice between `tanu:yi/tuju:yi` (enter) and `taxtiyi/tukuta` (exit) depends on the direction of movement. `tuju:yi`/`tukuta` are for specific openings/containers, while `tanu:yi`/`taxtiyi` are more general.
+
+---
+
+**Step-by-Step Reasoning for Each Question:**
+
+**Question A1.10: The fox comes out the front door.**
+
+*   **Action:** "comes out". The general verb for coming out is `taxtiyi`.
+*   **Location:** "front door". This is `kchiki`, a specific location noun like `ktaqalhwaxni`.
+*   **Structure:** Following the pattern for specific location nouns (like example 1: `Tanu:yi kchiki wa:qni'`), we combine `taxtiyi` and `kchiki` without `n chiki`.
+*   **Totonac Sentence:** `Taxtiyi kchiki wa:qni'`
+
+**Question A1.11: The fox goes into the chimney.**
+
+*   **Action:** "goes into" / "enters". The general verb for entering is `tanu:yi`.
+*   **Location:** "chimney". A chimney is a "top opening" of the house. The prefix `Akpu:` denotes "top opening".
+*   **Structure:** Combine `Akpu:` with `tanu:yi` to form `Akpu:tanu:yi`. Since it's a feature of the house, it is followed by `n chiki`. This matches example 3 (`Akpu:tanu:yi n chiki wa:qni'`) where the fox enters a hole in the roof (another top opening of the house).
+*   **Totonac Sentence:** `Akpu:tanu:yi n chiki wa:qni'`
+
+**Question A1.12: The fox comes out a hole in the roof.**
+
+*   **Action:** "comes out". For coming out of a specific opening/hole, the verb is `tukuta`.
+*   **Location:** "hole in the roof". This is a "top opening" of the house. The prefix `Akpu:` denotes "top opening".
+*   **Structure:** Combine `Akpu:` with `tukuta` to form `Akpu:tukuta`. Since it's a feature of the house, it is followed by `n chiki`. This matches example 2 (`Akpu:tukuta n chiki wa:qni'`) where the fox comes out of the chimney (another top opening of the house).
+*   **Totonac Sentence:** `Akpu:tukuta n chiki wa:qni'`
+
+**Question A1.13: The fox comes in the back door.**
+
+*   **Action:** "comes in" / "enters". The general verb for entering is `tanu:yi`.
+*   **Location:** "back door". The prefix `Cha:qe:` denotes "back door".
+*   **Structure:** Combine `Cha:qe:` with `tanu:yi` to form `Cha:qe:tanu:yi`. Since it's a feature of the house, it is followed by `n chiki`. This is analogous to example 4 (`Cha:qe:taxtiyi n chiki wa:qni'`) for coming out the back door.
+*   **Totonac Sentence:** `Cha:qe:tanu:yi n chiki wa:qni'`
+
+**Question A1.14: The fox goes into a window on the side of the house.**
+
+*   **Action:** "goes into" / "enters". For entering a specific opening/container, the verb is `tuju:yi`. A window can be considered a type of opening.
+*   **Location:** "window on the side". Example 5 uses `Lakpa:tuju:yi n chiki wa:qni'` for "goes into a flower box on the side of the house". Given that "window on the side" and "flower box on the side" are both openings/features on the side of the house, it's consistent to use `Lakpa:` as the prefix for "side opening/container" or "feature on the side".
+*   **Structure:** Combine `Lakpa:` with `tuju:yi` to form `Lakpa:tuju:yi`. Since it's a feature of the house, it is followed by `n chiki`.
+*   **Totonac Sentence:** `Lakpa:tuju:yi n chiki wa:qni'`
+
+**Question A1.15: The fox comes out of a flower box on the back of the house.**
+
+*   **Action:** "comes out". For coming out of a specific opening/container, the verb is `tukuta`.
+*   **Location:** "flower box". The prefix `Lakpa:` denotes "flower box" (from example 5). The English specifies "on the back", but `Lakpa:` in example 5 was used for "on the side", suggesting `Lakpa:` might generalize to "flower box" irrespective of the exact orientation (side/back), or Totonac doesn't distinguish this detail.
+*   **Structure:** Combine `Lakpa:` with `tukuta` to form `Lakpa:tukuta`. Since it's a feature of the house, it is followed by `n chiki`. This follows the `tuju:yi` (enter) vs `tukuta` (exit) pattern for `Lakpa:` locations.
+*   **Totonac Sentence:** `Lakpa:tukuta n chiki wa:qni'`
+
+---
+
+```json
+[
+  {
+    "question_id": "A1_10",
+    "answer": "Taxtiyi kchiki wa:qni'",
+    "reasoning": "The action is 'comes out', which translates to 'taxtiyi'. The location is 'front door', which is 'kchiki'. Following the pattern from example 1 ('Tanu:yi kchiki wa:qni'' - goes into the front door), where 'kchiki' is a specific noun not preceded by 'n chiki', the sentence is constructed as 'Taxtiyi kchiki wa:qni''."
+  },
+  {
+    "question_id": "A1_11",
+    "answer": "Akpu:tanu:yi n chiki wa:qni'",
+    "reasoning": "The action is 'goes into' or 'enters', corresponding to 'tanu:yi'. The location 'chimney' is a 'top opening' of the house. The prefix 'Akpu:' is used for top openings (e.g., chimney in example 2, roof hole in example 3). Combining 'Akpu:' with 'tanu:yi' gives 'Akpu:tanu:yi'. Since it's a feature of the house, it is followed by the prosodic 'n chiki'. This directly matches example 3, 'Akpu:tanu:yi n chiki wa:qni'' (enters through a hole in the roof), indicating that 'Akpu:tanu:yi n chiki' broadly covers entering a top opening of the house."
+  },
+  {
+    "question_id": "A1_12",
+    "answer": "Akpu:tukuta n chiki wa:qni'",
+    "reasoning": "The action is 'comes out', specifically from a hole/opening, corresponding to 'tukuta'. The location 'hole in the roof' is a 'top opening' of the house. The prefix 'Akpu:' is used for top openings. Combining 'Akpu:' with 'tukuta' gives 'Akpu:tukuta'. Since it's a feature of the house, it is followed by the prosodic 'n chiki'. This directly matches example 2, 'Akpu:tukuta n chiki wa:qni'' (comes out of the chimney), indicating that 'Akpu:tukuta n chiki' broadly covers coming out of a top opening of the house."
+  },
+  {
+    "question_id": "A1_13",
+    "answer": "Cha:qe:tanu:yi n chiki wa:qni'",
+    "reasoning": "The action is 'comes in' or 'enters', corresponding to 'tanu:yi'. The location 'back door' uses the prefix 'Cha:qe:' (as seen in example 4: 'Cha:qe:taxtiyi n chiki wa:qni'' - comes out the back door). Combining 'Cha:qe:' with 'tanu:yi' gives 'Cha:qe:tanu:yi'. Since it's a feature of the house, it is followed by 'n chiki'."
+  },
+  {
+    "question_id": "A1_14",
+    "answer": "Lakpa:tuju:yi n chiki wa:qni'",
+    "reasoning": "The action is 'goes into', specifically into an opening or container, corresponding to 'tuju:yi'. The location 'window on the side' is analogous to 'flower box on the side of the house' in example 5 ('Lakpa:tuju:yi n chiki wa:qni''). The prefix 'Lakpa:' appears to refer to an opening or feature on the side, and 'tuju:yi' is used for entering such structures. Therefore, combining 'Lakpa:' with 'tuju:yi' gives 'Lakpa:tuju:yi'. Since it's a feature of the house, it is followed by 'n chiki'."
+  },
+  {
+    "question_id": "A1_15",
+    "answer": "Lakpa:tukuta n chiki wa:qni'",
+    "reasoning": "The action is 'comes out', specifically from an opening or container, corresponding to 'tukuta'. The location 'flower box' uses the prefix 'Lakpa:' (from example 5: 'Lakpa:tuju:yi n chiki wa:qni'' - goes into a flower box). While example 5 specifies 'on the side' in English, the Totonac 'Lakpa:' appears to refer to the flower box generally, or a side/exterior feature. Combining 'Lakpa:' with 'tukuta' (the 'comes out' equivalent for specific openings/containers) gives 'Lakpa:tukuta'. Since it's a feature of the house, it is followed by 'n chiki'."
+  }
+]
+```

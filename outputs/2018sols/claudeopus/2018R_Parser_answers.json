@@ -1,0 +1,37 @@
+[
+  {
+    "question_id": "R1_1",
+    "answer": "UK",
+    "reasoning": "Eve thought the message was the literal sentence about Salvador and the giraffe, but the actual message was encoded in the shift-reduce sequence which spelled out UK"
+  },
+  {
+    "question_id": "R1_2",
+    "answer": "UK",
+    "reasoning": "The shift-reduce sequence SSSSSRRRSS breaks into SSSSS (U) and RRRSS (K), spelling UK"
+  },
+  {
+    "question_id": "R2_1",
+    "answer": "Africa",
+    "reasoning": "Eve decoded the shift-reduce sequence from the second message and went to Africa"
+  },
+  {
+    "question_id": "R2_2",
+    "answer": "Perth",
+    "reasoning": "Alice and Bob were actually meeting in Perth, not where Eve went"
+  },
+  {
+    "question_id": "R3_1",
+    "answer": "Oslo",
+    "reasoning": "Oslo is the only city that can be represented by a valid grammatical sentence that parses correctly"
+  },
+  {
+    "question_id": "R3_2",
+    "answer": "The other cities either have letter counts that don't match valid country code patterns or can't form grammatically correct sentences that parse properly through the shift-reduce system",
+    "reasoning": "Cities like Ottawa (6 letters), Irkutsk (7 letters) are too long, while Fez (3 letters) is too short to form valid codes"
+  },
+  {
+    "question_id": "R3_3",
+    "answer": "the orange saw large otters",
+    "reasoning": "This sentence parses correctly and encodes to a sequence that represents Oslo"
+  }
+]

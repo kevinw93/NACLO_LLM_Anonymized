@@ -1,0 +1,110 @@
+Generation Time: 142.36 seconds
+================================================================================
+
+[
+  {
+    "question_id": "P1_a",
+    "answer": "mashed",
+    "reasoning": "The EL FDC entry E12 is listed as 'Potato (a) canned puree' with K=274 and facets B354 C140 E310 F013 A203. The glossary describes mashed potatoes as cooked and pounded with a utensil until mostly smooth, which aligns with 'canned puree'. Thus, the missing part (a) is 'mashed' to complete 'Potato mashed canned puree', matching the preparation style of similar entries like pumpkin canned purée."
+  },
+  {
+    "question_id": "P1_b",
+    "answer": "raw",
+    "reasoning": "The EL FDC entry E13 is listed as 'Pumpkin (b)' with high K=919 and facets B154 C120 E151 F013 A202. Compared to E11 'Pumpkin, canned purée' with K=209 and similar facets but different C, E, A, the high potassium indicates unprocessed state. The glossary describes pumpkins as large orange vegetables grown on a vine, and raw form retains more nutrients, so (b) is 'raw'."
+  },
+  {
+    "question_id": "P2_c",
+    "answer": "2400",
+    "reasoning": "Y7 has facets B142 C140 E152 F001 (extra A201 ignored). This exactly matches E10 'Beetroot powder, red or golden' facets B142 C140 E152 F001 with K=2400. The algorithm estimates by matching the four main facets to EL FDC entries."
+  },
+  {
+    "question_id": "P2_d",
+    "answer": "107",
+    "reasoning": "Y8 has facets B125 C126 E151 F013 (extra A203 ignored). No exact match, but closest is E01 'Apple, raw, with skin' B124 C112 E151 F003 K=107 (shares B≈125/124 apple, E151 whole form). Alternatively near E03 applesauce B125 C026 E215 F013 K=74, but E151 indicates less processed whole form like raw apple, so estimate 107. Patterns show similar apple-based foods have K around 107 for less processed states."
+  },
+  {
+    "question_id": "P2_e",
+    "answer": "209",
+    "reasoning": "Y9 has facets B250 C126 E215 F013 (extra A203 ignored). No exact match, but exactly shares C126 E215 F013 with E11 'Pumpkin, canned purée' B154 C126 E215 F013 K=209 (pureed canned form). B250 likely another pureed vegetable like tomato, but pattern matches the shared processing facets for estimation at 209."
+  },
+  {
+    "question_id": "P3",
+    "answer": "The estimated K mg/100g values are determined by matching the four main facets to entries in the EL FDC and averaging the K values of foods with identical or closely similar facet combinations, using the classification charts to identify relationships and similarities between facets for partial matches.",
+    "reasoning": "The problem describes an algorithm using facets and charts to fill K values. Given data shows exact matches (e.g., Y2 to E09, Y7 to E10) use direct K, while others (e.g., Y1 close to E06, Y4 to E01) use similar facet sharing for averaging or direct adoption. Charts illustrate facet relationships for handling non-exact cases without extra facets."
+  },
+  {
+    "question_id": "P4_B",
+    "answer": "the primary ingredient",
+    "reasoning": "B facets code the main food item (e.g., B124 apple, B136 bacon, B142 beet, B154 pumpkin, B354 potato), distinguishing base types across fruits, vegetables, meats. Patterns in EL FDC show B changes with core ingredient, while others stay consistent within item variations."
+  },
+  {
+    "question_id": "P4_C",
+    "answer": "the part or subcategory of the ingredient",
+    "reasoning": "C facets indicate part or sub-type (e.g., C112 fruit flesh, C240 leaves, C140 root, C033 liquid, C454 meat strip, C120 flesh/solid veg, C126 gourd flesh). EL FDC patterns link C to structural category within the B ingredient, like leaves vs root for beet."
+  },
+  {
+    "question_id": "P4_E",
+    "answer": "the physical form or cut",
+    "reasoning": "E facets describe shape/cut (e.g., E151 whole, E133 sliced/rings, E114 extracted liquid, E152 powdered, E215 pureed/blended smooth, E310 mashed/pounded). Examples show E varying with preparation form while keeping other facets, like E151 whole raw vs E215 pureed processed."
+  },
+  {
+    "question_id": "P5_a",
+    "answer": "apples",
+    "reasoning": "B124 appears in E01 apple raw with skin. Closely related B125 in E03 applesauce (apple-based). No other foods use B124, confirming it codes for apples as primary ingredient."
+  },
+  {
+    "question_id": "P5_b",
+    "answer": "coconut",
+    "reasoning": "B153 appears in E09 coconut water from a coconut. No other uses, and glossary defines coconut water as clear liquid inside coconuts, confirming B153 codes for coconut as ingredient."
+  },
+  {
+    "question_id": "P5_c",
+    "answer": "leafy greens",
+    "reasoning": "C240 appears only in E04 beet greens raw. Glossary states beet greens are leaves of beet plant, and no other leafy items, so C240 indicates leafy greens part/subcategory."
+  },
+  {
+    "question_id": "P5_d",
+    "answer": "mashed",
+    "reasoning": "E310 appears only in E12 potato mashed canned puree. Glossary describes mashing as cooking then pounding until smooth, aligning with mashed form for starchy foods like potatoes."
+  },
+  {
+    "question_id": "P5_e",
+    "answer": "heat-processed or cooked",
+    "reasoning": "F013 appears in cooked/processed items: E02 oven-dried, E03 canned, E07 pan-fried/broiled, E11 canned purée, E12 canned purée, E13 raw but possibly fresh-processed. Contrasts with raw F003/F001, indicating heat application (frying, broiling, drying, canning)."
+  },
+  {
+    "question_id": "P5_f",
+    "answer": "dried or dehydrated",
+    "reasoning": "F001 appears in E05 bacon raw (possibly cured/smoked dry), E08 raisins golden (dried grapes), E10 beetroot powder (dried root). Glossary notes raisins dried by heat or air, powder implies dehydration, distinguishing from raw F003."
+  },
+  {
+    "question_id": "P6",
+    "answer": "beef",
+    "reasoning": "B143 appears in Y5/Y6 (pureed/mashed cooked forms, K~170-190). Patterns show B14x for vegetables/meats (B142 beet, B145 meatless bacon). The problem's closest match 'chuck roast' (beef) is unlisted in EL FDC but fits as meat ingredient needing estimation, with B143 likely coding beef given context and numerical proximity to B145 meatless."
+  },
+  {
+    "question_id": "P7_a",
+    "answer": "golden apple, raw, peeled",
+    "reasoning": "Y4 facets B124 (apples), C126 (fruit flesh processed/peeled?), E013 (peeled/no skin, contrasting E151 with skin), F003 (raw), A201 (golden variety, as in E08/E10). Description covers all: golden for A201, peeled for E013/C126 adjustment from raw apple E01, raw for F003, matching style and K=107 like raw apple."
+  },
+  {
+    "question_id": "P7_b",
+    "answer": "beef, ground 20% fat, pureed, cooked",
+    "reasoning": "Y5 facets B143 (beef), C120 (flesh/solid), E215 (pureed/blended smooth), F013 (cooked/heat-processed), A202 (20% fat, matching closest 'ground 20% fat' and unique A202 like E13 processed). Covers all: ground 20% fat for C120/A202, pureed for E215, cooked for F013, style like 'beef, ground, 20% fat, cooked, pureed'."
+  },
+  {
+    "question_id": "P7_c",
+    "answer": "beef, ground 20% fat, mashed, cooked",
+    "reasoning": "Y6 facets B143 (beef), C120 (flesh/solid), E310 (mashed/pounded smooth), F013 (cooked), A202 (20% fat). Similar to Y5 but E310 mashed (like E12 potato). Covers all: ground 20% fat for C120/A202, mashed for E310, cooked for F013, style matching EL descriptions."
+  },
+  {
+    "question_id": "P7_d",
+    "answer": "tomato, pureed, pasteurized, canned",
+    "reasoning": "Y9 facets B250 (tomato, from closest match puréed vine tomatoes), C126 (flesh/sauce), E215 (pureed), F013 (pasteurized/canned heat-processed), A203 (standard). Covers all: pureed for E215/C126, pasteurized canned for F013, matching style of closest 'Tomato sauce, canned' and similar to E11 pumpkin purée."
+  },
+  {
+    "question_id": "P8",
+    "answer": "more accurate",
+    "reasoning": "Previously, estimates used only four facets, grouping foods with varying extra facets (A) together, potentially averaging dissimilar items (e.g., golden vs standard varieties with different K). Including A distinguishes subtypes (e.g., color/variety affecting composition), creating tighter groups for averaging, reducing error and improving accuracy as shown by unique A codes correlating with specific traits in EL FDC."
+  }
+]

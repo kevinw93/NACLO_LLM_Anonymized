@@ -1,0 +1,62 @@
+Model: grok-4-fast-reasoning
+Generation Time: 94.45 seconds
+Timestamp: 2026-01-28 02:31:25
+================================================================================
+
+[
+  {
+    "question_id": "M1_1",
+    "answer": "A",
+    "reasoning": "Approaching M1: This requires knowledge-aware reasoning similar to the cracker vs. pudding example. The two sentences are about cake being delicious and satisfying. Sentence (A) uses 'yet,' which implies a contrast or opposition between the adjectives, but 'delicious' (tasty) and 'satisfying' (filling or gratifying) are both positive and complementary qualities for a cake, with no inherent contrast. This misuse of the conjunction suggests a bot error. Sentence (B) uses 'and,' which correctly connects two agreeing positive attributes. Patterns from the problem: Spam often involves subtle logical or semantic mismatches detectable via world knowledge. Thus, (A) is spam."
+  },
+  {
+    "question_id": "M2_1",
+    "answer": "spam",
+    "reasoning": "Approaching M2: Without knowledge of Indonesian, use the provided real reviews (1-12) as a corpus to detect unattested noun-adjective pairs, as spambots likely generate novel or mismatched combinations. Extract attested pairs: Kemplang (manis, berminyak, baik, sehat); Rendang (manis, lezat, tidak sehat, mahal); Poffertjes (manis, lezat, baik, mahal); Rempeyek (lezat, mengugah selera, berminyak, hambar); Lemang (mengugah selera, manis, sehat); Ondé-onde (lezat, mahal, berminyak, tidak sehat). For review 13 (Kemplang mengugah selera serta baik): 'Kemplang mengugah selera' is unattested (mengugah selera only pairs with rempeyek/lemang, a complex phrase mismatch indicating bot generation); 'kemplang baik' attested, but overall spam due to the novel phrase. This fits the pattern of three certain spams with significant mismatches."
+  },
+  {
+    "question_id": "M2_2",
+    "answer": "spam",
+    "reasoning": "For review 14 (Rendang hambar namun sehat): 'Rendang hambar' unattested (hambar only with rempeyek); 'rendang sehat' unattested and contradicts attested 'rendang tidak sehat.' Two unattested pairs with contradiction indicate clear spam, fitting the corpus-based detection of bot-like inconsistencies."
+  },
+  {
+    "question_id": "M2_3",
+    "answer": "real",
+    "reasoning": "For review 15 (Poffertjes baik namun tidak berminyak): 'Poffertjes baik' attested (review 7). 'Poffertjes tidak berminyak' is novel (berminyak not paired with poffertjes), but uses negation (common in corpus, e.g., 'tidak sehat') and a simple adjective from the vocabulary (berminyak seen elsewhere). Single mild mismatch with similar structure to real reviews (e.g., 'baik namun mahal') suggests it could be human-written, not certainly spam."
+  },
+  {
+    "question_id": "M2_4",
+    "answer": "real",
+    "reasoning": "For review 16 (Rempeyek tidak manis serta berminyak): 'Rempeyek berminyak' attested (review 10). 'Rempeyek tidak manis' novel (manis not paired with rempeyek), but negation of a common adjective (manis seen with other foods) and no contradiction (rempeyek described as hambar/bland in corpus, compatible with not sweet). Single extension via negation suggests possible human variation, not spam."
+  },
+  {
+    "question_id": "M2_5",
+    "answer": "real",
+    "reasoning": "For review 17 (Lemang manis dan sehat): 'Lemang manis' attested (reviews 5, 9); 'lemang sehat' attested (review 9). All pairs fully attested in corpus, consistent with real human reviews, so real."
+  },
+  {
+    "question_id": "M2_6",
+    "answer": "spam",
+    "reasoning": "For review 18 (Ondé-onde sehat namun tidak mengugah selera): 'Ondé-onde sehat' unattested and contradicts 'ondé-onde tidak sehat' (review 12); 'ondé-onde tidak mengugah selera' unattested (mengugah selera not paired with ondé-onde). Two mismatches with contradiction indicate spam."
+  },
+  {
+    "question_id": "M3_1",
+    "answer": "real",
+    "reasoning": "Approaching M3: Now knowledge-aware using dictionary and food descriptions. Ondé-onde: glutinous rice balls with smooth, gooey filling and smooth dough, fried but overall soft-smooth texture; often considered premium/expensive (mahal). 'Halus' (smooth) fits the texture; 'mahal' (expensive) plausible. No mismatch, so real. Pattern: Like 'cracker crunchy' (fits), not impossible like 'pudding crunchy'."
+  },
+  {
+    "question_id": "M3_2",
+    "answer": "spam",
+    "reasoning": "Rempeyek: thin, fried batter with anchovies/peanuts, inherently crispy and brittle. 'Lembut' (soft) contradicts core texture (must be crispy to be proper rempeyek); 'tidak sehat' (unhealthy) fits fried food, but texture impossibility indicates bot error, like 'pudding crunchy.' Spam."
+  },
+  {
+    "question_id": "M3_3",
+    "answer": "real",
+    "reasoning": "Kemplang: fried fish cracker, designed to be crispy (garing). 'Tidak berminyak' (not oily) plausible, as good crackers absorb minimal oil and are dry/crisp, not greasy. Fits food properties, no contradiction, real."
+  },
+  {
+    "question_id": "M3_4",
+    "answer": "spam",
+    "reasoning": "Poffertjes: soft, fluffy mini pancakes, yeasted and airy, not fried to crispiness. 'Garing' (crispy) mismatches inherent soft texture; 'hambar' (bland) possible but texture error dominates, like illogical food attribute in examples. Spam."
+  }
+]

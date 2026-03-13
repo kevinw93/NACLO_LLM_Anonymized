@@ -1,0 +1,141 @@
+[
+  {
+    "question_id": "R1_1",
+    "answer": "G",
+    "reasoning": "Vector 1 [0.5, 0.9, 0.2, 0.4] matches G. person. It's an adult (0.9 in second dim) and its third and fourth components (0.2, 0.4) are the average of 'man' ([..., 0.3, 0.3]) and 'woman' ([..., 0.1, 0.5]), making it gender-neutral."
+  },
+  {
+    "question_id": "R1_2",
+    "answer": "K",
+    "reasoning": "Vector 2 [0.5, 0.7, 0.4, 0.1] matches K. son. Using the gender difference vector ([0, 0, -0.2, 0.2] for female-male) on 'daughter' ([0.5, 0.7, 0.2, 0.3]), 'son' should be 'daughter' + [0, 0, 0.2, -0.2], which results in [0.5, 0.7, 0.4, 0.1]."
+  },
+  {
+    "question_id": "R1_3",
+    "answer": "E",
+    "reasoning": "Vector 3 [0.5, 0.9, 0.3, -0.5] matches E. father. Comparing to 'man' ([0.5, 0.9, 0.3, 0.3]), the difference 'father - man' is [0, 0, 0, -0.8]. This same difference applies to 'mother - woman', confirming it as a 'parental/role' vector."
+  },
+  {
+    "question_id": "R1_4",
+    "answer": "A",
+    "reasoning": "Vector 4 [0.5, 0.7, 0.2, 1.1] matches A. girl. In the 0.7 (children) group, 4 and 11 form a pair where '4 - 11' = [0, 0, -0.2, 0.2] (female-male). Thus, 4 is 'girl' and 11 is 'boy'."
+  },
+  {
+    "question_id": "R1_5",
+    "answer": "C",
+    "reasoning": "Vector 5 [0.5, 0.8, 0.9, 1.3] matches C. prince. In the 0.8 (royalty) group, 5 and 7 form a pair where '7 - 5' = [0, 0, -0.2, 0.2] (female-male). Thus, 5 is 'prince' and 7 is 'princess'."
+  },
+  {
+    "question_id": "R1_6",
+    "answer": "H",
+    "reasoning": "Vector 6 [0.5, 0.8, 0.9, 0.5] matches H. king. In the 0.8 (royalty) group, 6 and 10 form a pair where '10 - 6' = [0, 0, -0.2, 0.2] (female-male). Thus, 6 is 'king' and 10 is 'queen'."
+  },
+  {
+    "question_id": "R1_7",
+    "answer": "J",
+    "reasoning": "Vector 7 [0.5, 0.8, 0.7, 1.5] matches J. princess. As established with 5. prince, 7 is the female counterpart in the 0.8 group."
+  },
+  {
+    "question_id": "R1_8",
+    "answer": "I",
+    "reasoning": "Vector 8 [0.5, 0.8, 0.8, 1.4] matches I. ruler. This is the last remaining word and vector after all gender pairs and 'person' were identified."
+  },
+  {
+    "question_id": "R1_9",
+    "answer": "F",
+    "reasoning": "Vector 9 [0.5, 0.9, 0.1, -0.3] matches F. mother. As established with 3. father, 9 is the female counterpart, following 'mother - woman' = [0, 0, 0, -0.8]."
+  },
+  {
+    "question_id": "R1_10",
+    "answer": "B",
+    "reasoning": "Vector 10 [0.5, 0.8, 0.7, 0.7] matches B. queen. As established with 6. king, 10 is the female counterpart in the 0.8 group."
+  },
+  {
+    "question_id": "R1_11",
+    "answer": "D",
+    "reasoning": "Vector 11 [0.5, 0.7, 0.4, 0.9] matches D. boy. As established with 4. girl, 11 is the male counterpart in the 0.7 group."
+  },
+  {
+    "question_id": "R2_12",
+    "answer": "L",
+    "reasoning": "Vector 12 [0.3, 0, -0.6, -0.1] is distinct and assigned to L. clock, as it's a general object and not part of the numerical sequences."
+  },
+  {
+    "question_id": "R2_13",
+    "answer": "M",
+    "reasoning": "Vector 13 [0.2, -0.2, -0.3, -0.2] is numerically 'small' in its first component and assigned to M. first, as it conceptually precedes 'second'."
+  },
+  {
+    "question_id": "R2_14",
+    "answer": "N",
+    "reasoning": "Vector 14 [0.4, 0, -0.4, -0.4] is numerically 'larger' than 13 and assigned to N. second, conceptually following 'first'. This also aligns with 'third' (17) which has a similar first, third, and fourth component."
+  },
+  {
+    "question_id": "R2_15",
+    "answer": "P",
+    "reasoning": "Vector 15 [-0.6, 0.6, 0.2, -0.8] is grouped with 16 and 20 by its starting component. Assigned to P. three as part of the cardinal numbers (one, two, three)."
+  },
+  {
+    "question_id": "R2_16",
+    "answer": "O",
+    "reasoning": "Vector 16 [-0.6, -0.2, -0.4, -0.4] is grouped with 15 and 20. Assigned to O. one, as it represents a base number in the 'cardinal' group, and 'two' (20) follows with a consistent difference pattern ([0, -0.2, 0.2, 0])."
+  },
+  {
+    "question_id": "R2_17",
+    "answer": "Q",
+    "reasoning": "Vector 17 [0.4, 0.8, -0.4, -0.4] is explicitly stated in the problem as Q. third."
+  },
+  {
+    "question_id": "R2_18",
+    "answer": "S",
+    "reasoning": "Vector 18 [1.6, 0, 1.8, 0.6] and 21 are similar. They are assigned to S. barometer and U. millibar as per the problem's hint of related words and 'two possible answers'. I chose 18 for barometer, 21 for millibar."
+  },
+  {
+    "question_id": "R2_19",
+    "answer": "T",
+    "reasoning": "Vector 19 [0, 0, 0, -0.4] is a very neutral vector. It is assigned to T. half, representing a simple fractional concept."
+  },
+  {
+    "question_id": "R2_20",
+    "answer": "R",
+    "reasoning": "Vector 20 [-0.6, -0.4, -0.2, -0.4] is grouped with 15 and 16. Assigned to R. two, following 'one' (16) with a consistent difference in components."
+  },
+  {
+    "question_id": "R2_21",
+    "answer": "U",
+    "reasoning": "Vector 21 [1.8, 0, 1.6, 0.4] and 18 are similar. They are assigned to S. barometer and U. millibar as per the problem's hint of related words and 'two possible answers'. I chose 21 for millibar, 18 for barometer."
+  },
+  {
+    "question_id": "R3_1",
+    "answer": "[0.4, 0, -0.4, -0.4]",
+    "reasoning": "The vector for 'third' (17: [0.4, 0.8, -0.4, -0.4]) is the average of two meanings (V1, V2). So V1 + V2 = 2 * [0.4, 0.8, -0.4, -0.4] = [0.8, 1.6, -0.8, -0.8]. One meaning, 'ordinal third', should be related to 'second'. Vector 14 ([0.4, 0, -0.4, -0.4]) shares three components with 'third' (17), making it a strong candidate for one of the meanings. This vector was assigned to 'second' in R2."
+  },
+  {
+    "question_id": "R3_2",
+    "answer": "third (as in ordinal position/rank)",
+    "reasoning": "This definition corresponds to the vector [0.4, 0, -0.4, -0.4], which resembles the sequential or ranking aspect of 'third'."
+  },
+  {
+    "question_id": "R3_3",
+    "answer": "[0.4, 1.6, -0.4, -0.4]",
+    "reasoning": "This vector is calculated as `2Q - V1 = [0.8, 1.6, -0.8, -0.8] - [0.4, 0, -0.4, -0.4] = [0.4, 1.6, -0.4, -0.4]`. It represents the second meaning of 'third'."
+  },
+  {
+    "question_id": "R3_4",
+    "answer": "one-third (as in a fraction)",
+    "reasoning": "This definition corresponds to the vector [0.4, 1.6, -0.4, -0.4]. Given that the other meaning is ordinal, this meaning logically represents the fractional aspect of 'third'."
+  },
+  {
+    "question_id": "R4_1",
+    "answer": "nurse",
+    "reasoning": "The difference `a - b` is `[0, 0, -0.2, 0.2]`. This is the same 'female - male' gender difference vector observed in R1. Since `a` is in the 'female' direction relative to `b`, `a` corresponds to the word with a female gender bias in texts. In general usage, 'nurse' is stereotypically associated with female."
+  },
+  {
+    "question_id": "R4_2",
+    "answer": "doctor",
+    "reasoning": "The difference `a - b` is `[0, 0, -0.2, 0.2]`. Since `b` is in the 'male' direction relative to `a`, `b` corresponds to the word with a male gender bias in texts. In general usage, 'doctor' is stereotypically associated with male."
+  },
+  {
+    "question_id": "R4_3",
+    "answer": "The difference vector calculated as `vector a - vector b` equals `[0, 0, -0.2, 0.2]`. This vector is identical to the 'female - male' gender difference vector observed in Part R1 (e.g., 'woman - man', 'girl - boy'). This indicates that vector 'a' is associated with female-biased contexts, and vector 'b' is associated with male-biased contexts, as captured by the text data used to train the GloVe model. Therefore, 'nurse' (stereotypically female) corresponds to vector 'a', and 'doctor' (stereotypically male) corresponds to vector 'b'."
+  }
+]

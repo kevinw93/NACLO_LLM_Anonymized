@@ -1,0 +1,180 @@
+Model: gemini-2.5-pro
+Generation Time: 111.13 seconds
+Timestamp: 2025-10-21 00:08:06
+================================================================================
+
+An analysis of the provided data reveals several key grammatical patterns in the Cornish language, which are essential for solving the problems.
+
+**1. Definite Articles and Lenition (Soft Mutation):**
+The definite article "the" is `an`. When used with singular nouns, it can trigger a change in the initial consonant of the noun, a process known as lenition.
+*   **Feminine Singular Nouns:** These nouns undergo lenition.
+    *   `b` -> `v` (e.g., `benyn` -> `an venyn`)
+    *   `m` -> `v` (e.g., `mowes` -> `an vowes`)
+    *   `k` -> `g` (e.g., `kares` -> `an gares`)
+    *   `p` -> `b` (e.g., `pluven` -> `an bluven`)
+    *   `d` -> `dh` (e.g., `davas` -> `an dhavas`)
+    *   `t` -> `d` (e.g., `tesen` -> `an desen`)
+*   **Masculine Singular Nouns:** These nouns generally do not undergo lenition after `an`.
+    *   e.g., `gwarier` -> `an gwarier`, `tiek` -> `an tiek`, `pons` -> `an pons`.
+
+**2. Pluralization:**
+Cornish nouns form plurals in various ways, often by adding a suffix.
+*   Suffixes include `-es`, `-yon`, `-ow`, `-yow`, `-now`, `-i`, `-edh`.
+*   Some plurals are irregular, involving vowel changes or entirely different stems (e.g., `davas` -> `deves`, `maw` -> `mebyon`).
+
+**3. Definite Plurals and Mutation:**
+The definite article for plural nouns is also `an`. It triggers a different set of mutations on certain plural nouns, typically masculine ones.
+*   **Masculine Plural Nouns:** Many undergo mutation.
+    *   `p` -> `b` (e.g., `pennsevigyon` -> `an bennsevigyon`)
+    *   `t` -> `d` (e.g., `tiogow` -> `an diogow`)
+    *   `m` -> `v` (e.g., `myghternedh` -> `an vyghternedh`)
+    *   `g` -> `w` (e.g., `gwarioryon` -> `an warioryon`)
+    *   However, some masculine plurals, particularly those ending in `-es` or `-yow`, do not appear to mutate (e.g., `badhes` -> `an badhes`, `kwilkynyow` -> `an kwilkynyow`).
+*   **Feminine Plural Nouns:** These do not mutate after `an` (e.g., `benenes` -> `an benenes`).
+
+**4. Adjectives and Other Mutations:**
+*   Adjectives follow the noun they modify.
+*   Adjectives undergo lenition when they follow a feminine singular noun (e.g., `gwariores` (fem.) + `tronek` -> `gwariores dronek`).
+*   The preposition `war` ("on") also causes lenition on the following noun (e.g., `war` + `pluven` -> `war bluven`).
+
+By applying these observed patterns, I will now fill in the missing information.
+
+```json
+[
+  {
+    "question_id": "I1_a",
+    "answer": "an damyow",
+    "reasoning": "The noun 'dama' (mother) is feminine. Its plural form, 'damyow', does not mutate after the definite plural article 'an', consistent with the pattern for feminine nouns."
+  },
+  {
+    "question_id": "I1_b",
+    "answer": "kasek",
+    "reasoning": "The definite singular 'an gasek' shows the lenition k->g. This indicates the noun is feminine and its unmutated singular form starts with 'k'. The plural form 'kasegi' supports this root. Thus, the singular is 'kasek'."
+  },
+  {
+    "question_id": "I1_c",
+    "answer": "kasegi",
+    "reasoning": "The definite plural is 'an kasegi'. Since 'kasek' (mare) is feminine, its plural form does not mutate after 'an'. Therefore, the plural form is 'kasegi'."
+  },
+  {
+    "question_id": "I1_d",
+    "answer": "an kulyoges",
+    "reasoning": "The noun 'kulyek' (cockerel) is masculine. Its plural is 'kulyoges'. Based on the example of 'an badhes', masculine plurals ending in the suffix '-es' do not mutate after the definite article 'an'."
+  },
+  {
+    "question_id": "I1_e",
+    "answer": "an myghtern",
+    "reasoning": "The noun 'myghtern' (king) is masculine. Masculine singular nouns do not undergo lenition after the definite article 'an'."
+  },
+  {
+    "question_id": "I1_f",
+    "answer": "an vyghternes",
+    "reasoning": "The noun 'myghternes' (queen) is feminine. Feminine singular nouns undergo lenition after 'an', causing the initial 'm' to mutate to 'v'."
+  },
+  {
+    "question_id": "I1_g",
+    "answer": "an myghternesow",
+    "reasoning": "The noun 'myghternes' (queen) is feminine. Its plural form, 'myghternesow', does not mutate after the definite article 'an'."
+  },
+  {
+    "question_id": "I1_h",
+    "answer": "an tas",
+    "reasoning": "The noun 'tas' (father) is masculine. Masculine singular nouns like 'tiek' show that an initial 't' does not mutate after the definite article 'an'."
+  },
+  {
+    "question_id": "I1_i",
+    "answer": "an dasow",
+    "reasoning": "The noun 'tas' (father) is masculine, and its plural is 'tasow'. Masculine plurals ending in '-ow' (like 'tiogow' -> 'an diogow') undergo mutation after 'an', causing 't' to change to 'd'."
+  },
+  {
+    "question_id": "I1_j",
+    "answer": "an bogh",
+    "reasoning": "The noun 'bogh' (billy-goat) is masculine. Masculine singular nouns do not undergo lenition after the definite article 'an'."
+  },
+  {
+    "question_id": "I1_k",
+    "answer": "an boghes",
+    "reasoning": "'Bogh' (billy-goat) is masculine. Its plural 'boghes' ends in '-es'. Similar to 'an badhes', masculine plurals ending in '-es' do not appear to mutate after 'an'."
+  },
+  {
+    "question_id": "I1_l",
+    "answer": "an vanow",
+    "reasoning": "The noun 'banow' (sow) is feminine. Feminine singular nouns undergo lenition after 'an', causing the initial 'b' to mutate to 'v'."
+  },
+  {
+    "question_id": "I1_m",
+    "answer": "an banowes",
+    "reasoning": "The noun 'banow' (sow) is feminine. Its plural form, 'banowes', does not mutate after the definite article 'an'."
+  },
+  {
+    "question_id": "I1_n",
+    "answer": "badhes",
+    "reasoning": "The definite plural is 'an badhes'. The lack of mutation indicates that the plural form of the masculine noun 'badh' is simply 'badhes'."
+  },
+  {
+    "question_id": "I1_o",
+    "answer": "an tevesik",
+    "reasoning": "The noun 'tevesik' (adult man) is masculine. Masculine singular nouns do not undergo lenition after the definite article 'an'."
+  },
+  {
+    "question_id": "I1_p",
+    "answer": "tevesigyon",
+    "reasoning": "The definite plural 'an devesigyon' shows the mutation t->d. This indicates that the unmutated plural form of the masculine noun 'tevesik' must be 'tevesigyon'."
+  },
+  {
+    "question_id": "I1_q",
+    "answer": "an ponsyow",
+    "reasoning": "The noun 'pons' (bridge) is masculine. Its plural is 'ponsyow'. Based on the example of 'kwilkynyow', masculine plurals ending in '-yow' do not mutate after 'an'."
+  },
+  {
+    "question_id": "I1_r",
+    "answer": "mebyon",
+    "reasoning": "The definite plural 'an vebyon' shows the mutation m->v. This indicates that the unmutated plural form of the masculine noun 'maw' is 'mebyon'."
+  },
+  {
+    "question_id": "I1_s",
+    "answer": "tesen",
+    "reasoning": "The definite singular 'an desen' shows the mutation t->d, which is characteristic of a feminine noun. Therefore, the singular form must be 'tesen'."
+  },
+  {
+    "question_id": "I1_t",
+    "answer": "tarow",
+    "reasoning": "The definite singular is 'an tarow'. The lack of mutation for the initial 't' indicates that 'bull' is a masculine noun, and its singular form is 'tarow'."
+  },
+  {
+    "question_id": "I2_u",
+    "answer": "an bys",
+    "reasoning": "From the list, 'finger' is 'bys'. The accompanying adjectives 'bras' and 'byhan' do not show mutation, suggesting 'bys' is masculine. The definite form of a masculine singular noun is 'an' + the noun without mutation."
+  },
+  {
+    "question_id": "I2_v",
+    "answer": "war desen deg",
+    "reasoning": "'on' is 'war', 'cake' is 'tesen' (feminine), 'beautiful' is 'teg'. The preposition 'war' causes lenition on the following noun, so 'tesen' becomes 'desen'. Adjectives following a feminine singular noun also lenite, so 'teg' becomes 'deg'."
+  },
+  {
+    "question_id": "I2_w",
+    "answer": "war dharas",
+    "reasoning": "'on' is 'war', 'door' is 'daras'. 'Daras' appears to be masculine as the adjective 'melyn' does not mutate in 'daras melyn'. The preposition 'war' causes lenition, mutating 'd' to 'dh'."
+  },
+  {
+    "question_id": "I2_x",
+    "answer": "the perfect spade",
+    "reasoning": "'an bal' is the definite form of 'pal' (spade). The p->b mutation indicates 'pal' is feminine. 'berfydh' is the lenited form of 'perfydh' (perfect). Adjectives lenite after feminine singular nouns."
+  },
+  {
+    "question_id": "I2_y",
+    "answer": "stack",
+    "reasoning": "In the phrase 'war dhas deg' (on a beautiful stack), 'war' has caused lenition on the noun for 'stack' (d->dh). Therefore, the base form of the noun is 'das'."
+  },
+  {
+    "question_id": "I2_z",
+    "answer": "on a stack",
+    "reasoning": "This phrase is a direct translation of its components: 'war' means 'on', and 'das' means 'stack'. Although grammar rules suggest 'war' should cause lenition to 'war dhas', the translation of the given words is 'on a stack'."
+  },
+  {
+    "question_id": "I3_1",
+    "answer": "penguin",
+    "reasoning": "The question suggests an English animal name comes from a Welsh phrase for 'white head'. In Welsh, a language related to Cornish, 'head' is 'pen' and 'white' is 'gwyn'. The phrase 'pen gwyn' is phonetically almost identical to the English word 'penguin'."
+  }
+]
+```

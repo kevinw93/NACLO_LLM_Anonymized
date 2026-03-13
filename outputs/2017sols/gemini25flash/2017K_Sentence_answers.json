@@ -1,0 +1,42 @@
+[
+  {
+    "question_id": "K1_1",
+    "answer": "Verb, Preposition, Article, Noun",
+    "reasoning": "Breaking down the additions ('climbing up a tree', 'growing on a planet', 'orbiting around the sun') from the example sentences, each segment consistently follows the type sequence of Verb, Preposition, Article, Noun based on the provided word types table."
+  },
+  {
+    "question_id": "K1_2",
+    "answer": "I saw a cat climbing up a tree growing on a planet orbiting around the sun running around a track.",
+    "reasoning": "The identified pattern is Verb, Preposition, Article, Noun. To create a fifth line, I appended a new phrase 'running around a track' where 'running' is a Verb, 'around' is a Preposition, 'a' is an Article, and 'track' is a Noun (using new words as allowed by the instructions), maintaining the established pattern."
+  },
+  {
+    "question_id": "K1_3",
+    "answer": "Preposition, Article, Noun",
+    "reasoning": "Breaking down the additions ('on the hill', 'in the city', 'on the border') from the example sentences, each segment consistently follows the type sequence of Preposition, Article, Noun based on the provided word types table."
+  },
+  {
+    "question_id": "K1_4",
+    "answer": "I live in the house on the hill in the city on the border in a garden.",
+    "reasoning": "The identified pattern is Preposition, Article, Noun. To create a fifth line, I appended a new phrase 'in a garden' where 'in' is a Preposition, 'a' is an Article, and 'garden' is a Noun (using a new word as allowed by the instructions), maintaining the established pattern."
+  },
+  {
+    "question_id": "K2_1",
+    "answer": "12",
+    "reasoning": "The sentence 'I run and jump and twirl' has 6 words. The word types (excluding 'I') are Verb, Conjunction, Verb, Conjunction, Verb. The program checks patterns of length k up to N/2 (k=1, 2, 3).\n- For k=1, it compares the last word (Verb) with the second-last word (Conjunction). No match. This involves 2 words, so 2 steps.\n- For k=2, it compares the last pair (Conjunction, Verb) with the pair before them (Conjunction, Verb). Match! This involves 4 words, so 4 steps.\n- For k=3, it compares the last three words (Verb, Conjunction, Verb) with the three words before them (Pronoun, Verb, Conjunction). No match. This involves 6 words, so 6 steps.\nTotal steps = 2 + 4 + 6 = 12."
+  },
+  {
+    "question_id": "K3_1",
+    "answer": "yes",
+    "reasoning": "The sentence 'I saw a cat climbing up a tree growing on a planet orbiting around the sun' (N=16 words) has a true pattern of (Verb, Preposition, Article, Noun). The program would check lengths up to k=8.\n- At k=4, it compares the last four words' types ('orbiting around the sun' - V, Prep, Art, N) with the four words' types before them ('growing on a planet' - V, Prep, Art, N). These match, so the guess becomes (Verb, Preposition, Article, Noun).\n- For any k > 4 up to k=8, no longer pattern X X would be found because the initial phrase 'I saw a cat' (P, V, Art, N) does not conform to the (V, Prep, Art, N) pattern, preventing matches for longer k that span beyond the repeating blocks. Thus, the program correctly identifies and returns the intended pattern."
+  },
+  {
+    "question_id": "K3_2",
+    "answer": "no, Preposition, Article, Noun, Preposition, Article, Noun",
+    "reasoning": "The sentence 'I live in the house on the hill in the city on the border' (N=14 words) has a true pattern of (Preposition, Article, Noun). The program would check lengths up to k=7.\n- At k=3, it compares the last three words' types ('on the border' - Prep, Art, N) with the three words' types before them ('in the city' - Prep, Art, N). These match, so the guess becomes (Preposition, Article, Noun).\n- At k=6, it compares the last six words' types ('in the city on the border' - Prep, Art, N, Prep, Art, N) with the six words' types before them ('in the house on the hill' - Prep, Art, N, Prep, Art, N). These also match, and since a longer pattern is found, the guess is updated to (Preposition, Article, Noun, Preposition, Article, Noun).\n- The program returns the longest matching repeating suffix it finds. As this returned pattern is a concatenation of the minimal repeating unit, it is not 'the right pattern' (the minimal adding unit) that explains the sentence's consistent extensions. Therefore, it would not find the 'right' (minimal) pattern."
+  },
+  {
+    "question_id": "K4_1",
+    "answer": "A pattern where each subsequent added sequence of word types is incrementally longer, introducing one new distinct word type from a fixed ordered list of available types in each addition. For example: 'Noun', then 'Noun, Verb', then 'Noun, Verb, Adjective', and so on.",
+    "reasoning": "The program identifies repeating sequences of the form 'X Y' where 'X' is identical to 'Y'. To prevent this, the sentence pattern must ensure that no such contiguous repetition ever occurs in the suffix. By adding sequences that are always structurally different and incrementally longer (e.g., 'Noun', then 'Noun, Verb', then 'Noun, Verb, Adjective'), any suffix of length 'k' will, by definition, never match the 'k' words immediately preceding it. This systematic variation in length and composition of the added blocks ensures that the condition 'X == Y' is never met for any 'k' as the sentence grows, thus the program would never find a repeating sequence."
+  }
+]

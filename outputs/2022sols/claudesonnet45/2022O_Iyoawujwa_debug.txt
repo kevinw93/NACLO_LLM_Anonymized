@@ -1,0 +1,116 @@
+EXTRACTED AND CLEANED JSON (FAILED TO PARSE):
+================================================================================
+
+[SUBJECT PREFIX]'[VERB ROOT][OBJECT/NUMBER SUFFIX]**
+
+**Subject markers:**
+- a' = I/we (first person)
+- si' = you...me (inverse/obviative?)
+- hi' = you...him/her/them
+- kasi' = you...us
+- in' = he/she/they
+
+Wait, let me reconsider. Looking at the glosses more carefully:
+
+- a'wen: "I see you(sg), I see him/her/them"
+- si'wen: "you(sg) see me, he/she/they see me"
+- hi'wen: "you(sg) see him/her/them"
+- kasi'wen: "you(sg) see us, he/she/they see us"
+- in'wen: "he/she/they see you(sg)"
+
+This suggests the prefix might encode the object or a combination of subject-object relations.
+
+### Future Tense Analysis:
+
+The linguist gets:
+- si'wehnayi' = "you (sg.) are going to see me"
+- in'wehnayiwet = "he/she/they are going to see you (pl.)" OR "you (pl.) are going to see him/her/them"
+- si'wehnayi' can also mean: "I am going to see you (sg.)", "I am going to see him/her/them", "he/she/they are going to see me"
+
+So the future appears to be formed by inserting **-hnay-** (or similar) into the verb.
+
+Present: wen/wenet/wena/wenaha‡
+Future: wehnayi'/wehnayiwet
+
+Pattern: **[PREFIX]'weh-nay-[SUFFIX]**
+
+The root "wen" becomes "wehnay" in future, with various endings.
+
+## Solving O1:
+
+a. you (sg.) are going to see him/her/them = **hi'wehnayi'**
+   (Present: hi'wen, so future adds hnay: hi'wehnayi')
+
+b. he/she/they are going to see you (sg.) = **in'wehnayi'**
+   (Present: in'wen, so future: in'wehnayi')
+
+c. you (sg.) are going to see us = **kasi'wehnayi'**
+   (Present: kasi'wen, so future: kasi'wehnayi')
+
+d. you (pl.) are going to see us = **kasi'wehnayiwet**
+   (Present: kasi'wenet, so future: kasi'wehnayiwet)
+
+e. we are going to see you (pl.) = **a'wehnayaha‡**
+   (Present: a'wenaha‡, so future: a'wehnayaha‡)
+
+## Solving O2:
+
+The verb "see" is formed as follows:
+
+**Present tense:**
+- Root: wen
+- Structure: [PREFIX]'wen[SUFFIX]
+- Prefixes encode object/inverse relations:
+  - a' = first person subject (I/we)
+  - si' = second person subject acting on first person object, or third acting on first
+  - hi' = second person subject acting on third person object
+  - kasi' = second person subject acting on first person plural object
+  - in' = third person subject acting on second person object
+- Suffixes mark plurality:
+  - ∅ (nothing) = singular object or basic form
+  - -t = plural object
+  - -a = first person plural subject
+  - -aha‡ = first person plural subject with plural object
+
+**Future tense ("going to see"):**
+- Root becomes: wehnay
+- Structure: [PREFIX]'wehnay[SUFFIX]
+- The future is formed by inserting -hnay- into the root (wen → wehnay)
+- Suffixes:
+  - -i' = singular
+  - -iwet = plural object
+  - -aha‡ = first person plural subject with plural object
+
+<answer_json>
+[
+  {
+    "question_id": "O1_1",
+    "answer": "hi'wehnayi'",
+    "reasoning": "Present tense 'you(sg) see him/her/them' is hi'wen. Future tense adds -hnay- infix and -i' suffix: hi'wehnayi'"
+  },
+  {
+    "question_id": "O1_2",
+    "answer": "in'wehnayi'",
+    "reasoning": "Present tense 'he/she/they see you(sg)' is in'wen. Future tense: in'wehnayi'"
+  },
+  {
+    "question_id": "O1_3",
+    "answer": "kasi'wehnayi'",
+    "reasoning": "Present tense 'you(sg) see us' is kasi'wen. Future tense: kasi'wehnayi'"
+  },
+  {
+    "question_id": "O1_4",
+    "answer": "kasi'wehnayiwet",
+    "reasoning": "Present tense 'you(pl) see us' is kasi'wenet. Future tense changes -et to -ayiwet: kasi'wehnayiwet"
+  },
+  {
+    "question_id": "O1_5",
+    "answer": "a'wehnayaha‡",
+    "reasoning": "Present tense 'we see you(pl)' is a'wenaha‡. Future tense inserts -hnay-: a'wehnayaha‡"
+  },
+  {
+    "question_id": "O2_1",
+    "answer": "Present tense: The verb 'see' has the root 'wen'. It combines with prefixes that encode subject-object relations (a' for 1st person subject, si' for you→me or they→me, hi' for you→them, kasi' for you→us, in' for they→you). Suffixes mark number: -t for plural object, -a for 1st plural subject, -aha‡ for 1st plural subject with plural object. Future tense: The root becomes 'wehnay' (inserting -hnay-). The same prefixes are used. Suffixes are: -i' for singular, -iwet for plural object, -aha‡ for 1st plural subject with plural object.",
+    "reasoning": "Analyzing the present tense forms shows a prefix system encoding subject-object relations with the root 'wen' and suffixes for number. The future tense examples show the root becomes 'wehnay' with modified suffixes."
+  }
+]

@@ -1,0 +1,57 @@
+Model: grok-4-fast-reasoning
+Generation Time: 159.30 seconds
+Timestamp: 2026-02-03 18:58:00
+================================================================================
+
+[
+  {
+    "question_id": "M1_1",
+    "answer": "You (sg.) tie them up",
+    "reasoning": "Analyzing patterns from examples, forms with object 'them' end in -net for simple tense (e.g., example 4: la?net = you sg. see them). The prefix/root la? corresponds to 'see'. By analogy, kalaw- corresponds to 'tie up', so kalawnet = you (sg.) tie them up. This is the only possible translation as the structure matches exactly a simple you sg. subject with plural object 'them'."
+  },
+  {
+    "question_id": "M1_2",
+    "answer": "We tie you (sg.) up",
+    "reasoning": "Example 3: mataklaw?en = we tie him up, where ?en is the suffix for object 'him'. Replacing ?en with yat (parallel to jyat in example 5 for you sg. object in progressive, but here simple), mataklawyat indicates object you (sg.) instead. The ma- prefix is for we subject, taklaw- for tie up stem. Only one translation fits the simple tense and argument structure."
+  },
+  {
+    "question_id": "M1_3",
+    "answer": "You (pl.) are tying me up",
+    "reasoning": "Example 9: inel?utak = you pl. see me (simple). The in- prefix for object 'me', el?utak stem + tak for you pl. subject. For c, ineklawrkanitak has in- (me), klawrkanitak for tie up progressive (rka-ni- markers as in examples 2,5,6,12), +tak for you pl. The progressive markers indicate 'are tying'. Only one translation matches the progressive aspect and arguments."
+  },
+  {
+    "question_id": "M1_4",
+    "answer": "He is seeing you (pl.); They are seeing you (pl.)",
+    "reasoning": "Example 15: nel?urkan = they are seeing him (progressive, ne- 3rd person subject prefix ambiguous for sg/pl, l?urkan see him progressive). Adding -itak (ka-ni-tak, where -tak for you pl. object, parallel to nel?utak in example 10 simple). The form nel?urkanitak fits progressive see you (pl.), with ne- ambiguous for he/they subjects. Multiple translations due to 3sg/3pl syncretism in prefix."
+  },
+  {
+    "question_id": "M2_1",
+    "answer": "taklaw?en",
+    "reasoning": "Simple tense, I subject (ta- prefix), tie him up. Example 3: mataklaw?en = we (ma-) tie him (taklaw- stem + ?en object him suffix). Replace ma- with ta- for I: taklaw?en. Matches simple tense pattern without progressive markers."
+  },
+  {
+    "question_id": "M2_2",
+    "answer": "nel?urkan?pi",
+    "reasoning": "Progressive, you sg. subject, see us (ne- object us prefix). Stem for see after ne-: l?u (from examples 10,15: nel?utak, nel?urkan). Insert r-ka-ni- for progressive (as in example 6: rkanimak), + ?pi subject you sg. suffix (from example 7: ?pi simple you sg. with prefix object). Form: ne-l?u-r-ka-ni-?pi = nel?urkan?pi. Progressive aspect and prefix object require suffix for subject."
+  },
+  {
+    "question_id": "M2_3",
+    "answer": "kejyo?en",
+    "reasoning": "Simple tense, you pl. subject, sniff him. Example 11: nejyo?en = they (ne-) sniff him (jyo- stem + ?en object him). You pl. subject prefix ke- (from example 12: ke- you pl.). Replace ne- with ke-: kejyo?en. Matches simple tense with object suffix."
+  },
+  {
+    "question_id": "M2_4",
+    "answer": "nekalawkanet",
+    "reasoning": "Progressive, he subject (ne- prefix), tie them up. From M1_a: kalawnet = you sg. tie them (kalaw- stem + net object them). For progressive, insert ka- before net (parallel to example 8: jorka net for progressive them). With ne- subject: ne-kalaw-ka-net = nekalawkanet."
+  },
+  {
+    "question_id": "M2_5",
+    "answer": "inejor",
+    "reasoning": "Simple tense, he subject, sniff me (in- object me prefix). Root for sniff: jor (from example 8: tajorkanet). With prefix object, allomorph jor (unreduced, parallel to see: inel?u from l?u root). He subject simple: zero suffix (as in example 10: nel?utak zero after stem). Form: in-e-jor = inejor (e- epenthetic as in inel?u)."
+  },
+  {
+    "question_id": "M3_1",
+    "answer": "Chukchi verbs are polysynthetic: they consist of optional prefixes for subject (e.g., ta- 'I', ma- 'we', ke- 'you pl.', ne- '3rd person sg/pl', la- 'you sg.') and/or object (e.g., in- 'me', ne- 'us'), followed by the verb root (with possible allomorphy based on adjacent morphemes), optional infixes/linkers/aspect markers (e.g., r- for progressive, ka-ni-), and suffixes for object (e.g., ?en 'him', net 'them', yat 'you sg.', tak 'you pl.'), aspect/tense, or subject when needed (e.g., ?pi 'you sg.', mak 'he progressive', kan 'we/3pl progressive').",
+    "reasoning": "Patterns across examples show agglutinative structure with pronominal affixes pre- and post-root. Prefixes handle subjects/objects (syncretism in ne- for 3rd sg/pl). Root varies slightly (e.g., klaw/kalaw for tie, l?/el?u for see, jor/jyo for sniff). Progressive aspect inserts r-ka-ni- before suffixes, modifying object suffixes (e.g., ?en -> kan, net remains with ka-). Suffixes resolve remaining arguments when prefixes insufficient. This captures all observed variations without external access."
+  }
+]

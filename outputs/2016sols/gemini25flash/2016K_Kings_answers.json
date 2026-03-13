@@ -1,0 +1,82 @@
+[
+  {
+    "question_id": "K1_1",
+    "answer": {
+      "whether": 4,
+      "the": 4,
+      "weather": 4,
+      "is": 0,
+      "good": 1,
+      "or": 2,
+      "not": 1,
+      "cold": 1,
+      "hot": 1,
+      "we'll": 0,
+      "whatever": 0,
+      "we": 0,
+      "like": 0,
+      "it": 0
+    },
+    "reasoning": "The co-occurrence counts for 'is' were determined by identifying all clauses containing 'is' in the poem. The poem was segmented into clauses based on commas, 'or', and hyphens. For each clause containing 'is', the occurrences of all other unique words within that clause were counted. These counts were then summed across all clauses where 'is' appeared. The word 'is' itself is shown as 0 in its own co-occurrence graph. This method yielded the following counts: whether=4, the=4, weather=4, good=1, or=2, not=1, cold=1, hot=1, while all other words (we'll, whatever, we, like, it) received a count of 0 as they do not appear in any clauses containing 'is'."
+  },
+  {
+    "question_id": "K2_a",
+    "answer": "10",
+    "reasoning": "Mystery Word #10 shows zero co-occurrence counts for all words A-O. 'antismartnessesquely' is an extremely long and rare word, making it highly probable to have no co-occurrences with the given 15 context words in the sample text."
+  },
+  {
+    "question_id": "K2_b",
+    "answer": "4",
+    "reasoning": "Mystery Word #4 shows a dominant peak at H (7), with lower counts for D, G, J, L. After assigning other words based on stronger patterns, 'aunt' is the remaining familial term. While its pattern is distinct from 'uncle', 'man', or 'woman', it is the last logical assignment."
+  },
+  {
+    "question_id": "K2_c",
+    "answer": "1",
+    "reasoning": "Mystery Word #1 shows high peaks at A (8), E (7), M (6). 'big' is an adjective, and other adjectives like 'large', 'larger', 'uglier', 'ugliest' often show prominent peaks at E (e.g., 'large' E:7, 'uglier' E:8, 'ugliest' E:9). This makes MW#1 a plausible candidate for 'big'."
+  },
+  {
+    "question_id": "K2_d",
+    "answer": "3",
+    "reasoning": "Mystery Word #3 shows strong peaks at B (9), D (9), K (9), M (9). 'can' (as a singular noun) is related to 'cans' (known word), which has D (3) and M (4) as significant counts. The prominence of D and M in MW#3 aligns with this relationship."
+  },
+  {
+    "question_id": "K2_e",
+    "answer": "2",
+    "reasoning": "Mystery Word #2 (G:9, I:9, E:5, L:5) shows a very similar co-occurrence pattern to 'horse' (G:7, L:5, E:3, I:3), with prominent peaks at G and I. As 'cats' is an animal, it is strongly associated with 'horse' in terms of category, making it the most suitable match for this pattern."
+  },
+  {
+    "question_id": "K2_f",
+    "answer": "5",
+    "reasoning": "Mystery Word #5 (F:7, K:7) and Mystery Word #11 (F:8, K:5) exhibit similar patterns with prominent peaks at F and K. This suggests they are the related pair 'Kenya' and 'Kenyan'. MW#5 is assigned to 'Kenya' and MW#11 to 'Kenyan'."
+  },
+  {
+    "question_id": "K2_g",
+    "answer": "11",
+    "reasoning": "Mystery Word #11 (F:8, K:5) and Mystery Word #5 (F:7, K:7) exhibit similar patterns with prominent peaks at F and K. This suggests they are the related pair 'Kenya' and 'Kenyan'. MW#11 is assigned to 'Kenyan' and MW#5 to 'Kenya'."
+  },
+  {
+    "question_id": "K2_h",
+    "answer": "7",
+    "reasoning": "Mystery Word #7 (C:7, E:7, I:4, L:4) shares some prominent peaks (E, I, L) with `horse` (G:7, L:5, E:3, I:3) and MW#2 ('cats'). As 'meow' is the sound an animal makes, it's closely related to 'cats' and 'horse', making MW#7 a strong candidate."
+  },
+  {
+    "question_id": "K2_i",
+    "answer": "8",
+    "reasoning": "Mystery Word #8 (B:9, E:9, I:4, N:4) and Mystery Word #9 (E:10, A:4, B:5, N:5) both show a high peak at E, a characteristic feature of adjectives like 'uglier' and 'ugliest'. They represent the 'strange'/'strangest' pair. MW#8 is assigned to 'strange'."
+  },
+  {
+    "question_id": "K2_j",
+    "answer": "9",
+    "reasoning": "Mystery Word #9 (E:10, A:4, B:5, N:5) and Mystery Word #8 (B:9, E:9, I:4, N:4) both show a high peak at E, a characteristic feature of adjectives like 'uglier' and 'ugliest'. They represent the 'strange'/'strangest' pair. MW#9 is assigned to 'strangest'."
+  },
+  {
+    "question_id": "K2_k",
+    "answer": "6",
+    "reasoning": "Mystery Word #6 shows multiple very high co-occurrence counts (A:9, B:9, D:9, M:9, O:9). This extensive co-occurrence pattern is typical of a common stop word like 'the', which frequently appears in various contexts."
+  },
+  {
+    "question_id": "K3_1",
+    "answer": "The graph for Mystery Word #4, identified as 'aunt', shows a distinct pattern with a prominent peak at context word 'H' (7) and relatively low counts for other context words. This pattern is unexpected because other familial terms in the dataset, such as 'uncle', 'man', and 'woman', exhibit different prominent peaks (e.g., 'uncle' peaks at D and K; 'man' at C, E, G, L; 'woman' at A, D, K). The strong emphasis on 'H' is not consistent with the co-occurrence patterns observed for related words in this dataset, suggesting a unique context for 'aunt' in the sample text or a deviation from typical familial word associations.",
+    "reasoning": "The question presents the actual graph for Mystery Word #4 and asks why it's 'unexpected'. Based on K2, MW#4 is 'aunt'. The expectation for 'aunt' would be a co-occurrence pattern similar to other familial words like 'uncle', 'man', or 'woman'. However, MW#4's graph has a dominant peak at 'H' (7), which is not a prominent feature in the graphs of 'uncle' (D:5, K:5), 'man' (C:9, E:9, G:7, L:7), or 'woman' (A:9, D:9, K:9, I:4). This makes the observed pattern for 'aunt' unexpected in comparison to related terms."
+  }
+]

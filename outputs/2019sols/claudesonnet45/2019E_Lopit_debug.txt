@@ -1,0 +1,505 @@
+EXTRACTED AND CLEANED JSON (FAILED TO PARSE):
+================================================================================
+
+[verb] [subject] [preposition] [location]
+
+For "field hands" (plural) we see **haromok** vs **haromoni** (singular field hand)
+Pattern: -oni (singular) vs -ok (plural)?
+
+Actually, looking more carefully:
+- **haboroni** = "big man" (singular)
+- **habarani** = seems related but used differently in sentence 4
+
+Let me reconsider the sentence structure by looking at sentence 9:
+**eramita wurre ho hingohu** - "The children play with the dog."
+- Structure: [verb+prefix] [subject] [preposition] [object]
+
+So for "The big men dance with the shovel in the kitchen":
+- Need verb for "dance" - pattern suggests **ei-** or **e-** prefix
+- "big men" (plural) - likely **haborok** (if -ok is plural marker)
+- "with" = **ho**
+- "shovel" = unknown new word
+- "in" = **de**
+- "kitchen" = unknown new word
+
+Wait, I need to look at sentence 5 more carefully:
+**eibongo haidoloni ho haromoni de lecari** - "The singer meets with the field hand at the dancehall."
+
+This has both **ho** (with) and **de** (at/in), so structure is:
+[verb] [subject] [ho] [object] [de] [location]
+
+Hmm, but for E1 we need "dance with the shovel in the kitchen" - this requires inferring new words which seems impossible.
+
+Let me reconsider the phonological rule mentioned: "when a word-initial 'e' comes before an 'o' or a 'u', the 'e' is instead pronounced as an 'o'."
+
+Looking at:
+- **oromo** vs **eremo**
+- **oboro** vs other verbs with **e-**
+
+This suggests **oromo** might be underlying **/eromoeboroe-romoe-boroeromoeboroe-romoe-remoe-boro/** → underlying **e** before **o** in boro → [oboro]
+
+This makes sense!
+
+So for my verbs:
+- dance: **ida** → **e-ida** → **eida** (no o/u after e, no change)
+- sing: **aido** → **e-aido** → **eaido** or **ei-aido** → **eiaido**
+- draw: **tabo** → **e-tabo** → **etabo** (no o/u immediately after the prefix e)
+
+Hmm, but I see **ei-** prefix in several verbs. What's the difference between **e-** and **ei-**?
+
+Looking at:
+- **ei-**: eitiyena, eibongo, eifuo, eiyoma, eramita (wait, this is e-)
+- **e-/o-**: eremo, oromo, oboro, efer
+
+Could **ei-** be a different tense/aspect/mood? Or could it relate to transitivity?
+
+Let me check:
+- **eitiyena** lliwa aina - "Iliwa teaches today" (intransitive or no explicit object)
+- **eibongo** haidoloni ho haromoni de lecari - "The singer meets with the field hand at the dancehall" (transitive-ish, with oblique object)
+- **eifuo** lhidong de leitiyenari - "Ihidong cooks at the school" (intransitive)
+- **eiyoma** haromok de iferit - "The field hands rest on the mat" (intransitive)
+
+- **eremo** Lohidong warago ho iguarit - "Lohidong spears the paper with the pen" (transitive, has direct object)
+- **oromo** haboroni de mana - "The big man digs in the field" (intransitive)
+- **oboro** habarani - "The cattle owner is big" (copula)
+- **efer** hingohu de halu na haji - "The dog lies at the back of the house" (intransitive)
+- **eramita** wurre ho hingohu - "The children play with the dog" (intransitive)
+
+The pattern isn't clear regarding transitivity. Maybe it's about animacy of subject or verb class?
+
+For my purposes, I'll use:
+- **ei-** for most verbs
+- Apply the **e→o** rule when appropriate
+
+My attempts:
+
+**E1: The big men dance with the shovel in the kitchen.**
+- dance: **eida** (ei- prefix, -da root)
+- big men: **haborok** (plural of haboroni)
+- with: **ho**
+- shovel: **igoru** (i- prefix pattern like iguarit)
+- in: **de**
+- kitchen: **lekuki** (le- prefix pattern like lecari, leitiyenari)
+
+**E1:** eida haborok ho igoru de lekuki
+
+**E2: The teacher sings.**
+- sings: **eiaido** (ei- prefix, aido root related to haidoloni=singer)
+- teacher: **hatiyenoni** (ha-tiyena-oni pattern, from tiyena=teaches)
+
+**E2:** eiaido hatiyenoni
+
+**E3: The cattle owners draw in the playground.**
+- draw: **eitabo** (ei- prefix, tabo root)
+- cattle owners: **habarok** (plural of habarani)
+- in: **de**
+- playground: **liaromani** (li- prefix, -aroma- root, -ni ending)
+
+**E3:** eitabo habarok de liaromani
+
+Actually, I want to reconsider the nouns for places. Looking at:
+- **mana** - "field" (simple)
+- **lecari** - "dancehall"
+- **leitiyenari** - "school"  
+- **haji** - "house" (simple)
+- **iferit** - "mat"
+- **halu** - "back"
+
+The **le-** prefix in **lecari** and **leitiyenari** might indicate "place of". **leitiyenari** could be "place of teaching" (from **tiyena**=teaches).
+
+So:
+- kitchen (place of cooking): **le-** + root from **fuo** (cooks) = **lefuo** or **lefuori**
+- playground (place of playing): **le-** + root from **ramita** (play) = **leramita** or **leramiti**
+
+This seems more systematic!
+
+**Updated answers:**
+
+**E1:** eida haborok ho igoru de lefuori
+
+**E2:** eiaido hatiyenoni
+
+**E3:** eitabo habarok de leramiti
+
+Actually, for E3, let me reconsider "draw". Looking at existing verb roots, they're often short (fuo, fer, boro, remo, romo). "Draw" could be **tabu**, **rabu**, **drabu**, or **rago**.
+
+I'll use **rago**: **eirago** or with the e→o rule if applicable. Since the root starts with 'r', not 'o' or 'u', no rule applies: **eirago**.
+
+**E3:** eirago habarok de leramiti
+
+But wait, let me double-check the e→o rule application. The rule says: "when a word-initial 'e' comes before an 'o' or a 'u', the 'e' is instead pronounced as an 'o'."
+
+This seems to mean: when the **word** (not just the prefix) starts with **e**, and the **next vowel** in the word is **o** or **u**, then the initial **e** becomes **o**.
+
+Let's check:
+- **e-romo**: word is "eromo", starts with 'e', next vowel is 'o' → becomes **oromo** ✓
+- **e-boro**: word is "eboro", starts with 'e', next vowel is 'o' → becomes **oboro** ✓
+- **e-remo**: word is "eremo", starts with 'e', next vowel is 'e' → stays **eremo** ✓
+- **e-fer**: word is "efer", starts with 'e', next vowel is 'e' → stays **efer** ✓
+
+This interpretation makes sense!
+
+So for my verbs:
+- **e-ida**: starts with 'e', next vowel is 'i' (not o/u) → stays **eida**
+- **ei-aido**: This has 'ei' at the start. Does the rule apply? The word starts with 'e', but the immediate next vowel is 'i', not the 'o' in 'aido'. I think it stays **eiaido**.
+- **ei-rago**: starts with 'e', next vowel is 'a' (not o/u) → stays **eirago**
+- **ei-tabu**: starts with 'e', next vowel is 'a' (not o/u), then 'u' later → I think only the first vowel after 'e' matters, so stays **eitabu**
+
+Let me finalize:
+
+**E1:** eida haborok ho igoru de lefuori
+
+**E2:** eiaido hatiyenoni
+
+**E3:** eirago habarok de leramiti
+
+Hmm, but I'm still inventing words like "igoru" (shovel). Let me think if there's a pattern for tools/objects:
+- **iguarit** - "pen"
+- **warago** - "paper"
+- **hingohu** - "dog"
+- **iferit** - "mat"
+
+The **i-** prefix appears in **iguarit** and **iferit**. Could this be for inanimate objects?
+
+For "shovel", I'll use: **ikoru** (i- prefix, -koru root)
+
+**E1:** eida haborok ho ikoru de lefuori
+
+Let me also reconsider the structure of E2 and make sure I have the right form for "teacher".
+
+From **hatiyenoni** (my construction for "teacher"):
+- Pattern: **ha-[verb root]-oni**
+- **haidoloni** = "singer" (from singing verb)
+- **haromoni** = "field hand"  
+- **haboroni** = "big man" (from **boro**=is/big?)
+
+So **hatiyenoni** = "teacher" (from **tiyena**=teaches) seems reasonable.
+
+**Final answers:**
+
+**E1:** eida haborok ho ikoru de lefuori
+
+**E2:** eiaido hatiyenoni
+
+**E3:** eirago habarok de leramiti
+
+Actually, on second thought, let me reconsider whether I'm using the right verb forms. Let me look at verbs that are clearly in similar constructions:
+
+Sentence 1: **eitiyena lliwa aina** - "Iliwa teaches today"
+Sentence 6: **eifuo lhidong de leitiyenari** - "Ihidong cooks at the school"
+
+These both have **ei-** prefix. They're both describing single individuals performing actions.
+
+Sentence 3: **oromo haboroni de mana** - "The big man digs in the field"
+Sentence 8: **eiyoma haromok de iferit** - "The field hands rest on the mat"
+
+Hmm, sentence 8 has plural subject (**haromok**) with **ei-** prefix, sentence 3 has singular subject (**haboroni**) with **o-** prefix (from e- + o-triggering root).
+
+I don't think the prefix changes based on number of the subject. So I'll stick with my construction using **ei-** or **e-** (which may surface as **o-**).
+
+Let me also double-check my plural forms:
+- **haromoni** → **haromok** (field hand → field hands) ✓
+- **haboroni** → **haborok** (big man → big men) - seems consistent
+- **habarani** → **habarok** (cattle owner → cattle owners) - seems consistent
+
+So my plurals look good.
+
+One more consideration: I used **lefuori** for "kitchen" (place of cooking, from **fuo**=cooks). But looking at **leitiyenari** (school, presumably from **tiyena**=teaches), the pattern might be:
+- **le-** + verb root + **-ari** or similar suffix
+
+So:
+- school: **le-itiyena-ri** → **leitiyenari** ✓
+- kitchen: **le-ifuo-ri** → **leifuori** or just **lefuori**
+- playground: **le-iramit-i** → **leramiti**
+
+I think my forms are reasonable.
+
+**My final answers:**
+
+**E1:** eida haborok ho ikoru de lefuori
+
+**E2:** eiaido hatiyenoni
+
+**E3:** eirago habarok de leramiti
+
+Actually, wait. Let me reconsider "dance" and "sing". These might be related. In many languages, verbs for singing/dancing are similar. Looking at **haidoloni** = "singer", the root might be **aido** or **haido**.
+
+If **aido** is the root for "sing", then:
+- sing: **e-aido** → **eaido** (if using e- prefix alone)
+- sing: **ei-aido** → **eiaido** (if using ei- prefix)
+
+For "dance", it might be related but different. Common patterns:
+- sing: **aido**
+- dance: **aida**, **haid**, **raido**, **ronga**
+
+I'll stick with:
+- dance: **ida** → **eida**
+- sing: **aido** → **eiaido**
+
+And for "draw":
+- draw: **rago**, **tabu**, **dramu**
+
+I'll use **rago** → **eirago**
+
+So my answers remain:
+
+**E1:** eida haborok ho ikoru de lefuori
+
+**E2:** eiaido hatiyenoni
+
+**E3:** eirago habarok de leramiti
+
+Let me count the letters to see if they fit in the boxes:
+
+E1: "eida haborok ho ikoru de lefuori"
+e-i-d-a (space) h-a-b-o-r-o-k (space) h-o (space) i-k-o-r-u (space) d-e (space) l-e-f-u-o-r-i
+
+That's 4 + 7 + 2 + 5 + 2 + 7 = 27 letters plus 5 spaces = 32 characters
+
+Looking at the answer box for E1, it has 24 cells. Hmm, that doesn't match. Let me recount the boxes... Actually, I can't see the exact count clearly, but it looks like around 22-24 boxes.
+
+Let me try shorter forms:
+
+For "kitchen", maybe just **lekui** or **lefuo**:
+**E1:** eida haborok ho ikoru de lefuo
+
+Let me count: e-i-d-a h-a-b-o-r-o-k h-o i-k-o-r-u d-e l-e-f-u-o = 24 letters plus spaces
+
+Hmm, still might not fit. Let me try even shorter:
+
+Actually, looking at the locations, **mana** is just 4 letters, **haji** is 4 letters. Maybe "kitchen" could be simpler: **kuki** or **fuki**.
+
+**E1:** eida haborok ho ikoru de fuki
+
+Count: e-i-d-a h-a-b-o-r-o-k h-o i-k-o-r-u d-e f-u-k-i = 23 letters
+
+That's still not accounting for spaces. If spaces go in separate boxes, it won't fit. If spaces don't count, then:
+eida+haborok+ho+ikoru+de+fuki = 4+7+2+5+2+4 = 24 letters
+
+That might fit!
+
+Let me revise:
+
+**E1:** eida haborok ho ikoru de fuki
+
+**E2:** eiaido hatiyenoni
+
+Count: e-i-a-i-d-o h-a-t-i-y-e-n-o-n-i = 6+10 = 16 letters
+
+**E3:** eirago habarok de leramiti
+
+Count: e-i-r-a-g-o h-a-b-a-r-o-k d-e l-e-r-a-m-i-t-i = 6+7+2+9 = 24 letters
+
+Actually, looking more carefully at the image, the boxes are quite numerous. I think they're meant to accommodate each letter including spaces. So my longer versions might be okay.
+
+Let me go with:
+
+**E1:** eida haborok ho ikoru de lefuori
+**E2:** eiaido hatiyenoni
+**E3:** eirago habarok de leramiti
+
+Actually, I want to reconsider one more time whether my constructed words are reasonable by looking at phonological patterns in existing words:
+
+Existing words:
+- **eitiyena, eremo, oromo, oboro, eibongo, eifuo, efer, eiyoma, eramita** (verbs)
+- **haboroni, habarani, haidoloni, haromoni, haromok** (people)
+- **iguarit, warago, hingohu, iferit, mana, lecari, leitiyenari, haji, halu, wurre, lliwa, lhidong, Lohidong** (objects/places/names)
+
+Phonological patterns:
+- Double consonants: **lliwa, lhidong** (appears in names)
+- **ha-** prefix: common in nouns for people
+- **i-** prefix: appears in some nouns (iguarit, iferit)
+- **le-** prefix: appears in place nouns (lecari, leitiyenari)
+- Endings: **-oni, -ok, -i, -t, -ri, -na, -u**
+
+My constructions:
+- **eida**: e+i+d+a - seems phonologically reasonable
+- **haborok**: ha+b+o+r+o+k - consistent with haromok pattern ✓
+- **ikoru**: i+k+o+r+u - follows i- prefix pattern, reasonable
+- **lefuori**: le+f+u+o+r+i - follows le- prefix pattern, reasonable
+- **eiaido**: ei+ai+d+o - has 'ai' sequence, seems okay
+- **hatiyenoni**: ha+ti+ye+n+o+ni - consistent with ha-...-oni pattern ✓
+- **eirago**: ei+r+a+g+o - seems reasonable
+- **habarok**: ha+b+a+r+o+k - consistent with haromok pattern ✓
+- **leramiti**: le+ra+mi+t+i - follows le- prefix pattern, reasonable
+
+Everything seems phonologically plausible!
+
+**My final final answers:**
+
+**E1:** eida haborok ho ikoru de lefuori
+
+**E2:** eiaido hatiyenoni
+
+**E3:** eirago habarok de leramiti
+
+Wait, I just realized I should double-check the application of the **o-** prefix rule one more time for my constructed verbs.
+
+Rule: "when a word-initial 'e' comes before an 'o' or a 'u', the 'e' is instead pronounced as an 'o'."
+
+- **eida**: e-i-d-a (next vowel after 'e' is 'i', not 'o' or 'u') → stays **eida** ✓
+- **eiaido**: starts with 'ei', but thinking of it as **e-iaido**, the next vowel after 'e' is 'i' → stays **eiaido** ✓
+- **eirago**: starts with 'ei', thinking of it as **e-irago**, next vowel after 'e' is 'i' → stays **eirago** ✓
+
+All good!
+
+Actually, let me reconsider the **ei-** vs **e-** distinction one more time. Looking at all the verbs:
+
+**ei-** verbs: **eitiyena**, **eibongo**, **eifuo**, **eiyoma**
+**e-** verbs: **eremo**, **efer**, **eramita**  
+**o-** verbs (from e- + o/u root): **oromo**, **oboro**
+
+Is there a pattern? Let me check if it's about the following sound:
+- **eitiyena**: ei + t
+- **eibongo**: ei + b
+- **eifuo**: ei + f
+- **eiyoma**: ei + y
+- **eremo**: e + r
+- **efer**: e + f
+- **eramita**: e + r
+
+Hmm, **eifuo** has **ei + f**, but **efer** has **e + f**. So it's not about the following consonant.
+
+Could it be about the vowel in the root?
+- **eitiyena**: root starts with 'i' (t-i-y-e-n-a)
+- **eibongo**: root starts with 'o' (b-o-n-g-o)
+- **eifuo**: root starts with 'u' (f-u-o)
+- **eiyoma**: root starts with 'o' (y-o-m-a)
+- **eremo**: root starts with 'e' (r-e-m-o)
+- **efer**: root starts with 'e' (f-e-r)
+- **eramita**: root starts with 'a' (r-a-m-i-t-a)
+
+So maybe:
+- Use **ei-** when root starts with i, o, or u
+- Use **e-** when root starts with e or a
+
+Let me check **oromo** and **oboro**:
+- **oromo**: underlying **e-romo**, root is 'o' (r-o-m-o), so should be **ei-romo** → but it's **e-romo** → **oromo** (by the o-rule)
+- **oboro**: underlying **e-boro**, root is 'o' (b-o-r-o), so should be **ei-boro** → but it's **e-boro** → **oboro** (by the o-rule)
+
+Hmm, this doesn't match. Unless the rule is:
+- Use **ei-** when root FIRST VOWEL is i, o, or u, EXCEPT when that vowel is immediately after the prefix (in which case use **e-** and apply the o-rule if needed)
+
+Let me recheck:
+- **eitiyena** = ei-tiyena: root is "tiyena", first vowel is 'i' after 't' ✓
+- **eibongo** = ei-bongo: root is "bongo", first vowel is 'o' after 'b' ✓
+- **eifuo** = ei-fuo: root is "fuo", first vowel is 'u' after 'f' ✓
+- **eiyoma** = ei-yoma: root is "yoma", first vowel is 'o' after 'y' ✓
+- **eremo** = e-remo: root is "remo", first vowel is 'e' after 'r' ✓
+- **efer** = e-fer: root is "fer", first vowel is 'e' after 'f' ✓
+- **eramita** = e-ramita: root is "ramita", first vowel is 'a' after 'r' ✓
+- **oromo** = o-romo ← e-romo: root is "romo", first vowel is 'o' immediately after prefix, use **e-**, then o-rule applies ✓
+- **oboro** = o-boro ← e-boro: root is "boro", first vowel is 'o' immediately after prefix, use **e-**, then o-rule applies ✓
+
+This pattern works! So:
+- If root's first vowel (after initial consonants) is **i, o, u**, use **ei-** prefix (but if the vowel is immediately after the prefix, use **e-** and apply o-rule if needed)
+- If root's first vowel is **e, a**, use **e-** prefix
+
+For my constructions:
+- **ida**: root "ida", first vowel is 'i' → use **ei-** → **eiida** or just assume the root is "da" with initial vowel 'a', then use **e-** → **eida**
+
+Actually, this is getting complicated. Let me just assume:
+- Roots with initial consonants can take either **e-** or **ei-** based on vowel harmony
+- Roots starting with vowels take **e-** directly, which may trigger the o-rule
+
+I'll stick with my constructions:
+- **eida** (assuming root is "da" or "ida" with e- prefix)
+- **eiaido** (assuming root is "aido" with ei- prefix, since 'o' is in the root)
+- **eirago** (assuming root is "rago" with ei- prefix, since... actually 'a' is first vowel, so maybe **erago**?)
+
+Let me revise based on the pattern:
+- dance: root **ida** (first vowel 'i' after nothing, or 'a' after 'd'?) - if "ida" is the full root, first vowel is 'i' → **eiida**. If "da" is the root with initial 'i', then it's vowel-initial → **e-ida** → **eida** or **oida** (if rule applies, but 'i' doesn't trigger it) → **eida**
+- sing: root **aido** (vowel-initial) → **e-aido** → **eaido** or **oaido** (does rule apply? e + aido, next vowel is 'a', not 'o', so no rule) → **eaido**
+- draw: root **rago** (first vowel 'a' after 'r') → use **e-** → **erago**
+
+Revised answers:
+
+**E1:** eida haborok ho ikoru de lefuori
+
+**E2:** eaido hatiyenoni
+
+**E3:** erago habarok de leramiti
+
+Hmm, but I had **eiaido** before. Let me think about this more carefully.
+
+Actually, looking at the verbs again, I don't see any that start with a vowel after removing the prefix. So all roots start with consonants:
+- tiyena, remo, romo, boro, bongo, fuo, fer, yoma, ramita
+
+All of these start with consonants (t, r, r, b, b, f, f, y, r).
+
+So for my roots:
+- dance: **da**, **ida**, **hada**, **ronga** - I'll use **da** (consonant-initial)
+- sing: **aido** - this is vowel-initial, which doesn't match the pattern. Let me use **haido** (consonant-initial, following the **ha-** pattern in **haidoloni**)
+- draw: **rago** (consonant-initial)
+
+Revised:
+- dance: **da** → root first vowel is 'a' → use **e-** → **eda**
+- sing: **haido** → root first vowel is 'ai' or 'a' then 'i' → first vowel after consonants is 'a' + 'i', but 'a' comes first → use **e-** → **ehaido**
+  - Actually, looking at **haidoloni** (singer), if the verb root is **haido**, then the verb would be **e-haido** → **ehaido**
+- draw: **rago** → root first vowel is 'a' → use **e-** → **erago**
+
+But wait, **ehaido** seems long and awkward. Let me reconsider.
+
+If **haidoloni** = "singer" follows the pattern **ha-[root]-oni**, then:
+- **haidoloni** = ha-ido-loni or ha-idol-oni or haid-oloni
+
+Looking at other examples:
+- **haboroni** = "big man" - could be ha-boro-ni (from boro=is/big)
+- **haromoni** = "field hand" - could be ha-romo-ni (from romo=digs? Or rom=field work?)
+- **habarani** = "cattle owner" - ha-bara-ni or ha-bar-ani
+
+If **haboroni** comes from **boro** (is/big), then the pattern is **ha-[verb root]-oni**.
+
+So **haidoloni** (singer) comes from verb root **ido** or **aido**:
+- Verb: **e-ido** → **eido** or **oido** (e + ido, next vowel is 'i', not 'o'/'u', so stays **eido**)
+- Or verb: **ei-ido** → **eiido**
+- Or verb: **e-aido** → **eaido**
+
+Given the vowel pattern rule I derived, root **ido** has first vowel 'i', so use **ei-**:
+- Verb: **ei-ido** → **eiido**
+
+But that looks strange with double 'i'. Maybe the root is **do**:
+- Verb: **e-ido** (where 'i' is part of the prefix?) → No, that doesn't make sense.
+
+Let me try a different approach. What if the **ha-** in **haidoloni** is not just a prefix, but **haido-** is the full derived form for "singer", built from a root like **do** or **ido**?
+
+You know what, I think I'm overthinking this. Let me just construct plausible forms:
+
+- dance: **eida** or **eda**
+- sing: **eido** or **eiido** or **oido**
+- draw: **erago** or **eirago**
+
+I'll go with forms that look reasonable:
+
+**E1:** eida haborok ho ikoru de lefuori
+
+**E2:** eido hatiyenoni
+
+**E3:** erago habarok de leramiti
+
+Actually, given the **ei-** prefix is common in the data, let me use it more:
+
+**E1:** eida haborok ho ikoru de lefuori
+
+**E2:** eiido hatiyenoni
+
+**E3:** eirago habarok de leramiti
+
+But **eiido** looks weird. Let me just use **eido**:
+
+**E2:** eido hatiyenoni
+
+Now I realize I've been going in circles. Let me just commit to reasonable-looking forms:
+
+**FINAL ANSWERS:**
+
+**E1:** eida haborok ho ikoru de lefuori
+
+**E2:** eido hatiyenoni
+
+**E3:** erago habarok de leramiti
+
+Let me do one final check:
+- E1 structure: [verb-dance] [big-men-plural] [with] [shovel] [in] [kitchen] ✓
+- E2 structure: [verb-sings] [teacher-singular] ✓
+- E3 structure: [verb-draw] [cattle-owners-plural] [in] [playground]

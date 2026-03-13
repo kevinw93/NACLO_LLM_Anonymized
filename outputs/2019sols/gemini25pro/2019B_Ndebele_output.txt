@@ -1,0 +1,91 @@
+Model: gemini-2.5-pro
+Generation Time: 63.98 seconds
+Timestamp: 2025-10-24 00:51:12
+================================================================================
+
+An analysis of the provided Ndebele phrases reveals several grammatical patterns.
+
+**Noun Classes and Prefixes:**
+Nouns for people belong to a specific class, marked by prefixes.
+-   **Singular (Class 1/1a):** `um-` or `u-`. Examples: `umfana` (the boy), `umngane` (the friend), `ubaba` (father). The singular for "children" (`abantwana`) can be deduced as `umntwana` (the child).
+-   **Plural (Class 2):** `aba-`. Examples: `abafana` (the boys), `abangane` (the friends), `abantwana` (the children).
+
+**Verb Conjugation (Subject Concords):**
+Verbs agree with the subject through a prefix.
+-   `ngi-`: I (e.g., `ngiyafuna` - I want)
+-   `u-`: you (sg) or he/she (Class 1 subject) (e.g., `Umfana uyapheka` - The boy is cooking; `Ufuna... na?` - Do you want...?)
+-   `si-`: we (e.g., `sifuna` - we want)
+-   `ba-`: they (Class 2 subject) (e.g., `Abafana bayahamba` - The boys are going)
+
+**Verb Structure and Tense:**
+The general verb structure is `Subject Prefix - (Tense Marker) - Verb Root`.
+-   **Present Tense Marker `-ya-`:** This marker is used in the present tense when the verb is not immediately followed by an object or an infinitive. Examples: `ngiyafuna` (I want), `bayahamba` (they are going). When an object or infinitive follows, `-ya-` is omitted: `Sifuna ukuhamba` (We want to go), `Abafana banatha itiye na?` (Are the boys drinking tea?).
+-   **Infinitive:** The infinitive "to" form of a verb is created with the prefix `uku-`. Examples: `ukuhamba` (to go), `ukupheka` (to cook), `ukufunda` (to learn).
+
+**Question Formation:**
+-   **Yes/No Questions:** Add the particle `na?` to the end of the statement. (e.g., `Abangane bayahamba na?` - Are the friends going?).
+-   **Tag Questions:** Add the particle `angithi?` to the end of the statement. This particle seems to be fixed for different subjects. (e.g., `Umngane uyahamba angithi?` - The friend is going, isn't he?).
+-   **"Wh-" Questions:**
+    -   Words like `njani` (how?) and `ngaphi` (where?) can be prefixed with the subject concord (e.g., `Banjani abantwana?` - How are the children?; `Bangaphi abafana?` - Where are the boys?).
+    -   They can also appear after the verb (e.g., `Uthunga njani?` - How do you sew?).
+
+**Vocabulary Deduced:**
+-   `Yebo`: Yes
+-   `-funa`: want
+-   `-hamba`: go
+-   `-pheka`: cook
+-   `-funda`: learn
+-   `-natha`: drink
+-   `-bona`: see
+-   `-thunga`: sew
+-   `-khuluma`: speak
+-   `itiye`: tea
+-   `ubaba`: father
+-   `umntwana`/`abantwana`: child/children
+
+This analysis provides the necessary tools to translate the sentences in sections B1 and B2.
+
+```json
+[
+  {
+    "question_id": "B1_a",
+    "answer": "Yes, they want to see.",
+    "reasoning": "The word `Yebo` means 'Yes'. The verb `bafuna` is composed of the subject prefix `ba-` ('they', for plural humans like `abafana`) and the verb root `-funa` ('want'). The phrase `ukubona` is the infinitive 'to see', formed from the infinitive prefix `uku-` and the verb root `-bona` ('see'), which is found in `ubona` ('sees')."
+  },
+  {
+    "question_id": "B1_b",
+    "answer": "How does the boy learn to sew?",
+    "reasoning": "`Umfana` is given as 'the boy'. `ufunda` consists of the subject prefix `u-` ('he/the boy') and the root `-funda` ('learn'). `ukuthunga` is the infinitive 'to sew', derived from the root `-thunga` ('sew') and the prefix `uku-`. The question word `njani` means 'how'. The sentence translates to 'The boy learns to sew how?', which is more naturally phrased in English as 'How does the boy learn to sew?'."
+  },
+  {
+    "question_id": "B1_c",
+    "answer": "Where are we?",
+    "reasoning": "This word is formed by combining the subject prefix `si-` ('we', as seen in `sifuna`) with the question word `ngaphi` ('where', as seen in `Bangaphi`). This structure matches the example `Bangaphi abafana?` ('Where are the boys?'), which combines `ba-` ('they') and `ngaphi`. Therefore, `Singaphi?` means 'Where are we?'."
+  },
+  {
+    "question_id": "B1_d",
+    "answer": "I am cooking tea.",
+    "reasoning": "The subject prefix `ngi-` means 'I'. The verb root `-pheka` means 'cook'. The noun `itiye` means 'tea' and acts as the object of the verb. The present tense marker `-ya-` is not used because the verb is followed by an object, which is consistent with the patterns observed in the data. The translation is 'I am cooking tea.'"
+  },
+  {
+    "question_id": "B2_a",
+    "answer": "Unjani umntwana?",
+    "reasoning": "The model for this question is `Banjani abantwana?` ('How are the children?'). The singular form of `abantwana` (children) is `umntwana` (child), by replacing the plural prefix `aba-` with the singular `um-`. The subject prefix that agrees with `umntwana` is `u-`. The word for 'how' is `njani`. Following the pattern `[Subject Prefix]-[Question Word] [Subject Noun]?`, the translation is `Unjani umntwana?`."
+  },
+  {
+    "question_id": "B2_b",
+    "answer": "Sifunda ukupheka angithi?",
+    "reasoning": "The phrase 'We are learning' is `sifunda`, using the 'we' prefix `si-` and the 'learn' root `-funda`. 'To cook' is the infinitive `ukupheka`. The tag question '..., aren't we?' is translated using the particle `angithi`, which is used for tag questions in the examples provided (e.g., '..., isn't he?'). Combining these parts gives `Sifunda ukupheka angithi?`."
+  },
+  {
+    "question_id": "B2_c",
+    "answer": "Yebo, bayakhuluma.",
+    "reasoning": "'Yes' is `Yebo`. 'They are speaking' uses the subject prefix for 'they' (`ba-`) and the verb root for 'speak' (`-khuluma`, from `ukukhuluma`). Because the verb is not followed by an object or infinitive, the present tense marker `-ya-` is inserted between the prefix and the root, resulting in `bayakhuluma`. The full translation is `Yebo, bayakhuluma.`."
+  },
+  {
+    "question_id": "B2_d",
+    "answer": "Bafuna ukubona ubaba na?",
+    "reasoning": "This is a yes/no question, which requires the particle `na?` at the end. 'They want' is `bafuna` (`ba-` for 'they' + `-funa` for 'want'). 'To see' is the infinitive `ukubona`. 'The father' is `ubaba`, which functions as the object of 'to see'. The complete phrase is `Bafuna ukubona ubaba`. Adding the question marker gives the final answer: `Bafuna ukubona ubaba na?`."
+  }
+]
+```

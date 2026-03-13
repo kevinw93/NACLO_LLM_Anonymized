@@ -1,0 +1,87 @@
+Model: gpt-5
+Generation Time: 226.96 seconds
+Timestamp: 2025-12-08 23:27:16
+================================================================================
+
+[
+  {
+    "question_id": "G1_1",
+    "answer": "11",
+    "reasoning": "Types = number of distinct letters. “hemidemisemiquaver” uses {h,e,m,i,d,s,q,u,a,v,r} = 11."
+  },
+  {
+    "question_id": "G1_2",
+    "answer": "18",
+    "reasoning": "Tokens = total letters in the word. “hemidemisemiquaver” has 18 letters."
+  },
+  {
+    "question_id": "G1_3",
+    "answer": "5",
+    "reasoning": "Distinct letters of “squeegee” are {s,q,u,e,g} = 5 types."
+  },
+  {
+    "question_id": "G1_4",
+    "answer": "8",
+    "reasoning": "Total letters in “squeegee” = 8 tokens."
+  },
+  {
+    "question_id": "G1_5",
+    "answer": "a",
+    "reasoning": "A one-letter English word satisfies tokens = 1; its types count is handled in (f)."
+  },
+  {
+    "question_id": "G1_6",
+    "answer": "1",
+    "reasoning": "A one-letter word has exactly 1 type."
+  },
+  {
+    "question_id": "G1_7",
+    "answer": "dog",
+    "reasoning": "Length 3 with three distinct letters → types 3, tokens 3."
+  },
+  {
+    "question_id": "G1_8",
+    "answer": "computer",
+    "reasoning": "Eight distinct letters → types 8, tokens 8."
+  },
+  {
+    "question_id": "G1_9",
+    "answer": "noon",
+    "reasoning": "Four letters with only n and o → types 2, tokens 4."
+  },
+  {
+    "question_id": "G1_10",
+    "answer": "peppery",
+    "reasoning": "Seven letters built from {p,e,r,y} → types 4, tokens 7."
+  },
+  {
+    "question_id": "G1_11",
+    "answer": "hydromagnetic",
+    "reasoning": "Thirteen letters, all distinct → types 13, tokens 13."
+  },
+  {
+    "question_id": "G2_1",
+    "answer": "TATBIRT",
+    "reasoning": "Delete nothing: matches tokens=7, types=5; feminine singular shows t-…-t."
+  },
+  {
+    "question_id": "G2_2",
+    "answer": "ATBIR",
+    "reasoning": "From AAAATTBBBBIRRRRRR keep A-T-B-I-R to get 5 letters with 5 types; masculine singular shows a-."
+  },
+  {
+    "question_id": "G2_3",
+    "answer": "TAFUNAST",
+    "reasoning": "From ZSPTACFHUXNAVSTLQF delete extras to keep T-A-F-U-N-A-S-T (t-…-t feminine pattern)."
+  },
+  {
+    "question_id": "G2_4",
+    "answer": "ADRAR",
+    "reasoning": "From QPZFIATPNDTNRTLNARTRTNR keep A-D-R-A-R → 5 tokens, 3 types; masculine singular."
+  },
+  {
+    "question_id": "G2_5",
+    "answer": "TIDRARIN",
+    "reasoning": "From QPZTFMITPDNMRLTANFRSHILYNV keep T-I-D-R-A-R-I-N → 8 tokens, 6 types; feminine plural pattern ti-…-in."
+  }
+]

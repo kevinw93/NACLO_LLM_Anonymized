@@ -1,0 +1,77 @@
+[
+  {
+    "question_id": "R1_4",
+    "answer": "PRN",
+    "reasoning": "In 'The dog looks at her', 'her' is the object of the preposition 'at', making it a pronoun"
+  },
+  {
+    "question_id": "R1_5",
+    "answer": "DET",
+    "reasoning": "In 'The girl is her friend', 'her' modifies the noun 'friend', making it a determiner"
+  },
+  {
+    "question_id": "R1_6",
+    "answer": "DET",
+    "reasoning": "In 'I am her daughter', 'her' modifies the noun 'daughter', making it a determiner"
+  },
+  {
+    "question_id": "R1_7",
+    "answer": "DET",
+    "reasoning": "In 'The cat saw her dog yesterday', 'her' modifies the noun 'dog', making it a determiner"
+  },
+  {
+    "question_id": "R1_8",
+    "answer": "PRN",
+    "reasoning": "In 'You walk with her', 'her' is the object of the preposition 'with', making it a pronoun"
+  },
+  {
+    "question_id": "R1_9",
+    "answer": "PRN",
+    "reasoning": "In 'The boy likes her', 'her' is the direct object of the verb 'likes', making it a pronoun"
+  },
+  {
+    "question_id": "R1_10",
+    "answer": "PRN",
+    "reasoning": "In 'A giraffe sees her now', 'her' is the direct object of the verb 'sees', making it a pronoun"
+  },
+  {
+    "question_id": "R1_11",
+    "answer": "PRN",
+    "reasoning": "In 'I give her flowers', 'her' is the indirect object of 'give', making it a pronoun"
+  },
+  {
+    "question_id": "R1_12",
+    "answer": "DET",
+    "reasoning": "In 'Her tall daughter is smart', 'her' modifies the noun 'daughter', making it a determiner"
+  },
+  {
+    "question_id": "R1_13",
+    "answer": "PRN",
+    "reasoning": "In 'The cat examines her quizzically', 'her' is the direct object of 'examines', making it a pronoun"
+  },
+  {
+    "question_id": "R1_14",
+    "answer": "DET",
+    "reasoning": "In 'I am her older sister', 'her' modifies the noun 'sister', making it a determiner"
+  },
+  {
+    "question_id": "R1_15",
+    "answer": "DET",
+    "reasoning": "In 'Her orange cat likes me', 'her' modifies the noun 'cat', making it a determiner"
+  },
+  {
+    "question_id": "R2",
+    "answer": "her: SELECT DET if (+1 N)\nher: SELECT DET if (+1 ADJ)\nher: SELECT PRN if (-1 PREP)",
+    "reasoning": "These three rules cover most disambiguation cases: DET when followed by noun, DET when followed by adjective, PRN when preceded by preposition"
+  },
+  {
+    "question_id": "R3",
+    "answer": "Sentence 9 would be disambiguated incorrectly because 'her' follows a verb but isn't preceded by a preposition, and creating a rule 'her: SELECT PRN if (-1 VRB)' would incorrectly tag sentence 3",
+    "reasoning": "The rules don't handle cases where 'her' is a direct object after a verb without other contextual clues"
+  },
+  {
+    "question_id": "R4",
+    "answer": "mi: SELECT PRN if (+1 VRB)\nden: SELECT PRN if (+1 VRB)\nlobi: SELECT VRB if (-1 PRN)\nsingi: SELECT N if (-1 DET)\nyu: SELECT PRN if (+1 VRB)",
+    "reasoning": "These rules disambiguate based on context: subjects before verbs are pronouns, words after pronouns are likely verbs, and words after determiners are likely nouns"
+  }
+]

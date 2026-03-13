@@ -1,0 +1,102 @@
+Model: grok-4-fast-reasoning
+Generation Time: 196.32 seconds
+Timestamp: 2026-02-03 19:25:00
+================================================================================
+
+[
+  {
+    "question_id": "D1_1",
+    "answer": "U",
+    "reasoning": "For sentence 31: The tall detective saw the ballerina. C2 rejects because 'tall' has only been seen as an 'is-adj' (in training sentence 13), not as a pre-noun adjective. C2 does not generalize adjectives across positions."
+  },
+  {
+    "question_id": "D1_2",
+    "answer": "G",
+    "reasoning": "For sentence 32: The linguist saw the yodeler. C2 accepts because 'linguist' has been subject, 'yodeler' has been object (training 10), and 'saw' is seen verb."
+  },
+  {
+    "question_id": "D1_3",
+    "answer": "U",
+    "reasoning": "For sentence 33: The visited met linguist programmer. This is ungrammatical. C2 rejects ungrammatical sentences."
+  },
+  {
+    "question_id": "D1_4",
+    "answer": "U",
+    "reasoning": "For sentence 34: The yodeler met the woodcarver. C2 rejects because 'yodeler' has not been seen as subject (only object in training 10)."
+  },
+  {
+    "question_id": "D1_5",
+    "answer": "G",
+    "reasoning": "For sentence 35: The watchmaker is famous. C2 accepts because 'watchmaker' has been subject, and 'famous' has been seen as 'is-adj' (training 12)."
+  },
+  {
+    "question_id": "D1_6",
+    "answer": "G",
+    "reasoning": "For sentence 36: The detective met the yodeler. C2 accepts because 'detective' has been subject (training 7,10), 'yodeler' object (10), 'met' seen."
+  },
+  {
+    "question_id": "D1_7",
+    "answer": "G",
+    "reasoning": "For sentence 36: C4 overgeneralizes and accepts all sentences as G, even ungrammatical ones."
+  },
+  {
+    "question_id": "D1_8",
+    "answer": "G",
+    "reasoning": "For sentence 36: C4 overgeneralizes and accepts all sentences as G."
+  },
+  {
+    "question_id": "D1_9",
+    "answer": "U",
+    "reasoning": "For sentence 37: The spy is talented. C1 only accepts exact training sentences; this is not exact (talented new), so U."
+  },
+  {
+    "question_id": "D1_10",
+    "answer": "U",
+    "reasoning": "For sentence 37: The spy is talented. C2 rejects because 'talented' has only been seen as pre-noun adj (training 14), not as 'is-adj'."
+  },
+  {
+    "question_id": "D1_11",
+    "answer": "G",
+    "reasoning": "For sentence 37: C4 overgeneralizes and accepts as G."
+  },
+  {
+    "question_id": "D1_12",
+    "answer": "U",
+    "reasoning": "For sentence 38: The programmer met the cartoonist. C1 not exact training sentence, U."
+  },
+  {
+    "question_id": "D1_13",
+    "answer": "U",
+    "reasoning": "For sentence 38: The programmer met the cartoonist. C2 rejects because 'cartoonist' has not been seen as object (only subject in training 2)."
+  },
+  {
+    "question_id": "D1_14",
+    "answer": "G",
+    "reasoning": "For sentence 38: C4 overgeneralizes and accepts as G."
+  },
+  {
+    "question_id": "D2_1",
+    "answer": "happy",
+    "reasoning": "HIDDEN_WORD_1 must be an adjective that C2 accepts both as 'is-adj' and pre-noun adj. Only 'happy' fits from training (is in 11, pre-noun in 4)."
+  },
+  {
+    "question_id": "D2_2",
+    "answer": "main",
+    "reasoning": "HIDDEN_WORD_2 must be pre-noun adj seen (accepted in 42), but not 'is-adj' (rejected in 41). 'Main' fits (pre-noun in 7, not is-adj)."
+  },
+  {
+    "question_id": "D2_3",
+    "answer": "asleep",
+    "reasoning": "HIDDEN_WORD_3 must be 'is-adj' seen (accepted in 43), but not pre-noun adj (rejected in 44). 'Asleep' fits (is in 3, not pre-noun)."
+  },
+  {
+    "question_id": "D3_1",
+    "answer": "4",
+    "reasoning": "Assuming all 6 sentences are grammatical (hidden words are appropriate adjectives), my labels are all G. C2 has G for 39,40,42,43 (4 matches) and U for 41,44 (2 mismatches)."
+  },
+  {
+    "question_id": "D3_2",
+    "answer": "6",
+    "reasoning": "Assuming all 6 sentences are grammatical, my labels are all G. C3 has G for all 6, perfect match."
+  }
+]

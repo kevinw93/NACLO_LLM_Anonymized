@@ -1,0 +1,137 @@
+[
+  {
+    "question_id": "K1_a",
+    "answer": "Print: The company will print one million copies of the book.",
+    "reasoning": "Player 1's frigate is located on the print-produce-create chain. Player 2 has already scored hits on 'produce' and 'create'. To sink the 3-position frigate, Player 2's final guess, (a), must be 'print'. The sentence must specify the 'publishing' meaning, as the other meaning of 'print' is on a different branch of the diagram."
+  },
+  {
+    "question_id": "K1_b",
+    "answer": "Dry: You should dry the clothes before putting them away.",
+    "reasoning": "Player 1's yacht is a 2-position ship. Player 2 has already scored a hit on 'modify'. Since Player 1's rowboat occupies 'mark', and 'do' was a miss, the only remaining valid 2-position chain involving 'modify' is dry-modify. Therefore, guess (b) must be 'dry'."
+  },
+  {
+    "question_id": "K2_yacht",
+    "answer": "perform, serenade",
+    "reasoning": "In the log of Player 1's guesses, Player 2's yacht is sunk after hits on 'perform' (Turn 8) and 'serenade' (Turn 9). These two words form a valid 2-position chain on the wordnet diagram."
+  },
+  {
+    "question_id": "K2_rowboat",
+    "answer": "generate, produce",
+    "reasoning": "Player 1 scores a hit on Player 2's 'produce' (Turn 7), which must belong to the 2-position rowboat. Player 1 gets misses on 'create', 'breed', and the publishing 'print'. This eliminates all other possible 2-word chains involving 'produce', leaving only 'generate-produce'."
+  },
+  {
+    "question_id": "K2_frigate",
+    "answer": "do, modify, mark",
+    "reasoning": "In the log of Player 1's guesses, Player 2's frigate is sunk after hits on 'modify' (Turn 3), 'do' (Turn 4), and 'mark' (Turn 5). These three words form a valid 3-position chain on the wordnet diagram."
+  },
+  {
+    "question_id": "K3_a",
+    "answer": "Hit",
+    "reasoning": "Based on the game log, Player 4's battleship is a 4-position ship sunk by 'Ruler' (person). A plausible chain is Queen -> Ruler (person) -> Person -> Physical entity. Therefore, Player 3's guess of 'Queen' is a hit."
+  },
+  {
+    "question_id": "K3_b",
+    "answer": "Hit",
+    "reasoning": "As reasoned for K3_a, Player 4's battleship is on the chain Queen -> Ruler (person) -> Person -> Physical entity. Therefore, Player 3's guess of 'Physical entity' is a hit."
+  },
+  {
+    "question_id": "K3_c",
+    "answer": "Miss",
+    "reasoning": "'Thrower' is a type of 'Person', and 'Person' is part of Player 4's battleship. However, 'Thrower' itself is not one of the four words making up the ship. Therefore, it is a miss."
+  },
+  {
+    "question_id": "K3_d",
+    "answer": "Hit",
+    "reasoning": "As reasoned for K3_a, Player 4's battleship is on the chain Queen -> Ruler (person) -> Person -> Physical entity. Therefore, Player 3's guess of 'Person' is a hit."
+  },
+  {
+    "question_id": "K3_e",
+    "answer": "Miss",
+    "reasoning": "A 'Centimeter' is a unit of length, which is a quantity, which is an abstract entity. While 'Abstract entity' is part of Player 4's aircraft carrier, the ship does not extend down to 'Centimeter'. It is not on any of Player 4's ships, so it is a miss."
+  },
+  {
+    "question_id": "K3_f",
+    "answer": "Ruler: The ruler of the kingdom was benevolent.",
+    "reasoning": "This guess sinks Player 4's battleship. The other positions are Queen, Person, and Physical entity. This means the guess must be for 'Ruler' with the meaning of a person who rules, and the sentence must clarify this."
+  },
+  {
+    "question_id": "K3_g",
+    "answer": "Hit",
+    "reasoning": "Player 4's submarine is a 3-position ship sunk by 'Play' (written). A plausible chain is Play (written) -> Written communication -> Communication. This guess, 'Written communication', is part of that ship, so it is a hit."
+  },
+  {
+    "question_id": "K3_h",
+    "answer": "Hit",
+    "reasoning": "As reasoned for K3_g, 'Communication' is the top of the 3-word chain for Player 4's submarine. Therefore, it is a hit."
+  },
+  {
+    "question_id": "K3_i",
+    "answer": "Play: We are reading a play by Shakespeare.",
+    "reasoning": "This guess sinks Player 4's submarine. The other parts of the ship are Written communication and Communication. The guess must be for 'Play' with the meaning of a written work, and the sentence must clarify this."
+  },
+  {
+    "question_id": "K3_j",
+    "answer": "Ruler: I used a ruler to draw a straight line.",
+    "reasoning": "This guess sinks Player 4's 2-position patrol boat. The other hit for this ship is 'Instrument'. Therefore, this guess must be for 'Ruler' with the meaning of a measuring device, and the sentence must clarify this."
+  },
+  {
+    "question_id": "K3_k",
+    "answer": "Entity: An entity can be anything that exists.",
+    "reasoning": "This guess sinks Player 4's 5-position aircraft carrier. The other hits establish the chain Ball -> Social event -> Event -> Abstract entity. The final, most general word in this chain is 'Entity'. This answer must be identical in both tables."
+  },
+  {
+    "question_id": "K3_l",
+    "answer": "Publication: The publication of the results is tomorrow.",
+    "reasoning": "This guess sinks Player 3's submarine. The prior hits are on 'Business event' and 'Event'. This implies the chain is Publication -> Business event -> Event. The sentence must clarify the meaning of 'publication' as an announcement or act, distinct from a physical object."
+  },
+  {
+    "question_id": "K3_m",
+    "answer": "Pitcher: The team's starting pitcher is injured.",
+    "reasoning": "This guess sinks Player 3's battleship. A consistent, non-overlapping ship placement puts the battleship on the chain Pitcher (player) -> Thrower -> Person -> Physical entity. The sentence must specify the 'player' meaning of pitcher."
+  },
+  {
+    "question_id": "K3_n",
+    "answer": "Play: We are going to see a play tonight.",
+    "reasoning": "This guess sinks Player 3's cruiser. The other hits are 'Show' and 'Social event'. This implies the chain is Play -> Show -> Social event. The sentence must specify the 'theatrical performance' meaning of play."
+  },
+  {
+    "question_id": "K3_o",
+    "answer": "Hit",
+    "reasoning": "In the derived placement for Player 3's ships, the aircraft carrier is on the chain Book -> Publication (object) -> Object -> Equipment -> Instrument. This guess, 'Publication' with the object meaning, is part of that ship. Thus, it is a hit."
+  },
+  {
+    "question_id": "K3_p",
+    "answer": "Hit",
+    "reasoning": "In the derived placement, Player 3's patrol boat is on the 2-position chain Abstract entity -> Entity. This guess, 'Entity', is part of that ship. Thus, it is a hit."
+  },
+  {
+    "question_id": "K3_q",
+    "answer": "Miss",
+    "reasoning": "In the reconstructed ship layout for Player 3, 'Length' is not part of any of the six ships. Therefore, it is a miss."
+  },
+  {
+    "question_id": "K3_r",
+    "answer": "Hit",
+    "reasoning": "In the derived placement, Player 3's battleship is on the chain Pitcher (player) -> Thrower -> Person -> Physical entity. This guess, 'Physical entity', is part of that ship. Thus, it is a hit."
+  },
+  {
+    "question_id": "K3_s",
+    "answer": "Hit",
+    "reasoning": "In the derived placement, Player 3's aircraft carrier is on the chain Book -> Publication (object) -> Object -> Equipment -> Instrument. This guess, 'Object', is part of that ship. Thus, it is a hit."
+  },
+  {
+    "question_id": "K3_t",
+    "answer": "Miss",
+    "reasoning": "In the reconstructed layout, 'Instrument' is part of Player 3's aircraft carrier. 'Microscope' is a child of 'Instrument' but is not itself part of the 5-position ship. Therefore, it is a miss."
+  },
+  {
+    "question_id": "K3_u",
+    "answer": "Hit",
+    "reasoning": "In the derived placement, Player 3's aircraft carrier is on the chain Book -> Publication (object) -> Object -> Equipment -> Instrument. This guess, 'Equipment', is part of that ship. Thus, it is a hit."
+  },
+  {
+    "question_id": "K3_v",
+    "answer": "Book: I am reading a good book.",
+    "reasoning": "This guess sinks Player 3's 5-position aircraft carrier. The chain is deduced to be Book -> Publication (object) -> Object -> Equipment -> Instrument. This guess is for the final, most specific word in that chain."
+  }
+]

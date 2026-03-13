@@ -1,0 +1,92 @@
+[
+  {
+    "question_id": "N1",
+    "answer": "The fourth unit appears to track cumulative information about the sentence, possibly position or accumulated word features, but lacks clear human-interpretable meaning",
+    "reasoning": "The fourth unit shows monotonically increasing values (0, 2, 7, 9, 10, 15) as the sentence progresses. While unit 2 has a clear role (tracking a/an), the text states most units don't have clear meanings. The pattern suggests it's accumulating some form of information as the sentence progresses."
+  },
+  {
+    "question_id": "N2_1",
+    "answer": "H",
+    "reasoning": "Sentence 1 'The dog and the ravens support the happy yaks' matches Option H based on the U2 pattern for articles"
+  },
+  {
+    "question_id": "N2_2",
+    "answer": "E",
+    "reasoning": "Sentence 2 'The American knows the very energetic dog is smart' matches Option E"
+  },
+  {
+    "question_id": "N2_3",
+    "answer": "A",
+    "reasoning": "Sentence 3 'The raven that the crows admire visits the poet' matches Option A"
+  },
+  {
+    "question_id": "N2_4",
+    "answer": "B",
+    "reasoning": "Sentence 4 'This surprised the tall ostriches that supported the horse' matches Option B"
+  },
+  {
+    "question_id": "N2_5",
+    "answer": "G",
+    "reasoning": "Sentence 5 'The dogs near the owl that sings are Canadian' matches Option G"
+  },
+  {
+    "question_id": "N2_6",
+    "answer": "I",
+    "reasoning": "Sentence 6 'The happy penguins support the zebras that invented this' matches Option I"
+  },
+  {
+    "question_id": "N2_7",
+    "answer": "F",
+    "reasoning": "Sentence 7 'She supports the horse that the fast zebra entertains' matches Option F"
+  },
+  {
+    "question_id": "N2_8",
+    "answer": "C",
+    "reasoning": "Sentence 8 'The speedy sloth knows the dog and the yak' matches Option C"
+  },
+  {
+    "question_id": "N2_9",
+    "answer": "D",
+    "reasoning": "Sentence 9 'The impressive yaks meet the dog and the gazelles' matches Option D"
+  },
+  {
+    "question_id": "N3_a",
+    "answer": "Dogs eat food",
+    "reasoning": "Plot (a) shows all units staying at 0, suggesting no articles in the sentence"
+  },
+  {
+    "question_id": "N3_b",
+    "answer": "An apple and a pear",
+    "reasoning": "Plot (b) shows U2 going negative then positive, indicating 'an' followed by 'a'"
+  },
+  {
+    "question_id": "N3_c",
+    "answer": "The cat ran home",
+    "reasoning": "Plot (c) shows U3 steadily increasing while other units remain relatively stable"
+  },
+  {
+    "question_id": "N5_a",
+    "answer": "is: 100% are: 0%",
+    "reasoning": "With both U1 and U2 on, the model correctly predicts 'is' for singular subject"
+  },
+  {
+    "question_id": "N5_b",
+    "answer": "is: 100% are: 0%",
+    "reasoning": "With U1 off and U2 on, the model still correctly predicts 'is'"
+  },
+  {
+    "question_id": "N5_c",
+    "answer": "is: 100% are: 0%",
+    "reasoning": "With U1 on and U2 off, the model still correctly predicts 'is'"
+  },
+  {
+    "question_id": "N5_d",
+    "answer": "is: 50% are: 50%",
+    "reasoning": "With both U1 and U2 off, the model's performance drops to chance level"
+  },
+  {
+    "question_id": "N5_e",
+    "answer": "the dog by the zebras",
+    "reasoning": "This completes the sentence fragment pattern shown in the table"
+  }
+]

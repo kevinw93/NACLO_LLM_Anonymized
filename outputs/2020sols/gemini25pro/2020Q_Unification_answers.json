@@ -1,0 +1,102 @@
+[
+  {
+    "question_id": "Q1_1",
+    "answer": "a",
+    "reasoning": "Based on a process of elimination and selecting the most linguistically plausible mapping despite contradictions in the problem data. `áa-` corresponds to first-person subject forms, which is structure (a)."
+  },
+  {
+    "question_id": "Q1_2",
+    "answer": "c",
+    "reasoning": "Based on a process of elimination and selecting the most linguistically plausible mapping. `á-` corresponds to third-person subject acting on a third-person object, which is structure (c)."
+  },
+  {
+    "question_id": "Q1_3",
+    "answer": "b",
+    "reasoning": "Based on a process of elimination and selecting the most linguistically plausible mapping. `é-` corresponds to third-person subject acting on a first-person object, which is structure (b)."
+  },
+  {
+    "question_id": "Q1_4",
+    "answer": "d",
+    "reasoning": "Structure (d) shows a verb with a single object (undergoer) and no second object. This corresponds to the simple verb form with no added suffix, represented as '*none*'."
+  },
+  {
+    "question_id": "Q1_5",
+    "answer": "e",
+    "reasoning": "Structure (e) shows a verb with two objects: a beneficiary and an undergoer. The suffix `-okí` adds a benefactive meaning ('for someone'), so it matches this structure."
+  },
+  {
+    "question_id": "Q1_6",
+    "answer": "f",
+    "reasoning": "Structure (f) is marked with `CASE:nom`, indicating it's a subject. The Maasai word `olmuraní` (with 'í') is the nominative form of 'warrior'."
+  },
+  {
+    "question_id": "Q1_7",
+    "answer": "g",
+    "reasoning": "Structure (g) is marked with `CASE:acc`, indicating it's an object. The Maasai word `olmuráni` (with 'i') is the accusative form of 'warrior'."
+  },
+  {
+    "question_id": "Q2_1",
+    "answer": "A",
+    "reasoning": "Sentence A (`ádún olmuraní olcetá`) is invalid regardless of which prefix `á-` corresponds to. The sentence requires a prefix compatible with a 3sg animate subject (`olmuraní`) and a 3sg inanimate object (`olcetá`). None of the provided prefix structures (a, b, c) are compatible with an inanimate object, causing a unification failure."
+  },
+  {
+    "question_id": "Q2_2",
+    "answer": "H",
+    "reasoning": "Sentence H (`édún olmuraní olcetá`) has the same structure as sentence A, with a different prefix. For the same reason as A, it is invalid regardless of which prefix `é-` corresponds to. The inanimate object `olcetá` cannot unify with any of the prefix structures, which all require animate objects if an object is specified."
+  },
+  {
+    "question_id": "Q3_A",
+    "answer": "",
+    "reasoning": "This sentence was identified as invalid in Q2."
+  },
+  {
+    "question_id": "Q3_B",
+    "answer": "He/she cuts the tree for the warrior.",
+    "reasoning": "Prefix `á-` is (c) (3sg SUBJ, 3sg OBJ). Suffix `-okí` indicates a beneficiary. `olmuráni` (acc) is the animate beneficiary (OBJ1), `olcetá` (acc) is the undergoer (OBJ2). The subject is determined by the prefix to be 3sg."
+  },
+  {
+    "question_id": "Q3_C",
+    "answer": "He/she cuts the warrior.",
+    "reasoning": "Prefix `á-` is (c) (3sg SUBJ, 3sg OBJ). `olmuráni` (acc) is the object. The subject is determined by the prefix. The features match."
+  },
+  {
+    "question_id": "Q3_D",
+    "answer": "I cut the warrior for someone.",
+    "reasoning": "Prefix `áa-` is (a) (1sg SUBJ). Suffix `-okí` indicates a beneficiary. `olmuráni` (acc) is the undergoer (OBJ2). The beneficiary (OBJ1) is unspecified but required by the suffix. The subject is 'I' from the prefix."
+  },
+  {
+    "question_id": "Q3_E",
+    "answer": "I cut the tree for someone.",
+    "reasoning": "Prefix `áa-` is (a) (1sg SUBJ). Suffix `-okí` indicates a beneficiary. `olcetá` (acc) is the undergoer (OBJ2). The beneficiary (OBJ1) is unspecified. The subject is 'I' from the prefix."
+  },
+  {
+    "question_id": "Q3_F",
+    "answer": "I cut the warrior.",
+    "reasoning": "Prefix `áa-` is (a) (1sg SUBJ). No suffix. `olmuráni` (acc) is the object (OBJ1). The subject is 'I' from the prefix."
+  },
+  {
+    "question_id": "Q3_G",
+    "answer": "",
+    "reasoning": "This sentence is invalid under the chosen prefix mapping (`áa-` = a). The prefix requires a 1st person subject, but the overt subject `olmuraní` is 3rd person, causing a clash."
+  },
+  {
+    "question_id": "Q3_H",
+    "answer": "",
+    "reasoning": "This sentence was identified as invalid in Q2."
+  },
+  {
+    "question_id": "Q3_I",
+    "answer": "",
+    "reasoning": "This sentence is invalid under the chosen prefix mapping (`é-` = b). The prefix requires a 1st person object/beneficiary, but the overt beneficiary `olmuráni` is 3rd person, causing a clash."
+  },
+  {
+    "question_id": "Q3_J",
+    "answer": "The warrior cuts something for me.",
+    "reasoning": "Prefix `é-` is (b) (3sg SUBJ, 1sg OBJ). `olmuraní` (nom) is the subject, which matches the prefix's subject features. The beneficiary (OBJ1) is 1st person ('me') from the prefix. The undergoer (OBJ2) is unspecified."
+  },
+  {
+    "question_id": "Q3_K",
+    "answer": "",
+    "reasoning": "This sentence is invalid under the chosen prefix mapping (`é-` = b). The prefix requires a 1st person object, but the overt object `olmuráni` is 3rd person, causing a clash."
+  }
+]

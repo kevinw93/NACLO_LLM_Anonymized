@@ -1,0 +1,42 @@
+[
+  {
+    "question_id": "M1_1",
+    "answer": "G",
+    "reasoning": "I am putting the stages in historical order. I've identified stage (G) as the earliest. It exhibits the most complex and arguably most archaic features from which the others can be derived through simplification. Specifically, it has the voiced aspirate `bh-` in 'share', the complex consonant clusters `mbh` in 'row of teeth' (`gómbhos`) and 'prop' (`stembha-`), and lacks any palatalization (e.g., `gónu`, not `jónu`), which is typically an innovation. Therefore, G (`bhágos, gómbhos, gónu, ..., stembha-`) is the most plausible starting point."
+  },
+  {
+    "question_id": "M1_2",
+    "answer": "C",
+    "reasoning": "Following stage (G), the next stage is (C). This step involves the palatalization of the voiced velar stop `g` to `j` before the vowel `o`. This is a regular sound change. We can see this in `gómbhos` (G) becoming `jómbhos` (C) and `gónu` (G) becoming `jónu` (C). Other forms remain the same between G and C. This represents the first sound change in the sequence."
+  },
+  {
+    "question_id": "M1_3",
+    "answer": "D",
+    "reasoning": "Stage (D) follows stage (C). This stage shows a further development of palatalization, this time affecting the voiceless velar stop `k`. In stage C, the words for 'one hundred' and 'dog' are `kmtóm` and `kuố`. In stage D, they become `cmtóm` and `cuố`, showing the change `k > c`. Other words are identical to stage C. This illustrates a second wave of palatalization spreading to another sound."
+  },
+  {
+    "question_id": "M1_4",
+    "answer": "F",
+    "reasoning": "The transition from stage (D) to (F) is the most complex. It requires three changes to happen. First, the complex clusters `mbh` simplify to `m`. We see this in `jómbhos` > `gómos` and `stembha-` > `stema-`. Second and third, the palatal sounds from the previous stages are reversed (`j > g` and `c > k`). Undoing a sound change is rare, but can happen through analogy with other forms where palatalization didn't occur. Given the instruction to create a single linear history, this is the most plausible, though difficult, step to connect the earlier stages (G,C,D) with the later ones (F,B,A,E)."
+  },
+  {
+    "question_id": "M1_5",
+    "answer": "B",
+    "reasoning": "Stage (B) follows stage (F). The change is the de-aspiration and devoicing of the initial `bh-` to `p-`. The word for 'share', `bhágos` in stage F, becomes `págos` in stage B. All other words are identical between F and B. This is a common type of sound change where a complex sound (voiced aspirate) simplifies."
+  },
+  {
+    "question_id": "M1_6",
+    "answer": "A",
+    "reasoning": "Stage (A) follows stage (B). This step involves the devoicing of intervocalic `g` to `k`. In stage B, we have `págos`, `gómos`, `gónu`. In stage A, these become `pákos`, `kómos`, `kónu`. This is a regular devoicing process. The forms from B that did not have an intervocalic `g` remain unchanged."
+  },
+  {
+    "question_id": "M1_7",
+    "answer": "E",
+    "reasoning": "Stage (E) is the final and most simplified stage in this sequence, following (A). The sound change is the loss of the final `-s` at the end of words. `pákos` (A) becomes `páko` (E) and `kómos` (A) becomes `kómo` (E). This type of final consonant loss is a common feature in language evolution, making it a logical final step. This places E as the 'Latest' stage."
+  },
+  {
+    "question_id": "M3_1",
+    "answer": "G, H, L, M, J, I, N, E, A, D, K, C, Q, O, P, B, F",
+    "reasoning": "To determine the order of the sound changes, I identified several relative ordering constraints from the word data. \n1. Palatalization rules (G: t>c, H: d>ś, L: k>ś) are conditioned by `e, ē`. These vowels are later modified by rules like (E: ē>e). Therefore, the palatalization rules {G,H,L} must precede vowel changes like (E) and (A: o>ë). Similarly, (M: w>w') is a palatalization and is likely early. \n2. Rule (I: n>ø/#) must be early, preceding rule (Q: ti>ø/n_#). This is because (Q) creates new word-final `n`'s (e.g., in `*akën`), which are preserved. If (I) applied after (Q), these `n`'s would have been deleted. \n3. Devoicing (N: g>k) applies to non-palatalized `g`, suggesting it occurred after the palatalization rules {G,H,L}. \n4. The vowel changes show an internal logic. From `*agontor` > `*akëntər`, the sequence `A: o>ë` -> `D: or>ur` -> `K: u>ə` is a plausible pathway (`agontor` -> `agëntor` -> `agëntur` -> `agëntər`). \n5. Rules deleting final consonants, such as (O: d>ø/#), (P: s>ø/#), and (B: nt>ø/#), are typically late-stage changes. \nBased on these key dependencies, I constructed a full linear order. The early changes involve consonantal modifications like palatalization and assimilation {G,H,L,M,J} and the early `n`-loss {I}. These are followed by devoicing {N}, then a cascade of vowel changes {E, A, D, K, C}. After the vowel system stabilized, further consonantal changes occurred, like {Q}. The final changes are the loss of final consonants {O,P,B}. Rule {F} is placed last as it does not seem to apply cleanly to any examples, and data for `kəmtóm` appears problematic with the provided rules."
+  }
+]

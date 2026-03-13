@@ -1,0 +1,62 @@
+[
+  {
+    "question_id": "H1_a",
+    "answer": "u",
+    "reasoning": "The sentence is a random jumble of words with no discernible grammatical structure, which is the defining characteristic of the unigram method."
+  },
+  {
+    "question_id": "H1_b",
+    "answer": "c",
+    "reasoning": "The sentence is grammatically perfect, but the semantic combination 'water blushing' is unusual. This pairing of correct syntax with odd semantics is a hallmark of the context-free method. It is too well-formed for n-gram models and less likely to be 'real' than the simpler candidates."
+  },
+  {
+    "question_id": "H1_c",
+    "answer": "b",
+    "reasoning": "The sentence is grammatically incorrect ('There were crouching'). However, the local word pairs are plausible. This indicates a bigram model, which connects words based on their immediate predecessor but fails to maintain larger grammatical rules like subject-verb agreement."
+  },
+  {
+    "question_id": "H1_d",
+    "answer": "b",
+    "reasoning": "The sentence starts coherently but then breaks down, joining two unrelated clauses. This failure to maintain long-range sense and structure is a classic failure mode for a bigram model."
+  },
+  {
+    "question_id": "H1_e",
+    "answer": "c",
+    "reasoning": "This sentence has a perfectly correct, complex grammatical structure but its meaning is completely nonsensical ('spooned iron bolts, keyholes'). This combination of flawless syntax and absurd semantics is the clearest example of the context-free method."
+  },
+  {
+    "question_id": "H1_f",
+    "answer": "r",
+    "reasoning": "This is a short, simple, and perfectly common sentence. It is grammatically and semantically flawless, making it a prime candidate for a real sentence from the source text."
+  },
+  {
+    "question_id": "H1_g",
+    "answer": "t",
+    "reasoning": "The sentence starts with a very coherent multi-word phrase ('Sorry!' he said'), but then breaks down with a repeated verb and a nonsensical subject. This ability to generate plausible longer chunks that are then joined incorrectly points to a trigram model."
+  },
+  {
+    "question_id": "H1_h",
+    "answer": "t",
+    "reasoning": "Similar to sentence (g), this one begins with a plausible, coherent phrase ('Harry wasn't,\" said Dumbledore') and then adds an ungrammatical verb phrase ('went slightly surprised'). This is a typical error for a trigram model, which has a longer memory than a bigram but can still fail at sentence-level grammar."
+  },
+  {
+    "question_id": "H1_i",
+    "answer": "u",
+    "reasoning": "Like sentence (a), this is a chaotic sequence of words and punctuation with no grammatical structure. It is a clear example of the unigram method."
+  },
+  {
+    "question_id": "H1_j",
+    "answer": "r",
+    "reasoning": "This is a complete, coherent, and grammatically perfect sentence. Along with (f), it is the most natural-sounding sentence and is therefore the other likely real sentence from the text."
+  },
+  {
+    "question_id": "H1_k",
+    "answer": "c",
+    "reasoning": "The sentence follows a correct high-level grammatical template (a quote followed by a speaker tag), but the tag itself is ungrammatical ('...said Professor Flitwick pressed...'). This suggests a context-free grammar filled its syntactic slots in a way that created a new error, a run-on sentence."
+  },
+  {
+    "question_id": "H1_l",
+    "answer": "c",
+    "reasoning": "The sentence is grammatically flawless (Subject-Verb-Indirect Object-Direct Object). The meaning is semantically strange (a broom winking), which fits the pattern of a context-free grammar generating sentences that are syntactically valid but semantically unusual."
+  }
+]

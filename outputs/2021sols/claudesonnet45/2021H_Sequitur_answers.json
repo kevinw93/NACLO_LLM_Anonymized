@@ -1,0 +1,87 @@
+[
+  {
+    "question_id": "H1_1",
+    "answer": "abcd",
+    "reasoning": "Step 4 continues building the string character by character, adding 'd' to 'abc' to form 'abcd'."
+  },
+  {
+    "question_id": "H1_2",
+    "answer": "S = abcdb",
+    "reasoning": "Step 5 continues building, adding 'b' to form 'abcdb' before pattern recognition occurs."
+  },
+  {
+    "question_id": "H1_3",
+    "answer": "aXdX",
+    "reasoning": "At step 7, the repeated pattern 'bc' has been identified and replaced with X, so 'abcdbc' becomes 'aXdX'."
+  },
+  {
+    "question_id": "H1_4",
+    "answer": "S = aXdX",
+    "reasoning": "Column 2 at step 7 records the state of S after the pattern substitution."
+  },
+  {
+    "question_id": "H1_5",
+    "answer": "X = bc",
+    "reasoning": "The variable X is defined to represent the repeated pattern 'bc'."
+  },
+  {
+    "question_id": "H1_6",
+    "answer": "S = aXdXab",
+    "reasoning": "Step 8 continues processing, adding 'ab' to the compressed string."
+  },
+  {
+    "question_id": "H1_7",
+    "answer": "Y = aX",
+    "reasoning": "At step 9, the pattern 'aX' is recognized as repeated and assigned to variable Y."
+  },
+  {
+    "question_id": "H1_8",
+    "answer": "YdXY",
+    "reasoning": "After recognizing Y = aX, the string becomes YdXY (representing aXdXaX with substitution)."
+  },
+  {
+    "question_id": "H1_9",
+    "answer": "YdXY",
+    "reasoning": "Step 10 Column 1 shows the state before the final Z substitution is made."
+  },
+  {
+    "question_id": "H2_1",
+    "answer": "XdXaXd",
+    "reasoning": "BPE identifies 'bc' as the most frequent byte pair and merges it into X, transforming 'abcdbcabcd' to 'aXdXaXd' where X=bc."
+  },
+  {
+    "question_id": "H2_2",
+    "answer": "S = XdXaXd",
+    "reasoning": "Column 2 records the compressed string state after the first merge operation."
+  },
+  {
+    "question_id": "H2_3",
+    "answer": "Y = aX",
+    "reasoning": "The next most frequent pair in 'aXdXaXd' is 'aX', which appears twice, so it gets merged into Y."
+  },
+  {
+    "question_id": "H3_1",
+    "answer": "Different",
+    "reasoning": "The string 'abcadbcbc' has a different pattern structure where Sequitur and BPE would make different compression choices."
+  },
+  {
+    "question_id": "H3_2",
+    "answer": "Different",
+    "reasoning": "The string 'abbcaddca' lacks the regular repetitive structure needed for both algorithms to converge on the same result."
+  },
+  {
+    "question_id": "H3_3",
+    "answer": "Different",
+    "reasoning": "The string 'bacbcbabacbcba' has complex alternating patterns where the greedy BPE approach would differ from Sequitur's pattern recognition."
+  },
+  {
+    "question_id": "H3_4",
+    "answer": "Different",
+    "reasoning": "The string 'ccdbccdbccacc' has multiple overlapping patterns ('cc', 'ccdb') where BPE's frequency-based merging would proceed differently than Sequitur."
+  },
+  {
+    "question_id": "H3_5",
+    "answer": "Same",
+    "reasoning": "The string 'ccdbccdbccaccacca' has a similar structure to 'abcdbcabcd' with clear repeated blocks ('ccdb' twice, 'acca' twice) that both algorithms would handle similarly."
+  }
+]

@@ -1,0 +1,30 @@
+Generation Time: 121.50 seconds
+================================================================================
+
+[
+  {
+    "question_id": "H3_a",
+    "answer": "Same",
+    "reasoning": "For input 'abcadbc', both Sequitur and BPE identify the repeated 'bc' pair first, leading to the same final representation S = a X a d X where X = bc. The structure and compression are identical."
+  },
+  {
+    "question_id": "H3_b",
+    "answer": "Same",
+    "reasoning": "For input 'abbcadca', both algorithms identify the repeated 'ca' pair, resulting in the same final output S = a b b X d X where X = ca. No further repeats, identical compression."
+  },
+  {
+    "question_id": "H3_c",
+    "answer": "Different",
+    "reasoning": "For input 'babcbabcba', BPE merges pairs globally in frequency order (ba then bc then XY), yielding a 3-symbol sequence Z Z X (Z = b a b c, X = b a). Sequitur builds incrementally, creating rules earlier but missing the final 'ba' as a repeat at addition time, yielding 4 symbols Z Z b a. The final sequences differ in length and composition."
+  },
+  {
+    "question_id": "H3_d",
+    "answer": "Different",
+    "reasoning": "For input 'ccddccbcc', BPE merges the three 'cc' globally to X, including the last one, resulting in S = X d d X b X (length 6). Sequitur merges the first two 'cc' upon detection but adds the last 'cc' after, without repeat at that time, resulting in S = X d d X b c c (length 7). Outputs differ."
+  },
+  {
+    "question_id": "H3_e",
+    "answer": "Different",
+    "reasoning": "For input 'ccddbbccacca', BPE merges 'cc' to X then 'Xa' to Y globally, capturing the last 'cc' and forming Y Y at end, S = X d d b b Y Y (length 7). Sequitur merges early 'cc' but adds later 'c c a' after 'a c c', no repeat detected for 'cc' or 'ca' then, resulting in longer S = X d d b b X a c c a (length 9). Outputs differ in structure and length."
+  }
+]

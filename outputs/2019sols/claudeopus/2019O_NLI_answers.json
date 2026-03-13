@@ -1,0 +1,92 @@
+[
+  {
+    "question_id": "O_1",
+    "answer": "sentence 1",
+    "reasoning": "Rule 1 compares if sentence 1 is longer than sentence 2"
+  },
+  {
+    "question_id": "O_2",
+    "answer": "sentence 2",
+    "reasoning": "Comparing length between sentence 1 and sentence 2"
+  },
+  {
+    "question_id": "O_3",
+    "answer": "entailment",
+    "reasoning": "If sentence 1 is longer, predict entailment"
+  },
+  {
+    "question_id": "O_4",
+    "answer": "8",
+    "reasoning": "Example 8 shows length-based rule: longer sentence 1 → entailment"
+  },
+  {
+    "question_id": "O_5",
+    "answer": "13",
+    "reasoning": "Example 13 also shows length-based rule: longer sentence 1 → entailment"
+  },
+  {
+    "question_id": "O_6",
+    "answer": "sentences share starting words",
+    "reasoning": "Rule 2 checks if sentences begin with same words"
+  },
+  {
+    "question_id": "O_7",
+    "answer": "non-entailment",
+    "reasoning": "If sentences share starting words, predict non-entailment"
+  },
+  {
+    "question_id": "O_8",
+    "answer": "16",
+    "reasoning": "Example 16: 'I have never seen a walrus' vs 'I have never seen a manatee' → non-entailment"
+  },
+  {
+    "question_id": "O_9",
+    "answer": "18",
+    "reasoning": "Example 18: 'every walrus...' vs 'most walruses...' → non-entailment"
+  },
+  {
+    "question_id": "O_10",
+    "answer": "sentence",
+    "reasoning": "Rule 3 checks if a sentence contains 'walrus'"
+  },
+  {
+    "question_id": "O_11",
+    "answer": "walrus",
+    "reasoning": "The specific word being checked is 'walrus'"
+  },
+  {
+    "question_id": "O_12",
+    "answer": "entailment",
+    "reasoning": "If sentence contains 'walrus', predict entailment"
+  },
+  {
+    "question_id": "O_13",
+    "answer": "1",
+    "reasoning": "Example 1 contains 'walrus' and is labeled entailment"
+  },
+  {
+    "question_id": "O_14",
+    "answer": "12",
+    "reasoning": "Example 12 contains 'walrus' and is labeled entailment"
+  },
+  {
+    "question_id": "O_15",
+    "answer": "1",
+    "reasoning": "Rule 1 (length) has top priority based on test examples"
+  },
+  {
+    "question_id": "O_16",
+    "answer": "3",
+    "reasoning": "Rule 3 (walrus) has middle priority"
+  },
+  {
+    "question_id": "O_17",
+    "answer": "2",
+    "reasoning": "Rule 2 (shared starting words) has bottom priority"
+  },
+  {
+    "question_id": "O_18",
+    "answer": "23 27 30 31",
+    "reasoning": "These examples show conflicts between rules, allowing us to determine priority"
+  }
+]

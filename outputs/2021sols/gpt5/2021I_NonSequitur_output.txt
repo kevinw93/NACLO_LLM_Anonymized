@@ -1,0 +1,137 @@
+Model: gpt-5
+Generation Time: 2981.35 seconds
+Timestamp: 2025-12-07 00:33:17
+================================================================================
+
+[
+  {
+    "question_id": "I1_a",
+    "answer": "shortest",
+    "reasoning": "Strategy 1 always picked minimal pieces, e.g., unionize → un + ion + ize."
+  },
+  {
+    "question_id": "I1_b",
+    "answer": "L1 or L2",
+    "reasoning": "Strategy 1 used pieces from either list (e.g., re, ing, st)."
+  },
+  {
+    "question_id": "I1_c",
+    "answer": "longest",
+    "reasoning": "In Strategy 2 the first chosen piece was the largest (e.g., stat in station, sting in resting)."
+  },
+  {
+    "question_id": "I1_d",
+    "answer": "L1",
+    "reasoning": "Strategy 2’s first choice always came from L1 (grate, sting, stat, union, real, ion)."
+  },
+  {
+    "question_id": "I1_e",
+    "answer": "longest",
+    "reasoning": "Subsequent choices in Strategy 2 were also greedy for size."
+  },
+  {
+    "question_id": "I1_f",
+    "answer": "L1 or L2",
+    "reasoning": "After the first step, Strategy 2 freely used either list (e.g., then re or ize)."
+  },
+  {
+    "question_id": "I1_g",
+    "answer": "longest",
+    "reasoning": "Strategy 3 began by taking the largest repeated affix piece."
+  },
+  {
+    "question_id": "I1_h",
+    "answer": "L2",
+    "reasoning": "The first choice in Strategy 3 came from L2 (ing, ize, ation, pre)."
+  },
+  {
+    "question_id": "I1_i",
+    "answer": "longest",
+    "reasoning": "After the first step, Strategy 3 kept choosing largest pieces."
+  },
+  {
+    "question_id": "I1_j",
+    "answer": "L1 or L2",
+    "reasoning": "Subsequent choices in Strategy 3 could come from either list (e.g., then rest, rate, st)."
+  },
+  {
+    "question_id": "I1_k",
+    "answer": "longest",
+    "reasoning": "Strategy 4 always chose the largest available piece."
+  },
+  {
+    "question_id": "I1_l",
+    "answer": "L1 or L2",
+    "reasoning": "Strategy 4 used either list each step (e.g., grate, ation, sting, union)."
+  },
+  {
+    "question_id": "I2_a1",
+    "answer": "again the opposite of a charged particle",
+    "reasoning": "re + un + ion (Strategy 1: shortest-from-either repeatedly)."
+  },
+  {
+    "question_id": "I2_a2",
+    "answer": "a workers’ organization again",
+    "reasoning": "union + re (Strategy 2: first longest from L1, then longest from either)."
+  },
+  {
+    "question_id": "I2_a3",
+    "answer": "again a workers’ organization",
+    "reasoning": "re + union (Strategy 3: first longest from L2, then longest from either)."
+  },
+  {
+    "question_id": "I2_a4",
+    "answer": "a workers’ organization again",
+    "reasoning": "union + re (Strategy 4: longest-from-either each step)."
+  },
+  {
+    "question_id": "I2_b1",
+    "answer": "the opposite of a street again",
+    "reasoning": "un + st + re (Strategy 1: all shortest pieces)."
+  },
+  {
+    "question_id": "I2_b2",
+    "answer": "the opposite of stay still",
+    "reasoning": "rest + un (Strategy 2: longest L1 first, then remaining piece)."
+  },
+  {
+    "question_id": "I2_b3",
+    "answer": "the opposite of stay still",
+    "reasoning": "un + rest (Strategy 3: longest L2 first, then longest from either)."
+  },
+  {
+    "question_id": "I2_b4",
+    "answer": "the opposite of stay still",
+    "reasoning": "rest + un (Strategy 4: longest-from-either each step)."
+  },
+  {
+    "question_id": "I2_c1",
+    "answer": "again a street (??)",
+    "reasoning": "re + st, leaving p and o unused (Strategy 1)."
+  },
+  {
+    "question_id": "I2_c2",
+    "answer": "stay still (??)",
+    "reasoning": "rest, leaving p and o (Strategy 2)."
+  },
+  {
+    "question_id": "I2_c3",
+    "answer": "not yet a street (?)",
+    "reasoning": "pre + st, leaving o (Strategy 3)."
+  },
+  {
+    "question_id": "I2_c4",
+    "answer": "stay still (??)",
+    "reasoning": "rest, leaving p and o (Strategy 4)."
+  },
+  {
+    "question_id": "I3_1",
+    "answer": "recent",
+    "reasoning": "Both words decompose into cent + re (or re + cent) under all strategies."
+  },
+  {
+    "question_id": "I3_2",
+    "answer": "a penny again",
+    "reasoning": "cent = a penny; re = again; all strategies agree for both centre and recent."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "question_id": "G1_1",
+    "answer": "FORTYFIVE",
+    "reasoning": "The bag [E,F,F,I,O,R,T,V,Y] can be rearranged into the spelled number FORTYFIVE (45), which is smaller than “over fifty.” No other number between one and fifty uses exactly these letters."
+  },
+  {
+    "question_id": "G2_1",
+    "answer": "IVEMADEMYPOSITIONCLEAR",
+    "reasoning": "Each pair gives a letter and its position. Sorting by position 1–22 yields: 1 I, 2 V, 3 E, 4 M, 5 A, 6 D, 7 E, 8 M, 9 Y, 10 P, 11 O, 12 S, 13 I, 14 T, 15 I, 16 O, 17 N, 18 C, 19 L, 20 E, 21 A, 22 R, forming IVEMADEMYPOSITIONCLEAR."
+  },
+  {
+    "question_id": "G3_1",
+    "answer": "BACKUPPLAN",
+    "reasoning": "Here the numbers mark distance from the right edge. Filling from rightmost to leftmost: 1 N, 2 A, 3 L, 4 P, 5 P, 6 U, 7 K, 8 C, 9 A, 10 B. Reading left to right gives BACKUPPLAN."
+  },
+  {
+    "question_id": "G4_1",
+    "answer": "BRANCHINGOUT",
+    "reasoning": "The strings of L/R give the path from the root to each leaf. Sorting the letters by these paths in lexicographic order with L<R gives the left-to-right leaf order: B(LLLL), R(LLLR), A(LLRL), N(LLRRL), C(LLRRRL), H(LLRRRR), I(LRL), N(LRRL), G(LRRR), O(RLL), U(RLR), T(RR) → BRANCHINGOUT."
+  },
+  {
+    "question_id": "G5_1",
+    "answer": "PAYATTENTIONTOYOURSURROUNDINGS",
+    "reasoning": "Each item encodes a trigram with the central letter and its left/right neighbors, using # for boundaries. Starting from P:#_A forces #PA. Then A:P_Y → PAY; A:Y_T → YAT; T:A_T → ATT; T:T_E → ATTE; E:T_N → ATTEN; N:E_T → ATTENT; T:N_I → ATTENTI; I:T_O → ATTENTIO; O:I_N → ATTENTION; N:O_T and T:N_O → T,O; O:T_Y → TOY; Y:O_O and O:Y_U → YO U; U:O_R → YOUR; R:U_S → YOURS; S:R_U and U:S_R → SUR; R:U_R and R:R_O → RRO; O:R_U and U:O_N → OUN; N:U_D → UND; D:N_I → IN; I:D_N → N; N:I_G → NG; G:N_S and S:G_# → GS#. The whole string is PAYATTENTIONTOYOURSURROUNDINGS."
+  }
+]

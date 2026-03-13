@@ -1,0 +1,32 @@
+Model: grok-4-fast-reasoning
+Generation Time: 258.49 seconds
+Timestamp: 2026-02-03 20:23:25
+================================================================================
+
+[
+  {
+    "question_id": "M1",
+    "answer": "G,A,R,D,E,F,H,N,L,J,M,O,K,I,C,T,B,P,Q,S",
+    "reasoning": "Through analyzing the compounds and patterns in the Maonan words, such as prefixes for gender (pai for female, ka.i for male), classifier la for animals and tools, and descriptive compounding for concepts like good teeth (kio.nwi) and large tooth for molar (hiu.gwi), the correspondences are determined by matching structural similarities and contextual clues from the notes. For example, dat.na matches bad chicken as bad + chicken; pai.na.la matches hens as female + chicken + classifier; pai.nda.la matches sow as female + pig + classifier; nok.ka.i.la matches bull as buffalo + male + classifier; put.pok.la matches big pig as big + pig + classifier; ni.gwi.dak matches red mallard as wild + red + duck; ni.dza.ŋ matches pheasant as wild + pheasant base; nam.nok matches Maonan person as Maonan + person; kio.nwi matches good teeth as good + teeth; do.kai.nam matches to eat deliciously as eat + deliciously; dat.put.nam matches clothing as the compound for clothing; do.mui matches elephant as the base word; hiu.gwi matches molar as large + tooth; kion.hiu da.i matches jealous person as the compound for jealous + person; kion.ka.i.ni matches dog person as dog + person; da:.na matches food as the base for food; dat.tan matches to spray resolutely as the verb compound; ni.mu matches dog as the base for dog; nok.pe.la matches water sprayer as water + spray + tool; pai.nda.la.n matches tear as the compound for cry liquid."
+  },
+  {
+    "question_id": "M2",
+    "answer": "jealous person, bad pig, big tooth, chicken food",
+    "reasoning": "The phrases are translated based on the observed compounding patterns from M1. kjo.muk is similar to person compounds like kion.ka.i.ni (dog person), so jealous person. nda.da.i follows noun + bad pattern like dat.na (bad chicken), with nda as pig base from pai.nda.la (sow), so bad pig. tan.tok follows adjective + noun pattern like put.pok (big pig), with tan as tooth base from teeth words, so big tooth. na.m.tan uses na as chicken, m as genitive, tan as food base from da:.na, so chicken food."
+  },
+  {
+    "question_id": "M3",
+    "answer": "da.i, ka.i, pai.nok.la, nok.nam, dak",
+    "reasoning": "Based on patterns, eyes is da.i from the particle in compounds like kion.hiu da.i, fitting a simple base for eyes. To spray is ka.i from the male/spray root in nok.ka.i.la (bull) and sprayer context. Buffalo cows (female buffalo) is pai + buffalo base nok + la classifier, as pai for female and nok from bull compound. Wearer is nok (person) + nam (from clothing dat.put.nam), as person + clothing for the one who wears. Domestic/farmyard duck is dak, the base from ni.gwi.dak (wild red duck), without wild prefix ni for domestic."
+  },
+  {
+    "question_id": "M4",
+    "answer": "do.nam is the pen for pigs and nok.ka.n is the pen for buffaloes. buffalo pen",
+    "reasoning": "In the village context, do.nam and nok.ka.n are compounds for animal pens, following the pattern of animal base + pen base. do corresponds to pig base (from patterns like do in compounds), nam as pen. nok corresponds to buffalo base (from nok in bull), ka.n as pen variant. The difference is the animal type (pig vs buffalo). English for nok.ka.n is buffalo pen."
+  },
+  {
+    "question_id": "M5",
+    "answer": "Maonan grammar relies on compounding roots to form descriptive words and phrases without inflectional endings. Nouns for animals use bases + classifier 'la', with 'pai' prefix for females and postposed 'ka.i' for males. Persons are formed as base + 'nok'. Adjectives and adverbs combine with verbs or nouns (e.g., 'kio.nwi' good teeth, 'do.kai.nam' eat deliciously). Syllables mark long vowels with ':', and phrases are head-initial or variable order for description. No tones written, simplified orthography used.",
+    "reasoning": "By examining the given words and notes, patterns emerge: gender markers, classifiers, and multi-root compounds for complex meanings (e.g., gender-specific animals, descriptive tools like water sprayer). No evidence of agreement or case; isolating/analytic structure with compounding for semantics. Observations from matches like female animals (pai + base + la), person terms (base + nok), and adverbial verbs confirm this."
+  }
+]

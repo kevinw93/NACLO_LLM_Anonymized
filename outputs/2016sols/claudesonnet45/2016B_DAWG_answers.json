@@ -1,0 +1,92 @@
+[
+  {
+    "question_id": "B1_a_1",
+    "answer": "POODLE",
+    "reasoning": "Common dog breed, creates unintended POODHOUND and BLOODLE when paths merge incorrectly"
+  },
+  {
+    "question_id": "B1_a_2",
+    "answer": "BEAGLE",
+    "reasoning": "Common dog breed that fits the structure with shorter path"
+  },
+  {
+    "question_id": "B1_a_3",
+    "answer": "BLOODHOUND",
+    "reasoning": "Creates unintended words POODHOUND and BLOMERANIAN when merged incorrectly"
+  },
+  {
+    "question_id": "B1_a_4",
+    "answer": "POMERANIAN",
+    "reasoning": "Creates unintended BLOMERANIAN when BLOOD prefix merges incorrectly"
+  },
+  {
+    "question_id": "B1_b_1",
+    "answer": "HUCKLEBERRY",
+    "reasoning": "Unintended HUCKBERRY shows the LE part is being bypassed"
+  },
+  {
+    "question_id": "B1_b_2",
+    "answer": "STRAWBERRY",
+    "reasoning": "Unintended RAWBERRY and STRASPBERRY show STRAW prefix issues"
+  },
+  {
+    "question_id": "B1_b_3",
+    "answer": "RASPBERRY",
+    "reasoning": "Unintended STRASPBERRY shows RASP prefix merging incorrectly"
+  },
+  {
+    "question_id": "B1_b_4",
+    "answer": "BLACKBERRY",
+    "reasoning": "Unintended BLACKLEBERRY shows BLACK merging with HUCKLE incorrectly"
+  },
+  {
+    "question_id": "B1_b_5",
+    "answer": "BLUEBERRY",
+    "reasoning": "Fifth berry type needed to complete the set, common berry variety"
+  },
+  {
+    "question_id": "B1_c_1",
+    "answer": "CANADA",
+    "reasoning": "Creates unintended CAN and IRANADA through incorrect path merging"
+  },
+  {
+    "question_id": "B1_c_2",
+    "answer": "PANAMA",
+    "reasoning": "Unintended RWANAMA shows PANAMA suffix merging with RWAN prefix"
+  },
+  {
+    "question_id": "B1_c_3",
+    "answer": "GHANA",
+    "reasoning": "Creates unintended GHAQ through incorrect path construction"
+  },
+  {
+    "question_id": "B1_c_4",
+    "answer": "CHINA",
+    "reasoning": "Fits structure with 2-letter prefix from start, creates PANDA unintended word"
+  },
+  {
+    "question_id": "B1_c_5",
+    "answer": "IRAN",
+    "reasoning": "Creates unintended IRANADA when merging with ADA suffix"
+  },
+  {
+    "question_id": "B1_c_6",
+    "answer": "RWANDA",
+    "reasoning": "Creates unintended RWANAMA when merging with AMA suffix"
+  },
+  {
+    "question_id": "B2_a",
+    "answer": "28",
+    "reasoning": "Need POODLE(6) + BEAGLE(6) + BLOODHOUND(10) + POMERANIAN(10) with minimal safe sharing = 28 squares"
+  },
+  {
+    "question_id": "B2_b",
+    "answer": "29",
+    "reasoning": "Five berries sharing BERRY suffix: HUCKLE(6)+STRAW(5)+RASP(4)+BLACK(5)+BLUE(4)+BERRY(5) = 29"
+  },
+  {
+    "question_id": "B2_c",
+    "answer": "23",
+    "reasoning": "Six countries with careful prefix/suffix sharing: CANADA(6)+PANAMA(6)+GHANA(5)+CHINA(5)+IRAN(4)+RWANDA(6), shared properly ≈ 23"
+  }
+]

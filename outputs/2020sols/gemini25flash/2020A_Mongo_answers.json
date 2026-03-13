@@ -1,0 +1,167 @@
+[
+  {
+    "question_id": "A1_1",
+    "answer": "Ø-",
+    "reasoning": "The imperative form often matches the root, implying an empty prefix. This is consistent across `kamba`, `imedza`, `usa`, `bata`, `ena`, `isa`, `dzila`, `ina`, `bina`, `asa`, `sanga` verbs where the imperative is the simplest form."
+  },
+  {
+    "question_id": "A1_2",
+    "answer": "o-",
+    "reasoning": "Observed in forms like `okamba`, `odzila`, `osanga` where `o-` is prefixed to consonant-initial roots. Sound change rules explain its variations before vowel-initial roots or `b`."
+  },
+  {
+    "question_id": "A1_3",
+    "answer": "a-",
+    "reasoning": "Observed in forms like `akamba`, `adzila`, `asanga` where `a-` is prefixed to consonant-initial roots. Sound change rules explain its deletion before vowel-initial roots or variations due to `b`."
+  },
+  {
+    "question_id": "A1_4",
+    "answer": "ba-",
+    "reasoning": "Observed in forms like `bakamba`, `badzila`, `basanga` where `ba-` is prefixed to consonant-initial roots. Sound change rules explain its variations due to `b` or vowel-initial roots."
+  },
+  {
+    "question_id": "A1_5",
+    "answer": "vowels",
+    "reasoning": "This rule, when applied as `V₁V₂ -> V₂` (delete first vowel), explains cases like `a-imedza` -> `imedza` and `ba-asa` -> `basa` where a prefix vowel is deleted before a root vowel. The plural 'vowels' indicates that any two vowels trigger the rule."
+  },
+  {
+    "question_id": "A1_6",
+    "answer": "the first one",
+    "reasoning": "When two vowels are in a row (`V₁V₂`), the first vowel (`V₁`) is deleted, as seen in `a-imedza` -> `imedza` and `ba-asa` -> `basa`."
+  },
+  {
+    "question_id": "A1_7",
+    "answer": "b",
+    "reasoning": "The consonant `b` is consistently deleted when it appears between two vowels, as seen in `o-bota` -> `oota`, `a-bata` -> `aata`, `ba-bina` -> `baina`."
+  },
+  {
+    "question_id": "A1_8",
+    "answer": "vowels",
+    "reasoning": "The deletion of `b` occurs when it is surrounded by any two vowels, forming a `V₁bV₂` sequence which becomes `V₁V₂`."
+  },
+  {
+    "question_id": "A1_9",
+    "answer": "o",
+    "reasoning": "The vowel `o` from the 2nd singular prefix `o-` changes its pronunciation or form when preceding a vowel-initial root, becoming `w`."
+  },
+  {
+    "question_id": "A1_10",
+    "answer": "w",
+    "reasoning": "The vowel `o` changes to `w` when it appears before another vowel, as seen in `o-imedza` -> `wimedza`, `o-usa` -> `wusa`, etc."
+  },
+  {
+    "question_id": "A1_11",
+    "answer": "vowel",
+    "reasoning": "The change of `o` to `w` is specifically triggered when `o` directly precedes a vowel."
+  },
+  {
+    "question_id": "A1_12",
+    "answer": "1",
+    "reasoning": "The order of rules is crucial. Rule 1 (V₁V₂ -> V₂) must apply before Rule 2 (VbV -> VV) to correctly derive forms like `oota` (where R1 does not apply, but R2 creates `oo`) and `imedza` (where R1 deletes the prefix 'a')."
+  },
+  {
+    "question_id": "A1_13",
+    "answer": "2",
+    "reasoning": "Rule 2 (VbV -> VV) must apply after Rule 1 (V₁V₂ -> V₂) to correctly create vowel sequences like `oo`, `aa`, `ao`, etc., from `b` deletion. It must apply before Rule 3 as it creates the environment for R3 to fail to apply to initial `o`."
+  },
+  {
+    "question_id": "A1_14",
+    "answer": "3",
+    "reasoning": "Rule 3 (oV -> wV) must apply last. It processes the prefix `o-` before a root vowel, but it does not interfere with the initial deletion of prefix 'a' (R1) or `b` deletion (R2). After R2, there won't be an `o` directly preceding a vowel that wasn't already processed by R3 or created by R2."
+  },
+  {
+    "question_id": "A2_1",
+    "answer": "wakisa",
+    "reasoning": "Root: `bakisa`. Prefix: `o-`. Underlying: `o-bakisa`. R1: no change. R2: `o-bakisa` -> `oakisa`. R3: `oakisa` -> `wakisa`."
+  },
+  {
+    "question_id": "A2_2",
+    "answer": "aakisa",
+    "reasoning": "Root: `bakisa`. Prefix: `a-`. Underlying: `a-bakisa`. R1: no change. R2: `a-bakisa` -> `aakisa`. R3: no change. Final: `aakisa`."
+  },
+  {
+    "question_id": "A2_3",
+    "answer": "baakisa",
+    "reasoning": "Root: `bakisa`. Prefix: `ba-`. Underlying: `ba-bakisa`. R1: no change. R2: `ba-bakisa` -> `baakisa`. R3: no change. Final: `baakisa`."
+  },
+  {
+    "question_id": "A2_4",
+    "answer": "anda",
+    "reasoning": "Given `wanda` (2nd sg). Reverse R3 (`wV` -> `oV`) gives `oanda`. This implies Root: `anda`. Imperative is `Ø-anda` -> `anda`."
+  },
+  {
+    "question_id": "A2_5",
+    "answer": "anda",
+    "reasoning": "Root: `anda`. Prefix: `a-`. Underlying: `a-anda`. R1: `a-anda` -> `anda`. R2: no change. R3: no change. Final: `anda`."
+  },
+  {
+    "question_id": "A2_6",
+    "answer": "banda",
+    "reasoning": "Root: `anda`. Prefix: `ba-`. Underlying: `ba-anda`. R1: `ba-anda` -> `banda`. R2: no change. R3: no change. Final: `banda`."
+  },
+  {
+    "question_id": "A2_7",
+    "answer": "osolola",
+    "reasoning": "Root: `solola`. Prefix: `o-`. Underlying: `o-solola`. No rules apply. Final: `osolola`."
+  },
+  {
+    "question_id": "A2_8",
+    "answer": "asolola",
+    "reasoning": "Root: `solola`. Prefix: `a-`. Underlying: `a-solola`. No rules apply. Final: `asolola`."
+  },
+  {
+    "question_id": "A2_9",
+    "answer": "oponama",
+    "reasoning": "Root: `ponama`. Prefix: `o-`. Underlying: `o-ponama`. No rules apply. Final: `oponama`."
+  },
+  {
+    "question_id": "A2_10",
+    "answer": "baponama",
+    "reasoning": "Root: `ponama`. Prefix: `ba-`. Underlying: `ba-ponama`. No rules apply. Final: `baponama`."
+  },
+  {
+    "question_id": "A2_11",
+    "answer": "bowa",
+    "reasoning": "Given `oowa` (2nd sg). This form has `oo` which suggests `b` deletion. Reversing `o-bowa` -> `oowa` (`b` deletion). So Root: `bowa`. Imperative is `Ø-bowa` -> `bowa`."
+  },
+  {
+    "question_id": "A2_12",
+    "answer": "aowa",
+    "reasoning": "Root: `bowa`. Prefix: `a-`. Underlying: `a-bowa`. R1: no change. R2: `a-bowa` -> `aowa`. R3: no change. Final: `aowa`."
+  },
+  {
+    "question_id": "A2_13",
+    "answer": "baowa",
+    "reasoning": "Root: `bowa`. Prefix: `ba-`. Underlying: `ba-bowa`. R1: no change. R2: `ba-bowa` -> `baowa`. R3: no change. Final: `baowa`."
+  },
+  {
+    "question_id": "A2_14",
+    "answer": "balusa",
+    "reasoning": "Given `aalusa` (3rd sg). This form has `aa` which suggests `b` deletion. Reversing `a-balusa` -> `aalusa` (`b` deletion). So Root: `balusa`. Imperative is `Ø-balusa` -> `balusa`."
+  },
+  {
+    "question_id": "A2_15",
+    "answer": "walusa",
+    "reasoning": "Root: `balusa`. Prefix: `o-`. Underlying: `o-balusa`. R1: no change. R2: `o-balusa` -> `oalusa`. R3: `oalusa` -> `walusa`. Final: `walusa`."
+  },
+  {
+    "question_id": "A2_16",
+    "answer": "baalusa",
+    "reasoning": "Root: `balusa`. Prefix: `ba-`. Underlying: `ba-balusa`. R1: no change. R2: `ba-balusa` -> `baalusa`. R3: no change. Final: `baalusa`."
+  },
+  {
+    "question_id": "A2_17",
+    "answer": "olonga",
+    "reasoning": "Root: `longa`. Prefix: `o-`. Underlying: `o-longa`. No rules apply. Final: `olonga`."
+  },
+  {
+    "question_id": "A2_18",
+    "answer": "alonga",
+    "reasoning": "Root: `longa`. Prefix: `a-`. Underlying: `a-longa`. No rules apply. Final: `alonga`."
+  },
+  {
+    "question_id": "A2_19",
+    "answer": "balonga",
+    "reasoning": "Root: `longa`. Prefix: `ba-`. Underlying: `ba-longa`. No rules apply. Final: `balonga`."
+  }
+]

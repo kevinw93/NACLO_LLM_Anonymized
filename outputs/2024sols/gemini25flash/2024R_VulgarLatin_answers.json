@@ -1,0 +1,172 @@
+[
+  {
+    "question_id": "R1_1",
+    "answer": "d",
+    "reasoning": "Rule 1: '[+Stop, +Voiced] → [+Stop, -Voiced] / _#' (voiced stop becomes unvoiced at word end). Sentence d: 'need'->'neet', 'bad'->'bat', 'and'->'ant', 'lab'->'lap' all show final voiced stops (d, b) becoming unvoiced (t, p)."
+  },
+  {
+    "question_id": "R1_2",
+    "answer": "c",
+    "reasoning": "Rule 2: '[+Const]{2} → [+Const]{1} / _' (doubled consonant becomes single). Sentence c: 'really'->'realy', 'carrots'->'carots', 'trillion'->'trilion', 'dollars'->'dolars', 'massive'->'masive', 'quadrillion'->'quadrilion' all show double consonants becoming single."
+  },
+  {
+    "question_id": "R1_3",
+    "answer": "e",
+    "reasoning": "Rule 3: 's → z / #_' (s becomes z at word beginning). Sentence e: 'spilled'->'zpilled', 'synthetic'->'zynthetic', 'superfood'->'zuperfood', 'syrup'->'zyrup', 'smart-suit'->'zmart-zuit', 'Sigh'->'Zigh' all show initial 's' becoming 'z'."
+  },
+  {
+    "question_id": "R1_4",
+    "answer": "a",
+    "reasoning": "Rule 4: '[+Vow] → Ø / [+Vow]_' (second vowel in a sequence is deleted). Sentence a: 'really'->'relly' (ea->e), 'soaked'->'soked' (oa->o), 'journey'->'jorney' (ou->o), 'floating'->'floting' (oa->o), 'oasis'->'osis' (oa->o) consistently delete the second vowel in a sequence."
+  },
+  {
+    "question_id": "R1_5",
+    "answer": "b",
+    "reasoning": "Rule 5: 'e → a / _[+Const]' (e becomes a before a consonant). Sentence b: 'Eggplant'->'Aggplant', 'fuel'->'fual', 'excellent'->'axcallant', 'energy'->'anargy', 'efficiency'->'afficiancy', 'better'->'battar', 'electric'->'alactric', 'socket'->'sockat' all show 'e' becoming 'a' before a consonant."
+  },
+  {
+    "question_id": "R2_A",
+    "answer": "Portuguese",
+    "reasoning": "Language A shows characteristic changes like 'i' to 'ei' (Rule (17) → ei /) as seen in 'sinu'->'seio' and 'arēna'->'areia', and nasalization (e.g., 'bonu'->'bão'), which are hallmarks of Portuguese phonology in the provided data."
+  },
+  {
+    "question_id": "R2_B",
+    "answer": "Italian",
+    "reasoning": "Language B shows characteristic diphthongization of 'o' and 'u' to 'uo' (Rule (18) → (19) / (20)) as seen in 'focu'->'fuoco', 'bonu'->'buono', and 'sonāre'->'suonare', which are hallmarks of Italian phonology in the provided data."
+  },
+  {
+    "question_id": "R2_C",
+    "answer": "Sardinian",
+    "reasoning": "Language C shows characteristic changes like 'll' to 'dd' (Rule (23) → dd /) as seen in 'cavallu'->'cabaddu' and 'villa'->'bidda', and 'v' to 'b' (Rule (21) → (22)/) as seen in 'cavallu'->'cabaddu' and 'pulvera'->'pulbera', which are hallmarks of Sardinian phonology in the provided data, and it branches off directly from Vulgar Latin, indicating it might retain older features or have distinct early innovations."
+  },
+  {
+    "question_id": "R3_1",
+    "answer": "s",
+    "reasoning": "From Latin 'NIVIS' -> VL 'nivi' and 'CIBUS' -> 'civu', the final 's' is deleted. Rule: 's → Ø / _#'."
+  },
+  {
+    "question_id": "R3_2",
+    "answer": "b",
+    "reasoning": "From Latin 'CABALLUM' -> VL 'cavallu', the intervocalic 'b' becomes 'v'. 'b' is the input sound for this rule. Rule: 'b → v / [+Vow]_[+Vow]'."
+  },
+  {
+    "question_id": "R3_3",
+    "answer": "v",
+    "reasoning": "From Latin 'CABALLUM' -> VL 'cavallu', the intervocalic 'b' becomes 'v'. 'v' is the output sound for this rule. Rule: 'b → v / [+Vow]_[+Vow]'."
+  },
+  {
+    "question_id": "R3_4",
+    "answer": "p",
+    "reasoning": "From Latin 'RUPTUM' -> VL 'ruttu' and 'ADOPTARE' -> 'adottāre', 'p' becomes 't' before 't'. 'p' is the input sound. Rule: 'p → t / _t'."
+  },
+  {
+    "question_id": "R3_5",
+    "answer": "t",
+    "reasoning": "From Latin 'RUPTUM' -> VL 'ruttu' and 'ADOPTARE' -> 'adottāre', 'p' becomes 't' before 't'. 't' is the output sound. Rule: 'p → t / _t'."
+  },
+  {
+    "question_id": "R3_6",
+    "answer": "[+Vow, -L, -Nasal]",
+    "reasoning": "From VL 'nivi' -> WR 'neve', 'pilu' -> 'pelo', 'pira' -> 'pera', the vowel 'i' generally becomes 'e'. To ensure uniqueness from 'i' in (17), 'i' is described by its features (short, non-nasal vowel). Rule: '[+Vow, -L, -Nasal] → e /'."
+  },
+  {
+    "question_id": "R3_7",
+    "answer": "u",
+    "reasoning": "From VL 'focu' -> WR 'foco' (in Port/Ital) and 'bonu' -> 'bono' (in Port/Ital), the vowel 'u' generally becomes 'o'. 'u' is the input sound. Rule: 'u → o /'."
+  },
+  {
+    "question_id": "R3_8",
+    "answer": "o",
+    "reasoning": "From VL 'focu' -> WR 'foco' (in Port/Ital) and 'bonu' -> 'bono' (in Port/Ital), the vowel 'u' generally becomes 'o'. 'o' is the output sound. Rule: 'u → o /'."
+  },
+  {
+    "question_id": "R3_9",
+    "answer": "[+Stop, -Voiced]",
+    "reasoning": "From WR 'maritu' -> Portuguese 'marido' and 'istatu' -> 'estado', intervocalic unvoiced stops ('t') become voiced ('d'). The input feature set is for 't'. Rule: '[+Stop, -Voiced] → [+Stop, +Voiced] / [+Vow]_[+Vow]'."
+  },
+  {
+    "question_id": "R3_10",
+    "answer": "d",
+    "reasoning": "From WR 'maritu' -> Portuguese 'marido' and 'istatu' -> 'estado', intervocalic unvoiced stops ('t') become voiced ('d'). The output sound is 'd'. Rule: '[+Stop, -Voiced] → d / [+Vow]_[+Vow]'."
+  },
+  {
+    "question_id": "R3_11",
+    "answer": "[+Vow]_[+Vow]",
+    "reasoning": "The context for the voicing of stops in (9)-(10) is intervocalic. Rule: '[+Stop, -Voiced] → d / [+Vow]_[+Vow]'."
+  },
+  {
+    "question_id": "R3_12",
+    "answer": "n",
+    "reasoning": "From WR 'bono' -> Portuguese 'bão', 'n' before a vowel is deleted, with nasalization of the vowel. 'n' is the input sound. Rule: 'n → Ø / _[+Vow]'."
+  },
+  {
+    "question_id": "R3_13",
+    "answer": "Ø",
+    "reasoning": "From WR 'bono' -> Portuguese 'bão', 'n' before a vowel is deleted. 'Ø' represents deletion. Rule: 'n → Ø / _[+Vow]'."
+  },
+  {
+    "question_id": "R3_14",
+    "answer": "c",
+    "reasoning": "From WR 'foco' -> Portuguese 'fogo', the final 'c' becomes 'g'. 'c' is the input sound. Rule: 'c → g /'."
+  },
+  {
+    "question_id": "R3_15",
+    "answer": "g",
+    "reasoning": "From WR 'foco' -> Portuguese 'fogo', the final 'c' becomes 'g'. 'g' is the output sound. Rule: 'c → g /'."
+  },
+  {
+    "question_id": "R3_16",
+    "answer": "_#",
+    "reasoning": "From WR 'avero' -> Portuguese 'aver*', the final 'e' is deleted. The context is word-final. Rule: 'e → Ø / _#'."
+  },
+  {
+    "question_id": "R3_17",
+    "answer": "i",
+    "reasoning": "From WR 'sino' -> Portuguese 'seio' and 'arena' -> 'areia', 'i' becomes 'ei'. 'i' is the input sound. Rule: 'i → ei /'."
+  },
+  {
+    "question_id": "R3_18",
+    "answer": "o,u",
+    "reasoning": "From WR 'foco' -> Italian 'fuoco', 'bono' -> 'buono' ('u' becomes 'uo'), and 'sonare' -> 'suonare' ('o' becomes 'uo'). Both 'o' and 'u' diphthongize to 'uo'. This represents the input sounds for the diphthongization. Rule: 'o,u → uo / _'."
+  },
+  {
+    "question_id": "R3_19",
+    "answer": "uo",
+    "reasoning": "From WR 'foco' -> Italian 'fuoco', 'bono' -> 'buono', and 'sonare' -> 'suonare', the output diphthong is 'uo'. Rule: 'o,u → uo / _'."
+  },
+  {
+    "question_id": "R3_20",
+    "answer": "_",
+    "reasoning": "The context for the diphthongization of 'o,u' to 'uo' is general (no specific environment specified in the data). Rule: 'o,u → uo / _'."
+  },
+  {
+    "question_id": "R3_21",
+    "answer": "[+Const, +Voiced]",
+    "reasoning": "From VL 'cavallu' -> Sardinian 'cabaddu' and 'pulvera' -> 'pulbera', 'v' becomes 'b'. 'v' is a voiced consonant. Rule: '[+Const, +Voiced] → [+Stop, +Voiced] /'."
+  },
+  {
+    "question_id": "R3_22",
+    "answer": "[+Stop, +Voiced]",
+    "reasoning": "From VL 'cavallu' -> Sardinian 'cabaddu' and 'pulvera' -> 'pulbera', 'v' becomes 'b'. 'b' is a voiced stop. Rule: '[+Const, +Voiced] → [+Stop, +Voiced] /'."
+  },
+  {
+    "question_id": "R3_23",
+    "answer": "ll",
+    "reasoning": "From VL 'cavallu' -> Sardinian 'cabaddu', 'villa' -> 'bidda', 'pullu' -> 'puddu', 'castellu' -> 'casteddu', the doubled 'll' becomes 'dd'. 'll' is the input for the rule. Rule: 'll → dd /'."
+  },
+  {
+    "question_id": "R4_1",
+    "answer": "BACOLO",
+    "reasoning": "Latin BACULUM -> (m deletion) BACULU -> (u to o) BACOLO."
+  },
+  {
+    "question_id": "R4_2",
+    "answer": "VITA",
+    "reasoning": "Latin VĪTA -> (no VL changes) VĪTA -> (long vowel shortening) VITA."
+  },
+  {
+    "question_id": "R4_3",
+    "answer": "FINDARE",
+    "reasoning": "Latin FINDĀRE -> (no VL changes) FINDĀRE -> (long vowel shortening) FINDARE."
+  }
+]

@@ -1,0 +1,65 @@
+Generation Time: 147.96 seconds
+================================================================================
+
+[
+  {
+    "question_id": "B1_1",
+    "answer": "BLOODHOUND",
+    "reasoning": "The unintended words POODHOUND, BLOMERANIAN, and DOODLE suggest merges between parts of dog breed names. POODHOUND combines 'POOD' from POODLE and 'HOUND' from BLOODHOUND. BLOMERANIAN combines 'BLO' from BLOODHOUND and 'MERANIAN' from POMERANIAN. DOODLE combines 'DOOD' from a merge of 'OOD' in both POODLE and BLOODHOUND with 'LE'. The category is dog breeds, and these are real breeds that fit the poor construction leading to the unintended paths. The graph structure likely branches for prefixes B L O O D..., P O O D..., P O M..., sharing some 'O O D' but improperly allowing crossovers."
+  },
+  {
+    "question_id": "B1_2",
+    "answer": "POODLE",
+    "reasoning": "See above; POODLE contributes to POODHOUND and DOODLE via shared segments with BLOODHOUND."
+  },
+  {
+    "question_id": "B1_3",
+    "answer": "POMERANIAN",
+    "reasoning": "See above; POMERANIAN contributes to BLOMERANIAN via shared 'O' merge with BLOODHOUND's 'O'."
+  },
+  {
+    "question_id": "B2_1",
+    "answer": "24",
+    "reasoning": "For exactly BLOODHOUND (10 letters), POODLE (6), POMERANIAN (10). Shared prefix P-O for POODLE and POMERANIAN (2 nodes). Then unique continuations: 4 for POODLE after shared, 8 for POMERANIAN after shared, 10 for BLOODHOUND. No further merges possible as suffixes after shared O-O-D differ (L-E vs H-O-U-N-D) and states are not equivalent. Total letter nodes: 2 + 4 + 8 + 10 = 24."
+  },
+  {
+    "question_id": "B2_1",
+    "answer": "BLUEBERRY",
+    "reasoning": "The unintended HUCKBERRY (likely HUCKLEBERRY), RAWBERRY, BLACKBERRY, STRAWBERRY suggest merges in prefixes before shared 'BERRY' suffix. The category is berries. BLUEBERRY fits as a real berry; its prefix B-L-U-E allows potential merge to B-L-A-C-K for BLACKBERRY if U-E improperly branches to A-C-K."
+  },
+  {
+    "question_id": "B2_2",
+    "answer": "CRANBERRY",
+    "reasoning": "CRANBERRY prefix C-R-A-N; can merge with RASPBERRY's R-A to allow RAWBERRY if after R-A branches to N vs W. Also contributes to STRAWBERRY if structure allows S-T-R-A-W path via crossed branches."
+  },
+  {
+    "question_id": "B2_3",
+    "answer": "RASPBERRY",
+    "reasoning": "RASPBERRY prefix R-A-S-P; shares R-A with CRANBERRY, allowing RAWBERRY. The graph's crossed structure likely enables extra paths like HUCKBERRY via other branches or improper merges."
+  },
+  {
+    "question_id": "B3_1",
+    "answer": "17",
+    "reasoning": "For exactly BLUEBERRY (9), CRANBERRY (9), RASPBERRY (9). Shared suffix B-E-R-R-Y (5 nodes). Prefixes: B-L-U-E (4), C-R-A-N (4), R-A-S-P (4). No prefix sharing across all; R-A shared but positions differ (after C vs root), so no merge. Total: 4*3 + 5 = 17 letter nodes."
+  },
+  {
+    "question_id": "B3_2",
+    "answer": "CANADA",
+    "reasoning": "Unintended PANDA, GHAQ (possibly misprint or extra path for GHANA variant), IRANADA, CANANAMA suggest merges in shared A-N-A suffix. Category is country names. CANADA: C-A-N-A-D-A; contributes to CANANAMA (C-A-N-A-N-A-M-A via crossover) and IRANADA if I-R-A-N path exists via merge, and PANDA via P-A-N-D-A crossover."
+  },
+  {
+    "question_id": "B3_3",
+    "answer": "GHANA",
+    "reasoning": "GHANA: G-H-A-N-A; ends at shared A-N-A, allowing GHAQ if after A branches to N-A or Q. Fits the multiple incoming to shared suffix."
+  },
+  {
+    "question_id": "B3_4",
+    "answer": "PANAMA",
+    "reasoning": "PANAMA: P-A-N-A-M-A; shares A-N-A, allowing PANDA (P-A-N-D-A via branch to D-A instead of A-M-A)."
+  },
+  {
+    "question_id": "B4_1",
+    "answer": "10",
+    "reasoning": "For exactly CANADA (6), GHANA (5), PANAMA (6). Shared suffix A-N-A (3 nodes). Prefixes: C (1), P (1), G-H (2). After shared last A: branches to D-A (2), M-A (2), but final A merged (same letter and to end). Nodes: prefixes 4 + shared 3 + D + M + final A = 10."
+  }
+]

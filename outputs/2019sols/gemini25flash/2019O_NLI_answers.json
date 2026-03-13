@@ -1,0 +1,92 @@
+[
+  {
+    "question_id": "O_a",
+    "answer": "sentence 2",
+    "reasoning": "Rule 1 identifies that the length of Sentence 2 is the determining factor for this rule."
+  },
+  {
+    "question_id": "O_b",
+    "answer": "7",
+    "reasoning": "Based on analysis of training examples 9 (S2=13 words, entailment) and 21 (S2=8 words, entailment), and the model's errors (25-28) where S2 length > 7 led to incorrect entailment predictions, 7 is the threshold for Sentence 2's length."
+  },
+  {
+    "question_id": "O_c",
+    "answer": "entailment",
+    "reasoning": "Rule 1 predicts 'entailment' based on Sentence 2's length."
+  },
+  {
+    "question_id": "O_d",
+    "answer": "9",
+    "reasoning": "Training example 9 (S2 is 13 words long, label is entailment) supports Rule 1."
+  },
+  {
+    "question_id": "O_e",
+    "answer": "21",
+    "reasoning": "Training example 21 (S2 is 8 words long, label is entailment) supports Rule 1."
+  },
+  {
+    "question_id": "O_f",
+    "answer": "sentence 2 is a substring of sentence 1",
+    "reasoning": "Rule 2 identifies a common pattern for model predictions of entailment (e.g., 22, 24, 29) where Sentence 2 is literally contained within Sentence 1."
+  },
+  {
+    "question_id": "O_g",
+    "answer": "entailment",
+    "reasoning": "Rule 2 predicts 'entailment' when Sentence 2 is a substring of Sentence 1."
+  },
+  {
+    "question_id": "O_h",
+    "answer": "6",
+    "reasoning": "Training example 6 (S2 'oranges are orange' is substring of S1, label entailment) supports Rule 2."
+  },
+  {
+    "question_id": "O_i",
+    "answer": "15",
+    "reasoning": "Training example 15 (S2 'my passport is in the filing cabinet' is substring of S1, label entailment) supports Rule 2."
+  },
+  {
+    "question_id": "O_j",
+    "answer": "sentence 1",
+    "reasoning": "Rule 3 identifies that a specific word in Sentence 1 is the determining factor for this rule."
+  },
+  {
+    "question_id": "O_k",
+    "answer": "walrus",
+    "reasoning": "Analysis of training examples 1 and 18, along with model errors 23, 30, and 31, indicates that the presence of 'walrus' in Sentence 1 triggers a non-entailment prediction."
+  },
+  {
+    "question_id": "O_l",
+    "answer": "non-entailment",
+    "reasoning": "Rule 3 predicts 'non-entailment' when Sentence 1 contains the word 'walrus'."
+  },
+  {
+    "question_id": "O_m",
+    "answer": "1",
+    "reasoning": "Training example 1 (S1 contains 'walrus', label non-entailment) supports Rule 3."
+  },
+  {
+    "question_id": "O_n",
+    "answer": "18",
+    "reasoning": "Training example 18 (S1 contains 'walrus', label non-entailment) supports Rule 3."
+  },
+  {
+    "question_id": "O_o",
+    "answer": "Rule 1",
+    "reasoning": "Rule 1 has the highest priority because its prediction (entailment) overrides Rule 3's prediction (non-entailment) in test example 27."
+  },
+  {
+    "question_id": "O_p",
+    "answer": "Rule 3",
+    "reasoning": "Rule 3 has middle priority because its prediction (non-entailment) overrides Rule 2's prediction (entailment) in test example 23, but it is overridden by Rule 1 in example 27."
+  },
+  {
+    "question_id": "O_q",
+    "answer": "Rule 2",
+    "reasoning": "Rule 2 has the lowest priority because its prediction (entailment) is overridden by Rule 3's prediction (non-entailment) in test example 23."
+  },
+  {
+    "question_id": "O_r",
+    "answer": "23, 27",
+    "reasoning": "Test example 27 shows Rule 1's priority over Rule 3. Test example 23 shows Rule 3's priority over Rule 2. Together, they establish the full ranking of the rules."
+  }
+]

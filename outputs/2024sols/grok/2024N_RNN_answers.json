@@ -1,0 +1,32 @@
+[
+  {
+    "question_id": "N1",
+    "answer": "whether the most recent article was \"a\" or \"an\"",
+    "reasoning": "The problem describes a vector of four units that updates after each word in the example sequence 'an apple is a left fruit'. The fourth unit's values are initial 0, then 2 after 'an', 7 after 'apple', 9 after 'is', 10 after 'a', and 15 after 'left' (with the final vector suggesting continuation to 'fruit'). The text explicitly states that the system is designed for next-word prediction, and remembering whether the last article was 'a' (followed by consonant-initial word) or 'an' (followed by vowel-initial word) is key for that goal. The unit's changes, particularly around the articles 'an' and 'a', encode this distinction, even as values evolve mathematically. Patterns show updates tied to articles, supporting this representation over other possibilities like word count or unrelated features."
+  },
+  {
+    "question_id": "N5_a",
+    "answer": "50%, 50%",
+    "reasoning": "For the prefix 'the dog by the zebras that' (ambiguous attachment for relative clause: could modify singular 'dog' requiring 'is' or plural 'zebras' requiring 'are'), the full model with both U1 and U2 active predicts 50% 'is' and 50% 'are', matching the correct distribution since both continuations are possible (low attachment to 'dog' or high to 'zebras'). This is the baseline performance without ablation, reflecting the model's uncertainty in the ambiguous structure."
+  },
+  {
+    "question_id": "N5_b",
+    "answer": "0%, 100%",
+    "reasoning": "Ablating U1 (U1 off, U2 on) in the 'the dog by the zebras that' prefix. From the pattern in the similar prepositional phrase context (row 3: 'the dog by the zebras'), ablating U1 biases the prediction to plural ('are' 100%), as U1 appears to suppress interference from the plural 'zebras' in the prep phrase. With 'that' starting the relative, the ambiguity persists, but the ablation effect mirrors the prep bias toward treating 'zebras' as the controller, predicting 'are' 100% (0% 'is'). This resolves ambiguity toward high attachment plural."
+  },
+  {
+    "question_id": "N5_c",
+    "answer": "100%, 0%",
+    "reasoning": "Ablating U2 (U1 on, U2 off) in the 'the dog by the zebras that' prefix. In the prepositional phrase context (row 3), ablating U2 maintains the singular prediction ('is' 100%), as U2 seems less critical when U1 is active to suppress plural interference. The addition of 'that' introduces relative clause potential, but the pattern suggests this ablation keeps the bias toward the main singular subject 'dog', predicting 'is' 100% (0% 'are'), resolving ambiguity toward low attachment singular."
+  },
+  {
+    "question_id": "N5_d",
+    "answer": "50%, 50%",
+    "reasoning": "Ablating both U1 and U2 (off, off) in the 'the dog by the zebras that' prefix. Across all contexts in the table (rows 1-4), ablating both units always results in 50% 'is' and 50% 'are', indicating no specific number information is available, leading to uniform uncertainty. This holds for the ambiguous prefix as well, with no bias from either unit."
+  },
+  {
+    "question_id": "N5_e",
+    "answer": "the dog and the ravens",
+    "reasoning": "The required 5-word prefix must have correct prediction 0% 'is' 100% 'are' (unambiguous plural verb needed), but the model's predictions under ablations match the given: both on 100% 'is' 0% 'are' (wrong, strong singular bias), U1 off U2 on 100% 'is' 0% 'are', U1 on U2 off 50% 50%, off off 50% 50%. This mirrors the simple singular pattern (row 2) but for a plural context. 'The dog and the ravens' is a 5-word compound subject (plural overall, requires 'are'), but the model biases to singular due to initial 'dog', with redundant U1/U2 supporting the wrong singular prediction (either alone sufficient, like simple singular), and both ablated causing uncertainty."
+  }
+]

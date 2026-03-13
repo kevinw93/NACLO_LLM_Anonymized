@@ -1,0 +1,682 @@
+[
+  {
+    "question_id": "R1_a_1",
+    "answer": ">",
+    "reasoning": "This is the general rule to append 'IÈME' to words that don't have specific suffix changes. It's the lowest priority rule in descending order (a)."
+  },
+  {
+    "question_id": "R1_a_2",
+    "answer": "I",
+    "reasoning": "Part of the 'IÈME>' suffix added by the general rule."
+  },
+  {
+    "question_id": "R1_a_3",
+    "answer": "È",
+    "reasoning": "Part of the 'IÈME>' suffix added by the general rule."
+  },
+  {
+    "question_id": "R1_a_4",
+    "answer": "M",
+    "reasoning": "Part of the 'IÈME>' suffix added by the general rule."
+  },
+  {
+    "question_id": "R1_a_5",
+    "answer": "E",
+    "reasoning": "Part of the 'IÈME>' suffix added by the general rule."
+  },
+  {
+    "question_id": "R1_a_6",
+    "answer": ">",
+    "reasoning": "The '>' symbol to ensure it is not deleted and marks the end of the string after appending 'IÈME'."
+  },
+  {
+    "question_id": "R1_b_1",
+    "answer": "X",
+    "reasoning": "This rule targets words ending in 'X' (DEUX, SIX, DIX) to specifically change them to 'XIÈME>'. It has higher priority than the general 'IÈME>' rule."
+  },
+  {
+    "question_id": "R1_b_2",
+    "answer": ">",
+    "reasoning": "The '>' symbol to match the end of the string."
+  },
+  {
+    "question_id": "R1_b_3",
+    "answer": "X",
+    "reasoning": "The 'X' is preserved in words like 'DEUXIÈME'."
+  },
+  {
+    "question_id": "R1_b_4",
+    "answer": "I",
+    "reasoning": "Part of the 'XIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_b_5",
+    "answer": "È",
+    "reasoning": "Part of the 'XIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_b_6",
+    "answer": "M",
+    "reasoning": "Part of the 'XIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_b_7",
+    "answer": "E",
+    "reasoning": "Part of the 'XIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_b_8",
+    "answer": ">",
+    "reasoning": "The '>' symbol to ensure it is not deleted and marks the end of the string after appending 'XIÈME'."
+  },
+  {
+    "question_id": "R1_c_1",
+    "answer": "Q",
+    "reasoning": "This rule targets 'CINQ' to specifically change it to 'CINQUIÈME>'. It has higher priority than 'X>' and general 'IÈME>' rules."
+  },
+  {
+    "question_id": "R1_c_2",
+    "answer": ">",
+    "reasoning": "The '>' symbol to match the end of the string."
+  },
+  {
+    "question_id": "R1_c_3",
+    "answer": "Q",
+    "reasoning": "The 'Q' is preserved in 'CINQUIÈME'."
+  },
+  {
+    "question_id": "R1_c_4",
+    "answer": "U",
+    "reasoning": "Part of the 'QUIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_c_5",
+    "answer": "I",
+    "reasoning": "Part of the 'QUIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_c_6",
+    "answer": "È",
+    "reasoning": "Part of the 'QUIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_c_7",
+    "answer": "M",
+    "reasoning": "Part of the 'QUIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_c_8",
+    "answer": "E",
+    "reasoning": "Part of the 'QUIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_c_9",
+    "answer": ">",
+    "reasoning": "The '>' symbol to ensure it is not deleted and marks the end of the string after appending 'QUIÈME'."
+  },
+  {
+    "question_id": "R1_d_1",
+    "answer": "F",
+    "reasoning": "This rule targets words ending in 'F' (NEUF, DIX-NEUF) to specifically change them to 'VIÈME>'. It has higher priority than 'Q>', 'X>', and general 'IÈME>' rules."
+  },
+  {
+    "question_id": "R1_d_2",
+    "answer": ">",
+    "reasoning": "The '>' symbol to match the end of the string."
+  },
+  {
+    "question_id": "R1_d_3",
+    "answer": "V",
+    "reasoning": "The 'F' changes to 'V' in 'NEUVIÈME'."
+  },
+  {
+    "question_id": "R1_d_4",
+    "answer": "I",
+    "reasoning": "Part of the 'VIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_d_5",
+    "answer": "È",
+    "reasoning": "Part of the 'VIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_d_6",
+    "answer": "M",
+    "reasoning": "Part of the 'VIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_d_7",
+    "answer": "E",
+    "reasoning": "Part of the 'VIÈME>' suffix added by this specific rule."
+  },
+  {
+    "question_id": "R1_d_8",
+    "answer": ">",
+    "reasoning": "The '>' symbol to ensure it is not deleted and marks the end of the string after appending 'VIÈME'."
+  },
+  {
+    "question_id": "R1_e_1",
+    "answer": "U",
+    "reasoning": "This rule handles the special case of 'UN' transforming to 'PREMIER'. It is the highest priority rule (e)."
+  },
+  {
+    "question_id": "R1_e_2",
+    "answer": "N",
+    "reasoning": "Part of the 'UN>' pattern for the highest priority rule."
+  },
+  {
+    "question_id": "R1_e_3",
+    "answer": ">",
+    "reasoning": "The '>' symbol to match the end of the string for the 'UN' rule."
+  },
+  {
+    "question_id": "R1_e_4",
+    "answer": "P",
+    "reasoning": "Part of the 'PREMIER>' replacement for 'UN'."
+  },
+  {
+    "question_id": "R1_e_5",
+    "answer": "R",
+    "reasoning": "Part of the 'PREMIER>' replacement for 'UN'."
+  },
+  {
+    "question_id": "R1_e_6",
+    "answer": "E",
+    "reasoning": "Part of the 'PREMIER>' replacement for 'UN'."
+  },
+  {
+    "question_id": "R1_e_7",
+    "answer": "M",
+    "reasoning": "Part of the 'PREMIER>' replacement for 'UN'."
+  },
+  {
+    "question_id": "R1_e_8",
+    "answer": "I",
+    "reasoning": "Part of the 'PREMIER>' replacement for 'UN'."
+  },
+  {
+    "question_id": "R1_e_9",
+    "answer": "E",
+    "reasoning": "Part of the 'PREMIER>' replacement for 'UN'."
+  },
+  {
+    "question_id": "R1_e_10",
+    "answer": "R",
+    "reasoning": "Part of the 'PREMIER>' replacement for 'UN'."
+  },
+  {
+    "question_id": "R1_e_11",
+    "answer": ">",
+    "reasoning": "The '>' symbol to ensure it is not deleted and marks the end of the string for the 'PREMIER>' replacement."
+  },
+  {
+    "question_id": "R2_1",
+    "answer": "To fix 'VINGT-ET-UN' (error 1), modify rule 'e' from 'UN> -> PREMIER>' to '<UN> -> <PREMIER>'. This ensures the rule only applies when the entire wrapped input is 'UN', preventing it from matching 'UN' within 'VINGT-ET-UN'. To fix 'QUATRE-VINGTS' (error 2), replace rule 'b. X> -> XIÈME>' (which is redundant as 'X'-ending words are handled by the general rule 'a') with 'b. TS> -> TIÈME>'. This new rule explicitly handles the 'S' removal for 'QUATRE-VINGTS' before rule 'a' adds 'IÈME', correctly producing 'QUATRE-VINGTIÈME'.",
+    "reasoning": "The modifications address the specific errors: 1. By making rule 'e' match the entire wrapped word '<UN>', it no longer incorrectly transforms 'VINGT-ET-UN'. 2. By introducing 'TS> -> TIÈME>' as rule 'b', it correctly handles 'QUATRE-VINGTS' while preserving existing correct behaviors, as the previous 'b' rule was found to be redundant."
+  },
+  {
+    "question_id": "R3_a_1",
+    "answer": "Q",
+    "reasoning": "This is a corrective rule to transform 'QUATRE-VINGTSIÈME' to 'QUATRE-VINGTIÈME'. It must be placed as 'a' (lowest priority in forward, highest in reverse) as its 'Y' pattern is the longest among specific corrective rules, allowing correct reversal by 'longest match first' logic (implied for Text-o-matic 2000's reverse operation)."
+  },
+  {
+    "question_id": "R3_a_2",
+    "answer": "U",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_3",
+    "answer": "A",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_4",
+    "answer": "T",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_5",
+    "answer": "R",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_6",
+    "answer": "E",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_7",
+    "answer": "-",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_8",
+    "answer": "V",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_9",
+    "answer": "I",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_10",
+    "answer": "N",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_11",
+    "answer": "G",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_12",
+    "answer": "T",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_13",
+    "answer": "S",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern, this 'S' is removed in the replacement."
+  },
+  {
+    "question_id": "R3_a_14",
+    "answer": "I",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_15",
+    "answer": "È",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_16",
+    "answer": "M",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_17",
+    "answer": "E",
+    "reasoning": "Part of the 'QUATRE-VINGTSIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_a_18",
+    "answer": ">",
+    "reasoning": "The '>' symbol marking the end of the string pattern."
+  },
+  {
+    "question_id": "R3_a_19",
+    "answer": "Q",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_20",
+    "answer": "U",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_21",
+    "answer": "A",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_22",
+    "answer": "T",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_23",
+    "answer": "R",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_24",
+    "answer": "E",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_25",
+    "answer": "-",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_26",
+    "answer": "V",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_27",
+    "answer": "I",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_28",
+    "answer": "N",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_29",
+    "answer": "G",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_30",
+    "answer": "T",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_31",
+    "answer": "I",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_32",
+    "answer": "È",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_33",
+    "answer": "M",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_34",
+    "answer": "E",
+    "reasoning": "Part of the 'QUATRE-VINGTIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_a_35",
+    "answer": ">",
+    "reasoning": "The '>' symbol marking the end of the replacement string."
+  },
+  {
+    "question_id": "R3_b_1",
+    "answer": "C",
+    "reasoning": "This is a corrective rule for 'CINQ'. It fixes 'CINQIÈME' (from general rule 'e') to 'CINQUIÈME'."
+  },
+  {
+    "question_id": "R3_b_2",
+    "answer": "I",
+    "reasoning": "Part of the 'CINQIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_b_3",
+    "answer": "N",
+    "reasoning": "Part of the 'CINQIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_b_4",
+    "answer": "Q",
+    "reasoning": "Part of the 'CINQIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_b_5",
+    "answer": "I",
+    "reasoning": "Part of the 'CINQIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_b_6",
+    "answer": "È",
+    "reasoning": "Part of the 'CINQIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_b_7",
+    "answer": "M",
+    "reasoning": "Part of the 'CINQIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_b_8",
+    "answer": "E",
+    "reasoning": "Part of the 'CINQIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_b_9",
+    "answer": ">",
+    "reasoning": "The '>' symbol marking the end of the string pattern."
+  },
+  {
+    "question_id": "R3_b_10",
+    "answer": "C",
+    "reasoning": "Part of the 'CINQUIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_b_11",
+    "answer": "I",
+    "reasoning": "Part of the 'CINQUIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_b_12",
+    "answer": "N",
+    "reasoning": "Part of the 'CINQUIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_b_13",
+    "answer": "Q",
+    "reasoning": "Part of the 'CINQUIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_b_14",
+    "answer": "U",
+    "reasoning": "Part of the 'CINQUIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_b_15",
+    "answer": "I",
+    "reasoning": "Part of the 'CINQUIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_b_16",
+    "answer": "È",
+    "reasoning": "Part of the 'CINQUIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_b_17",
+    "answer": "M",
+    "reasoning": "Part of the 'CINQUIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_b_18",
+    "answer": "E",
+    "reasoning": "Part of the 'CINQUIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_b_19",
+    "answer": ">",
+    "reasoning": "The '>' symbol marking the end of the replacement string."
+  },
+  {
+    "question_id": "R3_c_1",
+    "answer": "N",
+    "reasoning": "This is a corrective rule for 'NEUF' (and 'DIX-NEUF'). It fixes 'NEUFIÈME' (from general rule 'e') to 'NEUVIÈME'."
+  },
+  {
+    "question_id": "R3_c_2",
+    "answer": "E",
+    "reasoning": "Part of the 'NEUFIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_c_3",
+    "answer": "U",
+    "reasoning": "Part of the 'NEUFIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_c_4",
+    "answer": "F",
+    "reasoning": "Part of the 'NEUFIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_c_5",
+    "answer": "I",
+    "reasoning": "Part of the 'NEUFIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_c_6",
+    "answer": "È",
+    "reasoning": "Part of the 'NEUFIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_c_7",
+    "answer": "M",
+    "reasoning": "Part of the 'NEUFIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_c_8",
+    "answer": "E",
+    "reasoning": "Part of the 'NEUFIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_c_9",
+    "answer": ">",
+    "reasoning": "The '>' symbol marking the end of the string pattern."
+  },
+  {
+    "question_id": "R3_c_10",
+    "answer": "N",
+    "reasoning": "Part of the 'NEUVIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_c_11",
+    "answer": "E",
+    "reasoning": "Part of the 'NEUVIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_c_12",
+    "answer": "U",
+    "reasoning": "Part of the 'NEUVIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_c_13",
+    "answer": "V",
+    "reasoning": "Part of the 'NEUVIÈME>' replacement (F changes to V)."
+  },
+  {
+    "question_id": "R3_c_14",
+    "answer": "I",
+    "reasoning": "Part of the 'NEUVIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_c_15",
+    "answer": "È",
+    "reasoning": "Part of the 'NEUVIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_c_16",
+    "answer": "M",
+    "reasoning": "Part of the 'NEUVIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_c_17",
+    "answer": "E",
+    "reasoning": "Part of the 'NEUVIÈME>' replacement."
+  },
+  {
+    "question_id": "R3_c_18",
+    "answer": ">",
+    "reasoning": "The '>' symbol marking the end of the replacement string."
+  },
+  {
+    "question_id": "R3_d_1",
+    "answer": "U",
+    "reasoning": "This is a corrective rule for 'UN'. It fixes 'UNIÈME' (from general rule 'e') to 'PREMIER'."
+  },
+  {
+    "question_id": "R3_d_2",
+    "answer": "N",
+    "reasoning": "Part of the 'UNIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_d_3",
+    "answer": "I",
+    "reasoning": "Part of the 'UNIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_d_4",
+    "answer": "È",
+    "reasoning": "Part of the 'UNIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_d_5",
+    "answer": "M",
+    "reasoning": "Part of the 'UNIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_d_6",
+    "answer": "E",
+    "reasoning": "Part of the 'UNIÈME>' pattern."
+  },
+  {
+    "question_id": "R3_d_7",
+    "answer": ">",
+    "reasoning": "The '>' symbol marking the end of the string pattern."
+  },
+  {
+    "question_id": "R3_d_8",
+    "answer": "P",
+    "reasoning": "Part of the 'PREMIER>' replacement."
+  },
+  {
+    "question_id": "R3_d_9",
+    "answer": "R",
+    "reasoning": "Part of the 'PREMIER>' replacement."
+  },
+  {
+    "question_id": "R3_d_10",
+    "answer": "E",
+    "reasoning": "Part of the 'PREMIER>' replacement."
+  },
+  {
+    "question_id": "R3_d_11",
+    "answer": "M",
+    "reasoning": "Part of the 'PREMIER>' replacement."
+  },
+  {
+    "question_id": "R3_d_12",
+    "answer": "I",
+    "reasoning": "Part of the 'PREMIER>' replacement."
+  },
+  {
+    "question_id": "R3_d_13",
+    "answer": "E",
+    "reasoning": "Part of the 'PREMIER>' replacement."
+  },
+  {
+    "question_id": "R3_d_14",
+    "answer": "R",
+    "reasoning": "Part of the 'PREMIER>' replacement."
+  },
+  {
+    "question_id": "R3_d_15",
+    "answer": ">",
+    "reasoning": "The '>' symbol marking the end of the replacement string."
+  },
+  {
+    "question_id": "R3_e_1",
+    "answer": ">",
+    "reasoning": "This is the general rule. In the forward pass (e->a), it adds 'IÈME' to the end of words. In the reverse pass (a->e), it is the last rule applied, removing 'IÈME' after all specific corrections have been undone."
+  },
+  {
+    "question_id": "R3_e_2",
+    "answer": "I",
+    "reasoning": "Part of the 'IÈME>' suffix for the general rule."
+  },
+  {
+    "question_id": "R3_e_3",
+    "answer": "È",
+    "reasoning": "Part of the 'IÈME>' suffix for the general rule."
+  },
+  {
+    "question_id": "R3_e_4",
+    "answer": "M",
+    "reasoning": "Part of the 'IÈME>' suffix for the general rule."
+  },
+  {
+    "question_id": "R3_e_5",
+    "answer": "E",
+    "reasoning": "Part of the 'IÈME>' suffix for the general rule."
+  },
+  {
+    "question_id": "R3_e_6",
+    "answer": ">",
+    "reasoning": "The '>' symbol for the general rule, ensuring it is not deleted."
+  }
+]

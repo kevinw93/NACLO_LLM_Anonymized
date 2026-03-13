@@ -1,0 +1,32 @@
+[
+  {
+    "question_id": "F1_1",
+    "answer": "sitarang nu a qatay tua quma a alaw",
+    "reasoning": "To translate 'The man protects the field with the dog', I analyzed the patterns from the given examples. From sentence 4, 'the man protects (it) with the spear' is 'sitarang nu a qatay a vuluq', where sitarang is the verb for 'protects' in actor focus, nu a qatay is 'the man', and a vuluq is the instrument 'with the spear'. The field is the patient, so I inserted tua quma (tua for patient marker, quma for 'field' from sentence 1). The dog is the instrument, so a alaw (alaw for 'dog' from sentence 2, a for instrument). The structure follows actor focus VSO with patient and instrument: verb actor patient instrument."
+  },
+  {
+    "question_id": "F1_2",
+    "answer": "tjalawingawen nu a suvavuy a qaya-qayam a gadu nu a tsemas",
+    "reasoning": "To translate 'Your shaman angers my bird in the spirit's mountain', I identified components from examples. 'Angers' uses nu a suvavuy from sentence 5 ('angers' in actor focus). 'Your shaman' is possessed actor; from sentence 5, 'your pig' is tjalawen, suggesting tj- prefix for 'your' and -en suffix for some possessed nouns. 'Shaman' is pulingaw from sentence 7, so I formed tjalawingawen by analogy (tj a + root + en). 'My bird' is patient a qaya-qayam (a for possessed patient like a kukama in sentence 3, qaya-qayam for 'bird' from sentence 8). Location 'in the spirit's mountain' is a gadu nu a tsemas (a for locative, gadu for 'mountain' from sentence 7, nu a tsemas for 'of the spirit' from sentence 3). Structure: possessed actor verb patient locative, following sentence 5."
+  },
+  {
+    "question_id": "F1_3",
+    "answer": "dja visen nu a vavai tua kuvatu",
+    "reasoning": "To translate 'The woman snatches the pig', I used patterns from sentence 3: 'the spirit snatches my father' is 'dja visen nu a tsemas a kukama', where dja visen is 'snatches' in actor focus, nu a tsemas is actor 'the spirit', a kukama is possessed patient. Here, actor 'the woman' is nu a vavai (vavai for 'woman' from sentence 5). Patient 'the pig' is non-possessed, so tua kuvatu (tua for patient like tua kuka in sentence 1, kuvatu for 'pig' from sentence 2). Structure: verb actor patient, actor focus VSO."
+  },
+  {
+    "question_id": "F2_1",
+    "answer": "The shaman protects the bird with the spirit. (underline 'bird'); in u sitarang nu a pulingaw a tsemas ?",
+    "reasoning": "For the response 'sitarang tua qaya-qayam nu a pulingaw a tsemas', I analyzed the structure: sitarang (protect from sentence 4), tua qaya-qayam (patient 'the bird' fronted, indicating focus), nu a pulingaw (actor 'the shaman' from sentence 7), a tsemas (oblique 'with/from the spirit' from sentence 3). Focused element is the patient 'bird' (new information, fronted). English translation underlining focused 'bird'. The prompting question questions the focused patient: 'what does the shaman protect with the spirit?', using in u (wh-word from examples 9 and 12) + verb actor oblique."
+  },
+  {
+    "question_id": "F2_2",
+    "answer": "The man's anger is in the mountain. (underline 'mountain'); in u a vavuy nu a qatay ?",
+    "reasoning": "For the response 'kanen nu a qatay a vavuy i tua gadu', patterns from examples 9 and 12 show location focus with copula i + location (i tua quma in 9, a gadu in 12). kanen nu a qatay (nominal 'the man's [action]', kanan root from sentence 1 for 'eat' but here nominalized event), a vavuy ('the anger', vavuy root from sentences 2 and 5), i tua gadu (focused location 'in the mountain', gadu from sentence 7). Interpreted as nominal sentence 'The man's anger is in the mountain', focus on location 'mountain' (new info). English underlining 'mountain'. Question prompts location focus: 'where is the man's anger?', using in u + possessed nominal (analogous to 9 and 12)."
+  },
+  {
+    "question_id": "F2_3",
+    "answer": "The pig is snatched in the field. (underline 'pig'); in u kutjalawan a kuquma ?",
+    "reasoning": "For the response 'kutjalawan tua suvatu a kuquma', structure shows patient focus: kutjalawan (likely patient voice of 'snatch', from dja visen root in sentences 3 and 7), tua suvatu (fronted patient 'the pig', suvatu variant/form of kuvatu from sentence 2), a kuquma (location 'in the field', kuquma possessed/variant of quma from sentence 1). Focused on patient 'pig' (fronted, new info). English 'The pig is snatched in the field', underlining 'pig'. Question prompts patient focus: 'what is snatched in the field?', using in u + verb location (analogous to wh-questions in examples, focusing the unknown patient)."
+  }
+]

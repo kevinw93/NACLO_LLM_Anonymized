@@ -1,0 +1,192 @@
+[
+  {
+    "question_id": "C1_a",
+    "answer": "hyphenated word",
+    "reasoning": "Feature F1 is 1 for rows SS3 and j. Analyzing the text, sentence SS3 ('nine-year-long') and sentence SS4 ('set-up') are the only ones containing hyphenated words. This matches the table if row j corresponds to sentence SS4."
+  },
+  {
+    "question_id": "C1_b",
+    "answer": "10",
+    "reasoning": "Feature F3 gives negative scores for sentences with word counts less than b. Rows i and k have scores -1 and -2. This corresponds to sentences SS5 (9 words) and SS6 (8 words). From the formulas 9-b=-1 and 8-b=-2, we can solve for b=10."
+  },
+  {
+    "question_id": "C1_c",
+    "answer": "number",
+    "reasoning": "Feature F4 counts the number of occurrences of a feature. Testing the 'number' option from the word bank provides a consistent count across all sentences (e.g., SS3 has 'nine' and '50' for a score of 2; SS2 has '10,000' and 'one' for a score of 2; SS4 has '100' in quotes which isn't counted, for a score of 0)."
+  },
+  {
+    "question_id": "C1_d",
+    "answer": "common noun",
+    "reasoning": "Feature F5 counts repeated words of certain types. The combination of 'common noun' and 'adjective' consistently explains the scores. For example, in SS6 (row k), 'gum' (common noun) and 'sticky' (adjective) are repeated in other sentences, giving a score of 2."
+  },
+  {
+    "question_id": "C1_e",
+    "answer": "adjective",
+    "reasoning": "Feature F5 counts repeated words of certain types. The combination of 'common noun' and 'adjective' consistently explains the scores. For example, in SS6 (row k), 'gum' (common noun) and 'sticky' (adjective) are repeated in other sentences, giving a score of 2."
+  },
+  {
+    "question_id": "C1_f",
+    "answer": "first",
+    "reasoning": "Feature F6 is 1 for SS1 and SS4 (row j). SS1 is the first sentence in the story. This matches the 'first' option in the word bank."
+  },
+  {
+    "question_id": "C1_g",
+    "answer": "4",
+    "reasoning": "Feature F6 is 1 for SS1 and SS4 (row j). SS4 is the fourth sentence in the story. This matches the number '4' option in the word bank."
+  },
+  {
+    "question_id": "C1_h",
+    "answer": "SS7",
+    "reasoning": "After identifying sentences for all other rows through systematic deduction (i=SS5, k=SS6, j=SS4), SS7 is the only sentence left for the remaining row h. Its features (F1=0, F2=1, etc.) match the row."
+  },
+  {
+    "question_id": "C1_i",
+    "answer": "SS5",
+    "reasoning": "Based on the analysis of F3, row i's score of -1 corresponds to SS5, which has 9 words (9-10 = -1)."
+  },
+  {
+    "question_id": "C1_j",
+    "answer": "SS4",
+    "reasoning": "Based on the analysis of F1, row j's score of 1 corresponds to SS4, which contains the hyphenated word 'set-up'."
+  },
+  {
+    "question_id": "C1_k",
+    "answer": "SS6",
+    "reasoning": "Based on the analysis of F3, row k's score of -2 corresponds to SS6, which has 8 words (8-10 = -2)."
+  },
+  {
+    "question_id": "C2_a",
+    "answer": "HW5",
+    "reasoning": "After assigning other sentences (HW2, HW3, HW4, HW6) to their most plausible rows, HW1 and HW5 remain for rows a and k. Row a's feature pattern (F1=0, F2=1) is a better fit for HW5 than HW1. The answer is based on a best-fit assignment due to inconsistencies in the problem's data."
+  },
+  {
+    "question_id": "C2_b",
+    "answer": "0",
+    "reasoning": "Row 'a' is assigned to HW5. HW5 has 36 words. For F3, the calculation is 36-10, which is positive, resulting in a score of 0 for F3. Therefore, blank b is 0."
+  },
+  {
+    "question_id": "C2_c",
+    "answer": "0",
+    "reasoning": "Row 2 corresponds to HW4. Sentence HW4 does not contain a hyphenated word, so its score for F1 is 0."
+  },
+  {
+    "question_id": "C2_d",
+    "answer": "1",
+    "reasoning": "Row 2 corresponds to HW4. Sentence HW4 is the fourth sentence in the story. According to the F6 rule (1 point for being 1st or 4th), its score for F6 is 1."
+  },
+  {
+    "question_id": "C2_e",
+    "answer": "4",
+    "reasoning": "For row 2 (HW4), the sum of the feature scores is 0 (c) + 0 + 0 + 1 + 2 + 1 (d) = 4."
+  },
+  {
+    "question_id": "C2_f",
+    "answer": "HW3",
+    "reasoning": "Row f has a sum of scores of 1. Based on my calculations, HW3 is the only sentence with a total score of 1. Its individual feature scores (0, 0, -1, 1, 1, 0) also match the pattern of row f."
+  },
+  {
+    "question_id": "C2_g",
+    "answer": "-1",
+    "reasoning": "Row f corresponds to HW3. HW3 has 9 words. The score for F3 is word_count - 10 = 9 - 10 = -1."
+  },
+  {
+    "question_id": "C2_h",
+    "answer": "1",
+    "reasoning": "Row f corresponds to HW3. HW3 contains the number 'One', giving it a score of 1 for F4."
+  },
+  {
+    "question_id": "C2_i",
+    "answer": "1",
+    "reasoning": "Row 4 corresponds to HW6. HW6 contains one proper noun ('Hot Water Village'), so its score for F2 is 1."
+  },
+  {
+    "question_id": "C2_j",
+    "answer": "4",
+    "reasoning": "Row 4 corresponds to HW6. Based on my consistent calculations (ignoring the likely typos in the table's F5 and F6 values), the sum for HW6 is F1(1)+F2(1)+F3(0)+F4(0)+F5(2)+F6(0) = 4."
+  },
+  {
+    "question_id": "C2_k",
+    "answer": "HW1",
+    "reasoning": "After assigning other sentences, HW1 is assigned to the last remaining row, k, by process of elimination."
+  },
+  {
+    "question_id": "C2_l",
+    "answer": "1",
+    "reasoning": "Row k corresponds to HW1. HW1 is the first sentence. According to the F6 rule (1 point for being 1st or 4th), its score is 1."
+  },
+  {
+    "question_id": "C2_m",
+    "answer": "5",
+    "reasoning": "Row k corresponds to HW1. The sum of scores for HW1 is F1(0)+F2(2)+F3(0)+F4(0)+F5(2)+F6(1) = 5."
+  },
+  {
+    "question_id": "C2_n",
+    "answer": "HW2",
+    "reasoning": "The feature pattern of row n (F1=1, F2=1, F5=4) perfectly matches the calculated feature vector for sentence HW2."
+  },
+  {
+    "question_id": "C2_o",
+    "answer": "1",
+    "reasoning": "Row n corresponds to HW2. HW2 contains the number 'three', giving it a score of 1 for F4."
+  },
+  {
+    "question_id": "C2_p",
+    "answer": "7",
+    "reasoning": "Row n corresponds to HW2. The sum of scores for HW2 is F1(1)+F2(1)+F3(0)+F4(1)+F5(4)+F6(0) = 7."
+  },
+  {
+    "question_id": "C3_1",
+    "answer": "HW1",
+    "reasoning": "The summary is composed of the three sentences with the highest scores. Based on the completed table for C2, the scores are HW2(7), HW5(6), and HW1(5). The sentences must be listed in their original story order. HW1 is the first of these three."
+  },
+  {
+    "question_id": "C3_2",
+    "answer": "HW2",
+    "reasoning": "The summary is composed of the three sentences with the highest scores: HW1, HW2, and HW5. HW2 is the second of these three to appear in the original story."
+  },
+  {
+    "question_id": "C3_3",
+    "answer": "HW5",
+    "reasoning": "The summary is composed of the three sentences with the highest scores: HW1, HW2, and HW5. HW5 is the third of these three to appear in the original story."
+  },
+  {
+    "question_id": "C4_1",
+    "answer": "SSC1",
+    "reasoning": "The summary is composed of the three sentences with the highest scores. From the table, there is a three-way tie for the highest score of 2, between sentences corresponding to rows q, t, and u. I identified t=SSC1 and reasoned that q and u correspond to SSC4 and SSC5. The summary sentences are therefore SSC1, SSC4, and SSC5. In original story order, the first is SSC1."
+  },
+  {
+    "question_id": "C4_2",
+    "answer": "SSC4",
+    "reasoning": "The three highest-scoring sentences are SSC1, SSC4, and SSC5. In original story order, the second sentence is SSC4."
+  },
+  {
+    "question_id": "C4_3",
+    "answer": "SSC5",
+    "reasoning": "The three highest-scoring sentences are SSC1, SSC4, and SSC5. In original story order, the third sentence is SSC5."
+  },
+  {
+    "question_id": "C5_a",
+    "answer": "corporation",
+    "reasoning": "The abstractive summary says 'Made to Stick corporation'. The original text refers to 'Made to Stick' as a 'company' but never explicitly as a 'corporation'. This word is an addition by the summarizer and can be deleted to improve factual alignment with the source."
+  },
+  {
+    "question_id": "C5_b",
+    "answer": "Made to Stick, Bigger Bubble",
+    "reasoning": "The original text states that the president of 'Bigger Bubble' was found chewing gum from 'Made to Stick'. The summary reverses these roles, claiming a VP from 'Made to Stick' was chewing gum from 'Bigger Bubble'. The two company names have been swapped."
+  },
+  {
+    "question_id": "C5_c",
+    "answer": "vice president, president",
+    "reasoning": "The original text identifies Ronald McBubble as the 'president' of Bigger Bubble. The abstractive summary incorrectly refers to him as the 'vice president', a role not mentioned in the source text. 'vice president' should be replaced by 'president'."
+  },
+  {
+    "question_id": "C6_a",
+    "answer": "SSC4",
+    "reasoning": "The factual error occurs in the extractive summary for 'The Sticky Saga Continues'. This summary consists of SSC1, SSC4, and SSC5. The error is in sentence SSC4."
+  },
+  {
+    "question_id": "C6_b",
+    "answer": "he",
+    "reasoning": "In the summary, sentence SSC4 ('Perhaps most seriously, he is being investigated...') follows SSC1 ('...Ronald McBubble faces tough times...'). This makes the pronoun 'he' refer to McBubble. However, in the original text, SSC4 is preceded by SSC3, which is about McBubble's rival. In that context, 'he' refers to the rival. By omitting SSC3, the summary creates a factual error about who is being investigated."
+  }
+]

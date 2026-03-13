@@ -1,0 +1,137 @@
+[
+  {
+    "question_id": "D1_1",
+    "answer": "U",
+    "reasoning": "C2 only allows adjectives in positions seen during training; 'tall' was not seen prenominally, so C2=U for sentence 31."
+  },
+  {
+    "question_id": "D1_2",
+    "answer": "G",
+    "reasoning": "C2 generalizes verbs and nouns; 'saw the yodeler' is structurally fine, so C2=G for sentence 32."
+  },
+  {
+    "question_id": "D1_3",
+    "answer": "U",
+    "reasoning": "Sentence 33 has scrambled word order; C2 rejects such nonsense strings."
+  },
+  {
+    "question_id": "D1_4",
+    "answer": "G",
+    "reasoning": "Normal SVO sentence with known words; C2=G for sentence 34."
+  },
+  {
+    "question_id": "D1_5",
+    "answer": "G",
+    "reasoning": "Predicate adjective 'famous' was seen with 'is'; C2 allows it—sentence 35."
+  },
+  {
+    "question_id": "D1_6",
+    "answer": "G",
+    "reasoning": "C1 memorizes training sentences; 36 equals a training sentence, so C1=G."
+  },
+  {
+    "question_id": "D1_7",
+    "answer": "G",
+    "reasoning": "C2 labels exact training sentences as G; sentence 36."
+  },
+  {
+    "question_id": "D1_8",
+    "answer": "G",
+    "reasoning": "C4 overgeneralizes but also labels training sentences G; sentence 36."
+  },
+  {
+    "question_id": "D1_9",
+    "answer": "U",
+    "reasoning": "C1 undergeneralizes to unseen sentences; 'spy is talented' not in training, so C1=U (sentence 37)."
+  },
+  {
+    "question_id": "D1_10",
+    "answer": "U",
+    "reasoning": "C2 only permits predicate adjectives seen with 'is'; 'talented' wasn’t, so sentence 37 is U."
+  },
+  {
+    "question_id": "D1_11",
+    "answer": "G",
+    "reasoning": "C4 tends to mark well‑formed strings as G, including new predicate adjectives; sentence 37."
+  },
+  {
+    "question_id": "D1_12",
+    "answer": "U",
+    "reasoning": "C1 labels unseen combinations as U; 'programmer met the cartoonist' wasn’t in training (sentence 38)."
+  },
+  {
+    "question_id": "D1_13",
+    "answer": "G",
+    "reasoning": "C2 accepts new noun–verb combinations that match learned structures; sentence 38."
+  },
+  {
+    "question_id": "D1_14",
+    "answer": "G",
+    "reasoning": "C4 marks grammatical‑looking SVO strings as G; sentence 38."
+  },
+  {
+    "question_id": "D2_1",
+    "answer": "happy",
+    "reasoning": "C2 marks both 'is X' and 'X concierge' as G only for adjectives seen in both positions; that is 'happy'."
+  },
+  {
+    "question_id": "D2_2",
+    "answer": "main",
+    "reasoning": "C2: 'is main' = U but 'main concierge' = G; fits 'main'."
+  },
+  {
+    "question_id": "D2_3",
+    "answer": "asleep",
+    "reasoning": "C2: 'is asleep' = G but 'asleep concierge' = U; matches 'asleep'."
+  },
+  {
+    "question_id": "D3_1",
+    "answer": "6",
+    "reasoning": "Using standard English judgments for 39–44, C2 matches on all six."
+  },
+  {
+    "question_id": "D3_2",
+    "answer": "4",
+    "reasoning": "For the same six sentences, C3 mismatches on 41 and 44 only."
+  },
+  {
+    "question_id": "D4_1",
+    "answer": "ensmall",
+    "reasoning": "From context (‘make this picture smaller’) and the cipher, QGTRHUU decodes to an overgeneralized verb analogized to ‘enlarge’."
+  },
+  {
+    "question_id": "D4_2",
+    "answer": "miniaturity",
+    "reasoning": "RKGKHENDKEW decodes via the same substitution to an overgeneralized noun from 'miniature' + -ity."
+  },
+  {
+    "question_id": "D4_3",
+    "answer": "leftside-right",
+    "reasoning": "UQYETKFQ-DKAPE decodes to a coined counterpart of ‘upside-down’, describing a mirror flip."
+  },
+  {
+    "question_id": "D4_4",
+    "answer": "tho",
+    "reasoning": "EPX decodes to ‘tho’, a nonstandard clipped form used as a one-word answer."
+  },
+  {
+    "question_id": "D4_5",
+    "answer": "attemption",
+    "reasoning": "HEEQRMEKXG decodes to an overgeneralized -ion noun from 'attempt'."
+  },
+  {
+    "question_id": "D4_6",
+    "answer": "somewhen",
+    "reasoning": "TXRQCPQG decodes to 'somewhen', an overgeneralized temporal counterpart to 'somewhere'."
+  },
+  {
+    "question_id": "D4_7",
+    "answer": "yesterweek",
+    "reasoning": "WQTEQDCQQB decodes to 'yesterweek', modeled on 'yesterday'."
+  },
+  {
+    "question_id": "D4_8",
+    "answer": "tallcomings",
+    "reasoning": "EHUUJXRKGAT decodes to 'tallcomings', an antonymic overgeneralization from 'shortcomings'."
+  }
+]

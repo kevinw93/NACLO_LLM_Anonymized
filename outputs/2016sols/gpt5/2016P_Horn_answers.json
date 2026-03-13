@@ -1,0 +1,12 @@
+[
+  {
+    "question_id": "P1_1",
+    "answer": "S(xy) :- V(x), N(y).\nS(xyz) :- V(x), N(y), S(z).\nV(help).\nV(let).\nN(John).\nN(Kim).",
+    "reasoning": "The underlined English strings are sequences of one or more verb–name pairs like (help|let)(John|Kim). The first rule builds a single pair; the second rule recurses to add more pairs, generating all well-formed combinations."
+  },
+  {
+    "question_id": "P2_1",
+    "answer": "R(wy, xz) :- T(w, x), R(y, z).\nR(w, x) :- T(w, x).\nS(xy) :- R(x, y).\nT(em Hans, hälfe).\nT(em Jan, hälfe).\nT(de Hans, laa).\nT(de Jan, laa).\nT(em Hans, hälfed).\nT(em Jan, hälfed).\nT(de Hans, lönd).\nT(de Jan, lönd).",
+    "reasoning": "Swiss German shows cross-serial dependencies: each NP (case-marked) pairs with its selecting verb. T encodes these NP–verb pairs. R concatenates any number of such pairs while preserving their order on both sides; S then flattens the pair into a single string, yielding the observed NP block followed by the verb block and allowing mixes of hälfe/ laa (and their finite forms)."
+  }
+]

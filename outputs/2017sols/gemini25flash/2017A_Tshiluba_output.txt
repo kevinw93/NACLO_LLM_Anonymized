@@ -1,0 +1,92 @@
+Model: gemini-2.5-flash
+Generation Time: 31.39 seconds
+Timestamp: 2025-11-17 18:32:36
+================================================================================
+
+**Pattern Analysis:**
+
+1.  **Noun Classes and Prefixes:**
+    *   **Singular Human (`mu-` class):** `mukaji` (woman), `muluma` (man). The implicit root is `kaji` for woman and `luma` for man.
+    *   **Plural Human (`ba-` class):** `bakaji` (women), `baluma` (men). This confirms `ba-` as a plural prefix for `mu-` class nouns.
+    *   **"Person":** Based on `kamuntu` (small person) and `bantu` (people/A2 hint), `muntu` is likely "person". This fits the `mu-/ba-` pattern.
+    *   **Singular Animal/Object (Various):**
+        *   `mbwa` (dog), `ntambwe` (lion). These often start with `n-` or are simply the root form for their class.
+        *   `muana` (child). Starts with `mu-` but doesn't follow the `mu-/ba-` human pattern for number directly as `muana` seems to be its own singular form.
+    *   **Plural Animal/Object (Various):**
+        *   `bambuji` (goats), `banzolu` (chickens), `bantambwe` (lions). These use the `ba-` prefix for plural, similar to humans, but apply to animals.
+    *   **"Small" Prefix (`ka-/tu-`):**
+        *   `ka-` for singular small: `kanzolu` (small chicken), `kantambwe` (small lion), `kamuntu` (small person).
+        *   `tu-` for plural small: `tubambwa` (small dogs), `tubanzolu` (small chickens), `tubantambwe` (small lions), `tubakulu` (small adults).
+        *   This pattern suggests:
+            *   `ka-` replaces or precedes the singular prefix for "small" forms.
+            *   `tu-` replaces or precedes the plural prefix for "small" forms.
+
+2.  **Verb Structure and Agreement:**
+    *   The structure is typically `(Subject Prefix)vwa (Subject Prefix)(Verb Stem) (Object)`.
+    *   `uvwa mumona`: Used with `mu-` class singular subjects (`mukaji`, `muluma`) and `n-` class singular subjects (`mbwa`, `ntambwe`). The verb stem is `mona` (see).
+    *   `bavwa bamona`: Used with `ba-` class plural subjects (`bakaji`, `banzolu`).
+    *   `tuvwa tumona`: Used with `tu-` class plural-small subjects (`tubambwa`, `tubakulu`).
+    *   `kavwa kamona`: Used with `ka-` class singular-small subjects (`kanzolu`).
+    *   `kavwa kapeta`: Used with `ka-` class singular-small subjects (`kamuntu`). The verb stem is `peta` (find).
+
+3.  **Vocabulary Deduced/Confirmed:**
+    *   `mukaji` = woman, `bakaji` = women
+    *   `muluma` = man, `baluma` = men
+    *   `muntu` = person (derived), `bantu` = people (derived)
+    *   `muana` = child
+    *   `mbwa` = dog, `bambwa` = dogs (derived), `kambwa` = small dog (derived), `tubambwa` = small dogs
+    *   `ntambwe` = lion, `bantambwe` = lions, `kantambwe` = small lion, `tubantambwe` = small lions
+    *   `nzolu` = chicken (derived), `banzolu` = chickens, `kanzolu` = small chicken, `tubanzolu` = small chickens
+    *   `mumbuji` = goat (derived), `bambuji` = goats, `kambuji` = small goat (derived), `tubambuji` = small goats (derived)
+    *   `mukulu` = adult (derived), `bakulu` = adults (derived), `kakulu` = small adult (derived), `tubakulu` = small adults
+    *   `mona` = see (verb stem)
+    *   `peta` = find (verb stem)
+
+---
+
+**Solutions:**
+
+```json
+[
+  {
+    "question_id": "A1_a",
+    "answer": "mbwa",
+    "reasoning": "From the provided table, 'mbwa' is directly translated as 'The dog'."
+  },
+  {
+    "question_id": "A1_b",
+    "answer": "muluma uvwa mumona muana.",
+    "reasoning": "Subject: 'The man' is 'muluma' (singular, mu-class). Verb: 'saw' for a mu-class singular subject is 'uvwa mumona'. Object: 'the child' is 'muana'. Combining these gives 'muluma uvwa mumona muana'."
+  },
+  {
+    "question_id": "A1_c",
+    "answer": "nzolu uvwa mumona bambwa.",
+    "reasoning": "Subject: 'The chicken'. From 'banzolu' (chickens) and 'kanzolu' (small chicken), the singular 'chicken' is derived as 'nzolu' (n-class, like 'mbwa' or 'ntambwe'). Verb: 'saw' for an n-class singular subject is 'uvwa mumona'. Object: 'the dogs'. From 'mbwa' (dog) and 'tubambwa' (small dogs), the plural 'dogs' is derived as 'bambwa'. Combining these gives 'nzolu uvwa mumona bambwa'."
+  },
+  {
+    "question_id": "A1_d",
+    "answer": "mukulu uvwa kapeta mumbuji.",
+    "reasoning": "Subject: 'The adult'. From 'tubakulu' (small adults), the singular 'adult' is derived as 'mukulu' (mu-class). Verb: 'found' for a mu-class singular subject, following the 'uvwa mumona' pattern for mu-class subjects and 'kavwa kapeta' for the 'peta' verb, would be 'uvwa kapeta'. Object: 'the goat'. From 'bambuji' (goats), the singular 'goat' is derived as 'mumbuji' (mu-class, like 'muana'). Combining these gives 'mukulu uvwa kapeta mumbuji'."
+  },
+  {
+    "question_id": "A1_e",
+    "answer": "tubambuji tuvwa tapeta kaana.",
+    "reasoning": "Subject: 'The small goats'. 'Goats' are 'bambuji'. For 'small' and plural, the 'tu-' prefix is used, making it 'tubambuji' (tu-class plural). Verb: 'found' for a tu-class plural subject, following the 'tuvwa tumona' pattern for tu-class subjects and the 'peta' verb stem, would be 'tuvwa tapeta'. Object: 'the small child'. 'Child' is 'muana'. For 'small child', the 'mu-' prefix is replaced by 'ka-', resulting in 'kaana'. Combining these gives 'tubambuji tuvwa tapeta kaana'."
+  },
+  {
+    "question_id": "A2_1",
+    "answer": "people",
+    "reasoning": "From the noun class analysis, 'muntu' (derived) means 'person' (singular, mu-class) and 'bantu' (derived and used in the question context) means 'people' (plural, ba-class). The prefix 'ba-' typically denotes plural for human nouns in Tshiluba."
+  },
+  {
+    "question_id": "A3_a",
+    "answer": "The fruit saw the lion.",
+    "reasoning": "The new word 'cimuma' is 'fruit' (singular, ci-class). The verb 'civwa cimona' follows the pattern 'subject_prefix + vwa + subject_prefix + mona' for 'saw', indicating a ci-class singular subject. 'ntambwe' is 'the lion'. Therefore, 'cimuma civwa cimona ntambwe' translates to 'The fruit saw the lion'."
+  },
+  {
+    "question_id": "A3_b",
+    "answer": "The lion saw the small fruits.",
+    "reasoning": "'ntambwe' is 'the lion' (n-class singular). 'uvwa mumona' is the correct form of 'saw' for an n-class singular subject. 'bimuma' is 'fruits' (plural). The prefix 'tu-' indicates 'small' and plural when combined with another prefix, as seen in 'tubanzolu' (small chickens) or 'tubantambwe' (small lions). Therefore, 'tubimuma' means 'small fruits'. Combining these gives 'The lion saw the small fruits'."
+  }
+]
+```

@@ -1,0 +1,97 @@
+Model: claude-opus-4-20250514
+Generation Time: 45.23 seconds
+Timestamp: 2026-02-03 19:52:39
+================================================================================
+
+Looking at this Niuean language problem, I need to analyze the given sentences to understand the grammar patterns and then complete the translation tasks.
+
+Let me start by examining the data systematically:
+
+**Analyzing the vocabulary:**
+From the given sentences, I can identify:
+- kua = present perfect marker (have/has)
+- kai = eat/eaten
+- noa = only
+- fai = have/had
+- fakatino = draw/drawing
+- foki = also
+- ne = past tense marker
+- tā = plural marker for "there"
+- muhu = plenty/always
+- moa = bird(s)
+- tūmau = always
+- faiaoga = teacher(s)
+- kāmuta = carpenter(s)
+- kitia = see/seen
+- to = future marker (will)
+- holohole = wash/washed
+- ika = fish
+- totou = read
+- Sione/Mele = proper names (Sione/Mele)
+- takafaga = catch/caught
+- tama = child/children
+- vaka = canoe(s)
+
+**Key grammar patterns observed:**
+1. VSO word order (Verb-Subject-Object)
+2. Tense markers: kua (present perfect), ne (past), to (future)
+3. "muhu" can mean both "plenty" and "always"
+4. "tā" appears to be a plural existential marker
+5. Relative clauses follow the noun they modify
+
+**Q1. Translating sentences to English:**
+
+(a) Fai moa noa.
+- have/had + bird(s) + only
+- "There are only birds." or "There have only been birds."
+
+(b) Kua holohole foki he faiaoga ne takafaga e au a ia.
+- have + wash + also + the + teacher + past + catch + by + I + (object marker) + it
+- "The teacher that I caught has also washed." or "The teacher that I caught will also wash."
+
+(c) To muhu vaka e tama ka holohole he moa.
+- will + plenty + canoe + (subject marker) + child + when + wash + the + bird
+- Two interpretations for "muhu":
+  1. "The child will have plenty of canoes when the bird washes."
+  2. "The child will always have canoes when the bird washes."
+
+**Q2. Translating sentences to Niuean:**
+
+(a) He will also read.
+- To totou foki a ia.
+
+(b) Sione has only had fish that the teacher will eat.
+- Kua fai noa ika a Sione ka kai he faiaoga.
+
+(c) The teacher that Mele saw built the canoe.
+- Ne faiaoga ne kitia e Mele fai e vaka.
+
+(d) There have always been plenty of carpenters.
+- Tā tūmau muhu kāmuta.
+
+**Q3. Observations about Niuean grammar:**
+Based on the data, Niuean exhibits:
+- VSO word order
+- Tense markers that precede the verb
+- No articles like "a" or "the" 
+- Relative clauses that follow the noun without relative pronouns
+- Multiple meanings for certain words (like "muhu")
+- A distinction between existential constructions and regular sentences
+
+Here are my final answers:
+
+```json
+[
+  {"question_id": "Q1_1a", "answer": "There are only birds.", "reasoning": "Fai = have/had, moa = bird(s), noa = only. This appears to be an existential construction."},
+  {"question_id": "Q1_1b", "answer": "There have only been birds.", "reasoning": "Alternative translation for the same sentence, emphasizing the perfect aspect that could be implied."},
+  {"question_id": "Q1_2a", "answer": "The teacher that I caught has also washed.", "reasoning": "Kua = present perfect, holohole = wash, foki = also, he faiaoga = the teacher, ne takafaga e au = that I caught."},
+  {"question_id": "Q1_2b", "answer": "The teacher that I caught will also wash.", "reasoning": "Alternative interpretation where the washing is a future action relative to the catching."},
+  {"question_id": "Q1_3a", "answer": "The child will have plenty of canoes when the bird washes.", "reasoning": "To = will, muhu = plenty, vaka = canoe(s), e tama = the child, ka = when, holohole = wash, he moa = the bird."},
+  {"question_id": "Q1_3b", "answer": "The child will always have canoes when the bird washes.", "reasoning": "Alternative translation where muhu = always instead of plenty."},
+  {"question_id": "Q2_1", "answer": "To totou foki a ia", "reasoning": "To = will, totou = read (from sentence 7), foki = also, a ia = he (subject marker + pronoun)."},
+  {"question_id": "Q2_2", "answer": "Kua fai noa ika a Sione ka kai he faiaoga", "reasoning": "Kua = has, fai = had, noa = only, ika = fish, a Sione = Sione (subject), ka = that (relative), kai = eat, he faiaoga = the teacher."},
+  {"question_id": "Q2_3", "answer": "Ne faiaoga ne kitia e Mele fai e vaka", "reasoning": "Ne = past marker, faiaoga = teacher, ne kitia e Mele = that Mele saw, fai = built, e vaka = the canoe."},
+  {"question_id": "Q2_4", "answer": "Tā tūmau muhu kāmuta", "reasoning": "Tā = there (existential plural), tūmau = always, muhu = plenty of, kāmuta = carpenters."},
+  {"question_id": "Q3_1", "answer": "Niuean uses VSO (Verb-Subject-Object) word order. Tense markers (kua for present perfect, ne for past, to for future) precede the verb. There are no definite or indefinite articles. Relative clauses follow the noun they modify without using relative pronouns like 'that' or 'who'. The language uses particles to mark grammatical relationships. Some words like 'muhu' have multiple meanings (plenty/always). Existential constructions use special markers like 'tā' for plural existence.", "reasoning": "This summarizes the key grammatical patterns observed in the data."}
+]
+```

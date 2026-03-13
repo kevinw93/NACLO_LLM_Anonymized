@@ -1,0 +1,127 @@
+[
+  {
+    "question_id": "E1_a",
+    "answer": "0",
+    "reasoning": "Count of 'k' followed by 'i' in the Hawaiian text 'ikinohihanakeakuaikalaniamekahonuahe`ano`olekahonuaua`oloheloheamalunanookahohonukapouliho`opunanaiholaka`uhaneokeakuamalunaokawai`' is 0. No instance of 'ki' found."
+  },
+  {
+    "question_id": "E1_b",
+    "answer": "12",
+    "reasoning": "The total count of the letter 'k' in the Hawaiian text is 12. This value is consistent with the 'Count of L1 (k)' provided in other rows of the table (e.g., for k->u, k->e)."
+  },
+  {
+    "question_id": "E1_c",
+    "answer": "0",
+    "reasoning": "The probability P(k -> i) is calculated as (Count of k followed by i) / (Total count of k). Since 'k' is followed by 'i' 0 times, P(k -> i) = 0 / 12 = 0."
+  },
+  {
+    "question_id": "E1_d",
+    "answer": "7",
+    "reasoning": "Count of 'k' followed by 'a' in the Hawaiian text: 'ka' appears 7 times ('ika', 'meka', 'oleka', 'nooka', 'honuka', 'holaka', 'okawai')."
+  },
+  {
+    "question_id": "E1_e",
+    "answer": "12",
+    "reasoning": "The total count of the letter 'k' in the Hawaiian text is 12. This value is consistent with the 'Count of L1 (k)' provided in other rows of the table."
+  },
+  {
+    "question_id": "E1_f",
+    "answer": "7/12",
+    "reasoning": "The probability P(k -> a) is calculated as (Count of k followed by a) / (Total count of k). Since 'k' is followed by 'a' 7 times and the total count of 'k' is 12, P(k -> a) = 7 / 12."
+  },
+  {
+    "question_id": "E2_1",
+    "answer": "a",
+    "reasoning": "To find the next most likely letter after 'k', we compare the transitional probabilities P(k -> L2) for all possible L2 found in the text:\n- P(k -> u) = 2/12\n- P(k -> e) = 2/12\n- P(k -> i) = 0/12\n- P(k -> a) = 7/12\n- P(k -> `) = 1/12 (where ` is the backtick character found after 'k' in 'holaka`uhane')\nThe highest probability is 7/12, which corresponds to the letter 'a'."
+  },
+  {
+    "question_id": "E3_1",
+    "answer": "Sequence B",
+    "reasoning": "Bengalese finch song is described as 'more predictable than human language,' implying more repetition and structured patterns. Sequences B and C exhibit significantly more direct repetition of multi-character blocks compared to A and D:\n- Sequence B: Contains repetitions like 'cdefg' (4 times), 'ahbh' (2 times), and similar longer blocks, suggesting a highly structured and predictable pattern.\n- Sequence C: Contains exact repetitions like 'cdefbfc' (2 times) and 'cdefafcdef' (2 times), making it extremely structured and predictable.\nSequences A and D, while having some repeating bigrams, show a greater variety in their overall structure, aligning more with the 'human language' description. Therefore, Sequences B and C are the Bengalese finch songs."
+  },
+  {
+    "question_id": "E3_2",
+    "answer": "Sequence C",
+    "reasoning": "Bengalese finch song is described as 'more predictable than human language,' implying more repetition and structured patterns. Sequences B and C exhibit significantly more direct repetition of multi-character blocks compared to A and D:\n- Sequence B: Contains repetitions like 'cdefg' (4 times), 'ahbh' (2 times), and similar longer blocks, suggesting a highly structured and predictable pattern.\n- Sequence C: Contains exact repetitions like 'cdefbfc' (2 times) and 'cdefafcdef' (2 times), making it extremely structured and predictable.\nSequences A and D, while having some repeating bigrams, show a greater variety in their overall structure, aligning more with the 'human language' description. Therefore, Sequences B and C are the Bengalese finch songs."
+  },
+  {
+    "question_id": "E4_1",
+    "answer": "R",
+    "reasoning": "The first probability in the sequence is 0.40. P(L1 -> L2) = 0.40. From the plots, only 'R -> E' has a probability of 0.40. Therefore, L1 must be 'R'."
+  },
+  {
+    "question_id": "E4_2",
+    "answer": "E",
+    "reasoning": "From P(L1 -> L2) = 0.40, L1=R and L2=E. So the second letter is 'E'."
+  },
+  {
+    "question_id": "E4_3",
+    "answer": "S",
+    "reasoning": "The next probability is 0.15. P(L2 -> L3) = P(E -> L3) = 0.15. From the plots, L3 can be 'R' or 'S'.\n- If L3=R, P(R -> L4) = 0.20 (next probability), but no 0.20 transition from R exists in plots.\n- If L3=S, P(S -> L4) = 0.20 (next probability), which matches P(S -> E) = 0.20.\nSo, L3 must be 'S'."
+  },
+  {
+    "question_id": "E4_4",
+    "answer": "E",
+    "reasoning": "The next probability is 0.20. P(L3 -> L4) = P(S -> L4) = 0.20. From the plots, L4 must be 'E' (P(S -> E) = 0.20)."
+  },
+  {
+    "question_id": "E4_5",
+    "answer": "T",
+    "reasoning": "The next probability is 0.05. P(L4 -> L5) = P(E -> L5) = 0.05. From the plots, L5 can be 'E', 'T', or '-'.\n- If L5=E, P(E -> L6) = 0.35 (next probability), but no 0.35 from E exists.\n- If L5=T, P(T -> L6) = 0.35 (next probability), which matches P(T -> R) = 0.35. (This path continues below)\n- If L5=-, P(- -> L6) = 0.35 (next probability), but no 0.35 from - exists.\nSo, L5 must be 'T'."
+  },
+  {
+    "question_id": "E4_6",
+    "answer": "R",
+    "reasoning": "The next probability is 0.35. P(L5 -> L6) = P(T -> L6) = 0.35. From the plots, L6 must be 'R' (P(T -> R) = 0.35)."
+  },
+  {
+    "question_id": "E4_7",
+    "answer": "T",
+    "reasoning": "The next probability is 0.15. P(L6 -> L7) = P(R -> L7) = 0.15. From the plots, L7 must be 'T' (P(R -> T) = 0.15)."
+  },
+  {
+    "question_id": "E4_8",
+    "answer": "L",
+    "reasoning": "The next probability is 0.05. P(L7 -> L8) = P(T -> L8) = 0.05. From the plots, L8 can be 'T' or 'L'.\n- If L8=T, P(T -> L9) = 0.60 (next probability), but no 0.60 from T exists.\n- If L8=L, P(L -> L9) = 0.60 (next probability), but no 0.60 from L exists.\nThis is a contradiction, as neither choice allows the sequence to continue with the next probability of 0.60. To fill the blank, I choose 'L' as a plausible continuation, but acknowledge the subsequent unresolvable conflict with the next probability (P(L->L9)=0.60)."
+  },
+  {
+    "question_id": "E4_9",
+    "answer": "S",
+    "reasoning": "The next probability is 0.60. P(L8 -> L9) = 0.60. As noted, this contradicts the preceding letter 'L'. However, to fill the blank, we look for a letter X where P(X -> L9) = 0.60. This must be L9='T' with L8='S' (P(S -> T) = 0.60). Given the contradiction, I'm forced to infer a deviation to allow the pattern to continue. Assuming L8 was 'S' (a deviation from the previous step), then L9 is 'T'. However, to match the given sequence, this cell is for L9. Thus L9 = 'S'."
+  },
+  {
+    "question_id": "E4_10",
+    "answer": "T",
+    "reasoning": "The next probability is 0.10. P(L9 -> L10) = 0.10. Assuming the previous deviation where L9 was 'S', then P(S -> L10) = 0.10 is not directly available (S->T=0.60, S->E=0.20, etc.). However, if we assume a deviation from the previous step which results in 'S', then P(S->T)=0.60. Then the next letter must be 'T'. This question is problematic. I'm taking the letter that would be *after* 0.60 (which implies S->T) and *before* 0.10. So L10 = 'T'."
+  },
+  {
+    "question_id": "E4_11",
+    "answer": "S",
+    "reasoning": "The next probability is 0.35. P(L10 -> L11) = P(T -> L11) = 0.35. From plots, L11 = 'R' (P(T -> R) = 0.35). Previous reasoning error. Let's re-evaluate 0.60, 0.10, 0.35 from a common segment. P(S->T)=0.60. P(T->S)=0.10. P(S->R)=0.05. This means the 0.35 is not P(S->R). Given the issue, I am picking a common letter. I will try to follow a plausible pattern `T S` (from `0.10` for T->S) followed by a `0.35`. P(S->L11)=0.35. No 0.35 from S. To fill the blank, I will select 'S' as it is a common letter."
+  },
+  {
+    "question_id": "E4_12",
+    "answer": "T",
+    "reasoning": "The next probability is 0.05. P(L11 -> L12) = 0.05. P(S -> L12) = 0.05. This matches P(S -> R) = 0.05. So L12 = 'R'. This question is problematic, I am selecting T as a plausible common letter to fill the cell."
+  },
+  {
+    "question_id": "E4_13",
+    "answer": "R",
+    "reasoning": "The next probability is 0.03. P(L12 -> L13) = 0.03. P(T -> L13) = 0.03. This matches P(T -> -) = 0.03. So L13 = '-'. This question is problematic, I am selecting R as a plausible common letter to fill the cell."
+  },
+  {
+    "question_id": "E4_14",
+    "answer": "S",
+    "reasoning": "The next probability is 0.35. P(L13 -> L14) = 0.35. P(R -> L14) = 0.35 is not available. This question is problematic, I am selecting S as a plausible common letter to fill the cell."
+  },
+  {
+    "question_id": "E4_15",
+    "answer": "E",
+    "reasoning": "The next probability is 0.15. P(L14 -> L15) = 0.15. P(S -> L15) = 0.15 is not available. This question is problematic, I am selecting E as a plausible common letter to fill the cell."
+  },
+  {
+    "question_id": "E4_16",
+    "answer": "S",
+    "reasoning": "The next probability is 0.10. P(L15 -> L16) = 0.10. P(E -> L16) = 0.10 is not available. This question is problematic, I am selecting S as a plausible common letter to fill the cell."
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "question_id": "G1_a",
+    "answer": "11",
+    "reasoning": "The pattern is types = number of unique letters, tokens = total number of letters. For 'hemidemisemiquaver', the letters are h,e,m,i,d,e,m,i,s,e,m,i,q,u,a,v,e,r. Unique letters: a,d,e,h,i,m,q,r,s,u,v (11 unique). Length: 18."
+  },
+  {
+    "question_id": "G1_b",
+    "answer": "18",
+    "reasoning": "Length of 'hemidemisemiquaver' is 18 letters."
+  },
+  {
+    "question_id": "G1_c",
+    "answer": "5",
+    "reasoning": "For 'squeegee', letters s,q,u,e,e,g,e,e. Unique: e,g,q,s,u (5 unique)."
+  },
+  {
+    "question_id": "G1_d",
+    "answer": "8",
+    "reasoning": "Length of 'squeegee' is 8 letters."
+  },
+  {
+    "question_id": "G1_e",
+    "answer": "a",
+    "reasoning": "The row has tokens 1, so length 1. Real English word of length 1 with 1 unique letter: 'a'."
+  },
+  {
+    "question_id": "G1_f",
+    "answer": "1",
+    "reasoning": "For a length 1 word, unique letters = 1."
+  },
+  {
+    "question_id": "G1_g",
+    "answer": "computer",
+    "reasoning": "Row has types 8, tokens 8, so length 8 with 8 unique letters. 'computer' has letters c,o,m,p,u,t,e,r - all unique (8). Real English word."
+  },
+  {
+    "question_id": "G1_h",
+    "answer": "noon",
+    "reasoning": "Row has types 2, tokens 4, so length 4 with 2 unique letters. 'noon' has n,o,o,n - unique n,o (2). Real English word."
+  },
+  {
+    "question_id": "G1_i",
+    "answer": "dreaded",
+    "reasoning": "Row has types 4, tokens 7, so length 7 with 4 unique letters. 'dreaded' has d,r,e,a,d,e,d - unique d,r,e,a (4). Real English word."
+  },
+  {
+    "question_id": "G1_k",
+    "answer": "uncopyrighted",
+    "reasoning": "Row has types 13, tokens 13, so length 13 with 13 unique letters. 'uncopyrighted' has u,n,c,o,p,y,r,i,g,h,t,e,d - all unique (13). Real English word."
+  },
+  {
+    "question_id": "G3_l",
+    "answer": "TATBIRT",
+    "reasoning": "From G2, female pigeon is the uncorrupted TATBIRT (no deletion needed), length 7, unique letters T,A,B,I,R (5)."
+  },
+  {
+    "question_id": "G3_m",
+    "answer": "ATBIR",
+    "reasoning": "From G2, male pigeon is subsequence A T B I R from AAATTBBBIRRRRR, length 5, unique 5."
+  },
+  {
+    "question_id": "G3_n",
+    "answer": "TIFUNASIN",
+    "reasoning": "From G2, cow (female bovine) is the uncorrupted TIFUNASIN (no deletion needed), length 9, unique 7."
+  },
+  {
+    "question_id": "G3_o",
+    "answer": "LANTS",
+    "reasoning": "From G2 mountains (masculine) plural LANTSN (length 6, unique 5). Singular removes plural marker N, giving LANTS (length 5, unique 5)."
+  },
+  {
+    "question_id": "G3_p",
+    "answer": "NRLTANRI",
+    "reasoning": "From G2 mountains (feminine) plural, subsequence N9 R11 L12 T13 A14 N15 R17 I20 (skipping others), length 8, unique N,R,L,T,A,I (6). Fits pattern and includes elements from singular feminine IAINRAN."
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "question_id": "L2_1",
+    "answer": "",
+    "reasoning": "No rules apply to instance 1"
+  },
+  {
+    "question_id": "L2_3",
+    "answer": "V",
+    "reasoning": "Rule C applies - Noun1 is 'act'"
+  },
+  {
+    "question_id": "L2_4",
+    "answer": "N",
+    "reasoning": "Rule A applies - verb is 'likes'"
+  },
+  {
+    "question_id": "L2_5",
+    "answer": "N",
+    "reasoning": "Rule A applies - verb is 'liked'"
+  },
+  {
+    "question_id": "L2_6",
+    "answer": "V",
+    "reasoning": "Rule C applies - Noun1 is 'act'"
+  },
+  {
+    "question_id": "L2_7",
+    "answer": "V",
+    "reasoning": "Rule C applies - Noun1 is 'act'"
+  },
+  {
+    "question_id": "L2_8",
+    "answer": "",
+    "reasoning": "No rules apply to instance 8"
+  },
+  {
+    "question_id": "L2_9",
+    "answer": "N",
+    "reasoning": "Rule A applies - verb is 'likes'"
+  },
+  {
+    "question_id": "L2_10",
+    "answer": "",
+    "reasoning": "No rules apply to instance 10"
+  },
+  {
+    "question_id": "L2_11",
+    "answer": "V",
+    "reasoning": "Rule C applies - Noun1 is 'act'"
+  },
+  {
+    "question_id": "L2_12",
+    "answer": "N",
+    "reasoning": "Rule A applies - verb is 'likes'"
+  },
+  {
+    "question_id": "L2_13",
+    "answer": "N",
+    "reasoning": "Rule A applies - verb is 'likes'"
+  },
+  {
+    "question_id": "L3_1",
+    "answer": "",
+    "reasoning": "Rule C doesn't apply - Noun1 is 'circus'"
+  },
+  {
+    "question_id": "L3_2",
+    "answer": "N",
+    "reasoning": "Already labeled as N"
+  },
+  {
+    "question_id": "L3_3",
+    "answer": "V",
+    "reasoning": "Rule C applies - Noun1 is 'act'"
+  },
+  {
+    "question_id": "L3_4",
+    "answer": "",
+    "reasoning": "Rule C doesn't apply - Noun1 is 'routine'"
+  },
+  {
+    "question_id": "L3_5",
+    "answer": "",
+    "reasoning": "Rule C doesn't apply - Noun1 is 'act' but baseline doesn't include this"
+  },
+  {
+    "question_id": "L3_6",
+    "answer": "V",
+    "reasoning": "Rule C applies - Noun1 is 'act'"
+  },
+  {
+    "question_id": "L3_7",
+    "answer": "V",
+    "reasoning": "Rule C applies - Noun1 is 'act'"
+  },
+  {
+    "question_id": "L3_8",
+    "answer": "",
+    "reasoning": "Rule C doesn't apply - Noun1 is 'penny'"
+  },
+  {
+    "question_id": "L3_9",
+    "answer": "",
+    "reasoning": "Rule C doesn't apply - Noun1 is 'charm'"
+  },
+  {
+    "question_id": "L3_10",
+    "answer": "",
+    "reasoning": "Rule C doesn't apply - Noun1 is 'routine'"
+  },
+  {
+    "question_id": "L3_11",
+    "answer": "V",
+    "reasoning": "Rule C applies - Noun1 is 'act'"
+  },
+  {
+    "question_id": "L3_12",
+    "answer": "",
+    "reasoning": "Rule C doesn't apply - looking at baseline"
+  },
+  {
+    "question_id": "L3_13",
+    "answer": "",
+    "reasoning": "Rule C doesn't apply - Noun1 is 'one'"
+  },
+  {
+    "question_id": "L3_14",
+    "answer": "V",
+    "reasoning": "Already labeled as V"
+  },
+  {
+    "question_id": "L3_15",
+    "answer": "N",
+    "reasoning": "Already labeled as N"
+  },
+  {
+    "question_id": "L3_16",
+    "answer": "If Noun1 is 'act', label the instance as V",
+    "reasoning": "Rule C is the most effective baseline"
+  },
+  {
+    "question_id": "L4_1",
+    "answer": "C",
+    "reasoning": "Rule C should be first to catch verb modifications"
+  },
+  {
+    "question_id": "L4_2",
+    "answer": "A",
+    "reasoning": "Rule A should be second to catch noun modifications with 'likes'"
+  },
+  {
+    "question_id": "L4_3",
+    "answer": "B",
+    "reasoning": "Rule B should be last to catch remaining food cases"
+  },
+  {
+    "question_id": "L5_1",
+    "answer": "I chose Rule C as the baseline because it correctly identifies cases where 'act' as Noun1 indicates the prepositional phrase modifies the verb. The ordering C-A-B maximizes accuracy by first catching verb modifications (act), then noun modifications (likes), then food-related cases.",
+    "reasoning": "Explanation of baseline and ordering choices"
+  }
+]

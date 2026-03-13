@@ -1,0 +1,62 @@
+Model: grok-4-fast-reasoning
+Generation Time: 223.09 seconds
+Timestamp: 2026-02-03 21:25:01
+================================================================================
+
+[
+  {
+    "question_id": "D1_1",
+    "answer": "B",
+    "reasoning": "For the three test runs in D1, analyze the categories of the source and target words using the color table. For A (Tlapane c minuu {plum, ocean} to Matsés umu {sky, ocean}), overlap on ocean, possible direct. For B (Yakan item {crow} to Guambiano chiga {grass}), no overlap (black to green), requires pivot. For C (Hebrew kahol {ocean} to Teribe dindin {plum, sky, ocean}), overlap on ocean, possible direct. Thus, only B requires a pivot. Possible pivots for B are languages grouping grass and crow (Bassa, Bété, Ejagham)."
+  },
+  {
+    "question_id": "D1_2",
+    "answer": "Bassa",
+    "reasoning": "One possible pivot for test run B is Bassa, as it uses 'hui' for both grass and crow, bridging black (crow) to green (grass)."
+  },
+  {
+    "question_id": "D2_a",
+    "answer": "blue black",
+    "reasoning": "paban in Tsa fiki covers deep ocean (blue) and adult crow (black). Direct translation produces English terms for those objects: blue and black."
+  },
+  {
+    "question_id": "D2_b",
+    "answer": "yellow green blue black",
+    "reasoning": "With Karaja pivot, paban {ocean, crow} maps to 'tyre' (overlaps ocean; covers banana yellow, grass green, sky/ocean blue) or 'ilyby' (overlaps crow; black). Thus, possible English outputs: yellow, green, blue, black."
+  },
+  {
+    "question_id": "D2_c",
+    "answer": "Bassa Bété Ejagham",
+    "reasoning": "The pivots producing exactly green, blue, black (no others like yellow/purple) are those merging grass (green) with crow (black) and ocean/sky (blue) without fruits (purple/red/yellow). Bassa, Bété, Ejagham use one term for grass, sky, ocean, crow (and more in Bassa/Bété, but core match; wait, actually refined: these merge G and C, enabling green from black via pivot, with blue from ocean)."
+  },
+  {
+    "question_id": "D3_1",
+    "answer": "C",
+    "reasoning": "Test run 1 (Guambiano piguiğ {plum, strawberry} to Tlapane c skuni {crow}): categories {P,S} and {C} no overlap. Pivot bridges if term covers some {P,S} and C. Only Bassa and Bété do; later assigned Bassa to 5, so Bété (C)."
+  },
+  {
+    "question_id": "D3_2",
+    "answer": "D",
+    "reasoning": "Test run 2 (Tlapane c minuu {plum, ocean} to Amuzgo tsa {sky}): {P,O} and {K} no overlap. Pivot bridges if term covers some {P,O} and K. English 'blue' covers O and K. Assignments: others taken, so English (D)."
+  },
+  {
+    "question_id": "D3_3",
+    "answer": "F",
+    "reasoning": "Test run 3 (Seri k' el {plum, strawberry} to Yakan taluk {plum}): {P,S} and {P} overlap, but pivot used. Tsa fiki 'luban' covers {P,S}, bridges to {P}. Last option, fits."
+  },
+  {
+    "question_id": "D3_4",
+    "answer": "E",
+    "reasoning": "Test run 4 (Matsés pių {plum, strawberry, banana} to Seri ko'il {grass, sky, ocean}): {P,S,B} and {G,K,O} no overlap. Pivot bridges if term covers some fruit and some {G,K,O}. Teribe 'dindin' covers P, K, O. Assignments: others taken, so Teribe (E)."
+  },
+  {
+    "question_id": "D3_5",
+    "answer": "B",
+    "reasoning": "Test run 5 (Amuzgo cajan {banana} to Matsés ushu {snow}): {B} and {N} no overlap. Pivot bridges if term covers B and N. Only Bassa 'ziza' does."
+  },
+  {
+    "question_id": "D3_6",
+    "answer": "A",
+    "reasoning": "Test run 6 (Yakan gadlung {grass} to Guambiano piguiğ {plum, strawberry}): {G} and {P,S} no overlap. Pivot bridges if term covers G and some {P,S}. Apinaye 'grägrä' covers G and P. Assignments: others taken, so Apinaye (A)."
+  }
+]

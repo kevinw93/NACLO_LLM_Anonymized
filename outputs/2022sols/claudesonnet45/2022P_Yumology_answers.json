@@ -1,0 +1,112 @@
+[
+  {
+    "question_id": "P1_1",
+    "answer": "baked",
+    "reasoning": "E12 has facets including E0310 which appears to indicate a baked or whole preparation method based on the classification charts"
+  },
+  {
+    "question_id": "P1_2",
+    "answer": "raw",
+    "reasoning": "E13 has E0151 and F0013, comparing with similar items suggests a raw preparation"
+  },
+  {
+    "question_id": "P2_1",
+    "answer": "2400",
+    "reasoning": "Y7 facets B1423; C0140; E1152; F0001 exactly match E10 (Beetroot powder) which has K=2400"
+  },
+  {
+    "question_id": "P2_2",
+    "answer": "107",
+    "reasoning": "Y8 facets B1245; C0121; E0151; F0013 closely match apple-based items, suggesting K=107"
+  },
+  {
+    "question_id": "P2_3",
+    "answer": "209",
+    "reasoning": "Y9 facets B2530; C0126; E0215; F0013 suggest a canned purée similar to E11, K=209"
+  },
+  {
+    "question_id": "P3_1",
+    "answer": "The algorithm matches YUM foods to EL foods based on their four facet codes (B, C, E, F), then uses the K value from the matching EL food entry.",
+    "reasoning": "By comparing facet patterns between databases, foods with identical or similar facet combinations are matched and their K values transferred"
+  },
+  {
+    "question_id": "P4_1",
+    "answer": "Food type/source",
+    "reasoning": "B codes represent the base food item (B1245=Apple, B1530=Coconut, B1423=Beet, etc.)"
+  },
+  {
+    "question_id": "P4_2",
+    "answer": "Processing method",
+    "reasoning": "C codes represent how the food is processed (canning, drying, etc.)"
+  },
+  {
+    "question_id": "P4_3",
+    "answer": "Form/state",
+    "reasoning": "E codes represent the physical form or state of the food (powder, whole, rings, etc.)"
+  },
+  {
+    "question_id": "P4_4",
+    "answer": "Additional preparation details",
+    "reasoning": "A codes appear to be supplementary classification for dietary or preparation categories"
+  },
+  {
+    "question_id": "P5_1",
+    "answer": "Apple",
+    "reasoning": "B1245 appears with apple products in the EL FDC"
+  },
+  {
+    "question_id": "P5_2",
+    "answer": "Coconut",
+    "reasoning": "B1530 appears with coconut water in E09"
+  },
+  {
+    "question_id": "P5_3",
+    "answer": "Vegetable processing",
+    "reasoning": "C0240 appears in the vegetable section of the classification chart"
+  },
+  {
+    "question_id": "P5_4",
+    "answer": "Whole or baked",
+    "reasoning": "E0310 appears with whole/baked preparations in the chart"
+  },
+  {
+    "question_id": "P5_5",
+    "answer": "Cooked",
+    "reasoning": "F0013 consistently appears with cooked items throughout the database"
+  },
+  {
+    "question_id": "P5_6",
+    "answer": "Raw",
+    "reasoning": "F0001 appears with raw items like beet greens and beetroot powder"
+  },
+  {
+    "question_id": "P6_1",
+    "answer": "Flour",
+    "reasoning": "B1438 appears alone in the classification chart, suggesting a basic baking ingredient"
+  },
+  {
+    "question_id": "P7_1",
+    "answer": "Apple, raw, sliced",
+    "reasoning": "Y4 has B1245 (apple), C0126 (processed), E0133, F0003 (raw)"
+  },
+  {
+    "question_id": "P7_2",
+    "answer": "Squash, cooked, mashed",
+    "reasoning": "Y5 has B1430, C0120 (cooked preparation), E0215 (purée/mashed), F0013 (cooked)"
+  },
+  {
+    "question_id": "P7_3",
+    "answer": "Squash, cooked, baked",
+    "reasoning": "Y6 has B1430, C0120, E0310 (whole/baked), F0013 (cooked)"
+  },
+  {
+    "question_id": "P7_4",
+    "answer": "Squash, canned, mashed",
+    "reasoning": "Y9 has B2530, C0126 (canned), E0215 (mashed), F0013 (cooked)"
+  },
+  {
+    "question_id": "P8_1",
+    "answer": "Less accurate. The extra facet provides broader categorization that doesn't directly affect nutrient content, and including it would over-constrain matching, preventing good nutritional matches between foods that differ only in this supplementary classification.",
+    "reasoning": "The A codes appear to be general dietary categories rather than specific nutritional determinants, so requiring them to match would reduce the pool of potential matches without improving nutritional accuracy"
+  }
+]

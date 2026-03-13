@@ -1,0 +1,112 @@
+[
+  {
+    "question_id": "G1_1",
+    "answer": "The unfilled circle",
+    "reasoning": "The utterance is 'circle'. In the given set {filled circle, unfilled circle, unfilled square}, this word is ambiguous as it could refer to either the filled or unfilled circle. According to Rational Speech Acts theory, a rational listener (Selectrix) will reason about what the speaker (Describo) could have said. To refer to the filled circle, Describo could have used the utterance 'filled'. This is a cost-1 utterance (same as 'circle') and is completely unambiguous, as there is only one filled shape. Since the rational speaker chose not to use the clear and equally cheap option 'filled', they must not be referring to the filled circle. Therefore, by elimination, the utterance 'circle' must refer to the other possible option, the unfilled circle."
+  },
+  {
+    "question_id": "G2_1",
+    "answer": "5",
+    "reasoning": "The first shape is the Filled Triangle. The word 'triangle' is a cost-1 descriptor that uniquely identifies this shape, as it is the only triangle in the set. Therefore, 'triangle' (5) is the most efficient and understandable description."
+  },
+  {
+    "question_id": "G2_2",
+    "answer": "1",
+    "reasoning": "The second shape is the Filled Circle. A rational system of descriptions is needed. 'triangle' (5) describes the Filled Triangle and 'square' (6) will describe the Filled Square (see G2_6). Therefore, the utterance 'filled' applies to {Filled Triangle, Filled Circle, Filled Square}, but since the listener knows the other two would be called 'triangle' and 'square', 'filled' (1) uniquely identifies the Filled Circle by elimination."
+  },
+  {
+    "question_id": "G2_3",
+    "answer": "4",
+    "reasoning": "The third shape is the Unfilled Circle. The utterance 'circle' applies to the Filled Circle and the Unfilled Circle. Based on the reasoning for G2_2, the Filled Circle is best described as 'filled'. Therefore, a listener hearing 'circle' (4) can infer by elimination that it must refer to the Unfilled Circle."
+  },
+  {
+    "question_id": "G2_4",
+    "answer": "10",
+    "reasoning": "The fourth shape is the Unfilled Square. Simple cost-1 descriptors like 'unfilled' (ambiguous with Unfilled Circle) and 'square' (ambiguous with other squares) are not clear. Therefore, the unambiguous cost-2 description 'unfilled square' (10) is necessary to ensure it is understood."
+  },
+  {
+    "question_id": "G2_5",
+    "answer": "3",
+    "reasoning": "The fifth shape is the Striped Square. The word 'striped' is a cost-1 descriptor that uniquely identifies this shape, as it is the only striped object in the set. Therefore, 'striped' (3) is the most efficient and understandable description."
+  },
+  {
+    "question_id": "G2_6",
+    "answer": "6",
+    "reasoning": "The sixth shape is the Filled Square. There is no 'filled square' option. We must use pragmatic inference. The utterance 'square' applies to {Unfilled Square, Striped Square, Filled Square}. The listener knows the Striped Square would be called 'striped' (3) and the Unfilled Square would be called 'unfilled square' (10) for clarity. Therefore, by elimination, the simple utterance 'square' (6) must refer to the Filled Square."
+  },
+  {
+    "question_id": "G3_1",
+    "answer": "10",
+    "reasoning": "This is a Filled Triangle. The cost-1 word 'triangle' is ambiguous (there is also an Unfilled Triangle) and 'filled' is ambiguous (there is also a Filled Square). Therefore, the lowest-cost, unambiguous description is the two-word phrase 'filled triangle' (10)."
+  },
+  {
+    "question_id": "G3_2",
+    "answer": "11",
+    "reasoning": "This is an Unfilled Triangle. The cost-1 word 'triangle' is ambiguous (there is also a Filled Triangle) and 'unfilled' is ambiguous (there is also an Unfilled Square). Therefore, the lowest-cost, unambiguous description is the two-word phrase 'unfilled triangle' (11)."
+  },
+  {
+    "question_id": "G3_3",
+    "answer": "3",
+    "reasoning": "This is a Striped Square. While there are other squares, this is the only striped shape in the top row (and is one of only two in the entire set, the other being a circle). However, the property 'striped' is unique to this square among the other squares. Let's check the whole set: there's a striped square and a striped circle. So 'striped' is ambiguous. But 'striped square' (12) is an option. Wait, let me re-examine the set. There is one striped square and one striped circle. The property 'striped' is not unique to a shape type. But the property 'circle' is unique to the striped circle. Thus, the striped circle will be called 'circle' (7). This leaves 'striped' as an unambiguous description for the striped square. So, 'striped' (3) is the best description."
+  },
+  {
+    "question_id": "G3_4",
+    "answer": "13",
+    "reasoning": "This is an Unfilled Square. The cost-1 word 'unfilled' is ambiguous (Unfilled Triangle) and 'square' is ambiguous (Filled, Striped, Spotted squares). Therefore, the lowest-cost, unambiguous description is 'unfilled square' (13)."
+  },
+  {
+    "question_id": "G3_5",
+    "answer": "14",
+    "reasoning": "This is a Filled Square. The cost-1 word 'filled' is ambiguous (Filled Triangle) and 'square' is ambiguous (Unfilled, Striped, Spotted squares). Therefore, the lowest-cost, unambiguous description is 'filled square' (14)."
+  },
+  {
+    "question_id": "G3_6",
+    "answer": "7",
+    "reasoning": "This is a Striped Circle. It is the only circle in the entire set of eight shapes. Therefore, the cost-1 word 'circle' (7) is a unique and efficient description."
+  },
+  {
+    "question_id": "G3_7",
+    "answer": "4",
+    "reasoning": "This is a Spotted Square. There are two spotted shapes: a square and a hexagon. The property 'hexagon' is unique to the other spotted shape, so it will be called 'hexagon' (9). This leaves 'spotted' as an unambiguous description for the Spotted Square. So, 'spotted' (4) is the best description."
+  },
+  {
+    "question_id": "G3_8",
+    "answer": "9",
+    "reasoning": "This is a Spotted Hexagon. It is the only hexagon in the entire set of eight shapes. Therefore, the cost-1 word 'hexagon' (9) is a unique and efficient description."
+  },
+  {
+    "question_id": "G4_a",
+    "answer": "0.00",
+    "reasoning": "The description is 'Unfilled Circle'. This uniquely identifies the Unfilled Circle. The listener (Identylizer) will always pick the correct card. Therefore, the error rate is 0% or 0.00."
+  },
+  {
+    "question_id": "G4_b",
+    "answer": "0.67",
+    "reasoning": "The description is '\"\"' (nothing). This gives the listener no information, so it applies to all three cards {Filled Circle, Unfilled Circle, Unfilled Square}. Identylizer guesses randomly among the three. If the intended card is the Unfilled Square, there are two other cards it could wrongly pick. The probability of error is 2/3, which is approximately 0.67."
+  },
+  {
+    "question_id": "G4_c",
+    "answer": "0.50",
+    "reasoning": "The description is 'Unfilled'. This applies to two cards: the Unfilled Circle and the Unfilled Square. Identylizer guesses randomly between these two. If the intended card is the Unfilled Square, there is one other card (the Unfilled Circle) it could wrongly pick. The probability of error is 1/2, which is 0.50."
+  },
+  {
+    "question_id": "G5_a",
+    "answer": "error rate",
+    "reasoning": "By analyzing the four examples in the table, we can deduce the formula for Loss. Let's test the formula Loss = Error Rate + (Weight * Cost). For row 1: 0.00 + (2 * 1) = 2.00. For row 2: 0.50 + (3 * 1) = 3.50. For row 3: 0.00 + (0.2 * 2) = 0.40. For row 4: 0.67 + (10 * 0) = 0.67. The formula holds for all examples. The term in blank (a) is 'error rate'."
+  },
+  {
+    "question_id": "G5_b",
+    "answer": "weight",
+    "reasoning": "Following the formula deduced in G5_a, Loss = Error Rate + (Weight * Cost), the term in blank (b), which is multiplied by the term in blank (c), is 'weight'. (Note: 'weight' and 'cost' could be swapped, but this is one of the two correct solutions)."
+  },
+  {
+    "question_id": "G5_c",
+    "answer": "cost",
+    "reasoning": "Following the formula deduced in G5_a, Loss = Error Rate + (Weight * Cost), the term in blank (c), which is multiplied by the term in blank (b), is 'cost'. (Note: 'weight' and 'cost' could be swapped, but this is one of the two correct solutions)."
+  },
+  {
+    "question_id": "G6_1",
+    "answer": "a, b",
+    "reasoning": "The goal is to find the weight W such that a one-word (Cost=1) description has the lowest loss for all three objects. The loss is calculated as Loss = Error_Rate + (W * Cost). We need to compare the loss of the best one-word option to the loss of saying nothing (Cost=0). For all three objects, the best one-word description has an Error Rate of 0.00, and saying nothing has an Error Rate of 0.67. So we need Loss(one-word) < Loss(nothing). This translates to (0.00 + W * 1) < (0.67 + W * 0), which simplifies to W < 0.67. We must select all provided weight values that are less than 0.67. These are 0.1 (a) and 0.5 (b)."
+  }
+]

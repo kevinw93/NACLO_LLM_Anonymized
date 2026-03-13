@@ -1,0 +1,65 @@
+Generation Time: 201.84 seconds
+================================================================================
+
+[
+  {
+    "question_id": "X1_1",
+    "answer": "K",
+    "reasoning": "Vector 1 [0.5,0.7,0.4,0.1] is son, calculated as daughter + (man - woman) = [0.5,0.7,0.2,0.3] + [0,0,0.2,-0.2] = [0.5,0.7,0.4,0.1], matching the gender difference pattern where male has higher dim3 and lower dim4 by 0.2."
+  },
+  {
+    "question_id": "X1_2",
+    "answer": "D",
+    "reasoning": "Vector 2 [0.5,0.7,0.4,0.5] is boy, as the remaining child-level dim2=0.7 vector with male-like dim3=0.4 and medium dim4=0.5, representing general male child."
+  },
+  {
+    "question_id": "X1_3",
+    "answer": "E",
+    "reasoning": "Vector 3 [0.5,0.9,0.3,0.5] is father, basic adult dim2=0.9, male dim3=0.3, dim4=0.5 (swapped relative to man's 0.3, indicating parent role with gender bias adjustment)."
+  },
+  {
+    "question_id": "X1_4",
+    "answer": "J",
+    "reasoning": "Vector 4 [0.5,0.7,0.2,1.1] is princess, pairs with prince v11 by gender diff [0,0,-0.2,0.2], child dim2=0.7, female dim3=0.2, high dim4=1.1 for royal."
+  },
+  {
+    "question_id": "X1_5",
+    "answer": "H",
+    "reasoning": "Vector 5 [0.5,0.8,0.9,1.3] is king, adult royal dim2=0.8, male dim3=0.9, high dim4=1.3; queen = king + (woman - man) matches v7."
+  },
+  {
+    "question_id": "X1_6",
+    "answer": "G",
+    "reasoning": "Vector 6 [0.5,0.8,0.9,0.5] is person, remaining vector with royal dim2=0.8, high dim3=0.9 indicating male bias in gender-neutral 'person' as per the problem's bias theme."
+  },
+  {
+    "question_id": "X1_7",
+    "answer": "B",
+    "reasoning": "Vector 7 [0.5,0.8,0.7,1.5] is queen, pairs with king v5 by gender diff [0,0,-0.2,0.2], female dim3=0.7, high dim4=1.5 for royal."
+  },
+  {
+    "question_id": "X1_8",
+    "answer": "I",
+    "reasoning": "Vector 8 [0.5,0.8,0.8,1.4] is ruler, average of king v5 and queen v7: dim3 (0.9+0.7)/2=0.8, dim4 (1.3+1.5)/2=1.4, neutral royal."
+  },
+  {
+    "question_id": "X1_9",
+    "answer": "F",
+    "reasoning": "Vector 9 [0.5,0.9,0.1,0.3] is mother, basic adult dim2=0.9, female dim3=0.1, dim4=0.3 (swapped relative to woman's 0.5, indicating parent role)."
+  },
+  {
+    "question_id": "X1_10",
+    "answer": "A",
+    "reasoning": "Vector 10 [0.5,0.8,0.6,0.7] is girl, remaining vector with balanced dim3=0.6 showing some gender bias, dim2=0.8 for young female, fitting general child female."
+  },
+  {
+    "question_id": "X1_11",
+    "answer": "C",
+    "reasoning": "Vector 11 [0.5,0.7,0.4,0.9] is prince, pairs with princess v4 by gender diff [0,0,0.2,-0.2] for male, child dim2=0.7, male dim3=0.4, high dim4=0.9 for royal."
+  },
+  {
+    "question_id": "X5_1",
+    "answer": "b is doctor, a is nurse",
+    "reasoning": "Vector b [0.5,1.3,0.5,1.5] has higher dim3=0.5 (male) and lower dim4=1.5 (less female), encoding male bias for doctor. Vector a [0.5,1.3,0.3,1.7] has lower dim3=0.3 (female) and higher dim4=1.7 (female), encoding female bias for nurse, consistent with societal biases in text data where doctors are associated with male terms and nurses with female terms."
+  }
+]

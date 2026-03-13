@@ -1,0 +1,17 @@
+[
+  {
+    "question_id": "K1",
+    "answer": "whether: 4 4 4 1 2 1 1 0 1 1; we'll: 2 3 0 0 0 0 0 0 0 0; or: 4 4 4 1 2 1 1 0 1 1; it: 0 0 0 0 1 0 0 0 1 0",
+    "reasoning": "The sample text is the poem with 4 lines. To represent a target word, sum the frequencies of each context word (the, weather, is, good, not, cold, hot, we'll, like, it) in the lines where the target appears at least once. This captures co-occurrence at the line level, a reasonable window for the short poem. For 'whether' (lines 1,2,4): the=4, weather=4, is=4, good=1, not=2, cold=1, hot=1, we'll=0, like=1, it=1. For 'we'll' (line 3): the=2, weather=3, is=0, good=0, not=0, cold=0, hot=0, we'll=0 (self excluded), like=0, it=0. For 'or' (lines 1,2,4): same as 'whether'. For 'it' (line 4): the=0, weather=0, is=0, good=0, not=1, cold=0, hot=0, we'll=0, like=1, it=0 (self excluded). This fills the blanks in the graphs with these integer counts."
+  },
+  {
+    "question_id": "K2",
+    "answer": "a:9 b:6 c:8 d:4 e:10 f:1 g:11 h:3 i:5 j:7 k:2",
+    "reasoning": "The 11 mystery words' graphs are in parts 4 and 5. Match definitions to graphs by pattern similarity to known related targets in parts 2-4, assuming the sample text is fact-based sentences about countries, animals, family, adjectives, etc. 'the' (k) has broad high co-occurrences (many non-zero bars), assign #2. 'aunt' (a) similar to 'uncle' graph (family terms share contexts like 'the brother of one's parent'), assign #9. 'big' (b) similar to 'large' (size adjectives share contexts), assign #6. 'can' (c) similar to 'cans' (base form vs plural), assign #8. 'canyon' (d) unique low-distinct graph (geographical term, less overlap), assign #4. 'cats' (e) plural like 'cans', but animal-related, assign #10. 'Kenya' (f) country like 'India'/'Brazil' (high with currency/president contexts), assign #1. 'Kenyan' (g) adjective like 'Brazilian' (similar to country but modified), assign #11. 'meow' (h) similar to 'neigh' (animal sounds, differ only in animal column), assign #3. 'strange' (i) base like 'large'/'ugly' implied, assign #5. 'strangest' (j) superlative like 'ugliest', assign #7. Patterns analyzed: similar graphs for synonyms/related (e.g., adjectives, plurals, country pairs); unique for specifics like sounds/family."
+  },
+  {
+    "question_id": "K3",
+    "answer": "The actual graph uses raw co-occurrence counts (integers from line/document-level overlaps), while the expected graph appears to use a normalized measure (e.g., conditional probability or PMI), which weights rare contexts higher and could produce the uneven heights like 7 for a specific context.",
+    "reasoning": "The intro example mentions fractional values (e.g., 4.23 times), suggesting normalization possible, but all shown graphs use integer raw counts. The expected graph has distinct heights (e.g., high at one position ~7, medium ~5, low 1s), typical of normalization favoring informative (rare) contexts over common ones. The actual #4 graph (low/medium bars spread) reflects raw counts biased toward frequent contexts in the sample text. Mystery #4 likely a common word like 'the' or 'can', where raw counts are even but not matching the weighted expected. No internet used; based on distributional semantics principles and graph patterns."
+  }
+]

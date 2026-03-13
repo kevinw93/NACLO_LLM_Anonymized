@@ -1,0 +1,77 @@
+Model: gpt-5
+Generation Time: 448.07 seconds
+Timestamp: 2025-12-01 20:45:21
+================================================================================
+
+[
+  {
+    "question_id": "L1_1",
+    "answer": "TAYM",
+    "reasoning": "t:T, i:AY, m:M, e:Ø on the e-to-Ø path; concatenating gives T AY M."
+  },
+  {
+    "question_id": "L1_2",
+    "answer": "TREYDUHD",
+    "reasoning": "t:T, r:R, a:EY, d:D; from the state after d, ed maps to UHD (as in sided); concatenate."
+  },
+  {
+    "question_id": "L1_3",
+    "answer": "STRAYDIHNG",
+    "reasoning": "s:S, t:T, r:R, i:AY, d:D, ing:IHNG on the final transition."
+  },
+  {
+    "question_id": "L1_4",
+    "answer": "FREYMIHNG",
+    "reasoning": "f:F, r:R, a:EY, m:M, ing:IHNG; e is absent so no Ø step."
+  },
+  {
+    "question_id": "L2_1",
+    "answer": "stage",
+    "reasoning": "At g, two choices exist: g:G via the start loop or g:DJ which moves to the state that allows e:Ø. If the system first picks g:G, it gets stuck at the final e (no e:Ø available), so it must backtrack and take g:DJ; fading and name have no such fork that leads to a dead end."
+  },
+  {
+    "question_id": "L3_1",
+    "answer": "STEYDJIHNG",
+    "reasoning": "staging = s:S, t:T, a:EY; to allow the ending, choose g:DJ which leads to the state with ing:IHNG; concatenate."
+  },
+  {
+    "question_id": "L3_2",
+    "answer": "GEYMIHNG",
+    "reasoning": "gaming = g:G, a:EY; m triggers the path that permits ing:IHNG to the final; concatenate."
+  },
+  {
+    "question_id": "L4_1",
+    "answer": "C",
+    "reasoning": "This arrow must handle regular conversions like c:K, h:H, e:EA, o:UH, t:T used across several words (e.g., colonel, he, built)."
+  },
+  {
+    "question_id": "L4_2",
+    "answer": "B",
+    "reasoning": "This transition supplies n:N needed for colonel (…N…)."
+  },
+  {
+    "question_id": "L4_3",
+    "answer": "A",
+    "reasoning": "Provides the vowel/exception set ui:IH (built), a:EY (phase), and o:Ø (people/colonel)."
+  },
+  {
+    "question_id": "L4_4",
+    "answer": "E",
+    "reasoning": "Needed for people: p:P after the silent o."
+  },
+  {
+    "question_id": "L4_5",
+    "answer": "D",
+    "reasoning": "Covers se:Z (phase) and l:L (built)."
+  },
+  {
+    "question_id": "L4_6",
+    "answer": "F",
+    "reasoning": "Supplies el:UHL to finish colonel and pairs with the fixed le:UHL for people."
+  },
+  {
+    "question_id": "L5_1",
+    "answer": "loophle",
+    "reasoning": "Reversing the FST: R can be produced by lo:R, UH by o:UH, F by ph:F, L by l:L, EA by e:EA. Thus RUHFLEA maps to the letter sequence lo + o + ph + l + e, i.e., loophle."
+  }
+]

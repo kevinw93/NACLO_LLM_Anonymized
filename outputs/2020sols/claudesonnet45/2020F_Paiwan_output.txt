@@ -1,0 +1,906 @@
+Model: claude-sonnet-4-5-20250929
+Generation Time: 225.16 seconds
+Timestamp: 2026-01-27 02:09:13
+================================================================================
+
+I'll work through this Paiwan language problem step by step, analyzing the patterns to understand how focus marking works.
+
+## Initial Analysis
+
+Let me first examine the given sentences to identify patterns:
+
+**Sentence Structure Analysis:**
+
+1. *kanan nua uqatay tua kuka a quma nua tsakaw* - "The man eats the chicken in **the thief's field**."
+2. *tjmalaw tua vavuy a kuvatu* - "**My dog** angers the pig."
+3. *djavisen nua tsemas a kukama* - "The spirit snatches **my father**."
+4. *sitarang nua uqatay a vuluq* - "The man protects (it) with **the spear**."
+5. *tjalawen nua suvavuy i tua umaq a atak nua vavaian* - "Your pig angers **the woman's child** in the house."
+6. *kman tua kuka a tsemas* - "**The spirit** eats the chicken."
+7. *djavisan nua pulingaw tua vuluq a gadu* - "The shaman snatches the spear in **the mountain**."
+8. *langedaen nua sivitay a qaya-qayam* - "The soldier hears **the bird**."
+
+**Key Observations:**
+
+- The focused element appears to be marked with "a" before it
+- "nua" seems to mark possessors or agents
+- "tua" seems to mark non-focused objects
+- "i tua" might mark location (sentence 5: "i tua umaq" = "in the house")
+- The verb comes first
+- Pattern seems to be: VERB + various markers + NOUNS
+
+**Vocabulary extracted:**
+- kanan = eats
+- tjmalaw = angers (when dog is focused?)
+- tjalawen = angers (when object is focused?)
+- djavisen = snatches
+- djavisan = snatches (variant?)
+- sitarang = protects
+- kman = eats (when subject is focused?)
+- langedaen = hears
+- uqatay = man
+- kuka = chicken
+- quma = field
+- tsakaw = thief
+- vavuy = pig
+- kuvatu = my dog
+- tsemas = spirit
+- kukama = my father
+- vuluq = spear
+- suvavuy = your pig
+- umaq = house
+- atak = child
+- vavaian = woman
+- pulingaw = shaman
+- gadu = mountain
+- sivitay = soldier
+- qaya-qayam = bird
+
+## F1: Translating English to Paiwan
+
+### F1a: "The man protects the field with **the dog**."
+
+Looking at sentence 4: *sitarang nua uqatay a vuluq* - "The man protects (it) with **the spear**."
+- sitarang = protects
+- nua uqatay = the man (agent)
+- a vuluq = the spear (focused instrument)
+
+For "the dog" focused:
+- sitarang nua uqatay a quma tua tjmalaw? No, wait...
+
+Let me reconsider. Looking at sentence 2: *tjmalaw tua vavuy a kuvatu* - "**My dog** angers the pig."
+- "kuvatu" = my dog
+- We need just "the dog"
+
+Actually, from sentence 4, the pattern with instrument focused is:
+VERB + nua + AGENT + a + FOCUSED_INSTRUMENT + (object with tua?)
+
+But sentence 4 doesn't show the object... Let me look for "dog" in the vocabulary. I see "kuvatu" = my dog. The dog without possessive might be "tjmalaw" or something else.
+
+Wait, "tjmalaw" is a verb (angers). Looking more carefully at sentence 2:
+*tjmalaw tua vavuy a kuvatu* - subject (kuvatu=my dog) is focused
+
+I need to find the word for just "dog". Looking at patterns, "ku-" might be possessive "my", so "vatu" might be dog.
+
+For sentence 1: *kanan nua uqatay tua kuka a quma nua tsakaw*
+This has "a quma nua tsakaw" = the thief's field (focused)
+
+So the pattern might be: sitarang nua uqatay tua quma a vatu
+But we need "with the dog" - the dog is the instrument.
+
+Actually, reviewing sentence 4 again: the spear is focused, and it's the instrument ("with the spear").
+
+**Answer F1a:** sitarang nua uqatay tua quma a vatu
+
+### F1b: "Your shaman angers my bird in **the spirit's mountain**."
+
+From sentence 7: *djavisan nua pulingaw tua vuluq a gadu* - "The shaman snatches the spear in **the mountain**."
+- "a gadu" = the mountain (focused location)
+
+From sentence 5: *tjalawen nua suvavuy i tua umaq a atak nua vavaian*
+- "i tua umaq" = in the house
+- "a atak nua vavaian" = the woman's child (focused)
+
+Wait, sentence 7 has just "a gadu" for focused mountain, not a location marker "i".
+
+For "angers": tjalawen or tjmalaw
+From sentence 5, "tjalawen" is used when the object is focused
+From sentence 2, "tjmalaw" is used when the subject is focused
+
+Since "the spirit's mountain" is focused (location), I need to check the verb form.
+
+Looking at sentence 5: location "i tua umaq" is NOT focused (uses "i tua")
+Sentence 7: "a gadu" = the mountain IS focused
+
+So: tjalawen nua + YOUR SHAMAN + tua + MY BIRD + i tua + a gadu nua tsemas?
+
+Wait, if the mountain is focused, it should have "a". Let me think about location focus.
+
+Sentence 7 structure: verb + nua + agent + tua + object + a + FOCUSED_LOCATION
+
+"your shaman" - need possessive. "suvavuy" = your pig, so "su-" = your
+"pulingaw" = shaman, so "supulingaw" = your shaman
+
+"my bird" - "kuvatu" = my dog, so "ku-" = my, and we have "qaya-qayam" = bird
+So "kuqaya-qayam" = my bird? (probably simplified)
+
+"spirit's mountain" - "nua tsemas" = of the spirit, "gadu" = mountain
+
+**Answer F1b:** tjalawen nua supulingaw tua kuqayaqayam a gadu nua tsemas
+
+### F1c: "**The woman** snatches the pig."
+
+From sentence 3: *djavisen nua tsemas a kukama* - "The spirit snatches **my father**."
+This has the object focused.
+
+From sentence 6: *kman tua kuka a tsemas* - "**The spirit** eats the chicken."
+This has the subject focused!
+
+So when subject is focused: VERB + tua + OBJECT + a + FOCUSED_SUBJECT
+
+"woman" = vavaian
+"pig" = vavuy
+
+For "snatches": djavisen (when object focused), djavisan (when object focused)
+
+When subject is focused, might there be a different form? Looking at:
+- Sentence 2: tjmalaw (subject focused) vs Sentence 5: tjalawen (object focused)
+- Sentence 6: kman (subject focused) vs Sentence 1: kanan (object focused)
+
+Pattern: subject-focused verbs might have different forms.
+
+For "snatch": djavisen/djavisan (object focused), so subject focused might be different.
+
+Looking at sentence 7: *djavisan nua pulingaw tua vuluq a gadu*
+Wait, this has location focused, not object.
+
+Let me reconsider sentence 6: *kman tua kuka a tsemas*
+- kman = verb (subject-focus form)
+- tua kuka = the chicken (object, not focused)
+- a tsemas = the spirit (FOCUSED subject)
+
+**Answer F1c:** djavisa tua vavuy a vavaian
+
+(Guessing the subject-focus form might be "djavisa")
+
+## F2: Translating Paiwan to English and inferring questions
+
+### Question-Answer Analysis (sentences 9-12):
+
+9. *inu a tmarang a tsakaw?* → *tmarang a tsakaw i tua quma*
+   "The thief who protects (it) is in the field."
+
+10. *anema a sitjalaw nua sukama tua vatu?* → *sitjalaw nua kukama tua vatu a kuvuluq*
+
+11. *anema a sudjavisen?* → *kudjavisen a qaya-qayam nua vavaian*
+
+12. *inu a kanan nua uqatay?* → *kanan nua uqatay a gadu*
+
+**Analysis:**
+- "inu" seems to be "where" or "what"
+- "anema" seems to be "who" or "what"
+- "a" marks the focused element in questions too
+
+### F2a: *susitarang tua qaya-qayam nua pulingaw a tsemas*
+
+Breaking down:
+- susitarang = protects (some focus form)
+- tua qaya-qayam = the bird (object, not focused)
+- nua pulingaw = the shaman (agent)
+- a tsemas = the spirit (FOCUSED)
+
+Wait, "su-" prefix appeared in "supulingaw" (your shaman). Here "susitarang" might mean a different focus.
+
+Looking at the pattern, if "a tsemas" is focused, this could be asking "who protects the bird?" or the statement is about the spirit.
+
+Comparing with sentence 11 answer: *kudjavisen a qaya-qayam nua vavaian*
+This seems to be "I snatch the bird of the woman" or "The woman's bird snatches me"?
+
+Actually, "ku-" might be "I" or "my". Looking at "kudjavisen" - might be "I snatch" (subject focus, 1st person).
+
+So "susitarang" might be "you (singular) protect" or some other focus.
+
+Let me reconsider: if "a tsemas" is focused, the sentence means something like:
+"It is **the spirit** that you protect the bird [something] the shaman"
+
+But this doesn't make complete sense. Let me look at the structure again.
+
+Actually, looking at sentence 4: *sitarang nua uqatay a vuluq*
+And if we compare: *susitarang tua qaya-qayam nua pulingaw a tsemas*
+
+Maybe: "It is **the spirit** that the shaman protects the bird with" (instrument focus?)
+
+No wait. Let me look at question 10:
+*anema a sitjalaw nua sukama tua vatu?* → *sitjalaw nua kukama tua vatu a kuvuluq*
+
+"anema" = who/what
+"sitjalaw" = angers (some form)
+"nua sukama" = your father (agent)
+"tua vatu" = the dog (object)
+
+The answer focuses on "kuvuluq" (my spear).
+
+Hmm, this suggests the question is "Who/what does your father anger the dog with?" or similar.
+
+For F2a, if "a tsemas" is focused, the question might be:
+"Who protects the bird [something] the shaman?"
+Or "What does the shaman protect the bird with?"
+
+Given the focused element is "the spirit", and looking at the pattern:
+
+**F2a Answer:**
+English: "It is **the spirit** that the shaman protects the bird from" or "The shaman protects the bird with **the spirit**"
+
+Actually, reconsidering the structure more carefully:
+
+Sentence pattern when instrument/oblique is focused seems to be:
+VERB + nua + AGENT + tua + OBJECT + a + FOCUSED_ELEMENT
+
+But wait, in *susitarang tua qaya-qayam nua pulingaw a tsemas*:
+- susitarang = verb
+- tua qaya-qayam = object  
+- nua pulingaw = something related to shaman
+- a tsemas = focused spirit
+
+Hmm, "nua" means "of" or marks agent/possessor. So "nua pulingaw" = "of the shaman" or "by the shaman".
+
+Could this be: "The spirit protects the bird of the shaman"?
+Or: "It is the spirit who protects the shaman's bird"?
+
+Let me look at sentence 1 again: *kanan nua uqatay tua kuka a quma nua tsakaw*
+- kanan = eats
+- nua uqatay = the man (agent)
+- tua kuka = chicken (object)
+- a quma nua tsakaw = the thief's field (focused location)
+
+So "nua" appears twice: once for agent, once for possessor.
+
+In F2a: *susitarang tua qaya-qayam nua pulingaw a tsemas*
+This could be: "[Someone/something] protects the shaman's bird, it is the spirit"
+
+Or checking if "su-" is a pronoun: "You protect the shaman's bird, it is the spirit" (doesn't make sense)
+
+Let me try: "It is **the spirit** that protects the shaman's bird"
+
+Question would be: "Who protects the shaman's bird?" → *anema a susitarang tua qaya-qayam nua pulingaw?*
+
+Wait, I need to check the verb form. "susitarang" vs "sitarang".
+
+Looking at answers:
+- Sentence 9 answer: "tmarang" (cf. question "tmarang")
+- Question 10: "sitjalaw" → Answer: "sitjalaw"
+- Question 11: "sudjavisen" → Answer: "kudjavisen" (different!)
+- Question 12: "kanan" → Answer: "kanan"
+
+So question 11 has "sudjavisen" but answer has "kudjavisen". The difference is "su-" vs "ku-".
+If "ku-" = my/I, "su-" = your/you, then:
+Question 11: "Who do you snatch?" or "Whom do you snatch?"
+Answer 11: "I snatch the woman's bird"
+
+OK so the prefix changes based on person!
+
+For F2a: *susitarang tua qaya-qayam nua pulingaw a tsemas*
+"susitarang" might mean "you protect" or incorporate "you" somehow
+
+Let me reconsider the whole structure. In the answer to question 11:
+*kudjavisen a qaya-qayam nua vavaian*
+- kudjavisen = I snatch (subject focus, 1st person)
+- a qaya-qayam nua vavaian = the woman's bird (focused object)
+
+So the verb includes person marking!
+
+For F2a: If "a tsemas" is focused and comes at the end, it's the focused element.
+*susitarang tua qaya-qayam nua pulingaw a tsemas*
+- susitarang = you protect (?)
+- tua qaya-qayam = the bird
+- nua pulingaw = of/by the shaman  
+- a tsemas = the spirit (focused)
+
+This is confusing. Let me try a different interpretation:
+
+Maybe the pattern is: VERB (tua UNFOCUSED_ELEMENT)* a FOCUSED_ELEMENT
+
+And "nua X" modifies nouns (possession/agency).
+
+*susitarang tua qaya-qayam nua pulingaw a tsemas*
+= "susitarang" + "tua [qaya-qayam nua pulingaw]" + "a tsemas"
+= "protects" + "the shaman's bird" (unfocused) + "the spirit" (focused)
+
+"The spirit protects the shaman's bird" with spirit focused.
+
+Question: "Who protects the shaman's bird?" or "anema a sitarang tua qaya-qayam nua pulingaw?"
+
+But why "su-" prefix? Maybe it's not a pronoun but some other marker.
+
+Let me just go with my best interpretation:
+
+**F2a:**
+English translation: "It is **the spirit** that protects the shaman's bird." or "**The spirit** protects the shaman's bird."
+Question: *anema a susitarang tua qaya-qayam nua pulingaw?* (Who protects the shaman's bird?)
+
+### F2b: *kanen nua uqatay a vavuy i tua gadu*
+
+Breaking down:
+- kanen = eats (some form)
+- nua uqatay = the man (agent)
+- a vavuy = the pig (focused)
+- i tua gadu = in the mountain (location, unfocused)
+
+This seems like: "It is **the pig** that the man eats in the mountain" (object focus)
+
+Question: "What does the man eat in the mountain?" → *inu a kanen nua uqatay i tua gadu?*
+
+**F2b:**
+English translation: "It is **the pig** that the man eats in the mountain." or "The man eats **the pig** in the mountain."
+Question: *inu a kanen nua uqatay i tua gadu?* or *anema a kanen nua uqatay i tua gadu?*
+
+### F2c: *kutjalawan tua suvatu a kuquma*
+
+Breaking down:
+- kutjalawan = I anger (?) (subject focus, 1st person)
+- tua suvatu = your dog (object, unfocused)
+- a kuquma = my field (focused)
+
+Wait, that doesn't make sense. "My field angers your dog"?
+
+Let me reconsider. If this is an answer to a question about location:
+"Where do I anger your dog?" → "I anger your dog in **my field**"
+
+But "kuquma" would be "my field", and with "a" it's focused. The sentence could be:
+"It is **my field** where [I] anger your dog"
+
+But the verb "kutjalawan" - if "ku-" is first person, then "I anger"...
+
+Actually, maybe the structure is different. Let me check sentence 5 again:
+*tjalawen nua suvavuy i tua umaq a atak nua vavaian*
+"Your pig angers **the woman's child** in the house."
+
+Here "tjalawen" is the verb, "nua suvavuy" is the agent (your pig).
+
+For F2c, if the pattern is similar:
+*kutjalawan tua suvatu a kuquma*
+Maybe: "[Someone] angers your dog, it is my field"?
+
+This is getting too speculative. Let me try:
+"It is **my field** where [someone] angers your dog"
+
+Question: "Where does [someone] anger your dog?" → *inu a tjalawan tua suvatu?*
+
+Actually, looking at question 9: *inu a tmarang a tsakaw?* → answer: *tmarang a tsakaw i tua quma*
+"Where is the thief who protects (it)?" → "The thief who protects (it) is in the field."
+
+So "inu" asks for location.
+
+For F2c, if "kuquma" (my field) is focused with location, the question might ask where something happens.
+
+**F2c:**
+English translation: "It is in **my field** where [I/you] anger your dog." or "[Someone] angers your dog in **my field**."
+Question: *inu a tjalawan tua suvatu?* or *inu a kutjalawan tua suvatu?*
+
+Let me finalize my answers:
+
+## Final Answers
+
+### F1a: 
+sitarang nua uqatay tua quma a vatu
+
+### F1b:
+tjalawen nua supulingaw tua kuqayaqayam a gadu nua tsemas
+
+### F1c:
+djavisa tua vavuy a vavaian
+
+### F2a:
+English: The shaman protects the bird with **the spirit**. (or: **The spirit** is what the shaman protects the bird with.)
+Paiwan question: anema a susitarang tua qaya-qayam nua pulingaw?
+
+### F2b:
+English: The man eats **the pig** in the mountain.
+Paiwan question: anema a kanen nua uqatay i tua gadu? (or: inu a kanen nua uqatay i tua gadu?)
+
+### F2c:
+English: It is **my field** where [someone] angers your dog. (or: [Someone] angers your dog in **my field**.)
+Paiwan question: inu a tjalawan tua suvatu?
+
+Actually, let me reconsider some of these more carefully before finalizing...
+
+Looking again at the questions 9-12 and their answers:
+
+Question 12: *inu a kanan nua uqatay?* → *kanan nua uqatay a gadu*
+"inu" = what/where
+"a kanan nua uqatay" = "does the man eat" (with focus marker "a")
+Answer: "kanan nua uqatay a gadu" = "The man eats **the mountain**" (focused)
+
+So this is asking "What does the man eat?" → "The man eats **the mountain**"
+
+For F2b: *kanen nua uqatay a vavuy i tua gadu*
+Question would be: "What does the man eat in the mountain?"
+*inu a kanen nua uqatay i tua gadu?* or *anema a kanen nua uqatay i tua gadu?*
+
+"inu" seems to be "what", "anema" seems to be "who/what/which"
+
+Based on question 12, the question for F2b should be:
+*inu a kanen nua uqatay i tua gadu?*
+
+For F2c: *kutjalawan tua suvatu a kuquma*
+
+If "inu" asks for location, question 9: *inu a tmarang a tsakaw?*
+"Where does the thief protect?" or "Where is the protecting thief?"
+
+For F2c, if "kuquma" is focused (my field as location):
+*inu a kutjalawan tua suvatu?* "Where do I anger your dog?"
+
+But wait, I need to check if the question verb form matches the answer verb form.
+
+Question 10: *anema a sitjalaw nua sukama tua vatu?*
+Answer 10: *sitjalaw nua kukama tua vatu a kuvuluq*
+
+The verb "sitjalaw" is the same in both. But the pronouns change: "sukama" (your father) in Q, "kukama" (my father) in A.
+
+Question 11: *anema a sudjavisen?*
+Answer 11: *kudjavisen a qaya-qayam nua vavaian*
+
+Verb changes: "sudjavisen" (you snatch?) in Q, "kudjavisen" (I snatch?) in A.
+
+This suggests the verb can incorporate person marking.
+
+For F2c: *kutjalawan tua suvatu a kuquma*
+"kutjalawan" = I anger
+If asking "where", the question might keep the person: *inu a kutjalawan tua suvatu?*
+
+Or asking "who angers": *anema a tjalawan tua suvatu?* (without person marker)
+
+Given sentence 9, which asks about location: *inu a tmarang a tsakaw?*
+The verb is "tmarang" without obvious person marking.
+
+Hmm, I think for location questions, the verb might not include the person marker in the question.
+
+Let me revise F2c question: *inu a tjalawan tua suvatu?*
+
+Now let me reconsider F2a:
+
+*susitarang tua qaya-qayam nua pulingaw a tsemas*
+
+If "susitarang" includes person (su- = you?), and "a tsemas" is focused:
+"You protect the shaman's bird, it is the spirit" doesn't make sense.
+
+Maybe "su-" here is not "you" but something else. Or maybe the structure is different.
+
+Let me look at what's focused: "a tsemas" = the spirit.
+
+If the question is asking "who" or "what":
+*anema a sitarang tua qaya-qayam nua pulingaw?* "Who/what protects the shaman's bird?"
+
+But the answer has "susitarang", not "sitarang".
+
+Unless... "su-" is part of the focus marking system?
+
+Actually, let me look at sentence 11:
+Question: *anema a sudjavisen?* "Who/what do you snatch?"
+Answer: *kudjavisen a qaya-qayam nua vavaian* "I snatch the woman's bird"
+
+So "su-" in the question means "you", "ku-" in the answer means "I".
+
+For F2a: *susitarang tua qaya-qayam nua pulingaw a tsemas*
+
+If this follows a similar pattern but with "a tsemas" focused at the end:
+Maybe this is not a subject focus but an oblique focus?
+
+"You protect the shaman's bird with/from the spirit"?
+
+Let me try: "It is **the spirit** that you protect the shaman's bird with"
+
+Question: "What do you protect the shaman's bird with?"
+*anema a susitarang tua qaya-qayam nua pulingaw?* 
+
+But "anema" might not be right for "what" in this context.
+
+Looking at question 10: *anema a sitjalaw nua sukama tua vatu?*
+Answer: *sitjalaw nua kukama tua vatu a kuvuluq*
+
+The answer focuses on "kuvuluq" (my spear).
+
+So the question might be asking about an instrument or oblique argument.
+
+For F2a, the question might be:
+*anema a susitarang tua qaya-qayam nua pulingaw?*
+"What/who is it that you protect the shaman's bird with?"
+
+OK, I think my interpretation is reasonable.
+
+Let me finalize all answers:
+
+```json
+[
+  {
+    "question_id": "F1_a",
+    "answer": "sitarang nua uqatay tua quma a vatu",
+    "reasoning": "Following the pattern from sentence 4 (sitarang nua uqatay a vuluq - 'The man protects (it) with the spear'), where the focused instrument is marked with 'a'. Here 'the dog' (vatu, from kuvatu = my dog) is focused as the instrument. The object 'field' (quma) is marked with 'tua' as unfocused."
+  },
+  {
+    "question_id": "F1_b",
+    "answer": "tjalawen nua supulingaw tua kuqayaqayam a gadu nua tsemas",
+    "reasoning": "Following sentence 7's pattern for location focus (djavisan nua pulingaw tua vuluq a gadu). The verb 'angers' in object/oblique focus is 'tjalawen' (from sentence 5). 'su-' marks 'your' (from suvavuy = your pig), so 'supulingaw' = your shaman. 'ku-' marks 'my', so 'kuqayaqayam' = my bird. The focused location 'the spirit's mountain' is 'a gadu nua tsemas'."
+  },
+  {
+    "question_id": "F1_c",
+    "answer": "djavisa tua vavuy a vavaian",
+    "reasoning": "Following the pattern from sentence 6 (kman tua kuka a tsemas - 'The spirit eats the chicken') where the subject is focused. The subject-focus form of verbs appears different from object-focus forms (kman vs kanan, tjmalaw vs tjalawen). For 'snatch', the object-focus is 'djavisen/djavisan', so the subject-focus form should be similar but different, likely 'djavisa'. The focused subject 'the woman' (vavaian) is marked with 'a', and the unfocused object 'pig' (vavuy) with 'tua'."
+  },
+  {
+    "question_id": "F2_a",
+    "answer": "It is the spirit that you protect the shaman's bird with. / You protect the shaman's bird with the spirit.",
+    "reasoning": "The focused element is 'a tsemas' (the spirit) at the end. The verb 'susitarang' includes the person marker 'su-' (you), similar to 'sudjavisen' in question 11. 'tua qaya-qayam nua pulingaw' = the shaman's bird (unfocused). This appears to be an oblique/instrument focus construction."
+  },
+  {
+    "question_id": "F2_a_question",
+    "answer": "anema a susitarang tua qaya-qayam nua pulingaw?",
+    "reasoning": "The question asks 'What/who do you protect the shaman's bird with?' using 'anema' (who/what) for the focused oblique argument, similar to question 10's pattern."
+  },
+  {
+    "question_id": "F2_b",
+    "answer": "The man eats the pig in the mountain.",
+    "reasoning": "'kanen' is a form of 'eat', 'nua uqatay' = the man (agent), 'a vavuy' = the pig (focused object), 'i tua gadu' = in the mountain (unfocused location). The pig is the focused element being eaten."
+  },
+  {
+    "question_id": "F2_b_question",
+    "answer": "inu a kanen nua uqatay i tua gadu?",
+    "reasoning": "Following the pattern from question 12 (inu a kanan nua uqatay?), this asks 'What does the man eat in the mountain?' using 'inu' (what) to ask about the focused object."
+  },
+  {
+    "question_id": "F2_c",
+    "answer": "Your pig angers [someone] in my field. / It is in my field where your pig angers [someone].",
+    "reasoning": "'kutjalawan' appears to be a form of 'anger' with person marking, 'tua suvatu' = your dog (unfocused object), 'a kuquma' = my field (focused location). The field is the focused locational element."
+  },
+  {
+    "question_id": "F2_c_question",
+    "answer": "inu a tjalawan tua suvatu?",
+    "reasoning": "Following the pattern from question 9 (inu a tmarang a tsakaw?), this asks 'Where does [someone] anger your dog?' using 'inu' (where) to ask about the focused location. The person marker may be dropped in the question form."
+  }
+]
+```
+
+Wait, I need to reconsider F2c. Let me look at it again:
+
+*kutjalawan tua suvatu a kuquma*
+- ku- = I/my
+- tjalawan = anger (verb)
+- tua suvatu = your dog
+- a kuquma = my field
+
+If "kutjalawan" = "I anger", then "I anger your dog, it is my field" or "I anger your dog in my field" (with field focused).
+
+But that seems odd phrasing. Let me check if "kuquma" could be the subject instead.
+
+Looking at answer patterns, "a X" at the end is always the focused element. In sentence 6: *kman tua kuka a tsemas* - "the spirit" is the focused subject.
+
+In F2c: *kutjalawan tua suvatu a kuquma*
+If "kuquma" (my field) is the focused subject: "My field angers your dog" - possible but semantically odd.
+If "kuquma" is the focused location: "I anger your dog in my field" - more sensible.
+
+But how is location marked when focused? In sentence 7: *djavisan nua pulingaw tua vuluq a gadu* - "a gadu" = the mountain (focused location).
+
+There's no "i" marker when the location is focused, just "a".
+
+So F2c: "I anger your dog in **my field**" (field is focused location).
+
+English: "I anger your dog in **my field**." or "It is in **my field** that I anger your dog."
+
+Actually wait, let me reconsider F2c one more time. Maybe I misidentified "suvatu".
+
+Looking at vocabulary:
+- vatu = dog (from kuvatu = my dog)
+- suvatu = your dog (su- = your)
+
+Yes, that's right.
+
+So F2c translation: "I anger your dog in **my field**."
+
+But when I try to say this more naturally with focus: "It is **my field** where I anger your dog" or "**My field** is where I anger your dog."
+
+The question would be: "Where do I anger your dog?" = *inu a kutjalawan tua suvatu?*
+
+Actually, checking question 9 again: *inu a tmarang a tsakaw?*
+Answer: *tmarang a tsakaw i tua quma*
+
+The question has "a tmarang a tsakaw" - this seems to be "the thief who protects" or something.
+
+Hmm, this is tricky. Let me just go with my best interpretation.
+
+Let me revise my JSON to separate out the different parts more clearly:
+
+```json
+[
+  {
+    "question_id": "F1_a",
+    "answer": "sitarang nua uqatay tua quma a vatu",
+    "reasoning": "Pattern from sentence 4 with focused instrument. 'sitarang' = protects, 'nua uqatay' = the man, 'tua quma' = the field (object), 'a vatu' = the dog (focused instrument)."
+  },
+  {
+    "question_id": "F1_b",
+    "answer": "tjalawen nua supulingaw tua kuqayaqayam a gadu nua tsemas",
+    "reasoning": "Pattern from sentence 7 with focused location. 'tjalawen' = angers (non-subject focus), 'nua supulingaw' = your shaman, 'tua kuqayaqayam' = my bird (object), 'a gadu nua tsemas' = the spirit's mountain (focused location)."
+  },
+  {
+    "question_id": "F1_c",
+    "answer": "djavisa tua vavuy a vavaian",
+    "reasoning": "Pattern from sentence 6 with focused subject. Subject-focus form of 'snatch' inferred as 'djavisa', 'tua vavuy' = the pig (object), 'a vavaian' = the woman (focused subject)."
+  }
+]
+```
+
+Actually, I realize I need to reconsider F2. Let me look at the format requested again.
+
+For F2, I need to:
+1. Translate the response into English
+2. Underline focused elements
+3. Say what question (in Paiwan) could have prompted the response
+
+Let me redo F2:
+
+### F2a: *susitarang tua qaya-qayam nua pulingaw a tsemas*
+
+Analysis:
+- susitarang = you protect (with su- person marker)
+- tua qaya-qayam nua pulingaw = the shaman's bird (unfocused)
+- a tsemas = **the spirit** (focused)
+
+English: You protect the shaman's bird with **the spirit**.
+
+Or possibly: **The spirit** (is what/who) you protect the shaman's bird with.
+
+Question in Paiwan: What/who do you protect the shaman's bird with?
+= anema a susitarang tua qaya-qayam nua pulingaw?
+
+Actually, I'm not confident about the "with" interpretation. Let me consider alternatives:
+
+Could "a tsemas" be a focused subject? "**The spirit** protects the shaman's bird"?
+But then why "susitarang" with "su-" marker?
+
+Maybe "su-" is not "you" but another marker in certain focus constructions?
+
+Or maybe the construction is: "It is **the spirit** that the shaman's bird protects" - but that's semantically odd.
+
+Let me look at question 10 more carefully:
+Q10: *anema a sitjalaw nua sukama tua vatu?*
+A10: *sitjalaw nua kukama tua vatu a kuvuluq*
+
+Q: "Who/what does your father anger the dog [with]?"
+A: "My father angers the dog, it is **my spear**" or "My father angers the dog with **my spear**"
+
+So in the answer, "a kuvuluq" (my spear) is focused, and it's likely an instrument or oblique argument.
+
+For F2a: *susitarang tua qaya-qayam nua pulingaw a tsemas*
+Similarly: "[Someone] protects the shaman's bird, it is **the spirit**" or "[Someone] protects the shaman's bird with/from **the spirit**"
+
+The "su-" marker is puzzling. Maybe it's not a person marker here but part of the verb form for certain focus types?
+
+Or maybe "su-" means something else in this context.
+
+Given the pattern, I'll stick with:
+English: You protect the shaman's bird with **the spirit**. (or: **The spirit** is what you protect the shaman's bird with.)
+Question: *anema a susitarang tua qaya-qayam nua pulingaw?*
+
+### F2b: *kanen nua uqatay a vavuy i tua gadu*
+
+Analysis:
+- kanen = eats (some form)
+- nua uqatay = the man
+- a vavuy = **the pig** (focused)
+- i tua gadu = in the mountain (unfocused location)
+
+English: The man eats **the pig** in the mountain.
+
+Question: What does the man eat in the mountain?
+= inu a kanen nua uqatay i tua gadu? (or: anema a kanen nua uqatay i tua gadu?)
+
+Based on question 12 using "inu" for "what", I'll use "inu".
+
+Question: *inu a kanen nua uqatay i tua gadu?*
+
+### F2c: *kutjalawan tua suvatu a kuquma*
+
+Analysis:
+- kutjalawan = I anger (with ku- person marker)
+- tua suvatu = your dog (unfocused)
+- a kuquma = **my field** (focused)
+
+English: I anger your dog in **my field**. (or: **My field** is where I anger your dog.)
+
+Question: Where do I anger your dog?
+= inu a kutjalawan tua suvatu?
+
+Or without person marker: inu a tjalawan tua suvatu? (similar to question 9 pattern)
+
+I think the question should keep the person marker to match:
+Question: *inu a kutjalawan tua suvatu?*
+
+Actually, let me check question 11 again:
+Q11: *anema a sudjavisen?*
+A11: *kudjavisen a qaya-qayam nua vavaian*
+
+The question has "su-" (you), the answer has "ku-" (I). So person markers do appear in questions.
+
+For F2c, question: *inu a kutjalawan tua suvatu?* (Where do I anger your dog?)
+
+But that seems weird - asking yourself where you anger the dog. Maybe the question would be from another perspective:
+*inu a kutjalawan tua kukama tua vatu?* - but this doesn't match.
+
+Or maybe: *inu a tjalawan tua suvatu?* (Where does [someone] anger your dog?) - more general.
+
+Hmm, I think for a location question, it makes more sense to ask from a neutral perspective:
+*inu a tjalawan tua suvatu?* (Where is your dog angered?) or (Where does [someone] anger your dog?)
+
+Let me finalize:
+
+Actually wait. I just realized I need to re-examine the verb forms more carefully.
+
+Looking at sentence 2: *tjmalaw tua vavuy a kuvatu*
+"My dog angers the pig" - subject (my dog) is focused.
+
+Sentence 5: *tjalawen nua suvavuy i tua umaq a atak nua vavaian*
+"Your pig angers the woman's child in the house" - object (child) is focused.
+
+So:
+- tjmalaw = angers (subject focus)
+- tjalawen = angers (object/non-subject focus)
+
+For "eat":
+- Sentence 1: kanan nua uqatay ... - man is agent, field is focused → kanan
+- Sentence 6: kman tua kuka a tsemas - spirit is focused subject → kman
+
+So:
+- kman = eats (subject focus)
+- kanan = eats (object/location focus)
+
+For "snatch":
+- Sentence 3: djavisen nua tsemas a kukama - my father is focused → djavisen
+- Sentence 7: djavisan nua pulingaw tua vuluq a gadu - mountain is focused → djavisan
+
+These are similar, both non-subject focus.
+
+Now looking at the questions/answers:
+- Q10: sitjalaw (verb form)
+- A10: sitjalaw (same form)
+
+- Q11: sudjavisen (you snatch)
+- A11: kudjavisen (I snatch)
+
+So in Q11, the verb changes based on person of the focused element.
+
+For F2a: *susitarang tua qaya-qayam nua pulingaw a tsemas*
+
+If this follows the pattern, "su-" might not be "you" but rather part of a focus construction. But that doesn't align with Q11 pattern.
+
+Let me try another interpretation: What if "a tsemas" is the focused SUBJECT?
+"**The spirit** protects the shaman's bird"
+
+Then "susitarang" would be... maybe "su-" is part of the subject-focus verb form?
+
+Looking at sentence 6: *kman tua kuka a tsemas* - **the spirit** (subject, focused) eats the chicken
+Here the verb is "kman" (subject focus of "eat").
+
+For "protect":
+- sitarang (sentence 4, instrument focused)
+- susitarang (F2a, if subject focused?)
+
+But then what about "tua qaya-qayam nua pulingaw"? This would be the object.
+"The spirit protects the shaman's bird" - possible!
+
+English: **The spirit** protects the shaman's bird.
+
+Question: Who protects the shaman's bird?
+= anema a susitarang tua qaya-qayam nua pulingaw?
+
+This makes more sense! The "su-" is part of the subject-focus verb form for "protect", not a pronoun.
+
+Let me revise F2a:
+English: **The spirit** protects the shaman's bird.
+Question: *anema a susitarang tua qaya-qayam nua pulingaw?* (Who protects the shaman's bird?)
+
+Actually, let me double-check by looking at answer 10:
+*sitjalaw nua kukama tua vatu a kuvuluq*
+- sitjalaw = angers (some focus)
+- nua kukama = my father (agent marked with nua)
+- tua vatu = the dog (object)
+- a kuvuluq = my spear (focused)
+
+This is clearly not subject focus (since father is the agent doing the angering, but spear is focused).
+
+So "sitjalaw" is a non-subject focus form of "anger".
+
+Comparing:
+- tjmalaw = angers (subject focus, from sentence 2)
+- tjalawen = angers (object focus, from sentence 5)
+- sitjalaw = angers (instrument/oblique focus?, from A10)
+
+These all look related but different.
+
+For "protect":
+- sitarang = protects (sentence 4, instrument focused)
+- susitarang = protects (F2a, ? focused)
+
+If "sitarang" is for instrument focus, then "susitarang" might be for subject focus? Or another focus type?
+
+Given that "a tsemas" is at the end and marked with "a", it's definitely the focused element.
+
+Let me look at the position pattern:
+- Sentence 6 (subject focus): kman tua kuka a tsemas - focused subject at end
+- Sentence 4 (instrument focus): sitarang nua uqatay a vuluq - focused instrument at end
+- Answer 10 (oblique focus): sitjalaw nua kukama tua vatu a kuvuluq - focused oblique at end
+
+So the focused element always comes at the end with "a".
+
+For F2a: a tsemas (the spirit) is focused at the end.
+
+The question is: Is the spirit the subject, or an oblique/instrument?
+
+Looking at the structure:
+*susitarang tua qaya-qayam nua pulingaw a tsemas*
+- tua qaya-qayam nua pulingaw = the shaman's bird (with tua, so unfocused)
+- a tsemas = the spirit (focused)
+
+If bird is the object (tua), then what is the spirit? If the verb is "protects", the spirit could be:
+1. The subject (protector)
+2. An instrument (protects with the spirit)
+3. A beneficiary (protects for the spirit)
+
+Semantically, #1 makes most sense: "The spirit protects the shaman's bird"
+
+And if agent is marked with "nua" in non-subject focus (like "nua uqatay" = the man in sentence 1), then in subject focus, the subject should be marked with "a" and appear at the end.
+
+So I believe:
+F2a: **The spirit** protects the shaman's bird.
+Question: *anema a susitarang tua qaya-qayam nua pulingaw?*
+
+Now let me finalize all my answers in JSON format:
+
+```json
+[
+  {
+    "question_id": "F1_a",
+    "answer": "sitarang nua uqatay tua quma a vatu",
+    "reasoning": "Based on sentence 4 'sitarang nua uqatay a vuluq' (The man protects with the spear), where the instrument is focused with 'a'. Here, 'vatu' (dog, from kuvatu=my dog) is the focused instrument, 'quma' (field) is the unfocused object with 'tua'."
+  },
+  {
+    "question_id": "F1_b",
+    "answer": "tjalawen nua supulingaw tua kuqayaqayam a gadu nua tsemas",
+    "reasoning": "Based on sentence 7's location-focus pattern. 'tjalawen' is the non-subject focus form of 'anger' (from sentence 5). 'supulingaw' = your shaman (su-=your), 'kuqayaqayam' = my bird (ku-=my, qayaqayam=bird simplified from qaya-qayam), 'a gadu nua tsemas' = the spirit's mountain (focused)."
+  },
+  {
+    "question_id": "F1_c",
+    "answer": "djavisa tua vavuy a vavaian",
+    "reasoning": "Based on sentence 6 'kman tua kuka a tsemas' (subject focus pattern). The subject-focus form for verbs differs from other forms (kman vs kanan, tjmalaw vs tjalawen). For 'snatch' (djavisen in object focus), the subject-focus form is likely 'djavisa'. 'vavaian' (woman) is the focused subject with 'a', 'vavuy' (pig) is the unfocused object with 'tua'."
+  },
+  {
+    "question_id": "F2_a_translation",
+    "answer": "The spirit protects the shaman's bird.",
+    "reasoning": "'susitarang' is likely the subject-focus form of 'protect', 'tua qaya-qayam nua pulingaw' = the shaman's bird (unfocused object), 'a tsemas' = the spirit (focused subject). The focused element 'the spirit' should be underlined."
+  },
+  {
+    "question_id": "F2_a_question",
+    "answer": "anema a susitarang tua qaya-qayam nua pulingaw?",
+    "reasoning": "The question asks 'Who protects the shaman's bird?' using 'anema' (who/what) to ask about the focused subject, following the pattern from questions 10-11."
+  },
+  {
+    "question_id": "F2_b_translation",
+    "answer": "The man eats the pig in the mountain.",
+    "reasoning": "'kanen' is a form of 'eat', 'nua uqatay' = the man (agent), 'a vavuy' = the pig (focused object), 'i tua gadu' = in the mountain (unfocused location). The focused element 'the pig' should be underlined."
+  },
+  {
+    "question_id": "F2_b_question",
+    "answer": "inu a kanen nua uqatay i tua gadu?",
+    "reasoning": "The question asks 'What does the man eat in the mountain?' using 'inu' (what) to ask about the focused object, following the pattern from question 12."
+  },
+  {
+    "question_id": "F2_c_translation",
+    "answer": "I anger your dog in my field.",
+    "reasoning": "'kutjalawan' = I anger (ku-=I/my), 'tua suvatu' = your dog (unfocused object), 'a kuquma' = my field (focused location). The focused element 'my field' should be underlined."
+  },
+  {
+    "question_id": "F2_c_question",
+    "answer": "inu a kutjalawan tua suvatu?",
+    "reasoning": "The question asks 'Where do I anger your dog?' using 'inu' (where) to ask about the focused location, following the pattern from question 9. The verb maintains the person marker 'ku-' as seen in the Q11/A11 pattern."
+  }
+]
+```

@@ -1,0 +1,92 @@
+[
+  {
+    "question_id": "N1_1",
+    "answer": "The cumulative count of letters seen so far in the sentence",
+    "reasoning": "Tracking the values: starts at 0, becomes 2 after 'an' (2 letters), becomes 7 after 'apple' (2+5=7), becomes 9 after 'is' (7+2=9), becomes 10 after 'a' (9+1=10), becomes 15 after 'fruit' (10+5=15). Each increment equals the number of letters in the word just processed."
+  },
+  {
+    "question_id": "N2_1",
+    "answer": "A",
+    "reasoning": "Sentence 1 has varied grammatical structure with 'and' coordination, matching the fluctuating pattern in Option A's U1 and U2."
+  },
+  {
+    "question_id": "N2_2",
+    "answer": "E",
+    "reasoning": "Sentence 2 starts with adjective 'American' causing high U1, then stabilizes, matching Option E's pattern."
+  },
+  {
+    "question_id": "N2_3",
+    "answer": "H",
+    "reasoning": "Sentence 3 has relative clause 'that the crows admire' creating specific U1, U2 dip patterns matching Option H."
+  },
+  {
+    "question_id": "N2_4",
+    "answer": "D",
+    "reasoning": "Sentence 4 has late relative clause 'that supported' causing late U3 rise, matching Option D."
+  },
+  {
+    "question_id": "N2_5",
+    "answer": "F",
+    "reasoning": "Sentence 5 has prepositional phrase and relative clause structure matching Option F's rise pattern."
+  },
+  {
+    "question_id": "N2_6",
+    "answer": "C",
+    "reasoning": "Sentence 6 has stable adjective-noun patterns with long stable regions matching Option C."
+  },
+  {
+    "question_id": "N2_7",
+    "answer": "I",
+    "reasoning": "Sentence 7 has distinctive pronoun start and relative clause matching Option I's U1, U2 patterns."
+  },
+  {
+    "question_id": "N2_8",
+    "answer": "G",
+    "reasoning": "Sentence 8 has adjective 'speedy' and coordination matching Option G's pattern with U2 change."
+  },
+  {
+    "question_id": "N2_9",
+    "answer": "B",
+    "reasoning": "Sentence 9 has adjective and coordination creating dip pattern in U1 matching Option B."
+  },
+  {
+    "question_id": "N3_a",
+    "answer": "The happy dog runs fast",
+    "reasoning": "5-word sentence with adjective causing U1 variation, simple structure keeping U3 flat."
+  },
+  {
+    "question_id": "N3_b",
+    "answer": "The clever dog that runs fast jumps very high",
+    "reasoning": "9-word sentence with relative clause and adverbs matching the U1 peaks and U3 variations in plot (b)."
+  },
+  {
+    "question_id": "N3_c",
+    "answer": "The dog near the cat runs very fast today",
+    "reasoning": "9-word sentence with prepositional phrase and adverbs creating late rises in U1 and peak in U3."
+  },
+  {
+    "question_id": "N5_a",
+    "answer": "is: 100%, are: 0%",
+    "reasoning": "'the dog by the zebras that' - singular subject 'dog' requires 'is', so with both units on: is 100%, are 0%."
+  },
+  {
+    "question_id": "N5_b",
+    "answer": "is: 0%, are: 100%",
+    "reasoning": "With U1 off but U2 on, the model still tracks plurality correctly, so for structure requiring 'are': is 0%, are 100%."
+  },
+  {
+    "question_id": "N5_c",
+    "answer": "is: 100%, are: 0%",
+    "reasoning": "With U1 on but U2 off, the model still tracks the singular subject correctly: is 100%, are 0%."
+  },
+  {
+    "question_id": "N5_d",
+    "answer": "is: 50%, are: 50%",
+    "reasoning": "With both U1 and U2 off, the model loses critical grammatical information and cannot distinguish, giving equal probability: is 50%, are 50%."
+  },
+  {
+    "question_id": "N5_e",
+    "answer": "the zebras that are",
+    "reasoning": "5-word phrase starting with 'the' that would produce is: 0%, are: 100% - uses plural 'zebras' requiring 'are'."
+  }
+]

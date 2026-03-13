@@ -1,0 +1,112 @@
+[
+  {
+    "question_id": "R1_a",
+    "answer": "word-initial before a consonant",
+    "reasoning": "From the data, in words like yrama (/ra.ma.ra/) and ytonroipory (/to.no.roi.po.ɾ/), the y is initial and followed by a consonant (r or t), and it is silent, as the phonetic starts with the consonant sound without any /j/ or /i/ from y. This is the primary condition for silence, checked first in the hierarchical rules."
+  },
+  {
+    "question_id": "R1_b",
+    "answer": "word-initial before a vowel",
+    "reasoning": "In yenarikepy (/jɛ.na.ɾgɛ.bi/), the y is initial and followed by e (vowel), pronounced as /j/ before the ɛ. This condition follows the silence case, as it is still word-initial but before a vowel, leading to the glide /j/."
+  },
+  {
+    "question_id": "R1_c",
+    "answer": "j",
+    "reasoning": "The phoneme for the condition in (b) is /j/, as seen in yenarikepy where initial y before vowel e maps to /jɛ/, the /j/ glide."
+  },
+  {
+    "question_id": "R1_d",
+    "answer": "word-final after a stop or nasal",
+    "reasoning": "In erẽny (/ɛ.rɛ.ɲi/), after n (nasal), final y = /i/. In yenarikepy (/...bi/), after p (stop), final y = /i/. This condition follows the initial cases, for final y after stop or nasal, pronounced /i/ with palatalization for n."
+  },
+  {
+    "question_id": "R1_e",
+    "answer": "i",
+    "reasoning": "The phoneme for the condition in (d) is /i/, as in the final y after stop or nasal cases, contributing /i/ to the syllable nucleus."
+  },
+  {
+    "question_id": "R1_f",
+    "answer": "word-final after a liquid",
+    "reasoning": "In asapery (/a.sa.be.ra/), after r (liquid), final y contributes /a/ to form /ra/. This follows the previous conditions, for final y after liquid like r."
+  },
+  {
+    "question_id": "R1_g",
+    "answer": "a",
+    "reasoning": "The phoneme for the condition in (f) is /a/, as in asapery where the final /ra/ shows y mapping to /a/ after r to provide the vowel for the syllable."
+  },
+  {
+    "question_id": "R1_h",
+    "answer": "i",
+    "reasoning": "For all other cases, such as medial C y V in anipnyar (/a.ni.pi.na.r/), y = /i/, providing the vowel /i/ for the preceding consonant syllable (p i), with resyllabification of the following n to the next syllable."
+  },
+  {
+    "question_id": "R2_a",
+    "answer": "after a front vowel and before a back vowel",
+    "reasoning": "In cases like uweposaparki (/...wɛm.bo.../) and pẽputu (/pem.../), the p after e (front) before o or u (back) maps to m. Generalizing to t and k, this environment causes nasalization to the place-matched nasal m,n,ŋ."
+  },
+  {
+    "question_id": "R2_c",
+    "answer": "m,n,ŋ",
+    "reasoning": "For the condition in (a), the phonemes are the nasals matching the place: p->m, t->n, k->ŋ, as seen for p in the data; no counterexamples for t,k, but the rule generalizes."
+  },
+  {
+    "question_id": "R2_b",
+    "answer": "after a vowel",
+    "reasoning": "In cases like sapera (/sa.be.ra/), apereperka (/a.be...be.../), sipanijorory (/si.ba.../), sampura (/sam.bu.ra/), the stop after a vowel (central, back, front before front) maps to voiced b,d,g. This follows the nasal case, so excludes the nasal subcase."
+  },
+  {
+    "question_id": "R2_e",
+    "answer": "b,d,g",
+    "reasoning": "For the condition in (b), the phonemes are the voiced stops b,d,g, matching the place, as seen for p->b in multiple cases after vowel (assuming asapery /be/ to fit); for t->d in asewenpota."
+  },
+  {
+    "question_id": "R2_d",
+    "answer": "after a consonant",
+    "reasoning": "In cases like anipnyar (/...pi.../), asewenpota (/...n.po.../), the stop after consonant (n) is voiceless p,t,k. This follows the previous, for cases not after vowel."
+  },
+  {
+    "question_id": "R2_f",
+    "answer": "p,t,k",
+    "reasoning": "For the otherwise (word-initial), phonemes p,t,k, as in pẽputu initial p, knapojaton initial k, taweipõre initial t, all voiceless."
+  },
+  {
+    "question_id": "R3_a",
+    "answer": "/ma.ko.bo.mi/",
+    "reasoning": "makopomy: m a /ma/, k o /ko/ (k before o back /k/), p after o vowel /b/, o /o/, m /m/, y otherwise /i/, syllables ma.ko.bo.mi. Patterns from data: stops voiced after vowel, y /i/ medial."
+  },
+  {
+    "question_id": "R3_b",
+    "answer": "/ai.do.bo.ma/",
+    "reasoning": "aitopoma: a i /ai/ (diphthong from data like tai /tai/), t after i vowel /d/ (voiced after vowel), o /o/, p after o /b/ (voiced after vowel), o /o/, m /m/, a /a/, syllables ai.do.bo.ma."
+  },
+  {
+    "question_id": "R3_c",
+    "answer": "/ke.ri.ge.re.ri/",
+    "reasoning": "kerikeri: k e /ke/ (k initial /k/, e /e/), r i /ri/ (r onset /r/, i /i/), k after i vowel before e /g/ (voiced after vowel), e /e/, r e /re/, r i /ri/, syllables ke.ri.ge.re.ri."
+  },
+  {
+    "question_id": "R3_d",
+    "answer": "/pa.ri.mi/",
+    "reasoning": "parimy: p initial /p/, a /a/, r i /ri/ (r /r/), i /i/, m /m/, y final after m nasal /i/, syllables pa.ri.mi."
+  },
+  {
+    "question_id": "R3_e",
+    "answer": "/ku.ri.ja.ra/",
+    "reasoning": "kurijara: k u /ku/ (k /k/, u /u/), r i /ri/, j /j/, a /a/, r a /ra/, syllables ku.ri.ja.ra. j from data /j/."
+  },
+  {
+    "question_id": "R3_f",
+    "answer": "/ku.ri.ja.ra.ra/",
+    "reasoning": "ykurijarary: y initial before k consonant silent, then kurijarary as above /ku.ri.ja.ra.ra/, final y after r liquid /a/, but since final r a from y /a/, the last ra."
+  },
+  {
+    "question_id": "R3_g",
+    "answer": "/ti.gu.bi.mi/",
+    "reasoning": "tykupimy: t initial /t/, y after t before k, otherwise /i/ (medial), k after i /g/ (voiced after vowel), u /u/, p after u /b/ (voiced after vowel), i /i/, m /m/, y final after m /i/, syllables ti.gu.bi.mi."
+  },
+  {
+    "question_id": "R4_1",
+    "answer": "The G2P rules for Carib, beyond y and p/t/k, are as follows: Vowels map directly (a→/a/, e→/e/, i→/i/, o→/o/, u→/u/), with diphthongs ai→/aɪ/, ei→/eɪ/, oi→/oɪ/. Nasal vowels (e.g., ẽ→/ɛ/, õ→/o/) cause following stops to nasalize if applicable (handled in p/t/k rules). r is /r/ as onset or cluster, /ɾ/ intervocalic. s→/s/, m→/m/, n→/n/ (ɲ with y palatalization handled in y rule), j→/j/, w→/w/. Syllables are CV-based with clusters allowed (e.g., initial yC silent y). Stress not marked, default first syllable. Palatalization ignored in base rules but surface as softer articulation (e.g., k before e →g, i before certain C silent and palatalizes). Transcriptions mark syllable boundaries with periods.",
+    "reasoning": "Patterns from data: vowels consistent except diphthongs in taiwe, sarasarai, ytonroipory. Nasal in erẽny, pẽputu (nasalization effect). r variation in yenarikepy (/ɾ/ intervocalic), others /r/. Other consonants direct mappings. Syllabification CV from boundaries in data. Palatal examples like in yenarikepy (i before k silent, palatal g). Rules cover all data without contradiction when combined with R1/R2."
+  }
+]

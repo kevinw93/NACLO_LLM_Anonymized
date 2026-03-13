@@ -1,0 +1,506 @@
+EXTRACTED AND CLEANED JSON (FAILED TO PARSE):
+================================================================================
+
+[kakua ume] audu [khimārē] means [kakua ume]×10 + khimārē?
+- Or: [kakua+ume] × 10 + khimārē?
+
+If kakua=2, ume=0, khimārē=4:
+- (2+0)×10 + 4 = 24? Not in list.
+
+If item 2 = 44:
+- Something × 10 + 4 = 44
+- Something × 10 = 40
+- Something = 4
+- So "kakua ume" together = 4? Then kakua=2, ume=2? Or kakua+ume=4?
+
+If item 2 = 22:
+- Something × 10 + 4 = 22? No, that's 24.
+
+Let me try: "X Y audu Z" = (X+Y)×some-base + Z
+
+Actually, wait. Let me look at item 7 and 8 again:
+- Item 7: kakua ába audu umé  
+- Item 8: huwua ába audu umé
+
+Both have "ába audu umé" - just differing in first word.
+- If item 7 = 7 and item 8 = something with pattern...
+- Difference is kakua (2) vs huwua (3)
+
+Available: 7, 11, 19, 22, 44, 83
+
+If item 7 = 7, item 8 could be any of remaining.
+If item 7 = 22, item 8 = 33? Not in list.
+
+So item 7 ≠ 22, 44, 83 (these are too big and doubling pattern doesn't work).
+
+Item 7 is likely 7, 11, or 19.
+- If item 7 = 7 (difference of 0), item 8 = 7? But they're different words.
+- If item 7 = 11 (both are 11?), item 8 = 11? Can't both be same.
+- If item 7 = 19, item 8 = ?
+
+The difference between items 7 and 8 is kakua (2) vs huwua (3), difference of 1.
+
+Looking at potential pairs:
+- 7 and 8 (diff 1)? But 8 not in list.
+- 7 and 11 (diff 4)? Possible.
+- 11 and 22 (diff 11)? Pattern could be 11×1 and 11×2.
+- 22 and 44 (diff 22)? Pattern could be 22×1 and 22×2.
+
+Interesting patterns:
+- 22 = 11×2 and 44 = 11×4 or 22×2
+- If kakua = 2 and huwua = 3:
+  - Items 7,8 could be: 11×2=22 and 11×3=33? No, 33 not in list.
+  - Or: something where factor changes
+
+Let me try: items 7 and 8 are 22 (J) and 44 (C)?
+- Item 7 (kakua...): kakua = 2, if this gives 22
+- Item 8 (huwua...): huwua = 3, if this gives 44?
+- But 44 ≠ 33, so not simple multiplication.
+
+What if doubling? 
+- kakua = 2: result 22 (has repeating 2)
+- huwua = 3: result 33? Not in list.
+
+Let me try:
+- Item 7 = 11 (B): kakua ába audu umé
+- Item 8 = 22 (J): huwua ába audu umé
+
+This could work if structure builds on the first number.
+
+Hmm, but kakua=2 and huwua=3, so:
+- If item 7 = 11 and item 8 = 22: ratio is 1:2, but first numbers are 2:3.
+- If item 7 = 22 and item 8 = 33: ratio matches, but 33 not in list.
+
+Let me try items 7 and 8 being non-consecutive in value.
+
+Actually, let me use item 4:
+- Item 4: huwua ume audu ába
+
+If ume = tens marker:
+- huwua (3) ume (10s) audu ába
+- Could be: 3×10 + ába = 30 + ába
+- Options for item 4: 7, 11, 19, 22, 44, 83
+- If = 44: ába = 14 (unlikely for basic word)
+- If = 83: ába = 53 (no)
+
+If ába = ones digit:
+- 30 + 3 = 33? Not in list.
+- 30 + 2 = 32? Not in list.
+- 30 + 7 = 37? Not in list.
+
+Hmm, doesn't work if ume = 10.
+
+Let me try ume = 20:
+- Item 4: 3×20 + ába = 60 + ába
+- If = 83: ába = 23? No.
+
+Let me reconsider everything.
+
+**New approach:** What if "audu" means something like "and" or "over/above"?
+
+In many languages, numbers are expressed as "X and Y" or "X over Y".
+
+Looking at English translations again:
+- We have three hands (3×5=15 fingers), two people (2 persons), etc.
+- Numbers: 2, 3, 7, 11, 19, 22, 44, 83
+
+Patterns in numbers:
+- 11 = 10 + 1
+- 19 = 20 - 1 or 15 + 4
+- 22 = 20 + 2 or 11×2
+- 44 = 40 + 4 or 22×2
+- 83 = 80 + 3
+
+Most follow X0 + Y pattern (base-10 with ones).
+
+Let me map more carefully:
+
+**确定Items with "ume" (no accent):**
+- Item 2: kakua ume audu khimārē  
+- Item 4: huwua ume audu ába
+
+These likely have tens structure.
+
+If ume = 10 (marker for tens):
+- Item 2: kakua (2) ume (tens) audu khimārē = 2×10 + khimārē = 20 + khimārē
+  - Options: 22 (if khimārē=2), but we think khimārē=4 from item 3.
+  - If khimārē = 2: 22 (J) ✓ but conflicts with earlier.
+
+Wait, let me reconsider khimārē.
+
+From Item 3: huwua ūbéa audu khimārē
+- If huwua=3, ūbéa=5: probably "3×5 + khimārē" or "(3 audu 5) khimārē"
+- If item 3 = 19: could be 15 + 4 (khimārē=4) or 3×6+1 or other combinations.
+
+If item 3 = 83:
+- 3×5 + khimārē = 83, khimārē = 68? No.
+
+If item 3 = 22:
+- 3×5 + khimārē = 22, khimārē = 7? Possible.
+
+If item 3 = 44:
+- 3×5 + khimārē = 44, khimārē = 29? No.
+
+So item 3 is likely 19 (khimārē=4) or 22 (khimārē=7).
+
+Let me test both:
+
+**Scenario A: khimārē = 4**
+- Item 3 = 19: (3×5) + 4 = 19 ✓
+- Item 2: (2×10) + 4 = 24? Not in list.
+
+**Scenario B: khimārē = 7**
+- Item 3 = 22: (3×5) + 7 = 22 ✓
+- Item 2: (2×10) + 7 = 27? Not in list.
+
+Neither works if ume = 10.
+
+What if ume isn't 10? Or the structure isn't (X×Y) + Z?
+
+Let me try: "X ume audu Y" means "X×10 + Y" BUT "X ūbéa audu Y" means something different.
+
+Or: maybe "X Y audu Z" means "X + Y×Z"?
+
+- Item 3: huwua + (ūbéa × khimārē) = 3 + (5 × khimārē)
+  - If = 19: 3 + 5×khimārē = 19, 5×khimārē = 16, khimārē = 3.2? No.
+  - If = 22: 3 + 5×khimārē = 22, 5×khimārē = 19, khimārē = 3.8? No.
+
+- Item 2: kakua + (ume × khimārē)
+  - If = 22: 2 + ume×khimārē = 22, ume×khimārē = 20
+    - If khimārē=4: ume=5? But ūbéa=5 (hand).
+    - If khimārē=5: ume=4? Possible.
+  - If = 44: 2 + ume×khimārē = 44, ume×khimārē = 42
+    - If khimārē=6: ume=7
+    - If khimārē=7: ume=6
+
+This is getting complicated. Let me try a different structural assumption.
+
+**What if "audu" actually means multiplication?**
+
+- Item 3: huwua ūbéa audu khimārē = 3 × 5 × khimārē
+  - If = 19: 15×khimārē = 19? No.
+  - If = 22: 15×khimārē = 22? No.
+
+Doesn't work.
+
+**Let me try: word order might matter differently.**
+
+"X Y audu Z" could mean "Z added to (X place-value Y)" in some base.
+
+Or maybe I should look at items 7, 8, 11 more carefully since they all have similar structure:
+
+- Item 7: kakua ába audu umé
+- Item 8: huwua ába audu umé
+- Item 11: kakua khimārē audu ūbéa
+
+Items 7 and 8 differ only in first word (2 vs 3).
+Item 11 has same first word as 7 but different middle and end.
+
+If the pattern for items 7 and 8 gives us a clue:
+- First word varies (2 vs 3)
+- Rest is same "ába audu umé"
+
+Result should scale somehow with first word.
+
+From remaining numbers (7, 11, 19, 22, 44, 83):
+- Pairs where one is related to another by factor:
+  - 11 and 22 (factor 2)
+  - 11 and 44 (factor 4)  
+  - 22 and 44 (factor 2)
+  - None with factor 3/2 = 1.5
+
+Pairs where difference relates to first word multiplier:
+- If items 7,8 have structure: base + (first-word × something)
+  - Base + 2×X and Base + 3×X
+  - Difference would be X
+
+Looking at the numbers:
+- 7 and 19: diff = 12 (could be 12/1 = 12, unrelated to 2 vs 3)
+- 7 and 22: diff = 15 (could be 15/1 = 15)
+- 11 and 19: diff = 8
+- 11 and 22: diff = 11 (interesting! 11/1 = 11)
+- 11 and 44: diff = 33 (33/1 = 33 or 11×3)
+- 19 and 22: diff = 3 (matches 3 vs 2, difference of 1... wait, but items 7 vs 8 have first words 2 vs 3, so diff of 1)
+
+**Aha! Items 7 and 8 could be 19 and 22!**
+- Item 7 (kakua=2...): 19
+- Item 8 (huwua=3...): 22  
+- Difference: 22 - 19 = 3, and huwua - kakua = 3 - 2 = 1... doesn't match exactly.
+
+OR:
+- Item 7 (kakua=2...): 22
+- Item 8 (huwua=3...): 19?
+- But 19 < 22, so if first word increases, result should increase (probably).
+
+Hmm, let me think about this differently.
+
+**Let me use the constraint from item 10:**
+- Item 10: kakua umé = two people (L) ✓
+- This tells us compound without "audu" is just adjective + noun.
+- kakua (2) + umé (person) = two people
+
+Similarly:
+- Item 9: huwua ūbéa = three hands (I) ✓
+- huwua (3) + ūbéa (hand) = three hands
+
+So when there's no "audu", it's "[number] [noun]".
+
+When there IS "audu", it's a compound number expression.
+
+**Now let me think about base systems used culturally:**
+- We have "hand" as a concept, suggesting base-5 (fingers on one hand).
+- We have numbers up to 83, suggesting they can count quite high.
+- Vigesimal (base-20) is common in some cultures.
+- Base-10 is also common.
+
+Given we have both "hand" (5 fingers) and possibly "ume"=10, maybe it's:
+- Base-5 initially, then shifts to base-10 or base-20 for larger numbers.
+
+**Let me try base-20 seriously:**
+
+In base-20 (vigesimal):
+- 19 = 0×20 + 19 (written as 0-19)
+- 22 = 1×20 + 2 (written as 1-2)
+- 44 = 2×20 + 4 (written as 2-4)
+- 83 = 4×20 + 3 (written as 4-3)
+
+Interesting patterns:
+- 22 = 1×20 + 2, and it has repeating digit 2 in base-10
+- 44 = 2×20 + 4, and it has repeating digit 4 in base-10
+- 83 = 4×20 + 3
+
+If "X Y audu Z" means "X [twenties] Y [fives] plus Z [ones]" or something:
+
+Actually, simpler: "X ume audu Y" might mean "X twenties and Y"
+- Item 2: kakua ume audu khimārē = kakua (2) twenties and khimārē
+  - If = 44: 2×20 + khimārē = 44, khimārē = 4 ✓
+  - If = 83: 2×20 + khimārē = 83, khimārē = 43? No.
+
+So Item 2 = 44 (C) and khimārē = 4 if ume represents twenties!
+
+Testing:
+- Item 3: huwua ūbéa audu khimārē = huwua (3) ūbéa (fives) and khimārē (4)
+  - 3×5 + 4 = 19 (E) ✓
+
+Great! So:
+- **ume = twenty (20s place)**
+- **ūbéa = five (5s place or the number 5)**
+- **khimārē = 4**
+- **kakua = 2**
+- **huwua = 3**
+
+Now let's solve the others:
+
+- Item 4: huwua ume audu ába = 3×20 + ába = 60 + ába
+  - Remaining: 7, 11, 19, 22, 83
+  - Already used: 44 (item 2), 19 (item 3)
+  - Left: 7, 11, 22, 83
+  - If = 83: ába = 23? Too high for basic number.
+  - If = 22: 60 + ába = 22? Negative, no.
+
+Hmm, doesn't work. Unless...
+
+Maybe "huwua ume audu ába" means something different? Or ába is negative? Or the structure is different?
+
+Let me reconsider. Maybe "X ume audu Y" doesn't always mean X×20 + Y?
+
+Or maybe I made an error. Let me double-check item 2:
+- Item 2: kakua ume audu khimārē = 2×20 + 4 = 44 ✓
+- Item 3: huwua ūbéa audu khimārē = 3×5 + 4 = 19 ✓
+
+These work. But then:
+- Item 4: huwua ume audu ába = 3×20 + ába = 60 + ába
+  - Can't equal any remaining number (7, 11, 22, 83)
+  
+Unless... wait, let me check which are actually remaining:
+- Used: 44 (item 2), 19 (item 3), plus person (1), hand (5), two (6), three hands (9), three (12), two people (10)
+- Remaining translations: eighty-three (A), eleven (B), forty-four (C - wait, used for item 2), seven (G), nineteen (E - used for item 3), twenty-two (J)
+
+So remaining: 83, 11, 7, 22 for items 4, 7, 8, 11.
+
+- Item 4: If = 83: 3×20 + ába = 83, ába = 23.
+- Item 4: If = 22: 3×20 + ába = 22, impossible (60 > 22).
+- Item 4: If = 11: 3×20 + ába = 11, impossible.
+- Item 4: If = 7: 3×20 + ába = 7, impossible.
+
+So Item 4 must = 83 (A), and ába = 23.
+
+But ába = 23 seems high for a basic morpheme. Unless ába is a combination itself? But ába appears as a single word, so probably represents a single value.
+
+Alternatively, maybe the structure isn't strictly X×20 + Y for all "audu" cases?
+
+OR, maybe ába is a special value. In some base-20 systems, values from 1-19 have unique names. So ába could be any number from 1-19.
+
+But ába = 23 doesn't fit base-20's 0-19 range for the "ones" place.
+
+**Wait! What if it's not ume = 20, but ume = something else?**
+
+Let me try ume = 40:
+- Item 2: 2×40 + 4 = 84 ≠ any number. No.
+
+Let me try ume = 10:
+- Item 2: 2×10 + 4 = 24 ≠ any. No.
+
+Let me try ume = 21:
+- Item 2: 2×21 + 4 = 46 ≠ any. No.
+
+Let me try ume = 22:
+- Item 2: 2×22 + 4 = 48. No.
+
+Let me go back to ume = 20:
+- Item 2: 2×20 + 4 = 44 ✓
+- Item 4: 3×20 + ába = ???
+
+What if ába = 3?
+- 60 + 3 = 63 ≠ any. No.
+
+What if structure of item 4 is different because ába comes after audu (like khimārē does in items 2 and 3)?
+
+Wait, I should check if the pattern holds:
+- "X ume audu Y" = X×20 + Y
+- "X ūbéa audu Y" = X×5 + Y  
+
+So for item 4: "huwua ume audu ába"
+- This should be: 3×20 + ába
+
+If the value is 83 and 3×20=60, then ába=23.
+
+**Actually, wait. What if ába itself is a compound value?** In the list, "ába" appears alone or in compounds. Let me check:
+
+Items with "ába":
+- Item 4: huwua ume audu ába (ába at end, after audu)
+- Item 5: ūbéa (no ába)
+- Item 7: kakua ába audu umé (ába in middle, before audu)
+- Item 8: huwua ába audu umé (ába in middle, before audu)
+
+Items 7 and 8 have different structure: "X ába audu Y" vs "X ume audu Y" in items 2 and 4.
+
+So the position of ába changes the meaning!
+
+**In items 7 and 8, ába comes BEFORE "audu", not after.**
+
+This suggests ába might be a place-value indicator like ume (20s) and ūbéa (5s).
+
+If ába is also a place-value:
+- ume = 20s
+- ūbéa = 5s  
+- ába = ?s (maybe 10s or something else)
+
+Let me try ába = 10:
+- Item 7: kakua ába audu umé = 2×10 + 1 = 21? Not in list.
+- Item 8: huwua ába audu umé = 3×10 + 1 = 31? Not in list.
+
+Ába = 4:
+- Item 7: kakua ába audu umé = 2×4 + 1 = 9? Not in list.
+
+ába = 5:
+- Item 7: kakua ába audu umé = 2×5 + 1 = 11 (B) ✓
+- Item 8: huwua ába audu umé = 3×5 + 1 = 16? Not in list.
+
+So if item 7 = 11, ába might = 5. But then ūbéa also = 5 (hand, or 5). Are they the same?
+
+Actually, that makes sense! ābámight be the number 5, and ūbéa is the word "hand" (which is 5 fingers). They could both represent 5 in different contexts.
+
+Wait, but item 5 is just "ūbéa" by itself, which we determined = hand (D). And ūbéa appears in compounds to mean 5.
+
+But now if ába also = 5, we have two words for 5? That's odd.
+
+Unless:
+- ūbéa = hand (noun) and also the number 5
+- ába = five (number only, not the hand-object)
+
+Or they're synonyms/variants.
+
+Let me test if ába = 5:
+- Item 7: kakua ába audu umé = 2×5 + 1 = 11 (B) ✓
+- Item 8: huwua ába audu umé = 3×5 + 1 = 16? Not in remaining.
+
+So item 8 ≠ using this pattern, unless...
+
+Let me check remaining numbers for items 4, 7, 8, 11:
+- Available: 83, 11, 7, 22
+
+If item 7 = 11:
+- Item 4: = 83, 7, or 22
+- Item 8: = 83, 7, or 22
+- Item 11: = 83, 7, or 22
+
+From item 4: huwua ume audu ába
+- If ába comes after audu, it's added: 3×20 + ába
+- If ába = 5: 60 + 5 = 65? Not in list.
+
+Hmm, so ába ≠ 5 when after audu.
+
+**This suggests ába has different meanings depending on position:**
+- Before "audu": ába = place-value (5s)
+- After "audu": ába = a specific number
+
+Or, "X ába audu Y" vs "X ume audu ába" have different structures.
+
+Let me reconsider the pattern. Maybe:
+- "X ume audu Y" = X×20 + Y (Y is ones)
+- "X ābá audu Y" = X×5 + Y (ābá is 5s place, Y is ones)
+
+Then items 7 and 8:
+- Item 7: kakua ābá audu umé = 2×5 + umé
+  - If umé = 1: 10 + 1 = 11 (B) ✓
+- Item 8: huwua ábá audu umé = 3×5 + umé (1) = 16? Not in list.
+
+So either item 8 isn't using this pattern, or umé isn't 1, or I'm misunderstanding.
+
+**Let me reconsider umé:**
+- Item 1: umé = person (F)
+- Item 10: kakua umé = two people (L)
+- In items 7, 8: umé appears after "audu"
+
+What if umé has dual meaning:
+- As a standalone/after a number without "audu": person
+- After "audu" in a compound number: the number 1
+
+Then:
+- Item 7: 2×5 + 1 = 11 (B) ✓
+- Item 8: 3×5 + 1 = 16? Still not in list.
+
+Alternatively, what if the first word (kakua vs huwua) isn't the multiplier but something else in items 7 and 8?
+
+Or, what if items 7 and 8 don't follow the multiplication pattern?
+
+Let me try addition:
+- Item 7: kakua + ába + umé = 2 + 5 + 1 = 8? Not in list.
+
+Let me try different structure: maybe "audu" sometimes means subtraction?
+- Item 8: huwua ába audu umé = (3×5) - 1 = 14? No.
+- Item 8: huwua + ába - umé = 3 + 5 - 1 = 7 (G)? Maybe!
+
+Then:
+- Item 7: kakua ába audu umé = 2×5 + 1 = 11 (B) (multiplication)
+- Item 8: huwua ába audu umé = 3 + 5 - 1 = 7 (G) (different operation)
+
+But why would the same structure mean different operations? Unlikely.
+
+**Let me step back and reconsider item 8's possible values:**
+- Remaining for items 4, 7, 8, 11: 83, 11, 7, 22
+
+If item 7 = 11:
+- Remaining for 4, 8, 11: 83, 7, 22
+
+Looking at items 8: huwua ába audu umé
+- huwua = 3, ába = ?, umé = ?
+
+If follows pattern of item 7 with different first number:
+- Could be adding rather than multiplying?
+- Or using a different base?
+
+If item 8 = 7:
+- huwua ába audu umé = 7
+- Structure: 3 [something] and [something] = 7
+- Could be: 3 + 4 = 7? So "ába audu umé" = 4?
+- Or: 3 × 2 + 1 = 7? So "ába audu umé" = "×2 +1"?
+
+If item 8 = 22:
+- 3 [something] = 22
+- Could be: 3 × 7 + 1 = 22? So "ába audu umé" = "×7 +1"
+- Or: 3 + 19 = 22? So "ába audu umé" = 19?
+
+If item 8 = 83:
+- 3 [something]

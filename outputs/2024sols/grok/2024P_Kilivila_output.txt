@@ -1,0 +1,77 @@
+Model: grok-4-fast-reasoning
+Generation Time: 130.67 seconds
+Timestamp: 2026-02-03 20:33:53
+================================================================================
+
+[
+  {
+    "question_id": "P1_1",
+    "answer": "[ba.kam]",
+    "reasoning": "For bakam, vowels are a and a. Between them is k (single consonant), so assign k to onset of second syllable. Ends with m, which is a nasal coda similar to ikum [i.küm]. Thus, ba.kam."
+  },
+  {
+    "question_id": "P1_2",
+    "answer": "[mwo]",
+    "reasoning": "For mwo, only one vowel o, with preceding consonants m w as onset cluster (similar to gwa, dja). No boundaries needed: mwo."
+  },
+  {
+    "question_id": "P1_3",
+    "answer": "[i.gi.bu.lu.i]",
+    "reasoning": "For igibului, vowels i,i,u,u,i. Consonants between: g (single, onset gi), b (single, onset bu), l (single, onset lu), none between last u and i (lu.i). All open syllables, similar to idjailigu [i.dja.i.li.gu]. Thus, i.gi.bu.lu.i."
+  },
+  {
+    "question_id": "P1_4",
+    "answer": "[la.o.di.ta]",
+    "reasoning": "For laodita, vowels a,o,i,a. No consonant between a and o (la.o), d (single, onset di), t (single, onset ta). All open, consistent with duosiluwa [du.o.si.lu.wa]. Thus, la.o.di.ta."
+  },
+  {
+    "question_id": "P2_1",
+    "answer": "[m.tu.wá.tu]",
+    "reasoning": "For mtuwatu [m.tu.wa.tu], 4 syllables. Pattern from ikum [i.küm] shows stress on penultimate syllable. Penultimate is wa, so stress on á: m.tu.wá.tu."
+  },
+  {
+    "question_id": "P2_2",
+    "answer": "[pa.kú.la]",
+    "reasoning": "For pakula [pa.ku.la], 3 syllables. Stress on penultimate ku: pa.kú.la."
+  },
+  {
+    "question_id": "P2_3",
+    "answer": "[tom.to.mó.ta]",
+    "reasoning": "For tomtomota [tom.to.mo.ta], 4 syllables. Stress on penultimate mo: tom.to.mó.ta."
+  },
+  {
+    "question_id": "P2_4",
+    "answer": "[to.me.i.kí.ta]",
+    "reasoning": "For tomeikita [to.me.i.ki.ta], 5 syllables. Stress on penultimate ki: to.me.i.kí.ta."
+  },
+  {
+    "question_id": "P3_1",
+    "answer": "[ku.lí.a]",
+    "reasoning": "For kulia, vowels u,i,a. l single between u and i (onset li), none between i and a (li.a). 3 syllables, stress on penultimate i: ku.lí.a."
+  },
+  {
+    "question_id": "P3_2",
+    "answer": "[dum.dá.bo.gi]",
+    "reasoning": "Wait, correction in thinking: for dumdabogi, d u m d a b o g i, vowels u,a,o,i. Between u and a: m d (nasal m + stop d, so m coda, d onset: dum.da). Between a and o: b single (onset bo). o and i: g single (onset gi). 4 syllables, but wait, stress on penultimate bo: dum.da.bó.gi. Wait, earlier mistake, answer [dum.da.bó.gi]."
+  },
+  {
+    "question_id": "P3_2",
+    "answer": "[dum.da.bó.gi]",
+    "reasoning": "Corrected: dum.da.bó.gi as above."
+  },
+  {
+    "question_id": "P3_3",
+    "answer": "[mu.lo.pú.i]",
+    "reasoning": "For mulopui, vowels u,o,u,i. l single (lo), p single (pu), none (pu.i). 4 syllables, stress on penultimate u: mu.lo.pú.i."
+  },
+  {
+    "question_id": "P3_4",
+    "answer": "[ki.li.ví.la]",
+    "reasoning": "For kilivila, vowels i,i,i,a. l single (li), v single (vi), l single (la). Wait, four vowels? k i l i v i l a : i (ki), i (li), i (vi), a (la). 4 syllables, stress on penultimate i (vi): ki.li.ví.la."
+  },
+  {
+    "question_id": "P4_1",
+    "answer": "Kilivila words are pronounced with syllables that are mostly open (CV or V), but can include codas, particularly nasals like m when followed by a stop (e.g., nasal coda, stop onset in ambaisa [am.bai.sa] and applied to dumdabogi [dum.da...]). Consonants between vowels generally attach to the onset of the following syllable; single consonants always do, and clusters like gw, dj are allowed as onsets. When a nasal precedes a stop, it forms a coda-onset split. Stress falls consistently on the penultimate syllable, as seen in ikum [i.küm] and applied throughout. Diphthongs (au, eu, ai, ia, etc.) occur within syllables.",
+    "reasoning": "Summarized patterns from analyzing complete entries: syllable division prioritizes onsets but splits NC clusters; stress rule deduced from the one explicit example and assumed consistent as penultimate (common in Austronesian languages, fits data); included observations on clusters, codas, and diphthongs from given pronunciations."
+  }
+]

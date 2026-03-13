@@ -1,0 +1,112 @@
+[
+  {
+    "question_id": "G1_1",
+    "answer": "unfilled circle",
+    "reasoning": "The set has filled circle, unfilled circle, and unfilled square. The speaker said 'circle'. Literally, it applies to both circles. However, using Rational Speech Acts, a rational speaker intending the filled circle would say 'filled' (unique, cost 1) instead of 'circle' (not unique). Since they said 'circle', the listener infers it must be the unfilled circle, as that's the only case where 'circle' might be used pragmatically. Thus, pick the unfilled circle."
+  },
+  {
+    "question_id": "G2_1",
+    "answer": "5",
+    "reasoning": "For the filled triangle: The shapes are filled triangle, filled circle, unfilled circle, unfilled square, striped square. 'Triangle' uniquely identifies it (only triangle), cost 1 (one word). 'Filled' applies to two (triangle and circle). Shorter than composites like 'filled triangle' (cost 2). So, 5: 'triangle'."
+  },
+  {
+    "question_id": "G2_2",
+    "answer": "8",
+    "reasoning": "For the filled circle: 'Filled' applies to two, 'circle' applies to two. No single-word unique description. 'Filled circle' uniquely identifies it, cost 2. From list, 8: 'filled circle'."
+  },
+  {
+    "question_id": "G2_3",
+    "answer": "9",
+    "reasoning": "For the unfilled circle: 'Unfilled' applies to two, 'circle' applies to two. 'Unfilled circle' unique, cost 2. 9: 'unfilled circle'."
+  },
+  {
+    "question_id": "G2_4",
+    "answer": "10",
+    "reasoning": "For the unfilled square: 'Unfilled' two, 'square' two. 'Unfilled square' unique, cost 2. 10: 'unfilled square'."
+  },
+  {
+    "question_id": "G2_5",
+    "answer": "3",
+    "reasoning": "For the striped square: 'Striped' unique (only striped), cost 1. 'Square' two. So, 3: 'striped'."
+  },
+  {
+    "question_id": "G3_1",
+    "answer": "10",
+    "reasoning": "Shapes include filled triangle, unfilled triangle, striped square, unfilled square, filled square, striped circle, filled pentagon, spotted square, spotted hexagon. For filled triangle: 'filled' (3 shapes), 'triangle' (2). 'Filled triangle' unique, cost 2. 10."
+  },
+  {
+    "question_id": "G3_2",
+    "answer": "11",
+    "reasoning": "For unfilled triangle: 'unfilled' (2: triangle, square), 'triangle' (2). 'Unfilled triangle' unique, cost 2. 11."
+  },
+  {
+    "question_id": "G3_3",
+    "answer": "12",
+    "reasoning": "For striped square: 'striped' (2: square, circle), 'square' (4). 'Striped square' unique, cost 2. 12."
+  },
+  {
+    "question_id": "G3_4",
+    "answer": "13",
+    "reasoning": "For unfilled square: 'unfilled' (2), 'square' (4). 'Unfilled square' unique, cost 2. 13."
+  },
+  {
+    "question_id": "G3_5",
+    "answer": "14",
+    "reasoning": "For filled square: 'filled' (3), 'square' (4). 'Filled square' unique, cost 2. 14."
+  },
+  {
+    "question_id": "G3_6",
+    "answer": "7",
+    "reasoning": "For striped circle: 'striped' (2), 'circle' (1, only circle). 'Circle' unique, cost 1. 7."
+  },
+  {
+    "question_id": "G3_7",
+    "answer": "8",
+    "reasoning": "For filled pentagon: 'filled' (3), 'pentagon' (1). 'Pentagon' unique, cost 1. 8."
+  },
+  {
+    "question_id": "G3_8",
+    "answer": "17",
+    "reasoning": "For spotted square: 'spotted' (2), 'square' (4). 'Spotted square' unique, cost 2. 17."
+  },
+  {
+    "question_id": "G3_9",
+    "answer": "9",
+    "reasoning": "For spotted hexagon: 'spotted' (2), 'hexagon' (1). 'Hexagon' unique, cost 1. 9."
+  },
+  {
+    "question_id": "G4_1",
+    "answer": "0.00",
+    "reasoning": "For unfilled circle, 'Unfilled Circle': Unique description, applies only to it. Identifier always picks correctly, error rate 0.00."
+  },
+  {
+    "question_id": "G4_2",
+    "answer": "0.67",
+    "reasoning": "For unfilled square, '': No information, identifier picks randomly among 3 cards, correct 1/3 of time, error 2/3 ≈ 0.67."
+  },
+  {
+    "question_id": "G4_3",
+    "answer": "0.50",
+    "reasoning": "For unfilled square, 'Unfilled': Applies to unfilled circle and unfilled square. Identifier picks randomly between the two, error 0.50."
+  },
+  {
+    "question_id": "G5_1",
+    "answer": "error rate",
+    "reasoning": "The equation is Loss = (a) + (b) × (c). From the table: losses are error rate + weight × cost (e.g., 0 + 2×1=2; 0.5 + 3×1=3.5; 0 + 0.2×2=0.4; 0.67 + 10×0=0.67). Thus, a=error rate, b=weight, c=cost."
+  },
+  {
+    "question_id": "G5_2",
+    "answer": "weight",
+    "reasoning": "As above, (b) is weight in the multiplication with cost."
+  },
+  {
+    "question_id": "G5_3",
+    "answer": "cost",
+    "reasoning": "As above, (c) is cost, multiplied by weight, added to error rate."
+  },
+  {
+    "question_id": "G6_1",
+    "answer": "a, b",
+    "reasoning": "For one-word descriptions ('filled', 'Circle', 'Square') to be best for all three (loss = w each, error=0), need w < 0.67 (better than '' loss=0.67). Options: a=0.1 <0.67, b=0.5 <0.67, c=0.7 >0.67 ('' better), d=5> , e=10>, f=100>. So a and b."
+  }
+]

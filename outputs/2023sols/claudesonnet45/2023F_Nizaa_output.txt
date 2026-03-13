@@ -1,0 +1,1168 @@
+Model: claude-sonnet-4-5-20250929
+Generation Time: 242.37 seconds
+Timestamp: 2026-02-09 11:08:25
+================================================================================
+
+I'll work through this Nizaa language matching problem step by step.
+
+## Initial Analysis
+
+Looking at the data, I need to find patterns in how Nizaa words are constructed to match them with English translations.
+
+Let me start by identifying some patterns:
+
+### Observable Patterns:
+
+1. **Compound words**: Some Nizaa words appear to be combinations:
+   - `bòw-ŋwìiŋ` (4) - has a hyphen, suggesting "bòw" + "ŋwìiŋ"
+   - `cam-ŋwìiŋ` (7) - has "cam" + "ŋwìiŋ" (same ending as #4)
+   - `cúŋ nìm` (9) - two words
+   - `ɗǝ̀ɔŋ nìm` (11) - two words
+   - `hodê ɗǝ̀ɔŋ` (12) - two words
+   - `nìì gírcí bʉʉ` (14) - three words
+   - `nìì kwɛ́ɛŋ` (15) - two words
+   - `nìm bʉʉ` (17) - two words
+   - `sìì bʉʉ` (18) - two words
+   - `sìɔw kwɛ́ɛŋ` (19) - two words
+   - `sìɔw nìm` (20) - two words
+   - `yír nìm` (21) - two words
+
+2. **Repeated elements**:
+   - `nìm` appears in: 2, 9, 11, 16, 17, 20, 21
+   - `bʉʉ` appears in: 5, 14, 17, 18
+   - `ŋwìiŋ` appears in: 4, 7
+   - `kwɛ́ɛŋ` appears in: 15, 19
+   - `ɗǝ̀ɔŋ` appears in: 10, 11, 12
+   - `cúŋ` appears in: 8, 9, 13
+   - `sìì` appears in: 18
+   - `sìɔw` appears in: 19, 20
+
+### Deduction Strategy:
+
+Let me look for semantic patterns in the English:
+
+**Body parts**:
+- I. head
+- G. fingernail
+- K. little finger
+
+**Animals**:
+- E. dog
+- F. duck
+- L. puppy
+- U. wild bird
+
+**People/Occupations**:
+- C. carpenter
+- H. hairdresser
+- J. hunter
+
+**Containers/Utensils**:
+- B. calabash
+- D. cup (for drinking water)
+- O. sauce spoon
+
+**Liquids/Food**:
+- N. sauce
+- P. soup
+- Q. source of water
+- T. water
+
+**Nature**:
+- A. Anthocleista vogelii
+- R. teardrop
+- S. tree bark
+
+### Analyzing Compounds:
+
+If `nìm` appears in many compounds, it might be a common element like "water" since we see:
+- `bèè nìm` (2)
+- `cúŋ nìm` (9)
+- `ɗǝ̀ɔŋ nìm` (11)
+- `nìm` alone (16)
+- `nìm bʉʉ` (17)
+- `sìɔw nìm` (20)
+- `yír nìm` (21)
+
+Looking at the English options with "water": D (cup for drinking water), Q (source of water), T (water)
+
+If `nìm` = "water":
+- 16. `nìm` alone could be T. water
+- 20. `sìɔw nìm` could be T. water (but that's already used)
+
+Let me reconsider. Perhaps:
+- `bʉʉ` appears with dog-related or liquid-related terms?
+
+Looking at finger-related terms:
+- G. fingernail - could be `cam-ŋwìiŋ` (7) if `cam` = finger and `ŋwìiŋ` = nail
+- K. little finger - could be `ɗǝ̀ɔŋ nìm` (11) if `ɗǝ̀ɔŋ` = finger/little
+
+Wait, let me think about "puppy" (L) and "dog" (E):
+- `bʉʉ` (5) could be dog
+- `hodê ɗǝ̀ɔŋ` (12) could be puppy (young dog)
+
+If `bʉʉ` = dog:
+- 5. `bʉʉ` = E. dog
+- 14. `nìì gírcí bʉʉ` = ? (something with dog)
+- 17. `nìm bʉʉ` = ? (water dog?)
+- 18. `sìì bʉʉ` = R. teardrop? (eye water/dog water?)
+
+Let me try a different approach:
+
+If `ɗǝ̀ɔŋ` relates to small/young:
+- 10. `ɗǝ̀ɔŋ` alone
+- 11. `ɗǝ̀ɔŋ nìm` 
+- 12. `hodê ɗǝ̀ɔŋ`
+
+For finger/hand:
+- `cam` might mean hand/finger
+- 6. `cam fwɛ̀ɛŋ` = F. duck
+- 7. `cam-ŋwìiŋ` = G. fingernail
+
+Actually, if 7 = G (fingernail), then `ŋwìiŋ` might = nail
+And 4. `bòw-ŋwìiŋ` with the same `ŋwìiŋ` ending
+
+Let me look at head/roof:
+- I. head = `cúŋ nìm` (9)?
+- M. roof = `nìì cúŋ` (13)?
+
+If `cúŋ` = head:
+- 8. `cúŋ fwɛ̀ɛŋ` = H. hairdresser (head dresser)
+- 9. `cúŋ nìm` = I. head
+- 13. `nìì cúŋ` = M. roof (house head)
+
+This makes sense! So:
+- `cúŋ` = head
+- `fwɛ̀ɛŋ` = dresser/maker
+- `nìì` = house
+
+Then:
+- 8. `cúŋ fwɛ̀ɛŋ` = H. hairdresser ✓
+- 9. `cúŋ nìm` = I. head (but what's `nìm`?)
+- 13. `nìì cúŋ` = M. roof ✓
+
+Wait, if 9 is "head" and it's `cúŋ nìm`, maybe `nìm` is a classifier or "thing"?
+
+Let me reconsider `nìm`:
+- Could `nìm` mean "liquid" or "thing"?
+
+Looking at spoon/sauce:
+- 15. `nìì kwɛ́ɛŋ` = O. sauce spoon
+- If `nìì` = house, then `kwɛ́ɛŋ` = spoon?
+
+But I suggested `nìì` = house for "roof"... Let me reconsider.
+
+Actually, looking more carefully:
+- 13. `nìì cúŋ` = M. roof (house + head makes sense)
+- 15. `nìì kwɛ́ɛŋ` = O. sauce spoon
+
+So `nìì` = house/container?
+
+Let me try calabash:
+- 2. `bèè nìm` = B. calabash
+
+Trying soup/sauce/water:
+- 16. `nìm` = P. soup? T. water?
+- 20. `sìɔw nìm` = T. water?
+
+If `sìɔw` relates to tree:
+- 19. `sìɔw kwɛ́ɛŋ` = S. tree bark
+- 20. `sìɔw nìm` = T. water? (tree water?)
+
+Hmm, if 19 = S (tree bark), and `kwɛ́ɛŋ` appeared in 15 as well...
+- 15. `nìì kwɛ́ɛŋ` = O. sauce spoon
+- 19. `sìɔw kwɛ́ɛŋ` = S. tree bark
+
+So `kwɛ́ɛŋ` might mean "bark" or "skin" or "covering"
+- sauce spoon = container skin/covering?
+- tree bark = tree skin/covering ✓
+
+This makes more sense! So:
+- `sìɔw` = tree
+- `kwɛ́ɛŋ` = bark/skin/covering
+
+Then:
+- 19. `sìɔw kwɛ́ɛŋ` = S. tree bark ✓
+- 20. `sìɔw nìm` = ? (tree + ?)
+
+Now for water-related:
+If `nìm` relates to water/liquid:
+- 16. `nìm` = P. soup or T. water
+- 17. `nìm bʉʉ` = Q. source of water?
+- 20. `sìɔw nìm` = ? (tree water/sap?)
+
+Let me try:
+- 16. `nìm` = T. water
+- 17. `nìm bʉʉ` = Q. source of water (water source)
+- 20. `sìɔw nìm` = ? 
+
+But we need to fit all the pieces. Let me look at what's left:
+
+Remaining English: A, B, C, D, E, F, J, K, L, N, P, U (if my guesses above are correct)
+
+Let me try dog/puppy again:
+- 5. `bʉʉ` = E. dog
+- 12. `hodê ɗǝ̀ɔŋ` = L. puppy
+
+If `ɗǝ̀ɔŋ` = small/little/young:
+- 10. `ɗǝ̀ɔŋ` = J. hunter? (no...)
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger
+- 12. `hodê ɗǝ̀ɔŋ` = L. puppy (dog + small)
+
+So:
+- `hodê` might = dog? No, then what's `bʉʉ`?
+- Or `hodê` = animal/young animal?
+
+Let me try:
+- `ɗǝ̀ɔŋ` = finger/small
+- 10. `ɗǝ̀ɔŋ` = ? (finger alone)
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger
+
+But that doesn't quite work either.
+
+Let me reconsider by looking at the finger compound:
+- 7. `cam-ŋwìiŋ` = G. fingernail
+- `cam` = finger?, `ŋwìiŋ` = nail?
+
+Then:
+- 4. `bòw-ŋwìiŋ` = ? (something with nail)
+- If `bòw` = carpenter's tool, then bòw-ŋwìiŋ = nail for building? But that's not in the options.
+- If `bòw` = toe, then toe-nail? But that's not in options either.
+
+Actually, looking at the options, "cup for drinking water" (D) is very specific. Let me find that:
+- 4. `bòw-ŋwìiŋ` = D. cup (for drinking water)?
+
+That doesn't make semantic sense with the "-ŋwìiŋ" ending...
+
+Let me try a fresh approach with carpenter:
+- 3. `bòw` = C. carpenter
+- Then 4. `bòw-ŋwìiŋ` = ? (carpenter's nail/tool?)
+
+But there's no "carpenter's tool" option, so that doesn't work.
+
+Let me look at duck:
+- 6. `cam fwɛ̀ɛŋ` = F. duck
+
+And we thought:
+- 8. `cúŋ fwɛ̀ɛŋ` = H. hairdresser
+
+So both have `fwɛ̀ɛŋ`. Could `fwɛ̀ɛŋ` = bird/water bird?
+- `cam fwɛ̀ɛŋ` = water bird = duck ✓
+- But then `cúŋ fwɛ̀ɛŋ` ≠ hairdresser
+
+Or could `fwɛ̀ɛŋ` = worker/one who does?
+- `cam fwɛ̀ɛŋ` = ? worker
+- `cúŋ fwɛ̀ɛŋ` = head worker = hairdresser ✓
+
+Let me think about wild bird:
+- 21. `yír nìm` = U. wild bird
+
+If `nìm` = water, then water bird? But duck is already "water bird"...
+
+Let me try:
+- `yír` = wild/forest
+- `nìm` = bird
+- So `yír nìm` = wild bird ✓
+
+Then:
+- 16. `nìm` = bird? No, that's too simple...
+
+Actually, let's reconsider. If:
+- 21. `yír nìm` = U. wild bird
+- `yír` = wild, `nìm` = bird
+
+Then what about all the other `nìm` compounds?
+- 2. `bèè nìm` = ? bird
+- 9. `cúŋ nìm` = I. head (head bird?? No)
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger (little bird?? No)
+
+This doesn't work. Let me go back to `nìm` = water or liquid.
+
+Let me be more systematic. Looking at the structure:
+
+**Single words**: 1, 3, 5, 10, 16
+**Two-part**: All others
+
+Let me assign based on likelihood:
+
+1. `bèè` = A. Anthocleista vogelii (a tree)
+3. `bòw` = C. carpenter
+5. `bʉʉ` = E. dog
+10. `ɗǝ̀ɔŋ` = J. hunter
+
+Then compounds:
+2. `bèè nìm` = B. calabash (tree + container/fruit)
+- If `bèè` = tree (Anthocleista), then `bèè nìm` = tree fruit = calabash ✓
+
+So `nìm` might mean fruit/product/thing?
+
+Let me reconsider everything with this:
+
+If `nìm` = thing/fruit/product:
+- 2. `bèè nìm` = tree fruit = B. calabash ✓
+- 9. `cúŋ nìm` = head thing = I. head ✓
+- 11. `ɗǝ̀ɔŋ nìm` = small thing = K. little finger ✓
+- 16. `nìm` = thing = P. soup? (a thing/food item)
+- 17. `nìm bʉʉ` = thing dog = ?
+- 20. `sìɔw nìm` = tree thing = A. Anthocleista vogelii? (but that's taken by 1)
+- 21. `yír nìm` = wild thing = U. wild bird ✓
+
+This is working better!
+
+So:
+- 1. `bèè` = A. Anthocleista vogelii (the tree itself)
+- 2. `bèè nìm` = B. calabash (tree fruit/product)
+
+Actually wait, if 1 is the tree and 2 is also tree-related, maybe:
+- 1. `bèè` = ?
+- 2. `bèè nìm` = B. calabash
+
+Let me look at remaining singles:
+- A. Anthocleista vogelii
+- C. carpenter  
+- E. dog
+- J. hunter
+
+And singles in Nizaa:
+- 1. `bèè`
+- 3. `bòw`
+- 5. `bʉʉ`
+- 10. `ɗǝ̀ɔŋ`
+- 16. `nìm`
+
+But 16 should be a compound base... Let me reconsider.
+
+If `nìm` appears in many compounds as a suffix meaning "thing," then 16 being `nìm` alone might mean:
+- 16. `nìm` = P. soup (generic thing/food) or T. water (generic liquid)
+
+Let me try:
+- 1. `bèè` = A. Anthocleista vogelii
+- 3. `bòw` = C. carpenter
+- 5. `bʉʉ` = E. dog
+- 10. `ɗǝ̀ɔŋ` = J. hunter
+- 16. `nìm` = P. soup or T. water
+
+Now for compounds with `nìm`:
+- 2. `bèè nìm` = B. calabash (Anthocleista thing/fruit)
+- 9. `cúŋ nìm` = I. head 
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger (hunter thing?? No, that doesn't work)
+
+Hmm, if 10 = hunter, then 11 can't be "hunter thing"...
+
+Let me reconsider 10:
+- 10. `ɗǝ̀ɔŋ` = finger (base word)
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger (finger + small/little)
+- 12. `hodê ɗǝ̀ɔŋ` = L. puppy (? + finger) - doesn't make sense
+
+OR:
+- 10. `ɗǝ̀ɔŋ` = little/small
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger (little + thing)
+- 12. `hodê ɗǝ̀ɔŋ` = L. puppy (dog + little)
+
+If 12 = puppy and `ɗǝ̀ɔŋ` = little/small:
+- `hodê` must = dog? But we said 5. `bʉʉ` = dog...
+
+Maybe:
+- 5. `bʉʉ` = something else
+- `hodê` = dog
+- 12. `hodê ɗǝ̀ɔŋ` = dog + small = puppy ✓
+
+Then what's `bʉʉ`?
+- 5. `bʉʉ` = ?
+- 14. `nìì gírcí bʉʉ` = ?
+- 17. `nìm bʉʉ` = ?
+- 18. `sìì bʉʉ` = ?
+
+Looking at remaining options with `bʉʉ`:
+- Could `bʉʉ` = water?
+- 17. `nìm bʉʉ` = thing water = ? (doesn't quite work)
+- 18. `sìì bʉʉ` = ? water
+
+OR `bʉʉ` = source:
+- 17. `nìm bʉʉ` = water source = Q. source of water ✓
+
+Let me try this:
+- `bʉʉ` = source/origin
+- 5. `bʉʉ` = ? (source alone - doesn't match any option)
+
+Hmm, that doesn't work for 5 being a single word.
+
+Let me try yet another approach. Looking at teardrop:
+- R. teardrop = eye water
+- Could be 18. `sìì bʉʉ` if `sìì` = eye and `bʉʉ` = water
+
+So:
+- `bʉʉ` = water
+- 5. `bʉʉ` = T. water? (but 16 or 20 might also be water)
+
+Actually, looking at options:
+- T. water (simple)
+- D. cup (for drinking water) - specific
+- Q. source of water - specific
+
+Let me try:
+- 5. `bʉʉ` = T. water
+- 17. `nìm bʉʉ` = Q. source of water (thing/source + water)
+- 18. `sìì bʉʉ` = R. teardrop (eye + water)
+
+Then:
+- 14. `nìì gírcí bʉʉ` = ? (something with water)
+- If `nìì` = container/house and `gírcí` = sauce, then container sauce water = ?
+
+Looking at sauce/soup:
+- N. sauce
+- O. sauce spoon
+- P. soup
+
+Could:
+- 14. `nìì gírcí bʉʉ` = N. sauce (container sauce water)
+- 15. `nìì kwɛ́ɛŋ` = O. sauce spoon (container spoon)
+- 16. `nìm` = P. soup (thing/food)
+
+This is getting complex. Let me try to be more systematic.
+
+## Systematic Approach:
+
+Let me identify definite patterns:
+
+**Hypothesis 1**: `fwɛ̀ɛŋ` appears in 6 and 8
+- If one is "hairdresser" and involves hair/head work
+- 8. `cúŋ fwɛ̀ɛŋ` where `cúŋ` relates to head
+- Then `fwɛ̀ɛŋ` = person who works with/dresser
+- 8. `cúŋ fwɛ̀ɛŋ` = H. hairdresser (head + dresser) ✓
+
+**Hypothesis 2**: Based on H1, `cúŋ` = head
+- 9. `cúŋ nìm` = I. head (head + ?)
+- 13. `nìì cúŋ` = M. roof (house + head) ✓
+
+**Hypothesis 3**: `nìì` = house/container
+- 13. `nìì cúŋ` = M. roof ✓
+- 14. `nìì gírcí bʉʉ` = ?
+- 15. `nìì kwɛ́ɛŋ` = ?
+
+**Hypothesis 4**: `kwɛ́ɛŋ` appears in 15 and 19
+- 19. involves tree likely
+- If `sìɔw` = tree:
+  - 19. `sìɔw kwɛ́ɛŋ` = S. tree bark (tree + bark) ✓
+  - 20. `sìɔw nìm` = ?
+- Then `kwɛ́ɛŋ` = bark/skin/outer layer
+- 15. `nìì kwɛ́ɛŋ` = O. sauce spoon? (house + spoon?)
+
+Hmm, that doesn't quite work unless `kwɛ́ɛŋ` = spoon...
+
+Let me reconsider:
+- 15. `nìì kwɛ́ɛŋ` = O. sauce spoon
+- 19. `sìɔw kwɛ́ɛŋ` = S. tree bark
+
+Could `kwɛ́ɛŋ` = flat/thin object (spoon, bark)?
+
+**Hypothesis 5**: `ŋwìiŋ` appears in 4 and 7
+- 7. likely = G. fingernail
+- 7. `cam-ŋwìiŋ` = G. fingernail (finger + nail)
+- So `cam` = finger and `ŋwìiŋ` = nail
+- 4. `bòw-ŋwìiŋ` = ? (? + nail)
+- Could `bòw` = toe? Then toe-nail? Not in options.
+- Could `bòw` = tree? Then tree-nail? Not clear.
+
+Wait, I initially thought:
+- 3. `bòw` = C. carpenter
+
+If so:
+- 4. `bòw-ŋwìiŋ` = carpenter nail = ? (not an option)
+
+Unless carpenter is something else. Let me check what's left:
+- C. carpenter
+- D. cup (for drinking water)
+
+Could:
+- 3. `bòw` = D. cup?
+- 4. `bòw-ŋwìiŋ` = ? cup-nail doesn't make sense
+
+OR:
+- 4. `bòw-ŋwìiŋ` = D. cup (for drinking water)
+- 3. `bòw` = ? (base word, maybe = drinking/water)
+
+Hmm, let me look at this differently.
+
+**For F2 (production), I need to figure out patterns to produce new words:**
+
+a. bush - likely relates to nature/forest
+b. hut - likely relates to house/building
+c. to read - likely relates to seeing/knowing
+d. to shave - likely relates to cutting/removing
+
+Let me now work backwards from what makes sense:
+
+Since `cúŋ fwɛ̀ɛŋ` = hairdresser (head + dresser/cutter), maybe:
+- d. to shave = `cúŋ` (relates to head) - No, that's "head" not "to shave"
+
+Let me think about `cam fwɛ̀ɛŋ` = duck:
+- If `fwɛ̀ɛŋ` = dresser/worker in one context, why duck in another?
+- Maybe `fwɛ̀ɛŋ` = different word with different vowel tones?
+- Or maybe my interpretation is wrong
+
+Let me try:
+- `cam` = water/river
+- `fwɛ̀ɛŋ` = bird
+- 6. `cam fwɛ̀ɛŋ` = F. duck (water bird) ✓
+
+- `cúŋ` = head/hair
+- `fwɛ̀ɛŋ` = ? (wait, same spelling...)
+
+Unless they're homophones with different meanings, OR I'm wrong about one.
+
+Let me reconsider with fresh eyes:
+
+Looking at 21. `yír nìm` which should involve "wild bird":
+- If `nìm` = bird, then `yír` = wild
+- 21. `yír nìm` = U. wild bird ✓
+
+Then:
+- 6. `cam fwɛ̀ɛŋ` = F. duck 
+- If `nìm` = bird in general, is `fwɛ̀ɛŋ` = bird too? Probably not.
+- Maybe `fwɛ̀ɛŋ` = water bird specifically (duck)
+- And `cam` = (modifier)?
+
+OR:
+- `fwɛ̀ɛŋ` = bird
+- `cam` = water/domesticated
+- `nìm` = bird/thing
+- `yír` = wild
+
+Then we have two words for bird: `fwɛ̀ɛŋ` and `nìm`?
+
+Actually, maybe:
+- 6. `cam fwɛ̀ɛŋ` = F. duck (water + bird)
+- 21. `yír nìm` = U. wild bird (wild + bird)
+- So both `fwɛ̀ɛŋ` and `nìm` can mean bird, or they're different types
+
+But then:
+- 8. `cúŋ fwɛ̀ɛŋ` = H. hairdresser (head + bird?) - doesn't make sense
+
+So `fwɛ̀ɛŋ` probably doesn't mean bird in 8.
+
+Let me try a completely different assignment:
+
+What if:
+- 6. `cam fwɛ̀ɛŋ` = F. duck
+- 7. `cam-ŋwìiŋ` = G. fingernail
+
+Both have `cam`. If 7 is fingernail:
+- `cam` = finger/hand
+- `ŋwìiŋ` = nail
+
+Then:
+- 6. `cam fwɛ̀ɛŋ` = F. duck (finger/hand + ?)
+- Doesn't make sense unless `cam` has multiple meanings
+
+OR they're different words that happen to look similar in this orthography.
+
+Let me just try to make assignments that work:
+
+**Working backwards from compound structure:**
+
+Since 12. `hodê ɗǝ̀ɔŋ` is likely "puppy" (dog + small):
+- `hodê` = dog
+- `ɗǝ̀ɔŋ` = small/little/young
+
+But then:
+- 10. `ɗǝ̀ɔŋ` alone = ? (can't be J. hunter if it means "small")
+
+Unless:
+- 10. `ɗǝ̀ɔŋ` = K. little finger (just "small one" referring to finger)
+- 11. `ɗǝ̀ɔŋ nìm` = J. hunter??
+
+That doesn't make sense either.
+
+Let me try:
+- 10. `ɗǝ̀ɔŋ` = J. hunter
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger
+- 12. `hodê ɗǝ̀ɔŋ` = L. puppy
+
+For 11 to be "little finger" with "hunter thing," doesn't make sense.
+For 12 to be "puppy" with "something hunter," doesn't make sense.
+
+So `ɗǝ̀ɔŋ` probably doesn't mean "hunter."
+
+**New attempt:**
+- `ɗǝ̀ɔŋ` = small/little
+- 10. `ɗǝ̀ɔŋ` = (can't be a standalone word for an occupation/thing if it's an adjective)
+
+Wait, maybe:
+- 10. `ɗǝ̀ɔŋ` = finger (body part)
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger (finger + small)
+- 12. `hodê ɗǝ̀ɔŋ` = ? (? + finger) - doesn't lead to puppy
+
+OR:
+- 11. `ɗǝ̀ɔŋ nìm` = little finger
+- If `ɗǝ̀ɔŋ` = little and `nìm` = finger
+- 10. `ɗǝ̀ɔŋ` = ? (just "little" - not a standalone noun)
+
+This is circular. Let me make an educated guess assignment:
+
+1. `bèè` = A. Anthocleista vogelii
+2. `bèè nìm` = B. calabash
+3. `bòw` = C. carpenter  
+4. `bòw-ŋwìiŋ` = D. cup (for drinking water)
+5. `bʉʉ` = E. dog
+6. `cam fwɛ̀ɛŋ` = F. duck
+7. `cam-ŋwìiŋ` = G. fingernail
+8. `cúŋ fwɛ̀ɛŋ` = H. hairdresser
+9. `cúŋ nìm` = I. head
+10. `ɗǝ̀ɔŋ` = J. hunter
+11. `ɗǝ̀ɔŋ nìm` = K. little finger
+12. `hodê ɗǝ̀ɔŋ` = L. puppy
+13. `nìì cúŋ` = M. roof
+14. `nìì gírcí bʉʉ` = N. sauce
+15. `nìì kwɛ́ɛŋ` = O. sauce spoon
+16. `nìm` = P. soup
+17. `nìm bʉʉ` = Q. source of water
+18. `sìì bʉʉ` = R. teardrop
+19. `sìɔw kwɛ́ɛŋ` = S. tree bark
+20. `sìɔw nìm` = T. water
+21. `yír nìm` = U. wild bird
+
+Let me check this makes semantic sense:
+
+1. `bèè` = tree (Anthocleista vogelii) ✓
+2. `bèè nìm` = tree + thing = calabash ✓
+3. `bòw` = carpenter ✓
+4. `bòw-ŋwìiŋ` = cup? (carpenter + nail = cup??) ✗
+
+This doesn't work. Let me swap:
+
+3. `bòw` = tree/wood
+4. `bòw-ŋwìiŋ` = wood + nail = ? (still doesn't give cup)
+
+Hmm. Maybe cup is elsewhere.
+
+Let me try:
+4. `bòw-ŋwìiŋ` = D. cup
+And work out what that means...
+
+If 7. `cam-ŋwìiŋ` = G. fingernail (finger + nail):
+Then `ŋwìiŋ` = nail
+
+So 4. `bòw-ŋwìiŋ` = bòw + nail
+For this to be "cup," maybe `bòw` = calabash/gourd, and `-ŋwìiŋ` = hollowed/carved?
+
+Actually, looking at the notes: "A calabash is a gourd (a type of hard-shelled fruit, similar to a pumpkin) that is often hollowed out and dried for use as a container."
+
+So if:
+- 2. `bèè nìm` = B. calabash (the plant/fruit)
+- And 4. `bòw-ŋwìiŋ` = D. cup (made from calabash?)
+
+Then:
+- `bòw` = calabash/gourd (as material)
+- `-ŋwìiŋ` = carved/made into (for cup)
+
+And:
+- 7. `cam-ŋwìiŋ` = fingernail
+- `cam` = finger
+- `-ŋwìiŋ` = nail (hard part)
+
+So `-ŋwìiŋ` could mean "hard part" or "made thing"?
+
+For cup: calabash + made = cup ✓
+For fingernail: finger + hard part = nail ✓
+
+This could work!
+
+Now, what's 3. `bòw` alone?
+If `bòw` = calabash/gourd, then 3 could be... C. carpenter?
+
+Actually, if bòw refers to woodworking/carving:
+- 3. `bòw` = C. carpenter ✓
+- 4. `bòw-ŋwìiŋ` = carved thing = D. cup ✓
+
+Even better!
+
+So:
+- `bòw` = carve/carpenter/carving
+- `-ŋwìiŋ` = thing/object
+
+Then:
+- 3. `bòw` = C. carpenter ✓
+- 4. `bòw-ŋwìiŋ` = D. cup ✓
+- 7. `cam-ŋwìiŋ` = G. fingernail ✓
+
+Great! Continuing:
+
+8. `cúŋ fwɛ̀ɛŋ` = H. hairdresser
+- `cúŋ` = head/hair
+- `fwɛ̀ɛŋ` = dresser/worker
+
+9. `cúŋ nìm` = I. head
+- `cúŋ` = head
+- `nìm` = ? (thing/self?)
+
+13. `nìì cúŋ` = M. roof
+- `nìì` = house
+- `cúŋ` = head
+- house head = roof ✓
+
+15. `nìì kwɛ́ɛŋ` = O. sauce spoon
+- `nìì` = house/kitchen
+- `kwɛ́ɛŋ` = spoon
+
+19. `sìɔw kwɛ́ɛŋ` = S. tree bark
+- `sìɔw` = tree
+- `kwɛ́ɛŋ` = bark/skin
+
+So `kwɛ́ɛŋ` means different things? Or:
+- `kwɛ́ɛŋ` = covering/outer layer
+- sauce spoon = house covering (utensil for covering/serving sauce)?
+- tree bark = tree covering ✓
+
+Alternatively:
+- 15. `nìì kwɛ́ɛŋ` = container + spoon = sauce spoon
+- 19. `sìɔw kwɛ́ɛŋ` = tree + bark = tree bark
+
+So `kwɛ́ɛŋ` could mean "surface/outer part/tool"
+
+Now for bird:
+21. `yír nìm` = U. wild bird
+- `yír` = wild
+- `nìm` = bird
+
+6. `cam fwɛ̀ɛŋ` = F. duck
+- `cam` = water
+- `fwɛ̀ɛŋ` = bird
+
+So both `nìm` and `fwɛ̀ɛŋ` relate to bird. Maybe:
+- `fwɛ̀ɛŋ` = waterfowl/duck
+- `nìm` = bird (general)
+
+But then:
+- 8. `cúŋ fwɛ̀ɛŋ` = head + waterfowl = hairdresser??
+
+That doesn't work.
+
+OR:
+- `fwɛ̀ɛŋ` can mean both "bird" and "worker" (homonym)
+- `nìm` = bird/thing
+
+Let me just accept that and continue:
+
+For dog/puppy:
+5. `bʉʉ` = E. dog (or water?)
+12. `hodê ɗǝ̀ɔŋ` = L. puppy
+
+If 12 = puppy:
+- Could be "small dog" with `ɗǝ̀ɔŋ` = small
+- Then `hodê` = dog? But what's 5?
+
+OR:
+- 5. `bʉʉ` = water/liquid
+- 12. `hodê ɗǝ̀ɔŋ` = puppy
+
+Then:
+17. `nìm bʉʉ` = thing + water = Q. source of water ✓
+18. `sìì bʉʉ` = eye + water = R. teardrop ✓
+
+This works better!
+
+So:
+- 5. `bʉʉ` = T. water? Or E. dog?
+
+Looking at what's left:
+- E. dog
+- J. hunter
+- K. little finger  
+- L. puppy
+- P. soup
+- T. water
+
+For positions:
+- 5. `bʉʉ` (single)
+- 10. `ɗǝ̀ɔŋ` (single)
+- 11. `ɗǝ̀ɔŋ nìm` (compound)
+- 12. `hodê ɗǝ̀ɔŋ` (compound)
+- 16. `nìm` (single)
+- 20. `sìɔw nìm` (compound)
+
+If `ɗǝ̀ɔŋ` relates to small:
+- 10. `ɗǝ̀ɔŋ` = small (can't be a noun by itself...)
+
+If `ɗǝ̀ɔŋ` = finger:
+- 10. `ɗǝ̀ɔŋ` = finger
+- 11. `ɗǝ̀ɔŋ nìm` = finger + small = little finger ✓
+- 12. `hodê ɗǝ̀ɔŋ` = ? + finger = ?
+
+Doesn't lead to puppy.
+
+If `nìm` = small/little:
+- 11. `ɗǝ̀ɔŋ nìm` = finger + little = little finger ✓
+- 9. `cúŋ nìm` = head + little = head? (doesn't quite work)
+- 21. `yír nìm` = wild + little = wild bird? (bird isn't little...)
+
+Hmm.
+
+Maybe `nìm` has multiple meanings or functions:
+- As a noun: thing/object
+- As a classifier or noun marker
+
+Looking at:
+- 2. `bèè nìm` = calabash (tree + thing)
+- 9. `cúŋ nìm` = head (head + [marker])
+- 11. `ɗǝ̀ɔŋ nìm` = little finger (small + finger OR finger + small)
+- 16. `nìm` = soup (liquid/thing)
+- 17. `nìm bʉʉ` = source of water (thing + water)
+- 20. `sìɔw nìm` = ? (tree + thing)
+- 21. `yír nìm` = wild bird (wild + bird)
+
+For 20, options left include T. water, which doesn't fit "tree + thing"
+
+Looking at remaining:
+- E. dog
+- J. hunter
+- K. little finger
+- L. puppy
+- P. soup
+- T. water
+
+For positions 5, 10, 11, 12, 16, 20
+
+Let me try:
+- 5. `bʉʉ` = E. dog
+- 10. `ɗǝ̀ɔŋ` = J. hunter
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger
+- 12. `hodê ɗǝ̀ɔŋ` = L. puppy
+- 16. `nìm` = P. soup
+- 20. `sìɔw nìm` = T. water
+
+Checking 12: puppy
+- If `hodê` = young/baby and `ɗǝ̀ɔŋ` = hunter, then baby hunter ≠ puppy
+- If `hodê` = dog and `ɗǝ̀ɔŋ` = small, then small dog = puppy ✓
+
+So:
+- `hodê` = dog
+- `ɗǝ̀ɔŋ` = small
+- 5. `bʉʉ` ≠ dog
+
+Then:
+- 5. `bʉʉ` = T. water ✓
+- 10. `ɗǝ̀ɔŋ` = small (not a standalone noun... unless it means "small one")
+
+Hmm, unless:
+- 10. `ɗǝ̀ɔŋ` = K. little finger (THE small one, by default referring to finger)
+- 11. `ɗǝ̀ɔŋ nìm` = J. hunter??
+- 12. `hodê ɗǝ̀ɔŋ` = L. puppy (dog + small) ✓
+
+For 11 to be "hunter" with "small + thing" doesn't make sense.
+
+Let me try:
+- 10. `ɗǝ̀ɔŋ` = J. hunter
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger (hunter + bird = little finger??) ✗
+
+OR:
+- `ɗǝ̀ɔŋ` has multiple meanings
+
+Let me try different combinations:
+- 5. `bʉʉ` = E. dog
+- 10. `ɗǝ̀ɔŋ` = K. little finger
+- 11. `ɗǝ̀ɔŋ nìm` = J. hunter (little finger + thing = hunter??) ✗
+
+None of these make sense.
+
+Let me reconsider the whole thing. Perhaps:
+
+- 5. `bʉʉ` = water
+- 10. `ɗǝ̀ɔŋ` = finger
+- 11. `ɗǝ̀ɔŋ nìm` = little finger (finger + little)
+- Where `nìm` here means "little"
+
+But `nìm` also means "bird" in other contexts? That would be confusing...
+
+Actually, let me look at the structure more carefully:
+
+Items with `nìm`:
+- 2. `bèè nìm`
+- 9. `cúŋ nìm`
+- 11. `ɗǝ̀ɔŋ nìm`
+- 16. `nìm` (standalone)
+- 17. `nìm bʉʉ`
+- 20. `sìɔw nìm`
+- 21. `yír nìm`
+
+If `nìm` is always second (except 16, 17), it might be a classifier or genitive marker.
+
+But in 17, `nìm` is first. So maybe:
+- 17. `nìm bʉʉ` = water source (water + source)
+- Where `nìm` = water and `bʉʉ` = source
+
+Then:
+- 5. `bʉʉ` = Q. source of water? No, that's 17.
+- 5. `bʉʉ` = source (standalone)
+
+Looking at single-word English options:
+- A. Anthocleista vogelii
+- C. carpenter
+- E. dog
+- J. hunter
+- P. soup
+- T. water
+
+And single Nizaa words:
+- 1. `bèè`
+- 3. `bòw`
+- 5. `bʉʉ`
+- 10. `ɗǝ̀ɔŋ`
+- 16. `nìm`
+
+Five singles in each! So:
+- 1. `bèè` = A. Anthocleista vogelii ✓
+- 3. `bòw` = C. carpenter ✓
+- 5. `bʉʉ` = E, J, P, or T
+- 10. `ɗǝ̀ɔŋ` = E, J, P, or T
+- 16. `nìm` = E, J, P, or T
+
+Given the compounds:
+- 17. `nìm bʉʉ` = Q. source of water
+- If `nìm` = water and `bʉʉ` = source:
+  - 16. `nìm` = T. water ✓
+  - 5. `bʉʉ` = (not a standalone option for "source")
+
+OR:
+- If `nìm` = source and `bʉʉ` = water:
+  - 16. `nìm` = (not "source" as a standalone)
+  - 5. `bʉʉ` = T. water ✓
+
+The second makes more sense. So:
+- 5. `bʉʉ` = T. water ✓
+- 16. `nìm` = E, J, or P
+- 10. `ɗǝ̀ɔŋ` = E, J, or P
+
+For 16. `nìm` appearing in so many compounds, it's probably a common word. P. soup is a common food item.
+- 16. `nìm` = P. soup
+
+Then:
+- 5. `bʉʉ` = T. water ✓
+- 10. `ɗǝ̀ɔŋ` = E or J
+- 16. `nìm` = P. soup
+
+For 10:
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger
+- 12. `hodê ɗǝ̀ɔŋ` = L. puppy
+
+If `ɗǝ̀ɔŋ` = dog:
+- 11. dog + soup = little finger ✗
+
+If `ɗǝ̀ɔŋ` = hunter:
+- 11. hunter + soup = little finger ✗
+- 12. ? + hunter = puppy ✗
+
+Neither works!
+
+Let me reconsider. Maybe `nìm` isn't "soup" but has another function.
+
+If I look at:
+- 2. `bèè nìm` = calabash
+- 21. `yír nìm` = wild bird
+
+Both are nouns. So `nìm` might be a nominalizer or classifier.
+
+- 2. tree + NOM = calabash (tree fruit)
+- 21. wild + NOM = wild bird (wild + bird/animal)
+
+Then:
+- 9. `cúŋ nìm` = head (head + NOM = head as noun)
+- 11. `ɗǝ̀ɔŋ nìm` = little finger (small/little + NOM = the little one = little finger) ✓
+- 16. `nìm` = soup (NOM alone = generic food/liquid)
+- 20. `sìɔw nìm` = water? (tree + NOM = tree liquid = sap/water from tree?)
+
+This is working better!
+
+So:
+- `nìm` = nominalizer/classifier (creates nouns)
+- 10. `ɗǝ̀ɔŋ` = small/little (adjective)
+- 11. `ɗǝ̀ɔŋ nìm` = the small one = K. little finger ✓
+
+But 10 being just "small" can't be a standalone noun...
+
+Unless in Nizaa, adjectives can stand alone as nouns (like "the small" in English ellipsis).
+
+Let me check: options for 10 are E (dog) or J (hunter).
+
+Could "small" be a standalone meaning for dog or hunter? Not really.
+
+Let me try a different parse:
+- `ɗǝ̀ɔŋ` = finger
+- `nìm` = small/little (modifier)
+- 11. `ɗǝ̀ɔŋ nìm` = finger small = little finger ✓
+
+Then:
+- 10. `ɗǝ̀ɔŋ` = finger (not in options...)
+- Remaining options are E (dog), J (hunter), P (soup)
+
+Hmm, this doesn't work either.
+
+Let me try yet again:
+- 10. `ɗǝ̀ɔŋ` = E. dog
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger (dog + little = little finger??) ✗
+
+OR:
+- 10. `ɗǝ̀ɔŋ` = J. hunter
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger (hunter + modifier = little finger??) ✗
+- 12. `hodê ɗǝ̀ɔŋ` = L. puppy (? + hunter = puppy??) ✗
+
+None of these semantic combinations work!
+
+I think I need to reconsider 12. Maybe it's not "puppy."
+
+Let me look at all options again:
+Remaining to assign: E (dog), J (hunter), K (little finger), L (puppy), P (soup), T (water)
+
+For positions: 5, 10, 11, 12, 16, 20
+
+Let me try:
+- 5. `bʉʉ` = T. water (used in 17, 18 for water-related compounds) ✓
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger ✓
+- 16. `nìm` = P. soup ✓
+
+That leaves: E, J, L for positions 10, 12, 20
+
+- 10. `ɗǝ̀ɔŋ` = ?
+- 12. `hodê ɗǝ̀ɔŋ` = ?
+- 20. `sìɔw nìm` = ?
+
+For 12 to involve 10's base word, and for 20 to involve tree (`sìɔw`):
+
+Could:
+- 10. `ɗǝ̀ɔŋ` = E. dog
+- 12. `hodê ɗǝ̀ɔŋ` = L. puppy (baby + dog)
+- 20. `sìɔw nìm` = J. hunter (tree + nominalizer = forest person = hunter) ✓
+
+This works semantically!
+
+So:
+- 5. `bʉʉ` = T. water ✓
+- 10. `ɗǝ̀ɔŋ` = E. dog ✓
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger (wait, dog + NOM = little finger??) ✗
+
+This breaks 11 again.
+
+Let me try the other way:
+- 10. `ɗǝ̀ɔŋ` = J. hunter
+- 12. `hodê ɗǝ̀ɔŋ` = ? (? + hunter)
+- Could `hodê` = young, so young hunter? Not "puppy"
+
+- 20. `sìɔw nìm` = E. dog (tree + NOM = forest animal = dog) ✓
+- But then what's 12 (puppy)?
+
+Alternatively:
+- 10. `ɗǝ̀ɔŋ` = L. puppy
+- 12. `hodê ɗǝ̀ɔŋ` = ? (? + puppy)
+- Doesn't make sense
+
+OR:
+- 12. `hodê ɗǝ̀ɔŋ` = J. hunter (? + ?)
+- 10. `ɗǝ̀ɔŋ` = E. dog
+- 20. `sìɔw nìm` = L. puppy (tree + NOM = young animal = puppy?) ✗
+
+I'm going in circles. Let me make a best guess:
+
+Based on semantic likelihood:
+- `sìɔw nìm` with tree + NOM most likely = forest animal = E. dog or L. puppy
+- Puppy is more likely to be a compound (young dog)
+- So 12. `hodê ɗǝ̀ɔŋ` = L. puppy
+
+If 12 = puppy and involves `ɗǝ̀ɔŋ`:
+- Either `ɗǝ̀ɔŋ` = dog (and `hodê` = young)
+- Or `ɗǝ̀ɔŋ` = young (and `hodê` = dog)
+
+If `ɗǝ̀ɔŋ` = dog:
+- 10. `ɗǝ̀ɔŋ` = E. dog ✓
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger (dog + NOM = ?) ✗
+
+If `ɗǝ̀ɔŋ` = young/small:
+- 10. `ɗǝ̀ɔŋ` = (can't be a standalone unless it's "the young one")
+- Could 10 be K. little finger (the small one)? ✓
+- 11. `ɗǝ̀ɔŋ nìm` = ? (small + NOM)
+- But that duplicates 10...
+
+Actually, wait:
+- 10. `ɗǝ̀ɔŋ` = K. little finger (the small one, referring to finger) ✓
+- 11. `ɗǝ̀ɔŋ nìm` = ? (can't also be little finger)
+
+So 10 and 11 must be different. Let me see what's left:
+E (dog), J (hunter), P (soup), T (water) for 5, 10, 11, 16, 20 (after assigning 12 = puppy)
+
+No wait, I already tentatively assigned:
+- 5 = T
+- 16 = P
+
+So remaining E, J for 10, 11, 20
+
+- 10. `ɗǝ̀ɔŋ` = E or J
+- 11. `ɗǝ̀ɔŋ nìm` = K. little finger
+- 20. `sìɔw nìm` = E or J
+
+For 11 to be "little finger" with `ɗǝ̀ɔŋ` from 10:
+- If 10 = E (dog), then 11 = dog + NOM = little finger ✗
+- If 10 = J (hunter), then 11 = hunter + NOM = little finger ✗
+
+Neither works!
+
+I think the issue is that K (little finger) can't logically derive from E (dog) or J (hunter).
+
+Let me reconsider the mapping. Maybe:
+- 11 is NOT K (little finger)
+- or 12 is NOT L (puppy)
+
+Let me try:
+- 11. `ɗǝ̀ɔŋ nìm` = J. hunter (small + NOM = small person = hunter?)  
+- Hmm, hunters aren't necessarily small...
+
+OR:
+- 11. `ɗǝ̀ɔŋ nìm` = E. dog (? + NOM = dog)
+- 12. `hodê ɗǝ̀ɔŋ` = L. puppy (baby + ?)
+- 10. `ɗǝ̀ɔŋ` = ?
+
+OR:
+- 20. `sìɔw nìm` = K. little finger (tree + NOM = ?) ✗
+- That doesn't make sense either.
+
+I think I'm overcomplicating this. Let me just make reasonable assignments:
+
+**Final attempt with best guesses:**
+
+1. `bèè` = A (tree name)
+2. `bèè nìm` = B (calabash - tree fruit)
+3. `bòw` = C (carpenter)
+4. `bòw-ŋwìiŋ` = D (cup - carved thing)
+5. `bʉʉ` = T (water)
+6. `cam fwɛ̀ɛŋ` = F (duck)
+7. `cam-ŋwìiŋ` = G (fingernail)
+8. `cúŋ fwɛ̀ɛŋ` = H (hairdresser)
+9. `cúŋ nìm` = I (head)
+10. `ɗǝ̀ɔŋ` = J (hunter)
+11. `ɗǝ̀ɔŋ nìm` = K (little finger)
+12. `hodê ɗǝ̀ɔŋ` = L (puppy)
+13. `nìì cúŋ` = M (roof)
+14. `nìì gírcí bʉʉ` = N (sauce)
+15. `nìì kwɛ́ɛŋ` = O (sauce spoon)
+16. `nìm` = P (soup)
+17. `nìm bʉʉ` = Q (source of water)
+18. `sìì bʉʉ` = R (teardrop)
+19. `sìɔw kwɛ́ɛŋ` = S (tree bark)
+20. `sìɔw nìm` = E (dog - forest animal)
+21. `yír nìm` = U (wild bird)
+
+Let me verify this makes some semantic sense:
+- 20. tree + thing = dog (forest animal) ✓ plausible
+- 11. hunter + thing = little finger ✗ doesn't make sense
+
+Hmm, 11 still doesn't work. Let me swap 10 and 20:
+
+10. `ɗǝ̀ɔŋ` = E (dog)
+20. `sìɔw nìm` = J (hunter - forest person) ✓
+
+Then:
+11. `ɗǝ̀ɔŋ nìm` = dog + thing = little finger ✗ still doesn't work
+
+Unless "dog thing" is an idiom for little finger in Nizaa? Unlikely...
+
+Let me check if there's another interpretation. What if `nìm` in different positions has different functions?
+
+When `nìm`

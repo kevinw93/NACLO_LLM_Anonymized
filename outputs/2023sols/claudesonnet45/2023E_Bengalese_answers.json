@@ -1,0 +1,47 @@
+[
+  {
+    "question_id": "E1_1",
+    "answer": "2",
+    "reasoning": "Counting 'ki' in the Hawaiian text: appears at positions starting with 'ikinohihana...' and 'akuikalania...', giving us 2 occurrences."
+  },
+  {
+    "question_id": "E1_2",
+    "answer": "12",
+    "reasoning": "Counting all occurrences of letter 'k' in the entire Hawaiian text gives us 12 total instances."
+  },
+  {
+    "question_id": "E1_3",
+    "answer": "1/6",
+    "reasoning": "P(k→i) = (Count of k followed by i) / (Count of k) = 2/12 = 1/6"
+  },
+  {
+    "question_id": "E1_4",
+    "answer": "6",
+    "reasoning": "Counting 'ka' in the Hawaiian text: appears in 'kahonuaua', 'ikinohihanakeakuaikalaniamekahonuahe', 'kahohonukapouli', and 'holaka', giving us 6 occurrences."
+  },
+  {
+    "question_id": "E1_5",
+    "answer": "12",
+    "reasoning": "Same count of k as before: 12 total occurrences in the text."
+  },
+  {
+    "question_id": "E1_6",
+    "answer": "1/2",
+    "reasoning": "P(k→a) = (Count of k followed by a) / (Count of k) = 6/12 = 1/2"
+  },
+  {
+    "question_id": "E2_1",
+    "answer": "a",
+    "reasoning": "Based on the transitional probabilities calculated, 'a' follows 'k' with probability 1/2 (6 out of 12 times), which is higher than any other letter following k."
+  },
+  {
+    "question_id": "E3_1",
+    "answer": "B and C",
+    "reasoning": "Bengalese finch song is more predictable than human language. Sequence B shows repeated pattern 'cdefg' appearing 5 times and 'ahbh' multiple times. Sequence C also shows repetition of patterns like 'cdef' and 'deagh'. These high repetition rates indicate higher transitional probabilities characteristic of finch song."
+  },
+  {
+    "question_id": "E4_1",
+    "answer": "TREES TREES TREES",
+    "reasoning": "Working through the transitional probabilities systematically: Starting position unknown, then R(0.40)→E(0.15)→E(0.20)→S(0.05)→(space)(0.35)→T(0.15)→R(0.05)→E(0.60)→E(0.10)→S(0.35)→(space)(0.05)→T(0.03)→R(0.35)→E(0.15)→E(0.10). This spells out 'TREES TREES TREES' which makes sense as a repeated phrase demonstrating transitional probabilities."
+  }
+]

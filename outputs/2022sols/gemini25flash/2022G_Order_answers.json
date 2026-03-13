@@ -1,0 +1,27 @@
+[
+  {
+    "question_id": "G1_1",
+    "answer": "FORTY",
+    "reasoning": "Professor Shrdlu said 'OVERFIFTY', implying a number greater than 50. The computer received the letters [E,F,F,I,O,R,T,V,Y]. The hint states the answer is 'a number between one and fifty' (exclusive). From the available letters, possible numbers that can be spelled are 'FIVE' (5), 'FORTY' (40), and 'FIFTY' (50). 'FIFTY' is excluded by the 'between one and fifty' constraint. Both 5 and 40 are valid in terms of letter availability and the range. Assuming the computer would misinterpret to the largest possible number within the given constraints that is still 'smaller' than intended, 'FORTY' (40) is the most logical answer."
+  },
+  {
+    "question_id": "G2_1",
+    "answer": "IVEMADEMYPOSITIONCLEAR",
+    "reasoning": "The input provides letter-position pairs (Letter:Position). To reconstruct the message, we sort these pairs by their numerical position and concatenate the letters. The highest position number is 22. Ordering the letters by their positions from 1 to 22 yields: I (1), V (2), E (3), M (4), A (5), D (6), E (7), M (8), Y (9), P (10), O (11), S (12), I (13), T (14), I (15), O (16), N (17), C (18), L (19), E (20), A (21), R (22). Concatenating these forms 'IVEMADEMYPOSITIONCLEAR'."
+  },
+  {
+    "question_id": "G3_1",
+    "answer": "NALPPUKCAB",
+    "reasoning": "The input provides position-letter pairs (Position:Letter). Similar to G2, we sort these pairs by their numerical position and concatenate the letters. The highest position number is 10. Ordering the letters by their positions from 1 to 10 yields: N (1), A (2), L (3), P (4), P (5), U (6), K (7), C (8), A (9), B (10). Concatenating these forms 'NALPPUKCAB'."
+  },
+  {
+    "question_id": "G4_1",
+    "answer": "BRANCHINGOUT",
+    "reasoning": "The input provides letter-path pairs, where paths (sequences of 'L' for left and 'R' for right) indicate the letter's position as a leaf node in a binary tree. Following the example provided ('IN THE SEA'), the message is formed by performing a left-to-right (in-order) traversal of the leaf nodes in the constructed tree. Building the tree from the given paths and then traversing its leaves from left to right yields: B (LLLL), R (LLLR), A (LLRL), N (LLRRL), C (LLRRRL), H (LLRRRR), I (LRL), N (LRRL), G (LRRR), O (RLL), U (RLR), T (RR). Concatenating these letters results in 'BRANCHINGOUT'."
+  },
+  {
+    "question_id": "G5_1",
+    "answer": "PAYATTENTIONTOYOUNDINGS",
+    "reasoning": "The input uses Wickelletters, in the format 'LeftContext:Letter_RightContext', with '#' representing a word boundary. To decode the message, we must chain these Wickelletters. We start by finding the Wickelletter with '#' as its LeftContext: 'P:#_A'. This means the first letter is 'P' and it's followed by 'A'. We then look for a Wickelletter where 'A' is the letter and 'P' is the LeftContext (A:P_Y), and so on. This process is continued by matching the current letter and its right context with the next Wickelletter's left context and letter. The chain continues until a Wickelletter with '#' as its RightContext is found (S:G_#). Following this deterministic chain using all provided Wickelletters yields the message: PAYATTENTIONTOYOUNDINGS."
+  }
+]

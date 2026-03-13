@@ -1,0 +1,22 @@
+[
+  {
+    "question_id": "H3_1",
+    "answer": "GOOD",
+    "reasoning": "The neural network transformation is defined by the following linear combinations based on patterns from the examples: out1 = in2 + in3, out2 = in1 + in2 + in3, out3 = in3 + in4, out4 = in1 + in3. For word 1 inputs [8, 11, -4, 19]: out1 = 11 + (-4) = 7 (G), out2 = 8 + 11 + (-4) = 15 (O), out3 = (-4) + 19 = 15 (O), out4 = 8 + (-4) = 4 (D)."
+  },
+  {
+    "question_id": "H3_2",
+    "answer": "LUCK",
+    "reasoning": "Using the same transformation: For word 2 inputs [9, 10, 2, 1]: out1 = 10 + 2 = 12 (L), out2 = 9 + 10 + 2 = 21 (U), out3 = 2 + 1 = 3 (C), out4 = 9 + 2 = 11 (K)."
+  },
+  {
+    "question_id": "H3_3",
+    "answer": "WITH",
+    "reasoning": "Using the same transformation: For word 3 inputs [-14, 1, 22, -2]: out1 = 1 + 22 = 23 (W), out2 = -14 + 1 + 22 = 9 (I), out3 = 22 + (-2) = 20 (T), out4 = -14 + 22 = 8 (H)."
+  },
+  {
+    "question_id": "H3_4",
+    "answer": "THAT",
+    "reasoning": "Using the same transformation: For word 4 inputs [-12, -12, 32, -31]: out1 = -12 + 32 = 20 (T), out2 = -12 + (-12) + 32 = 8 (H), out3 = 32 + (-31) = 1 (A), out4 = -12 + 32 = 20 (T)."
+  }
+]

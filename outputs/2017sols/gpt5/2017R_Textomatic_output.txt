@@ -1,0 +1,47 @@
+Model: gpt-5
+Generation Time: 300.61 seconds
+Timestamp: 2025-12-09 02:54:32
+================================================================================
+
+[
+  {
+    "question_id": "R1_1",
+    "answer": [">", "IÈME>"],
+    "reasoning": "Append the ordinal suffix to every form; later rules will fix exceptions."
+  },
+  {
+    "question_id": "R1_2",
+    "answer": ["QIÈME", "QUIÈME"],
+    "reasoning": "Insert U after final Q before the suffix to form CINQUIÈME."
+  },
+  {
+    "question_id": "R1_3",
+    "answer": ["FIÈME", "VIÈME"],
+    "reasoning": "Change final F before the suffix to V for NEUVIÈME."
+  },
+  {
+    "question_id": "R1_4",
+    "answer": ["EIÈME", "IÈME"],
+    "reasoning": "Delete final E before the suffix for -E numbers (ONZE→ONZIÈME, etc.)."
+  },
+  {
+    "question_id": "R1_5",
+    "answer": ["UNIÈME", "PREMIER"],
+    "reasoning": "Irregular ordinal: UN→PREMIER (applies after the suffix is added)."
+  },
+  {
+    "question_id": "R2_1",
+    "answer": ["<UNIÈME>", "<PREMIER>"],
+    "reasoning": "Anchor the UN→PREMIER rule to the whole word so VINGT-ET-UN stays UNIÈME."
+  },
+  {
+    "question_id": "R2_2",
+    "answer": ["TSIÈME", "TIÈME"],
+    "reasoning": "Drop the plural -S of VINGTS before the suffix so QUATRE-VINGTS→QUATRE-VINGTIÈME."
+  },
+  {
+    "question_id": "R3_1",
+    "answer": [["Q>", "QU>"], ["F>", "V>"], ["TRE>", "TRI>"], ["ZE>", "ZI>"], ["TS>", "T>"], [">", "IÈME>"], ["<UNIÈME>", "<PREMIER>"]],
+    "reasoning": "Place all stem-adjustments before the suffix rule and make the irregular rule last. In reverse, the machine first removes IÈME (rule 6), then restores stems (rules 1–5), and maps PREMIER back to UN (rule 7). This avoids adding an extra E (e.g., SIXIÈME→SIX) and handles VINGT-ET-UN and QUATRE-VINGTS correctly."
+  }
+]

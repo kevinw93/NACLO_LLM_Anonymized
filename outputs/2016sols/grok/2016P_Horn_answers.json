@@ -1,0 +1,17 @@
+[
+  {
+    "question_id": "P1",
+    "answer": "Facts: N(mary). N(john). N(kim). VP(paint_the_house). Rules: VP(concat(helped, concat(X, Y))) :- N(X), VP(Y). VP(concat(let, concat(X, Y))) :- N(X), VP(Y). VP(concat(help, concat(X, Y))) :- N(X), VP(Y).",
+    "reasoning": "For P1, the English sentences have interleaved verb-NP structure starting with the outer verb. The base VP is 'paint the house'. 'helped' is used for the outer help, while 'help' for inner. 'let' is used for both outer and inner. The recursive rules allow nesting by attaching a causative verb followed by NP and then another VP. This generates infinite length sentences by recursion. Facts include the nouns and base VP. The rules match the examples like 'helped mary help john paint_the_house' and mixed ones."
+  },
+  {
+    "question_id": "P2",
+    "answer": "Facts: N(hans). N(jan). VP('', aastriche). Rules: VP(concat(em, concat(X, P)), concat(haelfe, S)) :- N(X), VP(P, S). VP(concat(de, concat(X, P)), concat(laa, S)) :- N(X), VP(P, S). HelpedVP(concat(em, concat(X, P)), concat(halfed, S)) :- N(X), VP(P, S). LetVP(concat(de, concat(X, P)), concat(loend, S)) :- N(X), VP(P, S). Full string: concat(mer, Prefix, es_huus, Suffix) where Prefix and Suffix from HelpedVP or LetVP.",
+    "reasoning": "For P2, Swiss German has NPs with articles in front (prefix), fixed 'es huus', then verbs in reverse order (suffix). Articles 'em' for help-governed, 'de' for let-governed. Verb forms: outer help 'halfed', inner 'haelfe'; outer let 'loend', inner 'laa'; base 'aastriche'. Use multi-argument VP(Prefix, Suffix) for parallel construction. Base is empty prefix, 'aastriche' suffix. Recursive rules add to prefix and suffix based on type. Separate starters for outer with special forms. This ensures articles match governing verbs. Assumes matching number of NPs and causatives; transcription may have minor inconsistencies but pattern holds. Generates examples like for all help: Prefix 'em hans em jan', Suffix 'halfed haelfe aastriche'."
+  },
+  {
+    "question_id": "P3",
+    "answer": "Facts/Rules for T: T('', aastriche). T(concat(em, X), halfed) :- N(X). T(concat(de, X), loend) :- N(X). T(concat(em, X), haelfe) :- N(X). T(concat(de, X), laa) :- N(X). Rules for R: R(w y, x z) :- T(w, x), T(y, z). R(w y, x z) :- T(w, x), R(y, z). R(w y, x z) :- R(w, x), T(y, z). S(prefix ; suffix) :- R(prefix, suffix). N(hans). N(jan). Full: concat(mer, prefix, es_huus, suffix).",
+    "reasoning": "For P3, the single string approach is hard for verb-final due to distant dependencies between articles and verbs. The extension uses pairs (front=prefix, back=suffix) with R combining pairs by concatenating fronts and backs separately. T defines basic pairs: base empty front 'aastriche' back; outer levels with special verbs; inner levels with inner verbs. Articles in front based on type. Recursive R rules allow chaining multiple T's (outer + inners + base) to build arbitrary depth. This generates correct matched prefix-suffix pairs, e.g., for let Hans help Jan paint: T(de hans, loend) combine with T(em jan, haelfe) combine with T('', aastriche) gives (de hans em jan, loend haelfe aastriche). S smashes to pair. Handles mixed by choosing appropriate T's in chain."
+  }
+]

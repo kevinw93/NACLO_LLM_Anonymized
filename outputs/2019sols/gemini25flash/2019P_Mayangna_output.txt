@@ -1,0 +1,93 @@
+Model: gemini-2.5-flash
+Generation Time: 143.49 seconds
+Timestamp: 2025-11-17 17:02:09
+================================================================================
+
+**Pattern Analysis and Lexicon Development:**
+
+The provided sentences in Mayangna and their English translations reveal several patterns in word order, morphology, and vocabulary.
+
+**1. Word Order:**
+Mayangna sentences generally follow a Subject-Object-Locative-Verb (S-DO-Loc-V) or Subject-Locative-Object-Verb (S-Loc-DO-V) pattern. The verb often appears at the end of the sentence or verb phrase.
+
+**2. Nouns and Plurals:**
+*   Nouns: Words like `dakiwan`/`daniwan` (master), `ulamak` (clam), `mukus` (cloud), `yaninamak` (farm), `mamat` (moon), `yaihmat`/`yaihnit` (pipante), `buknina` (book), `pinkisil` (pencil), `sunipai`/`supai` (spider), `dakakaawi` (raft), `sumalu` (dog), `kisauri` (coriander), `mumalalah` (guapote), `was` (water), `titinghki` (grandmother), `wakisa` (banana) have been identified.
+*   Plural Marker: `balna` consistently follows the noun it pluralizes (e.g., `ulamak balna` - clams).
+
+**3. Pronouns and Possessives:**
+*   `kuring`: I (subject)
+*   `yangna`: you (singular, subject)
+*   `man`: you (singular, object or possessive), your (singular)
+*   `yang`: my (possessive), me (object)
+*   `witing`: us (object), his (possessive), her (possessive)
+*   `witingna`: their (possessive)
+*   `dikitna`: his (possessive for 'his raft')
+*   `kuringki`: appears with `yang` in `yang kuringki` to mean 'my'.
+
+**4. Verbs and Negation:**
+Verb stems can be identified, and negation is expressed using various suffixes:
+*   `-syang`: e.g., `yamtasyang` (do not make) from `yamta` (make).
+*   `-ski`: e.g., `yayamwaski` (do not make) from `yayamwa` (make); `talwaski` (does not see) from `talwa` (see).
+*   `-asman`: e.g., `dakaasman` (do not hear) from `daka` (hear); `kastasman` (do not eat) from `kasta` (eat).
+Positive verb forms include `kaswi` (eats), `buiwi` (shakes), `kurahtayang` (open), `dakaaman` (hear), `talwi` (sees). Some verbs also include `yak` as part of the verb phrase (e.g., `dinit yak` - hear, `dangkit yak` - eat).
+
+**5. Locative Expressions:**
+This is the most complex category due to the highly polysemous nature of `yak`.
+*   `yak` (postposition): 'next to' when directly following a noun/pronoun (e.g., `man yak` - next to you).
+*   Compound locative postpositions:
+    *   `mikit yak`: above
+    *   `taanit yak`/`taanitna yak`: in front of
+    *   `palani`: under
+    *   `dangkit yak`: behind
+*   `yak` (noun): 'raft' (S4: `dikitna yak` - his raft). This is supported by `dakakaawi` also meaning 'raft' (S8).
+*   `yak` (specific locative meaning): 'above' when following `mamat` (moon) (S5: `man mamat yak` - moon above you).
+
+**Assumptions Made for Unknowns:**
+*   For P1, unknown nouns (`damat`, `wakimasa`, `walakibis`) are inferred as generic plausible nouns (e.g., `house`, `friends`, `children`).
+*   For P1, unknown subjects (`waiku`) are inferred as 'we' (a common collective subject).
+*   For P2, if a negative verb form is not explicitly given, I will use a known negative suffix that appears with a similar-sounding or structured verb (e.g., `kurahtasyang` for 'do not open').
+*   For P2, 'you (pl) possessive' is inferred from 'your (sg)' (`man`) or using `yangna balna` for 'you (pl) subject'.
+*   For P2.7 'at a raft', `yak` (raft, noun) is used as the bare locative element, implying 'at the raft'.
+
+---
+**Final Answers:**
+
+```json
+[
+  {
+    "question_id": "P1_1",
+    "answer": "We hear next to your house.",
+    "reasoning": "Breaking down 'waiku dakaayang man damat yak': 'waiku' is assumed to be the subject 'We'. 'dakaayang' is a form of the verb 'to hear'. 'man damat yak' is a locative phrase. 'man' means 'your' (possessive singular), 'yak' means 'next to' (postposition). 'damat' is an unknown noun; given the context, 'house' is a plausible generic noun that one might hear next to. The sentence structure is S-Loc-V (Subject-Locative-Verb) with an implied direct object for 'hear'."
+  },
+  {
+    "question_id": "P1_2",
+    "answer": "Your owl shakes clams next to pipante.",
+    "reasoning": "Breaking down 'ulamakni man kubamhma yaihnit yak buitaman': The subject is 'man kubamhma' (your owl), where 'man' is 'your' and 'kubamhma' is a variant of 'kubamhni' (owl). The direct object is 'ulamakni', where 'ulamak' is 'clam', and 'ni' is an unexplained suffix, but 'ulamakni' is interpreted as 'clams'. The verb 'buitaman' is inferred as 'shakes' based on 'buiwi' (shakes). The locative phrase is 'yaihnit yak', where 'yaihnit' is 'pipante' (variant of 'yaihmat') and 'yak' means 'next to'. The sentence structure is S-DO-Loc-V (Subject-Direct Object-Locative-Verb)."
+  },
+  {
+    "question_id": "P1_3",
+    "answer": "Your friends do not see in front of my children.",
+    "reasoning": "Breaking down 'man wakimasa talasyangna yang walakibis balna taanitna yak': The subject is 'man wakimasa', where 'man' is 'your' and 'wakimasa' is an unknown noun assumed to be 'friends' or 'people'. The verb 'talasyangna' means 'do not see', derived from 'talwa' (see) with the negative suffix '-syang' and an additional 'na' which could indicate plural subject. The locative phrase is 'yang walakibis balna taanitna yak'. 'yang' means 'my'. 'walakibis' is an unknown noun, interpreted as 'children'. 'balna' is the plural marker. 'taanitna yak' means 'in front of' (variant of 'taanit yak'). The sentence structure is S-V-Loc (Subject-Verb-Locative)."
+  },
+  {
+    "question_id": "P2_4",
+    "answer": "witing dakiwan balna mukus balna witing taanit yak kurahtasyang",
+    "reasoning": "Translating 'Our masters do not open the clouds in front of us.': 'Our masters' is 'witing dakiwan balna' ('witing' for 'our', 'dakiwan' for 'master', 'balna' for plural). 'the clouds' is 'mukus balna'. 'in front of us' is 'witing taanit yak' ('witing' for 'us', 'taanit yak' for 'in front of'). 'do not open': 'kurahtayang' is 'open'. Lacking an explicit negative form for 'kurahtayang', the '-syang' negative suffix (from 'yamtasyang') is applied to 'kurahta', yielding 'kurahtasyang'. The structure is S-DO-Loc-V."
+  },
+  {
+    "question_id": "P2_5",
+    "answer": "yangna sumalu yak was yak yamta",
+    "reasoning": "Translating 'You make the dog's raft next to the water.': 'You' (singular subject) is 'yangna'. 'make' is 'yamta'. 'the dog's raft' is 'sumalu yak' ('sumalu' for 'dog', 'yak' as the noun for 'raft', juxtaposition implies possession). 'next to the water' is 'was yak' ('was' for 'water', 'yak' as the postposition 'next to'). The structure is S-DO-Loc-V."
+  },
+  {
+    "question_id": "P2_6",
+    "answer": "kuring pinkisil balna man titinghki mikit yak buiwi",
+    "reasoning": "Translating 'I shake pencils above your (pl) grandmother.': 'I' is 'kuring'. 'shake' is 'buiwi'. 'pencils' is 'pinkisil balna'. 'your (pl) grandmother': 'titinghki' is 'grandmother'. Although 'man' usually means 'your (sg)', it's used here for 'your' in the absence of a specific 'your (pl)' form. 'above' is 'mikit yak'. The structure is S-DO-Loc-V."
+  },
+  {
+    "question_id": "P2_7",
+    "answer": "yangna balna witing wakisa balna yak kastasman",
+    "reasoning": "Translating 'You (pl) do not eat our bananas at a raft.': 'You (pl)' (subject) is constructed as 'yangna balna' ('yangna' for 'you (sg)', 'balna' for plural). 'do not eat' is 'kastasman' (from 'kasta' (eat) with negative suffix '-asman'). 'our bananas' is 'witing wakisa balna' ('witing' for 'our', 'wakisa' for 'banana', 'balna' for plural). 'at a raft' is expressed by 'yak' (raft, noun) as a bare locative, implying 'at the raft'. The structure is S-DO-Loc-V."
+  }
+]
+```

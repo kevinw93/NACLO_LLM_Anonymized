@@ -1,0 +1,72 @@
+[
+  {
+    "question_id": "L1_1",
+    "answer": "TAYM",
+    "reasoning": "The word is processed as t-i-m-e. 't' is processed by the self-loop t:T (output T). 'i' is processed by the self-loop i:AY (output TAY). 'm' is processed by the transition m:M from the start state S0 to the middle state S1 (output TAYM). 'e' is processed by the transition e:Ø from S1 to a final state (output TAYM). The full process is S0 -> S0 -> S1 -> S2, resulting in the output TAYM."
+  },
+  {
+    "question_id": "L1_2",
+    "answer": "TREYDUHD",
+    "reasoning": "The word is processed as t-r-a-d-ed. 't', 'r', and 'a' are handled by self-loops on the start state (t:T, r:R, a:EY), yielding TREY. 'd' transitions from S0 to S1 via d:D, yielding TREYD. The ending 'ed' in 'traded' is pronounced like in 'sided', so the FST takes the ed:UHD transition from S1 to a final state. The final output is TREYDUHD."
+  },
+  {
+    "question_id": "L1_3",
+    "answer": "STRAYDIHNG",
+    "reasoning": "The word is processed as s-t-r-i-d-ing. 's', 't', 'r', 'i' are processed by self-loops on the start state (s:S, t:T, r:R, i:AY), yielding STRAY. 'd' transitions from S0 to S1 via d:D, yielding STRAYD. 'ing' is processed by the ing:IHNG transition from S1 to a final state. The final output is STRAYDIHNG."
+  },
+  {
+    "question_id": "L1_4",
+    "answer": "FREYMIHNG",
+    "reasoning": "The word is processed as f-r-a-m-ing. 'f', 'r', 'a' are handled by self-loops on the start state (f:F, r:R, a:EY), yielding FREY. 'm' transitions from S0 to S1 via m:M, yielding FREYM. 'ing' is processed by the ing:IHNG transition from S1 to a final state. The final output is FREYMIHNG."
+  },
+  {
+    "question_id": "L2_1",
+    "answer": "stage",
+    "reasoning": "For the word 'stage', after processing 'sta', the FST is at the start state with 'ge' remaining. For the input 'g', there are two possible transitions: g:G (self-loop) and g:DJ (to state S1). If the FST tries g:G, it remains in the start state, and then has no transition for the final 'e', causing the path to fail. It must then backtrack and try the g:DJ transition, which leads to a successful path. The other words, 'fading' and 'name', have only one possible path each."
+  },
+  {
+    "question_id": "L3_1",
+    "answer": "STEYDJIHNG",
+    "reasoning": "The word is processed as s-t-a-g-ing. After 'sta', the FST is at the start state. For 'g', it must take the g:DJ transition to S1 to have a valid path for the 'ing' suffix (as determined in L2). This produces STEYDJ. Then, from S1, 'ing' is processed by ing:IHNG. The final output is STEYDJIHNG."
+  },
+  {
+    "question_id": "L3_2",
+    "answer": "GEYMIHNG",
+    "reasoning": "For the word 'gaming', the FST starts at S0. For the first letter 'g', it can choose g:G (loop) or g:DJ (to S1). If it chooses g:DJ, the next input 'a' has no valid transition from S1. So it must choose g:G. The path is: g:G (loop), a:EY (loop), m:M (to S1), ing:IHNG (to final). The outputs are concatenated to form GEYMIHNG."
+  },
+  {
+    "question_id": "L4_1",
+    "answer": "C",
+    "reasoning": "Based on a constraint satisfaction process, I determined the mapping for all 6 arrows. The word 'he' needs two transitions from set (C), and 'colonel' needs three. This suggests (C) should be on a frequently used arrow, like arrow (1), which starts multiple successful paths for the given words."
+  },
+  {
+    "question_id": "L4_2",
+    "answer": "A",
+    "reasoning": "The word 'phase' (ph-a-se) follows the path using arrows (1), (2), (6). Arrow (1) processes 'ph'. Arrow (2) must process 'a' to produce 'EY'. The transition a:EY is in set (A). Therefore, arrow (2) must be label (A)."
+  },
+  {
+    "question_id": "L4_3",
+    "answer": "B",
+    "reasoning": "After assigning labels based on stronger constraints (from 'people' and 'phase'), B, C, and F remained for arrows 1, 3, and 5. I assigned C to (1) and F to (5). By elimination, arrow (3) is assigned label (B)."
+  },
+  {
+    "question_id": "L4_4",
+    "answer": "E",
+    "reasoning": "The word 'people' is processed in three parts: 'pe', 'p', 'le'. This corresponds to the path using arrows (1), (4), (5). Arrow (1) handles 'pe'. Arrow (5) handles 'le'. Therefore, arrow (4) must handle 'p', producing the sound 'P'. The transition p:P is in set (E). Thus, arrow (4) must be label (E)."
+  },
+  {
+    "question_id": "L4_5",
+    "answer": "F",
+    "reasoning": "The word 'colonel' ends in 'el', which is pronounced 'UHL'. The label set (F) contains the transition el:UHL. The path for 'colonel' must end in a transition to the final state. Arrow (5) is one such transition path and is a plausible candidate for this ending."
+  },
+  {
+    "question_id": "L4_6",
+    "answer": "D",
+    "reasoning": "The word 'phase' (ph-a-se) follows the path using arrows (1), (2), (6). As reasoned for arrow (2), arrow (6) must process the final part 'se' to produce 'Z'. The transition se:Z is in set (D). Therefore, arrow (6) must be label (D)."
+  },
+  {
+    "question_id": "L5_1",
+    "answer": "loophle",
+    "reasoning": "To solve this, I run the FST from L4 in reverse, converting the input sound sequence RUHFLEA into letters. I find the grapheme(s) corresponding to each phoneme: R -> lo (from lo:R), UH -> o (from o:UH), F -> ph (from ph:F), L -> l (from l:L), EA -> e (from e:EA). Concatenating these letters gives 'loophle'. This answer is 'very different' from 'roughly', as hinted in the problem."
+  }
+]

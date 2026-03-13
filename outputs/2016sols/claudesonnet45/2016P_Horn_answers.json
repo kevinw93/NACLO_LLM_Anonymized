@@ -1,0 +1,12 @@
+[
+  {
+    "question_id": "P1_1",
+    "answer": "N(John).\nN(Kim).\nV(help x y) :- N(x), V(y).\nV(let x y) :- N(x), V(y).",
+    "reasoning": "To generate phrases like 'help John let Kim let John', we need John and Kim as nouns, and recursive rules that allow 'help' and 'let' to take a noun and a verb phrase to create a new verb phrase. This allows unlimited nesting."
+  },
+  {
+    "question_id": "P2_1",
+    "answer": "T(em Jan, hälfe).\nT(em Hans, hälfe).\nT(de Jan, laa).\nT(de Hans, laa).\nT(em Jan, lönd).\nT(em Hans, lönd).\nT(de Jan, lönd laa).\nT(de Hans, lönd laa).\nR(wy, xz) :- T(w, x), T(y, z).",
+    "reasoning": "Swiss German exhibits cross-serial dependencies where noun phrases at the beginning pair with verbs at the end. The T facts pair noun phrases (em Jan, de Hans, etc.) with their corresponding verbs (hälfe, laa, lönd). The R rule combines two T-pairs to handle nested constructions. We need facts for all combinations that appear: em/de with Jan/Hans, paired with hälfe, laa, lönd, and lönd laa."
+  }
+]

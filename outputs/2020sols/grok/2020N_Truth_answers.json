@@ -1,0 +1,67 @@
+[
+  {
+    "question_id": "N1",
+    "answer": "In addition to uttering the statements directly from the True List, utter statements formed by replacing a constant such as a proper name, location, or numeral in one True List statement with an equivalent descriptive phrase or expression from another True List statement.",
+    "reasoning": "Approaching N1: The initial True List has three statements, and after adding three more (2+2=4, Ottawa is the capital city of Canada, Theodore Roosevelt was the 26th President of the US), the bot now utters 18 distinct true statements instead of just 6. The examples show substitutions: 'in Ottawa' becomes 'in the capital city of Canada' (using the new statement about Ottawa); '2 + 2 = 4' becomes '2 + 2 = 2 + 2' (replacing 4 with 2+2, though circular, it's true); and likely 'Theodore Roosevelt fought...' becomes 'The 26th President... fought...' (replacing the name with the description). The pattern is that the added instruction enables generating new true statements via substitution of equivalents, leading to more combinations (18 total, including bases and singles in both directions per pair: 5 for numbers/UK, 4 for Ottawa, 4 for TR, but perhaps counting more variants or inverses reaches 18). This preserves truth because equivalents refer to the same entity/value. The diagram n->a->c->l->o may illustrate chaining, but substitutions are primarily single-level here. Conclusion: The instruction is as stated, clear and accurate description."
+  },
+  {
+    "question_id": "N2",
+    "answer": "The number varies depending on the added statement. If it introduces no shared constants or definitions with existing statements, only 1 new statement (the added one). If it contains a substitutable constant with existing equivalents, add as many as the number of valid substitutions into the new statement. If it provides a new equivalent for an existing constant used in k existing statements, add k new statements from substituting into those. If both, add 1 + substitutions into new + substitutions into existing.",
+    "reasoning": "Approaching N2: Before update, bot only utters list statements, so adding one adds exactly 1 new utterance. After, with substitution rule, adding one interacts with the existing 6 via shared constants (like 4, Ottawa, TR) or introduces new ones. Patterns from initial: Adding definitional statements (is/=) to existing terms increases by more than 1 (e.g., adding Ottawa def added substitution in B, and inverse in E; similarly for others, contributing to 18 total). For a general addition: Analyze if the new statement has constants replaceable by existing defs (e.g., if new has 'Ottawa', can sub to 'capital...'; if multiple defs for same constant, multiple). Or if new defines an existing constant (e.g., new '4 = something else', then sub into A and D). If unrelated (e.g., 'The sky is blue'), no subs, +1 only. If both (e.g., new mentions and defines shared), additive. No fixed number, varies by type: minimal 1, more for connected. Explain fully as varying by interaction type."
+  },
+  {
+    "question_id": "N3_a",
+    "answer": "Ruth has 2 + 2 siblings.",
+    "reasoning": "Approaching N3_a: Added (a) 'Ruth has 4 siblings' (true). Bot utters base + subs. '4' is substitutable (existing defs: 2+2 from D, number of countries UK contains from A). Replacing 4 with 2+2 gives 'Ruth has 2 + 2 siblings' (true, equivalent). Other option 'Ruth has the number of countries the United Kingdom contains siblings' is awkward but true. Inverse subs (replace 4 elsewhere with 'number of Ruth's siblings') create more, like 'The United Kingdom contains the number of Ruth's siblings countries' (true). Choose simple single sub for new utterance, different from base. Pattern: Subs preserve truth for numbers."
+  },
+  {
+    "question_id": "N3_b",
+    "answer": "Ruth knows Ottawa.",
+    "reasoning": "Approaching N3_b: Added (b) 'Ruth knows the capital city of Canada' (true). 'The capital city of Canada' substitutable via E: = Ottawa. Replace gives 'Ruth knows Ottawa' (true, since she knows the capital, hence its name). No other obvious subs (Canada not defined). Inverse: (b) doesn't provide strict def for 'capital...' (it's known by Ruth, not 'is'), so no clear inverse sub into E (e.g., 'Ottawa is something Ruth knows' is true but not direct sub). Choose the direct replacement as new utterance. Pattern: Sub object with its equivalent."
+  },
+  {
+    "question_id": "N3_c",
+    "answer": "Ruth prefers the Washington Capitals to the capital city of Canada Senators.",
+    "reasoning": "Approaching N3_c: Added (c) 'Ruth prefers the Washington Capitals to the Ottawa Senators' (true). 'Ottawa Senators' contains 'Ottawa', substitutable via E: Ottawa = the capital city of Canada. Blindly replacing substring 'Ottawa' gives 'the capital city of Canada Senators' (nonsensical team). Full sub for 'Ottawa Senators' via B (Senators = hockey team plays home in Ottawa) could be 'the hockey team that plays home games in Ottawa', but to create issue as in story, choose the problematic embedded replacement. This is new, different from base. Pattern: Bot applies sub to any occurrence, even compounds, leading to weirdness."
+  },
+  {
+    "question_id": "N3_d",
+    "answer": "Ruth named her stuffed toy bear after the 26th President of the United States.",
+    "reasoning": "Approaching N3_d: Added (d) 'Ruth named her stuffed toy bear after Theodore Roosevelt' (true, meaning in honor of). 'Theodore Roosevelt' substitutable via F: = the 26th President of the US. Replace gives 'Ruth named ... after the 26th President of the United States' (true, refers to same person; 'after' is referential). Other sub via C: 'after the person who fought in the Spanish-American War' (also true). Inverse: Replace TR in C/F with 'the person Ruth named her bear after' (true). Choose referential sub. Pattern: Sub in prepositional phrase preserves meaning."
+  },
+  {
+    "question_id": "N3_e",
+    "answer": "Ruth named her stuffed toy bear the 26th President of the United States.",
+    "reasoning": "Approaching N3_e: Added (e) 'Ruth named her stuffed toy bear Theodore Roosevelt' (true, the name is Theodore Roosevelt). 'Theodore Roosevelt' substitutable via F: = the 26th President of the US. Replace gives 'Ruth named ... the 26th President of the United States' (now reads as the name given is the description phrase, not equivalent to original name). Different from base. Other subs similar. Pattern: Sub in direct object (name assignment) changes literal name, unlike referential use."
+  },
+  {
+    "question_id": "N4_a",
+    "answer": "True",
+    "reasoning": "Approaching N4_a: The chosen statement 'Ruth has 2 + 2 siblings' from N3_a. Since original has 4 siblings, and 2+2=4 (from D), this is semantically equivalent and true. Alfred and Ruth, knowing the list and subs preserve truth for numerical equivalence, would agree it's true. No ambiguity; straightforward math identity. Explanation: It's true because it equivalently expresses the number of siblings."
+  },
+  {
+    "question_id": "N4_b",
+    "answer": "True",
+    "reasoning": "Approaching N4_b: The chosen 'Ruth knows Ottawa' from N3_b. Since (b) says she knows the capital, which is Ottawa (from E), she knows Ottawa. True by transitivity of knowledge of the entity. Alfred/Ruth agree, as it's direct sub of the object with its identity. No issue with interpretation. Explanation: True, as knowing the capital implies knowing its name/location."
+  },
+  {
+    "question_id": "N4_c",
+    "answer": "Weird",
+    "reasoning": "Approaching N4_c: The chosen 'Ruth prefers the Washington Capitals to the capital city of Canada Senators' from N3_c. 'Capital city of Canada Senators' is not a coherent team name (no such entity), making the preference statement hard to interpret—does she prefer to a fictional/malformed team? Grammatically odd, semantically unclear. Matches Ruth's 'weird' utterances; Alfred agrees. Not clearly true/false without knowing if such a team exists (it doesn't). Explanation: Weird because the substitution creates a nonsensical proper name, unclear truth value."
+  },
+  {
+    "question_id": "N4_d",
+    "answer": "True",
+    "reasoning": "Approaching N4_d: The chosen 'Ruth named ... after the 26th President...' from N3_d. 'After' indicates inspiration by the person; subbing the description refers to the same individual (TR = 26th pres from F), so true. No change in meaning; referential context. Alfred/Ruth see it as equivalent. Explanation: True, as the description denotes the same person she named it after."
+  },
+  {
+    "question_id": "N4_e",
+    "answer": "False",
+    "reasoning": "Approaching N4_e: The chosen 'Ruth named ... the 26th President...' from N3_e. This implies the bear's name is literally 'the 26th President of the United States', but actually it's 'Theodore Roosevelt' (equivalent referent, but different string/phrase). In naming context, sub changes the assigned name, making the statement false (she didn't give that exact name). Alfred/Ruth interpret as false, as it doesn't match the literal naming. Don't know enough about Ruth's exact naming to confirm, but per note, select false. Explanation: False, because the substitution alters the specific name given to the bear."
+  },
+  {
+    "question_id": "N5",
+    "answer": "They could restrict substitutions to cases where the original term is a standalone referential noun phrase (not embedded in compounds like team names) and the position is such that the replacement preserves the intended reference without altering literal strings (e.g., allow in prepositional phrases like 'in Ottawa' or 'after TR' but not in direct name assignments like 'named ... TR'). Additionally, enforce semantic type matching (e.g., only city descriptions for cities, person descriptions for persons) and a basic grammatical well-formedness check to avoid malformed phrases. This would prevent weird/false outputs like fictional teams or incorrect name literals while keeping valid true substitutions like locations or referents.",
+    "reasoning": "Approaching N5: The issues arise from blind substitutions: embedded in compounds (c), literal names (e) create false/weird; referential ok (a,b,d). Patterns: Valid when sub preserves reference (people, places, numbers in arg positions); invalid when changes string in names or creates incoherence. To fix while keeping (2)-(5): Add constraints on application—syntactic (only full NPs, not substrings), semantic (type check: person->person desc, etc.), contextual (referential vs. quotative/literal). No need to cover all cases, just describe abilities like type awareness, position detection, grammar check. This reduces mistakes without exact programming details. Difficult as noted, but focuses on key problematic cases."
+  }
+]

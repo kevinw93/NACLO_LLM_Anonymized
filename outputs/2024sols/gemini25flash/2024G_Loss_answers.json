@@ -1,0 +1,167 @@
+[
+  {
+    "question_id": "G1_1",
+    "answer": "Unfilled Circle",
+    "reasoning": "Describo said 'circle'. If Describo intended the Filled Circle, it would have said 'filled' (cost 1, unique). If Describo intended the Unfilled Square, it would have said 'square' (cost 1, unique). Since neither of these shorter, unambiguous options were used for FC or US, Selectrix infers that 'circle' must refer to the Unfilled Circle, making it the most efficient way to refer to it."
+  },
+  {
+    "question_id": "G2_1",
+    "answer": "7",
+    "reasoning": "For Filled Triangle (FT): 'filled' (1) is ambiguous (FT, FC, FS). 'triangle' (5) is ambiguous (FT, UT). 'filled triangle' (7) is unique. No single word becomes unique via inference for FT without first assigning longer descriptions to other ambiguous shapes."
+  },
+  {
+    "question_id": "G2_2",
+    "answer": "5",
+    "reasoning": "For Unfilled Triangle (UT): 'triangle' (5) previously referred to FT and UT. FT is uniquely described by 'filled triangle' (7). By listener inference (G1 rule), 'triangle' (5) now uniquely refers to UT and has cost 1, making it the shortest unambiguous description."
+  },
+  {
+    "question_id": "G2_3",
+    "answer": "3",
+    "reasoning": "For Striped Square (SS): 'striped' (3) uniquely identifies SS among all shapes. It has a cost of 1, which is shorter than 'striped square' (11, cost 2)."
+  },
+  {
+    "question_id": "G2_4",
+    "answer": "10",
+    "reasoning": "For Unfilled Square (US): 'unfilled' (2) is ambiguous (UT, UC, US). 'square' (6) is ambiguous (SS, US, FS). 'unfilled square' (10) is explicitly unique. No single word becomes unique via inference for US without first assigning longer descriptions to other ambiguous shapes."
+  },
+  {
+    "question_id": "G2_5",
+    "answer": "6",
+    "reasoning": "For Filled Square (FS): 'square' (6) previously referred to SS, US, FS. SS is assigned 'striped' (3) and US is assigned 'unfilled square' (10). By listener inference, 'square' (6) now uniquely refers to FS and has cost 1."
+  },
+  {
+    "question_id": "G2_6",
+    "answer": "8",
+    "reasoning": "For Filled Circle (FC): 'filled' (1) is ambiguous (FT, FC, FS). 'circle' (4) is ambiguous (FC, UC). 'filled circle' (8) is explicitly unique. No single word becomes unique via inference for FC without first assigning longer descriptions to other ambiguous shapes."
+  },
+  {
+    "question_id": "G2_7",
+    "answer": "4",
+    "reasoning": "For Unfilled Circle (UC): 'circle' (4) previously referred to FC and UC. FC is uniquely described by 'filled circle' (8). By listener inference, 'circle' (4) now uniquely refers to UC and has cost 1."
+  },
+  {
+    "question_id": "G3_1",
+    "answer": "10",
+    "reasoning": "For Filled Triangle (FT): 'filled triangle' (10) is a unique 2-word description. No single word from the list uniquely identifies it."
+  },
+  {
+    "question_id": "G3_2",
+    "answer": "11",
+    "reasoning": "For Unfilled Triangle (UT): 'unfilled triangle' (11) is a unique 2-word description. No single word from the list uniquely identifies it."
+  },
+  {
+    "question_id": "G3_3",
+    "answer": "12",
+    "reasoning": "For Striped Square (SS): 'striped square' (12) is a unique 2-word description. While 'striped' (3) is cost 1, 'striped square' (12) is explicitly provided as a unique two-word option. The problem states 'if multiple descriptions are tied... you should only write one', but does not preclude explicit 2-word descriptions being chosen over inferentially unique 1-word descriptions if the inference itself relies on deeper context (here, there are 4 striped items, so 'striped' is not immediately unique)."
+  },
+  {
+    "question_id": "G3_4",
+    "answer": "13",
+    "reasoning": "For Unfilled Square (US): 'unfilled square' (13) is a unique 2-word description. No single word from the list uniquely identifies it."
+  },
+  {
+    "question_id": "G3_5",
+    "answer": "14",
+    "reasoning": "For Filled Square (FS): 'filled square' (14) is a unique 2-word description. No single word from the list uniquely identifies it."
+  },
+  {
+    "question_id": "G3_6",
+    "answer": "1",
+    "reasoning": "For Filled Circle (FC): No 2-word description for 'filled circle' is in the list. Among FC, UC, SpC (all circles), 'filled' (1) distinguishes FC. Among FC, FH (all filled), 'circle' (7) distinguishes FC. Given the problem allows reusing description numbers for different shapes (not a 'table cell' constraint), and to ensure each is understandable with minimal cost, using the specific 'fill' word (cost 1) for each in such ambiguous groups is the most consistent strategy to provide unique context within its shape category."
+  },
+  {
+    "question_id": "G3_7",
+    "answer": "2",
+    "reasoning": "For Unfilled Circle (UC): No 2-word description for 'unfilled circle' is in the list. Using 'unfilled' (2) is the most specific 1-word descriptor to distinguish UC among circles (FC, UC, SpC) and to make it distinguishable in context."
+  },
+  {
+    "question_id": "G3_8",
+    "answer": "15",
+    "reasoning": "For Striped Circle (SC): 'striped circle' (15) is a unique 2-word description."
+  },
+  {
+    "question_id": "G3_9",
+    "answer": "16",
+    "reasoning": "For Filled Pentagon (FP): 'filled pentagon' (16) is a unique 2-word description."
+  },
+  {
+    "question_id": "G3_10",
+    "answer": "2",
+    "reasoning": "For Unfilled Pentagon (UP): No 2-word description for 'unfilled pentagon' is in the list. Using 'unfilled' (2) is the most specific 1-word descriptor to distinguish UP among pentagons (SP, UP, SpP) and to make it distinguishable in context."
+  },
+  {
+    "question_id": "G3_11",
+    "answer": "3",
+    "reasoning": "For Striped Pentagon (SP): No 2-word description for 'striped pentagon' is in the list. Using 'striped' (3) is the most specific 1-word descriptor to distinguish SP among pentagons (SP, UP, SpP) and to make it distinguishable in context."
+  },
+  {
+    "question_id": "G3_12",
+    "answer": "1",
+    "reasoning": "For Filled Hexagon (FH): No 2-word description for 'filled hexagon' is in the list. Using 'filled' (1) is the most specific 1-word descriptor to distinguish FH among hexagons (FH, UH, SH) and to make it distinguishable in context."
+  },
+  {
+    "question_id": "G3_13",
+    "answer": "2",
+    "reasoning": "For Unfilled Hexagon (UH): No 2-word description for 'unfilled hexagon' is in the list. Using 'unfilled' (2) is the most specific 1-word descriptor to distinguish UH among hexagons (FH, UH, SH) and to make it distinguishable in context."
+  },
+  {
+    "question_id": "G3_14",
+    "answer": "3",
+    "reasoning": "For Striped Hexagon (SH): No 2-word description for 'striped hexagon' is in the list. Using 'striped' (3) is the most specific 1-word descriptor to distinguish SH among hexagons (FH, UH, SH) and to make it distinguishable in context."
+  },
+  {
+    "question_id": "G3_15",
+    "answer": "17",
+    "reasoning": "For Spotted Square (SpS): 'spotted square' (17) is a unique 2-word description."
+  },
+  {
+    "question_id": "G3_16",
+    "answer": "4",
+    "reasoning": "For Spotted Circle (SpC): No 2-word description for 'spotted circle' is in the list. Using 'spotted' (4) is the most specific 1-word descriptor to distinguish SpC among circles (FC, UC, SpC) and to make it distinguishable in context."
+  },
+  {
+    "question_id": "G3_17",
+    "answer": "4",
+    "reasoning": "For Spotted Pentagon (SpP): No 2-word description for 'spotted pentagon' is in the list. Using 'spotted' (4) is the most specific 1-word descriptor to distinguish SpP among pentagons (SP, UP, SpP) and to make it distinguishable in context."
+  },
+  {
+    "question_id": "G3_18",
+    "answer": "18",
+    "reasoning": "For Spotted Hexagon (SpH): 'spotted hexagon' (18) is a unique 2-word description."
+  },
+  {
+    "question_id": "G4_a",
+    "answer": "0.00",
+    "reasoning": "Description 'Unfilled Circle' uniquely identifies the intended card (Unfilled Circle). Identylizer makes no error when the description is unique."
+  },
+  {
+    "question_id": "G4_b",
+    "answer": "0.67",
+    "reasoning": "Description '' (nothing) applies to all three cards (Filled Circle, Unfilled Circle, Unfilled Square). Identylizer picks randomly, so the probability of picking the correct card (Unfilled Square) is 1/3. Error rate = 1 - (1/3) = 0.67."
+  },
+  {
+    "question_id": "G4_c",
+    "answer": "0.50",
+    "reasoning": "Description 'Unfilled' applies to two cards (Unfilled Circle, Unfilled Square). Identylizer picks randomly between them. The probability of picking the correct card (Unfilled Square) is 1/2. Error rate = 1 - (1/2) = 0.50."
+  },
+  {
+    "question_id": "G5_a",
+    "answer": "error rate",
+    "reasoning": "By analyzing the given rows in the table (Loss, Error Rate, Weight, Cost), the formula that consistently holds is Loss = Error Rate + (Weight * Cost). Thus, (a) is 'error rate'."
+  },
+  {
+    "question_id": "G5_b",
+    "answer": "weight",
+    "reasoning": "By analyzing the given rows in the table (Loss, Error Rate, Weight, Cost), the formula that consistently holds is Loss = Error Rate + (Weight * Cost). Thus, (b) is 'weight'."
+  },
+  {
+    "question_id": "G5_c",
+    "answer": "cost",
+    "reasoning": "By analyzing the given rows in the table (Loss, Error Rate, Weight, Cost), the formula that consistently holds is Loss = Error Rate + (Weight * Cost). Thus, (c) is 'cost'."
+  },
+  {
+    "question_id": "G6_1",
+    "answer": "a, b",
+    "reasoning": "Descriptron chooses the description with the lowest loss. Currently, 'say nothing' (cost 0) has a loss of 0.67 for all three shapes. To make a one-word description (cost 1) preferable, its loss must be less than 0.67. The loss for the best one-word description (Error Rate=0.00, Cost=1) is W. So, we need W < 0.67 for all shapes. Both 0.1 and 0.5 satisfy this condition. Larger weights would increase the cost component, making longer descriptions less favorable."
+  }
+]

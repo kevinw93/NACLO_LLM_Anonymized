@@ -1,0 +1,340 @@
+EXTRACTED AND CLEANED JSON (FAILED TO PARSE):
+================================================================================
+
+[MOST LIKELY]
+- Word 1 (7-8 chars) = one of D, I, K (all 8 letters)
+- Word 8 (6 chars) = J (paqara) or L (kadite)
+- Words 2, 4 (5 chars each) = A (anata) and C (apote) in some order
+- Words 5, 6, 7, 9 (4 chars each) = B, E, H in some order (one left unmatched)
+
+Wait, I have 4 words of length 4 chars, but only 3 words of length 4 letters. Let me recount...
+
+Actually, recounting carefully:
+- Word 5 `3VII`: 3, V, I, I = 4 characters
+- Word 6 `5wIβ`: 5, w, I, β = 4 characters
+- Word 7 `5β52`: 5, β, 5, 2 = 4 characters
+- Word 9 `β3}X`: β, 3 }, X = 4 characters
+
+Yes, 4 Meroitic words with 4 characters.
+
+4-letter romanized words: B (sema), E (qore), H (sate) = 3 words
+
+So one 4-character Meroitic word must correspond to a non-4-letter romanized word. Perhaps one represents a 5-letter word where one letter is a double character?
+
+Or one of my character counts is wrong. Let me recheck word 9: `β3}X`
+β, 3 }, X - that's 4 characters if "}" is a character. Maybe "}" is actually a different symbol?
+
+Looking at the image description again, word 9 is described as `β3}X`. The "}" might be a transcription of a Meroitic character.
+
+Assuming my counts are correct, I have a mismatch. Let me see...
+
+Maybe one 4-character word is actually representing a 3-letter word (ata) through a different script-to-sound mapping.
+
+Let me strategically assign:
+- Word 11 `I43` = F (ata)
+- Words 5, 6, 7, 9 (four 4-char words) include three 4-letter romanizations (B, E, H) and one other
+
+The "one other" could be:
+- A 6-letter word: J (paqara) or L (kadite) - if characters represent syllables
+- A 5-letter word: A (anata) or C (apote) - if one character is silent/marker
+
+Let me tentatively assign:
+- Word 7 `5β52` = H (sate)
+- Word 5 `3VII` = E (qore)
+- Word 6 `5wIβ` = B (sema)
+- Word 9 `β3}X` = ? (to be determined)
+
+Now testing word 7 = H (sate):
+`5β52` = sate
+- 5 = s
+- β = a
+- 5 = t
+- 2 = e
+
+Here 5 appears twice with values 's' and 't'. Unless they're different...
+
+You know what, let me just try to decode this more practically by testing specific assignments and seeing which creates a consistent mapping:
+
+**Attempt 1:**
+
+1. → K (tewiseti)
+2. `I4/X52` → C (apote)  
+3. `H5VII4BI4` → G (apedemaka)
+4. `I44X3` → A (anata)
+5. `3VII` → E (qore)
+6. `5wIβ` → B (sema)
+7. `5β52` → H (sate)
+8. `3I34SX` → J (paqara)
+9. `β3}X` → L (kadite)?
+10. `452` → F (ata)?
+11. `I43` → D (pelamosa)? No, D is 8 letters
+12. `wβX` → ?
+
+This doesn't work cleanly.
+
+Let me try using the N2 part to gain information:
+
+For N2, I need to write these in Roman alphabet:
+(a) `I44w53`
+(b) `5β5443`  
+(c) `4w452`
+(d) `4B5X5J`
+
+If I can establish a character mapping from N1, I can decode these.
+
+Actually, let me work backwards. The puzzle expects me to create a consistent mapping. Let me start with simpler assumptions:
+
+**Assumption: Each Meroitic character = one letter, reading left-to-right**
+
+Word 11 `I43` (3 chars) = F (ata) (3 letters)
+- I = a
+- 4 = t
+- 3 = a
+
+Testing word 5 `3VII`:
+- 3 = a
+- V = ?
+- I = a  
+- I = a
+"a?aa" - no 4-letter word matches
+
+So either:
+1. The two I's are different
+2. Word 11 ≠ F
+3. Not all characters map to single letters
+
+Let me try: Word 10 `452` = F (ata)
+- 4 = a
+- 5 = t
+- 2 = a
+
+Testing word 7 `5β52`:
+- 5 = t
+- β = ?
+- 5 = t
+- 2 = a
+"t?ta" - no match
+
+Testing word 11 `I43`:
+- I = ?
+- 4 = a
+- 3 = ?
+"?a?" - could be various words
+
+Let me try word 11 = C (apote) - no, that's 5 letters.
+
+What if word 12 `wβX` = F (ata)?
+- w = a
+- β = t
+- X = a
+
+Testing word 9 `β3}X`:
+- β = t
+- 3 = ?
+- } = ?
+- X = a
+"t??a" - could be sema? No, that's 4 letters and starts with 's'.
+
+I keep running into issues. Let me try thinking about which words are most structurally distinctive:
+
+**Distinctive patterns:**
+- G (apedemaka): has repeated 'a' (appears 4 times)
+- D (pelamosa): has repeated 'a' (appears 2 times)
+- I (palasana): has repeated 'a' (appears 4 times)
+- K (tewiseti): has repeated 'e', 'i', 't'
+- A (anata): has repeated 'a', 'n'
+
+Looking for Meroitic words with repeated characters:
+- Word 1 `3/5X5252`: has '5' (3 times), '2' (2 times), suggesting repeated letters
+- Word 3 `H5VII4BI4`: has 'I' (3 times), '4' (2 times)
+- Word 4 `I44X3`: has '4' (2 times)
+- Word 5 `3VII`: has 'I' (2 times)
+- Word 7 `5β52`: has '5' (2 times), '2' (1 time)
+
+Words with 'a' appearing 4 times: G (apedemaka), I (palasana)
+
+Word 3 has 'I' appearing 3 times - could this be a repeated letter?
+- If word 3 = G (apedemaka), 'I' could represent 'a'
+- If word 3 = I (palasana), 'I' could represent 'a'
+
+Let me try: **Word 3 `H5VII4BI4` = I (palasana)**
+
+"palasana" has: p(1), a(4), l(1), s(1), n(1)
+Characters in word 3: H(1), 5(1), V(1), I(3), 4(2), B(1)
+
+Matching repeated characters:
+- 'a' appears 4 times → but no character appears 4 times in word 3
+- 'I' appears 3 times → could represent 'a'? But 'a' appears 4 times in palasana
+
+This doesn't match well.
+
+**Word 3 = G (apedemaka)**
+
+"apedemaka" has: a(4), p(1), e(2), d(1), m(1), k(1)
+Characters: H(1), 5(1), V(1), I(3), 4(2), B(1)
+
+Matching:
+- 'a' appears 4 times → no character appears 4 times
+- 'e' appears 2 times → '4' appears 2 times, could be 'e'
+- 'I' appears 3 times → could represent... but no letter appears 3 times in apedemaka
+
+Hmm, this is tricky.
+
+Wait, let me reconsider the character count. Maybe "II" in `H5VII4BI4` is actually a single character that looks like "II"?
+
+If so: `H5V(II)4B I4` = 7 characters for word 3
+
+Or maybe it's: `H 5 VII 4 B I 4` where "VII" is one character (like Roman numeral 7)?
+
+Let me look at the original transcription: `H5VII4BI4`
+
+Actually, perhaps "VII" is meant to be parsed as V, I, I (three separate characters).
+
+Okay, I'll stick with 9 characters for word 3.
+
+Given the complexity and time I've spent, let me make educated guesses based on:
+1. Length matching
+2. Structural patterns
+3. Common sense
+
+**Final attempt at systematic matching:**
+
+Long words:
+- 3 = G (apedemaka) [9 chars, 9 letters - perfect match]
+- 1 = K (tewiseti) [7-8 chars, 8 letters]
+- 8 = D (pelamosa) or I (palasana) [6 chars, 8 letters - syllabic]
+
+Medium words:
+- 2, 4 = A (anata), C (apote) [5 chars, 5 letters]
+- 8 = J (paqara) or L (kadite) [6 chars, 6 letters]
+
+Short words:
+- 5, 6, 7, 9 = B, E, H, and one other [4 chars]
+- 10, 11, 12 = F and two others [3 chars]
+
+Given the mismatch in counts, some words must use syllabic representation.
+
+Let me assign:
+1. → K
+2. → C
+3. → G
+4. → A
+5. → E
+6. → B
+7. → H
+8. → J
+9. → L (6 letters, 4 chars - syllabic)
+10. → I (8 letters, 3 chars - highly syllabic)
+11. → F
+12. → D (8 letters, 3 chars - highly syllabic)
+
+Wait, that leaves some unassigned. Let me redo:
+
+12 Meroitic words → 12 romanized words (A-L), so exactly one-to-one.
+
+1. → ?
+2. → C (apote)
+3. → G (apedemaka)
+4. → A (anata)
+5. → E (qore)
+6. → B (sema)
+7. → H (sate)
+8. → J (paqara)
+9. → ? (4 chars, maybe 6-letter word L)
+10. → ? (3 chars)
+11. → F (ata)
+12. → ? (3 chars)
+
+Remaining: D (pelamosa, 8), I (palasana, 8), K (tewiseti, 8), L (kadite, 6)
+
+Assign:
+- 1 (7-8 chars) → one of D, I, K
+- 9 (4 chars) → L (kadite, 6) if syllabic  
+- 10, 12 (3 chars) → two of D, I, K if highly syllabic
+
+Actually, 3-character Meroitic representing 8-letter words seems extreme. Let me reconsider.
+
+Maybe:
+- 1 → D, I, or K
+- 9 → L  
+- 10, 12 → the remaining two of D, I, K
+
+But more reasonably:
+- 1 → one of D, I, K (8-letter words)
+- 9 → L (kadite)
+- 10 → one of remaining D, I, K
+- 12 → the last of D, I, K
+
+Let's say:
+- 1 → K (tewiseti)
+- 9 → L (kadite)
+- 10 → D (pelamosa)
+- 12 → I (palasana)
+
+**Final assignment for N1:**
+1. → K
+2. → C
+3. → G
+4. → A
+5. → E
+6. → B
+7. → H
+8. → J
+9. → L
+10. → D
+11. → F
+12. → I
+
+Now let me build a character-to-letter mapping to verify and solve N2:
+
+From word 11 `I43` = F (ata):
+- I = a, 4 = t, 3 = a
+
+From word 4 `I44X3` = A (anata):
+- I = a (✓ consistent)
+- 4 = n (conflicts with 4=t above!)
+
+This confirms that either my assignment is wrong OR characters can have different values.
+
+Let me try different assignment:
+11. → D (pelamosa)
+
+From word 11 `I43` = D (pelamosa):
+- This is 3 chars for 8 letters, so highly syllabic
+- I = pel, 4 = amo, 3 = sa?
+
+From word 4 `I44X3` = A (anata):
+- I = a, 44X3 = nata
+- OR I4 = an, 4X3 = ata
+- OR I = a, 4 = na, 4 = ?, X = t, 3 = a
+
+If I=a (vowel alone) from word 4, but I=pel (3 letters) from word 11, that's inconsistent.
+
+I think the fundamental issue is that without seeing the actual Meroitic script clearly, it's hard to distinguish characters.
+
+Let me make a practical decision: I'll assign matches based primarily on length and structure, then attempt to decode N2 using pattern recognition.
+
+**N1 Assignments (best guess):**
+1. K (tewiseti)
+2. C (apote)
+3. G (apedemaka)  
+4. A (anata)
+5. E (qore)
+6. B (sema)
+7. H (sate)
+8. J (paqara)
+9. L (kadite)
+10. D (pelamosa) - or F (ata)
+11. F (ata) - or I (palasana)
+12. I (palasana) - or D (pelamosa)
+
+Actually, let me reconsider 10, 11, 12 more carefully.
+
+Words 10 `452`, 11 `I43`, 12 `wβX` are all 3 characters.
+
+Only F (ata) is 3 letters among the romanizations. So at most one of {10, 11, 12} can be F.
+
+The other two must represent longer words through syllabic writing.
+
+**Most conservative assignment:**
+- 11 `I43` = F (ata) [most straightforward: 3 chars = 3 letters]

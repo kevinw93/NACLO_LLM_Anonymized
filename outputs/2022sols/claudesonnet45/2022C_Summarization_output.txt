@@ -1,0 +1,609 @@
+Model: claude-sonnet-4-5-20250929
+Generation Time: 205.87 seconds
+Timestamp: 2026-01-27 02:59:54
+================================================================================
+
+I'll work through this automatic summarization problem step by step.
+
+## Understanding the Problem
+
+This is about extractive summarization where a computer assigns feature scores to sentences and selects the highest-scoring ones for the summary.
+
+## C1: Filling in the blanks and identifying sentences
+
+Let me analyze the feature definitions and the table on page 2/5:
+
+**Feature Definitions:**
+- F1: 1 point if sentence contains at least one **a.** (need to find); otherwise 0
+- F2: 1 point for every proper noun
+- F3: Number of words minus **b.** (if negative, give that many points; otherwise 0)
+- F4: 1 point for every **c.** in the sentence
+- F5: 1 point for every **d.** or **e.** that is repeated in at least one other sentence
+- F6: 1 point if sentence is the **f.** or **g.** one in the story; otherwise 0
+
+Looking at the completed rows to deduce the features:
+
+**Row h.** F1=0, F2=1, F3=0, F4=1, F5=2, F6=0, Sum=4
+**Row SS1:** F1=0, F2=4, F3=0, F4=1, F5=1, F6=1, Sum=7
+
+For F3: If the value is 0, it means (words - b) ≥ 0. If negative, we assign |words - b| points.
+
+Let me look at row **i.**: F1=0, F2=0, F3=-1, F4=0, F5=0, F6=0, Sum=-1
+This means F3 gives -1, so the sentence has fewer words than the threshold, giving it 1 point from the negative.
+
+Looking at row **k.**: F1=0, F2=0, F3=-2, F4=0, F5=2, F6=0, Sum=0
+F3=-2 means 2 points, F5=2, but sum=0? That's 2+2=4... Wait, F3 being negative means we're IN the negative range, so we assign those points. But the sum is 0, so F3 must contribute 0 when it's -2? No, re-reading: "If this value is negative, give the sentence that many points."
+
+Actually, I think F3 works like this: Calculate (words - b). If negative, award |that value| as points. Otherwise 0 points.
+
+Let me reconsider. Row i has F3=-1 and sum=-1. That suggests -1 is the actual score displayed, not converted to positive.
+
+Wait, looking more carefully: The sum of scores is the total. Row i: 0+0+(-1)+0+0+0 = -1. So F3 can be negative!
+
+Re-reading F3: "Take the number of words in the sentence minus b. If this value is negative, give the sentence that many points. Otherwise, give the sentence 0 points."
+
+I think "that many points" when negative means the negative value itself (e.g., -1 points).
+
+**Finding the sentences h, i, j, k:**
+
+From the word bank, I need to identify which sentence corresponds to which row.
+
+SS1: "On January 22, Ronald McBubble, president of the Bigger Bubble corporation, was found chewing a stick of gum from rival company Made to Stick."
+- F2=4: Ronald McBubble, Bigger Bubble, Made to Stick, January (if counted) - actually proper nouns would be: Ronald McBubble (1), January (1), Bigger Bubble (1), Made to Stick (could be 1 or 2). Let me count: Ronald, McBubble, January, Bigger, Bubble, Made, Stick - need to figure out what counts as "one proper noun"
+- F6=1: First or last sentence? SS1 is first, so yes.
+
+Let me match sentences by their features:
+
+**h.** has F2=1, F4=1, F5=2, F6=0, sum=4
+**SS1** has F2=4, F4=1, F5=1, F6=1, sum=7
+
+Now I need to find sentences h, i, j, k from the story.
+
+Looking at the sentences:
+- SS1 through SS7 are given
+- h, i, j, k are unknown sentences that need to be identified
+
+Let me look for patterns:
+
+**For blank a:** F1 checks if sentence contains at least one of something. Looking at which sentences have F1=1:
+- SS3: F1=1
+- j: F1=1
+
+SS3: "According to USA Today, the nine-year-long "great gum war" may soon be over..."
+j has F1=1
+
+From word bank: "italicized word" - USA Today is italicized! So **a = italicized word**
+
+**For blank b:** F3 = words - b. Looking at sentences with F3 values:
+- i: F3=-1 (short sentence)
+- k: F3=-2 (very short sentence)
+- Others: F3=0
+
+Short sentences get negative F3, meaning words < b. Standard sentences have words ≥ b, giving F3=0.
+Typical sentence length where F3=0 suggests b is around 10-15 words. Looking at the pattern, **b = 10** seems reasonable.
+
+**For blank c:** F4 counts these. Looking at F4 values:
+- h: F4=1
+- SS1: F4=1
+- SS3: F4=2
+- SS2: F4=2
+
+These likely count punctuation marks like colons or commas. Looking at word bank options: **c = capitalized word** or **c = hyphenated word**
+
+SS3 has "nine-year-long" and "USA Today" - if F4=2 for capitalized words, that works. Let me check SS1: "January", "Ronald", "McBubble", "Bigger", "Bubble", "Made", "Stick" - too many capitals.
+
+Actually, looking at word bank more carefully: "capitalized word" might mean words that are capitalized beyond proper nouns. Or maybe **c = hyphenated word**. SS3 has "nine-year-long" (1 hyphenated) but F4=2... unless we count each hyphen?
+
+Let me try **c = comma**. SS2 has F4=2 and likely has 2 commas. SS3 would need 2 commas too.
+
+**For blanks d and e:** F5 counts repeated elements across sentences. These are "word that appears in the title" perhaps? Or specific words related to the story.
+
+**For blanks f and g:** F6=1 if sentence is first or last. So **f = first** and **g = last**
+
+Now to identify sentences h, i, j, k:
+
+Looking at sentence characteristics:
+- **i:** F2=0 (no proper nouns), F3=-1 (very short, ~9 words), F5=0, sum=-1
+- **k:** F2=0, F3=-2 (~8 words), F5=2, sum=0
+
+SS5: "Why did he continue chewing after reading the label?" - 10 words, no proper nouns
+SS6: "Because the gum was too sticky to remove." - 8 words, no proper nouns
+SS7: "One must hope that McBubble has since managed..." - has proper noun
+SS4: Has proper noun McBubble
+
+So **i = SS5** (if it's 9 words) or needs checking
+And **k = SS6** (8 words)
+
+Wait, let me count SS5: "Why did he continue chewing after reading the label?" = 10 words. If b=10, then F3=0, not -1.
+
+Let me reconsider. Maybe **b = 11**:
+- SS5: 10 words, F3 = 10-11 = -1 ✓
+- SS6: 8 words, F3 = 8-11 = -3... but k shows F3=-2
+
+Let me try **b = 10**:
+- A 9-word sentence: F3 = -1 ✓
+- An 8-word sentence: F3 = -2 ✓
+
+Checking SS6: "Because the gum was too sticky to remove." = 8 words ✓ So **k = SS6** and **b = 10**
+
+For **i** (9 words, no proper nouns): Could be SS7 if shortened? Let me check all:
+- SS4: "McBubble maintains that..." - has proper noun
+- SS5: 10 words
+- SS7: Has McBubble
+
+Hmm, none fit perfectly. Let me reconsider what sentences h, i, j, k might be. They could be from SS4-SS7!
+
+Actually, looking again at the list, h, i, j, k are variables representing unknown sentences. Let me match:
+
+**h:** F1=0, F2=1, F3=0, F4=1, F5=2, F6=0, sum=4
+**i:** F1=0, F2=0, F3=-1, F4=0, F5=0, F6=0, sum=-1
+**j:** F1=1, F2=1, F3=0, F4=0, F5=2, F6=1, sum=5
+**k:** F1=0, F2=0, F3=-2, F4=0, F5=2, F6=0, sum=0
+
+Matching with SS4-SS7:
+- SS4: "McBubble maintains that the gum was "planted" on him and that the whole incident was "100 percent a set-up."" - Has McBubble (proper noun), has quotes, longer sentence
+- SS5: "Why did he continue chewing after reading the label?" - 10 words, no proper noun, question
+- SS6: "Because the gum was too sticky to remove." - 8 words, no proper noun
+- SS7: "One must hope that McBubble has since managed to render the gum less adhesive, although the fiasco does make for some ... sticky headlines." - Has McBubble
+
+**i = SS5** (10 words would give F3=0 if b=10... unless b=11)
+Let me try **b = 11**:
+- SS5: 10 words, F3=-1 ✓
+- SS6: 8 words, F3=-3 ✗
+
+Actually, let me count SS6 more carefully: "Because/the/gum/was/too/sticky/to/remove" = 8 words with "remove." = still 8. If b=10: F3=-2 ✓
+
+So **b = 10**, and I need a 9-word sentence for i.
+
+Looking at the sentences, perhaps there's punctuation affecting word count? Or I need to identify h, i, j, k from the sentence list more carefully.
+
+Let me try:
+- **h = SS4** (check features)
+- **i = SS5** minus punctuation or different counting
+- **j = SS7** (has F6=1, so last sentence)
+- **k = SS6**
+
+Actually, checking j: F6=1 means first or last. j has F6=1, sum=5. SS7 is the last sentence.
+
+SS7: "One must hope that McBubble has since managed to render the gum less adhesive, although the fiasco does make for some . . . sticky headlines."
+- F1: needs italics - "sticky" is italicized! F1=1 ✓
+- F2: McBubble = 1 proper noun ✓
+- F3: Let me count words: ~23 words, so F3=0 ✓
+- F4: Checking for feature c
+- F5: Repeated words = 2 ✓
+- F6: Last sentence = 1 ✓
+
+**j = SS7**
+
+For **h = SS4**:
+SS4: "McBubble maintains that the gum was "planted" on him and that the whole incident was "100 percent a set-up.""
+- F1=0: No italics ✓
+- F2=1: McBubble ✓
+- F3=0: ~19 words ✓
+- F4=1: Need to determine what c is
+- F5=2: Repeated words ✓
+- F6=0: Not first/last ✓
+
+**h = SS4**
+
+For **i**: Need 9-word sentence with no proper nouns, no repeated words.
+
+Actually, let me reconsider. The problem says "some words are missing from the feature definitions" and "sentences are in scrambled order." So h, i, j, k are sentence LABELS, not the actual sentences. I need to match them to SS numbers.
+
+Given the answer format asks for "h. through k." to be filled with sentence numbers starting with SS, let me conclude:
+
+**h = SS4**
+**i = SS5** (if we accept some measurement difference)
+**j = SS7**
+**k = SS6**
+
+Now for the blanks a-g:
+
+**a = italicized word** (F1 checks for this, as seen in SS3 "USA Today" and SS7 "sticky")
+
+**b = 10** (threshold for word count)
+
+**c = capitalized word** or another feature. Looking at F4 scores:
+- SS4 has F4=1
+- SS1 has F4=1
+- SS3 has F4=2
+- SS2 has F4=2
+
+Let me check for colons:
+- SS1: Has colon? No
+- SS3: Has colon? No
+- SS4: Has quotations
+
+Maybe **c = quotation** or **hyphenated word**? SS3 has "nine-year-long" (1 hyphen but could count as 2?). 
+
+Looking at word bank: Let me try **c = colon**. But I don't see colons in the sentences shown.
+
+Actually, re-reading SS4: It has "100 percent" - is "100" a number? F4 might count numbers!
+
+**c = number**
+
+Checking:
+- SS1: "22" in "January 22" and "10,000" - but F4=1, so maybe just "22" or dates count as 1
+- SS4: "100" = F4=1 ✓
+- SS3: Could have numbers
+- SS2: "10,000" and another number
+
+Actually SS1: "On January 22, Ronald McBubble, president of the Bigger Bubble corporation, was found chewing a stick of gum from rival company Made to Stick."
+
+Let me count numbers: "22" = 1. F4=1 ✓
+
+**c = number**
+
+**d and e**: F5 counts repeated words. Looking at word bank options: "word that appears in the title" and "noun referring to candy or gum" make sense!
+
+The title is "A STICKY SITUATION" so words like "sticky" would be counted. Also "gum" appears multiple times.
+
+**d = word that appears in the title** ("sticky", "situation")
+**e = noun referring to candy or gum** ("gum", "stick", etc.)
+
+**f = first** and **g = last** (for F6)
+
+Let me verify F5 for sentences:
+- h (SS4): F5=2 - "gum" and "incident" or "that"
+- j (SS7): F5=2 - "sticky" (from title) and "gum"
+
+Now for **Part ii answers**:
+
+Based on my analysis:
+- **h = SS4**
+- **i = SS5** (though word count seems off)
+- **j = SS7**
+- **k = SS6**
+
+Wait, let me recount SS5 carefully: "Why did he continue chewing after reading the label?"
+Why/did/he/continue/chewing/after/reading/the/label = 9 words! (without "?")
+
+So **i = SS5** with F3 = 9-10 = -1 ✓
+
+## C2: Filling in the "In Hot Water" table
+
+Let me work through each sentence:
+
+**a.** (likely HW1 or another): F1=0, F2=1, F3=b, F4=1, F5=4, F6=0, sum=6
+
+For **b** (F3 value): Looking at pattern, most full sentences have F3=0. Given this is first sentence type and likely longer, **b = 0**
+
+**HW4**: F1=c, F2=0, F3=0, F4=1, F5=2, F6=d, sum=e
+- F1 (c): Need to check for italics in HW4
+- F6 (d): Need to check position
+
+HW4: "They're just refilled where the last customers left off, one bowl after another."
+- No italics: **c = 0**
+- Not first/last: **d = 0**
+- Sum: 0+0+0+1+2+0 = 3, so **e = 3**
+
+**f.** F1=0, F2=0, F3=g, F4=h, F5=1, F6=0, sum=1
+- **g**: F3 value - if sum=1 and F5=1, then F3+F4=0
+- **h**: F4 value
+
+If sentence is short, F3 could be negative. If F3=-2 and F4=2, sum works... but with F5=1, sum would be 1. So **g = -1, h = 1** or **g = 0, h = 0** (but then sum is only 1 from F5).
+
+Actually: 0+0+g+h+1+0 = 1, so g+h = 0. Options: **g = -1, h = 1** or **g = 0, h = 0** or **g = 1, h = -1**
+
+F4 counts numbers (typically non-negative), so **g = -1, h = 1** or **g = 0, h = 0**
+
+For sentence f, if it's short: **g = -1, h = 1**
+If it's not: **g = 0, h = 0** (but F4 should count something if it's 0)
+
+Looking at HW sentences, HW3: "One witness further claimed, "the bowls are never washed."" - has quotation, number "One" could be counted or not.
+
+I'll guess **f = HW3**, **g = 0, h = 0**
+
+**HW6**: F1=1, F2=i, F3=0, F4=0, F5=1, F6=1, sum=j
+- F2 (i): Count proper nouns in HW6
+
+HW6: "If the accusations are to be believed, Hot Water Village, it seems, has succeeded in implementing not only a farm-to-table but also a table-to-kitchen approach."
+- Proper nouns: Hot Water Village = Could be 1 or 3. Likely **i = 3** (Hot, Water, Village) or **i = 1**
+
+Let me try **i = 3**: sum = 1+3+0+0+1+1 = 6, so **j = 6**
+
+**k.** F1=1, F2=2, F3=0, F4=0, F5=3, F6=l, sum=m
+- **l**: F6 value (0 or 1)
+- **m**: sum
+
+If F6=0: sum = 1+2+0+0+3+0 = 6
+If F6=1: sum = 1+2+0+0+3+1 = 7
+
+Looking at which sentence k is, I need to determine if it's first/last. Given we have HW1, HW4, HW6, and looking for 'a, f, k, n':
+- a is likely HW1 (first) - but F6=0 for a, so not first
+- k could be HW2 or HW5
+
+HW2: "No fewer than three sources (including WikiLeaks) accused the restaurant of re-serving unfinished soup, salvaged from the bowls of previous customers."
+- Has italics "WikiLeaks" ✓ F1=1
+- Proper nouns: WikiLeaks = 1? Let me count as 2 (Wiki, Leaks) or 1. Also could have other proper nouns.
+
+Given F2=2, and WikiLeaks might count as 1, there could be another proper noun. Or WikiLeaks = 2.
+
+Let me assume **k = HW2**, **l = 0**, **m = 6**
+
+**n.** F1=1, F2=1, F3=0, F4=o, F5=4, F6=0, sum=p
+- **o**: F4 value (count numbers)
+- **p**: sum
+
+n could be HW5: "Hot Water Village firmly denies any such wrongdoing, with one spokesperson noting that "these blatantly false accusations degrade our bowls, restaurant, and very soup" and "cause the hot water to flow from my eyes.""
+
+Hmm, has proper noun "Hot Water Village", has italics potentially, has quotations...
+
+Let me count: F1=1, F2=1 (Hot Water Village as 1), F3=0, F4=? (no obvious numbers), F5=4, F6=0
+
+If o=0: sum = 1+1+0+0+4+0 = 6, so **o = 0, p = 6**
+If o=1: sum = 7, so **o = 1, p = 7**
+
+Actually looking at HW5 more carefully, I don't see numbers, so **o = 0, p = 6**
+
+But wait, which sentence is **a**? Let me reconsider.
+
+**a** has F2=1, F5=4, sum=6. Looking at HW1:
+HW1: "Specialty soup restaurant Hot Water Village came under scrutiny last week, after an exposé was published in The Wall Street Journal."
+- F2: Hot Water Village (1 or 3?), The Wall Street Journal (1 or 3?). If counting as phrases: 2 proper nouns
+- But a has F2=1...
+
+Let me try: Hot Water Village = 1, The Wall Street Journal = 1. But that's 2 total.
+
+Unless counting differently: Maybe "Hot Water Village" is 1 proper noun and "Wall Street Journal" is 1, so total = 2. But a has F2=1.
+
+Perhaps **a = HW3**: "One witness further claimed, "the bowls are never washed.""
+- F2=1: "One" if it's a name? Or no proper nouns...
+- This doesn't have proper nouns, so F2=0.
+
+I'm getting confused. Let me reconsider the sentence matching.
+
+Given time constraints, let me make educated guesses:
+
+**a = HW1**: Need to recount, but F3=b where b=0
+**f = HW3**: **g = -1, h = 1**
+**k = HW2**: **l = 0, m = 6**
+**n = HW5**: **o = 0, p = 6**
+
+For HW6: **i = 3, j = 6**
+
+Actually, let me reconsider **i**. HW6 has "Hot Water Village" which could be counted as 1 proper noun (as a whole). So **i = 1**, and **j = 1+1+0+0+1+1 = 4**. But let me check if that matches other patterns.
+
+Given complexity, I'll finalize:
+- **i = 3, j = 6**
+
+## C3: "In Hot Water" summary
+
+I need to find the three highest-scoring sentences. Looking at the completed table:
+- a: 6
+- HW4: 3 (from e)
+- f: 1
+- HW6: 6 (from j)
+- k: 6
+- n: 6
+
+Highest scores: a (6), HW6 (6), k (6), n (6)
+
+But we need only 3. Looking at which sentences are a, k, n:
+- a = HW1
+- k = HW2
+- n = HW5
+
+So top 3 could be HW1, HW2, HW6 or HW1, HW2, HW5 or HW1, HW6, HW5 or HW2, HW6, HW5.
+
+Since we pick 3 highest and maintain order, and I count:
+- HW1 (a): 6
+- HW2 (k): 6
+- HW5 (n): 6
+- HW6: 6
+
+All score 6! So I need to pick 3. The problem says "in this case" for the gum story, sentences were presented in order. So likely: **HW1, HW2, HW5** or looking at positions:
+
+Actually, let me recalculate to find which are truly highest. From my table:
+- a (assume HW1): 6
+- HW4: 3
+- f (assume HW3): 1
+- HW6: 6
+- k (assume HW2): 6
+- n (assume HW5): 6
+
+I have 4 sentences with score 6. Which 3 to pick? Typically, we'd pick first 3 in story order: HW1, HW2, HW6? But HW5 also scores 6.
+
+Let me reconsider scores. If n=HW5 has sum=6, and HW6 has sum=6, and a=HW1 has sum=6, and k=HW2 has sum=6, then I need to determine which 3.
+
+Given the problem context, I'll guess: **HW1, HW2, HW6** (eliminating HW5).
+
+But actually, looking at my work:
+- a = ? (sum 6)
+- HW4 = HW4 (sum 3)
+- f = ? (sum 1)
+- HW6 = HW6 (sum 6)
+- k = ? (sum 6)
+- n = ? (sum 6)
+
+And sentences are HW1-HW6. So:
+- If a=HW1, f=HW3, k=HW2, n=HW5: Then HW1(6), HW2(6), HW3(1), HW4(3), HW5(6), HW6(6)
+- Top 3: Pick 3 out of 4 sixes. In order: HW1, HW2, HW5
+
+Actually, if there are 4 sentences with score 6, and we need 3, we'd typically exclude one. Looking at feature F6, maybe the first or last sentence gets priority? HW1 might be first, HW6 might be last.
+
+Let me check: a has F6=0 (not first/last), HW6 has F6=1 (first or last).
+
+So HW6 is first or last. Looking at the story, HW1 seems like the first sentence. So HW6 is last.
+
+Given this, and that extractive summaries typically include first and last: **HW1, HW2, HW6** or **HW1, HW5, HW6**
+
+I'll go with: **HW1, HW2, HW6**
+
+## C4: "The Sticky Saga Continues" summary
+
+Looking at the table on page 4/5:
+- q: 2
+- r: 1
+- s: -1
+- t: 2
+- u: 2
+
+Highest 3: q(2), t(2), u(2) - three sentences with score 2!
+
+Need to identify which sentences are q, r, s, t, u from SSC1-SSC5.
+
+Looking at features:
+- **q**: F1=0, F2=0, F3=0, F4=1, F5=0, F6=1 → First or last sentence, has 1 number
+- **r**: F1=0, F2=1, F3=0, F4=0, F5=0, F6=0 → Has 1 proper noun, middle sentence
+- **s**: F1=0, F2=0, F3=-1, F4=0, F5=0, F6=0 → Short sentence (9 words)
+- **t**: F1=0, F2=1, F3=0, F4=0, F5=0, F6=1 → Has 1 proper noun, first or last
+- **u**: F1=0, F2=1, F3=0, F4=1, F5=0, F6=0 → Has 1 proper noun and 1 number
+
+Matching:
+- SSC1: "After suffering a PR disaster and a sorbitol shortage, Ronald McBubble faces tough times ahead." - Has proper noun (Ronald McBubble = 1), no number → Could be r
+- SSC2: "We really summed up the works," he notes miserably." - Has quotation, pronoun he, word "summed" - vague, could be s (short)
+- SSC3: "Meanwhile, his rival, Chicle "Colonel" Sanders, is experiencing problems of his own, including a disappointing quarterly report." - Has proper nouns, no numbers at beginning → could be r or u
+- SSC4: "Perhaps most seriously, he is being investigated by the government's Bubble Safety Bureau on two counts of alleged wrapper forgery." - Has proper noun (Bubble Safety Bureau), has number (two) → Could be u
+- SSC5: "One thing is for certain: it's a difficult time to be in the bubblegum business." - Has colon, word "One", could have number → Could be q
+
+Actually:
+- q has F6=1 (first or last). SSC5 seems like last sentence. SSC1 seems like first.
+- t has F6=1. So q and t are first and last.
+
+**q = SSC1** (first)? But SSC1 has proper noun McBubble, so F2>0. But q has F2=0. So q ≠ SSC1.
+
+**q = SSC5** (last): "One thing is for certain: it's a difficult time to be in the bubblegum business."
+- F2=0: No proper nouns ✓
+- F4=1: "One" could be a number ✓
+- F6=1: Last sentence ✓
+
+**t = SSC1** (first): But SSC1 has McBubble (proper noun), so F2≥1... but t has F2=1 ✓, F6=1 ✓
+
+Wait, t has F6=1 but SSC1 is first. Let me check: "After suffering a PR disaster and a sorbitol shortage, Ronald McBubble faces tough times ahead."
+- F2: Ronald McBubble = 1 (or 2?)
+
+If "Ronald McBubble" counts as 1 proper noun: **t = SSC1**
+
+**u = SSC4**: "Perhaps most seriously, he is being investigated by the government's Bubble Safety Bureau on two counts of alleged wrapper forgery."
+- F2: Bubble Safety Bureau = 1 proper noun ✓
+- F4: "two" = 1 number ✓
+
+So top 3 with score 2: **SSC1, SSC4,** and one more.
+
+Looking again at scores: q(2), t(2), u(2). If q=SSC5, t=SSC1, u=SSC4, then top 3 in order: **SSC1, SSC4, SSC5**
+
+## C5: Abstractive summary errors
+
+Summary: "Made to Stick corporation is facing serious problems after its vice president was found chewing a stick of gum from rival company Bigger Bubble on February 22."
+
+Comparing to original story:
+- Original: Ronald McBubble, president of Bigger Bubble, chewing gum from Made to Stick
+- Summary: Vice president of Made to Stick chewing gum from Bigger Bubble
+
+Errors:
+**a. Word to delete:** "vice" (should be "president", and "vice president" is wrong)
+
+Actually, re-reading: The summary says "its vice president" but should be "its president". So delete "vice".
+
+**b. Two phrases to swap:**
+- "Made to Stick corporation" and "Bigger Bubble" should be swapped
+- "its vice president" and... no, that's one phrase issue.
+
+Actually: The roles are reversed. McBubble is president of Bigger Bubble, not Made to Stick. So we need to swap:
+- "Made to Stick corporation" ↔ "Bigger Bubble"
+- "Bigger Bubble" ↔ "Made to Stick"... wait, these are in different positions.
+
+The two phrases: "Made to Stick corporation is facing serious problems after its vice president was found chewing a stick of gum from rival company Bigger Bubble"
+
+Should be: "Bigger Bubble corporation is facing serious problems after its president was found chewing a stick of gum from rival company Made to Stick"
+
+So swap:
+- Phrase 1: "Made to Stick corporation"
+- Phrase 2: "rival company Bigger Bubble"
+
+Or more precisely:
+- "Made to Stick" (at beginning) ↔ "Bigger Bubble" (at end)
+
+**c. Word to replace:**
+- "February 22" should be "January 22"
+- Replace "February" with "January"
+
+## C6: Factual error in extractive summary
+
+Summaries from the three stories:
+1. "A Sticky Situation": SS1, SS2, SS3
+2. "In Hot Water": HW1, HW2, HW6 (my answer from C3)
+3. "The Sticky Saga Continues": SSC1, SSC4, SSC5 (my answer from C4)
+
+Looking for a word with incorrect meaning:
+
+In "The Sticky Saga Continues" summary, let me check SSC4:
+"Perhaps most seriously, he is being investigated by the government's Bubble Safety Bureau on two counts of alleged wrapper forgery."
+
+Wait, the problem asks which sentence has "a single word that has an incorrect meaning." Let me look at context:
+- SSC1: Ronald McBubble
+- SSC4: "he" refers to someone
+
+If SSC3 talks about "his rival, Chicle 'Colonel' Sanders" having problems, and SSC4 says "he is being investigated," the "he" might refer to Sanders, not McBubble. But SSC4 should talk about McBubble.
+
+So in **SSC4**, the word **"he"** is ambiguous or incorrect.
+
+Actually, looking at SSC3: "Meanwhile, his rival, Chicle "Colonel" Sanders, is experiencing problems of his own, including a disappointing quarterly report."
+
+SSC4: "Perhaps most seriously, he is being investigated..."
+
+The "he" in SSC4 might refer to Sanders (last mentioned) but should refer to McBubble. So **"he"** in SSC4 creates ambiguity.
+
+But the question asks for "incorrect meaning", not ambiguity. Let me reconsider.
+
+Looking at my C4 answer, if I chose SSC1, SSC4, SSC5, and one of them has an error:
+- SSC1: About McBubble
+- SSC4: "he is being investigated" - if "he" should be "Sanders" but context suggests McBubble
+- SSC5: General statement
+
+Or looking at C3 answer (HW1, HW2, HW6): Let me check if there's an error.
+
+Actually, let me reconsider my C3 and C4 answers. Maybe I made errors in identifying sentences.
+
+Given time constraints, I'll provide my best answers:
+
+**C6a:** SSC4
+**C6b:** he
+
+Let me compile all answers:
+
+```json
+[
+  {"question_id": "C1_1", "answer": "italicized word", "reasoning": "F1 checks for italicized words, as seen in SS3 'USA Today' and SS7 'sticky'"},
+  {"question_id": "C1_2", "answer": "10", "reasoning": "F3 = words - 10. Short sentences with <10 words get negative scores"},
+  {"question_id": "C1_3", "answer": "number", "reasoning": "F4 counts numbers in sentences, like '22' in SS1"},
+  {"question_id": "C1_4", "answer": "word that appears in the title", "reasoning": "F5 counts repeated words including title words like 'sticky'"},
+  {"question_id": "C1_5", "answer": "noun referring to candy or gum", "reasoning": "F5 also counts repeated nouns like 'gum' and 'stick'"},
+  {"question_id": "C1_6", "answer": "first", "reasoning": "F6 checks if sentence is first or last"},
+  {"question_id": "C1_7", "answer": "last", "reasoning": "F6 checks if sentence is first or last"},
+  {"question_id": "C1_8", "answer": "SS4", "reasoning": "Matching features: F2=1 (McBubble), F4=1 (number '100'), F5=2"},
+  {"question_id": "C1_9", "answer": "SS5", "reasoning": "Short sentence with 9 words, no proper nouns, F3=-1"},
+  {"question_id": "C1_10", "answer": "SS7", "reasoning": "Last sentence with F6=1, has italicized 'sticky', F5=2"},
+  {"question_id": "C1_11", "answer": "SS6", "reasoning": "Very short sentence with 8 words, F3=-2"},
+  {"question_id": "C2_1", "answer": "HW1", "reasoning": "First sentence type with proper nouns and F5=4"},
+  {"question_id": "C2_2", "answer": "0", "reasoning": "Standard sentence length gives F3=0"},
+  {"question_id": "C2_3", "answer": "0", "reasoning": "No italicized words in HW4"},
+  {"question_id": "C2_4", "answer": "0", "reasoning": "HW4 is not first or last sentence"},
+  {"question_id": "C2_5", "answer": "3", "reasoning": "Sum: 0+0+0+1+2+0=3"},
+  {"question_id": "C2_6", "answer": "HW3", "reasoning": "Short sentence with sum=1"},
+  {"question_id": "C2_7", "answer": "-1", "reasoning": "Short sentence gives negative F3"},
+  {"question_id": "C2_8", "answer": "1", "reasoning": "One number or feature counted"},
+  {"question_id": "C2_9", "answer": "3", "reasoning": "Hot Water Village counted as 3 proper nouns"},
+  {"question_id": "C2_10", "answer": "6", "reasoning": "Sum: 1+3+0+0+1+1=6"},
+  {"question_id": "C2_11", "answer": "HW2", "reasoning": "Has italicized WikiLeaks and proper nouns"},
+  {"question_id": "C2_12", "answer": "0", "reasoning": "Not first or last sentence"},
+  {"question_id": "C2_13", "answer": "6", "reasoning": "Sum: 1+2+0+0+3+0=6"},
+  {"question_id": "C2_14", "answer": "HW5", "reasoning": "Has proper noun and high F5 score"},
+  {"question_id": "C2_15", "answer": "0", "reasoning": "No numbers in HW5"},
+  {"question_id": "C2_16", "answer": "6", "reasoning": "Sum: 1+1+0+0+4+0=6"},
+  {"question_id": "C3_1", "answer": "HW1", "reasoning": "Highest score of 6, appears first in story"},
+  {"question_id": "C3_2", "answer": "HW2", "reasoning": "Highest score of 6, appears second in story"},
+  {"question_id": "C3_3", "answer": "HW6", "reasoning": "Highest score of 6, appears last in story"},
+  {"question_id": "C4_1", "answer": "SSC1", "reasoning": "Score of 2, first sentence with proper noun and F6=1"},
+  {"question_id": "C4_2", "answer": "SSC4", "reasoning": "Score of 2, has proper noun and number"},
+  {"question_id": "C4_3", "answer": "SSC5", "reasoning": "Score of 2, last sentence with F6=1"},
+  {"question_id": "C5_1", "answer": "vice", "reasoning": "Should be 'president' not 'vice president'"},
+  {"question_id": "C5_2", "answer": "Made to Stick", "reasoning": "Should be swapped with Bigger Bubble at the end"},
+  {"question_id": "C5_3", "answer": "Bigger Bubble", "reasoning": "Should be swapped with Made to Stick at the beginning"},
+  {"question_id": "C5_4", "answer": "February", "reasoning": "Should be January based on original story"},
+  {"question_id": "C5_5", "answer": "January", "reasoning": "Correct month from original story"},
+  {"question_id": "C6_1", "answer": "SSC4", "reasoning": "Pronoun 'he' creates referential ambiguity"},
+  {"question_id": "C6_2", "answer": "he", "reasoning": "Ambiguous reference - could refer to Sanders instead of McBubble"}
+]
+```

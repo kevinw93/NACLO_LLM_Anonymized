@@ -1,0 +1,87 @@
+[
+  {
+    "question_id": "C1_1",
+    "answer": "LOLOLOL",
+    "reasoning": "The regex 'L(OL)+' requires 'L' followed by 'OL' repeated one or more times. The shortest form is 'LOL' (length 3). To fit the H5 slot (length 7) with 'L' at (5,5), it must be extended to 'LOLOLOL'."
+  },
+  {
+    "question_id": "C1_2",
+    "answer": "HEH",
+    "reasoning": "The regex 'H(EH)+' requires 'H' followed by 'EH' repeated one or more times. The shortest unique form is 'HEH' (length 3). This word is assigned to the H1 slot (length 3)."
+  },
+  {
+    "question_id": "C1_3",
+    "answer": "MWAHA",
+    "reasoning": "The regex 'MWA(HA)+' requires 'MWA' followed by 'HA' repeated one or more times. The shortest unique form is 'MWAHA' (length 5). This word is assigned to the H2 slot (length 5)."
+  },
+  {
+    "question_id": "C1_4",
+    "answer": "AHA",
+    "reasoning": "The regex '(AH)+A+' requires 'AH' repeated one or more times, followed by 'A' repeated one or more times. The shortest unique form is 'AHA' (length 3). This word is assigned to the V9 slot (length 3)."
+  },
+  {
+    "question_id": "C1_5",
+    "answer": "HOHOHO",
+    "reasoning": "The regex '(HO)+' requires 'HO' repeated one or more times. The shortest form is 'HO' (length 2), but no length 2 slots are available. The next shortest form is 'HOHO' (length 4), but no length 4 slots are available. It must be extended to fit a length 6 slot, so 'HOHOHO'. This word is assigned to the H3 slot (length 6)."
+  },
+  {
+    "question_id": "C1_6",
+    "answer": "ROTFL",
+    "reasoning": "The regex 'ROT?FL' requires 'R', 'O', 'T' (zero or one time), 'F', 'L'. The shortest unique form is 'ROFL' (length 4). If 'ROFL' cannot be placed, the next shortest is 'ROTFL' (length 5). This word could not be placed in any available grid slot due to length (no L4 or L5 slots remained after other assignments) or intersection conflicts. However, an answer for each question is required, so 'ROTFL' is provided as the shortest extended unique form."
+  },
+  {
+    "question_id": "C1_7",
+    "answer": "HEHEHE",
+    "reasoning": "The regex 'HE(HE)+' requires 'HE' followed by 'HE' repeated one or more times. The shortest form is 'HEHE' (length 4), but no length 4 slots are available. It must be extended to fit a length 6 slot, so 'HEHEHE'. This word is assigned to the H9 slot (length 6)."
+  },
+  {
+    "question_id": "C1_8",
+    "answer": "HAA",
+    "reasoning": "The regex 'HA+' requires 'H' followed by 'A' repeated one or more times. The shortest form is 'HA' (length 2), but no length 2 slots are available. The next shortest unique form is 'HAA' (length 3). This word is assigned to the V10 slot (length 3)."
+  },
+  {
+    "question_id": "C1_9",
+    "answer": "KEKEKE",
+    "reasoning": "The regex 'K(EK)*E' requires 'K' followed by 'EK' zero or more times, followed by 'E'. The shortest form is 'KE' (length 2), but no length 2 slots are available. The next shortest form is 'KEKE' (length 4), but no length 4 slots are available. It must be extended to fit a length 6 slot, so 'KEKEKE'. This word is assigned to the V2 slot (length 6)."
+  },
+  {
+    "question_id": "C1_10",
+    "answer": "TEHEHE",
+    "reasoning": "The regex 'TE(HE+)+' requires 'TE' followed by 'HE+' repeated one or more times. The shortest form is 'TEHE' (length 4), but no length 4 slots are available. It must be extended to fit a length 6 slot, so 'TEHEHE'. This word is assigned to the V4 slot (length 6)."
+  },
+  {
+    "question_id": "C1_11",
+    "answer": "LOOOOL",
+    "reasoning": "The regex 'LO+L' requires 'L' followed by 'O' one or more times, followed by 'L'. The shortest form is 'LOL' (length 3), but it is used for C1_1. The next shortest is 'LOOL' (length 4), but no length 4 slots are available. It must be extended to fit a length 6 slot, so 'LOOOOL'. This word is assigned to the V6 slot (length 6)."
+  },
+  {
+    "question_id": "C1_12",
+    "answer": "JAJAJA",
+    "reasoning": "The regex '(JA)+' requires 'JA' repeated one or more times. The shortest form is 'JA' (length 2), but no length 2 slots are available. The next shortest form is 'JAJA' (length 4), but no length 4 slots are available. It must be extended to fit a length 6 slot, so 'JAJAJA'. This word is assigned to the V8 slot (length 6)."
+  },
+  {
+    "question_id": "C1_13",
+    "answer": "HARRHARR",
+    "reasoning": "The regex '(HAR+)+' requires 'HAR+' repeated one or more times. The shortest form is 'HAR' (length 3), but all L3 slots are assigned. The next shortest forms are 'HARR' (4), 'HARRR' (5), 'HARHAR' (6). To fit an L8 slot, it must be extended to 'HARRHARR'. This word is assigned to the H4 slot (length 8)."
+  },
+  {
+    "question_id": "C1_14",
+    "answer": "LAWLLLLL",
+    "reasoning": "The regex 'LAW*L' requires 'L', 'A', 'W' zero or more times, 'L'. The shortest form is 'LAL' (length 3), but it is not used to ensure uniqueness for other L3 words. To fit the H7 slot (length 8) with 'L' at (7,5), it must be extended to 'LAWLLLLL'."
+  },
+  {
+    "question_id": "C1_15",
+    "answer": "HAHAHAHA",
+    "reasoning": "The regex 'HAHA*' requires 'HA' followed by 'HA' zero or more times. The shortest form is 'HA' (length 2), but no length 2 slots are available. The next shortest form is 'HAHA' (length 4), but no length 4 slots are available. To fit an L8 slot, it must be extended to 'HAHAHAHA'. This word is assigned to the H10 slot (length 8)."
+  },
+  {
+    "question_id": "C2_a",
+    "answer": "LOLOL",
+    "reasoning": "Shortest form of 'LOL*LO?(OL)?O+L' is derived by taking the shortest match for each unit: 'LOL*' gives 'LO', 'LO?' gives 'L', '(OL)?' gives '', 'O+' gives 'O', 'L' gives 'L'. Concatenating these results in 'LOLOL'."
+  },
+  {
+    "question_id": "C2_b",
+    "answer": "HA",
+    "reasoning": "Shortest form of '(A?HA)+(LO)?O*' is derived by taking the shortest match for each unit: '(A?HA)+' gives 'HA' (from 'A?HA' where 'A?' is empty), '(LO)?' gives '', 'O*' gives ''. Concatenating these results in 'HA'."
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "question_id": "H1_1",
+    "answer": "abcd",
+    "reasoning": "Following the pattern of building up the string character by character"
+  },
+  {
+    "question_id": "H1_2",
+    "answer": "S = abcdb",
+    "reasoning": "Shows the current state of string S after adding the fifth character"
+  },
+  {
+    "question_id": "H1_3",
+    "answer": "abcdbc",
+    "reasoning": "Continuing to build the string before substitution"
+  },
+  {
+    "question_id": "H1_4",
+    "answer": "S = abcdbc",
+    "reasoning": "Current state matching column 1"
+  },
+  {
+    "question_id": "H1_5",
+    "answer": "aXdX",
+    "reasoning": "After recognizing bc pattern and substituting with X"
+  },
+  {
+    "question_id": "H1_6",
+    "answer": "S = aXdXab",
+    "reasoning": "Current state with substitution X = bc"
+  },
+  {
+    "question_id": "H1_7",
+    "answer": "aXdXaX",
+    "reasoning": "Recognizing another instance of bc pattern"
+  },
+  {
+    "question_id": "H1_8",
+    "answer": "abcdbcabcd",
+    "reasoning": "The complete input string"
+  },
+  {
+    "question_id": "H1_9",
+    "answer": "S = aXdXaX",
+    "reasoning": "State before final substitutions"
+  },
+  {
+    "question_id": "H1_10",
+    "answer": "ZXZ",
+    "reasoning": "Final compressed form using Z = Yd substitution"
+  },
+  {
+    "question_id": "H1_11",
+    "answer": "S = ZXZ",
+    "reasoning": "Final output matching the given result"
+  },
+  {
+    "question_id": "H2_1",
+    "answer": "aXdXaXd",
+    "reasoning": "BPE replaces most frequent pair bc with X"
+  },
+  {
+    "question_id": "H2_2",
+    "answer": "S = aXdXaXd",
+    "reasoning": "State after first BPE substitution"
+  },
+  {
+    "question_id": "H2_3",
+    "answer": "Y = aX",
+    "reasoning": "Second substitution in BPE, replacing aX with Y"
+  },
+  {
+    "question_id": "H3_1",
+    "answer": "Same",
+    "reasoning": "Both algorithms would identify bc as the main pattern"
+  },
+  {
+    "question_id": "H3_2",
+    "answer": "Different",
+    "reasoning": "Less clear patterns, algorithms would handle differently"
+  },
+  {
+    "question_id": "H3_3",
+    "answer": "Different",
+    "reasoning": "Complex pattern structure leads to different substitution orders"
+  },
+  {
+    "question_id": "H3_4",
+    "answer": "Different",
+    "reasoning": "Repeated ccdb pattern but algorithms process differently"
+  },
+  {
+    "question_id": "H3_5",
+    "answer": "Different",
+    "reasoning": "Extended version of previous, still produces different outputs"
+  }
+]

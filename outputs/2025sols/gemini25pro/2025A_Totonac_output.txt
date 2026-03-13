@@ -1,0 +1,111 @@
+Model: gemini-2.5-pro
+Generation Time: 70.51 seconds
+Timestamp: 2025-10-26 16:53:30
+================================================================================
+
+An analysis of the provided Totonac sentences reveals a consistent morphological and syntactic structure.
+
+**Morpheme and Syntax Analysis:**
+
+1.  **Sentence Structure:** The sentences follow the pattern `Verb` + (optional particle/prefix) `Noun` + `wa:qni'`.
+    *   `wa:qni'` consistently corresponds to "the fox".
+
+2.  **Nouns:**
+    *   `chiki`: house (used in sentences 1-7)
+    *   `ktaqalhwaxni`: a hole (used in sentences 8-9)
+
+3.  **Verb Structure:** The verbs are composed of a locational prefix and a directional stem.
+
+4.  **Locational Prefixes (on the verb):**
+    *   `(no prefix)`: front (e.g., sentence 1: `Tanu:yi` -> goes into the front)
+    *   `Akpu:`: top / roof area (e.g., sentence 2: chimney; sentence 3: hole in roof)
+    *   `Cha:qe:`: back (e.g., sentence 4: back door)
+    *   `Lakpa:`: side (e.g., sentence 5: flower box on the side)
+    *   `Tampi:`: under (e.g., sentences 6-7: under the house)
+
+5.  **Directional Verb Stems:** There are two distinct sets of stems for "in" and "out" motions, depending on the nature of the opening.
+    *   **Set A (General Portals):** Used for moving through general areas or openings like doors, windows, or holes in the structure.
+        *   `-tanu:yi`: go in / enter (e.g., 1: `Tanu:yi`, 3: `Akpu:tanu:yi`, 6: `Tampi:tanu:yi`)
+        *   `-taxtiyi`: come out / exit (e.g., 4: `Cha:qe:taxtiyi`, 7: `Tampi:taxtiyi`)
+    *   **Set B (Hole-like Containers):** Used for moving into/out of specific, container-like objects like a chimney, a flower box, or a standalone hole.
+        *   `-tuju:yi`: go into (e.g., 5: `Lakpa:tuju:yi`, 8: `Tuju:yi`)
+        *   `-tukuta`: come out of (e.g., 2: `Akpu:tukuta`, 9: `Tukuta`)
+
+6.  **Grammatical Particles/Affixes:** The connection between the verb and noun changes based on the verb's structure.
+    *   If the verb has a locational prefix, the particle `n` is placed before the noun. (e.g., `Akpu:tanu:yi n chiki...`)
+    *   If the verb has no prefix, the prefix `k-` is attached to the noun. (e.g., `Tanu:yi kchiki...`)
+
+**Constructing the Answers:**
+
+Based on this system, I will now construct the sentences for questions 10-15.
+
+*   **Question 10: The fox comes out the front door.**
+    *   Location: front (no prefix)
+    *   Action: come out (general portal) -> `taxtiyi`
+    *   Syntax: No prefix on verb, so `k-` on noun `chiki`.
+    *   Sentence: `Taxtiyi kchiki wa:qni'`
+
+*   **Question 11: The fox goes into the chimney.**
+    *   Location: chimney (top) -> `Akpu:`
+    *   Action: go into (hole-like container) -> `tuju:yi`
+    *   Syntax: Prefix on verb, so `n` before noun `chiki`.
+    *   Sentence: `Akpu:tuju:yi n chiki wa:qni'`
+
+*   **Question 12: The fox comes out a hole in the roof.**
+    *   Location: roof (top) -> `Akpu:`
+    *   Action: come out (general portal) -> `taxtiyi`
+    *   Syntax: Prefix on verb, so `n` before noun `chiki`.
+    *   Sentence: `Akpu:taxtiyi n chiki wa:qni'`
+
+*   **Question 13: The fox comes in the back door.**
+    *   Location: back -> `Cha:qe:`
+    *   Action: come in (general portal) -> `tanu:yi`
+    *   Syntax: Prefix on verb, so `n` before noun `chiki`.
+    *   Sentence: `Cha:qe:tanu:yi n chiki wa:qni'`
+
+*   **Question 14: The fox goes into a window on the side of the house.**
+    *   Location: side -> `Lakpa:`
+    *   Action: go into (general portal, as a window is for passage) -> `tanu:yi`
+    *   Syntax: Prefix on verb, so `n` before noun `chiki`.
+    *   Sentence: `Lakpa:tanu:yi n chiki wa:qni'`
+
+*   **Question 15: The fox comes out of a flower box on the back of the house.**
+    *   Location: back -> `Cha:qe:`
+    *   Action: come out of (hole-like container) -> `tukuta`
+    *   Syntax: Prefix on verb, so `n` before noun `chiki`.
+    *   Sentence: `Cha:qe:tukuta n chiki wa:qni'`
+
+```json
+[
+  {
+    "question_id": "A1_10",
+    "answer": "Taxtiyi kchiki wa:qni'",
+    "reasoning": "The action 'comes out' of a general portal (front door) uses the verb stem `-taxtiyi`. The location 'front' corresponds to having no prefix on the verb. Because the verb is unprefixed, the noun `chiki` (house) takes the prefix `k-`."
+  },
+  {
+    "question_id": "A1_11",
+    "answer": "Akpu:tuju:yi n chiki wa:qni'",
+    "reasoning": "The location 'chimney' is on top of the house, requiring the prefix `Akpu:`. A chimney is a container-like object, so the action 'goes into' uses the verb stem `-tuju:yi`. The combined, prefixed verb `Akpu:tuju:yi` is followed by the particle `n` and the noun `chiki` (house)."
+  },
+  {
+    "question_id": "A1_12",
+    "answer": "Akpu:taxtiyi n chiki wa:qni'",
+    "reasoning": "This is the opposite action of sentence 3 ('enters the house through a hole in the roof'). The location 'roof' uses the prefix `Akpu:`. A hole in the roof is a general portal, so 'comes out' uses the verb stem `-taxtiyi`. The prefixed verb is followed by `n` and `chiki`."
+  },
+  {
+    "question_id": "A1_13",
+    "answer": "Cha:qe:tanu:yi n chiki wa:qni'",
+    "reasoning": "This is the opposite action of sentence 4 ('comes out the back door'). The location 'back' requires the prefix `Cha:qe:`. The action 'comes in' through a general portal uses the verb stem `-tanu:yi`. The prefixed verb is followed by `n` and `chiki`."
+  },
+  {
+    "question_id": "A1_14",
+    "answer": "Lakpa:tanu:yi n chiki wa:qni'",
+    "reasoning": "The location 'side' uses the prefix `Lakpa:`. A window is a general portal (like a door), not a container (like a flower box), so the action 'goes into' uses the verb stem `-tanu:yi`. The prefixed verb is followed by `n` and `chiki`."
+  },
+  {
+    "question_id": "A1_15",
+    "answer": "Cha:qe:tukuta n chiki wa:qni'",
+    "reasoning": "The location 'back' uses the prefix `Cha:qe:`. A flower box is a container-like object, so the action 'comes out of' uses the verb stem `-tukuta`. The prefixed verb `Cha:qe:tukuta` is followed by the particle `n` and the noun `chiki`."
+  }
+]
+```

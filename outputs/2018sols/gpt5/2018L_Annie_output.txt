@@ -1,0 +1,58 @@
+Model: gpt-5
+Generation Time: 306.59 seconds
+Timestamp: 2025-12-09 00:09:39
+================================================================================
+
+[
+  {"question_id":"L1_1","answer":"V","reasoning":"‘as tightrope walker’ specifies the role in which she joined—verb modification."},
+  {"question_id":"L1_3","answer":"V","reasoning":"‘in a purple leotard’ describes how she performs—verb modification."},
+  {"question_id":"L1_4","answer":"N","reasoning":"‘routine with the trapeze’ identifies which routine—noun modification."},
+  {"question_id":"L1_5","answer":"V","reasoning":"‘as a child’ gives the time of liking—verb modification."},
+  {"question_id":"L1_6","answer":"V","reasoning":"‘with gusto’ expresses manner of performing—verb modification."},
+  {"question_id":"L1_7","answer":"V","reasoning":"‘with sadness’ expresses manner of performing—verb modification."},
+  {"question_id":"L1_8","answer":"V","reasoning":"‘in the street’ indicates location of losing—verb modification."},
+  {"question_id":"L1_9","answer":"N","reasoning":"‘charm with the inscription’ describes the charm—noun modification."},
+  {"question_id":"L1_10","answer":"N","reasoning":"Refers to the specific ‘routine with Charley’; she practiced it alone—noun modification."},
+  {"question_id":"L1_11","answer":"V","reasoning":"‘with the clowns’ indicates who he performs with—verb modification."},
+  {"question_id":"L1_12","answer":"N","reasoning":"‘act with the bananas’ specifies the act—noun modification."},
+  {"question_id":"L1_13","answer":"N","reasoning":"‘one with the peach pie’ specifies which one—noun modification."},
+
+  {"question_id":"L2_1","answer":"","reasoning":"No rule applies under order A→B→C."},
+  {"question_id":"L2_2","answer":"","reasoning":"No rule applies under order A→B→C."},
+  {"question_id":"L2_3","answer":"V","reasoning":"Rule C (Noun1=act) applies after A,B; label V."},
+  {"question_id":"L2_4","answer":"N","reasoning":"Rule A (verb is like) labels N."},
+  {"question_id":"L2_5","answer":"N","reasoning":"Rule A (liked) labels N."},
+  {"question_id":"L2_6","answer":"V","reasoning":"Rule C (Noun1=act) labels V."},
+  {"question_id":"L2_7","answer":"V","reasoning":"Rule C (Noun1=act) labels V."},
+  {"question_id":"L2_8","answer":"","reasoning":"No rule applies under order A→B→C."},
+  {"question_id":"L2_9","answer":"N","reasoning":"Rule A (likes) labels N."},
+  {"question_id":"L2_10","answer":"","reasoning":"No rule applies under order A→B→C."},
+  {"question_id":"L2_11","answer":"V","reasoning":"Rule C (Noun1=act) labels V."},
+  {"question_id":"L2_12","answer":"N","reasoning":"Rule A (likes) labels N."},
+  {"question_id":"L2_13","answer":"N","reasoning":"Rule A (likes) labels N."},
+  {"question_id":"L2_14","answer":"V","reasoning":"Rule C (Noun1=act) labels V."},
+  {"question_id":"L2_15","answer":"N","reasoning":"Rule B (‘with’ + food) labels N before C."},
+
+  {"question_id":"L3_1","answer":"Always label V.","reasoning":"V is the majority of gold labels (8 V vs 7 N), so a single default rule ‘label V’ yields 8 right, 7 wrong, 0 blank."},
+  {"question_id":"L3_2","answer":"V","reasoning":"Baseline applies to instance [1]."},
+  {"question_id":"L3_3","answer":"V","reasoning":"Baseline applies to instance [2]."},
+  {"question_id":"L3_4","answer":"V","reasoning":"Baseline applies to instance [3]."},
+  {"question_id":"L3_5","answer":"V","reasoning":"Baseline applies to instance [4]."},
+  {"question_id":"L3_6","answer":"V","reasoning":"Baseline applies to instance [5]."},
+  {"question_id":"L3_7","answer":"V","reasoning":"Baseline applies to instance [6]."},
+  {"question_id":"L3_8","answer":"V","reasoning":"Baseline applies to instance [7]."},
+  {"question_id":"L3_9","answer":"V","reasoning":"Baseline applies to instance [8]."},
+  {"question_id":"L3_10","answer":"V","reasoning":"Baseline applies to instance [9]."},
+  {"question_id":"L3_11","answer":"V","reasoning":"Baseline applies to instance [10]."},
+  {"question_id":"L3_12","answer":"V","reasoning":"Baseline applies to instance [11]."},
+  {"question_id":"L3_13","answer":"V","reasoning":"Baseline applies to instance [12]."},
+  {"question_id":"L3_14","answer":"V","reasoning":"Baseline applies to instance [13]."},
+  {"question_id":"L3_15","answer":"V","reasoning":"Baseline applies to instance [14]."},
+  {"question_id":"L3_16","answer":"V","reasoning":"Baseline applies to instance [15]."},
+
+  {"question_id":"L4_1","answer":"B","reasoning":"Put Rule B first to capture ‘with’ + food cases ([12],[13],[15]) as N before any other rule can mislabel them."},
+  {"question_id":"L4_2","answer":"C","reasoning":"Next use Rule C to mark all remaining ‘act’ cases as V, including [5]."},
+  {"question_id":"L4_3","answer":"A","reasoning":"Finally apply Rule A to remaining ‘like’ cases so it won’t override [5]; this order yields 11 correct and 0 wrong among labeled items."},
+
+  {"question_id":"L5_1","answer":"B→C→A; baseline: Always label V.","reasoning":"Baseline chosen because V is the majority label, giving 8 correct and 7 wrong with no blanks. Ordering B then C then A maximizes accuracy: B first prevents C from mislabeling food-with cases as V; C before A ensures [5] (Noun1=act) is labeled V, not overridden by A; A last finishes the remaining like-cases. This order achieves the highest accuracy (all 11 labeled correctly)."}
+]

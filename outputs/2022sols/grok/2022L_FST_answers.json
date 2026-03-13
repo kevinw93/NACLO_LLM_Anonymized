@@ -1,0 +1,72 @@
+[
+  {
+    "question_id": "L1_1",
+    "answer": "TAYM",
+    "reasoning": "For 'time' (t i m e), the path is t:T, i:AY, m:M, e:Ø (silent e). Concatenated output: TAYM. This matches the standard pronunciation /taɪm/ in the toy FST."
+  },
+  {
+    "question_id": "L1_2",
+    "answer": "TREYDUHD",
+    "reasoning": "For 'traded' (t r a d e d), the path is t:T, r:R, a:EY, d:D, ed:UHD (special suffix for voiced ending). Concatenated output: TREYD + UHD = TREYDUHD. Matches /treɪdɪd/ with UHD as /ɪd/."
+  },
+  {
+    "question_id": "L1_3",
+    "answer": "STRAYDIHNG",
+    "reasoning": "For 'striding' (s t r i d i n g), the path is s:S, t:T, r:R, i:AY, d:D, ing:IHNG (suffix). Concatenated output: STRAYD + IHNG = STRAYDIHNG. Matches /straɪdɪŋ/."
+  },
+  {
+    "question_id": "L1_4",
+    "answer": "FREYMIHNG",
+    "reasoning": "For 'framing' (f r a m i n g), the path is f:F, r:R, a:EY, m:M, ing:IHNG. Concatenated output: FREYM + IHNG = FREYMIHNG. Matches /freɪmɪŋ/."
+  },
+  {
+    "question_id": "L2_1",
+    "answer": "name",
+    "reasoning": "The word 'name' starts with n, and the FST has multiple possible arcs for n (n:G for /ŋ/ and n:N for /n/). Trying n:G first leads to a dead end for the next letter 'a', requiring backtrack to try n:N. The other words 'fading' and 'stage' have unique starting arcs without ambiguity."
+  },
+  {
+    "question_id": "L3_1",
+    "answer": "STEYDIHNG",
+    "reasoning": "For 'staging' (s t a g i n g) using the first FST, path s:S, t:T, a:EY, g:D, ing:IHNG. Concatenated output: STEYD + IHNG = STEYDIHNG. The g:D provides /dʒ/ sound for 'g' in this context."
+  },
+  {
+    "question_id": "L3_2",
+    "answer": "GEYMIHNG",
+    "reasoning": "For 'gaming' (g a m i n g), path g:G (from start), a:EY, m:M, ing:IHNG. Concatenated output: GEYM + IHNG = GEYMIHNG. Matches /geɪmɪŋ/ with g:G arc available from start."
+  },
+  {
+    "question_id": "L4_1",
+    "answer": "C",
+    "reasoning": "Assuming labels A-F include C as c:K for arrow 1 (start of colonel path). This assignment allows the chain to begin correctly for 'colonel' pronunciation KUHRNUHL, and branches for other words fit with the graph structure."
+  },
+  {
+    "question_id": "L4_2",
+    "answer": "E",
+    "reasoning": "Arrow 2 labeled o:UH (assumed E), continuing colonel path after c:K, outputting UH for the first 'o'. Ensures correct phoneme sequence for 'colonel' and potential sharing for other words like people with UH."
+  },
+  {
+    "question_id": "L4_3",
+    "answer": "D",
+    "reasoning": "Arrow 3 labeled l:R (assumed D), key exception for 'colonel' where 'l' outputs R. Critical for the R in KUHRNUHL, and differentiates from l:L used in other words like built and people."
+  },
+  {
+    "question_id": "L4_4",
+    "answer": "A",
+    "reasoning": "Arrow 4 labeled o:Ø (assumed A), silent second 'o' in 'colonel'. Allows empty output, essential for matching KUHRNUHL, and shared silent letter rule for words like people (o:Ø)."
+  },
+  {
+    "question_id": "L4_5",
+    "answer": "B",
+    "reasoning": "Arrow 5 labeled n:N (B), for 'n' in 'colonel' outputting N. Completes the pre-suffix part of the path for KUHRNUHL."
+  },
+  {
+    "question_id": "L4_6",
+    "answer": "F",
+    "reasoning": "Arrow 6 labeled el:UHL (F), consuming 'e l' outputting UHL for end of 'colonel'. Matches final phonemes NUHL (with prior N), and similar suffix handling for people (le or el variant)."
+  },
+  {
+    "question_id": "L5_1",
+    "answer": "colophle",
+    "reasoning": "In the inverse FST (swapped labels), for phoneme input R U H F L E A, the path reaches the state before l:R via epsilon-input parallel arcs for silent 'c o' (outputting 'c o'), then R:l (output 'l'), then branch o:UH (consume U H, output 'o'), then ph:F (consume F, output 'ph'), then l:L (consume L, output 'l'), then e:EA (consume E A, output 'e'). Total spelling: colophle. This uses the exception rules unintuitively with silent prefix and branch, producing a different spelling from expected 'roughly'."
+  }
+]

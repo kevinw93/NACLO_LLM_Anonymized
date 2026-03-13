@@ -1,0 +1,42 @@
+[
+  {
+    "question_id": "M1_1",
+    "answer": "(D ∧ (C → ¬E)) → ¬(B ∧ A)",
+    "reasoning": "The overall structure is an implication, X → Y. The consequent Y, on the main horizontal line, is a negated conjunction. The structure for B ∧ A is a negated line with ¬B and ¬A branching off; the diagram has one more negation tick, so it's ¬(B ∧ A). The antecedent X branches down and shows D stacked vertically on top of (C → ¬E). This vertical stacking that arises from a single splitting point appears to represent conjunction, making the antecedent D ∧ (C → ¬E). Combining these gives the full expression."
+  },
+  {
+    "question_id": "M2_1",
+    "answer": "B",
+    "reasoning": "This is part of the sentence matching for M2. Based on a detailed analysis, the overall logical structure is (Fact1 ∧ Fact2) → GN. The Begriffsschrift antecedent is interpreted as (A→B) ∧ ((D∧E)→C). Fact 1 is 'All quaxors are galactions' (Q→G). This matches the structure A→B. Therefore, B must be 'x is a galaction'."
+  },
+  {
+    "question_id": "M2_2",
+    "answer": "F",
+    "reasoning": "This is part of the sentence matching for M2. The text states 'all this only holds true if the polyverse is Groop-normal', which translates to (Facts) → GN. The diagram's overall structure is [Antecedent] → ¬F. For the logic to match, F must correspond to 'the polyverse is Groop-normal'."
+  },
+  {
+    "question_id": "M2_3",
+    "answer": "C",
+    "reasoning": "This is part of the sentence matching for M2. The second logical fact, derived from 'A pulsoid with a sateotrope is only not a galaction when it is dingly', is (P∧S)→(G∨D). The corresponding diagram is (D∧E)→C. The antecedents match if {D,E} are {P,S}. The consequent C must correspond to (G∨D). None of the sentences is 'G or D'. Assuming a simplification for the puzzle, where the statement becomes 'if P and S, then it is dingly', we match C to 'x is dingly'."
+  },
+  {
+    "question_id": "M2_4",
+    "answer": "E",
+    "reasoning": "This is part of the sentence matching for M2. The second part of the antecedent is (D∧E)→C, which corresponds to the logical fact about pulsoids and sateotropes. The antecedent of this fact is a conjunction of 'x is a pulsoid' (vi) and 'x has a sateotrope' (iv). Therefore, D and E must be sentences iv and vi. The choice is arbitrary, and swapping them gives the second possible correct answer. I assign E to 'x has a sateotrope'."
+  },
+  {
+    "question_id": "M2_5",
+    "answer": "A",
+    "reasoning": "This is part of the sentence matching for M2. The first part of the antecedent is A→B. This corresponds to the first logical fact, 'All quaxors are galactions' (Q→G). Therefore, the antecedent A must be 'x is a quaxor'."
+  },
+  {
+    "question_id": "M2_6",
+    "answer": "D",
+    "reasoning": "This is part of the sentence matching for M2. Following the logic for M2_4, D and E must be sentences iv and vi. Having assigned E to iv, D must be assigned to vi, 'x is a pulsoid'."
+  },
+  {
+    "question_id": "M3_1",
+    "answer": "The notation is a 2D tree representing logical formulas. The basic structure is P→Q (if P then Q), shown with the consequent Q on a horizontal 'content stroke' and the antecedent P on a branch below it. Negation (¬P, 'not P') is a small vertical tick on a line. All other logical connectives are built from these. Disjunction (P∨Q, 'P or Q') is shown by multiple distinct branches from a content stroke. Conjunction (P∧Q, 'P and Q') is represented as ¬(¬P∨¬Q), which is a negated content stroke with branches for ¬P and ¬Q. Structures can be nested to create complex propositions.",
+    "reasoning": "This explanation is a synthesis of the rules derived from the examples. I reverse-engineered the notation for implication, negation, disjunction (from branching), and conjunction (from its De Morgan's equivalent form). This set of rules is the most consistent interpretation of the provided examples, despite some apparent contradictions in the problem sheet which suggest either errors in the examples or more complex, context-sensitive rules."
+  }
+]

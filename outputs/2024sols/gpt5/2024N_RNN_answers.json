@@ -1,0 +1,102 @@
+[
+  {
+    "question_id": "N1_1",
+    "answer": "word position",
+    "reasoning": "The fourth unit rises steadily at every word regardless of which word it is, so it encodes how far into the sentence the system is (number of words seen so far)."
+  },
+  {
+    "question_id": "N2_1",
+    "answer": "H",
+    "reasoning": "Chosen by comparing unit-pattern cues for coordination without a relative clause and where subject plurality is established early."
+  },
+  {
+    "question_id": "N2_2",
+    "answer": "B",
+    "reasoning": "No relative clause (U3 flat); main verb early, then an embedded clause; matches plot B’s shifts."
+  },
+  {
+    "question_id": "N2_3",
+    "answer": "A",
+    "reasoning": "Contains an object relative clause that ends before the sentence ends; matches plot with a mid-sentence nonzero U3 that returns to zero."
+  },
+  {
+    "question_id": "N2_4",
+    "answer": "C",
+    "reasoning": "Subject relative clause beginning mid-sentence and continuing to the end; matches plot C’s late sustained U3 activation."
+  },
+  {
+    "question_id": "N2_5",
+    "answer": "G",
+    "reasoning": "Short subject relative clause (that sings) ending before the sentence’s final predicate; U3 bumps briefly then returns to zero."
+  },
+  {
+    "question_id": "N2_6",
+    "answer": "E",
+    "reasoning": "Subject relative clause at the end (that invented this); U3 turns on late and stays on; subject plural early."
+  },
+  {
+    "question_id": "N2_7",
+    "answer": "I",
+    "reasoning": "Starts with a pronoun subject and has an object relative clause spanning to the end; matches the plot with early U4 deviation and long U3 activity."
+  },
+  {
+    "question_id": "N2_8",
+    "answer": "D",
+    "reasoning": "No relative clause; simple transitive with early main verb; matches plot D’s flat U3 and early change in U1/U2."
+  },
+  {
+    "question_id": "N2_9",
+    "answer": "F",
+    "reasoning": "Plural subject with no relative clause; matches plot F’s flat U3 and stable plural cue in U1."
+  },
+  {
+    "question_id": "N3_1",
+    "answer": "The dog that ran arrived",
+    "reasoning": "A five-word sentence with a short relative clause, matching the plot’s brief mid-sentence activation of the relative-clause unit."
+  },
+  {
+    "question_id": "N3_2",
+    "answer": "The raven that sings visits the old poet",
+    "reasoning": "Nine words with a subject relative clause ending before the main predicate; fits the plot’s U3-on then off pattern."
+  },
+  {
+    "question_id": "N3_3",
+    "answer": "The yaks meet the dog and the gazelles",
+    "reasoning": "Nine-word sentence with plural subject and late coordination in the object; matches the plot with no relative-clause activity."
+  },
+  {
+    "question_id": "N4_1",
+    "answer": "-1 from 3-7; 0 elsewhere",
+    "reasoning": "Object relative clause spans words 3–7 (that she told my cousin); U3 marks object RC as −1 while active, and 0 outside."
+  },
+  {
+    "question_id": "N4_2",
+    "answer": "-1 from 3-8; 0 elsewhere",
+    "reasoning": "Object relative clause spans words 3–8 (that she told to my cousin); U3 stays at −1 over the clause and 0 outside."
+  },
+  {
+    "question_id": "N5_a",
+    "answer": "is: 50% are: 50%",
+    "reasoning": "With both units on, attachment after that is ambiguous in the string the dog by the zebras that, so the model assigns equal probability."
+  },
+  {
+    "question_id": "N5_b",
+    "answer": "is: 0% are: 100%",
+    "reasoning": "With U1 off and U2 on, the model treats that as starting a relative clause attached to zebras (plural), so it expects are."
+  },
+  {
+    "question_id": "N5_c",
+    "answer": "is: 50% are: 50%",
+    "reasoning": "With U1 on and U2 off, the model lacks the relative-clause cue and falls back to uncertainty after that."
+  },
+  {
+    "question_id": "N5_d",
+    "answer": "is: 50% are: 50%",
+    "reasoning": "With both units off, the system has no usable agreement information, so it predicts is/are equally."
+  },
+  {
+    "question_id": "N5_e",
+    "answer": "the dog and the yak",
+    "reasoning": "A five-word start where agreement requires recognizing coordination; only with both U1 and U2 on does the model correctly prefer are."
+  }
+]

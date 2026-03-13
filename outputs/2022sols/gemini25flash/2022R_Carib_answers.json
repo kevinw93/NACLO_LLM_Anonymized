@@ -1,0 +1,111 @@
+[
+  {
+    "question_id": "R1_1",
+    "answer": "word-medial between two vowels",
+    "reasoning": "No instances of silent 'y' are present in the provided data. This environment is chosen as a plausible context for 'y' to be silent in a general G2P system, satisfying the requirement to fill the blank without contradicting existing data."
+  },
+  {
+    "question_id": "R1_2",
+    "answer": "word-initial and followed by e",
+    "reasoning": "The word 'yjenarîkepy' is transcribed as /'je.na.'rin.gie.bi/, where the initial 'y' is pronounced as 'j'. This is a specific context for 'y' producing 'j'."
+  },
+  {
+    "question_id": "R1_3",
+    "answer": "j",
+    "reasoning": "Based on 'yjenarîkepy' /'je.na.'rin.gie.bi/, where 'y' is word-initial and followed by 'e', it is pronounced as 'j'."
+  },
+  {
+    "question_id": "R1_4",
+    "answer": "word-initial and not followed by e",
+    "reasoning": "Words like 'yrama' /'ta.ma/, 'ytonoroipory' /'to.no.'toih.pjo.to/ (initial 'y'), and 'ytuwarõ' /'tu.wa.fõ/ show that an initial 'y' not followed by 'e' is pronounced as 't'. This rule is ordered after the 'y' as 'j' rule for specificity."
+  },
+  {
+    "question_id": "R1_5",
+    "answer": "t",
+    "reasoning": "Based on 'yrama' /'ta.ma/, 'ytonoroipory' /'to.no.'toih.pjo.to/ (initial 'y'), and 'ytuwarõ' /'tu.wa.fõ/, the word-initial 'y' (not followed by 'e') is pronounced as 't'."
+  },
+  {
+    "question_id": "R1_6",
+    "answer": "word-final after k or after r and preceded by i",
+    "reasoning": "The word 'uweposapariky' /u.'wem.bo.'sa?.pa.'ţi?.ki/ shows 'y' -> 'i' after 'k'. The word 'sukurusaniry' /su.'gu.ru.'sa.ni.ri/ shows 'y' -> 'i' after 'r' and preceded by 'i'. This rule combines these specific 'i' cases."
+  },
+  {
+    "question_id": "R1_7",
+    "answer": "i",
+    "reasoning": "Based on 'uweposapariky' and 'sukurusaniry', 'y' is pronounced as 'i' in these specific word-final contexts."
+  },
+  {
+    "question_id": "R1_8",
+    "answer": "o",
+    "reasoning": "Given the constraint that (c), (e), (g), (h) must be distinct phonemes and there are 5 observed 'y' outcomes (j, t, i, a, o), 'o' is chosen as the next most frequent distinct phoneme not yet used, to serve as the 'otherwise' rule. This choice means that 'y' in 'anipynary' (y->a) and 'asaperary' (y->t) will be incorrectly predicted as 'o' under this strict interpretation of the rules, which is a necessary compromise to fit the table structure and distinctness constraint."
+  },
+  {
+    "question_id": "R2_1",
+    "answer": "word-initial, stressed, and followed by a vowel",
+    "reasoning": "No direct examples of 'h.p, h.t, h.k' are found in the data. This environment is chosen as a common phonological context for aspiration in many languages, serving as a plausible placeholder to fill the required cell."
+  },
+  {
+    "question_id": "R2_2",
+    "answer": "when preceded by a voiced sound (vowel or m)",
+    "reasoning": "Orthographic 'p' becomes 'b' after 'm' ('sampura', 'pëputu'). Orthographic 't' becomes 'd' after a vowel ('asewenàpota', 'pëputu'). Orthographic 'k' becomes 'g' after a vowel ('õkaikõ', 'aperẽperēka'). This is a consistent voicing rule for stops."
+  },
+  {
+    "question_id": "R2_3",
+    "answer": "b, d, g",
+    "reasoning": "Following the voicing rule, 'p, t, k' become 'b, d, g' respectively when preceded by a voiced sound (vowel or 'm')."
+  },
+  {
+    "question_id": "R2_4",
+    "answer": "when followed by a glottal stop",
+    "reasoning": "The table requires a third distinct set of pronunciations for 'p, t, k' that is neither voiced ('b, d, g') nor voiceless ('p, t, k'). A common phonological process for stops is pre-glottalization or glottalization. This environment and phoneme set are chosen as plausible placeholders to satisfy the table's structural and distinctness requirements, even if not directly present in the provided training data."
+  },
+  {
+    "question_id": "R2_5",
+    "answer": "?.p, ?.t, ?.k",
+    "reasoning": "To satisfy the requirement for a third distinct set of phonemes for 'p, t, k', the representation of 'p, t, k' preceded by a glottal stop ('?.p, ?.t, ?.k') is chosen. This is a plausible phonetic modification for stops."
+  },
+  {
+    "question_id": "R2_6",
+    "answer": "p, t, k",
+    "reasoning": "This is the default pronunciation for 'p, t, k' when no other specific rules (like voicing, aspiration, or pre-glottalization) apply. This covers word-initial stops and stops after voiceless consonants (e.g., 'pirai' (p->p), 'taweipore' (t->t), 'kynapojaton' (k->k))."
+  },
+  {
+    "question_id": "R3_1",
+    "answer": "ma.go.ba.mo",
+    "reasoning": "ma -> ma. ko -> go (k after vowel 'o' -> g by R2.c). pa -> ba (p after vowel 'a' -> b by R2.c). my -> mo (y after 'm', not covered by more specific R1 rules, so R1.h applies: o)."
+  },
+  {
+    "question_id": "R3_2",
+    "answer": "ai.do.bo.ma",
+    "reasoning": "ai -> ai. to -> do (t after vowel 'i' -> d by R2.c). po -> bo (p after vowel 'o' -> b by R2.c). ma -> ma."
+  },
+  {
+    "question_id": "R3_3",
+    "answer": "ke.ri.ge.ri",
+    "reasoning": "ke -> ke (k word-initial -> k by R2.f). ri -> ri (r is default liquid). ke -> ge (k after vowel 'i' -> g by R2.c). ri -> ri (r is default liquid)."
+  },
+  {
+    "question_id": "R3_4",
+    "answer": "pa.ri.mo",
+    "reasoning": "pa -> pa (p word-initial -> p by R2.f). ri -> ri (r is default liquid). my -> mo (y after 'm', not covered by more specific R1 rules, so R1.h applies: o)."
+  },
+  {
+    "question_id": "R3_5",
+    "answer": "ku.ri.ja.ra",
+    "reasoning": "ku -> ku (k word-initial -> k by R2.f). ri -> ri (r is default liquid). ja -> ja. ra -> ra (r is default liquid)."
+  },
+  {
+    "question_id": "R3_6",
+    "answer": "tu.ku.ri.ja.ra.ro",
+    "reasoning": "y (initial) -> t (R1.e). ku -> ku (k after consonant 't' -> k by R2.f). ri -> ri (r is default liquid). ja -> ja. ra -> ra (r is default liquid). ry -> ro (y after 'r', not covered by R1.f, so R1.h applies: o)."
+  },
+  {
+    "question_id": "R3_7",
+    "answer": "tu.ku.bi.mo",
+    "reasoning": "t (initial) -> t (R2.f). y (initial) -> t (R1.e). ku -> ku (k after consonant 't' -> k by R2.f). pi -> bi (p after vowel 'u' -> b by R2.c). my -> mo (y after 'm', not covered by more specific R1 rules, so R1.h applies: o)."
+  },
+  {
+    "question_id": "R4_1",
+    "answer": "Carib G2P involves converting orthographic letters into phonetic symbols, considering stress (') and syllable boundaries (.). Vowels can be oral (a, e, i, o, u) or nasalized (ã, õ, ẽ, ì, ù). Consonants are pronounced based on their position and surrounding sounds, often undergoing voicing or other modifications. The specific rules for 'y' and 'p, t, k' are detailed in R1 and R2. Additionally, orthographic 'r' shows complex variations, sometimes being a liquid (r or ɾ), or a stop (t), or a fricative (ʃ) depending on context (e.g., word-initial 'r' becomes 't'; 'r' can become 'ɾ' after 'a' and before 'y' pronounced 't'; 'r' becomes 'ʃ' in 'riky'; otherwise 'r' is typically 'r'). Orthographic 'S' maps to 'ʃ'. Other consonants generally map directly to their phonetic sounds (e.g., m→m, n→n, h→h, s→s, j→j, w→w)."
+  }
+]

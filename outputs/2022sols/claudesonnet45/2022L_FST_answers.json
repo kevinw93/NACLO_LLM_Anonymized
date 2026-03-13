@@ -1,0 +1,72 @@
+[
+  {
+    "question_id": "L1_1",
+    "answer": "TAYM",
+    "reasoning": "t:T, i:AY, m:M (to middle state), e:Ø (produces no output, goes to final state)"
+  },
+  {
+    "question_id": "L1_2",
+    "answer": "TRAYDUHD",
+    "reasoning": "t:T, r:R, a:EY, d:D (to lower middle state), ed:UHD (reads 'ed' as unit, goes to final)"
+  },
+  {
+    "question_id": "L1_3",
+    "answer": "STRAYDIHNG",
+    "reasoning": "s:S, t:T, r:R, i:AY, d:D (to lower state), ing:IHNG (to final state)"
+  },
+  {
+    "question_id": "L1_4",
+    "answer": "FRAYMIHNG",
+    "reasoning": "f:F, r:R, a:EY, m:M (to upper middle state), ing:IHNG (to final state)"
+  },
+  {
+    "question_id": "L2_1",
+    "answer": "stage",
+    "reasoning": "The letter 'g' has two possible transitions (g:G staying at start, or g:DJ going to middle state), requiring the system to try one path, potentially backtrack, and try the other"
+  },
+  {
+    "question_id": "L3_1",
+    "answer": "STAYJIHNG",
+    "reasoning": "s:S, t:T, a:EY (at start), then must handle 'ging'. Since paths must end at double circle (final state), trying g:DJ leads to dead end with 'ing' remaining. Instead: after 'sta': g:G (stay at start), i:AY, n:N, g:G won't reach final. Actually, reconsidering: There's no valid path to final state, so no output is produced."
+  },
+  {
+    "question_id": "L3_2",
+    "answer": "GAYMIHNG",
+    "reasoning": "g:G (or g:DJ), a:EY, m:M (to middle state), ing:IHNG (to final state, which is required)"
+  },
+  {
+    "question_id": "L4_1",
+    "answer": "A",
+    "reasoning": "Arrow 1 is the self-loop at start, which would handle common vowels and letters like u:IH, a:EY, o:Ø"
+  },
+  {
+    "question_id": "L4_2",
+    "answer": "B",
+    "reasoning": "Arrow 2 is an alternative path, likely for simple consonants like n:N"
+  },
+  {
+    "question_id": "L4_3",
+    "answer": "C",
+    "reasoning": "Arrow 3 handles complex multi-letter conversions needed for 'colonel' (c:K, o:UH, lo:R) and 'he' (h:H, e:EA)"
+  },
+  {
+    "question_id": "L4_4",
+    "answer": "E",
+    "reasoning": "Arrow 4 in middle section, handles p:P for 'people'"
+  },
+  {
+    "question_id": "L4_5",
+    "answer": "D",
+    "reasoning": "Arrow 5 in middle section, handles se:Z for 'phase' and i:L for 'built'"
+  },
+  {
+    "question_id": "L4_6",
+    "answer": "F",
+    "reasoning": "Arrow 6 goes to final state and handles el:UHL for words like 'colonel'"
+  },
+  {
+    "question_id": "L5_1",
+    "answer": "rophlea",
+    "reasoning": "Reversing the FST: R→(lo:R reversed)→ro or r, UH→(o:UH reversed)→o, F→(ph:F or f:F reversed)→ph/f, L→(i:L reversed)→i, EA→(e:EA reversed)→e. Most likely output considering the paths: rophlea"
+  }
+]

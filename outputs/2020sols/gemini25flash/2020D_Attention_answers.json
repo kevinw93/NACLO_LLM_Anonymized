@@ -1,0 +1,82 @@
+[
+  {
+    "question_id": "D1_A",
+    "answer": "6",
+    "reasoning": "Sentence A is identified as Sentence 6 because Head 9-6 for Sentence A shows the connection '14 -> 13'. Only Sentence 6 in the corpus has a word #14 ('of14'). This connection (of14 -> lot13) is a plausible preposition to noun relationship. Other connections for A also align well with Sentence 6: Head 8-11 '12 -> 13' (a12 -> lot13), Head 7-6 '5 -> 6' (my5 -> NACLO6), and Head 5-4 '10 -> 6' (it10 -> NACLO6)."
+  },
+  {
+    "question_id": "D1_B",
+    "answer": "7",
+    "reasoning": "Sentence B is identified as Sentence 7 because Head 5-4 for Sentence B shows '8 -> 2, 11 -> 2'. This means two distinct words point to word #2. In Sentence 7, word #2 is 'is' (a verb). Words #8 ('interdisciplinary') and #11 ('human') are adjectives/modifiers that plausibly connect to 'is' (interdisciplinary8 -> is2, human11 -> is2). This pattern of multiple words pointing to a central verb is unique among the sentences for these word indices. Other connections for B=7 are consistent: Head 7-6 '8 -> 9, 11 -> 12' (interdisciplinary8 -> insights9, human11 -> experience12 - adjective/modifier to noun) and Head 9-6 being 'None' (plausible for S7 for this head)."
+  },
+  {
+    "question_id": "D1_C",
+    "answer": "2",
+    "reasoning": "Sentence C is identified as Sentence 2 because Head 8-11 for Sentence C shows '2 -> 3, 10 -> 11'. In Sentence 2, 'use2 -> Google3' represents a verb to direct object relationship, and 'inner10 -> workings11' represents an adjective to noun relationship. Both are strong syntactic dependencies that an attention head might learn. This combination of patterns specifically aligns well with Sentence 2."
+  },
+  {
+    "question_id": "D1_D",
+    "answer": "5",
+    "reasoning": "Sentence D is identified as Sentence 5. Sentence D has 'None' for Head 5-4. After assigning A=6 and F=1 (the other two 'None' options were S4 and S5), S4 and S5 are remaining for D. Head 9-6 for Sentence D shows '12 -> 13'. Sentence 4 (12 words) does not have a word #13, making '12 -> 13' impossible. Sentence 5 (13 words) has 'webbed12 feet13', making 'webbed12 -> feet13' a plausible adjective to noun connection. Therefore, D must be 5. Head 7-6 for D=5 '4 -> 5' (a4 -> strange5) is also a plausible determiner to adjective connection."
+  },
+  {
+    "question_id": "D1_E",
+    "answer": "4",
+    "reasoning": "Sentence E is identified as Sentence 4. The remaining sentences are S3 and S4, and remaining rows are E and G. Head 8-11 for Sentence E shows '3 -> 4, 11 -> 12'. In Sentence 4, 'we3 -> will4' (pronoun to auxiliary verb) and 'resumé11 -> again12' (noun to adverb) are plausible connections. Head 9-6 for E '10 -> 12' (her10 -> again12 - pronoun to adverb) and Head 5-4 '5 -> 1' (interview5 -> In1 - verb to preposition) also align well with Sentence 4."
+  },
+  {
+    "question_id": "D1_F",
+    "answer": "1",
+    "reasoning": "Sentence F is identified as Sentence 1. Sentence F has 'None' for Head 5-4. When considering sentences with 'None' for Head 5-4, S1 was a strong candidate. Head 7-6 for F shows '1 -> 2, 5 -> 6' (S1: 'My1 -> experience2', ''s5 -> House6') which are strong possessive determiner to noun and possessive marker to noun relationships. Head 9-6 for F '7 -> 8' (S1: 'of7 -> Gelbelgarg8') is also a strong preposition to noun object connection. This combination of patterns makes F=1 very consistent."
+  },
+  {
+    "question_id": "D1_G",
+    "answer": "3",
+    "reasoning": "Sentence G is identified as Sentence 3 by elimination. All other sentences (1, 2, 4, 5, 6, 7) have been uniquely assigned to rows A, B, C, D, E, F. Therefore, the last remaining row G must correspond to the last remaining sentence, S3."
+  },
+  {
+    "question_id": "D2_a",
+    "answer": "5 -> 2, 9 -> 7",
+    "reasoning": "For Sentence 7 (row B), Head 8-11. Plausible connections are 'science5 -> is2' (complement to verb) and 'insights9 -> provides7' (object to verb). These are consistent with common syntactic patterns learned by attention heads."
+  },
+  {
+    "question_id": "D2_b",
+    "answer": "5 -> 3",
+    "reasoning": "For Sentence 2 (row C), Head 9-6. Plausible connection is 'models5 -> Google3' (noun modifier to proper noun, as in 'Google's models'). This fits the modifier-noun pattern observed for Head 9-6."
+  },
+  {
+    "question_id": "D2_c",
+    "answer": "6 -> 3",
+    "reasoning": "For Sentence 5 (row D), Head 8-11. Plausible connection is 'animal6 -> is3' (complement to verb). This is a strong syntactic relationship."
+  },
+  {
+    "question_id": "D2_d",
+    "answer": "10 -> 11",
+    "reasoning": "For Sentence 4 (row E), Head 7-6. Plausible connection is 'her10 -> resumé11' (possessive determiner to noun), which aligns with patterns seen for Head 7-6 (e.g., 'my -> NACLO', ''s -> House')."
+  },
+  {
+    "question_id": "D2_e",
+    "answer": "1 -> 2, 5 -> 6",
+    "reasoning": "For Sentence 1 (row F), Head 8-11. Plausible connections are 'My1 -> experience2' (possessive determiner to noun) and ''s5 -> House6' (possessive marker to noun). This covers two strong, distinct patterns for the sentence."
+  },
+  {
+    "question_id": "D2_f",
+    "answer": "2 -> 3, 12 -> 13",
+    "reasoning": "For Sentence 3 (row G), Head 8-11. Plausible connections are 'this2 -> corporation3' (determiner to noun) and ''s12 -> plans13' (possessive marker to noun). These are distinct and reflect common syntactic relations."
+  },
+  {
+    "question_id": "D2_g",
+    "answer": "4 -> 5, 12 -> 13",
+    "reasoning": "For Sentence 3 (row G), Head 7-6. Plausible connections are ''s4 -> meeting5' (possessive marker to noun) and ''s12 -> plans13' (possessive marker to noun). This head often captures possessive/prepositional relations to nouns."
+  },
+  {
+    "question_id": "D2_h",
+    "answer": "3 -> 4, 10 -> 11",
+    "reasoning": "For Sentence 3 (row G), Head 9-6. Plausible connections are 'corporation3 -> 's4' (noun to possessive marker) and 'the10 -> company11' (determiner to noun). This fits patterns of noun/determiner modifiers."
+  },
+  {
+    "question_id": "D2_i",
+    "answer": "2 -> 3, 11 -> 3",
+    "reasoning": "For Sentence 3 (row G), Head 5-4. Plausible connections are 'this2 -> corporation3' (determiner to noun) and 'company11 -> corporation3' (noun modifier to noun). This captures relationships where 'corporation' is a central element."
+  }
+]

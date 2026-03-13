@@ -1,0 +1,47 @@
+[
+  {
+    "question_id": "D1_a",
+    "answer": "a turtle chased a book",
+    "reasoning": "Need exactly 20 letters. Counting: a(1)+turtle(6)+chased(6)+a(1)+book(4)=18 letters. This is the closest valid sentence I can construct with the given vocabulary that follows the grammar S → NP VP, VP → V NP."
+  },
+  {
+    "question_id": "D1_b",
+    "answer": "bir kaplumbağa bir kitap kovaladı",
+    "reasoning": "Using the SCFG rule VP → <V NP, NP V>, English 'chased a book' becomes Turkish 'bir kitap kovaladı'. The subject 'a turtle' becomes 'bir kaplumbağa'. Turkish uses SOV word order."
+  },
+  {
+    "question_id": "D2_a",
+    "answer": "a cat saw a turtle",
+    "reasoning": "From Turkish-Malagasy SCFG: Malagasy has VSO order (V NP NP), English has SVO. 'nahita'=saw, 'sokatra'=turtle, 'saka'=cat. So 'saw turtle cat' → 'cat saw turtle' in English."
+  },
+  {
+    "question_id": "D2_b",
+    "answer": "a turtle chased a cat",
+    "reasoning": "'nanenjika'=chased, 'saka'=cat, 'sokatra'=turtle. Malagasy VSO → English SVO: 'chased cat turtle' → 'turtle chased cat'."
+  },
+  {
+    "question_id": "D2_c",
+    "answer": "a turtle bit a cat",
+    "reasoning": "'nanaikitra'=bit, 'saka'=cat, 'sokatra'=turtle. Following the pattern: 'bit cat turtle' → 'turtle bit cat'."
+  },
+  {
+    "question_id": "D2_d",
+    "answer": "a turtle ate a cat",
+    "reasoning": "'nihinana'=ate, 'saka'=cat, 'sokatra'=turtle. Converting from VSO to SVO: 'ate cat turtle' → 'turtle ate cat'."
+  },
+  {
+    "question_id": "D3_a",
+    "answer": "chop Saj",
+    "reasoning": "S → NP VP. 'The pet' = 'Saj', 'bites' = 'chop'. Klingon appears to use VSO order based on VP → <V NP, NP V> rule, so 'bites' comes before 'pet'."
+  },
+  {
+    "question_id": "D3_b",
+    "answer": "ghobrupqa' tlhlnganpu' 'ejDo' 'entepray'",
+    "reasoning": "S → NP VP. 'will battle' = 'ghobrupqa'', 'the Klingons' = 'tlhlnganpu'', 'the U.S.S. Enterprise' = ''ejDo' 'entepray''. Using VSO order: verb + object + subject."
+  },
+  {
+    "question_id": "D3_c",
+    "answer": "'e' SovTah Dewwl'pu' 'e' SovTah tlhlnganpu' 'e' ghojpu' la' 'e' leghpu' ghoqwl' 'e' lughaj Saj tlhlnganpu'",
+    "reasoning": "Complex nested complementizer structure. Working from innermost clause outward: 'the Klingons have a pet' = 'lughaj Saj tlhlnganpu''. Each embedded clause is marked with ''e'' (that) and builds up: spy saw [that], commander learned [that], Klingons know [that], leaders know [that]. Klingon uses VSO with complementizer preceding each clause."
+  }
+]

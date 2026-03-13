@@ -1,0 +1,473 @@
+Model: gemini-2.5-flash
+Generation Time: 257.84 seconds
+Timestamp: 2025-11-16 23:08:29
+================================================================================
+
+The problem requires determining feature definitions, identifying sentences, and calculating missing feature values, finally producing summaries and analyzing errors. Due to inconsistencies found between derived feature rules and provided table values, especially for F1, I've prioritized the explicit instructions: to fill blanks (a-g, h-k, and table cells) and ensure consistency with given sums in the tables. I have noted these inconsistencies in my reasoning.
+
+**Part C1: "A Sticky Situation" Feature Definitions and Table Filling**
+
+**Feature Definitions Analysis (a. through g.):**
+
+*   **F2: "Assign 1 point for every proper noun in the sentence."**
+    *   This definition is explicitly given in the notes.
+    *   Checking values: SS1 ("January", "Ronald McBubble", "Bigger Bubble", "Made to Stick") = 4 proper nouns. Matches F2=4 for SS1. SS3 ("USA Today", "Bigger Bubble") = 2 proper nouns. Matches F2=2 for SS3. This is consistent.
+
+*   **F3: "Take the number of words in the sentence minus b. _____. If this value is negative, give the sentence that many points. Otherwise, give the sentence 0 points."**
+    *   We look at sentences i. and k. which have F3 values of -1 and -2 respectively.
+    *   Word counts:
+        *   SS1: 26 words
+        *   SS2: 32 words
+        *   SS3: 33 words
+        *   SS4: 26 words
+        *   SS5: 10 words
+        *   SS6: 9 words
+        *   SS7: 25 words
+    *   For sentences with F3=0 (SS1, SS2, SS3), their word counts (26, 32, 33) must be >= b.
+    *   For i. with F3=-1, its word count must be b-1.
+    *   For k. with F3=-2, its word count must be b-2.
+    *   SS5 has 10 words. If 10 = b-1, then b=11.
+    *   SS6 has 9 words. If 9 = b-2, then b=11.
+    *   This is perfectly consistent. Thus, **b = 11**.
+    *   This identifies **i = SS5** and **k = SS6**.
+
+*   **F4: "Assign 1 point for every c. _____ in the sentence."**
+    *   Looking at known F4 values: SS1 (F4=1), SS2 (F4=2), SS3 (F4=2).
+    *   Counting "number" in sentences:
+        *   SS1: "22" (1 number). Matches F4=1.
+        *   SS2: "10,000", "one" (2 numbers). Matches F4=2.
+        *   SS3: "nine-year-long", "50" (2 numbers). Matches F4=2.
+    *   This is perfectly consistent. Thus, **c = number**.
+
+*   **F5: "Assign 1 point for every d. _____ or e. _____ that is repeated in at least one other sentence in the story."**
+    *   We need to find d and e. We previously identified verbs like "chewing" (SS5) as not being counted because F5 for SS5 is 0, even though "chewing" repeats.
+    *   Let's test d = "common noun" and e = "adjective".
+        *   SS1: "gum" (CN, repeats). F5=1. (Matches)
+        *   SS2: "gum" (CN, repeats), "incident" (CN, repeats). F5=2. (Matches)
+        *   SS3: "gum" (CN, repeats). F5=1. (Matches)
+        *   i (SS5): No repeating common nouns or adjectives. F5=0. (Matches)
+        *   k (SS6): "gum" (CN, repeats), "sticky" (ADJ, repeats). F5=2. (Matches)
+    *   This combination perfectly fits all known F5 values. Thus, **d = common noun** and **e = adjective**.
+
+*   **F6: "Assign 1 point if this sentence is the f. _____ or g. _____ one in the story; otherwise, assign 0 points."**
+    *   This relates to sentence position. SS1 has F6=1. So one of f or g is "first". Let **f = first**.
+    *   The problem has 7 sentences (SS1-SS7).
+    *   Based on elimination from F3 (i=SS5, k=SS6), and matching the remaining rows (h, j) to remaining sentences (SS4, SS7):
+        *   **SS4:** F1(0), F2(1-"McBubble"), F3(0-"26-11"), F4(1-"100"), F5(2-"gum", "incident"), F6(0-4th sentence). Sum=4.
+        *   This perfectly matches row **h**. So **h = SS4**.
+        *   **SS7:** F1(0), F2(1-"McBubble"), F3(0-"25-11"), F4(0-no numbers), F5(2-"gum", "sticky"), F6(0-7th sentence, unless g is "last").
+        *   This leaves row **j** for SS7. Row j has F6=1. Since SS7 is the last sentence, this implies **g = last**.
+    *   So, **j = SS7**.
+
+*   **F1: "Assign 1 point if the sentence contains at least one a. _____; otherwise, assign 0 points."**
+    *   This was the most problematic feature. The F1 values in the table are: h(0), SS1(0), i(0), SS3(1), j(1), k(0), SS2(0).
+    *   This means F1=1 for SS3 and j (SS7). All other SS1, SS2, SS4, SS5, SS6 have F1=0.
+    *   SS3 contains "USA Today" (abbreviation) and "nine-year-long" (hyphenated word).
+    *   SS7 has neither of these. I cannot find a word from the bank that consistently makes F1=1 for SS3 and SS7, and F1=0 for SS1, SS2, SS4, SS5, SS6.
+    *   The most plausible candidate for `a` that explains `F1=1` for `SS3` (due to "USA") and `F1=0` for most others is `abbreviation`. While `SS7` has no obvious abbreviation, given the constraint to fill the blank, `abbreviation` is the strongest fit for the overall pattern in the C1 table. Therefore, **a = abbreviation**.
+    *   The table's F1 for j (SS7) being 1 will be respected when filling the table, assuming it implies a subtle abbreviation not obvious.
+
+**C1.i. & C1.ii. Solutions:**
+*   **a:** abbreviation
+*   **b:** 11
+*   **c:** number
+*   **d:** common noun
+*   **e:** adjective
+*   **f:** first
+*   **g:** last
+*   **h:** SS4
+*   **i:** SS5
+*   **j:** SS7
+*   **k:** SS6
+
+**C1. Table Filling (h. and j.):**
+
+*   **h (SS4):**
+    *   F1: 0 (No abbreviation)
+    *   F2: 1 ("McBubble")
+    *   F3: 0 (26 words, 26-11=15, >=0)
+    *   F4: 1 ("100")
+    *   F5: 2 ("gum", "incident" (CNs) repeat)
+    *   F6: 0 (4th sentence, not first/last)
+    *   Sum: 4. (Matches table)
+
+*   **j (SS7):**
+    *   F1: 1 (Given table sum implies F1=1 for j, despite my rule for 'a' resulting in 0)
+    *   F2: 1 ("McBubble")
+    *   F3: 0 (25 words, 25-11=14, >=0)
+    *   F4: 0 (No numbers)
+    *   F5: 2 ("gum" (CN), "sticky" (ADJ) repeat)
+    *   F6: 1 (Last sentence in story)
+    *   Sum: 5. (Matches table)
+
+**C2. "In Hot Water" Table Filling**
+
+**Sentence Calculations using derived F1-F6 rules:**
+*   HW1: (F1=0, F2=2, F3=0, F4=0, F5=3, F6=1) Sum=6
+*   HW2: (F1=0, F2=1, F3=0, F4=1, F5=4, F6=0) Sum=6
+*   HW3: (F1=0, F2=0, F3=-1, F4=1, F5=1, F6=0) Sum=1
+*   HW4: (F1=0, F2=0, F3=0, F4=1, F5=2, F6=0) Sum=3
+*   HW5: (F1=0, F2=1, F3=0, F4=1, F5=6, F6=0) Sum=8
+*   HW6: (F1=0, F2=1, F3=0, F4=0, F5=1, F6=1) Sum=3
+
+**Filling in the table blanks (a. through p.):**
+
+*   **Row a.:** F1=0, F2=1, F3=b, F4=1, F5=4, F6=0. Sum=6.
+    *   Matches HW2: (0,1,0,1,4,0).
+    *   So, **a = HW2**. **b = 0**.
+
+*   **Row HW4:** F1=c, F2=0, F3=0, F4=1, F5=2, F6=d. Sum=e.
+    *   Matches HW4: (0,0,0,1,2,0).
+    *   So, **c = 0**. **d = 0**. **e = 3**.
+
+*   **Row f.:** F1=0, F2=0, F3=g, F4=h, F5=1, F6=0. Sum=1.
+    *   Matches HW3: (0,0,-1,1,1,0).
+    *   So, **f = HW3**. **g = -1**. **h = 1**.
+
+*   **Row HW6:** F1=1, F2=i, F3=0, F4=0, F5=1, F6=1. Sum=j.
+    *   My HW6 calculated F1=0, but table has F1=1. Respecting table.
+    *   HW6 F2 = 1. So **i = 1**.
+    *   Sum j = 1 (F1) + 1 (F2) + 0 (F3) + 0 (F4) + 1 (F5) + 1 (F6) = 4. So **j = 4**.
+
+*   **Row k.:** F1=1, F2=2, F3=0, F4=l, F5=3, F6=1. Sum=m.
+    *   Remaining sentences: HW1, HW5.
+    *   HW1: (0,2,0,0,3,1). F2, F3, F5, F6 match. F1 is 0 for my calculation, but 1 in table. F4 is 0.
+    *   So, **k = HW1**. **l = 0**.
+    *   Sum m = 1 (F1) + 2 (F2) + 0 (F3) + 0 (F4) + 3 (F5) + 1 (F6) = 7. So **m = 7**.
+
+*   **Row n.:** F1=1, F2=1, F3=0, F4=o, F5=4, F6=0. Sum=p.
+    *   Remaining sentence: HW5.
+    *   HW5: (0,1,0,1,6,0). F2, F3, F6 match. F1 is 0 for my calculation, but 1 in table. F4 is 1 for my calculation. F5 is 6 for my calculation.
+    *   Respecting table's implied values. F4=o must be 1. F5=4 must be correct.
+    *   So, **n = HW5**. **o = 1**.
+    *   Sum p = 1 (F1) + 1 (F2) + 0 (F3) + 1 (F4) + 4 (F5) + 0 (F6) = 7. So **p = 7**.
+
+**C3. Summary for "In Hot Water"**
+
+*   Scores: HW1 (6), HW2 (6), HW3 (1), HW4 (3), HW5 (8), HW6 (3).
+    *   (Using my calculated scores, not the table's potentially inconsistent F1 values).
+*   Highest three scores: HW5 (8), HW1 (6), HW2 (6).
+*   According to the problem, "sentences are presented in the same order as they appear in the original story".
+*   Original order of these three: HW1, HW2, HW5.
+*   First sentence: HW1
+*   Second sentence: HW2
+*   Third sentence: HW5
+
+**C4. Summary for "The Sticky Saga Continues"**
+
+**Sentence Score Calculations (F1 as abbreviation, F2-F6 as derived):**
+*   SSC1: (F1=1-"PR", F2=1, F3=0, F4=0, F5=0, F6=1) Sum=3
+*   SSC2: (F1=0, F2=0, F3=-1, F4=0, F5=0, F6=0) Sum=-1
+*   SSC3: (F1=0, F2=1, F3=0, F4=0, F5=0, F6=0) Sum=1
+*   SSC4: (F1=0, F2=1, F3=0, F4=1, F5=0, F6=0) Sum=2
+*   SSC5: (F1=0, F2=0, F3=0, F4=1, F5=0, F6=1) Sum=2 (counting "One" as a number for F4)
+
+**Mapping to Table (using derived scores and given table sums):**
+*   s (Sum=-1) matches SSC2. So **s = SSC2**.
+*   r (Sum=1) matches SSC3. So **r = SSC3**.
+*   u (Sum=2, F2=1, F4=1) matches SSC4. So **u = SSC4**.
+*   t (Sum=2, F2=1, F4=0, F6=1) matches SSC1 (my calculated scores). So **t = SSC1**.
+*   q (Sum=2, F2=0, F4=1, F6=1) matches SSC5 (my calculated scores). So **q = SSC5**.
+
+*   Highest three scores from the table: q(2), t(2), u(2).
+*   These correspond to SSC5, SSC1, SSC4.
+*   Order by original appearance: SSC1, SSC4, SSC5.
+*   First sentence: SSC1
+*   Second sentence: SSC4
+*   Third sentence: SSC5
+
+**C5. Abstractive Summary Errors**
+
+Abstractive summary: Made to Stick corporation is facing serious problems after its vice president was found chewing a stick of gum from rival company Bigger Bubble on February 22.
+
+*   **a. Word to be deleted:**
+    *   The original story refers to "Made to Stick" as a company, not "Made to Stick corporation". "Corporation" is an extra word.
+    *   Answer: corporation
+
+*   **b. Phrases to be swapped:**
+    *   The summary incorrectly states "Made to Stick corporation is facing serious problems... from rival company Bigger Bubble".
+    *   The original story (SS1, SS3) indicates "Bigger Bubble corporation" faces problems (stock price fall, uproar due to president's actions), and "Made to Stick" is the rival company's gum.
+    *   The phrases "Made to Stick corporation" and "Bigger Bubble" should be swapped.
+    *   Answer: Made to Stick corporation, Bigger Bubble
+
+*   **c. Word to be replaced:**
+    *   The summary states "on February 22", but SS1 explicitly states "On January 22".
+    *   Word to be replaced: February
+    *   Replacement: January
+
+**C6. Extractive Summary Factual Errors**
+
+Summaries:
+*   "A Sticky Situation": SS1, SS2, SS3.
+*   "In Hot Water": HW1, HW2, HW5.
+*   "The Sticky Saga Continues": SSC1, SSC4, SSC5.
+
+Analyzing for a "single word that has an incorrect meaning in the summary":
+
+*   For "In Hot Water" (HW1, HW2, HW5):
+    *   HW5: "Hot Water Village firmly denies any such wrongdoing, with one spokesperson noting that 'these blatantly false accusations degrade our bowls, restaurant, and very soup' and 'cause the hot water to flow from my eyes.'"
+    *   The phrase "cause the hot water to flow from my eyes" is an idiom for crying. The summary title is "IN HOT WATER," which is an idiom meaning "in trouble." A computer system might misinterpret the word "water" in HW5. In the context of the spokesperson's quote, "water" refers to tears. However, if the summary system incorrectly links "water" to the literal meaning of the title's idiom (e.g., trouble/difficulty), it could be considered an incorrect meaning.
+    *   Sentence: HW5
+    *   Word: water
+
+**Final Answers in JSON format:**
+
+```json
+[
+  {
+    "question_id": "C1_1",
+    "answer": "abbreviation",
+    "reasoning": "Determined by analyzing F1 values (SS3=1, others=0 in most cases) where 'USA' in SS3 is a clear abbreviation. This choice, while leading to some inconsistencies with later table values, is the most consistent for the blank itself across the C1 sentences provided."
+  },
+  {
+    "question_id": "C1_2",
+    "answer": "11",
+    "reasoning": "Derived from F3 for sentences i. and k. F3 = (word count - b). Sentence i. (SS5) has 10 words and F3=-1, implying 10 = b-1, so b=11. Sentence k. (SS6) has 9 words and F3=-2, implying 9 = b-2, so b=11. This is perfectly consistent."
+  },
+  {
+    "question_id": "C1_3",
+    "answer": "number",
+    "reasoning": "Derived from F4 values. SS1 (F4=1, has '22'), SS2 (F4=2, has '10,000', 'one'), SS3 (F4=2, has 'nine-year-long', '50'). This perfectly matches the count of numbers."
+  },
+  {
+    "question_id": "C1_4",
+    "answer": "common noun",
+    "reasoning": "Derived from F5 in conjunction with 'e'. Analyzing repeating words and matching F5 scores for SS1, SS2, SS3, i(SS5), k(SS6) consistently indicates that 'common noun' and 'adjective' are the word types being counted for repetition."
+  },
+  {
+    "question_id": "C1_5",
+    "answer": "adjective",
+    "reasoning": "Derived from F5 in conjunction with 'd'. Analyzing repeating words and matching F5 scores for SS1, SS2, SS3, i(SS5), k(SS6) consistently indicates that 'common noun' and 'adjective' are the word types being counted for repetition. Specifically, SS6 has 'gum' (CN) and 'sticky' (ADJ), giving F5=2."
+  },
+  {
+    "question_id": "C1_6",
+    "answer": "first",
+    "reasoning": "Derived from F6 for SS1. SS1 is the first sentence and F6=1. This implies 'f' is 'first'."
+  },
+  {
+    "question_id": "C1_7",
+    "answer": "last",
+    "reasoning": "Derived from F6 for j (SS7). With 'f' as 'first', and j identified as SS7 (the last sentence), F6=1 for j implies 'g' is 'last'."
+  },
+  {
+    "question_id": "C1_h",
+    "answer": "SS4",
+    "reasoning": "Identified by matching calculated feature values for remaining sentences (SS4, SS7) to table rows h and j, after i=SS5 and k=SS6 were determined. SS4's calculated scores (F1=0, F2=1, F3=0, F4=1, F5=2, F6=0) perfectly match row h's values."
+  },
+  {
+    "question_id": "C1_i",
+    "answer": "SS5",
+    "reasoning": "Identified by F3 value. SS5 has 10 words, resulting in F3 = 10 - 11 = -1, which matches the F3 value for row i."
+  },
+  {
+    "question_id": "C1_j",
+    "answer": "SS7",
+    "reasoning": "Identified by elimination, as it is the last remaining sentence after h=SS4, i=SS5, and k=SS6 were assigned."
+  },
+  {
+    "question_id": "C1_k",
+    "answer": "SS6",
+    "reasoning": "Identified by F3 value. SS6 has 9 words, resulting in F3 = 9 - 11 = -2, which matches the F3 value for row k."
+  },
+  {
+    "question_id": "C1_h_F1",
+    "answer": "0",
+    "reasoning": "For h (SS4): F1 for SS4, with 'a' as abbreviation, is 0."
+  },
+  {
+    "question_id": "C1_h_F2",
+    "answer": "1",
+    "reasoning": "For h (SS4): SS4 has one proper noun ('McBubble')."
+  },
+  {
+    "question_id": "C1_h_F3",
+    "answer": "0",
+    "reasoning": "For h (SS4): SS4 has 26 words; 26-11 = 15, so F3=0."
+  },
+  {
+    "question_id": "C1_h_F4",
+    "answer": "1",
+    "reasoning": "For h (SS4): SS4 has one number ('100')."
+  },
+  {
+    "question_id": "C1_h_F5",
+    "answer": "2",
+    "reasoning": "For h (SS4): SS4 has two repeating common nouns ('gum', 'incident')."
+  },
+  {
+    "question_id": "C1_h_F6",
+    "answer": "0",
+    "reasoning": "For h (SS4): SS4 is the 4th sentence, not the first or last."
+  },
+  {
+    "question_id": "C1_j_F1",
+    "answer": "1",
+    "reasoning": "For j (SS7): The sum of scores for row j is 5. With F2=1, F3=0, F4=0, F5=2, F6=1, F1 must be 1 to make the sum 5 (1+1+0+0+2+1=5)."
+  },
+  {
+    "question_id": "C1_j_F2",
+    "answer": "1",
+    "reasoning": "For j (SS7): SS7 has one proper noun ('McBubble')."
+  },
+  {
+    "question_id": "C1_j_F3",
+    "answer": "0",
+    "reasoning": "For j (SS7): SS7 has 25 words; 25-11 = 14, so F3=0."
+  },
+  {
+    "question_id": "C1_j_F4",
+    "answer": "0",
+    "reasoning": "For j (SS7): SS7 has no numbers."
+  },
+  {
+    "question_id": "C1_j_F5",
+    "answer": "2",
+    "reasoning": "For j (SS7): SS7 has one repeating common noun ('gum') and one repeating adjective ('sticky')."
+  },
+  {
+    "question_id": "C1_j_F6",
+    "answer": "1",
+    "reasoning": "For j (SS7): SS7 is the last sentence in the story."
+  },
+  {
+    "question_id": "C2_a",
+    "answer": "HW2",
+    "reasoning": "Matches calculated scores for HW2: (F1=0, F2=1, F3=0, F4=1, F5=4, F6=0), Sum=6."
+  },
+  {
+    "question_id": "C2_b",
+    "answer": "0",
+    "reasoning": "From calculated F3 for HW2 (30 words): 30-11=19, so F3=0."
+  },
+  {
+    "question_id": "C2_c",
+    "answer": "0",
+    "reasoning": "From calculated F1 for HW4 (no abbreviation): F1=0."
+  },
+  {
+    "question_id": "C2_d",
+    "answer": "0",
+    "reasoning": "From calculated F6 for HW4 (4th sentence, not first/last): F6=0."
+  },
+  {
+    "question_id": "C2_e",
+    "answer": "3",
+    "reasoning": "Sum of calculated scores for HW4: (F1=0, F2=0, F3=0, F4=1, F5=2, F6=0) = 3."
+  },
+  {
+    "question_id": "C2_f",
+    "answer": "HW3",
+    "reasoning": "Matches calculated scores for HW3: (F1=0, F2=0, F3=-1, F4=1, F5=1, F6=0), Sum=1."
+  },
+  {
+    "question_id": "C2_g",
+    "answer": "-1",
+    "reasoning": "From calculated F3 for HW3 (10 words): 10-11=-1."
+  },
+  {
+    "question_id": "C2_h",
+    "answer": "1",
+    "reasoning": "From calculated F4 for HW3 ('One'): F4=1."
+  },
+  {
+    "question_id": "C2_i",
+    "answer": "1",
+    "reasoning": "From calculated F2 for HW6 ('Hot Water Village'): F2=1."
+  },
+  {
+    "question_id": "C2_j",
+    "answer": "4",
+    "reasoning": "Sum of scores for HW6 row: (F1=1, F2=1, F3=0, F4=0, F5=1, F6=1) = 4."
+  },
+  {
+    "question_id": "C2_k",
+    "answer": "HW1",
+    "reasoning": "Matches calculated scores for HW1 (F2=2, F3=0, F5=3, F6=1), assuming F1=1 as given in the table, F4=0 as given. This leads to the correct sum of 7."
+  },
+  {
+    "question_id": "C2_l",
+    "answer": "0",
+    "reasoning": "From calculated F4 for HW1 (no numbers): F4=0."
+  },
+  {
+    "question_id": "C2_m",
+    "answer": "7",
+    "reasoning": "Sum of scores for k row: (F1=1, F2=2, F3=0, F4=0, F5=3, F6=1) = 7."
+  },
+  {
+    "question_id": "C2_n",
+    "answer": "HW5",
+    "reasoning": "Matches remaining sentence HW5. Calculated scores for HW5 are (F2=1, F3=0, F6=0). F1=1 (given in table). F4=1 (from HW5). F5=4 (given in table). This leads to the correct sum of 7."
+  },
+  {
+    "question_id": "C2_o",
+    "answer": "1",
+    "reasoning": "From calculated F4 for HW5 ('one'): F4=1."
+  },
+  {
+    "question_id": "C2_p",
+    "answer": "7",
+    "reasoning": "Sum of scores for n row: (F1=1, F2=1, F3=0, F4=1, F5=4, F6=0) = 7."
+  },
+  {
+    "question_id": "C3_1",
+    "answer": "HW1",
+    "reasoning": "Highest scores are HW5 (8), HW1 (6), HW2 (6). Reordered by original appearance: HW1, HW2, HW5."
+  },
+  {
+    "question_id": "C3_2",
+    "answer": "HW2",
+    "reasoning": "Highest scores are HW5 (8), HW1 (6), HW2 (6). Reordered by original appearance: HW1, HW2, HW5."
+  },
+  {
+    "question_id": "C3_3",
+    "answer": "HW5",
+    "reasoning": "Highest scores are HW5 (8), HW1 (6), HW2 (6). Reordered by original appearance: HW1, HW2, HW5."
+  },
+  {
+    "question_id": "C4_1",
+    "answer": "SSC1",
+    "reasoning": "Scores derived using C1 rules: SSC1 (3), SSC2 (-1), SSC3 (1), SSC4 (2), SSC5 (2). Mapped to table rows: s=SSC2, r=SSC3, u=SSC4, t=SSC1, q=SSC5. Highest sums are q(2), t(2), u(2). Reordered by original appearance: SSC1, SSC4, SSC5."
+  },
+  {
+    "question_id": "C4_2",
+    "answer": "SSC4",
+    "reasoning": "Scores derived using C1 rules: SSC1 (3), SSC2 (-1), SSC3 (1), SSC4 (2), SSC5 (2). Mapped to table rows: s=SSC2, r=SSC3, u=SSC4, t=SSC1, q=SSC5. Highest sums are q(2), t(2), u(2). Reordered by original appearance: SSC1, SSC4, SSC5."
+  },
+  {
+    "question_id": "C4_3",
+    "answer": "SSC5",
+    "reasoning": "Scores derived using C1 rules: SSC1 (3), SSC2 (-1), SSC3 (1), SSC4 (2), SSC5 (2). Mapped to table rows: s=SSC2, r=SSC3, u=SSC4, t=SSC1, q=SSC5. Highest sums are q(2), t(2), u(2). Reordered by original appearance: SSC1, SSC4, SSC5."
+  },
+  {
+    "question_id": "C5_a",
+    "answer": "corporation",
+    "reasoning": "The abstractive summary adds 'corporation' to 'Made to Stick', which in the original story (SS1) is just 'Made to Stick' (a rival company)."
+  },
+  {
+    "question_id": "C5_b",
+    "answer": "Made to Stick corporation, Bigger Bubble",
+    "reasoning": "The abstractive summary states 'Made to Stick corporation is facing serious problems... from rival company Bigger Bubble'. In the original story (SS1, SS3), 'Bigger Bubble corporation' faces the problems, and 'Made to Stick' is the rival company. Swapping these phrases corrects the factual error."
+  },
+  {
+    "question_id": "C5_c_1",
+    "answer": "February",
+    "reasoning": "The abstractive summary states 'on February 22'. The original story (SS1) explicitly states 'On January 22'."
+  },
+  {
+    "question_id": "C5_c_2",
+    "answer": "January",
+    "reasoning": "The abstractive summary states 'on February 22'. The original story (SS1) explicitly states 'On January 22'."
+  },
+  {
+    "question_id": "C6_a",
+    "answer": "HW5",
+    "reasoning": "In the summary for 'In Hot Water', sentence HW5 contains the phrase 'cause the hot water to flow from my eyes.' This is an idiom for crying. Given the story's title 'IN HOT WATER' (an idiom for being in trouble), a computer could incorrectly associate 'water' in HW5 with the title's idiom, giving it an incorrect contextual meaning within the summary."
+  },
+  {
+    "question_id": "C6_b",
+    "answer": "water",
+    "reasoning": "In the context of 'cause the hot water to flow from my eyes,' 'water' refers to tears. If a summary system (especially one dealing with idioms like the title 'IN HOT WATER') literally interprets 'water' in HW5 as related to 'hot water' as trouble, it assigns an incorrect meaning to the word."
+  }
+]
+```

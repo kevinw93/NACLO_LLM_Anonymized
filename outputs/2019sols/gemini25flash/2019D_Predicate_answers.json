@@ -1,0 +1,77 @@
+[
+  {
+    "question_id": "D1_brastic_position",
+    "answer": "B",
+    "reasoning": "Mapped to an immediate child of 'A' (groob), as 'groob is brastic' is sensible. 'B' is unique and available."
+  },
+  {
+    "question_id": "D1_efrimious_position",
+    "answer": "D",
+    "reasoning": "Mapped to 'D', as 'D' is an ancestor of '7' (vippage). 'efrimious is vippage' is sensible. 'D' is unique and available."
+  },
+  {
+    "question_id": "D1_frungent_position",
+    "answer": "F",
+    "reasoning": "Mapped to 'F' as a leaf node. 'frungent' is broadly nonsensical with many subjects, suggesting a very specific or limited domain, fitting a leaf node. 'F' is unique and available."
+  },
+  {
+    "question_id": "D1_luctious_position",
+    "answer": "C",
+    "reasoning": "Mapped to 'C'. 'luctious' is sensible with 'quexor' and 'pladry'. 'C' is an ancestor for '3' (pladry) and '5' (quexor), fitting the hierarchical scope. 'C' is unique and available."
+  },
+  {
+    "question_id": "D1_stibbly_position",
+    "answer": "1",
+    "reasoning": "Mapped to '1' as a leaf node. 'stibbly' is broadly nonsensical with 'groob' and 'thalf', suggesting a limited domain. '1' is unique and available."
+  },
+  {
+    "question_id": "D1_humbrid_position",
+    "answer": "E",
+    "reasoning": "Mapped to 'E'. 'humbrid' is sensible with 'phlebular (G)' and 'molistic (2)'. 'E' is the parent of '4' (morkle) and '5' (quexor). While not directly ancestral to G or 2, it's a high-level branch that accommodates multiple sensible predicates, prioritizing unique node assignment. 'E' is unique and available."
+  },
+  {
+    "question_id": "D1_morkle_position",
+    "answer": "4",
+    "reasoning": "Mapped to '4'. 'morkle' is sensible with 'phlebular (G)'. '4' is a child of 'E' (humbrid). This places it within a high-level branch. '4' is unique and available."
+  },
+  {
+    "question_id": "D1_pladry_position",
+    "answer": "3",
+    "reasoning": "Mapped to '3'. 'pladry' is sensible with 'luctious (C)'. '3' is a child of 'C', making 'C' an ancestor of 'pladry'. '3' is unique and available."
+  },
+  {
+    "question_id": "D1_quexor_position",
+    "answer": "5",
+    "reasoning": "Mapped to '5'. 'quexor' is sensible with 'luctious (C)'. '5' is a child of 'E'. 'C' is an ancestor of 'E'. This assignment ensures uniqueness for all 14 words to 14 nodes, overriding the conflicting '2' from the original table, based on the instruction for unique mapping. '5' is unique and available."
+  },
+  {
+    "question_id": "D1_thalf_position",
+    "answer": "6",
+    "reasoning": "Mapped to '6'. 'thalf' is sensible with 'molistic (2)'. '6' is a child of 'G'. This places it in a related branch, ensuring uniqueness. '6' is unique and available."
+  },
+  {
+    "question_id": "D1_vippage_position",
+    "answer": "7",
+    "reasoning": "Mapped to '7'. 'vippage' is sensible with 'efrimious (D)'. '7' is a child of 'D'. '7' is unique and available."
+  },
+  {
+    "question_id": "D2_A",
+    "answer": "*",
+    "reasoning": "The humbrid (E) is frungent (F). 'E' and 'F' are in different major branches. 'E' is an ancestor of '4,5', 'F' is a child of 'D'. They are not directly related as ancestor/descendant nor in the same close semantic cluster."
+  },
+  {
+    "question_id": "D2_B",
+    "answer": "*",
+    "reasoning": "The morkle (4) is stibbly (1). '4' is a child of 'E'. '1' is a child of 'C'. These are in different major branches with no direct ancestral relationship."
+  },
+  {
+    "question_id": "D2_C",
+    "answer": "*",
+    "reasoning": "The pladry (3) is phlebular (G). '3' is a child of 'C'. 'G' is a child of 'D'. These are in different major branches with no direct ancestral relationship."
+  },
+  {
+    "question_id": "D2_D",
+    "answer": "✓",
+    "reasoning": "The groob (A) is molistic (2). 'A' is an ancestor of 'C', and 'C' is an ancestor of '2'. Thus, 'A' is an ancestor of '2'. Being in the same ancestral chain implies sensibility."
+  }
+]

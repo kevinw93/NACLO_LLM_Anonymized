@@ -1,0 +1,70 @@
+Generation Time: 130.41 seconds
+================================================================================
+
+[
+  {
+    "question_id": "Q1_1",
+    "answer": "odd",
+    "reasoning": "Analyzing the English stress patterns from the provided data, stress is initially assigned to every odd-numbered syllable from the left (1st, 3rd, 5th, etc.), as seen in words like 'illustration' (stressed on 1st and 3rd syllables) and 'ultracrepidarian' (1st, 3rd, 5th). This fits the simplification before exceptions."
+  },
+  {
+    "question_id": "Q1_2",
+    "answer": "final",
+    "reasoning": "In step 2, if step 1 stressed the final syllable (which occurs in words of odd length), it is un-stressed unless the word is one syllable long. Examples: 'elephant' (3 syllables, 3rd un-stressed) and 'vitamin' (3 syllables, 3rd un-stressed), but 'crush' (1 syllable, stressed)."
+  },
+  {
+    "question_id": "Q1_3",
+    "answer": "one",
+    "reasoning": "The exception in step 2 applies only to words that are one syllable long, where the final (only) syllable remains stressed, as in 'dime' and 'crush'. For longer odd-length words, the final is un-stressed."
+  },
+  {
+    "question_id": "Q1_4",
+    "answer": "stressed",
+    "reasoning": "In step 3, primary stress is assigned to the stressed syllable (after steps 1 and 2) that is farthest to one direction. The patterns show primary on the rightmost stressed syllable, e.g., 'galligaskins' (primary on 3rd, rightmost stressed), 'super...docious' (primary on 13th, rightmost)."
+  },
+  {
+    "question_id": "Q1_5",
+    "answer": "right",
+    "reasoning": "Primary stress goes to the stressed syllable farthest to the right, as per the Lassie test analogy and examples: rightmost stressed in 'illustration' (3rd syl), 'ultracrepidarian' (5th syl), confirming the direction."
+  },
+  {
+    "question_id": "Q2_1",
+    "answer": "part of speech (noun vs. verb)",
+    "reasoning": "The conversation shows stress differences based on morphology: nouns like 'permit' (PERmit, stress 1st), 'export' (if noun, stress 1st), vs. verbs like 'export' (exPORT, stress 2nd), 'object' (obJECT, stress 2nd), 'permit' (perMIT, stress 2nd). The algorithm fails on these, requiring addition of part-of-speech rules. Other examples like 'excellent' (stress 2nd) may relate, but primary illustration is noun/verb contrast."
+  },
+  {
+    "question_id": "Q3_1",
+    "answer": "left / skip / every alternating / leave it that way / leftmost",
+    "reasoning": "For Mapudungun: Examples show stress on even syllables (2nd, 4th, etc.), e.g., 'wule' (2nd), 'elumuyu' (2nd, 4th), 'kimufaluwulay' (2nd, 4th, 6th). This fits starting left, skipping the first syllable, stressing every alternating thereafter. Final stressed when even position, left as is. Primary on leftmost stressed (always 2nd if present)."
+  },
+  {
+    "question_id": "Q3_2",
+    "answer": "left / don't skip / every alternating / leave it that way / leftmost",
+    "reasoning": "For Marangunku: Stress on odd syllables (1st, 3rd, 5th), e.g., 'tiralk' (1st), 'merepet' (1st, 3rd), 'yangaramata' (1st, 3rd), 'welepenemanta' (1st, 3rd, 5th). Starts left, no skip, every alternating (odds). Finals stressed in odd lengths, left as is. Primary leftmost (1st)."
+  },
+  {
+    "question_id": "Q3_3",
+    "answer": "right / don't skip / every alternating / leave it that way / rightmost",
+    "reasoning": "For Weri: Stress every other syllable starting from the rightmost (no skip), moving left, e.g., 'ngintip' (2nd=last), 'kulipu' (1st, 3rd=last), 'ululomit' (2nd, 4th=last assuming 4 syl), 'akunetepal' (1st, 3rd, 5th=last). Finals always stressed, left as is. Primary rightmost stressed (last)."
+  },
+  {
+    "question_id": "Q3_4",
+    "answer": "left / don't skip / every alternating / un-stress it / leftmost",
+    "reasoning": "For Mansi: Initial stress on odds from left, but unstress final if odd length >1, e.g., 'sami' (1st), 'atene' (1st only, unstress 3rd), 'omatene' (1st, 3rd), 'pocaganelenl' (1st, 3rd assuming even or unstress if odd). Primary leftmost (1st)."
+  },
+  {
+    "question_id": "Q3_5",
+    "answer": "right / skip / every alternating / leave it that way / rightmost",
+    "reasoning": "For Warao: Stress every other syllable starting from right, skipping the rightmost edge syllable, moving left, e.g., 8-syl words ('yapurukitanehase', 'nahorahakutai') stress 1st,3rd,5th,7th; 9-syl ('enahorahakutai') stress 2nd,4th,6th,8th. Finals not stressed (skipped), left as is. Primary rightmost stressed (e.g., *NA in 4-syl, though 4-syl predicts 1st/3rd but fits majority examples)."
+  },
+  {
+    "question_id": "Q3_6",
+    "answer": "right / don't skip / only the first / leave it that way / rightmost",
+    "reasoning": "For Comalapa Kaqchikel: Stress only on the last syllable, e.g., 'abex' (2nd=last), 'tinamith' (3rd=last), 'nubanobel' (4th=last), 'shintsuxirisax' (5th=last). Starts right, no skip, only the first encountered (last), stressed. Primary rightmost (only one)."
+  },
+  {
+    "question_id": "Q4_1",
+    "answer": "Stress is generally initial, but shifts to the second syllable in words beginning with monosyllabic prefixes such as qu-, u-, or uu-.",
+    "reasoning": "Examining Selkup examples: Initial stress in 'quminik' (*QU), 'amina' (*A), 'qolcimpat i' (*QOL). Second-syllable stress in 'qumoogi' (qu.*MOO), 'qumooqili' (qu.*MOO), 'ucikkak' (u.*cik), 'uucoomit' (u.*COO), indicating prefix-induced shift. This captures the nuance beyond the simple algorithm, as the basic rules fail to predict prefix effects."
+  }
+]

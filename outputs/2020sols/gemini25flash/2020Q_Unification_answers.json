@@ -1,0 +1,97 @@
+[
+  {
+    "question_id": "Q1_1",
+    "answer": "a",
+    "reasoning": "Matching 'áa-' to structure (a) (SUBJECT: PERS:1) is crucial for deriving exactly two invalid sentences under the most plausible interpretation of Maasai Unification Grammar, where prefixes define the verb's subject/object person features."
+  },
+  {
+    "question_id": "Q1_2",
+    "answer": "c",
+    "reasoning": "Matching 'á-' to structure (c) (SUBJECT: PERS:3, OBJECT1: PERS:3) is critical for allowing several sentences to be valid while adhering to the 'two invalid sentences' constraint."
+  },
+  {
+    "question_id": "Q1_3",
+    "answer": "b",
+    "reasoning": "Matching 'é-' to structure (b) (SUBJECT: PERS:3, OBJECT1: PERS:1) completes the prefix assignment, enabling specific subject-object person agreements that result in the correct number of valid/invalid sentences."
+  },
+  {
+    "question_id": "Q1_4",
+    "answer": "d",
+    "reasoning": "The '*none*' suffix clearly indicates a verb without an explicit suffix, which corresponds to structure (d) that specifies a simple transitive verb with no second object."
+  },
+  {
+    "question_id": "Q1_5",
+    "answer": "e",
+    "reasoning": "The suffix '-okí' must correspond to structure (e), which describes a ditransitive verb with a beneficiary (OBJECT1) and an undergoer (OBJECT2)."
+  },
+  {
+    "question_id": "Q1_6",
+    "answer": "f",
+    "reasoning": "Structure (f) is a nominative, animate, 3rd person singular 'warrior'. Given that 'olmuraní' and 'olmuráni' are the Maasai words for 'warrior', 'olmuraní' is consistently the nominative form found as a subject in valid sentences."
+  },
+  {
+    "question_id": "Q1_7",
+    "answer": "g",
+    "reasoning": "Structure (g) is an accusative, animate, 3rd person singular 'warrior'. Therefore, 'olmuráni' must be the accusative form, typically functioning as an object."
+  },
+  {
+    "question_id": "Q2",
+    "answer": "G and I",
+    "reasoning": "Through systematic testing of prefix permutations and a careful interpretation of unification, particularly regarding the animacy of objects in ditransitive structures (suffix 'e'), sentences G and I are the only two that consistently result in a clash of features (specifically, PERSON clashes between expected verb arguments and provided nouns/implicit subjects/objects)."
+  },
+  {
+    "question_id": "Q3_Sentence A",
+    "answer": "The warrior cuts the tree.",
+    "reasoning": "Sentence A: 'ádún olmuraní olcetá'. Verb complex: 'á-dún-∅' (Prefix (c) + Suffix (d)). VC SUBJ:{PERS:3, ROLE:actor, CASE:nom}, OBJ1:{PERS:3, ROLE:undergoer, CASE:acc}. Nouns: 'olmuraní' (f) (PERS:3 nom warrior), 'olcetá' (PERS:3 acc inanimate tree). 'olmuraní' unifies with SUBJ. 'olcetá' unifies with OBJ1. Valid."
+  },
+  {
+    "question_id": "Q3_Sentence B",
+    "answer": "He/she cuts the tree for the warrior.",
+    "reasoning": "Sentence B: 'ádúnokí olmuráni olcetá'. Verb complex: 'á-dún-okí' (Prefix (c) + Suffix (e)). VC SUBJ:{PERS:3, ROLE:actor, CASE:nom}, OBJ1:{PERS:3, ROLE:beneficiary, CASE:acc, ANIMACY:animate}, OBJ2:{ROLE:undergoer, CASE:acc, ANIMACY:animate}. Subject is implicit 'he/she'. 'olmuráni' (g) (PERS:3 acc animate warrior) unifies with OBJ1 (beneficiary). 'olcetá' (PERS:3 acc inanimate tree) unifies with OBJ2 (undergoer), with animacy constraint being flexible for undergoers. Valid."
+  },
+  {
+    "question_id": "Q3_Sentence C",
+    "answer": "He/she cuts the warrior.",
+    "reasoning": "Sentence C: 'ádún olmuráni'. Verb complex: 'á-dún-∅' (Prefix (c) + Suffix (d)). VC SUBJ:{PERS:3, ROLE:actor, CASE:nom}, OBJ1:{PERS:3, ROLE:undergoer, CASE:acc}. Subject is implicit 'he/she'. 'olmuráni' (g) (PERS:3 acc animate warrior) unifies with OBJ1. Valid."
+  },
+  {
+    "question_id": "Q3_Sentence D",
+    "answer": "I cut something for the warrior.",
+    "reasoning": "Sentence D: 'áadúnokí olmuráni'. Verb complex: 'áa-dún-okí' (Prefix (c) + Suffix (e)). VC SUBJ:{PERS:3, ROLE:actor, CASE:nom}, OBJ1:{PERS:3, ROLE:beneficiary, CASE:acc, ANIMACY:animate}, OBJ2:{ROLE:undergoer, CASE:acc, ANIMACY:animate}. Subject is implicit 'he/she'. 'olmuráni' (g) (PERS:3 acc animate warrior) unifies with OBJ1. OBJ2 (undergoer) is unspecified ('something'). Valid."
+  },
+  {
+    "question_id": "Q3_Sentence E",
+    "answer": "I cut the tree for someone.",
+    "reasoning": "Sentence E: 'áadúnokí olcetá'. Verb complex: 'áa-dún-okí' (Prefix (c) + Suffix (e)). VC SUBJ:{PERS:3, ROLE:actor, CASE:nom}, OBJ1:{PERS:3, ROLE:beneficiary, CASE:acc, ANIMACY:animate}, OBJ2:{ROLE:undergoer, CASE:acc, ANIMACY:animate}. Subject is implicit 'he/she'. 'olcetá' (PERS:3 acc inanimate tree) unifies with OBJ2 (undergoer). OBJ1 (beneficiary) is unspecified ('someone'). Valid."
+  },
+  {
+    "question_id": "Q3_Sentence F",
+    "answer": "He/she cuts the warrior.",
+    "reasoning": "Sentence F: 'áadún olmuráni'. Verb complex: 'áa-dún-∅' (Prefix (c) + Suffix (d)). VC SUBJ:{PERS:3, ROLE:actor, CASE:nom}, OBJ1:{PERS:3, ROLE:undergoer, CASE:acc}. Subject is implicit 'he/she'. 'olmuráni' (g) (PERS:3 acc animate warrior) unifies with OBJ1. Valid."
+  },
+  {
+    "question_id": "Q3_Sentence G",
+    "answer": "",
+    "reasoning": "Sentence G: 'áadún olmuraní'. Verb complex: 'áa-dún-∅' (Prefix (c) + Suffix (d)). VC SUBJ:{PERS:3, ROLE:actor, CASE:nom}, OBJ1:{PERS:3, ROLE:undergoer, CASE:acc}. 'olmuraní' (f) (PERS:3 nom warrior) unifies with SUBJ. OBJ1 (undergoer) is left unfilled. This means there is no explicit object for a transitive verb. This is considered invalid as per the problem's criteria for having exactly two invalid sentences."
+  },
+  {
+    "question_id": "Q3_Sentence H",
+    "answer": "I cut the tree for the warrior.",
+    "reasoning": "Sentence H: 'édún olmuraní olcetá'. Verb complex: 'é-dún-∅' (Prefix (b) + Suffix (d)). VC SUBJ:{PERS:3, ROLE:actor, CASE:nom}, OBJ1:{PERS:1, ROLE:undergoer, CASE:acc}. 'olmuraní' (f) (PERS:3 nom warrior) unifies with SUBJ. 'olcetá' (PERS:3 acc inanimate tree) unifies with OBJ1 (undergoer). Valid."
+  },
+  {
+    "question_id": "Q3_Sentence I",
+    "answer": "",
+    "reasoning": "Sentence I: 'édúnokí olmuráni olcetá'. Verb complex: 'é-dún-okí' (Prefix (b) + Suffix (e)). VC SUBJ:{PERS:3, ROLE:actor, CASE:nom}, OBJ1:{PERS:1, ROLE:beneficiary, CASE:acc, ANIMACY:animate}, OBJ2:{ROLE:undergoer, CASE:acc, ANIMACY:animate}. 'olmuráni' (g) (PERS:3 acc animate warrior) clashes with OBJ1 (P1). INVALID."
+  },
+  {
+    "question_id": "Q3_Sentence J",
+    "answer": "The warrior cuts me for something.",
+    "reasoning": "Sentence J: 'édúnokí olmuraní'. Verb complex: 'é-dún-okí' (Prefix (b) + Suffix (e)). VC SUBJ:{PERS:3, ROLE:actor, CASE:nom}, OBJ1:{PERS:1, ROLE:beneficiary, CASE:acc, ANIMACY:animate}, OBJ2:{ROLE:undergoer, CASE:acc, ANIMACY:animate}. 'olmuraní' (f) (PERS:3 nom warrior) unifies with SUBJ. OBJ1 is 'me' (P1, beneficiary). OBJ2 (undergoer) is unspecified ('something'). Valid."
+  },
+  {
+    "question_id": "Q3_Sentence K",
+    "answer": "The warrior cuts me.",
+    "reasoning": "Sentence K: 'édún olmuráni'. Verb complex: 'é-dún-∅' (Prefix (b) + Suffix (d)). VC SUBJ:{PERS:3, ROLE:actor, CASE:nom}, OBJ1:{PERS:1, ROLE:undergoer, CASE:acc}. 'olmuráni' (g) (PERS:3 acc animate warrior) clashes with OBJ1(P1). INVALID."
+  }
+]

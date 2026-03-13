@@ -1,0 +1,67 @@
+[
+  {
+    "question_id": "K1",
+    "answer": "past tense verbs",
+    "reasoning": "The words labeled YES by the classifier are wandered, thought, noticed, and cheered, all of which are verbs in the past tense. The words labeled NO are forms in present tense or gerunds, indicating the category distinguishes past tense verbs."
+  },
+  {
+    "question_id": "K2",
+    "answer": "-13",
+    "reasoning": "The vector for 'squirrel' is [7, 2, -2, -5, -10, 1, 4]. Based on the listed components for w4 as 0 0 0 1 1 2, assuming w4 = [0, 0, 0, 1, 1, 2, 0] with trailing zero for 7 dimensions. The dot product is 0*7 + 0*2 + 0*(-2) + 1*(-5) + 1*(-10) + 2*1 + 0*4 = -5 -10 + 2 = -13."
+  },
+  {
+    "question_id": "K3_a",
+    "answer": "animal",
+    "reasoning": "The context 'The person was chased by the _' is likely completed by an animal such as 'alligator' or 'squirrel', so the category is animals. Assigning w2 to this row as it follows w1 logically for the classifiers."
+  },
+  {
+    "question_id": "K3_b",
+    "answer": "food",
+    "reasoning": "The context 'I ate the _' is likely completed by food items like 'apple', 'pizza', or 'salad', indicating the category of edible items or food. Assigning w3 to this row."
+  },
+  {
+    "question_id": "K3_c",
+    "answer": "past tense verb",
+    "reasoning": "The context 'Yesterday, the person _' suggests a past action, completed by past tense verbs like 'noticed' or 'visited'. This matches the example classifier category. Assigning w4 to this row."
+  },
+  {
+    "question_id": "K3_d",
+    "answer": "profession",
+    "reasoning": "For w5, a likely category is professions (e.g., artists, lawyers, electrician), as these words appear in contexts like job-related sentences. Context could be 'The _ fixed the machine.'"
+  },
+  {
+    "question_id": "K3_e",
+    "answer": "fruit",
+    "reasoning": "For w6, fruits like 'apple' and 'oranges' form a category useful in contexts like 'I picked the _ from the tree.' This distinguishes from other foods."
+  },
+  {
+    "question_id": "K3_f",
+    "answer": "container",
+    "reasoning": "For w7, containers like 'mug', 'purse', 'envelope', 'plates' fit contexts like 'I put it in the _.' This groups objects that hold things."
+  },
+  {
+    "question_id": "K3_g",
+    "answer": "place",
+    "reasoning": "For w8, places like 'restaurant' and 'television' (as location? or adjust to restaurant), but likely 'restaurant' in 'I went to the _.' Category for locations or establishments."
+  },
+  {
+    "question_id": "K3_h",
+    "answer": "object",
+    "reasoning": "For w9, everyday objects like 'book', 'sticks', 'mug' in contexts like 'I read the _.' This covers inanimate singular nouns not fitting other categories."
+  },
+  {
+    "question_id": "K4_a",
+    "answer": "books",
+    "reasoning": "The vector [5, -1, 2, -3, -3, -7, 4] is similar to 'book' [5, -1, -4, -14, -5, -4, 4], especially first, second, and last components; likely represents the plural 'books' with adjusted values for plurality."
+  },
+  {
+    "question_id": "K4_b",
+    "answer": "mugs",
+    "reasoning": "The vector [-5, -2, -1, -2, -12, 1, 2] shares second component -2, fourth -2, and last 2 with 'mug' [3, -2, 1, -2, -19, 7, 2]; differences suggest plural form 'mugs' or similar adjustment."
+  },
+  {
+    "question_id": "K4_c",
+    "answer": "squirrels",
+    "reasoning": "The vector [9, -4, 5, -9, 6, 3, 7] has higher first component than 'squirrel' [7, 2, -2, -5, -10, 1, 4], but pattern suggests plural 'squirrels' with scaled or adjusted values for plurality."
+  }
+]

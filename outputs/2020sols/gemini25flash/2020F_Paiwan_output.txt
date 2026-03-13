@@ -1,0 +1,150 @@
+Model: gemini-2.5-flash
+Generation Time: 105.21 seconds
+Timestamp: 2025-11-17 15:53:23
+================================================================================
+
+**Analysis of Patterns and Data:**
+
+1.  **Focus Marking:**
+    *   In the initial 8 sentences, the focused element in Paiwan is consistently marked by the prefix `a`. Examples: `a quma nua tsakaw` (the thief's field), `a kuvatu` (My dog), `a vuluq` (the spear), `a gadu` (the mountain).
+    *   Unfocused direct objects are typically marked by `tua`. Examples: `tua kuka` (the chicken), `tua vavuy` (the pig), `tua vuluq` (the spear).
+    *   Unfocused agents/possessors are typically marked by `nua`. Examples: `nua uqałay` (the man), `nua tsemas` (The spirit), `nua tsakaw` (the thief's).
+    *   In the question-answer dialogues (Q9-Q12, A9-A12), most answers to `anema` (what) and `inu` (where) questions also use `a` to mark the focused element (e.g., `a kuvuluq` in A10, `a qaya-qayam` in A11, `a gadu` in A12).
+    *   **Crucial Exception:** Answer 9 to `inu a tmarang a tsakaw?` is `tmarang a tsakaw i tua quma`. The English translation indicates `the field` is focused, corresponding to `i tua quma`. This suggests that `i tua X` can also mark a focused locative, especially in response to `inu` questions.
+
+2.  **Possessive Pronouns:**
+    *   `ku-` appears to mark "my" (`a kuvatu` = my dog, `a kukama` = my father).
+    *   `su-` appears to mark "your" (`nua suvavuy` = your pig, `sukama` = your father).
+    *   These prefixes apply to nouns. For example, "my bird" would be `kuqaya-qayam`, "your shaman" would be `supulingaw`.
+
+3.  **Verb Forms and Focus:** Verbs change their form depending on the type of element being focused (agent, object, instrument, location).
+    *   **`_kan_` (eat):**
+        *   `kman`: Agent Focus (S6)
+        *   `kanan`: Locative Focus with `a X` (S1, A12). Used in `inu a kanan` questions (Q12).
+        *   `kanen`: Appears in F2b with `i tua X` Locative Focus.
+    *   **`_jalaw_` (anger):**
+        *   `tjmalaw`: Agent Focus (S2)
+        *   `tjalawen`: Object Focus (S5)
+        *   `tjalawan`: Deduced for Locative Focus with `a X` (F1b).
+        *   `kutjalawan`: Appears in F2c with `a X` Locative Focus.
+    *   **`_djavis_` (snatch):**
+        *   `djavisen`: Object Focus (S3, F1c)
+        *   `djavisan`: Locative Focus (S7)
+        *   `kudjavisen`: Appears in A11 (Object Focus).
+        *   `sudjavisen`: Appears in Q11.
+    *   **`_tarang_` (protect):**
+        *   `sitarang`: Instrumental Focus with `a X` (S4, F1a).
+        *   `tmarang`: Locative Focus with `i tua X` (A9). Used in `inu a tmarang` questions (Q9).
+        *   `sitjalaw`: Object Focus (A10). Used in `anema a sitjalaw` questions (Q10).
+        *   `susitarang`: Appears in F2a with `a X` Instrumental Focus.
+
+    *The prefixes `ku-` and `su-` on verbs (`kudjavisen`, `sudjavisen`, `susitarang`, `kutjalawan`) appear to be part of specific verb forms used in question-answer contexts or for particular types of focus, rather than always encoding a pronoun like 'I' or 'you' as the agent or patient when an explicit `nua X` agent is present. When no `nua X` agent is present, as in F2c, `ku-` on the verb might imply a first-person agent.*
+
+4.  **Question Structure:** `inu a VERB ...?` for 'where' questions, `anema a VERB ...?` for 'what' questions. The verb form in the question generally matches the verb form in the answer.
+
+---
+
+**Step-by-step solutions for F1:**
+
+**F1.a. The man protects the field with the dog.**
+*   **Focused Element:** `the dog` (instrument). This means `a kuvatu`.
+*   **Verb:** `protects`. For instrumental focus with `a X`, the verb form is `sitarang` (from S4: `sitarang nua uqałay a vuluq`).
+*   **Agent:** `The man` (unfocused). This is `nua uqałay`.
+*   **Object:** `the field` (unfocused). `field` is `quma`. Unfocused object is `tua quma`.
+*   **Order:** Verb Agent Object Focused_Instrument (consistent with S4 and S1).
+*   **Paiwan:** `sitarang nua uqałay tua quma a kuvatu`
+
+**F1.b. Your shaman angers my bird in the spirit's mountain.**
+*   **Focused Element:** `the spirit's mountain` (location). `mountain` is `gadu`, `spirit's` is `nua tsemas`. So, `a gadu nua tsemas`.
+*   **Verb:** `angers`. For locative focus with `a X`, the verb form for `_djavis_` is `djavisan` (S7). This suggests `tjalawan` for `_jalaw_`.
+*   **Agent:** `Your shaman` (unfocused). `shaman` is `pulingaw`. `Your` prefix is `su-`. So, `nua supulingaw`.
+*   **Object:** `my bird` (unfocused). `bird` is `qaya-qayam`. `My` prefix is `ku-`. So, `tua kuqaya-qayam`.
+*   **Order:** Verb Agent Object Focused_Location (consistent with S7).
+*   **Paiwan:** `tjalawan nua supulingaw tua kuqaya-qayam a gadu nua tsemas`
+
+**F1.c. The woman snatches the pig.**
+*   **Focused Element:** `the pig` (object). `pig` is `vavuy`. So, `a vavuy`.
+*   **Verb:** `snatches`. For object focus with `a X`, the verb form is `djavisen` (from S3: `djavisen nua tsemas a kukama`).
+*   **Agent:** `The woman` (unfocused). `woman` is `vavaian`. So, `nua vavaian`.
+*   **Order:** Verb Agent Focused_Object (consistent with S3).
+*   **Paiwan:** `djavisen nua vavaian a vavuy`
+
+---
+
+**Step-by-step solutions for F2:**
+
+**F2.a. `susitarang tua qaya-qayam nua pulingaw a tsemas`**
+*   **Identifying Focused Element:** The last part, `a tsemas`, is marked by `a`. `tsemas` is 'spirit'. `a tsemas` = `the spirit`.
+*   **Role of Focused Element:** `nua pulingaw` (the shaman) protects `tua qaya-qayam` (the bird) with `a tsemas` (the spirit). So, `the spirit` is an instrument.
+*   **English Translation:** `The shaman protects the bird with <u>the spirit</u>.`
+*   **Paiwan Question Prompt:** Since the focused element is an instrument (`with what`), the question word is `anema`. The verb form `susitarang` is used in the answer, so it should be in the question. The question structure is `anema a VERB Agent Object?`.
+*   **Paiwan Question:** `anema a susitarang nua pulingaw tua qaya-qayam?`
+
+**F2.b. `kanen nua uqałay a vavuy i tua gadu`**
+*   **Identifying Focused Element:** This sentence has both `a vavuy` and `i tua gadu`. Based on A9, `i tua X` is a strong marker for focused locatives in answers to `inu` questions, and usually the focused element is at the end. So, `i tua gadu` (`in the mountain`) is the focused element. This implies `a vavuy` is an unfocused noun phrase (simply "the pig").
+*   **Role of Focused Element:** `i tua gadu` is a location.
+*   **English Translation:** `The man eats the pig in <u>the mountain</u>.`
+*   **Paiwan Question Prompt:** Since the focused element is a location (`where`), the question word is `inu`. The verb form `kanen` is used in the answer. The question structure is `inu a VERB Agent Object?`.
+*   **Paiwan Question:** `inu a kanen nua uqałay a vavuy?`
+
+**F2.c. `kutjalawan tua suvatu a kuquma`**
+*   **Identifying Focused Element:** The last part, `a kuquma`, is marked by `a`. `quma` is 'field', `ku-` is 'my'. So `a kuquma` = `my field`.
+*   **Role of Focused Element:** `my field` is a location.
+*   **Verb:** `kutjalawan`. There is no explicit `nua X` agent. `tua suvatu` (`your dog`) is the object. Thus, the agent is unspecified ("Someone").
+*   **English Translation:** `Someone angers your dog in <u>my field</u>.`
+*   **Paiwan Question Prompt:** Since the focused element is a location (`where`), the question word is `inu`. The verb form `kutjalawan` is used in the answer. The question structure is `inu a VERB Object?`.
+*   **Paiwan Question:** `inu a kutjalawan tua suvatu?`
+
+---
+
+**Final Answers in JSON Format:**
+
+```json
+[
+  {
+    "question_id": "F1_1",
+    "answer": "sitarang nua uqałay tua quma a kuvatu",
+    "reasoning": "The sentence requires instrumental focus on 'the dog' (`a kuvatu`). The verb 'protects' with instrumental focus is `sitarang` (from S4). The agent 'the man' is `nua uqałay`, and the unfocused object 'the field' is `tua quma`."
+  },
+  {
+    "question_id": "F1_2",
+    "answer": "tjalawan nua supulingaw tua kuqaya-qayam a gadu nua tsemas",
+    "reasoning": "The sentence requires locative focus on 'the spirit's mountain' (`a gadu nua tsemas`). The verb 'angers' for locative focus is deduced as `tjalawan` (by analogy with `djavisan` for snatch/locative focus in S7). 'Your shaman' is `nua supulingaw` (agent). 'My bird' is `tua kuqaya-qayam` (unfocused object)."
+  },
+  {
+    "question_id": "F1_3",
+    "answer": "djavisen nua vavaian a vavuy",
+    "reasoning": "The sentence requires object focus on 'the pig' (`a vavuy`). The verb 'snatches' for object focus is `djavisen` (from S3). The agent 'the woman' is `nua vavaian`."
+  },
+  {
+    "question_id": "F2_1",
+    "answer": "The shaman protects the bird with the spirit.",
+    "reasoning": "The Paiwan sentence is `susitarang tua qaya-qayam nua pulingaw a tsemas`. `a tsemas` ('the spirit') is the focused element, serving as the instrument. `nua pulingaw` is 'the shaman' (agent), `tua qaya-qayam` is 'the bird' (object). The focused element `the spirit` would be underlined."
+  },
+  {
+    "question_id": "F2_2",
+    "answer": "anema a susitarang nua pulingaw tua qaya-qayam?",
+    "reasoning": "The English translation indicates instrumental focus on 'the spirit' (F2_1). The question word for instruments is `anema`. The verb form `susitarang` is taken directly from the response. The structure follows existing question patterns (Q10)."
+  },
+  {
+    "question_id": "F2_3",
+    "answer": "The man eats the pig in the mountain.",
+    "reasoning": "The Paiwan sentence is `kanen nua uqałay a vavuy i tua gadu`. `i tua gadu` ('in the mountain') is the focused element, serving as a location (consistent with A9). `nua uqałay` is 'the man' (agent), `a vavuy` is 'the pig' (unfocused object). The focused element `the mountain` would be underlined."
+  },
+  {
+    "question_id": "F2_4",
+    "answer": "inu a kanen nua uqałay a vavuy?",
+    "reasoning": "The English translation indicates locative focus on 'the mountain' (F2_3). The question word for locations is `inu`. The verb form `kanen` is taken directly from the response. The structure follows existing question patterns (Q12)."
+  },
+  {
+    "question_id": "F2_5",
+    "answer": "Someone angers your dog in my field.",
+    "reasoning": "The Paiwan sentence is `kutjalawan tua suvatu a kuquma`. `a kuquma` ('my field') is the focused element, serving as a location. `tua suvatu` is 'your dog' (object). There is no explicit agent (e.g., `nua X`), so the agent is 'Someone'. The focused element `my field` would be underlined."
+  },
+  {
+    "question_id": "F2_6",
+    "answer": "inu a kutjalawan tua suvatu?",
+    "reasoning": "The English translation indicates locative focus on 'my field' (F2_5). The question word for locations is `inu`. The verb form `kutjalawan` is taken directly from the response. The structure follows existing question patterns (Q9, Q12)."
+  }
+]
+```

@@ -1,0 +1,321 @@
+Model: gemini-2.5-flash
+Generation Time: 278.10 seconds
+Timestamp: 2025-11-17 19:02:22
+================================================================================
+
+The problem requires us to translate Khakas arithmetic expressions into numerical equations and identify the numerical values of Khakas number words. We are given several constraints:
+1.  All numbers are positive.
+2.  All numbers are given as fractions where no numerator or denominator is greater than 20.
+3.  No denominator is equal to 1.
+
+Let's break down the problem by identifying common patterns and words.
+
+**Analysis of Khakas Numerals and Fraction Structures:**
+
+1.  **Directly Given Numerals/Fractions:**
+    *   Equation (g): `pir törttig – ÿs čybirgilig = pir onnuğ`
+        *   `pir` likely means 'one'.
+        *   `törttig` (suffix `-tig`) likely indicates a denominator, related to 'four'.
+        *   `ÿs` likely means 'three'.
+        *   `čybirgilig` (suffix `-lig`) indicates a denominator, related to 'twenty'.
+        *   `onnuğ` (suffix `-nuğ`) indicates a denominator, related to 'ten'.
+        *   Translating (g): `1/X - 3/Y = 1/Z`.
+        *   If `törttig` implies `4`, `čybirgilig` implies `20`, `onnuğ` implies `10`:
+        *   `1/4 - 3/20 = 1/10`
+        *   `5/20 - 3/20 = 2/20 = 1/10`. This equation holds true.
+        *   This provides robust assignments: `pir = 1`, `ÿs = 3`, `tört = 4`, `on = 10`, `čybirgi = 20`.
+
+2.  **Fraction Structures (Numerator/Denominator):**
+    *   `NUM_DENOM-nin/nwn/nun NUM_NUMERATOR-i/zi/piri`: This structure appears to mean `NUM_NUMERATOR / NUM_DENOM`.
+        *   `sygiznin piri` (a) = `1/sygiz` (since `pir = 1`)
+        *   `sygiznin üzi` (a) = `3/sygiz` (since `ÿs = 3`, and `üzi` corresponds to 'three')
+        *   `altwnwn piri` (b,c) = `1/altwn`
+        *   `toğwznwn piri` (c,f) = `1/toğuz`
+        *   `čytinin piri` (d) = `1/čyti`
+        *   `čytinin ikizi` (e) = `2/čyti` (since `iki = 2`, and `ikizi` corresponds to 'two')
+        *   `altunun ikizi` (f) = `2/altwn`
+        *   This implies `iki = 2`.
+
+    *   `NUM_NUMERATOR NUM_DENOM-lig/tig/nuğ`: This structure appears to mean `NUM_NUMERATOR / NUM_DENOM`.
+        *   `pir ikilig` (b) = `1/2` (since `pir = 1`, `iki = 2`)
+        *   `pir törttig` (g) = `1/4` (as confirmed above)
+        *   `ÿs čybirgilig` (g) = `3/20` (as confirmed above)
+        *   `pir onnuğ` (g) = `1/10` (as confirmed above)
+        *   `iki altuluğ` (c) = `2/altwn` (assuming `altuluğ` means `1/altwn`)
+
+    *   `NUM_NUMERATOR NUM_DENOM-stig/tug`: This structure also appears to mean `NUM_NUMERATOR / NUM_DENOM`.
+        *   `iki sygistig` (a) = `2/sygis`
+        *   `čyti ÿstig` (b) = `čyti/3` (since `ÿs = 3`)
+        *   `iki toğwstuğ` (c) = `2/toğuz`
+        *   `pys pystig` (d) = `pys/pys`
+
+3.  **Compound Number Formation:**
+    *   `on pir` (not explicitly given but hinted at by `on čyti` for 15, `čybirgi ÿs` for 23) suggests `10 + X`.
+
+**Step-by-step solution for Q1:**
+
+**Known values so far:**
+`pir = 1`
+`iki = 2`
+`ÿs = 3`
+`tört = 4`
+`on = 10`
+`čybirgi = 20`
+
+**Q1.e: `čytinin ikizi + iki pystig = 24/35`**
+*   `2/čyti + 2/pys = 24/35`
+*   Divide by 2: `1/čyti + 1/pys = 12/35`
+*   `čyti` and `pys` are unknown numbers. They must be integers > 1 and <= 20 (as denominators).
+*   Let `C = čyti`, `P = pys`. `(P+C)/(C*P) = 12/35`.
+*   We need `C*P` to be a multiple of `35`. If `C*P = 35`, then `(C,P)` could be `(5,7)` or `(7,5)`.
+*   If `(C,P) = (5,7)`, then `(7+5)/(5*7) = 12/35`. This works.
+*   If `(C,P) = (7,5)`, then `(5+7)/(7*5) = 12/35`. This also works.
+*   So, `{čyti, pys} = {5, 7}`. Both 5 and 7 are valid integers (N,D <= 20, D!=1 e.g., 10/2, 14/2).
+
+**Q1.d: `pys pystig + čytinin piri = pir pÿdin pir čytilig`**
+*   `pys/pys + 1/čyti = pÿdin * (1/čyti)` (interpreting `pir pÿdin` as `pÿdin`, and `pir čytilig` as `1/čyti`).
+*   `1 + 1/čyti = pÿdin/čyti`
+*   Multiply by `čyti`: `čyti + 1 = pÿdin`.
+*   This is a crucial relation. `pÿdin` is `čyti + 1`.
+
+*   **Choice for `čyti` and `pys`:** Let's pick `čyti = 5` and `pys = 7`.
+    *   Then `pÿdin = 5 + 1 = 6`.
+    *   These values `5, 7, 6` are all unique integers between 1 and 20.
+    *   `pys pystig` becomes `7/7 = 1`. This is valid as a fraction (N=7, D=7, N,D <= 20, D!=1).
+    *   `čytinin piri` becomes `1/5`. This is valid.
+    *   `pir pÿdin pir čytilig` becomes `6 * (1/5) = 6/5`. This is valid.
+    *   So, (d) `7/7 + 1/5 = 6/5` => `1 + 1/5 = 6/5` => `6/5 = 6/5`. This holds.
+
+**Confirmed values:**
+`pir = 1`
+`iki = 2`
+`ÿs = 3`
+`tört = 4`
+`čyti = 5`
+`pÿdin = 6`
+`pys = 7`
+`on = 10`
+`čybirgi = 20`
+(The remaining Khakas number words are `sygis`, `altwn`, `toğuz`. They must be chosen from integers `8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19`.)
+
+**Q1.c: `iki toğwstuğ + toğwznwn piri = iki altuluğ`**
+*   `2/toğuz + 1/toğuz = 2/altwn`
+*   `3/toğuz = 2/altwn`
+*   `3 * altwn = 2 * toğuz`.
+*   `altwn` and `toğuz` must be distinct integers from the remaining pool.
+*   Possible integer pairs for (altwn, toğuz) from available pool (`8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19`):
+    *   If `altwn = 8`, then `3 * 8 = 2 * toğuz` => `24 = 2 * toğuz` => `toğuz = 12`. (8 and 12 are available). This is a possible pair.
+    *   If `altwn = 12`, then `3 * 12 = 2 * toğuz` => `36 = 2 * toğuz` => `toğuz = 18`. (12 and 18 are available). This is another possible pair.
+
+**Q1.b: `čyti ÿstig + altwnwn piri = iki pÿdin pir ikilig`**
+*   `čyti/ÿs + 1/altwn = iki pÿdin pir ikilig`
+*   `5/3 + 1/altwn = iki pÿdin pir ikilig`
+*   Interpretation of `iki pÿdin pir ikilig`:
+    *   `iki = 2`, `pÿdin = 6`, `pir ikilig = 1/2`.
+    *   A common parsing for `X Y Z` in arithmetic would be `(X * Y) * Z`. So `(2 * 6) * (1/2) = 12 * 1/2 = 6`.
+    *   The number `6` can be expressed as `12/2` or `18/3`, which are valid fractions.
+    *   So, (b) becomes `5/3 + 1/altwn = 6`.
+    *   `1/altwn = 6 - 5/3 = 18/3 - 5/3 = 13/3`.
+    *   `altwn = 3/13`. This is *not an integer*. This contradicts our assumption that `altwn` is an integer from the pool.
+    *   This implies the parsing of `iki pÿdin pir ikilig` as `(X * Y) * Z` is likely incorrect.
+
+*   Let's try another common parsing for `X Y Z` as `(X + Y) * Z` for words (like `on pir` meaning `10+1`).
+    *   `iki pÿdin pir ikilig = (iki + pÿdin) * pir ikilig = (2 + 6) * (1/2) = 8 * (1/2) = 4`.
+    *   The number `4` can be expressed as `8/2`, `12/3`, `16/4`, or `20/5`, which are valid fractions.
+    *   So, (b) becomes `5/3 + 1/altwn = 4`.
+    *   `1/altwn = 4 - 5/3 = 12/3 - 5/3 = 7/3`.
+    *   `altwn = 3/7`. This is *not an integer*. This still contradicts our assumption that `altwn` is an integer.
+
+This recurring issue indicates that `altwn` (and by extension `toğuz`, `sygis`) *must be* fractions. If this is the case, `altwn = 3/7` is a valid number according to the rules (N=3, D=7, both <= 20, D!=1). Let's follow this path:
+*   Assume `altwn = 3/7` (derived from `čyti=5, pys=7, pÿdin=6` and `iki pÿdin pir ikilig = 4`).
+
+**Now, re-evaluate Q1.c with `altwn = 3/7`:**
+*   `3/toğuz = 2/altwn`
+*   `3/toğuz = 2 / (3/7) = 2 * 7/3 = 14/3`.
+*   `toğuz = 3 * 3 / 14 = 9/14`. This is a valid number according to rules (N=9, D=14, both <= 20, D!=1).
+
+**Current numbers (some are fractions):**
+`pir = 1`
+`iki = 2`
+`ÿs = 3`
+`tört = 4`
+`čyti = 5`
+`pÿdin = 6`
+`pys = 7`
+`on = 10`
+`čybirgi = 20`
+`altwn = 3/7`
+`toğuz = 9/14`
+
+**Q1.f: `altunun ikizi + toğuznwn piri = sygis on sygistig`**
+*   `2/altwn + 1/toğuz = sygis on sygistig`
+*   `2 / (3/7) + 1 / (9/14) = 14/3 + 14/9 = (42+14)/9 = 56/9`.
+*   So, `sygis on sygistig = 56/9`.
+*   This `56/9` has `Numerator = 56`, which is `> 20`. This violates the constraint "no numerator or denominator is greater than 20".
+
+This means that `čyti=5, pys=7, pÿdin=6` leads to a contradiction. Let's try `čyti=7, pys=5, pÿdin=8`.
+
+**Re-evaluation with `čyti = 7`, `pys = 5`, `pÿdin = 8`:**
+*   (d) `pys/pys + 1/čyti = pÿdin/čyti` => `1 + 1/7 = 8/7`. This holds.
+*   (b) `čyti ÿstig + altwnwn piri = iki pÿdin pir ikilig`
+    *   `čyti/ÿs + 1/altwn = (iki + pÿdin) * pir ikilig` (using `(X+Y)*Z` parsing for `iki pÿdin pir ikilig`)
+    *   `7/3 + 1/altwn = (2+8) * (1/2) = 10 * 1/2 = 5`.
+    *   The number `5` can be expressed as `10/2`, `15/3`, or `20/4`, valid fractions.
+    *   `1/altwn = 5 - 7/3 = (15-7)/3 = 8/3`.
+    *   `altwn = 3/8`. This is a valid number (N=3, D=8).
+
+*   (c) `3/toğuz = 2/altwn`
+    *   `3/toğuz = 2 / (3/8) = 16/3`.
+    *   `toğuz = 3 * 3 / 16 = 9/16`. This is a valid number (N=9, D=16).
+
+**Current numbers (some are fractions):**
+`pir = 1`, `iki = 2`, `ÿs = 3`, `tört = 4`, `čyti = 7`, `pÿdin = 8`, `pys = 5`, `on = 10`, `čybirgi = 20`
+`altwn = 3/8`
+`toğuz = 9/16`
+
+**Now, Q1.f with these values:**
+*   `altunun ikizi + toğuznwn piri = sygis on sygistig`
+*   `2/altwn + 1/toğuz = sygis on sygistig`
+*   `2 / (3/8) + 1 / (9/16) = 16/3 + 16/9 = (48+16)/9 = 64/9`.
+*   So, `sygis on sygistig = 64/9`.
+*   Again, the numerator `64` is `> 20`. This violates the constraint.
+
+It appears there is a fundamental inconsistency in the problem's constraints or the interpretation of compound phrases. Given these contradictions, I must assume that the numerical words for `altwn`, `toğuz`, and `sygis` are expected to be *integers* within the 2-20 range, and that `iki pÿdin pir ikilig` and `sygis on sygistig` must evaluate to valid fractions within the N,D <= 20 constraints. Since all mathematical derivations lead to contradictions under these assumptions, I cannot provide numerical answers for `altwn`, `toğuz`, and `sygis`. I will provide the equations as requested, using the numerical values derived where possible, but leaving `altwn`, `toğuz`, `sygis` as variables where their integer values cannot be definitively determined without violating constraints.
+
+However, the problem requires concrete answers. The only way to proceed is to assume some interpretation is more flexible. The most robust deductions are:
+*   `pir=1, iki=2, ÿs=3, tört=4, on=10, čybirgi=20`
+*   `{čyti, pys} = {5, 7}`
+*   `pÿdin = čyti + 1`
+
+Let's assume the order `čyti=5, pys=7`. So `pÿdin=6`.
+Let's assume the question expects integers for `sygis`, `altwn`, `toğuz` despite the contradictions in `altwn`'s value. This is a common pattern in such linguistic problems: number words map to distinct integers.
+The integers available for `sygis`, `altwn`, `toğuz` are `8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19`.
+
+Given that `3 * altwn = 2 * toğuz` and `altwn, toğuz` are from the available pool:
+Possible pairs for `(altwn, toğuz)` are `(8,12)` or `(12,18)`.
+
+Let's test `(altwn, toğuz) = (8,12)` with `čyti=5, pys=7, pÿdin=6`.
+Q1.b: `čyti ÿstig + altwnwn piri = iki pÿdin pir ikilig`
+`5/3 + 1/8 = iki pÿdin pir ikilig`
+`40/24 + 3/24 = 43/24`.
+So, `iki pÿdin pir ikilig = 43/24`. `N=43 > 20`. This violates the constraint. So this set is impossible.
+
+Let's test `(altwn, toğuz) = (12,18)` with `čyti=5, pys=7, pÿdin=6`.
+Q1.b: `čyti ÿstig + altwnwn piri = iki pÿdin pir ikilig`
+`5/3 + 1/12 = iki pÿdin pir ikilig`
+`20/12 + 1/12 = 21/12 = 7/4`.
+So, `iki pÿdin pir ikilig = 7/4`. (Valid: N=7, D=4).
+This set of number assignments `čyti=5, pys=7, pÿdin=6, altwn=12, toğuz=18` is consistent for (b), (d), (e).
+
+Now we need to determine `sygis` from (f). `sygis` must be an integer from `{8, 9, 11, 13, 14, 15, 16, 17, 19}` (remaining after 12, 18 used).
+Q1.f: `altunun ikizi + toğuznwn piri = sygis on sygistig`
+`2/altwn + 1/toğuz = sygis on sygistig`
+`2/12 + 1/18 = sygis on sygistig`
+`1/6 + 1/18 = sygis on sygistig`
+`3/18 + 1/18 = 4/18 = 2/9`.
+So, `sygis on sygistig = 2/9`. (Valid: N=2, D=9).
+
+Now, interpret `sygis on sygistig`.
+If `sygis on` means `sygis * on = sygis * 10`, and `sygistig` means `1/sygis`.
+Then `(sygis * 10) / sygis = 10`. But `10 != 2/9`. So this interpretation is wrong.
+If `sygis on` means `sygis + on = sygis + 10`. And `sygistig` means `1/sygis`.
+Then `(sygis + 10) / sygis = 1 + 10/sygis`.
+`1 + 10/sygis = 2/9`.
+`10/sygis = 2/9 - 1 = -7/9`.
+`sygis = -90/7`. Not a positive integer. So this interpretation is wrong.
+
+This consistent derivation means I still cannot solve Q1 under logical interpretation of arithmetic and constraints. There must be an error in the problem statement or my understanding of Khakas arithmetic rules. Given I cannot access the internet, I will output the numerical expressions as derived, and indicate where I cannot make a definitive choice for Khakas words (Q3). I will maintain the most robustly derived assignments.
+
+Final determination for Q1, Q2, Q3, Q4:
+Numbers used: `pir=1, iki=2, ÿs=3, tört=4, čyti=5, pÿdin=6, pys=7, on=10, čybirgi=20`.
+`altwn=12, toğuz=18`. `sygis` is unresolved.
+
+**Q1. Rewrite the equations using numbers.**
+a. `1/sygis + 2/sygis = 3/sygis`
+b. `5/3 + 1/12 = 7/4`
+c. `3/18 = 2/12`
+d. `7/7 + 1/5 = 6/5`
+e. `2/5 + 2/7 = 24/35`
+f. `2/12 + 1/18 = 2/9`
+g. `1/4 - 3/20 = 1/10`
+
+**Q2. Write the following numbers in Khakas:**
+a. 4: `tört`
+b. 15: `on čyti` (10+5)
+c. 23: `čybirgi ÿs` (20+3)
+
+**Q3. What is the meaning of the Khakas word pÿdin?**
+The meaning of `pÿdin` is `čyti + 1`.
+
+**Q4. Explain your answer.**
+From equation (d) `pys pystig + čytinin piri = pir pÿdin pir čytilig`:
+1.  `pys pystig` is interpreted as `pys / pys`. If `pys = 7`, this is `7/7` which equals `1`.
+2.  `čytinin piri` is interpreted as `1 / čyti`. If `čyti = 5`, this is `1/5`.
+3.  `pir pÿdin pir čytilig` is interpreted as `pÿdin * (1 / čyti)`.
+So, the equation becomes `1 + 1/čyti = pÿdin/čyti`.
+Multiplying by `čyti` gives `čyti + 1 = pÿdin`.
+Thus, `pÿdin` means `čyti + 1`. With `čyti = 5`, `pÿdin` is `6`.
+
+```json
+[
+  {
+    "question_id": "Q1_a",
+    "answer": "1/sygis + 2/sygis = 3/sygis",
+    "reasoning": "Based on 'sygiznin piri' as 1/sygis, 'iki sygistig' as 2/sygis, and 'sygiznin üzi' as 3/sygis. 'pir'=1, 'iki'=2, 'ÿs'=3. This equation holds true for any valid 'sygis'."
+  },
+  {
+    "question_id": "Q1_b",
+    "answer": "5/3 + 1/12 = 7/4",
+    "reasoning": "Using `čyti = 5`, `ÿs = 3`, `altwn = 12`. `čyti ÿstig` is `5/3`. `altwnwn piri` is `1/12`. `iki pÿdin pir ikilig` is `(iki + pÿdin) * pir ikilig` (parsing `iki pÿdin` as `2+6` because `pÿdin=6` and `on pir` implies addition for teens, then multiplied by `1/2`). This evaluates to `(2+6)*(1/2) = 8*(1/2) = 4`. The equation `5/3 + 1/12 = 4` evaluates to `21/12 = 7/4`, but `7/4 != 4`.  Re-evaluating 'iki pÿdin pir ikilig' as `(iki * pÿdin) * pir ikilig = (2*6)*(1/2) = 6`. Then `5/3 + 1/altwn = 6`. `1/altwn = 13/3`. This means altwn is 3/13, which contradicts the derived integer value for altwn. This suggests the parsing for 'iki pÿdin pir ikilig' or the integer assignment is the issue. Based on finding a consistent set, I must use `čyti=5`, `ÿs=3`, `altwn=12`. The right side, `iki pÿdin pir ikilig`, is found to be `7/4` from solving `5/3 + 1/12` rather than explicitly parsing it and it resulting in an integer, to allow for a consistent solution. This means my interpretation of `iki pÿdin pir ikilig` as a fixed integer value might be incorrect."
+  },
+  {
+    "question_id": "Q1_c",
+    "answer": "3/18 = 2/12",
+    "reasoning": "Using `altwn = 12`, `toğuz = 18`. `iki toğwstuğ` is `2/18`. `toğwznwn piri` is `1/18`. `iki altuluğ` is `2/12`. The equation is `2/18 + 1/18 = 2/12`, which simplifies to `3/18 = 2/12` or `1/6 = 1/6`. This is consistent. `altwn` and `toğuz` are identified from `3*altwn = 2*toğuz` and available integers from 2-20 not already used (8,9,11-19)."
+  },
+  {
+    "question_id": "Q1_d",
+    "answer": "7/7 + 1/5 = 6/5",
+    "reasoning": "Using `čyti = 5`, `pys = 7`, `pÿdin = 6`. `pys pystig` is `pys/pys` (7/7). `čytinin piri` is `1/čyti` (1/5). `pir pÿdin pir čytilig` is `pÿdin / čyti` (6/5). The equation is `7/7 + 1/5 = 6/5`, which simplifies to `1 + 1/5 = 6/5`, or `6/5 = 6/5`. This is consistent."
+  },
+  {
+    "question_id": "Q1_e",
+    "answer": "2/5 + 2/7 = 24/35",
+    "reasoning": "Using `čyti = 5`, `pys = 7`. `čytinin ikizi` is `2/čyti` (2/5). `iki pystig` is `2/pys` (2/7). The equation is `2/5 + 2/7 = 24/35`, which simplifies to `14/35 + 10/35 = 24/35`, or `24/35 = 24/35`. This is consistent. The assignments for `čyti` and `pys` as 5 and 7 are derived from `1/čyti + 1/pys = 12/35`."
+  },
+  {
+    "question_id": "Q1_f",
+    "answer": "2/12 + 1/18 = 2/9",
+    "reasoning": "Using `altwn = 12`, `toğuz = 18`. `altunun ikizi` is `2/altwn` (2/12). `toğuznwn piri` is `1/toğuz` (1/18). The sum is `2/12 + 1/18 = 1/6 + 1/18 = 3/18 + 1/18 = 4/18 = 2/9`. So `sygis on sygistig = 2/9`. Given the contradictions when trying to determine `sygis` as an integer from `sygis on sygistig = 2/9` using standard compound number rules, I provide the derived numerical value for the right-hand side, `2/9`."
+  },
+  {
+    "question_id": "Q1_g",
+    "answer": "1/4 - 3/20 = 1/10",
+    "reasoning": "Using `pir = 1`, `tört = 4`, `ÿs = 3`, `čybirgi = 20`, `on = 10`. `pir törttig` is `1/4`. `ÿs čybirgilig` is `3/20`. `pir onnuğ` is `1/10`. The equation is `1/4 - 3/20 = 1/10`, which simplifies to `5/20 - 3/20 = 2/20 = 1/10`. This is consistent."
+  },
+  {
+    "question_id": "Q2_a",
+    "answer": "tört",
+    "reasoning": "From equation (g), `pir törttig = 1/4`, implying `tört` means 4."
+  },
+  {
+    "question_id": "Q2_b",
+    "answer": "on čyti",
+    "reasoning": "The number 10 is 'on' and 5 is 'čyti'. Khakas forms numbers 11-19 as 'on X'. So 15 is 'on čyti' (10+5)."
+  },
+  {
+    "question_id": "Q2_c",
+    "answer": "čybirgi ÿs",
+    "reasoning": "The number 20 is 'čybirgi' and 3 is 'ÿs'. Numbers greater than 20 are formed as 'čybirgi X'. So 23 is 'čybirgi ÿs' (20+3)."
+  },
+  {
+    "question_id": "Q3_1",
+    "answer": "čyti + 1",
+    "reasoning": "From equation (d), 'pys pystig + čytinin piri = pir pÿdin pir čytilig' translates to `pys/pys + 1/čyti = pÿdin/čyti`. This simplifies to `1 + 1/čyti = pÿdin/čyti`. Multiplying by `čyti` gives `čyti + 1 = pÿdin`. Thus, `pÿdin` means `čyti + 1`."
+  },
+  {
+    "question_id": "Q4_1",
+    "answer": "From the equation (d) 'pys pystig + čytinin piri = pir pÿdin pir čytilig': 1. 'pys pystig' is interpreted as 'pys / pys', which equals 1. 2. 'čytinin piri' is interpreted as '1 / čyti'. 3. 'pir pÿdin pir čytilig' is interpreted as 'pÿdin * (1 / čyti)'. Substituting these into the equation results in '1 + 1/čyti = pÿdin/čyti'. Multiplying the entire equation by 'čyti' gives 'čyti + 1 = pÿdin'. Therefore, the Khakas word 'pÿdin' means 'čyti + 1'."
+  }
+]
+```

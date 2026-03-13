@@ -1,0 +1,145 @@
+Model: gemini-2.5-pro
+Generation Time: 137.41 seconds
+Timestamp: 2025-10-25 14:04:43
+================================================================================
+
+An analysis of the provided data reveals the underlying patterns needed to solve the problems.
+
+### Part G1: Analysis
+
+The table in G1 lists words alongside two numerical values, "Types" and "Tokens". I hypothesized that these terms correspond to standard definitions in linguistics and computer science:
+*   **Tokens**: The total number of characters (letters) in the word. This is equivalent to the word's length.
+*   **Types**: The number of unique characters (letters) in the word.
+
+Let's test this hypothesis with the provided examples:
+*   **rock**: Length is 4. The letters are r, o, c, k. All are unique. So, Tokens = 4, Types = 4. This matches the table.
+*   **paper**: Length is 5. The letters are p, a, p, e, r. The unique letters are p, a, e, r (4 of them). So, Tokens = 5, Types = 4. This also matches.
+*   **senselessness**: Length is 13. The letters are s, e, n, s, e, l, e, s, s, n, e, s, s. The unique letters are s, e, n, l (4 of them). So, Tokens = 13, Types = 4. This matches.
+
+The hypothesis holds for all given examples. I will now use this rule to fill in the missing cells.
+
+*   For **(a), (b) hemidemisemiquaver**:
+    *   Tokens (b) = length of "hemidemisemiquaver" = 18.
+    *   Types (a) = number of unique letters in "hemidemisemiquaver" (h, e, m, i, d, s, q, u, a, v, r) = 11.
+*   For **(c), (d) squeegee**:
+    *   Tokens (d) = length of "squeegee" = 8.
+    *   Types (c) = number of unique letters in "squeegee" (s, q, u, e, g) = 5.
+*   For **(e), (f)** where Tokens = 1:
+    *   A word with 1 token (letter) must also have 1 type. So, (f) = 1.
+    *   For (e), any one-letter English word works, such as "a" or "I". I'll choose "a".
+*   For **(g)** where Types = 3, Tokens = 3:
+    *   A 3-letter word with 3 unique letters. A simple word like "cat" works.
+*   For **(h)** where Types = 8, Tokens = 8:
+    *   An 8-letter word with 8 unique letters (no repeated letters). "computer" is a good example.
+*   For **(i)** where Types = 2, Tokens = 4:
+    *   A 4-letter word made of 2 unique letters. "noon" is an example.
+*   For **(j)** where Types = 4, Tokens = 7:
+    *   A 7-letter word with 4 unique letters. "bananas" (b, a, n, s) works.
+*   For **(k)** where Types = 13, Tokens = 13:
+    *   A 13-letter word with 13 unique letters. "troublemaking" works.
+
+### Part G2/G3: Analysis
+
+The task is to find the correct Shilha words, which are subsequences of the "CORRUPTED" strings. The "Types" and "Tokens" columns for the correct word are provided, giving us crucial constraints. By analyzing related pairs (singular/plural, masculine/feminine), I uncovered a system of morphological affixes attached to a base root.
+
+**Morphological Rules:**
+*   **Masculine Singular:** `a-` + ROOT
+*   **Masculine Plural:** `i-` + ROOT + `-n`
+*   **Feminine Singular:** `ta-` + ROOT + `-t`
+*   **Feminine Plural:** `ti-` + ROOT + `-in`
+
+**Derived Roots:**
+*   **bovine:** from `AFUNAS` (ox) and `IFUNASN` (oxen), the root is **funas**. This is confirmed by `TAFUNAST` (cow) and `TIFUNASIN` (cows).
+*   **chicken:** from `AFULUS` (male chicken) and `IFULUSN` (male chickens), the root is **fulus**. Confirmed by `TAFULUST` (female chicken) and `TIFULUSIN` (female chickens).
+*   **pigeon:** from `ATBIR` (male pigeon) and `ITBIRN` (male pigeons), the root is **tbir**. Confirmed by `TATBIRT` and `TITBIRIN`.
+*   **speaker of Shilha:** from `ASHLHIY` (male speaker) and `TASHLHIYT` (female speaker), the root is **shlhiy**. The masculine plural is a special case of a "broken plural" (`ISHLTRYN`), where the root itself changes, a known feature in Afro-Asiatic languages.
+*   **mountain:** from `ADRAR` (masculine mountain) and `IDRARN` (masculine mountains), the root is **drar**. Confirmed by `TADRART` and `TIDRARIN`.
+
+Using these rules and roots, I can determine the Shilha translations for the English phrases in the final part of the problem.
+
+### Final Answers
+
+```json
+[
+  {
+    "question_id": "G1_1",
+    "answer": "11",
+    "reasoning": "The 'Types' value is the number of unique letters in the word. The word 'hemidemisemiquaver' has 11 unique letters: h, e, m, i, d, s, q, u, a, v, r."
+  },
+  {
+    "question_id": "G1_2",
+    "answer": "18",
+    "reasoning": "The 'Tokens' value is the total number of letters in the word (length). The word 'hemidemisemiquaver' is 18 letters long."
+  },
+  {
+    "question_id": "G1_3",
+    "answer": "5",
+    "reasoning": "The 'Types' value is the number of unique letters. The word 'squeegee' has 5 unique letters: s, q, u, e, g."
+  },
+  {
+    "question_id": "G1_4",
+    "answer": "8",
+    "reasoning": "The 'Tokens' value is the length of the word. The word 'squeegee' is 8 letters long."
+  },
+  {
+    "question_id": "G1_5",
+    "answer": "a",
+    "reasoning": "The word must have 1 Token (length 1) and 1 Type (1 unique letter). The English word 'a' fits these criteria."
+  },
+  {
+    "question_id": "G1_6",
+    "answer": "1",
+    "reasoning": "A word with 1 letter (Token) must have exactly 1 unique letter (Type)."
+  },
+  {
+    "question_id": "G1_7",
+    "answer": "cat",
+    "reasoning": "The word must have 3 Tokens (length 3) and 3 Types (3 unique letters), meaning no repeated letters. The word 'cat' fits this."
+  },
+  {
+    "question_id": "G1_8",
+    "answer": "computer",
+    "reasoning": "The word must have 8 Tokens (length 8) and 8 Types (8 unique letters). The word 'computer' fits this."
+  },
+  {
+    "question_id": "G1_9",
+    "answer": "noon",
+    "reasoning": "The word must have 4 Tokens (length 4) and 2 Types (2 unique letters). The word 'noon' (letters 'n', 'o') fits this."
+  },
+  {
+    "question_id": "G1_10",
+    "answer": "bananas",
+    "reasoning": "The word must have 7 Tokens (length 7) and 4 Types (4 unique letters). The word 'bananas' (letters 'b', 'a', 'n', 's') fits this."
+  },
+  {
+    "question_id": "G1_11",
+    "answer": "troublemaking",
+    "reasoning": "The word must have 13 Tokens (length 13) and 13 Types (13 unique letters). The word 'troublemaking' fits this."
+  },
+  {
+    "question_id": "G2_1",
+    "answer": "TATBIRT",
+    "reasoning": "This is the feminine singular for 'pigeon'. The root for pigeon is 'tbir'. The feminine singular pattern is ta-ROOT-t, resulting in TATBIRT."
+  },
+  {
+    "question_id": "G2_2",
+    "answer": "ATBIR",
+    "reasoning": "This is the masculine singular for 'pigeon'. The root is 'tbir'. The masculine singular pattern is a-ROOT, resulting in ATBIR."
+  },
+  {
+    "question_id": "G2_3",
+    "answer": "TAFUNAST",
+    "reasoning": "This is the feminine singular for 'bovine'. The root for bovine is 'funas'. The feminine singular pattern is ta-ROOT-t, resulting in TAFUNAST."
+  },
+  {
+    "question_id": "G2_4",
+    "answer": "ADRAR",
+    "reasoning": "This is the masculine singular for 'mountain'. The root is 'drar'. The masculine singular pattern is a-ROOT, resulting in ADRAR."
+  },
+  {
+    "question_id": "G2_5",
+    "answer": "TIDRARIN",
+    "reasoning": "This is the feminine plural for 'mountain'. The root is 'drar'. The feminine plural pattern is ti-ROOT-in, resulting in TIDRARIN."
+  }
+]
+```

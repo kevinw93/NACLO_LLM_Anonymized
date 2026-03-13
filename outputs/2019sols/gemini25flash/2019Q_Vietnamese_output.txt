@@ -1,0 +1,359 @@
+Model: gemini-2.5-flash
+Generation Time: 181.57 seconds
+Timestamp: 2025-11-17 17:05:17
+================================================================================
+
+The problem requires me to analyze couplets from "The Tale of Kieu" to deduce rules of the `lục bát` poetic meter, identify corrupted couplets and specific corrupted words, and then apply these rules to new couplets and a word choice exercise. I must show my reasoning step-by-step and output the final answers in a JSON array.
+
+### Part 1: Initial Analysis and Rule Deduction
+
+The core task is to deduce the rules of `lục bát` from the provided authentic couplets (1-5) and the corrupted examples (1a, 1b). The problem states that `lục bát` means 'six-eight', strongly suggesting a syllable count pattern.
+
+**Step 1: Syllable Count**
+I counted the syllables in the authentic couplets 1-5:
+1.  Line 1: "Trăm năm trong cõi người ta" (6 syllables)
+    Line 2: "Chữ tài chữ mệnh khéo là ghét nhau" (8 syllables)
+This confirms the 'six-eight' pattern.
+**Rule 1: Syllable Count.** The first line of a couplet has 6 syllables, and the second line has 8 syllables. (Verified across all examples and new couplets 6-11, which all adhere to this initial count).
+
+**Step 2: Tone Classification (for Q1)**
+The problem introduces Vietnamese tones and diacritics: `á, à, ả, ạ, ã` for `sắc, huyền, hỏi, nặng, ngã`, and no diacritic for `ngang`. It also states there are four "sharp tones" and two "flat tones".
+Let's analyze the corrupted examples 1a and 1b:
+*   Original Couplet 1: "...cõi người ta," (`cõi` has `hỏi` tone, diacritic `ả`)
+*   Corrupted Couplet 1a: "...dài người ta," (`dài` has `huyền` tone, diacritic `à`) - *Does not follow `lục bát` rules.*
+*   Corrupted Couplet 1b: "...cá người ta," (`cá` has `sắc` tone, diacritic `á`) - *Still follows `lục bát` rules.*
+
+This comparison is crucial. Replacing `cõi` (hỏi) with `dài` (huyền) breaks a rule, but replacing it with `cá` (sắc) does not. This implies `hỏi` and `sắc` belong to the same tone group, and `huyền` belongs to a different one.
+Given the 4 sharp / 2 flat split, and common linguistic classifications for Vietnamese (Northern dialect):
+*   If `hỏi` and `sắc` are in the "sharp" group, and `huyền` is in the "flat" group.
+*   We need 4 sharp tones: `sắc, hỏi, ngã, nặng`.
+*   We need 2 flat tones: `ngang, huyền`.
+This grouping is consistent with the corruption examples.
+**Q1 Answer:**
+Sharp tones: sắc, hỏi, ngã, nặng
+Flat tones: ngang, huyền
+
+**Step 3: Further Rule Deduction from Authentic Couplets (1-5) and Corruption Examples (1a, 1b)**
+
+Using the established tone groups (Sharp: sắc, hỏi, ngã, nặng; Flat: ngang, huyền):
+
+*   **Rule 2: S4_L1 Tone restriction.** The 4th syllable of the 6-syllable line (S4_L1) for couplet 1 is `cõi` (hỏi, sharp). In 1a, it becomes `dài` (huyền, flat), which is corrupted. In 1b, it becomes `cá` (sắc, sharp), which is not corrupted. This implies `huyền` tone is forbidden for S4_L1.
+    Checking authentic couplets 1-5 for S4_L1 tones: `cõi` (hỏi), `ả` (hỏi), `hơi` (ngang), `cũng` (ngã), `gỡ` (ngã). None of these are `huyền`.
+    **Rule 2:** The 4th syllable of the 6-syllable line (S4_L1) must *not* have a `huyền` tone.
+
+*   **Rule 3: S8_L2 Tone restriction.** The 8th syllable of the 8-syllable line (S8_L2, the last word of the couplet) for authentic couplets 1-5: `nhau` (ngang), `Vân` (ngang), `vàng` (ngang), `xưa` (ngang), `không` (ngang). All are `ngang` tone.
+    **Rule 3:** The 8th syllable of the 8-syllable line (S8_L2) must have a `ngang` tone.
+
+*   **Rule 4: S6_L1 & S6_L2 Tone Group Match.** The 6th syllable of the 6-syllable line (S6_L1) and the 6th syllable of the 8-syllable line (S6_L2) for authentic couplets 1-5:
+    1. `ta` (ngang, flat) / `là` (huyền, flat) - Match.
+    2. `nga` (ngang, flat) / `là` (huyền, flat) - Match.
+    3. `quen` (ngang, flat) / `chen` (ngang, flat) - Match.
+    4. `cười` (huyền, flat) / `người` (huyền, flat) - Match.
+    5. `chi` (ngang, flat) / `duyên` (huyền, flat) - Match.
+    **Rule 4:** The 6th syllable of L1 (S6_L1) and the 6th syllable of L2 (S6_L2) must belong to the same tone group (flat or sharp).
+
+*   **Rule 5: S6_L1 & S6_L2 Rhyme.** This is usually a strong `lục bát` rule, but `chi` (i) and `duyên` (uyên) from couplet 5 make it hard to judge without knowing Vietnamese phonology. However, the problem states we can identify corruption without knowing Vietnamese. For Q2, some clear non-rhymes will be treated as violations.
+    **Rule 5:** The 6th syllable of L1 (S6_L1) must rhyme with the 6th syllable of L2 (S6_L2).
+
+*   **Rule 6: S4_L2 Tone restriction.** The 4th syllable of the 8-syllable line (S4_L2) for authentic couplets 1-5: `mệnh` (nặng, sharp), `chị` (hỏi, sharp), `biếc` (sắc, sharp), `mắt` (sắc, sharp), `có` (sắc, sharp). All are sharp tones.
+    **Rule 6:** The 4th syllable of the 8-syllable line (S4_L2) must be a `sharp` tone.
+
+*   **Rule 7: S6_L1 & S8_L2 Tone Group Match.** S6_L1 and S8_L2 for authentic couplets 1-5:
+    1. `ta` (ngang, flat) / `nhau` (ngang, flat) - Match.
+    2. `nga` (ngang, flat) / `Vân` (ngang, flat) - Match.
+    3. `quen` (ngang, flat) / `vàng` (ngang, flat) - Match.
+    4. `cười` (huyền, flat) / `xưa` (ngang, flat) - Match.
+    5. `chi` (ngang, flat) / `không` (ngang, flat) - Match.
+    **Rule 7:** The 6th syllable of L1 (S6_L1) and the 8th syllable of L2 (S8_L2) must belong to the same tone group (flat or sharp).
+
+*   **Rule 8: S2_L1 Tone Group.** The 2nd syllable of the 6-syllable line (S2_L1) for authentic couplets 1-5: `năm` (ngang, flat), `lòng` (huyền, flat), `năm` (ngang, flat), `rằng` (huyền, flat), `đâu` (ngang, flat). All are flat tones.
+    **Rule 8:** The 2nd syllable of L1 (S2_L1) must have a `flat` tone.
+
+**Summary of `lục bát` Rules:**
+1.  **Syllable Count:** L1=6 syllables, L2=8 syllables.
+2.  **S2_L1 Tone Group:** S2_L1 must have a `flat` tone.
+3.  **S4_L1 Tone Restriction:** S4_L1 must *not* have a `huyền` tone.
+4.  **S6_L1 & S6_L2 Tone Group Match:** S6_L1 and S6_L2 must belong to the same tone group.
+5.  **S6_L1 & S6_L2 Rhyme:** S6_L1 must rhyme with S6_L2. (For non-Vietnamese speakers, obvious non-rhymes are violations).
+6.  **S6_L1 & S8_L2 Tone Group Match:** S6_L1 and S8_L2 must belong to the same tone group.
+7.  **S4_L2 Tone Restriction:** S4_L2 must be a `sharp` tone.
+8.  **S8_L2 Tone Restriction:** S8_L2 must have a `ngang` tone.
+
+### Part 2: Q2 - Authenticity and Corrupted Words
+
+I will apply the 8 rules to couplets 6-11. The problem states "Only two of them have remained uncorrupted—the other four have had exactly two words changed or removed". For corrupted couplets, I must list two words.
+
+**Couplet 6:**
+L1: Vâng trình hội **chùa** xem **tường**,
+L2: Mà sao trong sổ **đoạn** sân có **tên**.
+*   Rule 1 (Syllable Count): OK (6-8).
+*   Rule 2 (S2_L1 `trình`): `trình` (ngang, flat). OK.
+*   Rule 3 (S4_L1 `chùa`): `chùa` (huyền, flat). **FAIL.** (`chùa` is `huyền` tone).
+*   Rule 4 (S6_L1 `tường` (huyền, flat) / S6_L2 `sân` (ngang, flat) Tone Group): OK (both flat).
+*   Rule 5 (S6_L1 `tường` / S6_L2 `sân` Rhyme): `tường` (ương) / `sân` (ân). **FAIL.** (No obvious rhyme).
+*   Rule 6 (S6_L1 `tường` (flat) / S8_L2 `tên` (ngang, flat) Tone Group): OK (both flat).
+*   Rule 7 (S4_L2 `đoạn`): `đoạn` (nặng, sharp). OK.
+*   Rule 8 (S8_L2 `tên`): `tên` (ngang, flat). OK.
+**Verdict: Corrupted.** Two words identified as failing rules: `chùa` (violates Rule 3) and `tường` (involved in rhyme failure, Rule 5).
+Corrupted words: `chùa`, `tường`.
+
+**Couplet 7:**
+L1: Âu đành quả **tôn** nhân **duyên**,
+L2: Cùng người một **hội**, một **thuyền** đâu **ngái**!
+*   Rule 1 (Syllable Count): OK (6-8).
+*   Rule 2 (S2_L1 `đành`): `đành` (huyền, flat). OK.
+*   Rule 3 (S4_L1 `tôn`): `tôn` (ngang, flat). OK.
+*   Rule 4 (S6_L1 `duyên` (huyền, flat) / S6_L2 `thuyền` (huyền, flat) Tone Group): OK (both flat).
+*   Rule 5 (S6_L1 `duyên` / S6_L2 `thuyền` Rhyme): `duyên` (uyên) / `thuyền` (uyên). OK (rhyme).
+*   Rule 6 (S6_L1 `duyên` (huyền, flat) / S8_L2 `ngái` (sắc, sharp) Tone Group): **FAIL.** (Flat vs. Sharp).
+*   Rule 7 (S4_L2 `hội`): `hội` (hỏi, sharp). OK.
+*   Rule 8 (S8_L2 `ngái`): `ngái` (sắc, sharp). **FAIL.** (`ngái` is `sắc` tone, not `ngang`).
+**Verdict: Corrupted.** Two words identified as failing rules: `ngái` (violates Rule 8 and contributes to Rule 6 failure) and `duyên` (contributes to Rule 6 failure).
+Corrupted words: `ngái`, `duyên`.
+
+**Couplet 8:**
+L1: Thưa rằng: Chút **phận** ngây **thơ**,
+L2: Dưỡng sinh đôi **tiên** tóc tơ chưa **đền**
+*   Rule 1 (Syllable Count): OK (6-8).
+*   Rule 2 (S2_L1 `rằng`): `rằng` (huyền, flat). OK.
+*   Rule 3 (S4_L1 `phận`): `phận` (nặng, sharp). OK.
+*   Rule 4 (S6_L1 `thơ` (ngang, flat) / S6_L2 `tơ` (ngang, flat) Tone Group): OK (both flat).
+*   Rule 5 (S6_L1 `thơ` / S6_L2 `tơ` Rhyme): `thơ` (ơ) / `tơ` (ơ). OK (rhyme).
+*   Rule 6 (S6_L1 `thơ` (ngang, flat) / S8_L2 `đền` (huyền, flat) Tone Group): OK (both flat).
+*   Rule 7 (S4_L2 `tiên`): `tiên` (ngang, flat). **FAIL.** (`tiên` is `flat` tone, not `sharp`).
+*   Rule 8 (S8_L2 `đền`): `đền` (huyền, flat). **FAIL.** (`đền` is `huyền` tone, not `ngang`).
+**Verdict: Corrupted.** Two words identified as failing rules: `đền` (violates Rule 8) and `tiên` (violates Rule 7).
+Corrupted words: `đền`, `tiên`.
+
+**Couplet 9:**
+L1: Ngoài song thỏ **thẻ** oanh **vàng**,
+L2: Nách tường bông **liễu** bay ngang trước **mành**.
+*   Rule 1 (Syllable Count): OK (6-8).
+*   Rule 2 (S2_L1 `song`): `song` (ngang, flat). OK.
+*   Rule 3 (S4_L1 `thẻ`): `thẻ` (hỏi, sharp). OK.
+*   Rule 4 (S6_L1 `vàng` (ngang, flat) / S6_L2 `ngang` (ngang, flat) Tone Group): OK (both flat).
+*   Rule 5 (S6_L1 `vàng` / S6_L2 `ngang` Rhyme): `vàng` (ang) / `ngang` (ang). OK (rhyme).
+*   Rule 6 (S6_L1 `vàng` (ngang, flat) / S8_L2 `mành` (ngang, flat) Tone Group): OK (both flat).
+*   Rule 7 (S4_L2 `liễu`): `liễu` (ngã, sharp). OK.
+*   Rule 8 (S8_L2 `mành`): `mành` (ngang, flat). OK.
+**Verdict: Authentic.**
+
+**Couplet 10:**
+L1: Chàng Kim từ **lại** thư **song**,
+L2: Nỗi nàng canh **cánh** bên lòng biếng **khuây**.
+*   Rule 1 (Syllable Count): OK (6-8).
+*   Rule 2 (S2_L1 `Kim`): `Kim` (ngang, flat). OK.
+*   Rule 3 (S4_L1 `lại`): `lại` (nặng, sharp). OK.
+*   Rule 4 (S6_L1 `song` (ngang, flat) / S6_L2 `lòng` (huyền, flat) Tone Group): OK (both flat).
+*   Rule 5 (S6_L1 `song` / S6_L2 `lòng` Rhyme): `song` (ong) / `lòng` (ong). OK (rhyme).
+*   Rule 6 (S6_L1 `song` (ngang, flat) / S8_L2 `khuây` (ngang, flat) Tone Group): OK (both flat).
+*   Rule 7 (S4_L2 `cánh`): `cánh` (sắc, sharp). OK.
+*   Rule 8 (S8_L2 `khuây`): `khuây` (ngang, flat). OK.
+**Verdict: Authentic.**
+
+**Couplet 11:**
+L1: Mành Tương phất **phất** gió **truyên**,
+L2: Hương gây mùi **nhớ**, trà khan **giọng**.
+*   Rule 1 (Syllable Count): OK (6-8).
+*   Rule 2 (S2_L1 `Tương`): `Tương` (ngang, flat). OK.
+*   Rule 3 (S4_L1 `phất`): `phất` (sắc, sharp). OK.
+*   Rule 4 (S6_L1 `truyên` (ngang, flat) / S6_L2 `nhớ` (ngã, sharp) Tone Group): **FAIL.** (Flat vs. Sharp).
+*   Rule 5 (S6_L1 `truyên` / S6_L2 `nhớ` Rhyme): `truyên` (uyên) / `nhớ` (ơ). **FAIL.** (No rhyme).
+*   Rule 6 (S6_L1 `truyên` (ngang, flat) / S8_L2 `giọng` (nặng, sharp) Tone Group): **FAIL.** (Flat vs. Sharp).
+*   Rule 7 (S4_L2 `nhớ`): `nhớ` (ngã, sharp). OK.
+*   Rule 8 (S8_L2 `giọng`): `giọng` (nặng, sharp). **FAIL.** (`giọng` is `nặng` tone, not `ngang`).
+**Verdict: Corrupted.** Many violations. Picking two distinct words that fail rules directly: `truyên` (fails Rule 4, 5, 6) and `giọng` (fails Rule 6, 8).
+Corrupted words: `truyên`, `giọng`.
+
+### Part 3: Q3 - Word Choice
+
+Couplet 12: Nhẫn (ở/từ) (quán/rap) (khách/tươi) lân (la/khác), Tuần trăng thấm thoắt nay (đà/ách) thèm hai.
+Syllable positions for choices:
+*   (ở/từ) = S2_L1
+*   (quán/rap) = S3_L1
+*   (khách/tươi) = S4_L1
+*   (la/khác) = S6_L1
+*   (đà/ách) = S6_L2
+Fixed words/tones: S8_L2 = `hai` (ngang, flat).
+
+**Q3.a: (ở/từ) at S2_L1**
+*   `ở` (hỏi, sharp)
+*   `từ` (huyền, flat)
+*   Rule 2 (S2_L1 Tone Group): S2_L1 must be a `flat` tone.
+*   Only `từ` (flat) satisfies this.
+Answer: `từ`
+
+**Q3.b: (quán/rap) at S3_L1**
+*   `quán` (sắc, sharp)
+*   `rap` (ngang, flat)
+*   No specific rule for S3_L1 tone/tone group. Authentic examples show mixed tones (`trong` (ngang, flat), `hai` (ngang, flat), `hơi` (ngang, flat), `Chị` (hỏi, sharp), `gặp` (nặng, sharp)). Both options are valid.
+Answer: `BOTH`
+
+**Q3.c: (khách/tươi) at S4_L1**
+*   `khách` (sắc, sharp)
+*   `tươi` (ngang, flat)
+*   Rule 3 (S4_L1 Tone Restriction): S4_L1 must *not* be `huyền` tone.
+*   Both `khách` (sắc) and `tươi` (ngang) are not `huyền` tone. Both are valid.
+Answer: `BOTH`
+
+**Q3.d: (la/khác) at S6_L1**
+*   `la` (ngang, flat)
+*   `khác` (sắc, sharp)
+*   This word interacts with S6_L2 (`đà`/`ách`) and S8_L2 (`hai`, ngang, flat).
+*   Rule 6 (S6_L1 & S8_L2 Tone Group Match): S6_L1 must have same tone group as S8_L2 (`hai`, flat).
+*   If S6_L1 is `la` (flat): `la` (flat) vs `hai` (flat). OK.
+*   If S6_L1 is `khác` (sharp): `khác` (sharp) vs `hai` (flat). **FAIL.**
+*   So, only `la` is possible for S6_L1.
+Answer: `la`
+
+**Q3.e: (đà/ách) at S6_L2**
+*   `đà` (huyền, flat)
+*   `ách` (sắc, sharp)
+*   This word interacts with S6_L1 (`la`, ngang, flat, from Q3.d).
+*   Rule 4 (S6_L1 & S6_L2 Tone Group Match): S6_L1 (`la`, flat) and S6_L2 must belong to the same tone group.
+*   If S6_L2 is `đà` (flat): `la` (flat) vs `đà` (flat). OK.
+*   If S6_L2 is `ách` (sharp): `la` (flat) vs `ách` (sharp). **FAIL.**
+*   So, only `đà` is possible for S6_L2.
+Answer: `đà`
+
+### Part 4: Q4 - Observations about `lục bát` structure
+
+This section will list the 8 rules deduced above.
+
+---
+### Final Answer JSON
+
+```json
+[
+  {
+    "question_id": "Q1_1",
+    "answer": "sắc, hỏi, ngã, nặng",
+    "reasoning": "Deduction from the properties of corrupted couplets 1a and 1b: 'cõi' (hỏi) was replaced by 'dài' (huyền) and corrupted the couplet, but replaced by 'cá' (sắc) did not. This implies 'hỏi' and 'sắc' are in one group, and 'huyền' in another. Given there are 4 sharp and 2 flat tones, and general linguistic knowledge, sắc, hỏi, ngã, nặng form the sharp group."
+  },
+  {
+    "question_id": "Q1_2",
+    "answer": "ngang, huyền",
+    "reasoning": "Deduction from the properties of corrupted couplets 1a and 1b: 'cõi' (hỏi) was replaced by 'dài' (huyền) and corrupted the couplet, but replaced by 'cá' (sắc) did not. This implies 'hỏi' and 'sắc' are in one group, and 'huyền' in another. Given there are 4 sharp and 2 flat tones, and general linguistic knowledge, ngang and huyền form the flat group."
+  },
+  {
+    "question_id": "Q2_6_status",
+    "answer": "corrupted",
+    "reasoning": "Couplet 6 violates Rule 3 (S4_L1 'chùa' is huyền tone) and Rule 5 (S6_L1 'tường' and S6_L2 'sân' do not rhyme)."
+  },
+  {
+    "question_id": "Q2_6_1",
+    "answer": "chùa",
+    "reasoning": "The word 'chùa' (S4_L1) has a huyền tone, which violates Rule 3 (S4_L1 must not have a huyền tone)."
+  },
+  {
+    "question_id": "Q2_6_2",
+    "answer": "tường",
+    "reasoning": "The word 'tường' (S6_L1) does not rhyme with 'sân' (S6_L2), violating Rule 5. 'tường' is chosen as the first word in the rhyming pair that fails."
+  },
+  {
+    "question_id": "Q2_7_status",
+    "answer": "corrupted",
+    "reasoning": "Couplet 7 violates Rule 8 (S8_L2 'ngái' is sắc tone instead of ngang) and Rule 6 (S6_L1 'duyên' (flat) and S8_L2 'ngái' (sharp) have mismatched tone groups)."
+  },
+  {
+    "question_id": "Q2_7_1",
+    "answer": "ngái",
+    "reasoning": "The word 'ngái' (S8_L2) has a sắc tone, violating Rule 8 (S8_L2 must have a ngang tone). It also creates a tone group mismatch for Rule 6."
+  },
+  {
+    "question_id": "Q2_7_2",
+    "answer": "duyên",
+    "reasoning": "The word 'duyên' (S6_L1, flat tone) creates a tone group mismatch with 'ngái' (S8_L2, sharp tone), violating Rule 6 (S6_L1 and S8_L2 must have the same tone group)."
+  },
+  {
+    "question_id": "Q2_8_status",
+    "answer": "corrupted",
+    "reasoning": "Couplet 8 violates Rule 8 (S8_L2 'đền' is huyền tone instead of ngang) and Rule 7 (S4_L2 'tiên' is flat tone instead of sharp)."
+  },
+  {
+    "question_id": "Q2_8_1",
+    "answer": "đền",
+    "reasoning": "The word 'đền' (S8_L2) has a huyền tone, violating Rule 8 (S8_L2 must have a ngang tone)."
+  },
+  {
+    "question_id": "Q2_8_2",
+    "answer": "tiên",
+    "reasoning": "The word 'tiên' (S4_L2) has a ngang tone (flat group), violating Rule 7 (S4_L2 must be a sharp tone)."
+  },
+  {
+    "question_id": "Q2_9_status",
+    "answer": "authentic",
+    "reasoning": "Couplet 9 passes all 8 identified rules of lục bát."
+  },
+  {
+    "question_id": "Q2_9_1",
+    "answer": "",
+    "reasoning": "This couplet is authentic, so no corrupted words are identified."
+  },
+  {
+    "question_id": "Q2_9_2",
+    "answer": "",
+    "reasoning": "This couplet is authentic, so no corrupted words are identified."
+  },
+  {
+    "question_id": "Q2_10_status",
+    "answer": "authentic",
+    "reasoning": "Couplet 10 passes all 8 identified rules of lục bát."
+  },
+  {
+    "question_id": "Q2_10_1",
+    "answer": "",
+    "reasoning": "This couplet is authentic, so no corrupted words are identified."
+  },
+  {
+    "question_id": "Q2_10_2",
+    "answer": "",
+    "reasoning": "This couplet is authentic, so no corrupted words are identified."
+  },
+  {
+    "question_id": "Q2_11_status",
+    "answer": "corrupted",
+    "reasoning": "Couplet 11 violates Rule 4 (S6_L1 'truyên' (flat) and S6_L2 'nhớ' (sharp) have mismatched tone groups) and Rule 8 (S8_L2 'giọng' is nặng tone instead of ngang)."
+  },
+  {
+    "question_id": "Q2_11_1",
+    "answer": "truyên",
+    "reasoning": "The word 'truyên' (S6_L1, flat tone) creates a tone group mismatch with 'nhớ' (S6_L2, sharp tone), violating Rule 4. It also creates a tone group mismatch with 'giọng' (S8_L2) for Rule 6."
+  },
+  {
+    "question_id": "Q2_11_2",
+    "answer": "giọng",
+    "reasoning": "The word 'giọng' (S8_L2) has a nặng tone, violating Rule 8 (S8_L2 must have a ngang tone). It also creates a tone group mismatch with 'truyên' (S6_L1) for Rule 6."
+  },
+  {
+    "question_id": "Q3_a",
+    "answer": "từ",
+    "reasoning": "For S2_L1: 'ở' (sharp) vs 'từ' (flat). Rule 2 states that S2_L1 must have a flat tone. Thus, 'từ' is the correct choice."
+  },
+  {
+    "question_id": "Q3_b",
+    "answer": "BOTH",
+    "reasoning": "For S3_L1: 'quán' (sharp) vs 'rap' (flat). There is no specific rule dictating the tone group for S3_L1. Both options are valid."
+  },
+  {
+    "question_id": "Q3_c",
+    "answer": "BOTH",
+    "reasoning": "For S4_L1: 'khách' (sharp) vs 'tươi' (flat). Rule 3 states that S4_L1 must not be a huyền tone. Both 'khách' (sắc) and 'tươi' (ngang) are not huyền. Both options are valid."
+  },
+  {
+    "question_id": "Q3_d",
+    "answer": "la",
+    "reasoning": "For S6_L1: 'la' (flat) vs 'khác' (sharp). S8_L2 is 'hai' (ngang, flat). Rule 6 states that S6_L1 and S8_L2 must belong to the same tone group. Only 'la' (flat) matches 'hai' (flat). 'khác' (sharp) would violate this rule."
+  },
+  {
+    "question_id": "Q3_e",
+    "answer": "đà",
+    "reasoning": "For S6_L2: 'đà' (flat) vs 'ách' (sharp). S6_L1 is 'la' (flat, from Q3.d). Rule 4 states that S6_L1 and S6_L2 must belong to the same tone group. Only 'đà' (flat) matches 'la' (flat). 'ách' (sharp) would violate this rule."
+  },
+  {
+    "question_id": "Q4_1",
+    "answer": "Lục bát couplets consist of a 6-syllable line (L1) followed by an 8-syllable line (L2). Specific tonal and rhyming patterns govern the structure:\n1.  Syllable Count: L1 has 6 syllables, L2 has 8 syllables.\n2.  S2_L1 Tone Group: The 2nd syllable of L1 must have a flat tone.\n3.  S4_L1 Tone Restriction: The 4th syllable of L1 must not have a huyền tone.\n4.  S6_L1 & S6_L2 Tone Group Match: The 6th syllable of L1 (S6_L1) and the 6th syllable of L2 (S6_L2) must belong to the same tone group (flat or sharp).\n5.  S6_L1 & S6_L2 Rhyme: S6_L1 must rhyme with S6_L2.\n6.  S6_L1 & S8_L2 Tone Group Match: S6_L1 and the 8th syllable of L2 (S8_L2) must belong to the same tone group.\n7.  S4_L2 Tone Restriction: The 4th syllable of L2 (S4_L2) must be a sharp tone.\n8.  S8_L2 Tone Restriction: The 8th syllable of L2 (S8_L2) must have a ngang tone.",
+    "reasoning": "These rules were deduced by analyzing the syllable counts, tone groups (sharp: sắc, hỏi, ngã, nặng; flat: ngang, huyền), and specific tone patterns of corresponding syllables in the authentic couplets (1-5) and by observing which changes resulted in corrupted versus uncorrupted couplets (1a, 1b)."
+  }
+]
+```

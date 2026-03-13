@@ -1,0 +1,47 @@
+[
+  {
+    "question_id": "G1_a",
+    "answer": "2",
+    "reasoning": "In a 3x3 magic square using digits 1-9, the magic constant (sum of rows, columns, diagonals) is 15. The given number is 9. The center cell (d) is always 5. The cell g (9+5+g=15) is 1. With d=5 and g=1, and knowing a+b=6, a+h=10, b+f=10, f+h=14, c+e=10, a+c+f=15, b+e+h=15, the unique solution for the magic square is found. For 'a', the value is 2."
+  },
+  {
+    "question_id": "G1_b",
+    "answer": "4",
+    "reasoning": "Following the deduction for G1_a, for 'b', the value is 4."
+  },
+  {
+    "question_id": "G1_c",
+    "answer": "7",
+    "reasoning": "Following the deduction for G1_a, for 'c', the value is 7."
+  },
+  {
+    "question_id": "G1_d",
+    "answer": "5",
+    "reasoning": "For a 3x3 magic square with digits 1-9, the central cell 'd' is always 5."
+  },
+  {
+    "question_id": "G1_e",
+    "answer": "3",
+    "reasoning": "Following the deduction for G1_a, for 'e', the value is 3."
+  },
+  {
+    "question_id": "G1_f",
+    "answer": "6",
+    "reasoning": "Following the deduction for G1_a, for 'f', the value is 6."
+  },
+  {
+    "question_id": "G1_g",
+    "answer": "1",
+    "reasoning": "In the magic square, the sum of the second column (9 + d + g) must be 15. Since d=5, 9 + 5 + g = 15 => 14 + g = 15 => g=1."
+  },
+  {
+    "question_id": "G1_h",
+    "answer": "8",
+    "reasoning": "Following the deduction for G1_a, for 'h', the value is 8."
+  },
+  {
+    "question_id": "G2",
+    "answer": "qula malruk yuinaat qula akimiaq",
+    "reasoning": "The 1-Diagonal (top left cell to bottom right cell, shaded) consists of cells (a), (d), (h). From G1, these values are a=2, d=5, h=8. The number formed is 258. The hint for 294 (yuinaat qula cetaman qula cetaman) implies a base-20 system: 294 = (14 * 20) + 14. So, the structure is [X] yuinaat [Y], where Y < 20. We also deduce: qula=10, cetaman=4, talliman=5, arvinlegen=6. By common number word patterns and fitting to the solved magic square digits, we deduce: atauciq=1, malruk=2, pingayun=3, malrunglegen=7, akimiaq=8. For 258: 258 = (12 * 20) + 18. Therefore, X=12 and Y=18. Converting to Yup'ik: 12 = 10 + 2 = qula malruk. 18 = 10 + 8 = qula akimiaq. So, 258 in Yup'ik is 'qula malruk yuinaat qula akimiaq'."
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "question_id": "N1",
+    "answer": "TruthBot can now combine facts from multiple items in the True List and substitute equivalent terms or phrases that appear in other facts in the list.",
+    "reasoning": "Looking at the examples, statement (2) combines two facts (Senators play in Ottawa + Ottawa is capital), statement (3) substitutes '4' with '2+2', and statement (5) rephrases a fact. This shows TruthBot can derive new true statements through combination and substitution."
+  },
+  {
+    "question_id": "N2",
+    "answer": "It varies. Simple standalone facts produce 1-2 new statements. Facts containing terms that appear in multiple existing statements produce many more (potentially 10+ new statements), because the new terms can be substituted into all statements containing related concepts.",
+    "reasoning": "The number depends on how many connections the new statement has with existing facts. A fact like 'Ruth has 4 siblings' produces few new statements, while 'Ottawa is the capital city of Canada' enables substitution of 'Ottawa' or 'capital city of Canada' in multiple existing statements."
+  },
+  {
+    "question_id": "N3_a",
+    "answer": "Ruth has 2 + 2 siblings.",
+    "reasoning": "Since '2 + 2 = 4' is in the True List, TruthBot can substitute '4' with '2 + 2' in the new statement 'Ruth has 4 siblings.'"
+  },
+  {
+    "question_id": "N3_b",
+    "answer": "Ruth knows Ottawa.",
+    "reasoning": "Since 'Ottawa is the capital city of Canada' is in the True List, TruthBot can substitute 'the capital city of Canada' with 'Ottawa'."
+  },
+  {
+    "question_id": "N3_c",
+    "answer": "Ruth prefers the Washington Capitals to the Senators who play home games in the capital city of Canada.",
+    "reasoning": "TruthBot can substitute 'Ottawa' with 'the capital city of Canada' since that equivalence is in the True List."
+  },
+  {
+    "question_id": "N3_d",
+    "answer": "Ruth named her stuffed, toy bear after the 26th President of the U.S.",
+    "reasoning": "Since 'Theodore Roosevelt was the 26th President of the U.S.' is in the True List, TruthBot can substitute 'Theodore Roosevelt' with 'the 26th President of the U.S.'"
+  },
+  {
+    "question_id": "N3_e",
+    "answer": "Ruth named her stuffed, toy bear the person who fought in the Spanish-American War.",
+    "reasoning": "Since 'Theodore Roosevelt fought in the Spanish-American War' is in the True List, TruthBot can substitute 'Theodore Roosevelt' with 'the person who fought in the Spanish-American War'."
+  },
+  {
+    "question_id": "N4_a",
+    "answer": "True - Ruth confirmed she only added true statements about herself, so if she added this fact, it must be true.",
+    "reasoning": "Ruth explicitly stated that the statements she added were about herself and were true. Since Ruth would know how many siblings she has, this statement would be true."
+  },
+  {
+    "question_id": "N4_b",
+    "answer": "True - This is a straightforward substitution that preserves truth value.",
+    "reasoning": "Since Ottawa is definitionally the capital city of Canada according to the True List, and Ruth knows the capital city of Canada (as stated), then Ruth knows Ottawa is a logically equivalent and true statement."
+  },
+  {
+    "question_id": "N4_c",
+    "answer": "True - This is just a rephrasing of statement (c) using information from the True List.",
+    "reasoning": "The original statement is about Ruth's preference. The new statement just substitutes 'Ottawa' with 'the capital city of Canada'. If Ruth added the original preference statement as true, this rephrasing is equally true."
+  },
+  {
+    "question_id": "N4_d",
+    "answer": "True - This is an equivalent statement using substitution.",
+    "reasoning": "Since Theodore Roosevelt was the 26th President, naming a bear after Theodore Roosevelt is the same as naming it after the 26th President. The statements are logically equivalent."
+  },
+  {
+    "question_id": "N4_e",
+    "answer": "Weird - This changes the semantic meaning in a subtle way.",
+    "reasoning": "While Theodore Roosevelt did fight in the Spanish-American War, saying she named the bear 'the person who fought in the Spanish-American War' is strange because she likely named it 'Theodore Roosevelt' (a name), not a descriptive phrase. However, since Ruth only added true statements, I should reconsider this as True. But the phrasing makes it semantically odd - she named it Theodore Roosevelt, not literally 'the person who...' So this falls into the 'weird' category - technically derivable but semantically problematic."
+  },
+  {
+    "question_id": "N5",
+    "answer": "Add semantic constraints: (1) Only allow substitutions when terms are explicitly defined as equivalent in the True List with symmetric definitions (e.g., 'X is Y' and 'Y is X'). (2) Preserve grammatical and semantic roles - distinguish between using a name versus describing a person. (3) When combining facts, verify that the combination preserves logical validity. (4) Maintain a distinction between identity (what something is called) and description (what properties it has). This would prevent treating 'named after Theodore Roosevelt' as fully equivalent to 'named after the person who fought in the war' since naming involves the actual name, not just any true description of the person.",
+    "reasoning": "The mistakes occur when TruthBot makes technically derivable but semantically problematic statements. The key is to add rules that preserve semantic meaning, not just logical derivability. This requires distinguishing between different types of references (names vs descriptions), maintaining grammatical roles, and ensuring substitutions preserve the intended meaning."
+  }
+]

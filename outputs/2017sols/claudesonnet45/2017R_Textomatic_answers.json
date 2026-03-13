@@ -1,0 +1,152 @@
+[
+  {
+    "question_id": "R1_1a",
+    "answer": "N",
+    "reasoning": "First character of rule a input"
+  },
+  {
+    "question_id": "R1_1b",
+    "answer": ">",
+    "reasoning": "Second character of rule a input"
+  },
+  {
+    "question_id": "R1_1c",
+    "answer": ">",
+    "reasoning": "Output of rule a"
+  },
+  {
+    "question_id": "R1_2a",
+    "answer": "Q",
+    "reasoning": "First character of rule b input"
+  },
+  {
+    "question_id": "R1_2b",
+    "answer": ">",
+    "reasoning": "Second character of rule b input"
+  },
+  {
+    "question_id": "R1_2c",
+    "answer": "Q",
+    "reasoning": "First character of rule b output"
+  },
+  {
+    "question_id": "R1_2d",
+    "answer": "U",
+    "reasoning": "Second character of rule b output - adds U for CINQ"
+  },
+  {
+    "question_id": "R1_2e",
+    "answer": ">",
+    "reasoning": "Third character of rule b output"
+  },
+  {
+    "question_id": "R1_3a",
+    "answer": "F",
+    "reasoning": "Input of rule c - F to V transformation"
+  },
+  {
+    "question_id": "R1_3b",
+    "answer": "V",
+    "reasoning": "Output of rule c - F becomes V for NEUF"
+  },
+  {
+    "question_id": "R1_4a",
+    "answer": ">",
+    "reasoning": "Input of rule d"
+  },
+  {
+    "question_id": "R1_4b",
+    "answer": "I",
+    "reasoning": "First character of IEME output"
+  },
+  {
+    "question_id": "R1_4c",
+    "answer": "E",
+    "reasoning": "Second character of IEME output"
+  },
+  {
+    "question_id": "R1_4d",
+    "answer": "M",
+    "reasoning": "Third character of IEME output"
+  },
+  {
+    "question_id": "R1_4e",
+    "answer": "E",
+    "reasoning": "Fourth character of IEME output"
+  },
+  {
+    "question_id": "R1_4f",
+    "answer": ">",
+    "reasoning": "End marker maintained"
+  },
+  {
+    "question_id": "R1_5a",
+    "answer": "<",
+    "reasoning": "Start marker in input"
+  },
+  {
+    "question_id": "R1_5b",
+    "answer": "U",
+    "reasoning": "U from UN"
+  },
+  {
+    "question_id": "R1_5c",
+    "answer": ">",
+    "reasoning": "End marker after N removed"
+  },
+  {
+    "question_id": "R1_5d",
+    "answer": "I",
+    "reasoning": "Part of IEME that was added"
+  },
+  {
+    "question_id": "R1_5e",
+    "answer": "E",
+    "reasoning": "Part of IEME"
+  },
+  {
+    "question_id": "R1_5f",
+    "answer": "M",
+    "reasoning": "Part of IEME"
+  },
+  {
+    "question_id": "R1_5g",
+    "answer": "<",
+    "reasoning": "Start marker in output"
+  },
+  {
+    "question_id": "R1_5h",
+    "answer": "P",
+    "reasoning": "Start of PREMIER"
+  },
+  {
+    "question_id": "R1_5i",
+    "answer": "R",
+    "reasoning": "Second letter of PREMIER"
+  },
+  {
+    "question_id": "R1_5j",
+    "answer": "E",
+    "reasoning": "Third letter of PREMIER"
+  },
+  {
+    "question_id": "R1_5k",
+    "answer": "M",
+    "reasoning": "Fourth letter of PREMIER"
+  },
+  {
+    "question_id": "R1_5l",
+    "answer": "I",
+    "reasoning": "Fifth letter of PREMIER"
+  },
+  {
+    "question_id": "R2_1",
+    "answer": "Change rule a from [N][>] → [>] to [S][>] → [>], which removes the plural S from VINGTS, allowing it to become VINGTIÈME correctly. Also ensure rule e specifically requires the < marker at the start, so it only matches standalone <UN> and not -UN> in compounds, allowing VINGT-ET-UN to become VINGT-ET-UNIÈME instead of VINGT-ET-PREMIER.",
+    "reasoning": "The two errors are: (1) QUATRE-VINGTS incorrectly becomes QUATRE-VINGTSIÈME because the S isn't removed, and (2) VINGT-ET-UN incorrectly becomes VINGT-ET-PREMIER because the UN rule applies in compounds when it shouldn't"
+  },
+  {
+    "question_id": "R3_1",
+    "answer": "For bidirectionality, modify the rules as follows: Rule a: [T][S]→[T] (removes S after T in forward direction; adds S after T in reverse, specifically for VINGT). Rule b: [Q][>]→[Q][U][>] (already bidirectional: adds U going forward, removes U going backward). Rule c: [F]→[V] (already bidirectional). Rule d: [>]→[I][E][M][E][>] (already bidirectional: adds suffix forward, removes it backward). Rule e: [<][U][N][>]→[<][P][R][E][M][I][E] (bidirectional with strict <UN> pattern so it only applies to standalone UN, not -UN> in compounds). For VINGT-ET-UN: The [<] requirement in rule e ensures it only matches standalone <UN>, not -UN>, so compounds correctly become VINGT-ET-UNIÈME in forward direction and reverse properly. For QUATRE-VINGTS: Rule a specifically targets [T][S] pattern, so VINGTS→VINGT forward and VINGT→VINGTS backward, yielding QUATRE-VINGTIÈME forward and QUATRE-VINGTS backward.",
+    "reasoning": "Need rules that work symmetrically in both directions while handling the special cases of VINGT-ET-UN (compound UN should become UNIÈME not PREMIER) and QUATRE-VINGTS (plural S needs special handling)"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "question_id": "G1_1",
+    "answer": "unfilled circle",
+    "reasoning": "Using RSA, 'filled' would refer to the filled circle most efficiently, so 'circle' alone must refer to the unfilled circle"
+  },
+  {
+    "question_id": "G2_1",
+    "answer": "5",
+    "reasoning": "Filled triangle - 'triangle' uniquely identifies it with cost 1"
+  },
+  {
+    "question_id": "G2_2",
+    "answer": "8",
+    "reasoning": "Filled circle - need 'filled circle' to distinguish from unfilled circle"
+  },
+  {
+    "question_id": "G2_3",
+    "answer": "9",
+    "reasoning": "Unfilled circle - 'unfilled circle' specifies both properties"
+  },
+  {
+    "question_id": "G2_4",
+    "answer": "6",
+    "reasoning": "Unfilled square - 'square' works as striped square is identified by 'striped'"
+  },
+  {
+    "question_id": "G2_5",
+    "answer": "3",
+    "reasoning": "Striped square - 'striped' uniquely identifies it"
+  },
+  {
+    "question_id": "G3_1",
+    "answer": "1",
+    "reasoning": "Filled triangle - only filled shape, so 'filled' suffices"
+  },
+  {
+    "question_id": "G3_2",
+    "answer": "11",
+    "reasoning": "Unfilled triangle - need to specify 'unfilled triangle'"
+  },
+  {
+    "question_id": "G3_3",
+    "answer": "12",
+    "reasoning": "Striped square - 'striped square' to distinguish from striped circle"
+  },
+  {
+    "question_id": "G3_4",
+    "answer": "6",
+    "reasoning": "Unfilled square - 'square' as most efficient given other squares have modifiers"
+  },
+  {
+    "question_id": "G3_5",
+    "answer": "14",
+    "reasoning": "Filled square - need 'filled square' to specify"
+  },
+  {
+    "question_id": "G3_6",
+    "answer": "15",
+    "reasoning": "Striped circle - 'striped circle' to distinguish from striped square"
+  },
+  {
+    "question_id": "G3_7",
+    "answer": "8",
+    "reasoning": "Filled pentagon - 'pentagon' alone works as only pentagon"
+  },
+  {
+    "question_id": "G3_8",
+    "answer": "17",
+    "reasoning": "Spotted square - 'spotted square' to distinguish from spotted hexagon"
+  },
+  {
+    "question_id": "G3_9",
+    "answer": "9",
+    "reasoning": "Spotted hexagon - 'hexagon' alone works as only hexagon"
+  },
+  {
+    "question_id": "G4_a",
+    "answer": "0.00",
+    "reasoning": "Specific description 'Unfilled Circle' matches the card perfectly"
+  },
+  {
+    "question_id": "G4_b",
+    "answer": "0.67",
+    "reasoning": "Saying nothing means random selection among 3 cards, 2/3 error rate"
+  },
+  {
+    "question_id": "G4_c",
+    "answer": "0.50",
+    "reasoning": "'Unfilled' is ambiguous between unfilled circle and unfilled square, 1/2 error rate"
+  },
+  {
+    "question_id": "G5_a",
+    "answer": "error rate",
+    "reasoning": "From the pattern, loss = error rate + (weight × cost)"
+  },
+  {
+    "question_id": "G5_b",
+    "answer": "weight",
+    "reasoning": "Weight multiplies with cost in the loss formula"
+  },
+  {
+    "question_id": "G5_c",
+    "answer": "cost",
+    "reasoning": "Cost multiplies with weight in the loss formula"
+  },
+  {
+    "question_id": "G6_1",
+    "answer": "a, b",
+    "reasoning": "Need weight ≤ 0.67 so one-word descriptions have loss less than 0.67 (cost of saying nothing). Only 0.1 and 0.5 satisfy this"
+  }
+]

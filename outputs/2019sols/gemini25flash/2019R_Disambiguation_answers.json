@@ -1,0 +1,112 @@
+[
+  {
+    "question_id": "R1_4",
+    "answer": "PRN",
+    "reasoning": "In 'The dog looks at her.', 'her' is the object of the preposition 'at', functioning as a pronoun."
+  },
+  {
+    "question_id": "R1_5",
+    "answer": "DET",
+    "reasoning": "In 'The girl is her friend.', 'her' modifies the noun 'friend', indicating possession, functioning as a determiner."
+  },
+  {
+    "question_id": "R1_6",
+    "answer": "DET",
+    "reasoning": "In 'I am her daughter.', 'her' modifies the noun 'daughter', indicating possession, functioning as a determiner."
+  },
+  {
+    "question_id": "R1_7",
+    "answer": "DET",
+    "reasoning": "In 'The cat saw her dog yesterday.', 'her' modifies the noun 'dog', indicating possession, functioning as a determiner."
+  },
+  {
+    "question_id": "R1_8",
+    "answer": "PRN",
+    "reasoning": "In 'You walk with her.', 'her' is the object of the preposition 'with', functioning as a pronoun."
+  },
+  {
+    "question_id": "R1_9",
+    "answer": "PRN",
+    "reasoning": "In 'The boy likes her.', 'her' is the direct object of the verb 'likes', functioning as a pronoun."
+  },
+  {
+    "question_id": "R1_10",
+    "answer": "PRN",
+    "reasoning": "In 'A giraffe sees her now.', 'her' is the direct object of the verb 'sees', functioning as a pronoun."
+  },
+  {
+    "question_id": "R1_11",
+    "answer": "PRN",
+    "reasoning": "In 'I give her flowers.', 'her' is the indirect object of the verb 'give', functioning as a pronoun."
+  },
+  {
+    "question_id": "R1_12",
+    "answer": "DET",
+    "reasoning": "In 'Her tall daughter is smart.', 'Her' modifies the noun phrase 'tall daughter', indicating possession, functioning as a determiner."
+  },
+  {
+    "question_id": "R1_13",
+    "answer": "PRN",
+    "reasoning": "In 'The cat examines her quizzically.', 'her' is the direct object of the verb 'examines', functioning as a pronoun."
+  },
+  {
+    "question_id": "R1_14",
+    "answer": "DET",
+    "reasoning": "In 'I am her older sister.', 'her' modifies the noun phrase 'older sister', indicating possession, functioning as a determiner."
+  },
+  {
+    "question_id": "R1_15",
+    "answer": "DET",
+    "reasoning": "In 'Her orange cat likes me.', 'Her' modifies the noun phrase 'orange cat', indicating possession, functioning as a determiner."
+  },
+  {
+    "question_id": "R2_1",
+    "answer": "her: SELECT PRN if (NOT +1 N) and (NOT +1 ADJ)",
+    "reasoning": "This rule targets 'her' as a pronoun when it is followed by an adverb or the end of a sentence, thereby disambiguating sentences 1 (example), 4, 8, 9, 10, and 13. This avoids incorrect tagging of 'her' preceding a noun or adjective."
+  },
+  {
+    "question_id": "R2_2",
+    "answer": "her: SELECT DET if (+1 ADJ)",
+    "reasoning": "This rule targets 'her' as a determiner when it precedes an adjective. This correctly disambiguates sentences 12, 14, and 15, where 'her' modifies a noun phrase starting with an adjective."
+  },
+  {
+    "question_id": "R2_3",
+    "answer": "her: SELECT DET if (+1 N)",
+    "reasoning": "This rule targets 'her' as a determiner when it precedes a noun. This correctly disambiguates sentences 2 (example), 3 (example), 5, 6, and 7. However, it incorrectly tags 'her' in sentence 11 as a determiner (it should be a pronoun), making S11 the exception."
+  },
+  {
+    "question_id": "R3_1",
+    "answer": "11",
+    "reasoning": "Sentence 11 ('I give her flowers.') is disambiguated incorrectly. The rules developed in R2 would tag 'her' as DET, but its correct tag is PRN."
+  },
+  {
+    "question_id": "R3_2",
+    "answer": "The difficulty in correctly tagging 'her' in 'I give her flowers' stems from its local linguistic context. In this sentence, 'her' (a pronoun acting as an indirect object) is preceded by a verb ('give') and followed by a noun ('flowers'). This creates the local part-of-speech pattern 'VRB her N'. However, this exact same pattern ('VRB her N') also appears in sentences where 'her' is a determiner (e.g., 'The cat saw her dog' (S7), where 'her' is a determiner preceding the noun 'dog', and 'saw' is a verb). A simple constraint grammar rule, which only examines the POS tags of adjacent words (like '+1 N' or '-1 VRB'), cannot differentiate between 'her' as an indirect object followed by a direct object noun, and 'her' as a possessive determiner within a direct object noun phrase. This distinction requires a deeper semantic or syntactic analysis, such as understanding verb valency (e.g., 'give' takes two objects, 'see' takes one) or parsing dependency structures, which are beyond the capabilities of the given rule system.",
+    "reasoning": "The detailed explanation for why sentence 11 is problematic is provided above."
+  },
+  {
+    "question_id": "R4_1",
+    "answer": "PRN/DET: SELECT PRN if (+1 [VRB])",
+    "reasoning": "This rule efficiently tags all subject pronouns (Mi, Den, Yu) as PRN, as they are consistently followed by a potential verb (lobi or singi). This covers Mi (S1, S4, S7), Den (S2, S3, S5), and Yu (S6) correctly, including the tricky 'mi' in S5 ('mi singi')."
+  },
+  {
+    "question_id": "R4_2",
+    "answer": "N/VRB: SELECT VRB if (-1 PRN)",
+    "reasoning": "After Rule 1 resolves subjects, this rule tags verbs (lobi or singi) as VRB if they follow a confirmed PRN. This correctly tags all instances of lobi and singi that function as verbs in the sentences."
+  },
+  {
+    "question_id": "R4_3",
+    "answer": "N/VRB: SELECT N if (-1 [DET])",
+    "reasoning": "This rule tags nouns (lobi or singi) as N if they are preceded by a word that could possibly be a determiner (Mi, Den, Yu). This resolves lobi as N in S4 and singi as N in S1 and S2."
+  },
+  {
+    "question_id": "R4_4",
+    "answer": "PRN/DET: SELECT DET if (+1 N)",
+    "reasoning": "This rule tags remaining ambiguous words as DET if they are followed by a confirmed Noun. This captures all possessive determiners (den in S1, yu in S2 and S4, mi in S6) that precede a noun like 'singi', 'lobi', or 'sisa'."
+  },
+  {
+    "question_id": "R4_5",
+    "answer": "PRN/DET: SELECT PRN if (-1 VRB) and (+1 NIL)",
+    "reasoning": "Finally, this rule tags any remaining ambiguous words as PRN if they are preceded by a confirmed verb and are at the end of the sentence. This targets object pronouns like 'mi' in S3 and 'yu' in S7."
+  }
+]

@@ -1,0 +1,196 @@
+Model: gemini-2.5-flash
+Generation Time: 71.73 seconds
+Timestamp: 2025-11-17 16:36:15
+================================================================================
+
+**Analysis of Patterns and Information Gained from Data:**
+
+The Khalkha Mongolian data reveals consistent morphological patterns for forming plural and directive cases, largely governed by **vowel harmony** and the **final consonant** of the stem. Pronunciation also follows predictable rules, with specific grapheme-to-phoneme mappings, stress placement, and allophonic variations.
+
+**Vowel Harmony:**
+Khalkha Mongolian exhibits vowel harmony, differentiating between "back" vowels (`a`, `o`, `u`) and "front" vowels (`e`, `i`, `ö`, `ü`). Suffixes generally harmonize with the vowel quality of the last syllable of the stem.
+
+**Plural Formation Rules:**
+
+1.  **Animate Nouns:** If the noun refers to a human or animate entity (e.g., 'man', 'father', 'husband', 'woman', 'fool'), the plural is formed by adding `-nar` to the singular stem.
+    *   Examples: `mangar` -> `mangar nar`, `hun` -> `hun nar`, `aav` -> `aav nar`, `hüühen` -> `hüühen nar`.
+2.  **Specific Vowel Endings (`-uu`/`-üü`):**
+    *   If the stem ends in `-uu` (back vowel): add `-čuu d`. Example: `nuguu` -> `nuguučuud`.
+    *   If the stem ends in `-üü` (front vowel): add `-čüüd`. Example: `denlüü` -> `denlüüčüüd`.
+3.  **General Inanimate Nouns:** For other nouns, suffixation depends on vowel harmony:
+    *   **Back Vowel Harmony:** If the last vowel of the stem is a back vowel (`a`, `o`, `u`), add `-uud`.
+        *   Examples: `havčaar` -> `havčaaruud`, `zutan` -> `zutanuud`, `sugar` -> `sugaruud`, `gal` -> `galuud`.
+    *   **Front Vowel Harmony:** If the last vowel of the stem is a front vowel (`e`, `i`, `ö`, `ü`), add `-üüd`.
+        *   Examples: `örh` -> `örhüüd`, `övs` -> `övsüüd`, `heer` -> `heerüüd`, `neg` -> `negüüd`, `gölög` -> `gölögüüd`.
+
+**Directive Formation Rules:**
+
+1.  **Vowel Harmony:** The suffix vowel aligns with the stem's last vowel.
+    *   Back vowels (`a`, `o`, `u`) -> suffix vowel `u` (`-luu`, `-ruu`).
+    *   Front vowels (`e`, `i`, `ö`, `ü`) -> suffix vowel `ü` (`-lüü`, `-rüü`).
+2.  **Consonant Harmony (l-r alternation):**
+    *   If the stem ends in `r`, the suffix begins with `l`.
+        *   Examples: `havčaar` -> `havčaarluu`, `mangar` -> `mangarluu`, `sugar` -> `sugarluu`, `heer` -> `heerlüü`.
+    *   If the stem ends in any other consonant (`h`, `n`, `s`, `t`, `g`, `v`) or a vowel, the suffix begins with `r`.
+        *   Examples: `örh` -> `örhrüü`, `hun` -> `hunruu`, `övs` -> `övsrüü`, `denlüü` -> `denlüürüü`, `zutan` -> `zutanruu`, `gal` -> `galruu`, `nuguu` -> `nuguuruu`, `gölög` -> `gölögrüü`, `aav` -> `aavruu`, `hüühen` -> `hüühenrüü`.
+
+**Pronunciation Rules:**
+
+*   **Vowel Sounds:**
+    *   `a` -> `a`, `aa` -> `a:` (long `a`)
+    *   `e` -> `e`, `ee` -> `e:` (long `e`)
+    *   `i` -> `i`
+    *   `o` -> `o`
+    *   `ö` -> `e` (often pronounced like `e` or `é`)
+    *   `u` -> `u` (stressed as `ú`) or `o` (often in `zutan`, `nuguu`). The `u` to `o` shift seems to occur when followed by `t` or `g`.
+    *   `ü` -> `u` (stressed as `ú`)
+    *   `uu` -> `o:` (long `o`) (e.g., `nuguu`)
+    *   `üü` -> `u:` (long `u`) (e.g., `denlüü`)
+*   **Consonant Sounds:**
+    *   `h` -> `x` (uvular fricative, like German 'ch' in 'Bach')
+    *   `š` -> `š` (like 'sh' in 'ship')
+    *   `č` -> `č` (like 'ch' in 'church')
+    *   `g` -> `G` (uvular stop, like 'g' in 'green' but farther back) when followed by back vowels (`a`, `o`, `u`).
+    *   `g` -> `g` (velar stop, like 'g' in 'go') when followed by front vowels (`e`, `i`, `ö`, `ü`).
+    *   Word-final `n` -> `ŋ` (velar nasal, like 'ng' in 'sing') when preceded by `u` or `e`. Otherwise, `n` -> `n`.
+*   **Stress:** Generally on the first syllable of the stem for polysyllabic words. Indicated by `´` over the vowel. Vowel length by `:`.
+
+**F2 Specific Observation:**
+The letter `ž` appears in `gudamž` but is not present in any of the example words in the provided table (F1). This suggests `ž` might be an indicator of a foreign phoneme/grapheme, making `gudamž` a strong candidate for a loanword.
+
+---
+
+```json
+[
+  {
+    "question_id": "F1_1",
+    "answer": "negrüü",
+    "reasoning": "The singular word is 'neg' ('ace'). It is not a human noun. The last stem vowel is 'e' (front vowel). The stem ends in 'g'. According to the directive rules, for words ending in 'g' (not 'r'), the suffix starts with 'r'. For front vowels, the suffix vowel is 'ü'. Therefore, the directive form is 'negrüü'."
+  },
+  {
+    "question_id": "F1_2",
+    "answer": "šülegüüd",
+    "reasoning": "The singular word is 'šüleg' ('poem'). It is not a human or animate noun. It does not end in '-uu' or '-üü'. The last vowel of the stem 'šüleg' is 'ü' (front vowel). According to the plural rules for general inanimate nouns with front vowel harmony, the suffix is '-üüd'. Therefore, the plural form is 'šülegüüd'."
+  },
+  {
+    "question_id": "F1_3",
+    "answer": "šülegrüü",
+    "reasoning": "The singular word is 'šüleg' ('poem'). The last stem vowel is 'ü' (front vowel). The stem ends in 'g'. According to the directive rules, for words ending in 'g' (not 'r'), the suffix starts with 'r'. For front vowels, the suffix vowel is 'ü'. Therefore, the directive form is 'šülegrüü'."
+  },
+  {
+    "question_id": "F1_4",
+    "answer": "nökör nar",
+    "reasoning": "The singular word is 'nökör' ('husband'). It is a human noun. According to the plural rules for human/animate nouns, the plural is formed by adding '-nar' to the singular stem. Therefore, the plural form is 'nökör nar'."
+  },
+  {
+    "question_id": "F1_5",
+    "answer": "nökörlüü",
+    "reasoning": "The singular word is 'nökör' ('husband'). The last stem vowel is 'ö' (front vowel). The stem ends in 'r'. According to the directive rules, for words ending in 'r', the suffix starts with 'l'. For front vowels, the suffix vowel is 'ü'. Therefore, the directive form is 'nökörlüü'."
+  },
+  {
+    "question_id": "F1_6",
+    "answer": "dargauud",
+    "reasoning": "The singular word is 'darga' ('mouth'). It is not a human or animate noun. It does not end in '-uu' or '-üü'. The last vowel of the stem 'darga' is 'a' (back vowel). According to the plural rules for general inanimate nouns with back vowel harmony, the suffix is '-uud'. Therefore, the plural form is 'dargauud'."
+  },
+  {
+    "question_id": "F1_7",
+    "answer": "dargaruu",
+    "reasoning": "The singular word is 'darga' ('mouth'). The last stem vowel is 'a' (back vowel). The stem ends in a vowel ('a'). According to the directive rules, for words ending in a vowel, the suffix starts with 'r'. For back vowels, the suffix vowel is 'u'. Therefore, the directive form is 'dargaruu'."
+  },
+  {
+    "question_id": "F1_8",
+    "answer": "[dárGa]",
+    "reasoning": "The singular word is 'darga' ('mouth'). Based on existing pronunciations (e.g., 'mangar', 'zutan', 'sugar', 'gölög', 'ovog'), stress is typically on the first syllable for disyllabic words. So, 'dár-'. The 'g' followed by a back vowel 'a' is pronounced as the uvular 'G'. The 'a' is pronounced 'a'. Therefore, the pronunciation is '[dárGa]'."
+  },
+  {
+    "question_id": "F1_9",
+    "answer": "ovoguud",
+    "reasoning": "The singular word is 'ovog' ('surname'). It is not a human or animate noun. It does not end in '-uu' or '-üü'. The last vowel of the stem 'ovog' is 'o' (back vowel). According to the plural rules for general inanimate nouns with back vowel harmony, the suffix is '-uud'. Therefore, the plural form is 'ovoguud'."
+  },
+  {
+    "question_id": "F1_10",
+    "answer": "ovogruu",
+    "reasoning": "The singular word is 'ovog' ('surname'). The last stem vowel is 'o' (back vowel). The stem ends in 'g'. According to the directive rules, for words ending in 'g' (not 'r'), the suffix starts with 'r'. For back vowels, the suffix vowel is 'u'. Therefore, the directive form is 'ovogruu'."
+  },
+  {
+    "question_id": "F2_1",
+    "answer": "gudamž",
+    "reasoning": "The provided table of Khalkha Mongolian words (F1) uses a specific set of letters. The letter 'ž' appears in 'gudamž' but is not present in any of the words in the F1 table or their derived forms. This suggests 'ž' might represent a non-native sound or grapheme for Khalkha, making 'gudamž' the most likely loanword among the options."
+  },
+  {
+    "question_id": "F3_A_plural",
+    "answer": "haančlah nar",
+    "reasoning": "The word 'haančlah' means 'king', which is a human noun. According to the plural rules for human/animate nouns, the plural is formed by adding '-nar' to the singular stem. Therefore, the plural form is 'haančlah nar'."
+  },
+  {
+    "question_id": "F3_A_directive",
+    "answer": "haančlahruu",
+    "reasoning": "The singular word is 'haančlah'. The last stem vowel is 'a' (back vowel). The stem ends in 'h'. According to the directive rules, for words ending in 'h' (not 'r'), the suffix starts with 'r'. For back vowels, the suffix vowel is 'u'. Therefore, the directive form is 'haančlahruu'."
+  },
+  {
+    "question_id": "F3_A_pronunciation",
+    "answer": "[xá:nčlax]",
+    "reasoning": "The word is 'haančlah'. 'h' -> 'x', 'aa' -> 'á:' (stressed first syllable), 'n' -> 'n' (medial), 'č' -> 'č', 'l' -> 'l', 'a' -> 'a', 'h' -> 'x'. Thus, the pronunciation is '[xá:nčlax]'."
+  },
+  {
+    "question_id": "F3_B_plural",
+    "answer": "gürvelüüd",
+    "reasoning": "The word 'gürvel' means 'lizard'. It is not a human or animate noun. It does not end in '-uu' or '-üü'. The last vowel of the stem 'gürvel' is 'e' (front vowel). According to the plural rules for general inanimate nouns with front vowel harmony, the suffix is '-üüd'. Therefore, the plural form is 'gürvelüüd'."
+  },
+  {
+    "question_id": "F3_B_directive",
+    "answer": "gürvelrüü",
+    "reasoning": "The singular word is 'gürvel'. The last stem vowel is 'e' (front vowel). The stem ends in 'l'. According to the directive rules, for words ending in 'l' (not 'r'), the suffix starts with 'r'. For front vowels, the suffix vowel is 'ü'. Therefore, the directive form is 'gürvelrüü'."
+  },
+  {
+    "question_id": "F3_B_pronunciation",
+    "answer": "[gúrvel]",
+    "reasoning": "The word is 'gürvel'. 'g' followed by 'ü' (front vowel) -> 'g'. 'ü' -> 'ú' (stressed first syllable). 'r' -> 'r'. 'v' -> 'v'. 'e' -> 'e'. 'l' -> 'l'. Thus, the pronunciation is '[gúrvel]'."
+  },
+  {
+    "question_id": "F3_C_plural",
+    "answer": "delgüürüüd",
+    "reasoning": "The word 'delgüür' means 'store'. It is not a human or animate noun. It does not end in '-uu' or '-üü'. The last vowel of the stem 'delgüür' is 'ü' (front vowel). According to the plural rules for general inanimate nouns with front vowel harmony, the suffix is '-üüd'. Therefore, the plural form is 'delgüürüüd'."
+  },
+  {
+    "question_id": "F3_C_directive",
+    "answer": "delgüürlüü",
+    "reasoning": "The singular word is 'delgüür'. The last stem vowel is 'ü' (front vowel). The stem ends in 'r'. According to the directive rules, for words ending in 'r', the suffix starts with 'l'. For front vowels, the suffix vowel is 'ü'. Therefore, the directive form is 'delgüürlüü'."
+  },
+  {
+    "question_id": "F3_C_pronunciation",
+    "answer": "[delgú:r]",
+    "reasoning": "The word is 'delgüür'. 'd' -> 'd'. 'e' -> 'e'. 'l' -> 'l'. 'g' followed by 'üü' (front vowel) -> 'g'. 'üü' -> 'ú:' (stressed vowel). 'r' -> 'r'. Thus, the pronunciation is '[delgú:r]'."
+  },
+  {
+    "question_id": "F3_D_plural",
+    "answer": "zuunuud",
+    "reasoning": "The word 'zuun' means 'century'. It is not a human or animate noun. It does not end in '-uu' or '-üü' (the stem ends in 'n', but `uu` determines harmony). The last vowel of the stem 'zuun' is 'u' (back vowel). According to the plural rules for general inanimate nouns with back vowel harmony, the suffix is '-uud'. Therefore, the plural form is 'zuunuud'."
+  },
+  {
+    "question_id": "F3_D_directive",
+    "answer": "zuunruu",
+    "reasoning": "The singular word is 'zuun'. The last stem vowel is 'u' (back vowel). The stem ends in 'n'. According to the directive rules, for words ending in 'n' (not 'r'), the suffix starts with 'r'. For back vowels, the suffix vowel is 'u'. Therefore, the directive form is 'zuunruu'."
+  },
+  {
+    "question_id": "F3_D_pronunciation",
+    "answer": "[zó:ŋ]",
+    "reasoning": "The word is 'zuun'. 'z' -> 'z'. 'uu' -> 'o:' (long 'o', stressed). Final 'n' preceded by 'uu' (which maps to 'o:') becomes 'ŋ' (based on 'hun' and 'hüühen' where final 'n' preceded by 'u' or 'e' becomes 'ŋ', but not 'a'). Thus, the pronunciation is '[zó:ŋ]'."
+  },
+  {
+    "question_id": "F3_E_plural",
+    "answer": "čanaruud",
+    "reasoning": "The word 'čanar' means 'quality'. It is not a human or animate noun. It does not end in '-uu' or '-üü'. The last vowel of the stem 'čanar' is 'a' (back vowel). According to the plural rules for general inanimate nouns with back vowel harmony, the suffix is '-uud'. Therefore, the plural form is 'čanaruud'."
+  },
+  {
+    "question_id": "F3_E_directive",
+    "answer": "čanarluu",
+    "reasoning": "The singular word is 'čanar'. The last stem vowel is 'a' (back vowel). The stem ends in 'r'. According to the directive rules, for words ending in 'r', the suffix starts with 'l'. For back vowels, the suffix vowel is 'u'. Therefore, the directive form is 'čanarluu'."
+  },
+  {
+    "question_id": "F3_E_pronunciation",
+    "answer": "[čánar]",
+    "reasoning": "The word is 'čanar'. 'č' -> 'č'. 'a' -> 'á' (stressed first syllable). 'n' -> 'n' (medial). 'a' -> 'a'. 'r' -> 'r'. Thus, the pronunciation is '[čánar]'."
+  }
+]
+```

@@ -1,0 +1,92 @@
+[
+  {
+    "question_id": "O_a",
+    "answer": "sentence 1",
+    "reasoning": "For Rule 1, the condition compares the length of Sentence 1 to Sentence 2 to predict entailment when Sentence 1 is longer, which correlates with most training examples where S1 > S2 in length being labeled entailment (e.g., examples 4, 11, 17, 20)."
+  },
+  {
+    "question_id": "O_b",
+    "answer": "sentence 2",
+    "reasoning": "The comparison in Rule 1 is whether Sentence 1 has more words than Sentence 2, fitting the pattern observed in training data where longer S1 relative to S2 predicts entailment."
+  },
+  {
+    "question_id": "O_c",
+    "answer": "entailment",
+    "reasoning": "When S1 is longer than S2, the label is entailment, as seen in 5 out of 6 training cases (only example 19 is a counterexample, but the correlation is strong enough for the model to learn this rule)."
+  },
+  {
+    "question_id": "O_d",
+    "answer": "4",
+    "reasoning": "Example 4: S1 (7 words) > S2 (5 words), labeled entailment, supports the rule."
+  },
+  {
+    "question_id": "O_e",
+    "answer": "11",
+    "reasoning": "Example 11: S1 (6 words) > S2 (3 words), labeled entailment, supports the rule."
+  },
+  {
+    "question_id": "O_f",
+    "answer": "sentence 2 has at least two more words than sentence 1",
+    "reasoning": "For Rule 2, this condition captures cases where S2 is significantly longer, correlating perfectly with entailment in training (examples 8, 9, 10, 21), and explains test cases like 25, 27, 28 without applying to 30 (diff=1)."
+  },
+  {
+    "question_id": "O_g",
+    "answer": "entailment",
+    "reasoning": "The label for Rule 2 is entailment, as all relevant training examples with S2 at least 2 words longer than S1 are entailment."
+  },
+  {
+    "question_id": "O_h",
+    "answer": "10",
+    "reasoning": "Example 10: S2 (6 words) - S1 (4 words) = 2, labeled entailment, supports Rule 2."
+  },
+  {
+    "question_id": "O_i",
+    "answer": "21",
+    "reasoning": "Example 21: S2 (7 words) - S1 (4 words) = 3, labeled entailment, supports Rule 2."
+  },
+  {
+    "question_id": "O_j",
+    "answer": "sentence 1",
+    "reasoning": "For Rule 3, the condition checks Sentence 1 for the word 'walrus', as all training examples with 'walrus' in S1 (1, 16, 18) are non-entailment."
+  },
+  {
+    "question_id": "O_k",
+    "answer": "walrus",
+    "reasoning": "The word 'walrus' in S1 perfectly correlates with non-entailment in training examples 1, 16, 18."
+  },
+  {
+    "question_id": "O_l",
+    "answer": "non-entailment",
+    "reasoning": "When S1 contains 'walrus', the label is non-entailment, matching all three training examples."
+  },
+  {
+    "question_id": "O_m",
+    "answer": "1",
+    "reasoning": "Example 1: S1 contains 'walrus', labeled non-entailment, supports Rule 3."
+  },
+  {
+    "question_id": "O_n",
+    "answer": "16",
+    "reasoning": "Example 16: S1 contains 'walrus', labeled non-entailment, supports Rule 3."
+  },
+  {
+    "question_id": "O_o",
+    "answer": "2",
+    "reasoning": "Rule 2 (S2 at least 2 words longer → entailment) is top priority, as in test 27 it overrides Rule 3."
+  },
+  {
+    "question_id": "O_p",
+    "answer": "3",
+    "reasoning": "Rule 3 (S1 has 'walrus' → non-entailment) is middle priority, overriding Rule 1 (as in 23, 31) but overridden by Rule 2 (as in 27)."
+  },
+  {
+    "question_id": "O_q",
+    "answer": "1",
+    "reasoning": "Rule 1 (S1 longer than S2 → entailment) is bottom priority, overridden by Rule 3 in cases like 23 and 31."
+  },
+  {
+    "question_id": "O_r",
+    "answer": "23, 27",
+    "reasoning": "Test example 27 shows Rule 2 > Rule 3 (predicts entailment despite walrus). Test example 23 shows Rule 3 > Rule 1 (predicts non-entailment despite S1 longer). These conflicts determine the full ranking: 2 > 3 > 1."
+  }
+]

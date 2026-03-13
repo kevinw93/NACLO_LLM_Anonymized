@@ -1,0 +1,67 @@
+[
+  {
+    "question_id": "F1_a",
+    "answer": "f q 0",
+    "reasoning": "sixteen = six + teen. Start at S, use rule [f] to generate 'six' and go to state 1, then use rule [q] to generate 'teen' and go to state 0."
+  },
+  {
+    "question_id": "F1_b",
+    "answer": "i r c 0",
+    "reasoning": "ninetythree = nine + ty + three. Start at S, use rule [i] to generate 'nine' and go to state 2, use rule [r] to generate 'ty' and go to state S, then use rule [c] to generate 'three' and go to state 0."
+  },
+  {
+    "question_id": "F1_c",
+    "answer": "o r h 0",
+    "reasoning": "twentyeight = twen + ty + eight. Start at S, use rule [o] to generate 'twen' and go to state 2, use rule [r] to generate 'ty' and go to state S, then use rule [h] to generate 'eight' and go to state 0."
+  },
+  {
+    "question_id": "F1_d",
+    "answer": "n q 0",
+    "reasoning": "fifteen = fif + teen. Start at S, use rule [n] to generate 'fif' and go to state 1, then use rule [q] to generate 'teen' and go to state 0."
+  },
+  {
+    "question_id": "F2_a",
+    "answer": "N",
+    "reasoning": "oneten cannot be generated because after generating 'one' with rule [a], we reach state 0 (finish), and cannot continue to generate 'ten'."
+  },
+  {
+    "question_id": "F2_b",
+    "answer": "Y",
+    "reasoning": "fiftytwelve can be generated: S→[n]→2→[r]→S generates 'fifty', then S→[l]→0 generates 'twelve'."
+  },
+  {
+    "question_id": "F2_c",
+    "answer": "N",
+    "reasoning": "sixteensix cannot be generated because after generating 'sixteen' (S→[f]→1→[q]→0), we reach state 0 (finish) and cannot continue."
+  },
+  {
+    "question_id": "F2_d",
+    "answer": "Y",
+    "reasoning": "twentyfourteen can be generated: S→[o]→2→[r]→S generates 'twenty', then S→[d]→1→[q]→0 generates 'fourteen'."
+  },
+  {
+    "question_id": "F2_e",
+    "answer": "Y",
+    "reasoning": "fortythirty can be generated: S→[p]→2→[r]→S generates 'forty', then S→[m]→2→[r]→0 generates 'thirty'."
+  },
+  {
+    "question_id": "F2_f",
+    "answer": "N",
+    "reasoning": "eleventythree cannot be generated because rule [k] S: eleven -> 0 only goes to state 0, so we cannot add 'ty' after 'eleven'."
+  },
+  {
+    "question_id": "F2_g",
+    "answer": "N",
+    "reasoning": "fivety cannot be generated because rule [e] S: five -> 0 only goes to state 0, so we cannot add 'ty' after 'five'."
+  },
+  {
+    "question_id": "F3_1",
+    "answer": "S: eight -> 0",
+    "reasoning": "First new rule allows 'eight' as a standalone number (goes directly to finish state 0)."
+  },
+  {
+    "question_id": "F3_2",
+    "answer": "S: eigh -> 1,2",
+    "reasoning": "Second new rule generates 'eigh' which can go to state 1 (for 'eighteen') or state 2 (for 'eighty'), fixing the misspelling issue."
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "question_id": "C1_1",
+    "answer": "hyphenated word",
+    "reasoning": "F1 is 1 if the sentence contains at least one hyphenated word, 0 otherwise. SS3 has 'nine-year-long' and SS4 has 'set-up', matching F1=1 for those and 0 for others in the table."
+  },
+  {
+    "question_id": "C1_2",
+    "answer": "10",
+    "reasoning": "F3 is (number of words - 10); if negative, that value, else 0. SS5 has 9 words (-1), SS6 has 8 words (-2), matching the table."
+  },
+  {
+    "question_id": "C1_3",
+    "answer": "number",
+    "reasoning": "F4 is 1 for every number in the sentence. SS1 has '22' (1), SS2 has '10,000' and 'one' (2), SS3 has 'nine' and '50' (2), SS4 has '100' in quotes (counted as 0 for narrative), SS7 has none (0), matching the table assuming numbers in quotes not counted for F4."
+  },
+  {
+    "question_id": "C1_4",
+    "answer": "common noun",
+    "reasoning": "F5 is 1 for every common noun or adjective in the sentence that is repeated in at least one other sentence. Common nouns like 'gum' and 'incident' are repeated, contributing to the counts in the table."
+  },
+  {
+    "question_id": "C1_5",
+    "answer": "adjective",
+    "reasoning": "F5 is 1 for every common noun or adjective in the sentence that is repeated in at least one other sentence. Adjectives like 'sticky' and 'last' are repeated, contributing to the counts in the table."
+  },
+  {
+    "question_id": "C1_6",
+    "answer": "first",
+    "reasoning": "F6 is 1 if the sentence is the first one in the story, 0 otherwise. SS1 is first, matching F6=1 for SS1 and 0 for SS4 assuming OCR error in table for SS4 F6=0 and F4=1 to fit sum=5."
+  },
+  {
+    "question_id": "C1_7",
+    "answer": "SS7",
+    "reasoning": "The row h has F1=0 (no hyphen), F2=1 (McBubble), F3=0 (24 words), F4=1 (no number, but assuming 0, but table 1 perhaps ellipsis or 'one' as number? Wait, assuming matches SS7 with F5=2 (gum, sticky), sum=4."
+  },
+  {
+    "question_id": "C1_8",
+    "answer": "SS5",
+    "reasoning": "The row i has F3=-1 (9 words), F5=0 (no repeated common noun or adj), sum=-1, matches SS5."
+  },
+  {
+    "question_id": "C1_9",
+    "answer": "SS4",
+    "reasoning": "The row j has F1=1 (hyphen in 'set-up'), F2=1 (McBubble), F3=0, F4=0 (number in quotes), F5=2 (gum, incident), F6=0, sum=5 (assuming F6=0)."
+  },
+  {
+    "question_id": "C1_10",
+    "answer": "SS6",
+    "reasoning": "The row k has F3=-2 (8 words), F5=2 (gum, sticky), sum=0, matches SS6."
+  },
+  {
+    "question_id": "C2_1",
+    "answer": "0",
+    "reasoning": "For a. row, b = F3 =0 to make sum=6."
+  },
+  {
+    "question_id": "C3_1",
+    "answer": "HW1",
+    "reasoning": "The three highest scoring sentences for 'In Hot Water' are HW1, HW2, HW5 in order as they appear, based on calculated sums (4,6,4), but assuming the problem's highest are the first three or matching table 6's."
+  },
+  {
+    "question_id": "C3_2",
+    "answer": "HW2",
+    "reasoning": "Second in the summary."
+  },
+  {
+    "question_id": "C3_3",
+    "answer": "HW5",
+    "reasoning": "Third in the summary."
+  },
+  {
+    "question_id": "C4_1",
+    "answer": "SSC1",
+    "reasoning": "The three highest scoring sentences for 'The Sticky Saga Continues' are SSC1, SSC3, SSC4 (sums 2,2,2), in order."
+  },
+  {
+    "question_id": "C4_2",
+    "answer": "SSC3",
+    "reasoning": "Second in the summary."
+  },
+  {
+    "question_id": "C4_3",
+    "answer": "SSC4",
+    "reasoning": "Third in the summary."
+  },
+  {
+    "question_id": "C5_1",
+    "answer": "vice",
+    "reasoning": "The word 'vice' should be deleted from 'vice president', as McBubble is the president, not vice president."
+  },
+  {
+    "question_id": "C5_2",
+    "answer": "Made to Stick corporation ... Bigger Bubble",
+    "reasoning": "The first phrase is 'Made to Stick corporation', the second is 'rival company Bigger Bubble'; swap to correct the companies."
+  },
+  {
+    "question_id": "C5_3",
+    "answer": "February",
+    "reasoning": "The word to replace is 'February', as the incident was on January 22."
+  },
+  {
+    "question_id": "C5_4",
+    "answer": "January",
+    "reasoning": "Replace 'February' with 'January'."
+  },
+  {
+    "question_id": "C6_1",
+    "answer": "SSC4",
+    "reasoning": "In the summary for 'The Sticky Saga Continues' (SSC1, SSC3, SSC4), the word 'he' in SSC4 has incorrect meaning, as it refers to Colonel Sanders, but the summary starts with McBubble, causing ambiguity."
+  },
+  {
+    "question_id": "C6_2",
+    "answer": "he",
+    "reasoning": "The word 'he' is the one with incorrect meaning in the context of the summary."
+  }
+]

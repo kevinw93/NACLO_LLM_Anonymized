@@ -1,0 +1,137 @@
+[
+  {
+    "question_id": "K1_a",
+    "answer": "Print: The publisher will print 3 million books.",
+    "reasoning": "Player 1's Frigate for Player 2 was deduced as `create-produce-print`. 'Print' (meaning to publish) was the third word to complete the frigate for Player 1's board, hence Player 2's guess 'print' (a) resulted in 'Hit - sunk frigate'."
+  },
+  {
+    "question_id": "K1_b",
+    "answer": "Dry: Can you tell me how to dry tomatoes?",
+    "reasoning": "Player 1's Yacht for Player 2 was deduced as `modify-dry`. 'Dry' was the second word to complete the yacht for Player 1's board, hence Player 2's guess 'dry' (b) resulted in 'Hit - sunk yacht'."
+  },
+  {
+    "question_id": "K2_yacht",
+    "answer": "perform, serenade",
+    "reasoning": "Player 2's yacht was sunk by 'serenade' (Turn 9) after 'perform' was hit (Turn 8). The chain 'perform-serenade' consists of two directly connected words (L1-L2)."
+  },
+  {
+    "question_id": "K2_rowboat",
+    "answer": "produce, generate",
+    "reasoning": "Player 2's rowboat had 'produce' as a hit (Turn 7) but was not sunk. 'Create' (parent of 'produce') was a miss, and 'print'/'breed' (children of 'produce') were misses. 'Generate' (child of 'produce') was not guessed, making 'produce-generate' the most plausible 2-position chain."
+  },
+  {
+    "question_id": "K2_frigate",
+    "answer": "do, modify, mark",
+    "reasoning": "Player 2's frigate was sunk by 'mark' (Turn 5). 'Modify' (Turn 3) and 'do' (Turn 4) were also hits. The chain 'do-modify-mark' consists of three directly connected words (L0-L1-L2). 'Dry' (sibling of 'mark') was a miss, confirming the chain."
+  },
+  {
+    "question_id": "K3_a",
+    "answer": "Miss",
+    "reasoning": "Player 3 guessed 'Queen'. Player 4's ships include 'person-ruler_2', but 'queen' is not on any of P4's ships based on the deduced placements."
+  },
+  {
+    "question_id": "K3_b",
+    "answer": "Hit",
+    "reasoning": "Player 3 guessed 'Physical entity'. Player 4's Battleship is deduced as `physical entity-instrument-ruler_1-centimeter`, making 'physical entity' a hit for P4."
+  },
+  {
+    "question_id": "K3_c",
+    "answer": "Miss",
+    "reasoning": "Player 3 guessed 'Thrower'. 'Thrower' is not on any of P4's ships based on the deduced placements."
+  },
+  {
+    "question_id": "K3_d",
+    "answer": "Hit",
+    "reasoning": "Player 3 guessed 'Person'. Player 4's Patrol Boat is deduced as `person-ruler_2(person)`, making 'person' a hit for P4."
+  },
+  {
+    "question_id": "K3_e",
+    "answer": "Hit",
+    "reasoning": "Player 3 guessed 'Centimeter'. Player 4's Battleship is deduced as `physical entity-instrument-ruler_1-centimeter`, making 'centimeter' a hit for P4."
+  },
+  {
+    "question_id": "K3_f",
+    "answer": "Ruler: Please use a ruler to measure the length.",
+    "reasoning": "This sentence specifies the meaning of 'ruler' as a measuring tool, which is part of Player 4's Battleship (ruler_1)."
+  },
+  {
+    "question_id": "K3_g",
+    "answer": "Miss",
+    "reasoning": "Player 3 guessed 'Written communication'. 'Written communication' is not on any of P4's ships based on the deduced placements using 'measure' for (k)."
+  },
+  {
+    "question_id": "K3_h",
+    "answer": "Miss",
+    "reasoning": "Player 3 guessed 'Communication'. 'Communication' is not on any of P4's ships based on the deduced placements using 'measure' for (k)."
+  },
+  {
+    "question_id": "K3_i",
+    "answer": "Play: We went to see a play at the theater.",
+    "reasoning": "This sentence specifies the meaning of 'play' as an event, which is part of Player 4's Submarine. (Same meaning as K3_n)."
+  },
+  {
+    "question_id": "K3_j",
+    "answer": "Ruler: The ruler governed the kingdom.",
+    "reasoning": "This sentence specifies the meaning of 'ruler' as a person, which is part of Player 4's Patrol Boat (ruler_2)."
+  },
+  {
+    "question_id": "K3_k",
+    "answer": "Measure: Please take a measure of the cloth.",
+    "reasoning": "This word 'Measure' is polysemous, fitting into both P4's Aircraft Carrier (as an abstract quantity/action) and P3's Patrol Boat (as a concrete unit/device). It is also a unique word not used in other blanks."
+  },
+  {
+    "question_id": "K3_l",
+    "answer": "Publication: The publication announced the new policy.",
+    "reasoning": "This sentence specifies the meaning of 'publication' as an event, which is part of Player 3's Submarine."
+  },
+  {
+    "question_id": "K3_m",
+    "answer": "Pitcher: The pitcher threw the ball.",
+    "reasoning": "This sentence specifies the meaning of 'pitcher' as a player, which is part of Player 3's Battleship (pitcher_1)."
+  },
+  {
+    "question_id": "K3_n",
+    "answer": "Play: We went to see a play at the theater.",
+    "reasoning": "This sentence specifies the meaning of 'play' as an event, which is part of Player 3's Cruiser. (Same meaning as K3_i)."
+  },
+  {
+    "question_id": "K3_o",
+    "answer": "Miss",
+    "reasoning": "Player 4 guessed 'Publication' (document meaning). Player 3's ships include 'publication_event' (Submarine), but not 'publication_document' (as per AC deduction for P3). Hence, Miss."
+  },
+  {
+    "question_id": "K3_p",
+    "answer": "Hit",
+    "reasoning": "Player 4 guessed 'Entity'. Player 3's Battleship is deduced as `entity-physical entity-object-pitcher_1`, making 'entity' a hit for P3."
+  },
+  {
+    "question_id": "K3_q",
+    "answer": "Miss",
+    "reasoning": "Player 4 guessed 'Length'. 'Length' is not on any of P3's ships based on the deduced placements for P3's AC, making it a miss for P3."
+  },
+  {
+    "question_id": "K3_r",
+    "answer": "Hit",
+    "reasoning": "Player 4 guessed 'Physical entity'. Player 3's Battleship is deduced as `entity-physical entity-object-pitcher_1`, making 'physical entity' a hit for P3."
+  },
+  {
+    "question_id": "K3_s",
+    "answer": "Hit",
+    "reasoning": "Player 4 guessed 'Object'. Player 3's Battleship is deduced as `entity-physical entity-object-pitcher_1`, making 'object' a hit for P3."
+  },
+  {
+    "question_id": "K3_t",
+    "answer": "Miss",
+    "reasoning": "Player 4 guessed 'Microscope'. 'Microscope' is not on any of P3's ships based on the deduced placements."
+  },
+  {
+    "question_id": "K3_u",
+    "answer": "Miss",
+    "reasoning": "Player 4 guessed 'Equipment'. 'Equipment' is not on any of P3's ships based on the deduced placements."
+  },
+  {
+    "question_id": "K3_v",
+    "answer": "Book: I'm making a book of memories.",
+    "reasoning": "This sentence specifies the meaning of 'book' as a collection (e.g., photo album, scrapbook), which is part of Player 3's Aircraft Carrier. This meaning is distinct from a literary 'book' or 'booking' an event."
+  }
+]

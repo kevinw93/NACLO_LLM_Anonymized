@@ -1,0 +1,162 @@
+[
+  {
+    "question_id": "G1_a",
+    "answer": "11",
+    "reasoning": "Analyzed the provided table to identify the patterns for 'Types' and 'Tokens'. 'Types' represents the count of unique letters in a word. 'Tokens' represents the total number of letters (length) in a word. For 'hemidemisemiquaver', the unique letters are h, e, m, i, d, s, q, u, a, v, r, totaling 11 unique letters."
+  },
+  {
+    "question_id": "G1_b",
+    "answer": "18",
+    "reasoning": "Analyzed the provided table to identify the patterns for 'Types' and 'Tokens'. 'Types' represents the count of unique letters in a word. 'Tokens' represents the total number of letters (length) in a word. For 'hemidemisemiquaver', the total number of letters is 18."
+  },
+  {
+    "question_id": "G1_c",
+    "answer": "5",
+    "reasoning": "Analyzed the provided table to identify the patterns for 'Types' and 'Tokens'. 'Types' represents the count of unique letters in a word. 'Tokens' represents the total number of letters (length) in a word. For 'squeegee', the unique letters are s, q, u, e, g, totaling 5 unique letters."
+  },
+  {
+    "question_id": "G1_d",
+    "answer": "8",
+    "reasoning": "Analyzed the provided table to identify the patterns for 'Types' and 'Tokens'. 'Types' represents the count of unique letters in a word. 'Tokens' represents the total number of letters (length) in a word. For 'squeegee', the total number of letters is 8."
+  },
+  {
+    "question_id": "G1_e",
+    "answer": "a",
+    "reasoning": "The 'Tokens' value is 1, meaning the word must have a length of 1. The 'Types' value is (f). A single-letter English word like 'a' fits the length requirement. Therefore, the word is 'a'."
+  },
+  {
+    "question_id": "G1_f",
+    "answer": "1",
+    "reasoning": "The 'Tokens' value is 1, meaning the word must have a length of 1. If the word is 'a' (from G1_e), then the number of unique letters ('Types') is 1 (the letter 'a' itself)."
+  },
+  {
+    "question_id": "G1_g",
+    "answer": "cat",
+    "reasoning": "The 'Types' value is 3 and the 'Tokens' value is 3. This means the word must have 3 unique letters and a total length of 3. The English word 'cat' (c, a, t) fits these criteria perfectly."
+  },
+  {
+    "question_id": "G1_h",
+    "answer": "computer",
+    "reasoning": "The 'Types' value is 8 and the 'Tokens' value is 8. This means the word must have 8 unique letters and a total length of 8 (all letters must be unique). The English word 'computer' (c, o, m, p, u, t, e, r) fits these criteria perfectly."
+  },
+  {
+    "question_id": "G1_i",
+    "answer": "noon",
+    "reasoning": "The 'Types' value is 2 and the 'Tokens' value is 4. This means the word must have 2 unique letters and a total length of 4. The English word 'noon' (n, o) fits these criteria (2 unique letters, 4 total letters)."
+  },
+  {
+    "question_id": "G1_j",
+    "answer": "success",
+    "reasoning": "The 'Types' value is 4 and the 'Tokens' value is 7. This means the word must have 4 unique letters and a total length of 7. The English word 'success' (s, u, c, e) fits these criteria (4 unique letters, 7 total letters)."
+  },
+  {
+    "question_id": "G1_k",
+    "answer": "unpredictably",
+    "reasoning": "The 'Types' value is 13 and the 'Tokens' value is 13. This means the word must have 13 unique letters and a total length of 13. The English word 'unpredictably' (u, n, p, r, e, d, i, c, t, a, b, l, y) fits these criteria perfectly. This word was also mentioned in the problem description, making it a strong candidate."
+  },
+  {
+    "question_id": "G2_1",
+    "answer": "FAULSA",
+    "reasoning": "The corrupted word is 'LSFAFUALUSA'. The correct Shilha word must have 5 unique letters ('Types') and be 6 letters long ('Tokens'). By deleting letters, the subsequence 'FAULSA' can be extracted from L S **F A** F **U** A **L** U **S A** (indices: F(2), A(3), U(5), L(7), S(9), A(10)). 'FAULSA' has F, A, U, L, S (5 unique letters) and a length of 6, matching the criteria."
+  },
+  {
+    "question_id": "G2_2",
+    "answer": "AFLULQS",
+    "reasoning": "The corrupted word is 'ZPSIAFLULRUQSNTFS'. The correct Shilha word must have 6 unique letters ('Types') and be 7 letters long ('Tokens'). By deleting letters, the subsequence 'AFLULQS' can be extracted from ZPS**IAFLULR**UQ**S**NTFS (indices: A(3), F(4), L(6), U(7), L(8), Q(12), S(13)). 'AFLULQS' has A, F, L, U, Q, S (6 unique letters) and a length of 7, matching the criteria."
+  },
+  {
+    "question_id": "G2_3",
+    "answer": "SALFUALT",
+    "reasoning": "The corrupted word is 'QZPTLSALFUALRUSTFS'. The correct Shilha word must have 6 unique letters ('Types') and be 8 letters long ('Tokens'). By deleting letters, the subsequence 'SALFUALT' can be extracted from QZPTL**S**A**LFUALRU**S**TFS** (indices: S(5), A(6), L(7), F(8), U(9), A(10), L(11), T(15)). 'SALFUALT' has S, A, L, F, U, T (6 unique letters) and a length of 8, matching the criteria."
+  },
+  {
+    "question_id": "G2_4",
+    "answer": "AILFLUSIN",
+    "reasoning": "The corrupted word is 'QZPSTAILFLUSLQRUSINTFS'. The correct Shilha word must have 7 unique letters ('Types') and be 9 letters long ('Tokens'). By deleting letters, the subsequence 'AILFLUSIN' can be extracted from QZPST**AILFLUS**LQR**USIN**TFS (indices: A(6), I(7), L(8), F(9), L(10), U(11), S(12), I(19), N(20)). 'AILFLUSIN' has A, I, L, F, U, S, N (7 unique letters) and a length of 9, matching the criteria."
+  },
+  {
+    "question_id": "G2_5",
+    "answer": "ATBIR",
+    "reasoning": "The corrupted word is 'AAAATTBBBBIRRRRRR'. The correct Shilha word must have 5 unique letters ('Types') and be 5 letters long ('Tokens'). By deleting letters, the subsequence 'ATBIR' can be extracted from **A**AAA**T**TBB**B****I****R**RRRR (indices: A(0), T(4), B(5), I(9), R(10)). 'ATBIR' has A, T, B, I, R (5 unique letters) and a length of 5, matching the criteria."
+  },
+  {
+    "question_id": "G2_6",
+    "answer": "ITBIRN",
+    "reasoning": "The corrupted word is 'IIITBIIRINIII'. The correct Shilha word must have 5 unique letters ('Types') and be 6 letters long ('Tokens'). By deleting letters, the subsequence 'ITBIRN' can be extracted from I I **I** **T** **B** I I **R** I **N** I I I (indices: I(0), T(3), B(4), I(5), R(7), N(9)). 'ITBIRN' has I, T, B, R, N (5 unique letters) and a length of 6, matching the criteria."
+  },
+  {
+    "question_id": "G2_7",
+    "answer": "TATBIRT",
+    "reasoning": "The corrupted word is 'TATBIRT'. The correct Shilha word must have 5 unique letters ('Types') and be 7 letters long ('Tokens'). The word 'TATBIRT' itself has T, A, B, I, R (5 unique letters) and a length of 7, matching the criteria. No letters need to be deleted."
+  },
+  {
+    "question_id": "G2_8",
+    "answer": "TITBIRIN",
+    "reasoning": "The corrupted word is 'IITITBIRINI'. The correct Shilha word must have 5 unique letters ('Types') and be 8 letters long ('Tokens'). By deleting letters, the subsequence 'TITBIRIN' can be extracted from I I **T** I **T** **B** I **R** I **N** I (indices: T(2), I(3), T(4), B(5), I(6), R(7), I(8), N(9)). 'TITBIRIN' has T, I, B, R, N (5 unique letters) and a length of 8, matching the criteria."
+  },
+  {
+    "question_id": "G2_9",
+    "answer": "AFUNAS",
+    "reasoning": "The corrupted word is 'AMFGUQNARS'. The correct Shilha word must have 5 unique letters ('Types') and be 6 letters long ('Tokens'). By deleting letters, the subsequence 'AFUNAS' can be extracted from **A**MF**G****U****Q****N****A**R**S** (indices: A(0), F(2), U(4), N(6), A(7), S(9)). 'AFUNAS' has A, F, U, N, S (5 unique letters) and a length of 6, matching the criteria."
+  },
+  {
+    "question_id": "G2_10",
+    "answer": "IFUNASN",
+    "reasoning": "The corrupted word is 'IFUNASN'. The correct Shilha word must have 6 unique letters ('Types') and be 7 letters long ('Tokens'). The word 'IFUNASN' itself has I, F, U, N, A, S (6 unique letters) and a length of 7, matching the criteria. No letters need to be deleted."
+  },
+  {
+    "question_id": "G2_11",
+    "answer": "TAFUNAST",
+    "reasoning": "The corrupted word is 'ZSPTACFHUXNAVSTLQF'. The correct Shilha word must have 6 unique letters ('Types') and be 8 letters long ('Tokens'). By deleting letters, the subsequence 'TAFUNAST' can be extracted from ZSP**T**A**C**F**H**U**XNAVSTLQF** (indices: T(3), A(4), F(6), U(8), N(11), A(12), S(13), T(15)). 'TAFUNAST' has T, A, F, U, N, S (6 unique letters) and a length of 8, matching the criteria."
+  },
+  {
+    "question_id": "G2_12",
+    "answer": "TIFUNASIN",
+    "reasoning": "The corrupted word is 'TIFUNASIN'. The correct Shilha word must have 7 unique letters ('Types') and be 9 letters long ('Tokens'). The word 'TIFUNASIN' itself has T, I, F, U, N, A, S (7 unique letters) and a length of 9, matching the criteria. No letters need to be deleted."
+  },
+  {
+    "question_id": "G2_13",
+    "answer": "ADRAR",
+    "reasoning": "The corrupted word is 'QPZFIATPNDTNRTLNARTRTNR'. The correct Shilha word must have 3 unique letters ('Types') and be 5 letters long ('Tokens'). By deleting letters, the subsequence 'ADRAR' can be extracted from QPZFI**A**TPN**D**TNRTLN**AR**TRTNR (indices: A(7), D(10), R(12), A(16), R(17)). 'ADRAR' has A, D, R (3 unique letters) and a length of 5, matching the criteria."
+  },
+  {
+    "question_id": "G2_14",
+    "answer": "IDRARN",
+    "reasoning": "The corrupted word is 'QZPIBXDZWRPLANTSRLYXNFS'. The correct Shilha word must have 5 unique letters ('Types') and be 6 letters long ('Tokens'). By deleting letters, the subsequence 'IDRARN' can be extracted from QZP**I**BXDZWRPL**A**NT**S**R**LYXN**F**S (indices: I(3), D(8), R(9), A(10), R(14), N(19)). 'IDRARN' has I, D, R, A, N (5 unique letters) and a length of 6, matching the criteria."
+  },
+  {
+    "question_id": "G2_15",
+    "answer": "TADRART",
+    "reasoning": "The corrupted word is 'QPZNTIIAIPNDNILRANRNITNFS'. The correct Shilha word must have 4 unique letters ('Types') and be 7 letters long ('Tokens'). By deleting letters, the subsequence 'TADRART' can be extracted from QPZN**T**II**A**I**PNDNILRANR**N**IT**NFS** (indices: T(4), A(7), D(13), R(16), A(17), R(18), T(21)). 'TADRART' has T, A, D, R (4 unique letters) and a length of 7, matching the criteria."
+  },
+  {
+    "question_id": "G2_16",
+    "answer": "TIDRARIN",
+    "reasoning": "The corrupted word is 'QPZTFMITPDNMRLTANFRSHILYNV'. The correct Shilha word must have 6 unique letters ('Types') and be 8 letters long ('Tokens'). By deleting letters, the subsequence 'TIDRARIN' can be extracted from QPZ**T**F**MI**TP**DNMRLTANFRSHILYNV** (indices: T(3), I(6), D(8), R(10), A(16), R(17), I(21), N(25)). 'TIDRARIN' has T, I, D, R, A, N (6 unique letters) and a length of 8, matching the criteria."
+  },
+  {
+    "question_id": "G3_l",
+    "answer": "TATBIRT",
+    "reasoning": "Based on the analysis in G2, 'female pigeon' translates to the Shilha word 'TATBIRT'."
+  },
+  {
+    "question_id": "G3_m",
+    "answer": "ATBIR",
+    "reasoning": "Based on the analysis in G2, 'male pigeon' translates to the Shilha word 'ATBIR'."
+  },
+  {
+    "question_id": "G3_n",
+    "answer": "TAFUNAST",
+    "reasoning": "Based on the analysis in G2, 'cow (female bovine)' translates to the Shilha word 'TAFUNAST'."
+  },
+  {
+    "question_id": "G3_o",
+    "answer": "ADRAR",
+    "reasoning": "Based on the analysis in G2, 'mountain (masculine)' translates to the Shilha word 'ADRAR'."
+  },
+  {
+    "question_id": "G3_p",
+    "answer": "TIDRARIN",
+    "reasoning": "Based on the analysis in G2, 'mountains (feminine)' translates to the Shilha word 'TIDRARIN'."
+  }
+]

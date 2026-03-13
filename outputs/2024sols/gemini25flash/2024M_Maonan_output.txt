@@ -1,0 +1,330 @@
+Model: gemini-2.5-flash
+Generation Time: 180.34 seconds
+Timestamp: 2025-11-30 02:34:14
+================================================================================
+
+Here's a step-by-step reasoning process and the final answers in JSON format:
+
+**Reasoning Process:**
+
+**Step 1: Initial Data Scan and Morpheme Identification**
+
+I'll start by looking for easily identifiable words or recurring patterns between the Maonan and English lists, keeping in mind the miscellaneous notes.
+
+*   **Person words:**
+    *   `M. Maonan person` and `K. jealous person`. Looking at the Maonan words, `?ai.na:n` (19) and `?ai.nda.la:n` (20) share `?ai` and `na:n`.
+    *   Hypothesis: `?ai` = Maonan, `na:n` = person. This would make `?ai.na:n` (19) = M. `Maonan person`.
+    *   Then, `?ai.nda.la:n` (20) = K. `jealous person`. This implies `nda.la` = jealous.
+    *   These seem very solid.
+        *   **Morphemes:** `?ai` = Maonan, `na:n` = person, `nda.la` = jealous.
+
+*   **Chicken/Bird words:**
+    *   `A. bad chicken`, `O. pheasant`, `P. hens (female chickens)`.
+    *   Maonan words containing `nɔk`: `na.nɔk` (11), `nɔk.ka:i` (16), `nɔk.?ɛp la:n` (17).
+    *   Hypothesis: `nɔk` = chicken/bird.
+    *   `nɔk.ka:i` (16) looks like a good match for `P. hens (female chickens)`. This implies `ka:i` = female (for chicken) / hen.
+    *   `na.nɔk` (11) for `O. pheasant`. Pheasants are wild birds; `na` could be a modifier for wild/pheasant.
+    *   `nɔk.?ɛp la:n` (17) for `A. bad chicken`. This implies `?ɛp la:n` = bad.
+    *   These also seem solid.
+        *   **Morphemes:** `nɔk` = chicken/bird, `ka:i` = female (chicken)/hen, `?ɛp la:n` = bad, `na` (in `na.nɔk`) = pheasant modifier (or part of compound).
+
+*   **Pig words:**
+    *   `B. big pig`, `Q. sow (a female pig)`.
+    *   Maonan words with `mu` or `ma`: `də.ma` (5), `ni.mu` (15), `də.mu.ni` (7).
+    *   Hypothesis: `mu` or `ma` means pig.
+    *   `ni.mu` (15) for `Q. sow (a female pig)`. This implies `mu` = pig, and `ni` = female (for pig) / sow.
+    *   `də.ma` (5) for `B. big pig`. This implies `ma` = pig, and `də` = big.
+    *   It seems both `mu` and `ma` mean pig, and `ni` and `ka:i` are species-specific female markers. `də` = big seems consistent.
+        *   **Morphemes:** `mu` = pig, `ma` = pig, `ni` = female (pig)/sow, `də` = big.
+
+*   **Spray words:**
+    *   `R. to spray resolutely`, `T. water sprayer`.
+    *   Maonan words with `put`: `put.pɔk` (18), `dat.put.nam` (4).
+    *   Hypothesis: `put` = spray.
+    *   `put.pɔk` (18) for `R. to spray resolutely`. This implies `pɔk` = resolutely.
+    *   `dat.put.nam` (4) for `T. water sprayer`. This implies `dat` = water, and `nam` = sprayer-tool suffix.
+        *   **Morphemes:** `put` = to spray, `pɔk` = resolutely, `dat` = water, `nam` (in `dat.put.nam`) = sprayer-tool suffix.
+
+*   **Water/Tear words:**
+    *   `S. tear (liquid released when crying)`.
+    *   `dat.na` (2). We have `dat` = water/liquid from `dat.put.nam`.
+    *   Hypothesis: `dat.na` (2) = S. `tear`. This implies `na` (in `dat.na`) = tear/flow.
+        *   **Morphemes:** `na` (in `dat.na`) = tear/flow.
+
+*   **Mallard words:**
+    *   `L. red mallard`.
+    *   `nam.nda` (12). From notes, "A mallard is a species of duck."
+    *   Hypothesis: `nam.nda` (12) = L. `red mallard`. This implies `nam` (in `nam.nda`) = mallard/duck, and `nda` = red.
+    *   *Conflict:* `nam` (short 'a') appears as 'sprayer-tool suffix' and 'mallard'. I'll accept this as a homonym or a context-dependent meaning.
+        *   **Morphemes:** `nam` (in `nam.nda`) = mallard/duck, `nda` = red.
+
+*   **Elephant/Dog words:**
+    *   `G. elephant`, `J. dog`. These are common distinct animal names.
+    *   `ni.gwi.dak` (14) is a unique, longer animal name: `G. elephant`.
+    *   `hi:u.gwi` (8) is another unique animal name: `J. dog`.
+        *   **Morphemes:** `ni.gwi.dak` = elephant (compound), `hi:u.gwi` = dog (compound).
+
+*   **Teeth/Molar words:**
+    *   `I. good teeth`, `N. molar`. Note: "A molar is a large tooth".
+    *   `ni.dzja:ŋ` (13) is a good candidate for `N. molar`. This implies `dzja:ŋ` = molar/tooth, and `ni` is a prefix.
+    *   `kjɔŋ.hi:u da:i` (9) is a good candidate for `I. good teeth`. This implies `kjɔŋ` = good, `da:i` = teeth.
+    *   *Consistency check for `hi:u`*: `hi:u.gwi` = dog. If `hi:u` = mouth/oral cavity, then `hi:u.gwi` could be "mouth animal" (dog), and `kjɔŋ.hi:u da:i` could be "good mouth teeth". This explanation works well.
+        *   **Morphemes:** `dzja:ŋ` = molar/tooth, `kjɔŋ` = good, `da:i` = teeth, `hi:u` = mouth/oral cavity, `gwi` = animal (deduced from `hi:u.gwi` and `ni.gwi.dak` using `hi:u`=mouth).
+
+**Step 2: Consolidating Confirmed M1 Matches (15 out of 20)**
+
+1.  16. `nɔk.ka:i` = P. `hens (female chickens)`
+2.  11. `na.nɔk` = O. `pheasant`
+3.  17. `nɔk.?ɛp la:n` = A. `bad chicken`
+4.  15. `ni.mu` = Q. `sow (a female pig)`
+5.  5. `də.ma` = B. `big pig`
+6.  18. `put.pɔk` = R. `to spray resolutely`
+7.  4. `dat.put.nam` = T. `water sprayer`
+8.  2. `dat.na` = S. `tear`
+9.  12. `nam.nda` = L. `red mallard`
+10. 19. `?ai.na:n` = M. `Maonan person`
+11. 20. `?ai.nda.la:n` = K. `jealous person`
+12. 14. `ni.gwi.dak` = G. `elephant`
+13. 8. `hi:u.gwi` = J. `dog`
+14. 13. `ni.dzja:ŋ` = N. `molar`
+15. 9. `kjɔŋ.hi:u da:i` = I. `good teeth`
+
+**Step 3: Matching the Remaining 5 for M1**
+
+Remaining Maonan: 1. `da:i.na`, 3. `dat.tan`, 6. `də.ka:i na:m`, 7. `də.mu.ni`, 10. `kjɔŋ.ka:i.ni`
+Remaining English: C. `bull (a male buffalo)`, D. `clothing`, E. `delicious`, F. `to eat resolutely`, H. `food`.
+
+*   **`kjɔŋ.ka:i.ni` (10) vs E. `delicious`:** `kjɔŋ` = good. `ka:i` = female chicken. `ni` = female pig. "Good hen sow" as `delicious` is plausible as an idiomatic phrase, meaning 'good food' or 'good taste'. This seems the most likely match for E. `delicious`.
+    *   10. `kjɔŋ.ka:i.ni` = E. `delicious`.
+
+*   **`də.mu.ni` (7) vs H. `food`:** `də` = big, `mu` = pig, `ni` = female (pig). `big sow`. A big sow (female pig) can be a source of `food` (pork). This is a plausible match.
+    *   7. `də.mu.ni` = H. `food`.
+
+*   **Remaining Maonan:** 1. `da:i.na`, 3. `dat.tan`, 6. `də.ka:i na:m`
+*   **Remaining English:** C. `bull (a male buffalo)`, D. `clothing`, F. `to eat resolutely`.
+
+*   **`də.ka:i na:m` (6) vs C. `bull (a male buffalo)`:** `də`=big, `ka:i`=female (chicken). The hint in M3 says "buffalo cows are female buffalo", suggesting `na:m` (long 'a') might mean buffalo. If so, `də.ka:i na:m` would be "big female buffalo", which contradicts "bull (a male buffalo)". However, given the requirement to map all 20 words and phrases, `də.ka:i na:m` must be C. `bull`. This implies `də.ka:i na:m` is an idiomatic compound for `bull`, overriding its literal morpheme meanings.
+    *   6. `də.ka:i na:m` = C. `bull (a male buffalo)`.
+
+*   **`dat.tan` (3) vs F. `to eat resolutely`:** `dat`=water. `tan` (from M2's `tan.tɔk` suggests `tan`=eat, `tɔk`=resolutely). So, `water-eat`. If `dat.tan` = `to eat resolutely`, it would be an idiom. This is plausible given the idiomicity required for the `bull` translation.
+    *   3. `dat.tan` = F. `to eat resolutely`.
+
+*   **`da:i.na` (1) vs D. `clothing`:** `da:i`=teeth, `na`=tear. `teeth-tear`. This is the only remaining option for `D. clothing`. This must be an idiom.
+    *   1. `da:i.na` = D. `clothing`.
+
+**Step 4: Analyzing Patterns and Information Gained (Pre-M2/M3/M4/M5)**
+
+*   **Morpheme Consistency:** Many morphemes (e.g., `nɔk`, `mu`, `dat`, `put`, `kjɔŋ`, `də`) are consistently identifiable across different compounds.
+*   **Compound Structure:** Words are formed by compounding smaller morphemes (e.g., adjective-noun, verb-adverb).
+*   **Homonymy/Context:** Some morphemes appear to be homonymous (e.g., `nam` (mallard) vs `nam` (sprayer-tool suffix)) or have context-dependent meanings.
+*   **Idioms:** Several phrases behave as idioms (`də.ka:i na:m` = bull, `dat.tan` = to eat resolutely, `da:i.na` = clothing), whose meanings cannot be derived from their constituent morphemes directly.
+*   **Vowel Length:** The `:` mark indicates vowel length, which distinguishes words (e.g., `nam` vs `na:m` from M2/M3 context).
+
+**Step 5: Addressing M2, M3, M4, M5**
+
+**M2. Translate into English: kjɔŋ.mu.dak, nda da:i, tan.tɔk, na:m.tan**
+I will use the compositional morpheme meanings derived (even if M1 words were idiomatic).
+*   **`kjɔŋ.mu.dak`**: `kjɔŋ` = delicious/good, `mu` = pig. `dak` appears in `ni.gwi.dak` (elephant), so it's a part of an animal name. However, `də.mu.ni` (7) was "food", referring to pork. So `dak` here could mean "meat" or be a suffix indicating "pork".
+    *   Translation: `delicious pork`.
+*   **`nda da:i`**: `nda` = red, `da:i` = teeth.
+    *   Translation: `red teeth`.
+*   **`tan.tɔk`**: `tan` = eat (from M1.3 F, and `tan.tɔk` structure). `tɔk` = resolutely (by analogy with `pɔk` in `put.pɔk` = to spray resolutely).
+    *   Translation: `to eat resolutely`.
+*   **`na:m.tan`**: The M3 hint "buffalo cows are female buffalo" strongly implies `na:m` (long 'a') is `buffalo`. `tan` = eat.
+    *   Translation: `buffalo eat`.
+
+**M3. Translate into Maonan:** `eyes`, `to spray`, `buffalo cows`, `wearer`, `domestic/farmyard duck`
+*   **`eyes`**: M4 refers to `dɔ.ŋa:n` and `nɔk.ŋa:n`. This implies `ŋa:n` is `eyes`.
+    *   Translation: `ŋa:n`
+*   **`to spray`**: `put` (from `put.pɔk`).
+    *   Translation: `put`
+*   **`buffalo cows`**: From M3 hint, `female buffalo`. `ka:i` = female (from `nɔk.ka:i`). `na:m` = buffalo (from M2 deduction).
+    *   Translation: `ka:i na:m`
+*   **`wearer`**: `da:i.na` (1) was `clothing`. `na` was `tear` in `dat.na`. `na` could also mean `wearer` as a homonym, or be part of the `clothing` idiom. Given the need to translate `wearer`, I'll use `na` as a general particle for 'wear/person doing X'.
+    *   Translation: `na`
+*   **`domestic/farmyard duck`**: `nam` (short 'a') = mallard/duck (from `nam.nda`). `domestic/farmyard` is not a clear modifier. The base `nam` should suffice for `duck`.
+    *   Translation: `nam`
+
+**M4. In a Maonan village, you see the following: dɔ.ŋa:n and nɔk.ŋa:n. What is the difference between them? Suggest a possible English translation for nɔk.ŋa:n.**
+*   `dɔ.ŋa:n`: `dɔ` is likely `də` (big). `ŋa:n` is `eyes` (from M3 deduction). So, `big eyes`.
+*   `nɔk.ŋa:n`: `nɔk` = chicken (from `nɔk.ka:i`). `ŋa:n` = `eyes`. So, `chicken eyes`.
+*   **Difference:** `dɔ.ŋa:n` means `big eyes`, while `nɔk.ŋa:n` means `chicken eyes`. The difference lies in the first morpheme, which modifies `eyes` with an adjective (`big`) versus a noun (`chicken`), implying a characteristic or literal association.
+*   **English translation for `nɔk.ŋa:n`**: `chicken eyes`.
+
+**M5. Explain what you have observed about Maonan grammar and the way words and phrases are formed.**
+1.  **Compounding & Morphemic Structure**: Maonan extensively forms words and phrases by combining smaller morphemes. Examples include adjective-noun compounds (`də.ma` - big pig), verb-adverb phrases (`put.pɔk` - to spray resolutely), and complex noun compounds (`ni.gwi.dak` - elephant).
+2.  **Modifier Order**: Adjectives and other modifiers typically precede nouns (e.g., `də.ma` - big pig). However, for terms like `bad chicken` (`nɔk.?ɛp la:n`) and `red mallard` (`nam.nda`), the modifier follows the noun, indicating Noun-Adjective order is also prevalent or indicates specific types of modifiers.
+3.  **Verb Phrase Structure**: Verb phrases often consist of a verb followed by an adverb, as seen with `put.pɔk` (to spray resolutely) and `tan.tɔk` (to eat resolutely), where `pɔk` and `tɔk` function as adverbs of manner.
+4.  **Homonymy**: There is evidence of homonymous morphemes, where the same phonetic form can have different meanings (e.g., `nam` meaning 'mallard/duck' in `nam.nda` and 'sprayer-tool suffix' in `dat.put.nam`; `na` meaning 'tear' in `dat.na` and potentially 'wearer' for M3). The absence of tones in the writing system might contribute to this.
+5.  **Vowel Length Significance**: The colon (:) mark indicating vowel length (e.g., `nam` vs `na:m`) is phonemically significant and distinguishes different morphemes or words.
+6.  **Specific Gender Markers**: The language uses specific markers to denote the female gender for different animal species, such as `ka:i` for chickens (`nɔk.ka:i` - hens) and `ni` for pigs (`ni.mu` - sow), rather than a single generic 'female' morpheme.
+7.  **Idiomatic Expressions**: Some phrases appear to have idiomatic meanings that are not directly compositional from their constituent morphemes. For instance, `də.ka:i na:m` meaning `bull (a male buffalo)` despite literal parts suggesting 'big female chicken/cow buffalo', or `da:i.na` meaning `clothing` ('teeth-tear'). This highlights that direct morphological translation may not always yield the correct meaning for all multi-morphemic phrases.
+
+---
+
+**Final Answers (JSON Array):**
+
+```json
+[
+  {
+    "question_id": "M1_1",
+    "answer": "D",
+    "reasoning": "Morphemes `da:i` (teeth) and `na` (tear) are known, but `da:i.na` does not literally translate to `clothing`. As the last remaining English word for the last remaining Maonan word after other deductions, it must be an idiomatic translation of 'clothing'."
+  },
+  {
+    "question_id": "M1_2",
+    "answer": "S",
+    "reasoning": "`dat.na`: `dat` means 'water'/'liquid' (from `dat.put.nam` - water sprayer). `na` is deduced as 'tear'/'flow' (liquid) given the context of 'tear (liquid released when crying)'."
+  },
+  {
+    "question_id": "M1_3",
+    "answer": "F",
+    "reasoning": "`dat.tan`: `dat` means 'water'. From M2 and general structure, `tan` likely means 'eat'. `tan.tɔk` translates to 'to eat resolutely'. If `dat.tan` is 'to eat resolutely', it must be an idiom where 'water-eat' means 'to eat resolutely'."
+  },
+  {
+    "question_id": "M1_4",
+    "answer": "T",
+    "reasoning": "`dat.put.nam`: `dat` = 'water', `put` = 'to spray' (from `put.pɔk` - to spray resolutely). `nam` functions as a suffix for the tool. This composition perfectly matches 'water sprayer'."
+  },
+  {
+    "question_id": "M1_5",
+    "answer": "B",
+    "reasoning": "`də.ma`: `də` = 'big'. `ma` = 'pig' (by comparison with `ni.mu` - sow). This directly translates to 'big pig'."
+  },
+  {
+    "question_id": "M1_6",
+    "answer": "C",
+    "reasoning": "`də.ka:i na:m`: `də` = 'big', `ka:i` = 'female' (chicken). `na:m` (long a) could be 'buffalo' from M3 hint. However, `big female buffalo` contradicts `bull (a male buffalo)`. Given the need to match all M1 items, this must be an idiomatic translation for 'bull'."
+  },
+  {
+    "question_id": "M1_7",
+    "answer": "H",
+    "reasoning": "`də.mu.ni`: `də` = 'big', `mu` = 'pig', `ni` = 'female' (pig). So, `big sow`. This is a plausible source of 'food' (pork), making it a likely match for 'food'."
+  },
+  {
+    "question_id": "M1_8",
+    "answer": "J",
+    "reasoning": "`hi:u.gwi`: This is a distinct animal name. `hi:u` = 'mouth', `gwi` = 'animal'. Matches 'dog'."
+  },
+  {
+    "question_id": "M1_9",
+    "answer": "I",
+    "reasoning": "`kjɔŋ.hi:u da:i`: `kjɔŋ` = 'good', `hi:u` = 'mouth', `da:i` = 'teeth'. This composition directly translates to 'good mouth teeth', which corresponds to 'good teeth'."
+  },
+  {
+    "question_id": "M1_10",
+    "answer": "E",
+    "reasoning": "`kjɔŋ.ka:i.ni`: `kjɔŋ` = 'good', `ka:i` = 'female chicken', `ni` = 'female pig'. 'Good hen sow' as an idiom for 'delicious' is plausible, as 'good' often implies 'delicious' for food-related items. It fits the remaining options best."
+  },
+  {
+    "question_id": "M1_11",
+    "answer": "O",
+    "reasoning": "`na.nɔk`: `nɔk` = 'chicken'/'bird'. `na` is a modifier. Pheasant is a wild bird, so this is a plausible compound word for 'pheasant'."
+  },
+  {
+    "question_id": "M1_12",
+    "answer": "L",
+    "reasoning": "`nam.nda`: `nam` = 'mallard'/'duck'. `nda` = 'red'. This directly translates to 'red mallard'."
+  },
+  {
+    "question_id": "M1_13",
+    "answer": "N",
+    "reasoning": "`ni.dzja:ŋ`: 'Molar' is a specific type of tooth. `ni.dzja:ŋ` is a unique word among those containing `ni` and matches 'molar'."
+  },
+  {
+    "question_id": "M1_14",
+    "answer": "G",
+    "reasoning": "`ni.gwi.dak`: This is a distinct, longer animal name. It matches 'elephant'."
+  },
+  {
+    "question_id": "M1_15",
+    "answer": "Q",
+    "reasoning": "`ni.mu`: `mu` = 'pig'. `ni` = 'female' (for pig). This directly translates to 'female pig' or 'sow'."
+  },
+  {
+    "question_id": "M1_16",
+    "answer": "P",
+    "reasoning": "`nɔk.ka:i`: `nɔk` = 'chicken'. `ka:i` = 'female' (for chicken). This directly translates to 'female chickens' or 'hens'."
+  },
+  {
+    "question_id": "M1_17",
+    "answer": "A",
+    "reasoning": "`nɔk.?ɛp la:n`: `nɔk` = 'chicken'. `?ɛp la:n` is deduced as 'bad'. This directly translates to 'bad chicken'."
+  },
+  {
+    "question_id": "M1_18",
+    "answer": "R",
+    "reasoning": "`put.pɔk`: `put` = 'to spray'. `pɔk` = 'resolutely'. This directly translates to 'to spray resolutely'."
+  },
+  {
+    "question_id": "M1_19",
+    "answer": "M",
+    "reasoning": "`?ai.na:n`: `?ai` = 'Maonan'. `na:n` = 'person'. This directly translates to 'Maonan person'."
+  },
+  {
+    "question_id": "M1_20",
+    "answer": "K",
+    "reasoning": "`?ai.nda.la:n`: `?ai` = 'Maonan'. `na:n` = 'person'. `nda.la` is deduced as 'jealous'. This directly translates to 'Maonan jealous person', or 'jealous person'."
+  },
+  {
+    "question_id": "M2_1",
+    "answer": "delicious pork",
+    "reasoning": "`kjɔŋ` = delicious/good (from M1.10). `mu` = pig (from M1.15). `dak` likely denotes 'pork' or 'meat' in this context (by comparison with M1.7 `də.mu.ni` as 'food'/'pork'). Thus, 'delicious pork'."
+  },
+  {
+    "question_id": "M2_2",
+    "answer": "red teeth",
+    "reasoning": "`nda` = red (from M1.12 `nam.nda`). `da:i` = teeth (from M1.9 `kjɔŋ.hi:u da:i`). Thus, 'red teeth'."
+  },
+  {
+    "question_id": "M2_3",
+    "answer": "to eat resolutely",
+    "reasoning": "`tan` = eat (from M1.3). `tɔk` = resolutely (by analogy with `pɔk` from M1.18, and the verb-adverb structure). Thus, 'to eat resolutely'."
+  },
+  {
+    "question_id": "M2_4",
+    "answer": "buffalo eat",
+    "reasoning": "`na:m` (long 'a') = buffalo (deduced from M3 hint 'buffalo cows are female buffalo', implying `na:m` is buffalo). `tan` = eat (from M1.3 and M2.3). Thus, 'buffalo eat'."
+  },
+  {
+    "question_id": "M3_1",
+    "answer": "ŋa:n",
+    "reasoning": "From M4, `dɔ.ŋa:n` and `nɔk.ŋa:n` refer to types of eyes. `ŋa:n` is deduced as 'eyes'."
+  },
+  {
+    "question_id": "M3_2",
+    "answer": "put",
+    "reasoning": "`put` = to spray (from M1.18 `put.pɔk` - to spray resolutely)."
+  },
+  {
+    "question_id": "M3_3",
+    "answer": "ka:i na:m",
+    "reasoning": "M3 note states 'buffalo cows are female buffalo'. `ka:i` = female (from M1.16 `nɔk.ka:i`). `na:m` (long 'a') = buffalo (deduced from M2.4 and M3 hint). Thus, `female buffalo` = `ka:i na:m`."
+  },
+  {
+    "question_id": "M3_4",
+    "answer": "na",
+    "reasoning": "M1.1 `da:i.na` means 'clothing'. `na` appears as 'tear' in `dat.na`. Given the need to translate 'wearer' and its association with 'clothing', `na` is taken as a homonym or generalized particle for 'wear/person who wears'."
+  },
+  {
+    "question_id": "M3_5",
+    "answer": "nam",
+    "reasoning": "`nam` (short 'a') = mallard/duck (from M1.12 `nam.nda` - red mallard). The modifier 'domestic/farmyard' is not directly provided, so the base word for 'duck' is used."
+  },
+  {
+    "question_id": "M4_1",
+    "answer": "The difference between dɔ.ŋa:n and nɔk.ŋa:n lies in their first morpheme. dɔ.ŋa:n means 'big eyes' (dɔ = big), while nɔk.ŋa:n means 'chicken eyes' (nɔk = chicken). The first morpheme specifies a characteristic (size) versus an association (species).",
+    "reasoning": "`dɔ` is variant of `də` = 'big' (from M1.5). `ŋa:n` = 'eyes' (from M3.1). So `dɔ.ŋa:n` = 'big eyes'. `nɔk` = 'chicken' (from M1.16). `ŋa:n` = 'eyes'. So `nɔk.ŋa:n` = 'chicken eyes'. The difference is the modifying element."
+  },
+  {
+    "question_id": "M4_2",
+    "answer": "chicken eyes",
+    "reasoning": "`nɔk` = 'chicken' and `ŋa:n` = 'eyes', so the direct translation is 'chicken eyes'."
+  },
+  {
+    "question_id": "M5_1",
+    "answer": "1. Compounding & Morphemic Structure: Maonan forms words by combining morphemes (e.g., adjective-noun `də.ma` (big pig), verb-adverb `put.pɔk` (to spray resolutely), complex nouns like `ni.gwi.dak` (elephant)).\n2. Modifier Order: Adjectives can precede (`də.ma` - big pig) or follow (`nɔk.?ɛp la:n` - bad chicken, `nam.nda` - red mallard) nouns. Verb adverbs follow verbs (`put.pɔk`).\n3. Homonymy: Some morphemes appear homonymous (e.g., `nam` (mallard) vs `nam` (sprayer-tool suffix); `na` (tear) vs `na` (wearer)). Vowel length (e.g., `nam` vs `na:m`) distinguishes other words.\n4. Specific Gender Markers: Female markers are species-specific (`ka:i` for chickens, `ni` for pigs) rather than general.\n5. Idiomatic Expressions: Some phrases have meanings not directly compositional from their morphemes (e.g., `də.ka:i na:m` (bull), `dat.tan` (to eat resolutely), `da:i.na` (clothing)).",
+    "reasoning": "This synthesis is based on observations made during the process of matching and translating words. It covers compounding, modifier order, homonymy, vowel length, specific grammatical features like gender markers, and the presence of idiomatic expressions."
+  }
+]
+```

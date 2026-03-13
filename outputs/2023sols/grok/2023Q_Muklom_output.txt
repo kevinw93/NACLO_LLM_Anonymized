@@ -1,0 +1,47 @@
+Model: grok-4-fast-reasoning
+Generation Time: 158.39 seconds
+Timestamp: 2026-02-03 19:09:30
+================================================================================
+
+[
+  {
+    "question_id": "Q1_1",
+    "answer": "I wear shoes.",
+    "reasoning": "Analyzing patterns from examples, sentence 10 'khat saa qhot ng' translates to 'I wear a skirt,' where 'khat saa' is 'a skirt' and 'qhot ng' indicates 'I wear.' Similarly, 'shoes' is 'jaa qhong' from examples 11, 13, 16. Sentence 17 'jâa qhông qhong ng' follows the same structure with toned forms for 'I wear shoes,' paralleling the I-subject ending 'ng' and reduplication-like form for the verb with the object 'shoes.' No indefinite article is used for shoes in example 16, so 'I wear shoes.'"
+  },
+  {
+    "question_id": "Q1_2",
+    "answer": "You(singular) give a hat.",
+    "reasoning": "Example 4 'kho pok pok aa' is 'She gives a hat,' with 'kho pok' as 'a hat' and reduplication 'pok aa' for the verb 'give' with she-subject ending 'aa.' Sentence 18 'u kho pok pok u' mirrors this structure but with 'u' prefix and ending, where 'u' patterns as the you(singular) marker from example 15 'kho pok ri u' ('You(singular) buy a hat'). Thus, it indicates you(singular) subject for 'give a hat' with reduplication."
+  },
+  {
+    "question_id": "Q1_3",
+    "answer": "I find your(plural) shoes.",
+    "reasoning": "Example 13 'nîm jâa qhong kap aa' is 'She finds your(plural) shoes,' with 'nîm ... kap aa' as 'she finds,' 'jâa qhong' as 'your(plural) shoes' (tone indicating possession, from pattern in 13 vs. unpossessed in 11/16). Sentence 19 'î jâa qhong kap tin' parallels this, replacing she-markers 'nîm' and 'aa' with I-markers 'î' and 'tin' (analogous to subject-specific endings like 'ng' in 10 for I). Thus, I subject for 'find your(plural) shoes.'"
+  },
+  {
+    "question_id": "Q1_4",
+    "answer": "You(singular) forget your(singular) hat.",
+    "reasoning": "Example 14 'u khat saa lak chak aa' is 'She forgets her skirt,' with structure 'u + object + lak chak + aa' ('u ... lak chak aa' as 'she forgets,' object 'khat saa' = 'her skirt'). Sentence 20 'baa kho pok lak chak u' has object 'baa kho pok' ('your(singular) hat,' 'baa' = your sg from 5, 'kho pok' = hat from 2/4/9/15) + 'lak chak u' (verb 'forget' + you sg ending 'u' from 15 pattern, no prefix for 2sg subject unlike 3sg 'u'). Thus, you(singular) forgets your(singular) hat."
+  },
+  {
+    "question_id": "Q1_5",
+    "answer": "baa kho pok qhat aa",
+    "reasoning": "Example 9 'i kho pok qhat aa' is 'My hat falls down,' with 'i kho pok' = 'my hat' ('i' = my, 'kho pok' = hat), 'qhat aa' = 'falls down.' For 'Your(singular) hat falls down,' replace 'my' 'i' with 'your sg' 'baa' (from 5), keeping 'kho pok qhat aa' for hat falls down (inanimate subject pattern, default ending 'aa'). No other changes needed as possession prefix replaces directly."
+  },
+  {
+    "question_id": "Q1_6",
+    "answer": "baa naa tsong ri i",
+    "reasoning": "Example 15 'kho pok ri u' is 'You(singular) buy a hat,' structure 'object + ri + subject' ('ri' = buy, 'u' = you sg). For 'We buy your(singular) earrings,' object = 'your sg earrings' = 'baa naa tsong' ('baa' = your sg from 5, 'naa tsong' = earrings from 5/7/12, no reduplication for buy unlike wear). Replace 'u' with 'i' = we (from 3 'khoq i' ending for we give). Thus, 'baa naa tsong ri i.'"
+  },
+  {
+    "question_id": "Q1_7",
+    "answer": "u khat jaa qhong lak chak ng",
+    "reasoning": "Example 14 'u khat saa lak chak aa' is 'She forgets her skirt,' structure 'u + object + lak chak + subject ending' ('u ... lak chak' = forget, 'aa' = she). For 'I forget our shoes,' object 'our shoes' = 'khat jaa qhong' ('khat' = our from 6 'khat sam' = our blanket, 'jaa qhong' = shoes from 11/16, no accent as in base form). Change ending to 'ng' = I (from 10 'qhot ng' for I wear). Prefix 'u' remains for verb forget."
+  },
+  {
+    "question_id": "Q1_8",
+    "answer": "u i jaa qhong lak chak ng",
+    "reasoning": "Using the forget structure from 14/23: 'u + object + lak chak + ng' for I forget. Object 'my shoes' = 'i jaa qhong' ('i' = my from 9 'i kho pok' = my hat, 'jaa qhong' = shoes from 11/16, no accent matching 9). Ending 'ng' = I from 10. Thus, full 'u i jaa qhong lak chak ng' parallels 23 but with my possession prefix 'i' replacing 'khat.'"
+  }
+]

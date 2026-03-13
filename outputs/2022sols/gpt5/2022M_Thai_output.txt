@@ -1,0 +1,27 @@
+Model: gpt-5
+Generation Time: 330.42 seconds
+Timestamp: 2025-12-01 20:50:59
+================================================================================
+
+[
+  {
+    "question_id": "M1_1",
+    "answer": "A",
+    "reasoning": "Alg A’s F1s (0.29, 0.40, 0.50) match the baseline that predicts only the last character as 1: for 6, 4, and 3 words respectively the formula 1/(1+0.5*(W-1)) gives exactly those values."
+  },
+  {
+    "question_id": "M1_2",
+    "answer": "C",
+    "reasoning": "After identifying Alg A as the baseline and Alg B as Arun (see next item), the remaining label for Pavan’s algorithm is Alg C."
+  },
+  {
+    "question_id": "M1_3",
+    "answer": "B",
+    "reasoning": "Alg B achieves 1.00 on the third sentence; this fits Arun’s stricter V–FC–IC–V rule, which avoids predicting a boundary inside ‘ภาษาไทย’, while Pavan’s broader ‘all final consonants’ rule would likely add extra boundaries."
+  },
+  {
+    "question_id": "M2_1",
+    "answer": "6/7",
+    "reasoning": "With segmentation (4), there are 4 gold boundaries instead of 3. Arun’s predictions remain the same as before (3 correct boundaries, none extra), so TP=3, FP=0, FN=1, giving F1 = TP/(TP + 0.5*(FP+FN)) = 3/(3+0.5*1) = 6/7."
+  }
+]

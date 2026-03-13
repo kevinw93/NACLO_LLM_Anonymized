@@ -1,0 +1,42 @@
+[
+  {
+    "question_id": "K1_1a",
+    "answer": "Verb - Preposition - Article - Noun",
+    "reasoning": "After 'I saw a cat', each extension adds a verb (climbing, growing, orbiting), followed by a preposition (up, on, around), an article (a, a, the), and a noun (tree, planet, sun). This creates a repeating pattern of Verb-Preposition-Article-Noun."
+  },
+  {
+    "question_id": "K1_1b",
+    "answer": "Preposition - Article - Noun",
+    "reasoning": "After 'I live', each extension adds a preposition (in, on, in, on), followed by an article (the, the, the, the), and a noun (house, hill, city, border). This creates a repeating pattern of Preposition-Article-Noun."
+  },
+  {
+    "question_id": "K1_2a",
+    "answer": "I saw a cat climbing up a tree growing on a planet orbiting around the sun jumping in a hat.",
+    "reasoning": "Following the Verb-Preposition-Article-Noun pattern, I added 'jumping in a hat' using a verb (jumping), preposition (in), article (a), and noun (hat) from the provided word list."
+  },
+  {
+    "question_id": "K1_2b",
+    "answer": "I live in the house on the hill in the city on the border around the tree.",
+    "reasoning": "Following the Preposition-Article-Noun pattern, I added 'around the tree' using a preposition (around), article (the), and noun (tree) from the provided word list."
+  },
+  {
+    "question_id": "K2_1",
+    "answer": "6",
+    "reasoning": "The sentence 'I run and jump and twirl' has 6 words. The algorithm compares K words at a time, checking if the last K match the second-to-last K. It tests K=1 (1 step), K=2 (2 steps), K=3 (3 steps), stopping at half the sentence length. Total steps = 1+2+3 = 6."
+  },
+  {
+    "question_id": "K3_1a",
+    "answer": "Yes, Verb-Preposition-Article-Noun",
+    "reasoning": "The algorithm would find that the last 4 words 'orbiting around the sun' (V-Prep-Art-N) match the 4 before them 'growing on a planet' (V-Prep-Art-N), and this pattern continues. It would return this repeating pattern."
+  },
+  {
+    "question_id": "K3_1b",
+    "answer": "Yes, Preposition-Article-Noun",
+    "reasoning": "The algorithm would find that the last 3 words 'on the border' (Prep-Art-N) match the 3 before them 'in the city' (Prep-Art-N), and this pattern continues. It would return this repeating pattern."
+  },
+  {
+    "question_id": "K4_1",
+    "answer": "I saw a blue cat climbing up a nice tree growing on.",
+    "reasoning": "This sentence has the Verb-Preposition-Article-Noun pattern but incomplete (only 2.5 cycles). The algorithm can't find the pattern because it only checks if the second half exactly matches the first half. Since the pattern is incomplete and the halves don't match, the algorithm fails to identify any repeating sequence."
+  }
+]

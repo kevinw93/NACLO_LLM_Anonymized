@@ -1,0 +1,77 @@
+[
+  {
+    "question_id": "R1_4",
+    "answer": "PRN",
+    "reasoning": "In 'The dog looks at her.', 'her' follows the preposition 'at' and has no following noun, functioning as the object pronoun."
+  },
+  {
+    "question_id": "R1_5",
+    "answer": "DET",
+    "reasoning": "In 'The girl is her friend.', 'her' precedes the noun 'friend', functioning as a possessive determiner."
+  },
+  {
+    "question_id": "R1_6",
+    "answer": "DET",
+    "reasoning": "In 'I am her daughter.', 'her' precedes the noun 'daughter', functioning as a possessive determiner."
+  },
+  {
+    "question_id": "R1_7",
+    "answer": "DET",
+    "reasoning": "In 'The cat saw her dog yesterday.', 'her' precedes the noun 'dog', functioning as a possessive determiner in the object NP."
+  },
+  {
+    "question_id": "R1_8",
+    "answer": "PRN",
+    "reasoning": "In 'You walk with her.', 'her' follows the preposition 'with' and has no following noun, functioning as the object pronoun."
+  },
+  {
+    "question_id": "R1_9",
+    "answer": "PRN",
+    "reasoning": "In 'A giraffe sees her.', 'her' follows the verb 'sees' directly and ends the sentence, functioning as the object pronoun."
+  },
+  {
+    "question_id": "R1_10",
+    "answer": "PRN",
+    "reasoning": "In 'I give her flowers.', 'her' is the indirect object pronoun after the ditransitive verb 'give', despite following noun 'flowers'."
+  },
+  {
+    "question_id": "R1_11",
+    "answer": "DET",
+    "reasoning": "In 'Her tall daughter is smart.', 'her' is the first word and precedes the adjective 'tall' modifying noun 'daughter', functioning as possessive determiner."
+  },
+  {
+    "question_id": "R1_12",
+    "answer": "PRN",
+    "reasoning": "In 'The cat examines her quizzically.', 'her' follows the verb 'examines' and precedes adverb 'quizzically', functioning as the object pronoun."
+  },
+  {
+    "question_id": "R1_13",
+    "answer": "DET",
+    "reasoning": "In 'I am her older sister.', 'her' precedes the adjective 'older' modifying noun 'sister', functioning as a possessive determiner."
+  },
+  {
+    "question_id": "R1_14",
+    "answer": "DET",
+    "reasoning": "In 'I am her older sister.', wait, correction: this is sentence 13; for 14 'Her orange cat likes me.', 'her' precedes adjective 'orange' modifying noun 'cat', possessive determiner."
+  },
+  {
+    "question_id": "R1_15",
+    "answer": "DET",
+    "reasoning": "In 'Her orange cat likes me.', 'her' precedes adjective 'orange' modifying noun 'cat', functioning as possessive determiner."
+  },
+  {
+    "question_id": "R2",
+    "answer": "her: SELECT DET if (+1 N)\nher: SELECT DET if (+1 ADJ)\nher: SELECT PRN if ((-1 PREP) or (-1 VRB))",
+    "reasoning": "Analyzing patterns: DET when 'her' introduces an NP (followed by N or ADJ then N). PRN when after PREP or VRB without starting NP. First two rules tag DET cases (sentences 5,6,7,11,13,14,15 correctly, but 10 wrongly as DET). Third rule tags remaining PRN cases (4,8,9,12). Order ensures DET rules apply first where conditions met; remaining get PRN. This covers all but 10 with three rules."
+  },
+  {
+    "question_id": "R3",
+    "answer": "10",
+    "reasoning": "Sentence 10 is disambiguated incorrectly as DET by the first rule (+1 N). It is difficult to create a successful rule because it requires distinguishing ditransitive verbs like 'give' (indirect PRN + direct N) from transitives taking NP objects (DET + N), needing verb subcategorization or broader context beyond local tags, which simple rules cannot capture without complexity."
+  },
+  {
+    "question_id": "R4",
+    "answer": "PRN/DET: SELECT DET if ( (-1 PREP or -1 VRB) and (+1 N) )\nPRN/DET: SELECT PRN\nN/V: SELECT V if (-1 PRN)\nN/V: SELECT N if (-1 DET)",
+    "reasoning": "Analyzing Sranan sentences: mi/yu/den ambiguous PRN/DET; lobi/singi N/V. Patterns: PRN/DET is PRN at start, after COMP, or after VRB/PREP without following N-possible; DET otherwise when starting NP after VRB/PREP with possible N next. First two rules capture this (first tags DET where applicable; second defaults to PRN for remaining). For N/V: V after subject PRN; N after DET in NP. Last two rules tag based on preceding tagged PRN/DET. Left-to-right processing ensures -1 known; +1 uses possible tags. This set (4 rules) correctly tags all occurrences without crash."
+  }
+]

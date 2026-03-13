@@ -1,0 +1,413 @@
+Model: gemini-2.5-flash
+Generation Time: 142.25 seconds
+Timestamp: 2026-01-26 17:37:00
+================================================================================
+
+Here's a step-by-step breakdown of the reasoning, followed by the final JSON output.
+
+**Overall Approach and Initial Observations:**
+1.  **Identify Core Structure:** All Nivkh statements begin with "ñi" and end with "-ekid". All English statements begin with "I need". This strongly suggests "ñi" means "I" and "-ekid" means "need". The core of the Nivkh noun phrase lies between "ñi" and "-ekid".
+2.  **Look for Identical/Similar Forms:** Compare Nivkh words to find patterns for roots and prefixes/suffixes. Similarly, compare English translations for recurring nouns and modifiers (e.g., "cap", "fish", "my", "your", "that").
+3.  **Prioritize Clear Sets:** Groups of Nivkh words that share a common root and vary only by prefixes (e.g., "cap" variations, "fish" variations) provide the strongest evidence for defining roots and modifier meanings.
+4.  **Hypothesize and Test:** Formulate rules based on the clearest sets and test them against other words. Note contradictions and attempt to reconcile them (e.g., through allomorphy, or re-evaluating root identification).
+5.  **Address Inconsistencies:** If prefixes for "my", "your", or "that" appear to have multiple forms, acknowledge this as observed allomorphy or different word classes, as the problem does not provide explicit phonological rules for such variations beyond single sounds and disallowed clusters. The instruction to "analyze patterns" implies there *is* a system, even if complex. For this problem, the most practical approach is to assign words that form clear pairs first, then fill in the rest.
+
+---
+
+**M1. Match the following statements to their English translations:**
+
+**Step-by-step Reasoning for M1:**
+
+1.  **"Cap" Set (haqx):** This set offers the most consistent pattern for possessive and demonstrative prefixes.
+    *   **21. ñi haqxekid** = L. I need a cap (Bare root = "a/an X").
+    *   **12. ñi ţaqxekid** = Q. I need that cap ('ţ-' = "that").
+    *   **5. ñi ñaqxekid** = B. I need my cap ('ña-' = "my").
+    *   **2. ñi həhaqxekid** = W. I need your cap ('hə-' = "your").
+    *   *Conclusion:* `haqx` = cap; `ţ-` = that; `ña-` = my; `hə-` = your.
+
+2.  **"Fish" Set (ţox):**
+    *   **1. ñi ţoxekid** = G. I need a fish (Bare root = "a/an X").
+    *   **8. ñi təpilaţoxekid** = A. I need this big fish ('təpila-' = "this big").
+    *   **16. ñi aţoxekid** = S. I need that fish over there ('a-' = "that...over there").
+    *   *Conclusion:* `ţox` = fish; `təpila-` = this big; `a-` = that...over there.
+
+3.  **"Winter Cap" (ñit'ulvhaqxekid):**
+    *   **17. ñi ñit'ulvhaqxekid** = E. I need my winter cap. (Given `haqx` = cap, `ñit'ulv` must mean "my winter").
+    *   *Conclusion:* `it'ulv` = winter; `ñi-` is a possessive ("my") allomorph.
+
+4.  **"Branch" Set (təfk'):**
+    *   **11. ñi təfk'ekid** = K. I need my branch. (Here, the bare root implies "my").
+    *   **3. ñi itəfk'ekid** = C. I need your branch. ('i-' = "your" for this root).
+    *   *Conclusion:* `təfk'` = branch; 'i-' is a "your" allomorph, and bare root implies "my" for this noun. This indicates variation in possessive marking.
+
+5.  **"Boat" Set (eflaŋk / eflank):**
+    *   **4. ñi ñeflaŋkxekid** = F. I need my boat. ('ñ-' = "my", an allomorph).
+    *   **22. ñi ţeflankxekid** = O. I need that boat over there. ('ţ-' = "that...over there", here it's distal, contrasting with 'a-' for fish, but matching 'ţ-' for 'that' from cap).
+    *   *Conclusion:* `eflaŋk/eflank` = boat; `ñ-` = my; `ţ-` = that (can be distal).
+
+6.  **"Wolf" Set (liysk'):**
+    *   **10. ñi liysk'ekid** = N. I need a wolf. (Bare root = "a/an X").
+    *   **23. ñi ţliysk'ekid** = J. I need your wolf. ('ţ-' = "your", an allomorph, conflicting with its use as "that").
+    *   *Conclusion:* `liysk'` = wolf; `ţ-` is a "your" allomorph.
+
+7.  **"Knife" Set (zŋai):**
+    *   **15. ñi ţzŋaixekid** = R. I need that knife. ('ţ-' = "that", consistent with cap/boat).
+    *   **6. ñi p'ezŋaixekid** = U. I need your knife. ('p'e-' = "your", another allomorph).
+    *   *Conclusion:* `zŋai` = knife; `p'e-` is a "your" allomorph.
+
+8.  **"Picture" Set (amu / ñivrəx):**
+    *   **20. ñi amuxekid** = M. I need my own picture. (Bare root = "my own").
+    *   **13. ñi ñivrəxekid** = V. I need your picture. ('ñivrə-' = "your", another allomorph).
+    *   *Conclusion:* `amu` (or root like `mu`) = picture, `ñivrəx` (or root like `vrəx`) = picture; `ñivrə-` is a "your" allomorph.
+
+9.  **"Bear" and "House" (zaqox, ţzyəfk', ñmu):** These are the remaining and most complex.
+    *   **9. ñi həzaqoxekid** vs **18. ñi ţzaqoxekid** for H. I need your big bear & P. I need your bear.
+        *   If `zaqox` = bear: `həzaqox` for "your big bear" (9=H, `hə-` covers "your big"); `ţzaqox` for "your bear" (18=P, `ţ-` for "your"). This fits the established pattern of varying "your" allomorphs.
+        *   *Conclusion:* `zaqox` = bear; `hə-` implies "your big" for this noun; `ţ-` is a "your" allomorph.
+
+    *   Remaining English: D. I need my hut, I. I need a house, T. I need his/her house.
+    *   Remaining Nivkh: **7. ñi ţzyəfk'ekid**, **14. ñi ñmuxekid**, **19. ñi ţpilazyəfk'ekid**.
+        *   **14. ñi ñmuxekid** = D. I need my hut. (`ñmu` = hut; `ñ-` is a "my" allomorph, consistent with boat).
+        *   **7. ñi ţzyəfk'ekid** = I. I need a house. (Bare 'ţzyəfk'' = "a house").
+        *   **19. ñi ţpilazyəfk'ekid** = T. I need his/her house. (If `ţzyəfk'` is "house", then `ţpila-` would mean "his/her", consistent with `təpila-` for "this big" but `ţpila-` here is possessive. This is a common root `zyəfk'`).
+        *   *Conclusion:* `ñmu` = hut; `ţzyəfk'` = house; `ţpila-` = his/her.
+
+This covers all M1 matches, with the caveat of extensive allomorphy for possessive and demonstrative prefixes.
+
+**M1 Final Assignments:**
+1=G, 2=W, 3=C, 4=F, 5=B, 6=U, 7=I, 8=A, 9=H, 10=N, 11=K, 12=Q, 13=V, 14=D, 15=R, 16=S, 17=E, 18=P, 19=T, 20=M, 21=L, 22=O, 23=J.
+
+---
+
+**M2. Translate the following into English:**
+
+**Step-by-step Reasoning for M2:**
+
+*   **Prefixes identified from M1:**
+    *   `ñi ... ekid` = I need ...
+    *   `hə-` = your (also 'your big')
+    *   `ña-`, `ñ-`, `ñi-` = my (also bare root)
+    *   `ţ-` = that (also 'your')
+    *   `a-` = that over there
+    *   `təpila-` = this big
+    *   `i-`, `p'e-`, `ñivrə-` = your (allomorphs)
+    *   `ţpila-` = his/her (from M1_19)
+
+*   **Nouns identified from M1:**
+    *   `haqx` = cap
+    *   `ţox` = fish
+    *   `təfk'` = branch
+    *   `eflaŋk/eflank` = boat
+    *   `liysk'` = wolf
+    *   `zŋai` = knife
+    *   `amu` / `ñivrəx` = picture
+    *   `zaqox` = bear
+    *   `ţzyəfk'` = house
+    *   `ñmu` = hut
+    *   `it'ulv` = winter
+
+*   **Nouns from M2 table:**
+    *   `həjk` = hare
+    *   `ţif` = track
+    *   `ţus` = meat
+    *   `fləng` = ash
+    *   `zrovs` = nail
+
+a. **ñi ţpilamuxekid**
+    *   `ţpila-` = his/her (from M1_19 for house).
+    *   `mu` (from `amu` in M1_20) = picture.
+    *   *Translation:* I need his/her picture.
+
+b. **ñi həzyəfk'ekid**
+    *   `hə-` = your (from M1_2, M1_9).
+    *   `zyəfk'` (from `ţzyəfk'` in M1_7) = house.
+    *   *Translation:* I need your house.
+
+c. **ñi təfləngxekid**
+    *   `fləng` (from M2 table) = ash.
+    *   No prefix indicates "a/an".
+    *   *Translation:* I need ash.
+
+d. **ñi p'eţusk'ekid**
+    *   `p'e-` = your (from M1_6 for knife).
+    *   `ţus` (from M2 table) = meat.
+    *   *Translation:* I need your meat.
+
+e. **ñi ahaqxekid**
+    *   `a-` = that over there (from M1_16 for fish).
+    *   `haqx` = cap (from M1_21).
+    *   *Translation:* I need that cap over there.
+
+---
+
+**M3. Translate the following into Nivkh:**
+
+**Step-by-step Reasoning for M3:**
+
+a. **I need your big track.**
+    *   `I need` = ñi ... ekid
+    *   `your big`: From M1_9, "I need your big bear" was `ñi həzaqoxekid`. This implies `hə-` can cover "your big" for certain nouns.
+    *   `track` = `ţif` (from M2 table).
+    *   *Translation:* ñi həţifekid
+
+b. **I need my knife.**
+    *   `I need` = ñi ... ekid
+    *   `my` = `ña-` (most common form from `haqx`, M1_5).
+    *   `knife` = `zŋai` (from M1_6, M1_15).
+    *   *Translation:* ñi ňazŋaixekid
+
+c. **I need that cap over there.**
+    *   `I need` = ñi ... ekid
+    *   `that cap over there`: Matches M2.e!
+    *   `that over there` = `a-` (from M1_16).
+    *   `cap` = `haqx`.
+    *   *Translation:* ñi ahaqxekid
+
+d. **I need your hare.**
+    *   `I need` = ñi ... ekid
+    *   `your` = `hə-` (most common form from `haqx`, M1_2).
+    *   `hare` = `həjk` (from M2 table).
+    *   *Translation:* ñi həhəjkekid
+
+e. **I need my nail.**
+    *   `I need` = ñi ... ekid
+    *   `my` = `ña-` (most common form from `haqx`, M1_5).
+    *   `nail` = `zrovs` (from M2 table).
+    *   *Translation:* ñi ňazrovsekid
+
+---
+
+**M4. Explain your answers by describing the structure of Nivkh words and sentences.**
+
+**Step-by-step Reasoning for M4:**
+
+1.  **Sentence Structure:**
+    *   All sentences follow the pattern `ñi [Noun Phrase] -ekid`.
+    *   `ñi` translates to "I".
+    *   `-ekid` (or allomorphs like `-xekid`, `-aixekid`, `-oxekid`, `-əfk'ekid`, `-liysk'ekid`) translates to "need".
+    *   The `Noun Phrase` contains the object being requested, often with modifiers.
+
+2.  **Noun Phrase Structure (Word Formation):**
+    *   Nivkh nouns are often modified by prefixes that convey possession, demonstration, or adjectival qualities.
+    *   **Noun Roots:** Core meanings like `haqx` (cap), `ţox` (fish), `təfk'` (branch), `liysk'` (wolf), `zŋai` (knife), `amu` (picture), `zaqox` (bear), `ţzyəfk'` (house), `ñmu` (hut), `ţif` (track), `həjk` (hare), `ţus` (meat), `fləng` (ash), `zrovs` (nail).
+    *   **Bare Nouns:** A bare noun root can represent "a/an X" (e.g., `haqx` = a cap) or "my X / my own X" depending on the specific noun (e.g., `təfk'` = my branch, `amu` = my own picture).
+    *   **Possessive Prefixes:**
+        *   **"My":** The primary form is `ña-` (e.g., `ñaqx` = my cap). Other observed allomorphs include `ñ-` (e.g., `ñeflaŋk` = my boat, `ñmu` = my hut) and `ñi-` (e.g., `ñit'ulvhaqx` = my winter cap).
+        *   **"Your":** This is the most varied category, exhibiting significant allomorphy. The most common form is `hə-` (e.g., `həhaqx` = your cap, `həzaqox` = your big bear, `həzyəfk'` = your house, `həţif` = your big track, `həhəjk` = your hare). Other forms include `i-` (e.g., `itəfk'` = your branch), `ţ-` (e.g., `ţliysk'` = your wolf, `ţzaqox` = your bear), `p'e-` (e.g., `p'ezŋai` = your knife, `p'eţus` = your meat), and `ñivrə-` (e.g., `ñivrəx` = your picture).
+        *   **"His/Her":** `ţpila-` (e.g., `ţpilazyəfk'` = his/her house).
+    *   **Demonstrative Prefixes:**
+        *   **"That":** `ţ-` (e.g., `ţaqx` = that cap, `ţzŋai` = that knife). This prefix can also mean "that over there" (e.g., `ţeflank` = that boat over there).
+        *   **"That over there" (distal):** `a-` (e.g., `aţox` = that fish over there, `ahaqx` = that cap over there).
+    *   **Adjectival Prefixes:**
+        *   **"This big":** `təpila-` (e.g., `təpilaţox` = this big fish).
+        *   **"Winter":** `it'ulv-` (e.g., `ñit'ulvhaqx` = my winter cap).
+    *   **Compound Nouns/Modifiers:** Some modifiers appear to be part of a larger compound or root (e.g., `hə-` can imply "your big" when combined with `zaqox` for "bear").
+
+---
+
+**Final JSON Output:**
+
+```json
+[
+  {
+    "question_id": "M1_1",
+    "answer": "G",
+    "reasoning": "Based on the pattern that 'ñi ... ekid' means 'I need ...', and 'ţoxekid' is the simplest form of 'fish', it matches 'I need a fish'."
+  },
+  {
+    "question_id": "M1_2",
+    "answer": "W",
+    "reasoning": "From the 'cap' set, 'haqx' is cap. 'hə-' appears as a possessive prefix for 'your'. Thus, 'ñi həhaqxekid' translates to 'I need your cap'."
+  },
+  {
+    "question_id": "M1_3",
+    "answer": "C",
+    "reasoning": "Comparing 'ñi itəfk'ekid' with 'ñi təfk'ekid' (11), if 'təfk'' is 'branch', then 'i-' functions as the 'your' possessive prefix for this noun, and bare 'təfk'' means 'my branch'."
+  },
+  {
+    "question_id": "M1_4",
+    "answer": "F",
+    "reasoning": "Comparing 'ñi ñeflaŋkxekid' with 'ñi ţeflankxekid' (22), assuming 'eflaŋk/eflank' is 'boat', 'ñ-' functions as the 'my' possessive prefix. Thus, 'I need my boat'."
+  },
+  {
+    "question_id": "M1_5",
+    "answer": "B",
+    "reasoning": "From the 'cap' set, 'haqx' is cap. 'ña-' appears as a possessive prefix for 'my'. Thus, 'ñi ñaqxekid' translates to 'I need my cap'."
+  },
+  {
+    "question_id": "M1_6",
+    "answer": "U",
+    "reasoning": "Comparing 'ñi p'ezŋaixekid' with 'ñi ţzŋaixekid' (15), assuming 'zŋai' is 'knife'. If 15 is 'that knife', then 6 with 'p'e-' would be 'your knife'. Thus, 'p'e-' is a 'your' possessive allomorph."
+  },
+  {
+    "question_id": "M1_7",
+    "answer": "I",
+    "reasoning": "From the remaining items, and comparing 'ñi ţzyəfk'ekid' with 'ñi ţpilazyəfk'ekid' (19), if 'ţzyəfk'' is 'house', it would be the simpler form 'a house'. The suffix seems to be part of the root."
+  },
+  {
+    "question_id": "M1_8",
+    "answer": "A",
+    "reasoning": "From the 'fish' set, 'ţox' is fish. 'təpila-' functions as a modifier for 'this big'. Thus, 'ñi təpilaţoxekid' translates to 'I need this big fish'."
+  },
+  {
+    "question_id": "M1_9",
+    "answer": "H",
+    "reasoning": "Comparing 'ñi həzaqoxekid' with 'ñi ţzaqoxekid' (18), assuming 'zaqox' is 'bear'. 'hə-' is a 'your' prefix, and 'həzaqox' specifically translates to 'your big bear'. Thus, 'hə-' seems to imply 'your big' for this noun."
+  },
+  {
+    "question_id": "M1_10",
+    "answer": "N",
+    "reasoning": "Comparing 'ñi liysk'ekid' with 'ñi ţliysk'ekid' (23), assuming 'liysk'' is 'wolf'. The bare form 'liysk'ekid' matches 'I need a wolf'."
+  },
+  {
+    "question_id": "M1_11",
+    "answer": "K",
+    "reasoning": "Comparing 'ñi təfk'ekid' with 'ñi itəfk'ekid' (3), if 'təfk'' is 'branch', then the bare form 'təfk'ekid' means 'my branch'."
+  },
+  {
+    "question_id": "M1_12",
+    "answer": "Q",
+    "reasoning": "From the 'cap' set, 'haqx' is cap. 'ţ-' appears as a demonstrative prefix for 'that'. Thus, 'ñi ţaqxekid' translates to 'I need that cap'."
+  },
+  {
+    "question_id": "M1_13",
+    "answer": "V",
+    "reasoning": "Comparing 'ñi ñivrəxekid' with 'ñi amuxekid' (20), and if 'amu' is 'my own picture', then 'ñivrəx' likely means 'your picture'. Thus, 'ñivrə-' is a 'your' possessive allomorph."
+  },
+  {
+    "question_id": "M1_14",
+    "answer": "D",
+    "reasoning": "From the remaining items, and given 'ñ-' as a 'my' allomorph (from 'boat' in M1_4), 'ñi ñmuxekid' most logically translates to 'I need my hut'."
+  },
+  {
+    "question_id": "M1_15",
+    "answer": "R",
+    "reasoning": "Comparing 'ñi ţzŋaixekid' with 'ñi p'ezŋaixekid' (6), assuming 'zŋai' is 'knife'. 'ţ-' is a demonstrative prefix for 'that', consistent with its use for 'cap' and 'boat'. Thus, 'I need that knife'."
+  },
+  {
+    "question_id": "M1_16",
+    "answer": "S",
+    "reasoning": "From the 'fish' set, 'ţox' is fish. 'a-' functions as a modifier for 'that...over there'. Thus, 'ñi aţoxekid' translates to 'I need that fish over there'."
+  },
+  {
+    "question_id": "M1_17",
+    "answer": "E",
+    "reasoning": "Given 'haqx' is 'cap' (from M1_21), 'ñit'ulvhaqxekid' must be 'I need my winter cap'. This identifies 'it'ulv' as 'winter' and 'ñi-' as a possessive allomorph."
+  },
+  {
+    "question_id": "M1_18",
+    "answer": "P",
+    "reasoning": "From the 'bear' set (with M1_9=H), 'ţzaqox' must be the simpler form 'your bear'. Thus, 'ţ-' is a 'your' possessive allomorph for 'bear'."
+  },
+  {
+    "question_id": "M1_19",
+    "answer": "T",
+    "reasoning": "From the remaining items, and having identified 'ţzyəfk'' as 'house' (M1_7), 'ñi ţpilazyəfk'ekid' means 'I need his/her house', implying 'ţpila-' means 'his/her'."
+  },
+  {
+    "question_id": "M1_20",
+    "answer": "M",
+    "reasoning": "Comparing 'ñi amuxekid' with 'ñi ñivrəxekid' (13), if 'amu' is 'picture', then the bare form 'amuxekid' translates to 'I need my own picture'."
+  },
+  {
+    "question_id": "M1_21",
+    "answer": "L",
+    "reasoning": "From the 'cap' set, 'haqx' is cap. The bare root 'haqxekid' translates to 'I need a cap'."
+  },
+  {
+    "question_id": "M1_22",
+    "answer": "O",
+    "reasoning": "From the 'boat' set (with M1_4=F), 'ñi ţeflankxekid' translates to 'I need that boat over there', with 'ţ-' functioning as 'that over there'."
+  },
+  {
+    "question_id": "M1_23",
+    "answer": "J",
+    "reasoning": "From the 'wolf' set (with M1_10=N), 'ñi ţliysk'ekid' must translate to 'I need your wolf', with 'ţ-' functioning as a 'your' possessive allomorph."
+  },
+  {
+    "question_id": "M2_a",
+    "answer": "I need his/her picture",
+    "reasoning": "'ñi ... ekid' = 'I need ...'. 'ţpila-' = 'his/her' (from M1_19). 'mu' (from 'amu' M1_20) = 'picture'. So, 'I need his/her picture'."
+  },
+  {
+    "question_id": "M2_b",
+    "answer": "I need your house",
+    "reasoning": "'ñi ... ekid' = 'I need ...'. 'hə-' = 'your' (from M1_2). 'zyəfk'' (from 'ţzyəfk'' M1_7) = 'house'. So, 'I need your house'."
+  },
+  {
+    "question_id": "M2_c",
+    "answer": "I need ash",
+    "reasoning": "'ñi ... ekid' = 'I need ...'. 'fləng' (from M2 noun table) = 'ash'. No prefixes, so 'a/an' implied. So, 'I need ash'."
+  },
+  {
+    "question_id": "M2_d",
+    "answer": "I need your meat",
+    "reasoning": "'ñi ... ekid' = 'I need ...'. 'p'e-' = 'your' (from M1_6). 'ţus' (from M2 noun table) = 'meat'. So, 'I need your meat'."
+  },
+  {
+    "question_id": "M2_e",
+    "answer": "I need that cap over there",
+    "reasoning": "'ñi ... ekid' = 'I need ...'. 'a-' = 'that over there' (from M1_16). 'haqx' = 'cap' (from M1_21). So, 'I need that cap over there'."
+  },
+  {
+    "question_id": "M3_a",
+    "answer": "ñi həţifekid",
+    "reasoning": "'I need' = 'ñi ... ekid'. 'track' = 'ţif' (from M2 table). 'your big': Based on 'your big bear' (M1_9) = 'həzaqox', 'hə-' appears to encompass 'your big'. Thus, 'ñi həţifekid'."
+  },
+  {
+    "question_id": "M3_b",
+    "answer": "ñi ňazŋaixekid",
+    "reasoning": "'I need' = 'ñi ... ekid'. 'knife' = 'zŋai' (from M1_6, M1_15). 'my' = 'ña-' (most common 'my' prefix from M1_5). Thus, 'ñi ňazŋaixekid'."
+  },
+  {
+    "question_id": "M3_c",
+    "answer": "ñi ahaqxekid",
+    "reasoning": "'I need' = 'ñi ... ekid'. 'cap' = 'haqx' (from M1_21). 'that over there' = 'a-' (from M1_16, also confirmed by M2_e). Thus, 'ñi ahaqxekid'."
+  },
+  {
+    "question_id": "M3_d",
+    "answer": "ñi həhəjkekid",
+    "reasoning": "'I need' = 'ñi ... ekid'. 'hare' = 'həjk' (from M2 table). 'your' = 'hə-' (most common 'your' prefix from M1_2). Thus, 'ñi həhəjkekid'."
+  },
+  {
+    "question_id": "M3_e",
+    "answer": "ñi ňazrovsekid",
+    "reasoning": "'I need' = 'ñi ... ekid'. 'nail' = 'zrovs' (from M2 table). 'my' = 'ña-' (most common 'my' prefix from M1_5). Thus, 'ñi ňazrovsekid'."
+  },
+  {
+    "question_id": "M4_1",
+    "answer": "Nivkh sentences follow the structure: 'ñi [Noun Phrase] -ekid', where 'ñi' means 'I' and '-ekid' signifies 'need'. The Noun Phrase contains the object of the request.",
+    "reasoning": "This describes the fundamental syntactical pattern observed across all given Nivkh statements and their English translations."
+  },
+  {
+    "question_id": "M4_2",
+    "answer": "Nivkh nouns are modified by prefixes indicating possession, demonstration, or other qualities. A bare noun root can signify 'a/an X' (e.g., haqx = cap) or 'my X / my own X' (e.g., təfk' = my branch, amu = my own picture).",
+    "reasoning": "This outlines the basic morphological structure of Nivkh noun phrases, including the role of bare nouns."
+  },
+  {
+    "question_id": "M4_3",
+    "answer": "Possessive prefixes for 'my' include ña- (e.g., ñaqx = my cap), ñ- (e.g., ñeflaŋk = my boat), and ñi- (e.g., ñit'ulvhaqx = my winter cap).",
+    "reasoning": "Summarizes the observed forms for the 'my' possessive prefix from M1 and M3 derivations."
+  },
+  {
+    "question_id": "M4_4",
+    "answer": "Possessive prefixes for 'your' are highly variable, including hə- (e.g., həhaqx = your cap, həzaqox = your big bear), i- (e.g., itəfk' = your branch), ţ- (e.g., ţliysk' = your wolf), p'e- (e.g., p'ezŋai = your knife), and ñivrə- (e.g., ñivrəx = your picture).",
+    "reasoning": "Summarizes the diverse forms for the 'your' possessive prefix, highlighting its allomorphy from M1, M2, and M3 derivations."
+  },
+  {
+    "question_id": "M4_5",
+    "answer": "The possessive prefix for 'his/her' is ţpila- (e.g., ţpilazyəfk' = his/her house).",
+    "reasoning": "Summarizes the observed form for 'his/her' from M1_19 and M2_a derivation."
+  },
+  {
+    "question_id": "M4_6",
+    "answer": "Demonstrative prefixes for 'that' include ţ- (e.g., ţaqx = that cap, ţzŋai = that knife, ţeflank = that boat over there) and a- (e.g., aţox = that fish over there, ahaqx = that cap over there).",
+    "reasoning": "Summarizes the observed forms for 'that' and 'that over there' from M1, M2, and M3 derivations."
+  },
+  {
+    "question_id": "M4_7",
+    "answer": "Adjectival prefixes include təpila- for 'this big' (e.g., təpilaţox = this big fish) and it'ulv- for 'winter' (e.g., ñit'ulvhaqx = my winter cap).",
+    "reasoning": "Summarizes the observed forms for adjectival modifiers from M1 derivations."
+  }
+]
+```

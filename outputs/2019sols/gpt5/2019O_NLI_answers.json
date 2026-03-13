@@ -1,0 +1,92 @@
+[
+  {
+    "question_id": "O1_1",
+    "answer": "2",
+    "reasoning": "Errors like 25 and 28 show the model predicts entailment when sentence 2 is long; training pairs support length-based bias on sentence 2."
+  },
+  {
+    "question_id": "O1_2",
+    "answer": "6",
+    "reasoning": "In training, all pairs with sentence 2 longer than 6 words are labeled entailment (e.g., 8, 13, 15, 21, 9). This threshold also explains test errors 25 and 28."
+  },
+  {
+    "question_id": "O1_3",
+    "answer": "entailment",
+    "reasoning": "The long sentence 2 bias makes the model choose entailment."
+  },
+  {
+    "question_id": "O1_4",
+    "answer": "8",
+    "reasoning": "Example 8 has sentence 2 > 6 words and is labeled entailment, supporting Rule 1."
+  },
+  {
+    "question_id": "O1_5",
+    "answer": "21",
+    "reasoning": "Example 21 also has sentence 2 > 6 words and is labeled entailment, supporting Rule 1."
+  },
+  {
+    "question_id": "O2_1",
+    "answer": "sentence 1 contains sentence 2",
+    "reasoning": "Many training entailments occur when sentence 2 appears verbatim in sentence 1; several test errors (22, 24, 29) show the model using this substring heuristic."
+  },
+  {
+    "question_id": "O2_2",
+    "answer": "entailment",
+    "reasoning": "The substring heuristic leads the model to label such pairs as entailment."
+  },
+  {
+    "question_id": "O2_3",
+    "answer": "11",
+    "reasoning": "Example 11: sentence 2 is a substring of sentence 1 and is labeled entailment."
+  },
+  {
+    "question_id": "O2_4",
+    "answer": "20",
+    "reasoning": "Example 20: sentence 2 is a substring of sentence 1 and is labeled entailment."
+  },
+  {
+    "question_id": "O3_1",
+    "answer": "1",
+    "reasoning": "Training pairs with the word 'walrus' in sentence 1 tend to be labeled non-entailment; this drives several test errors."
+  },
+  {
+    "question_id": "O3_2",
+    "answer": "walrus",
+    "reasoning": "The word whose presence biases the model."
+  },
+  {
+    "question_id": "O3_3",
+    "answer": "non-entailment",
+    "reasoning": "With 'walrus' in sentence 1, the model favors non-entailment (seen in training and test 23, 30, 31)."
+  },
+  {
+    "question_id": "O3_4",
+    "answer": "1",
+    "reasoning": "Example 1 has 'walrus' in sentence 1 and is labeled non-entailment, supporting Rule 3."
+  },
+  {
+    "question_id": "O3_5",
+    "answer": "16",
+    "reasoning": "Example 16 also has 'walrus' in sentence 1 with a non-entailment label, supporting Rule 3."
+  },
+  {
+    "question_id": "O4_1",
+    "answer": "1",
+    "reasoning": "Top priority is Rule 1 (length of sentence 2), since in test 27 it overrides the walrus rule."
+  },
+  {
+    "question_id": "O4_2",
+    "answer": "3",
+    "reasoning": "Middle priority is Rule 3 (walrus word), since in test 31 it overrides the substring rule but is overridden by Rule 1 in test 27."
+  },
+  {
+    "question_id": "O4_3",
+    "answer": "2",
+    "reasoning": "Bottom priority is Rule 2 (substring), as it is overridden by Rule 3 in test 31."
+  },
+  {
+    "question_id": "O4_4",
+    "answer": "27,31",
+    "reasoning": "Test 27 shows Rule 1 > Rule 3; test 31 shows Rule 3 > Rule 2, establishing the full ranking."
+  }
+]

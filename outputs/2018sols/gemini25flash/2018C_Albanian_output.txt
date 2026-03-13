@@ -1,0 +1,339 @@
+Model: gemini-2.5-flash
+Generation Time: 179.04 seconds
+Timestamp: 2025-11-17 17:39:28
+================================================================================
+
+**Analysis of Patterns and Given Data:**
+
+The problem presents a map of a town and several sets of instructions and clues in Albanian. The goal is to extract specific information by interpreting these clues. A major challenge observed during analysis is the presence of inconsistencies within the problem description itself, particularly concerning directional references ("left/right", "in front of/behind") when applied to the map and example statements.
+
+**Directional Interpretation:**
+From the introductory text's example ("a dentist is in front of the mosque, behind the market, to the left of the barbershop, and to the right of the cafe"), combined with a literal reading of the map, I've established the following most consistent interpretation of directions:
+*   `para` (in front of): refers to a position further down (south) on the map. (Consistent: Dentist (H) is below Mosque (L)).
+*   `pas` (behind): refers to a position further up (north) on the map. (Consistent: Dentist (H) is above Market (K)). When applied to horizontal street segments, I will interpret it as "preceding" or "to the left of" in a typical left-to-right reading order (e.g. C is to the left of J).
+*   `majtas` (left of): refers to a position further to the left (west) on the map. (Consistent: Bakery (A) is left of Market (K), Cafe (D) is left of Dentist (H)).
+*   `djathtas` (right of): refers to a position further to the right (east) on the map. (Consistent: Dentist (H) is right of Cafe (D)).
+
+**Identified Inconsistencies:**
+*   The introductory example states: "a dentist is ... to the left of the barbershop". On the map, with icons D-B-H (Cafe, Barbershop, Dentist) on Rruga Fortuzi, the Dentist (H) is to the *right* of the Barbershop (B). This is a direct contradiction.
+*   Similarly, one of the C1 clues for "Dhëmbëtari" states "majtas nga floktorit" (Dentist is to the left of Barbershop), which also contradicts the map.
+
+**Strategy for Handling Inconsistencies:**
+Given the strict instruction "Follow the instructions on the file" and "the man at the information center tells you some information...", I must assume that the provided descriptions are intended to be factual within the problem's context, even if they appear to contradict a literal map reading. For C1, where I'm matching Albanian names to English (which are already paired with icons A-N), I will use the clues to confirm the most direct pairing. If a specific clause in a clue contradicts the map, I will note it but proceed with the most probable intended answer, acknowledging the ambiguity. For C2, I will assume that the instructions for movement are paramount, and will deduce a path that makes the directional statements true, even if it requires non-obvious turns or changes in street direction.
+
+---
+
+### C1. Match the Albanian place name with the English translation based on the information above and write the matching letter next to the corresponding number.
+
+**Reasoning Step-by-Step:**
+
+1.  **Identify Icon Mappings (A-N):**
+    *   A: Bakery (Bread icon)
+    *   B: Barbershop (Scissors icon)
+    *   C: Butcher (Meat hook icon)
+    *   D: Cafe (Coffee cup icon)
+    *   E: Cemetery (RIP icon)
+    *   F: Church (Church icon)
+    *   G: City Hall (City Hall icon)
+    *   H: Dentist (Tooth icon)
+    *   I: Garden (Tree/bench icon)
+    *   J: Confectionery (Cupcake icon)
+    *   K: Market (BIO bag icon)
+    *   L: Mosque (Mosque icon)
+    *   M: Mountains (Mountains icon)
+    *   N: Playground (Swings/slide icon)
+
+2.  **Translate and Verify Albanian Clues for C1 (using established directionality and icon mappings):**
+
+    *   **Kafeneja (5. Kafene - Cafe, D):** "është ndërmjet kishës (F) dhe furrës (A) dhe majtas nga dhëmbëtarit (H)."
+        *   Cafe (D) is vertically between Church (F) (above it) and Bakery (A) (below it). This is true on the map.
+        *   Cafe (D) is to the left of Dentist (H). On Rruga Fortuzi: D - B - H. D is indeed to the left of H. This is true.
+        *   **Conclusion:** `5. Kafene` = D.
+
+    *   **Bashkia e qytetit (1. Bashkia e qytetit - City Hall, G):** "është ndërmjet kishës (F) dhe xhamisë (L)."
+        *   City Hall (G) is horizontally between Church (F) (to its left) and Mosque (L) (to its right) on Rruga e Durrësit. This is true: F - G - L.
+        *   **Conclusion:** `1. Bashkia e qytetit` = G.
+
+    *   **Dhëmbëtari (2. Dhëmbëtar - Dentist, H):** "është majtas nga floktorit (B) dhe para xhamisë (L)."
+        *   Dentist (H) is in front of Mosque (L) (i.e., H is below L on the map). This is true.
+        *   Dentist (H) is to the left of Barbershop (B). On Rruga Fortuzi: D - B - H. H is to the *right* of B. This contradicts the map's visual layout and standard left/right interpretation. However, given the problem's own example stating "a dentist is ... to the left of the barbershop", I must assume this statement is intended as true within the problem's logic, despite the visual contradiction.
+        *   **Conclusion:** `2. Dhëmbëtar` = H (acknowledging the problematic clause).
+
+    *   **Dyqani (12. Dyqan - Market, K):** "është para dhëmbëtarit (H) dhe majtas nga mishtorja (C)."
+        *   Market (K) is in front of Dentist (H) (i.e., K is below H on the map). This is true.
+        *   Market (K) is to the left of Butcher (C). On Rruga Vorpsi: K - C - J. K is indeed to the left of C. This is true.
+        *   **Conclusion:** `12. Dyqan` = K.
+
+    *   **Mishtorja (6. Mishtore - Butcher, C):** "është pas ëmbëlsirës (J)."
+        *   Butcher (C) is behind Confectionery (J). On Rruga Vorpsi: K - C - J. If "behind" refers to preceding in a left-to-right sequence (i.e., to the left of), then C is behind J. This interpretation resolves the ambiguity for horizontal objects. So, C is to the left of J. This is true.
+        *   **Conclusion:** `6. Mishtore` = C.
+
+    *   **Kopsht (8. Kopsht - Garden, I):** "është djathtas nga xhamia (L) dhe para maleve (M)."
+        *   Garden (I) is to the right of Mosque (L). The Garden icon (I) is to the right of where Mosque (L) is located. This is true.
+        *   Garden (I) is in front of Mountains (M) (i.e., I is below M on the map). This is true.
+        *   **Conclusion:** `8. Kopsht` = I.
+
+    *   **Sheshi lojërash (11. Shesh lojërash - Playground, N):** "është djathtas nga ëmbëlsira (J)."
+        *   Playground (N) is to the right of Confectionery (J). The Playground icon (N) is to the right of where Confectionery (J) is located. This is true.
+        *   **Conclusion:** `11. Shesh lojërash` = N.
+
+    *   **Remaining by deduction and mentions:**
+        *   **Furrë (4. Furrë - Bakery, A):** Mentioned in `Kafeneja` clue as F-D-A. `4. Furrë` = A.
+        *   **Kishë (7. Kishë - Church, F):** Mentioned in `Kafeneja` (F-D-A) and `Bashkia e qytetit` (F-G-L) clues. `7. Kishë` = F.
+        *   **Male (9. Male - Mountains, M):** Mentioned in `Kopsht` clue (I below M). `9. Male` = M.
+        *   **Floktor (10. Floktor - Barbershop, B):** Mentioned in `Dhëmbëtari` clue (H is left of B - problematic). Given the list `10. Floktor` is Barbershop. So `10. Floktor` = B.
+        *   **Ëmbëlsirë (3. Ëmbëlsirë - Confectionery, J):** Mentioned in `Mishtorja` (C is left of J) and `Sheshi lojërash` (N is right of J) clues. `3. Ëmbëlsirë` = J.
+        *   **Xhami (14. Xhami - Mosque, L):** Mentioned in `Bashkia e qytetit` (G between F and L), `Dhëmbëtari` (H below L), and `Kopsht` (I right of L) clues. `14. Xhami` = L.
+        *   **Varrezë (13. Varrezë - Cemetery, E):** Only remaining Albanian name is `13. Varrezë`. Only remaining icon is `E` (RIP icon). `13. Varrezë` = E.
+
+**C1 Answers:**
+1.  G
+2.  H
+3.  J
+4.  A
+5.  D
+6.  C
+7.  F
+8.  I
+9.  M
+10. B
+11. N
+12. K
+13. E
+14. L
+
+### C2. You receive the following directions for a tour:
+
+**Reasoning Step-by-Step:**
+
+I will trace the path on the map, making interpretations to ensure consistency, especially regarding "left/right" and "first place" statements that might imply a specific direction of travel along a street.
+
+1.  **"Filloni në cep të rrugëve rruga e Durrësit dhe rruga I. Kadare."**
+    *   Start at the top-right corner of the map (intersection of Rruga e Durrësit and Rruga I. Kadare).
+
+2.  **"Shkoni drejt në rrugën e Durrësit në vendin e pestë në të majtë (në fund të rrugës)."**
+    *   From the start, go straight (west) on Rruga e Durrësit.
+    *   Pass Mosque (L), City Hall (G), Church (F).
+    *   "Në fund të rrugës" (at the end of the street) is the intersection with Bulevard Nënë Tereza, where Cemetery (E) is. The "fifth place" seems to be a general instruction or includes empty plots, but the next instruction clarifies.
+    *   Current Location: At the intersection of Rruga e Durrësit and Bulevard Nënë Tereza.
+
+3.  **"Shkoni nëpër varrezën."**
+    *   Go through the Cemetery (E). This confirms being at or immediately past E.
+    *   Current Location: Cemetery (E).
+
+4.  **"Kthehuni majtas në rrugën Fortuzi."**
+    *   From Cemetery (E), to reach Rruga Fortuzi, one would typically turn left (south) onto Bulevard Nënë Tereza, then turn right (east) onto Rruga Fortuzi.
+    *   However, the next instruction ("Kafeneja është vendi i parë në të djathtë.") strongly suggests heading *west* on Rruga Fortuzi. To accommodate this, the instruction "Kthehuni majtas në rrugën Fortuzi" must mean: Turn left (south) onto Bulevard Nënë Tereza, and then turn left *again* (west) onto Rruga Fortuzi. This fulfills "kthehuni majtas" for the turn onto Rruga Fortuzi.
+    *   Current Location: On Rruga Fortuzi, at its intersection with Bulevard Nënë Tereza, heading West. (Houses in order: H-B-D, moving towards D).
+
+5.  **"Kafeneja është vendi i parë në të djathtë."**
+    *   Cafe (D) is indeed the first building encountered on Rruga Fortuzi when heading West from Bulevard Nënë Tereza, and it is on the right side of the street (south side). This confirms the direction of travel and current location.
+    *   Current Location: Cafe (D), heading West.
+
+6.  **"Shkoni në vendin e tretë në të djathtë."**
+    *   From Cafe (D), heading West on Rruga Fortuzi (H-B-D):
+        *   1st place on the right (where you are): Cafe (D).
+        *   2nd place on the right: Barbershop (B).
+        *   3rd place on the right: Dentist (H).
+    *   Current Location: Dentist (H), still heading West.
+
+7.  **"Shkoni nëpër floktorin dhe kthehuni djathtas."**
+    *   Go through the Barbershop (B). This requires turning back (east) from Dentist (H) to Barbershop (B).
+    *   Current Location: Barbershop (B), now heading East.
+    *   "kthehuni djathtas" (turn right). From Barbershop (B), heading East. Turning right would take you south onto the unnamed vertical street between Rruga Fortuzi and Rruga Vorpsi.
+    *   Current Location: On the unnamed vertical street, between Rruga Fortuzi and Rruga Vorpsi, heading South.
+
+8.  **"Shkoni në vendin e dytë në të djathtë."**
+    *   On the vertical street, heading South.
+    *   Rruga Vorpsi is to the right (west).
+    *   1st place on the right (west) on Rruga Vorpsi: Market (K).
+    *   2nd place on the right (west) on Rruga Vorpsi: Butcher (C).
+    *   Current Location: Butcher (C).
+
+9.  **"Mos shkoni nëpër kafenen."**
+    *   This is a warning. No action required.
+
+10. **"Kthehuni prapa dhe kaloni bulevardin Nënë Tereza."**
+    *   "Kthehuni prapa" (Turn back) means turn north on the current vertical street.
+    *   "kaloni bulevardin Nënë Tereza" (cross Bulevard Nënë Tereza). From Rruga Fortuzi (going west from B), cross Bulevard Nënë Tereza.
+    *   So, from Butcher (C), go North on the unnamed street. Turn left (west) on Rruga Fortuzi. Cross Bulevard Nënë Tereza.
+    *   Current Location: At the western end of Rruga Fortuzi, past Cafe (D), in the empty lot on Bulevard Nënë Tereza's western side.
+
+11. **"Dyqani është vendi i parë në të djathtë."**
+    *   `Dyqani` is Market (K). From the current location (west of Cafe D), Market (K) is on Rruga Vorpsi, which is to the south.
+    *   "vendi i parë në të djathtë" (first place on the right) implies turning right onto Rruga Vorpsi from Bulevard Nënë Tereza (heading south).
+    *   So, from the empty lot west of Cafe (D), go south on Bulevard Nënë Tereza. Turn right (west) onto Rruga Vorpsi.
+    *   Current Location: Market (K), heading West on Rruga Vorpsi.
+
+12. **"Floktori është vendi i dytë në të majtë."**
+    *   `Floktori` is Barbershop (B). Market (K) is on Rruga Vorpsi. Barbershop (B) is on Rruga Fortuzi.
+    *   This implies a change of street and possibly direction.
+    *   From Market (K), heading West on Rruga Vorpsi, there's nothing on the left (south) or west.
+    *   To get to Barbershop (B) and have it be the "second place on the left", one must be on Rruga Fortuzi heading East.
+    *   So: From Market (K), turn back (east) on Rruga Vorpsi to Bulevard Nënë Tereza. Turn left (north) on Bulevard Nënë Tereza. Turn right (east) onto Rruga Fortuzi.
+    *   Now on Rruga Fortuzi, heading East (D-B-H):
+        *   1st place on left: Cafe (D).
+        *   2nd place on left: Barbershop (B). This matches the instruction.
+    *   Current Location: Barbershop (B), heading East on Rruga Fortuzi.
+
+13. **"Shkoni deri në fund të rrugës."**
+    *   From Barbershop (B), head East to the end of Rruga Fortuzi. This means passing Dentist (H).
+    *   Current Location: Corner of Rruga Fortuzi and Rruga I. Kadare.
+
+14. **"Kthehuni djathtas."**
+    *   From the corner of Rruga Fortuzi and Rruga I. Kadare, turn right (south) onto Rruga I. Kadare.
+    *   Current Location: On Rruga I. Kadare, heading South.
+
+**Final Question:** "At the end of the tour, if you keep walking, what will be the first site (not considering empty lots) on your right that you come to?"
+*   I am on Rruga I. Kadare, heading South.
+*   On my right side (West side): The first street is Rruga Vorpsi. The buildings on Rruga Vorpsi are K, C, J. The one closest to Rruga I. Kadare is Confectionery (J).
+*   So, the first site on the right is Confectionery.
+
+**C2 Answer:** Confectionery
+
+### C3. You want to invite all of the new people you have met to go to the café.
+
+**Reasoning Step-by-Step:**
+
+1.  **Starting Point:** "Go to the corner of Bulevard Nënë Tereza and Rruga Butrinti."
+    *   This is the bottom-left corner of the map.
+    *   Rruga Butrinti has houses:
+        *   North side (left when facing east): 112, 114, 116, 118, 120
+        *   South side (right when facing east): 111, 113, 115, 117, 119
+    *   "A lady there tells you the following while pointing up the road" implies the perspective is looking East along Rruga Butrinti.
+
+2.  **Drita:** "Drita jeton në shtëpinë e dytë në të majtë." (Drita lives in the second house on the left).
+    *   Left (North) side houses: 112 (first), 114 (second).
+    *   Drita's house: 114.
+
+3.  **Kustrimi:** "Kustrimi jeton në shtëpinë e pestë në të majtë." (Kustrimi lives in the fifth house on the left).
+    *   Left (North) side houses: 112, 114, 116, 118, 120 (fifth).
+    *   Kustrimi's house: 120.
+
+4.  **Lindita:** "Lindita jeton në shtëpinë e katërt në të djathtë." (Lindita lives in the fourth house on the right).
+    *   Right (South) side houses: 111 (first), 113 (second), 115 (third), 117 (fourth).
+    *   Lindita's house: 117.
+
+5.  **Sokoli:** "Sokoli jeton në shtëpinë e parë në të djathtë." (Sokoli lives in the first house on the right).
+    *   Right (South) side houses: 111 (first).
+    *   Sokoli's house: 111.
+
+6.  **Valoni:** "Valoni jeton në shtëpinë e tretë në të majtë." (Valoni lives in the third house on the left).
+    *   Left (North) side houses: 112 (first), 114 (second), 116 (third).
+    *   Valoni's house: 116.
+
+**C3 Answers:**
+Drita: 114
+Kustrim: 120
+Lindita: 117
+Sokol: 111
+Valon: 116
+
+---
+
+**Final Answer JSON Array:**
+
+```json
+[
+  {
+    "question_id": "C1_1",
+    "answer": "G",
+    "reasoning": "The Albanian name 'Bashkia e qytetit' corresponds to 'City Hall'. The clue 'Bashkia e qytetit është ndërmjet kishës dhe xhamisë' (City Hall is between the Church (F) and the Mosque (L)) is true on the map (F-G-L)."
+  },
+  {
+    "question_id": "C1_2",
+    "answer": "H",
+    "reasoning": "The Albanian name 'Dhëmbëtar' corresponds to 'Dentist'. The clue 'Dhëmbëtari është majtas nga floktorit dhe para xhamisë' (Dentist is to the left of the Barbershop (B) and in front of the Mosque (L)). Dentist (H) is indeed in front of Mosque (L) (H is below L). However, Dentist (H) is to the right of Barbershop (B) (D-B-H), which contradicts 'majtas nga floktorit'. Despite this contradiction, given the overall problem structure, 'Dhëmbëtar' is intended to be 'Dentist (H)'."
+  },
+  {
+    "question_id": "C1_3",
+    "answer": "J",
+    "reasoning": "The Albanian name 'Ëmbëlsirë' corresponds to 'Confectionery'. This place is mentioned in clues for 'Mishtorja' (Butcher (C) is behind Confectionery (J) - C is to the left of J) and 'Sheshi lojërash' (Playground (N) is to the right of Confectionery (J)). Both are consistent with J being Confectionery."
+  },
+  {
+    "question_id": "C1_4",
+    "answer": "A",
+    "reasoning": "The Albanian name 'Furrë' corresponds to 'Bakery'. It is mentioned in the clue for 'Kafeneja': 'Kafeneja (D) është ndërmjet kishës (F) dhe furrës (A)' (Cafe is between Church and Bakery). This vertical alignment (F above D, D above A) is consistent on the map."
+  },
+  {
+    "question_id": "C1_5",
+    "answer": "D",
+    "reasoning": "The Albanian name 'Kafene' corresponds to 'Cafe'. The clue 'Kafeneja është ndërmjet kishës (F) dhe furrës (A) dhe majtas nga dhëmbëtarit (H)' (Cafe is between Church and Bakery, and to the left of Dentist). Cafe (D) is vertically between F and A, and is to the left of H (D-B-H). All parts are consistent."
+  },
+  {
+    "question_id": "C1_6",
+    "answer": "C",
+    "reasoning": "The Albanian name 'Mishtore' corresponds to 'Butcher'. The clue 'Mishtorja është pas ëmbëlsirës (J)' (Butcher is behind Confectionery). Interpreting 'pas' for horizontal relations as 'to the left of' in a reading order, Butcher (C) is to the left of Confectionery (J) (K-C-J). This is consistent."
+  },
+  {
+    "question_id": "C1_7",
+    "answer": "F",
+    "reasoning": "The Albanian name 'Kishë' corresponds to 'Church'. It is mentioned in clues for 'Kafeneja' (D between F and A) and 'Bashkia e qytetit' (G between F and L). Both are consistent with F being Church."
+  },
+  {
+    "question_id": "C1_8",
+    "answer": "I",
+    "reasoning": "The Albanian name 'Kopsht' corresponds to 'Garden'. The clue 'Kopsht është djathtas nga xhamia (L) dhe para maleve (M)' (Garden is to the right of Mosque and in front of Mountains). Garden (I) is to the right of L and below M. All parts are consistent."
+  },
+  {
+    "question_id": "C1_9",
+    "answer": "M",
+    "reasoning": "The Albanian name 'Male' corresponds to 'Mountains'. It is mentioned in the clue for 'Kopsht': 'Kopsht (I) është ... para maleve (M)' (Garden is in front of Mountains). This means I is below M. This is consistent."
+  },
+  {
+    "question_id": "C1_10",
+    "answer": "B",
+    "reasoning": "The Albanian name 'Floktor' corresponds to 'Barbershop'. It is mentioned in the problematic clue for 'Dhëmbëtari' (Dentist (H) is to the left of Barbershop (B)). As noted in C1_2, this contradicts the map's visual (H is right of B). However, 'Floktor' is listed as 'Barbershop (B)' and must be assigned. I assume the specific clause is an error in the problem description, and 'Floktor' is 'Barbershop (B)'."
+  },
+  {
+    "question_id": "C1_11",
+    "answer": "N",
+    "reasoning": "The Albanian name 'Shesh lojërash' corresponds to 'Playground'. The clue 'Sheshi lojërash është djathtas nga ëmbëlsira (J)' (Playground is to the right of Confectionery). Playground (N) is to the right of J. This is consistent."
+  },
+  {
+    "question_id": "C1_12",
+    "answer": "K",
+    "reasoning": "The Albanian name 'Dyqan' corresponds to 'Market'. The clue 'Dyqani është para dhëmbëtarit (H) dhe majtas nga mishtorja (C)' (Market is in front of Dentist and to the left of Butcher). Market (K) is below H, and K is to the left of C (K-C-J). All parts are consistent."
+  },
+  {
+    "question_id": "C1_13",
+    "answer": "E",
+    "reasoning": "The Albanian name 'Varrezë' corresponds to 'Cemetery'. This name is not explicitly identified by a specific clue, but by process of elimination it is the only remaining Albanian name (13) and Cemetery (E, RIP icon) is the only remaining English translation/icon that fits its map position on Rruga e Durrësit."
+  },
+  {
+    "question_id": "C1_14",
+    "answer": "L",
+    "reasoning": "The Albanian name 'Xhami' corresponds to 'Mosque'. It is mentioned in clues for 'Bashkia e qytetit' (G between F and L), 'Dhëmbëtari' (H below L), and 'Kopsht' (I right of L). All are consistent with L being Mosque."
+  },
+  {
+    "question_id": "C2_1",
+    "answer": "Confectionery",
+    "reasoning": "1. Start at the corner of Rruga e Durrësit and Rruga I. Kadare (top-right). \n2. Go straight (west) on Rruga e Durrësit to the end of the street, passing L, G, F. 'Shkoni nëpër varrezën' (Go through Cemetery E). So, you are at Cemetery (E).\n3. 'Kthehuni majtas në rrugën Fortuzi' (Turn left onto Rruga Fortuzi). To make subsequent instructions consistent: Turn left (south) onto Bulevard Nënë Tereza, then turn left (west) onto Rruga Fortuzi. You are now at Cafe (D), heading West on Rruga Fortuzi (H-B-D).\n4. 'Kafeneja është vendi i parë në të djathtë' (Cafe is the first place on the right). This is consistent: D is the first building encountered heading west from Bulevard Nënë Tereza, and it's on your right.\n5. 'Shkoni në vendin e tretë në të djathtë' (Go to the third place on the right). From Cafe (D), heading West: (D is 1st on right), Barbershop (B) is 2nd on right, Dentist (H) is 3rd on right. So, you are at Dentist (H), heading West.\n6. 'Shkoni nëpër floktorin dhe kthehuni djathtas' (Go through Barbershop (B) and turn right). From Dentist (H), go back (east) through Barbershop (B). You are now at Barbershop (B), heading East. Turn right (south) onto the unnamed vertical street.\n7. 'Shkoni në vendin e dytë në të djathtë' (Go to the second place on the right). On the vertical street, heading South: 1st on right is Market (K), 2nd on right is Butcher (C). So, you are at Butcher (C).\n8. 'Kthehuni prapa dhe kaloni bulevardin Nënë Tereza' (Turn back and cross Bulevard Nënë Tereza). From Butcher (C), turn back (north) on the unnamed street. Turn left (west) onto Rruga Fortuzi and cross Bulevard Nënë Tereza. You are now in the empty lot west of Cafe (D), on Rruga Fortuzi.\n9. 'Dyqani është vendi i parë në të djathtë' (Market is the first place on the right). From your current location, go south on Bulevard Nënë Tereza. Turn right (west) onto Rruga Vorpsi. Market (K) is the first building on the right. So, you are at Market (K), heading West on Rruga Vorpsi.\n10. 'Floktori është vendi i dytë në të majtë' (Barbershop is the second place on the left). To reach Barbershop (B) and have it be the second on the left: From Market (K), turn back (east) on Rruga Vorpsi to Bulevard Nënë Tereza. Turn left (north) on Bulevard Nënë Tereza. Turn right (east) onto Rruga Fortuzi. Now on Rruga Fortuzi, heading East (D-B-H): Cafe (D) is 1st on left, Barbershop (B) is 2nd on left. So, you are at Barbershop (B), heading East.\n11. 'Shkoni deri në fund të rrugës' (Go to the end of the street). From B, head East past Dentist (H) to the end of Rruga Fortuzi (intersection with Rruga I. Kadare).\n12. 'Kthehuni djathtas' (Turn right). Turn right (south) onto Rruga I. Kadare. You are now on Rruga I. Kadare, heading South.\n\nFinal Question: 'what will be the first site (not considering empty lots) on your right that you come to?' As you head South on Rruga I. Kadare, the first street to your right (west) is Rruga Vorpsi. The first building on Rruga Vorpsi, closest to Rruga I. Kadare, is Confectionery (J)."
+  },
+  {
+    "question_id": "C3_1",
+    "answer": "114",
+    "reasoning": "Starting at the corner of Bulevard Nënë Tereza and Rruga Butrinti, facing East. The left side houses are 112, 114, 116, 118, 120. Drita lives in the second house on the left: 114."
+  },
+  {
+    "question_id": "C3_2",
+    "answer": "120",
+    "reasoning": "Starting at the corner of Bulevard Nënë Tereza and Rruga Butrinti, facing East. The left side houses are 112, 114, 116, 118, 120. Kustrimi lives in the fifth house on the left: 120."
+  },
+  {
+    "question_id": "C3_3",
+    "answer": "117",
+    "reasoning": "Starting at the corner of Bulevard Nënë Tereza and Rruga Butrinti, facing East. The right side houses are 111, 113, 115, 117, 119. Lindita lives in the fourth house on the right: 117."
+  },
+  {
+    "question_id": "C3_4",
+    "answer": "111",
+    "reasoning": "Starting at the corner of Bulevard Nënë Tereza and Rruga Butrinti, facing East. The right side houses are 111, 113, 115, 117, 119. Sokoli lives in the first house on the right: 111."
+  },
+  {
+    "question_id": "C3_5",
+    "answer": "116",
+    "reasoning": "Starting at the corner of Bulevard Nënë Tereza and Rruga Butrinti, facing East. The left side houses are 112, 114, 116, 118, 120. Valoni lives in the third house on the left: 116."
+  }
+]
+```

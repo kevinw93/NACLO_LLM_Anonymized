@@ -1,0 +1,97 @@
+[
+  {
+    "question_id": "H1_a",
+    "answer": "abcd",
+    "reasoning": "The string 'S' in Column 2 advances from 'abc' to 'abcd', implying 'd' was appended. Therefore, Column 1 (a) must show the current string 'abcd'."
+  },
+  {
+    "question_id": "H1_b",
+    "answer": "S = abcdb",
+    "reasoning": "Column 1 advances from 'abcd' to 'abcdb'. This indicates that 'S' is being updated by appending 'b'. Thus, Column 2 (b) defines 'S' as 'abcdb'."
+  },
+  {
+    "question_id": "H1_c",
+    "answer": "YdXa",
+    "reasoning": "Following the processing sequence, after 'abcdbc' (which is 'aXdX'), the next character 'a' is added, leading to 'S = aXdXa' (blank d). At this point, the digram 'aX' (which is 'a(bc)') repeats, so 'Y = aX' (blank e) is defined. Applying this rule to 'aXdXa' gives 'YdXa'."
+  },
+  {
+    "question_id": "H1_d",
+    "answer": "S = aXdXa",
+    "reasoning": "After `S = aXdX` (representing `abcdbc`), the next character 'a' from the input `abcdbcabcd` is processed. Therefore, `S` becomes `aXdXa`."
+  },
+  {
+    "question_id": "H1_e",
+    "answer": "Y = aX",
+    "reasoning": "After `S` becomes `aXdXa`, the digram `aX` repeats in the string. Sequitur identifies this pattern and defines a new rule `Y = aX`."
+  },
+  {
+    "question_id": "H1_f",
+    "answer": "S = YdXab",
+    "reasoning": "After `S = YdXa` (representing `abcdbca`), the next character 'b' from the input is processed. `S` is updated to `YdXab`, which expands to `aXdXab` in Column 1."
+  },
+  {
+    "question_id": "H1_g",
+    "answer": "Y = aX",
+    "reasoning": "After `S = aXdXabc`, the final 'bc' is replaced by 'X' (as `X = bc` is already a rule), leading to `S = aXdXaX`. The rule `Y = aX` is already established and is listed as part of the grammar at this step."
+  },
+  {
+    "question_id": "H1_h",
+    "answer": "YdXY",
+    "reasoning": "After `S = aXdXaX`, the string `aXdXaX` can be fully expressed using the `Y = aX` rule. `aXdXaX` -> `(aX)d(X)(aX)` -> `YdXY`. This is the string representation in Column 1 using the `Y` non-terminal."
+  },
+  {
+    "question_id": "H1_i",
+    "answer": "S = YdXY",
+    "reasoning": "If Column 1 (h) is `YdXY`, then Column 2 (i) defines `S` in terms of this new representation, `S = YdXY`."
+  },
+  {
+    "question_id": "H1_j",
+    "answer": "ZXZ",
+    "reasoning": "This is the final step, where the last character 'd' is processed and the `Z = Yd` rule is introduced. The current string `YdXY` (from step 9) with the appended 'd' implies `YdXYd`. With `Z = Yd`, this becomes `ZXZ`. This matches the overall final output shown at the bottom of the table, confirming it's the final compressed string representation."
+  },
+  {
+    "question_id": "H1_k",
+    "answer": "S = ZXZ",
+    "reasoning": "As Column 1 (j) is `ZXZ`, Column 2 (k) must define `S` as `ZXZ`, representing the fully compressed final output string."
+  },
+  {
+    "question_id": "H2_a",
+    "answer": "aXdXaXd",
+    "reasoning": "BPE identifies the most frequent pair. In 'abcdbcabcd', 'bc' is chosen (as per the final output rules). Replacing 'bc' with 'X' yields 'aXdXaXd'. This is the string in Column 1 for Step 2."
+  },
+  {
+    "question_id": "H2_b",
+    "answer": "S = aXdXaXd",
+    "reasoning": "After replacing 'bc' with 'X' to get 'aXdXaXd', the main string 'S' is updated to reflect this new compressed form. Thus, Column 2 (b) is `S = aXdXaXd`."
+  },
+  {
+    "question_id": "H2_c",
+    "answer": "Y = aX",
+    "reasoning": "In 'aXdXaXd', the pair 'aX' is chosen next (as per the final output rules). A new rule `Y = aX` is defined. This is blank (c) in Column 2."
+  },
+  {
+    "question_id": "H3_a",
+    "answer": "Different",
+    "reasoning": "Sequitur yields `YdYX` (with `X=ab, Y=Xc`). BPE (assuming `ab` is chosen first) yields `XcXdZ` (with `X=ab, Y=bc, Z=YY`). The resulting grammar and compressed string are different."
+  },
+  {
+    "question_id": "H3_b",
+    "answer": "Same",
+    "reasoning": "Sequitur identifies `ca` (or `ad`) as the first repeating digram, leading to `abbXddX` (with `X=ca`). BPE, in its first step, also identifies `ca` (or `ad`) as a most frequent pair, and replacing it leads to `abbXddX` (with `X=ca`). Both algorithms produce the same output."
+  },
+  {
+    "question_id": "H3_c",
+    "answer": "Different",
+    "reasoning": "Sequitur identifies `bc`, then `ba`, then `bX`, then `YZ` leading to `WWY`. BPE (assuming `ba` is chosen first, then `Xc`, then `Yb`) leads to `ZZX`. The resulting grammars and compressed strings are different."
+  },
+  {
+    "question_id": "H3_d",
+    "answer": "Same",
+    "reasoning": "Both Sequitur and BPE (with consistent tie-breaking) apply rules for `X=cc`, then `Y=db`, then `Z=XY`. Both algorithms ultimately derive `ZZaX` as the final compressed string with the same grammar rules."
+  },
+  {
+    "question_id": "H3_e",
+    "answer": "Different",
+    "reasoning": "For the prefix `ccdbccdbccacc`, both algorithms result in `ZZaX`. When `acca` is appended to `ZZaX`, Sequitur (replacing all occurrences of a newly defined pattern) derives `ZZaXWWa` (with `W=ac`). BPE (replacing the most frequent pair in the entire string) derives `ZZaXWca` (with `W=ac`). The final compressed strings are different."
+  }
+]

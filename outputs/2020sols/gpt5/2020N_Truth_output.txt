@@ -1,0 +1,72 @@
+Model: gpt-5
+Generation Time: 275.20 seconds
+Timestamp: 2025-12-25 11:22:50
+================================================================================
+
+[
+  {
+    "question_id": "N1_1",
+    "answer": "Add a substitution-of-identicals rule: for any True List sentence of the form “X is Y” (including equations “X = Y”), TruthBot may also utter “Y is X,” and may replace any occurrence of X with Y (or Y with X) in any True List sentence to form a new sentence.",
+    "reasoning": "This rule explains (2) by replacing “Ottawa” with “the capital city of Canada,” (3) by substituting 4 with 2+2 (and vice versa) to yield tautologies, and (5) by flipping “Ottawa is the capital city of Canada.” Counting all such results with the six given truths yields 18 distinct utterances."
+  },
+  {
+    "question_id": "N2_1",
+    "answer": "It depends. If the added sentence contains no term that is equated in the True List, it adds exactly 1 (itself). If it contains t occurrences of terms that have a listed equivalent, it adds 1 + t (the substituted variants). If the added sentence itself is an identity/equality (“X is Y” or “X = Y”), it adds at least 4 (itself, the flip, and two tautologies) plus one more for each occurrence of X or Y in existing sentences (from substituting there).",
+    "reasoning": "Under the substitution rule, only occurrences of terms that are linked by an identity/equality generate extra sentences. Identity/equality statements also yield the flipped form and within-statement tautologies, plus substitutions into other sentences that mention either side."
+  },
+  {
+    "question_id": "N3_1",
+    "answer": "Ruth has 2 + 2 siblings.",
+    "reasoning": "Substitute 4 with 2 + 2 (from “2 + 2 = 4”) in the added sentence."
+  },
+  {
+    "question_id": "N3_2",
+    "answer": "Ruth knows Ottawa.",
+    "reasoning": "Substitute “the capital city of Canada” with “Ottawa.”"
+  },
+  {
+    "question_id": "N3_3",
+    "answer": "Ruth prefers the Washington Capitals to the capital city of Canada Senators.",
+    "reasoning": "Substitute “Ottawa” with “the capital city of Canada” inside the team name."
+  },
+  {
+    "question_id": "N3_4",
+    "answer": "Ruth named her stuffed, toy bear after the 26th President of the U.S.",
+    "reasoning": "Substitute “Theodore Roosevelt” with “the 26th President of the U.S.”"
+  },
+  {
+    "question_id": "N3_5",
+    "answer": "Ruth named her stuffed, toy bear the 26th President of the U.S.",
+    "reasoning": "Substitute the name “Theodore Roosevelt” with “the 26th President of the U.S.” in a naming context."
+  },
+  {
+    "question_id": "N4_1",
+    "answer": "True",
+    "reasoning": "“2 + 2 = 4” makes the substituted numeric description truth-preserving in this extensional context."
+  },
+  {
+    "question_id": "N4_2",
+    "answer": "Weird",
+    "reasoning": "“Know” is opaque/ambiguous: knowing the capital (propositional) does not straightforwardly entail knowing Ottawa (acquaintance)."
+  },
+  {
+    "question_id": "N4_3",
+    "answer": "Weird",
+    "reasoning": "Substituting inside a proper name yields an unnatural or uninterpretable name (“…capital city of Canada Senators”)."
+  },
+  {
+    "question_id": "N4_4",
+    "answer": "True",
+    "reasoning": "Coreferential substitution in an extensional ‘after’ PP preserves truth (TR = the 26th President)."
+  },
+  {
+    "question_id": "N4_5",
+    "answer": "False",
+    "reasoning": "In naming contexts, the literal name string matters; “Theodore Roosevelt” ≠ “the 26th President of the U.S.” as names."
+  },
+  {
+    "question_id": "N5_1",
+    "answer": "Restrict substitution to referentially transparent positions and whole NPs only. Forbid substitutions inside proper names, quotations, or the complements of intensional/attitude and naming verbs (e.g., know, believe, want, say, prefer, name, call). Allow flips of “X is Y” and arithmetic tautologies, and NP-for-NP substitutions only where the NP is not part of a fixed name or opaque context; also clean up determiners to avoid duplicates (e.g., avoid “the the …”).",
+    "reasoning": "This preserves good cases like (2)–(5) while blocking failures from opacity (knowledge/naming) and from tampering with fixed proper names."
+  }
+]

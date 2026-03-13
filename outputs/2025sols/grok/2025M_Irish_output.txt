@@ -1,0 +1,42 @@
+Model: grok-4-fast-reasoning
+Generation Time: 71.85 seconds
+Timestamp: 2026-02-04 00:02:15
+================================================================================
+
+[
+  {
+    "question_id": "M1_1",
+    "answer": "D",
+    "reasoning": "The English sentence 'A short sister has a kind brother' matches Irish sentence D: 'Tá deartháir cineálta ag deirfiúr beag.' By deducing vocabulary from patterns, 'deirfiúr' consistently appears as sister (in C and D), 'beag' as short (unique to this context matching 'short sister'), 'deartháir' as brother (appears multiple times), and 'cineálta' as kind (appears in B, C, D matching 'kind' in multiple contexts). The structure 'Tá [possessed] ag [possessor]' means 'possessor has possessed', confirmed across all sentences. No other sentence has this exact combination."
+  },
+  {
+    "question_id": "M1_2",
+    "answer": "A",
+    "reasoning": "The English sentence 'A smart brother has a greedy grandson' matches Irish sentence A: 'Tá gearmhaic santach ag deartháir cliste.' 'Deartháir cliste' is the only occurrence of 'cliste' with 'deartháir', deduced as smart brother. 'Gearmhaic' appears in A and C, deduced as grandson (to fit 'grandson' in this and M3). 'Santach' is deduced as greedy, as it fits this unique combination, and later 'shantach' (lenited form after feminine nouns) in E confirms the pattern. Structure consistent with possession."
+  },
+  {
+    "question_id": "M1_3",
+    "answer": "B",
+    "reasoning": "The English sentence 'A shy nephew has a kind daughter' matches Irish sentence B: 'Tá inion chineálta ag niú chuthail.' 'Inion chineálta' matches kind daughter ('cineálta' = kind from multiple uses, 'inion' = daughter from B and E). 'Niú chuthail' is unique, deduced as shy nephew ('chuthail' = shy, confirmed by 'chúthail' in E and M3 contexts; 'niú' = nephew, fitting family terms and M3). Structure 'Tá [daughter] ag [nephew]' fits possession. Other sentences don't match this pair."
+  },
+  {
+    "question_id": "M2_1",
+    "answer": "A kind grandson has a smart sister.",
+    "reasoning": "For remaining sentence C: 'Tá deirfiúr chliste ag gearmhaic cineálta.' Using deduced vocabulary: 'deirfiúr' = sister, 'chliste' = smart (lenited 'cliste' after feminine 'deirfiúr', as seen in consistent mutation pattern after fem. nouns like in C and B). 'Gearmhaic' = grandson, 'cineálta' = kind. Structure indicates 'kind grandson has smart sister'. This is the only remaining fit after matching A, B, D in M1; E is the other remaining."
+  },
+  {
+    "question_id": "M2_2",
+    "answer": "A shy brother has a greedy daughter.",
+    "reasoning": "For remaining sentence E: 'Tá inion shantach ag deartháir chúthail.' 'Deartháir' = brother, 'chúthail' = shy (variant spelling of 'chuthail' from B, indicating shy). 'Inion' = daughter, 'shantach' = greedy (lenited form of 'santach' from A, where it modifies grandson; lenition after feminine 'inion' explains 'sh-' vs. 's-', an observation of Irish morphology where adjectives lenite after feminine nouns, e.g., 'cliste' to 'chliste' in C). Structure fits possession."
+  },
+  {
+    "question_id": "M3_1",
+    "answer": "Tá inion chúthail ag gearmhaic cliste.",
+    "reasoning": "Translating 'A smart grandson has a shy daughter' to Irish, following the consistent structure 'Tá [possessed adj] ag [possessor adj]'. 'Grandson' = 'gearmhaic' (masc., from A and C), 'smart' = 'cliste' (no lenition after masc.). 'Daughter' = 'inion' (fem., from B and E), 'shy' = 'chúthail' (lenited form after fem., matching pattern in E 'chúthail' and B 'chuthail'; use accented form from E). Vocabulary and structure deduced from given sentences; mutations observed as a key Irish feature (lenition after fem. nouns)."
+  },
+  {
+    "question_id": "M3_2",
+    "answer": "Tá niú beag ag deirfiúr shantach.",
+    "reasoning": "Translating 'A greedy sister has a short nephew' to Irish, using 'Tá [possessed adj] ag [possessor adj]'. 'Nephew' = 'niú' (masc., from B), 'short' = 'beag' (no lenition after masc., matching D where 'beag' follows fem. but simplified here; pattern from D). 'Sister' = 'deirfiúr' (fem., from C and D), 'greedy' = 'shantach' (lenited after fem., matching E 'shantach' after 'inion' and A 'santach' after masc. 'gearmhaic'). This confirms the adj mutation pattern in Irish, where form changes based on noun gender."
+  }
+]

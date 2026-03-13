@@ -1,0 +1,22 @@
+[
+  {
+    "question_id": "M1_1",
+    "answer": "A",
+    "reasoning": "The F1 scores for Alg A (0.29, 0.40, 0.50) match the pattern expected for the baseline algorithm, which only correctly identifies the final boundary (TP=1, FN = number of words - 1, FP=0), yielding F1 = 2 / (number of words + 1). For the second sentence (4 words), 2/5 = 0.40; for the third (3 words), 2/4 = 0.50. The first sentence's 0.29 is slightly off but closest to this simple strategy's low performance due to missing all internal boundaries."
+  },
+  {
+    "question_id": "M1_2",
+    "answer": "C",
+    "reasoning": "The F1 scores for Alg C (0.42, 0.36, 0.60) fit Pavan's algorithm, which labels all final consonants as 1 plus the last character. This introduces some FPs from internal final consonants not at boundaries but catches some internal boundaries better than baseline in certain sentences (e.g., higher in third sentence) while sometimes performing worse due to extra FPs (e.g., lower in second sentence)."
+  },
+  {
+    "question_id": "M1_3",
+    "answer": "B",
+    "reasoning": "The F1 scores for Alg B (0.60, 0.67, 1.00) match Arun's more sophisticated algorithm, which selectively labels certain final consonants as 1 based on context (preceded by vowel, followed by initial consonant then vowel), plus the last. This reduces FPs compared to Pavan's and catches more true boundaries, leading to the highest scores, including perfect on the third sentence where the patterns align well."
+  },
+  {
+    "question_id": "M2_1",
+    "answer": "6/7",
+    "reasoning": "In the table, Arun's algorithm (Alg B) achieves F1=1.00 on the third sentence with the given 3-word segmentation, meaning TP=3, FP=0, FN=0 (perfect match of the three boundaries). The alternative segmentation (4) splits the ambiguous part (likely the last word 'ไทย' into two), adding one more true boundary (now 4 words total). The model's predictions remain the same, so the new internal boundary was previously predicted as 0 (no extra FP originally), adding FN=1. Thus, TP=3, FP=0, FN=1, F1 = 2*3 / (2*3 + 0 + 1) = 6/7."
+  }
+]

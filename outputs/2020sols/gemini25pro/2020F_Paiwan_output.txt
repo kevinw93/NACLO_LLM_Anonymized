@@ -1,0 +1,136 @@
+Model: gemini-2.5-pro
+Generation Time: 125.99 seconds
+Timestamp: 2025-10-23 00:55:25
+================================================================================
+
+An analysis of the provided Paiwan sentences reveals a verb-initial language with a focus system, typical of Austronesian languages. The verb's affix changes depending on which element of the sentence (agent, patient, instrument, or location) is in focus. The focused element is marked with the particle `a` and typically appears at the end of the sentence. Non-focused agents are marked with `nua` (which also serves as a genitive marker), and non-focused patients are marked with `tua`.
+
+Here's a breakdown of the focus system based on sentences 1-8:
+-   **Agent Focus (AF):** Verb takes an `-m-` infix (e.g., `kman`, `tjmalaw`). The agent is marked with `a`.
+-   **Patient Focus (PF):** Verb takes an `-en` suffix (e.g., `djavisen`, `tjalawen`). The patient is marked with `a`.
+-   **Instrument Focus (IF):** Verb takes a `si-` prefix (e.g., `sitarang`). The instrument is marked with `a`.
+-   **Location Focus (LF):** Verb takes an `-an` suffix (e.g., `kanan`, `djavisan`). The location is marked with `a`.
+
+Possessive pronouns like `ku-` (my) and `su-` (your) are prefixed to nouns (e.g., `kuvatu` 'my dog', `suvavuy` 'your pig').
+
+The question-answer dialogues (9-12) show that the focused element in the answer corresponds to the wh-word in the question (`inu` for 'where', `anema` for 'what/who'). They also introduce agent pronouns (`ku-` for 'I', `su-` for 'you') prefixed to verbs in some contexts.
+
+Using these patterns, I will solve the problems.
+
+---
+### **F1: Translations into Paiwan**
+
+**a. The man protects the field with *the dog*.**
+-   The focus is on the instrument, "the dog". This requires the Instrument Focus verb form.
+-   Verb (protect): root `tarang` + `si-` prefix -> `sitarang`.
+-   Agent (the man): `nua uqałay`.
+-   Patient (the field): `tua quma`.
+-   Focused Instrument (the dog): `a vatu`.
+-   The word order is Verb-Agent-Patient-Instrument.
+-   **Sentence:** `sitarang nua uqałay tua quma a vatu`
+
+**b. Your shaman angers my bird in *the spirit's mountain*.**
+-   The focus is on the location, "the spirit's mountain". This requires the Location Focus verb form.
+-   Verb (anger): root `tjalaw` + `-an` suffix -> `tjalawan`.
+-   Agent (Your shaman): `nua supulingaw` (`su-` + `pulingaw`).
+-   Patient (my bird): `tua kuqaya-qayam` (`ku-` + `qaya-qayam`).
+-   Focused Location (the spirit's mountain): `a gadu nua tsemas`.
+-   The word order is Verb-Agent-Patient-Location.
+-   **Sentence:** `tjalawan nua supulingaw tua kuqaya-qayam a gadu nua tsemas`
+
+**c. *The woman* snatches the pig.**
+-   The focus is on the agent, "the woman". This requires the Agent Focus verb form.
+-   Verb (snatch): root `djavis`. The `-m-` infix goes after the first sound. Since `dj` is a single sound, it becomes `dj-m-avis`, spelled `dmjavis`.
+-   Patient (the pig): `tua vavuy`.
+-   Focused Agent (the woman): `a vavaian`.
+-   The word order is Verb-Patient-Agent.
+-   **Sentence:** `dmjavis tua vavuy a vavaian`
+
+---
+### **F2: Analysis of Dialogues**
+
+**a. `susitarang tua qaya-qayam nua pulingaw a tsemas`**
+1.  **English translation:**
+    -   The verb `susitarang` contains the `su-` prefix ('you'), the `si-` prefix (Instrument Focus), and the root `tarang` ('protect').
+    -   The agent is 'you'.
+    -   The patient is `tua qaya-qayam nua pulingaw` ('the shaman's bird').
+    -   The focused element is the instrument `a tsemas` ('the spirit').
+    -   **Translation:** You protect the shaman's bird with <u>the spirit</u>.
+2.  **Paiwan question:**
+    -   The answer provides the instrument, so the question must ask "what?" using `anema`.
+    -   Since the answer is from "you", the question must have been asked by "me" (`ku-`). The verb becomes `kusitarang`.
+    -   **Question:** `anema a kusitarang tua qaya-qayam nua pulingaw?`
+
+**b. `kanen nua uqałay a vavuy i tua gadu`**
+1.  **English translation:**
+    -   The verb `kanen` is the Patient Focus (`-en`) form of `kan` ('eat').
+    -   The agent is `nua uqałay` ('the man').
+    -   The focused element is the patient `a vavuy` ('the pig').
+    -   The location is `i tua gadu` ('in the mountain').
+    -   **Translation:** The man eats <u>the pig</u> in the mountain.
+2.  **Paiwan question:**
+    -   The answer provides the patient, so the question must ask "what?" using `anema`.
+    -   The question is formed with the verb in the same focus (Patient Focus `kanen`) and the other known elements.
+    -   **Question:** `anema a kanen nua uqałay i tua gadu?`
+
+**c. `kutjalawan tua suvatu a kuquma`**
+1.  **English translation:**
+    -   The verb `kutjalawan` contains the `ku-` prefix ('I') and is in Location Focus (`-an` suffix on root `tjalaw`, 'anger').
+    -   The agent is 'I'.
+    -   The patient is `tua suvatu` ('your dog').
+    -   The focused element is the location `a kuquma` ('my field').
+    -   **Translation:** I anger your dog in <u>my field</u>.
+2.  **Paiwan question:**
+    -   The answer provides the location, so the question must ask "where?" using `inu`.
+    -   The question is asked by "you" (`su-`) about "my" dog (`kuvatu`). The verb becomes `sutjalawan`.
+    -   **Question:** `inu a sutjalawan tua kuvatu?`
+
+```json
+[
+  {
+    "question_id": "F1_a",
+    "answer": "sitarang nua uqałay tua quma a vatu",
+    "reasoning": "The sentence focus is on the instrument ('the dog'), so the instrument focus verb 'sitarang' is used. The agent ('the man') is marked with 'nua', the patient ('the field') with 'tua', and the focused instrument with 'a'. The word order follows the established V-A-P-I pattern."
+  },
+  {
+    "question_id": "F1_b",
+    "answer": "tjalawan nua supulingaw tua kuqaya-qayam a gadu nua tsemas",
+    "reasoning": "The sentence focus is on the location ('the spirit's mountain'), so the location focus verb 'tjalawan' is used. The agent ('your shaman') is marked with 'nua' and the possessive prefix 'su-'. The patient ('my bird') is marked with 'tua' and the prefix 'ku-'. The focused location phrase is marked with 'a'. The word order is V-A-P-L."
+  },
+  {
+    "question_id": "F1_c",
+    "answer": "dmjavis tua vavuy a vavaian",
+    "reasoning": "The sentence focus is on the agent ('the woman'), so the agent focus verb form is needed. The root 'djavis' takes an '-m-' infix after the initial sound 'dj', resulting in 'dmjavis'. The patient ('the pig') is marked with 'tua', and the focused agent with 'a'. The word order follows the V-P-A pattern seen in other agent-focus sentences."
+  },
+  {
+    "question_id": "F2_a_1",
+    "answer": "You protect the shaman's bird with <u>the spirit</u>.",
+    "reasoning": "The verb 'susitarang' indicates the agent is 'you' (su-), the action is 'protect' (tarang), and the focus is on the instrument (si-). The patient is 'tua qaya-qayam nua pulingaw' (the shaman's bird), and the focused instrument is 'a tsemas' (the spirit). The underlined part corresponds to the focused element."
+  },
+  {
+    "question_id": "F2_a_2",
+    "answer": "anema a kusitarang tua qaya-qayam nua pulingaw?",
+    "reasoning": "The answer identifies the instrument, so the question must ask 'what?' using 'anema'. Based on dialogue patterns, if the answer uses 'you' (su-), the question was asked by 'me' (ku-). The verb is thus 'kusitarang' and the rest of the sentence describes the known context."
+  },
+  {
+    "question_id": "F2_b_1",
+    "answer": "The man eats <u>the pig</u> in the mountain.",
+    "reasoning": "The verb 'kanen' is the patient focus (-en) form of 'eat'. The agent is 'nua uqałay' (the man), the focused patient is 'a vavuy' (the pig), and the location is 'i tua gadu' (in the mountain). The underlined part corresponds to the focused patient."
+  },
+  {
+    "question_id": "F2_b_2",
+    "answer": "anema a kanen nua uqałay i tua gadu?",
+    "reasoning": "The answer identifies the patient, so the question must ask 'what?' using 'anema'. The question uses the same patient focus verb 'kanen' and includes the known agent and location to form the query 'What is it that the man eats in the mountain?'."
+  },
+  {
+    "question_id": "F2_c_1",
+    "answer": "I anger your dog in <u>my field</u>.",
+    "reasoning": "The verb 'kutjalawan' indicates the agent is 'I' (ku-), the action is 'anger' (tjalaw), and the focus is on the location (-an). The patient is 'tua suvatu' (your dog), and the focused location is 'a kuquma' (my field). The underlined part corresponds to the focused location."
+  },
+  {
+    "question_id": "F2_c_2",
+    "answer": "inu a sutjalawan tua kuvatu?",
+    "reasoning": "The answer identifies the location, so the question must ask 'where?' using 'inu'. Since the answer is from 'I' (ku-), the question was asked by 'you' (su-). Pronouns for the possessed nouns also switch: 'your dog' in the answer corresponds to 'my dog' ('tua kuvatu') in the question."
+  }
+]
+```

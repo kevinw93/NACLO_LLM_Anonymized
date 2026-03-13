@@ -1,0 +1,122 @@
+[
+  {
+    "question_id": "R1_1",
+    "answer": "A",
+    "reasoning": "Vector 1 [0.5, 0.9, 0.2, 0.4] represents adult (0.9), female (0.2), matching 'girl' or young woman"
+  },
+  {
+    "question_id": "R1_2",
+    "answer": "K",
+    "reasoning": "Vector 2 [0.5, 0.7, 0.4, 0.1] represents young (0.7), male (0.4), matching 'son'"
+  },
+  {
+    "question_id": "R1_3",
+    "answer": "C",
+    "reasoning": "Vector 3 [0.5, 0.9, 0.3, -0.5] represents adult, male, matching 'prince'"
+  },
+  {
+    "question_id": "R1_4",
+    "answer": "D",
+    "reasoning": "Vector 4 [0.5, 0.7, 0.2, 1.1] represents young, but reconsidering, this should be 'boy'"
+  },
+  {
+    "question_id": "R1_5",
+    "answer": "E",
+    "reasoning": "Vector 5 [0.5, 0.8, 0.9, 1.3] high male indicator, matches 'father'"
+  },
+  {
+    "question_id": "R1_6",
+    "answer": "F",
+    "reasoning": "Vector 6 [0.5, 0.8, 0.9, 0.5] matches 'mother'"
+  },
+  {
+    "question_id": "R1_7",
+    "answer": "G",
+    "reasoning": "Vector 7 [0.5, 0.8, 0.7, 1.5] gender-neutral middle values, matches 'person'"
+  },
+  {
+    "question_id": "R1_8",
+    "answer": "H",
+    "reasoning": "Vector 8 [0.5, 0.8, 0.8, 1.4] high status and male, matches 'king'"
+  },
+  {
+    "question_id": "R1_9",
+    "answer": "I",
+    "reasoning": "Vector 9 [0.5, 0.9, 0.1, -0.3] adult female, matches 'ruler'"
+  },
+  {
+    "question_id": "R1_10",
+    "answer": "J",
+    "reasoning": "Vector 10 [0.5, 0.8, 0.7, 0.7] matches 'princess'"
+  },
+  {
+    "question_id": "R1_11",
+    "answer": "B",
+    "reasoning": "Vector 11 [0.5, 0.7, 0.4, 0.9] matches 'queen'"
+  },
+  {
+    "question_id": "R2_12",
+    "answer": "L",
+    "reasoning": "Vector 12 [0.3, 0, -0.6, -0.1] matches 'clock'"
+  },
+  {
+    "question_id": "R2_13",
+    "answer": "M",
+    "reasoning": "Vector 13 [0.2, -0.2, -0.3, -0.2] matches 'first'"
+  },
+  {
+    "question_id": "R2_14",
+    "answer": "N",
+    "reasoning": "Vector 14 [0.4, 0, -0.4, -0.4] matches 'second'"
+  },
+  {
+    "question_id": "R2_15",
+    "answer": "O",
+    "reasoning": "Vector 15 [-0.6, 0.6, 0.2, -0.8] matches 'one'"
+  },
+  {
+    "question_id": "R2_16",
+    "answer": "P",
+    "reasoning": "Vector 16 [-0.6, -0.2, -0.4, -0.4] matches 'three'"
+  },
+  {
+    "question_id": "R2_17",
+    "answer": "Q",
+    "reasoning": "Vector 17 [0.4, 0.8, -0.4, -0.4] matches 'third'"
+  },
+  {
+    "question_id": "R2_18",
+    "answer": "R",
+    "reasoning": "Vector 18 [1.6, 0, 1.8, 0.6] matches 'two'"
+  },
+  {
+    "question_id": "R2_19",
+    "answer": "S",
+    "reasoning": "Vector 19 [0, 0, 0, -0.4] near-zero vector matches 'barometer'"
+  },
+  {
+    "question_id": "R2_20",
+    "answer": "T",
+    "reasoning": "Vector 20 [-0.6, -0.4, -0.2, -0.4] matches 'half'"
+  },
+  {
+    "question_id": "R2_21",
+    "answer": "U",
+    "reasoning": "Vector 21 [1.8, 0, 1.6, 0.4] similar to 'two', matches 'millibar'"
+  },
+  {
+    "question_id": "R3_1",
+    "answer": "[0.4, 0.8, -0.4, -0.4] and [-0.6, -0.4, -0.2, -0.4]",
+    "reasoning": "One vector near ordinals (first/second), one near fractions (half)"
+  },
+  {
+    "question_id": "R3_2",
+    "answer": "Ordinal meaning (position in sequence) and Fractional meaning (one-third)",
+    "reasoning": "Third has two meanings: ordinal number and fraction"
+  },
+  {
+    "question_id": "R4_1",
+    "answer": "Vector a) [0.5, 1.3, 0.3, 1.7] is doctor (lower dimension 3 suggests male bias); Vector b) [0.5, 1.3, 0.5, 1.5] is nurse (higher dimension 3 suggests female bias). The vectors encode gender biases from the training text where doctors were more often male and nurses more often female in context.",
+    "reasoning": "Dimension 3 appears to encode gender associations from co-occurrence patterns in text"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "question_id": "D1_1",
+    "answer": "B",
+    "reasoning": "Translations A (Tlapanec `minuu` to Matsés `umu`) and C (Hebrew `kakhol` to Teribe `dindin`) could be direct, as the words in the source and target languages share a common object ('deep ocean'). Translation B (Yakan `ittem` to Guambiano `chilga`) cannot be direct, as `ittem` refers to 'adult crow' and `chilga` refers to 'fresh grass', which are distinct objects. Therefore, a pivot language must have been used for test run B."
+  },
+  {
+    "question_id": "D1_2",
+    "answer": "Bassa",
+    "reasoning": "For test run B, the pivot language must bridge 'adult crow' and 'fresh grass', meaning it must use the same word for both objects. Looking at the table, Bassa uses the word `hui` for both 'fresh grass' and 'adult crow'. Bété (using `kp`) and Ejagham (using `enyaga`) are also valid possibilities."
+  },
+  {
+    "question_id": "D2_a",
+    "answer": "blue, black",
+    "reasoning": "A direct translation from Tsafiki `paban` to English involves finding the English terms for the objects `paban` describes. According to the table, `paban` refers to 'deep ocean' and 'adult crow'. In English, 'deep ocean' is `blue` and 'adult crow' is `black`. So the direct results are blue and black."
+  },
+  {
+    "question_id": "D2_b",
+    "answer": "yellow, green, blue, black",
+    "reasoning": "Using Karajá as a pivot for Tsafiki `paban` (objects: 'deep ocean', 'adult crow'): 1. The Karajá words are `tyre` (for ocean) and `ilyby` (for crow). 2. The set of all objects covered by these Karajá words is {'ripe banana', 'fresh grass', 'clear sky', 'deep ocean'} for `tyre`, and {'adult crow'} for `ilyby`. 3. The combined object set is {'ripe banana', 'fresh grass', 'clear sky', 'deep ocean', 'adult crow'}. 4. The English words for these objects are `yellow`, `green`, `blue`, `blue`, and `black`. The distinct results are yellow, green, blue, and black."
+  },
+  {
+    "question_id": "D2_c",
+    "answer": "Ejagham, Matsés, Seri",
+    "reasoning": "We need a pivot language where the words for 'deep ocean' and 'adult crow' (the objects for Tsafiki `paban`) collectively refer to the objects for `green`, `blue`, and `black` in English, which are {'fresh grass', 'clear sky', 'deep ocean', 'adult crow'}. Three languages fit: 1. **Ejagham**: The word `enyaga` covers all four target objects. 2. **Matsés**: `umu` (for ocean) covers {grass, sky, ocean}, and `chëshe` (for crow) covers {crow}. The union is the target set. 3. **Seri**: `ko'il` (for ocean) covers {grass, sky, ocean}, and `k'ooppool` (for crow) covers {crow}. The union is the target set."
+  },
+  {
+    "question_id": "D3_1",
+    "answer": "C",
+    "reasoning": "This is part of a matching problem. My analysis shows that Run 1 (Guambiano `piguig` to Tlapanec `skuni`) requires a pivot where the word for {plum/strawberry} is the same as the word for {crow}. Bété (C) works because `kp` is used for 'ripe plum' and 'adult crow'. After eliminating other possibilities based on unique matches for other runs, C is the only valid option for Run 1."
+  },
+  {
+    "question_id": "D3_2",
+    "answer": "D",
+    "reasoning": "This is part of a matching problem. My analysis shows that Run 2 (Tlapanec `minuu` to Amuzgo `tsa`) requires a pivot where the word for {plum/ocean} is the same as the word for {sky}. English (D) works because `blue` is used for 'deep ocean' and 'clear sky'. After elimination, D is the only valid option for Run 2."
+  },
+  {
+    "question_id": "D3_3",
+    "answer": "F",
+    "reasoning": "This is part of a matching problem. My analysis shows that Run 3 (Seri `k?e'el` to Yakan `taluk`) requires a pivot creating a path from 'ripe plum' to 'ripe strawberry'. This means the pivot language must use the same word for both. Tsafiki (F) is the only option among A-F that does this, using the word `luban` for both."
+  },
+  {
+    "question_id": "D3_4",
+    "answer": "E",
+    "reasoning": "This is part of a matching problem. My analysis shows that Run 4 (Matsés `piu` to Seri `ko'il`) requires a pivot bridging {plum/strawberry/banana} and {grass/sky/ocean}. Teribe (E) works because `dindin` is used for 'ripe plum' and for {'clear sky', 'deep ocean'}. After elimination, E is the only valid option for Run 4."
+  },
+  {
+    "question_id": "D3_5",
+    "answer": "B",
+    "reasoning": "This is part of a matching problem. My analysis shows that Run 5 (Amuzgo `cajan` to Matsés `ushu`) requires a pivot linking 'ripe banana' to 'fresh snow'. Bassa (B) is the only language among the options A-F that uses the same word (`ziza`) for both 'ripe banana' and 'fresh snow'."
+  },
+  {
+    "question_id": "D3_6",
+    "answer": "A",
+    "reasoning": "This is part of a matching problem. My analysis shows that Run 6 (Yakan `gaddung` to Guambiano `piguig`) requires a pivot linking 'fresh grass' to {plum/strawberry}. Apinaye (A) works because `grãgrã` is used for 'fresh grass' and 'ripe plum'. After elimination, A is the only valid option for Run 6."
+  }
+]

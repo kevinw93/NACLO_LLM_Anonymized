@@ -1,0 +1,97 @@
+[
+  {
+    "question_id": "H1_a",
+    "answer": "abcd",
+    "reasoning": "In step 4, the fourth character 'd' is added to the string from step 3 ('abc'). No repetitions are found, so the string in Column 1 becomes 'abcd'."
+  },
+  {
+    "question_id": "H1_b",
+    "answer": "S = abcdb",
+    "reasoning": "In step 5, the character 'b' is added to the string from step 4 ('abcd'), resulting in 'abcdb'. The S-rule in Column 2 is updated to reflect this: S = abcdb."
+  },
+  {
+    "question_id": "H1_c",
+    "answer": "aXdXa",
+    "reasoning": "At the end of step 6, the string is 'aXdX'. In step 7, the next character 'a' from the input is appended, making the string 'aXdXa'."
+  },
+  {
+    "question_id": "H1_d",
+    "answer": "S = aXdXa",
+    "reasoning": "This is the S-rule corresponding to the string 'aXdXa' in Column 1 for step 7. No new rules have been created, so it's a direct reflection of the current string."
+  },
+  {
+    "question_id": "H1_e",
+    "answer": "X = bc",
+    "reasoning": "This rule was created in step 6 and remains active. It is listed along with the main S-rule in Column 2."
+  },
+  {
+    "question_id": "H1_f",
+    "answer": "S = aXdXab",
+    "reasoning": "In step 8, the character 'b' is appended to the string from step 7 ('aXdXa'), resulting in 'aXdXab'. This is the new S-rule."
+  },
+  {
+    "question_id": "H1_g",
+    "answer": "X = bc",
+    "reasoning": "After appending 'c' in step 9, the string becomes 'aXdXabc'. The digram 'bc' is replaced by 'X', resulting in 'aXdXaX'. The rule 'X = bc' is still active and listed in Column 2."
+  },
+  {
+    "question_id": "H1_h",
+    "answer": "YdXY",
+    "reasoning": "The string 'aXdXaX' has a repeated digram 'aX'. A new rule Y = aX is created. The string is parsed as (aX)dX(aX). Replacing the 'aX' parts with 'Y' results in the new string 'YdXY'."
+  },
+  {
+    "question_id": "H1_i",
+    "answer": "S = YdXY",
+    "reasoning": "This is the S-rule corresponding to the new string 'YdXY' from the transformation in step 9."
+  },
+  {
+    "question_id": "H1_j",
+    "answer": "YdXYd",
+    "reasoning": "In step 10, the final character 'd' is appended to the string from step 9 ('YdXY'), resulting in the string 'YdXYd'."
+  },
+  {
+    "question_id": "H1_k",
+    "answer": "S = YdXYd",
+    "reasoning": "This is the S-rule corresponding to the string 'YdXYd', just before the final rule creation and substitution of step 10."
+  },
+  {
+    "question_id": "H2_a",
+    "answer": "aXdXaXd",
+    "reasoning": "BPE works by finding the most frequent pair in the entire string and replacing it. In 'abcdbcabcd', the most frequent pair is 'bc' (3 times). Replacing all occurrences of 'bc' with a new symbol 'X' results in 'aXdXaXd'."
+  },
+  {
+    "question_id": "H2_b",
+    "answer": "S = aXdXaXd",
+    "reasoning": "This is the S-rule corresponding to the string in Column 1 after the first BPE merge operation."
+  },
+  {
+    "question_id": "H2_c",
+    "answer": "Y = aX",
+    "reasoning": "In the string 'aXdXaXd', the most frequent pairs are 'aX' and 'Xd' (both appear twice). The final grammar given in the problem shows Y=aX, indicating that the pair 'aX' was chosen for the next merge. This creates the rule Y = aX."
+  },
+  {
+    "question_id": "H3_a",
+    "answer": "Same",
+    "reasoning": "For input 'abcabdbcbc', Sequitur first creates rule X=ab -> 'XcX', then Y=bc -> 'XcXdYY'. BPE also finds 'ab' and 'bc' as the most frequent pairs in that order, resulting in the same final output: S=XcXdYY, X=ab, Y=bc."
+  },
+  {
+    "question_id": "H3_b",
+    "answer": "Different",
+    "reasoning": "For 'abbcaddca', Sequitur operates online, creating rules for 'bb', then 'dd', then 'ca'. BPE, taking a global view, first identifies 'ca' as most frequent. This initial difference leads to completely different compression results."
+  },
+  {
+    "question_id": "H3_c",
+    "answer": "Different",
+    "reasoning": "For 'bacbcbabacbcba', Sequitur creates rules as it processes the string, resulting in S=YZcZ, X=bc, Y=ba, Z=XY. BPE identifies the most frequent pairs globally; assuming a tie-break of first-seen, it would pick 'ba', then 'Xc' ('X'=ba), leading to a different grammar. If it picks 'bc' first, it leads to 'AA' with a different set of rules. In either case, the output differs from Sequitur."
+  },
+  {
+    "question_id": "H3_d",
+    "answer": "Different",
+    "reasoning": "For 'ccdbccdbccacc', Sequitur creates a rule for the first 'cc' it sees. BPE scans the whole string and finds 'cc' is the most frequent pair. While the first step is similar, the subsequent states diverge. Sequitur's next rule is for 'db', while BPE's is for 'Xd' ('X'=cc). This creates different final outputs."
+  },
+  {
+    "question_id": "H3_e",
+    "answer": "Different",
+    "reasoning": "This input is an extension of (d). Since the algorithms already diverged on the prefix, they will continue to produce different results on the longer string. Sequitur reacts to new patterns as they form, while BPE recalculates global frequencies at each step, maintaining different paths."
+  }
+]

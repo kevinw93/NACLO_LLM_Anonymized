@@ -1,0 +1,182 @@
+[
+  {
+    "question_id": "C1_1",
+    "answer": "italicized word",
+    "reasoning": "Only SS3 and SS7 contain italicized text, matching the F1=1 rows."
+  },
+  {
+    "question_id": "C1_2",
+    "answer": "10",
+    "reasoning": "F3 gives -1 for SS5 and -2 for SS6, which fits a 10‑word threshold."
+  },
+  {
+    "question_id": "C1_3",
+    "answer": "number",
+    "reasoning": "F4 matches counts of numerals/number words in sentences (e.g., 22; 10,000 and one; 50)."
+  },
+  {
+    "question_id": "C1_4",
+    "answer": "common noun",
+    "reasoning": "F5 increases with repeated common nouns across sentences (e.g., gum, incident)."
+  },
+  {
+    "question_id": "C1_5",
+    "answer": "adjective",
+    "reasoning": "F5 also counts repeated adjectives like sticky across sentences."
+  },
+  {
+    "question_id": "C1_6",
+    "answer": "first",
+    "reasoning": "F6=1 for SS1 indicates one of the target positions is the first sentence."
+  },
+  {
+    "question_id": "C1_7",
+    "answer": "last",
+    "reasoning": "The other F6=1 row corresponds to the last sentence."
+  },
+  {
+    "question_id": "C1_8",
+    "answer": "SS4",
+    "reasoning": "Matches F2=1, F4=1, F5=2, and F1=0."
+  },
+  {
+    "question_id": "C1_9",
+    "answer": "SS5",
+    "reasoning": "Shortest question sentence gives F3=-1 and zeros elsewhere."
+  },
+  {
+    "question_id": "C1_10",
+    "answer": "SS7",
+    "reasoning": "Has F6=1 (last), F1=1 (italicized), and F4=0."
+  },
+  {
+    "question_id": "C1_11",
+    "answer": "SS6",
+    "reasoning": "Very short answer sentence gives F3=-2 and two repeats for F5."
+  },
+  {
+    "question_id": "C2_1",
+    "answer": "0",
+    "reasoning": "b: HW5 is long enough so F3=0 to sum to 6."
+  },
+  {
+    "question_id": "C2_2",
+    "answer": "0",
+    "reasoning": "c: HW4 has no italics, so F1=0."
+  },
+  {
+    "question_id": "C2_3",
+    "answer": "0",
+    "reasoning": "d: HW4 is not first/last, so F6=0."
+  },
+  {
+    "question_id": "C2_4",
+    "answer": "3",
+    "reasoning": "e: Sum for HW4 = 0+0+0+1+2+0=3."
+  },
+  {
+    "question_id": "C2_5",
+    "answer": "-1",
+    "reasoning": "g: HW3 has 9 words, so F3=-1."
+  },
+  {
+    "question_id": "C2_6",
+    "answer": "1",
+    "reasoning": "h: HW3 includes the number 'One'."
+  },
+  {
+    "question_id": "C2_7",
+    "answer": "1",
+    "reasoning": "i: HW6 has one proper‑noun phrase (Hot Water Village)."
+  },
+  {
+    "question_id": "C2_8",
+    "answer": "4",
+    "reasoning": "j: Sum for HW6 = 1+1+0+0+1+1=4."
+  },
+  {
+    "question_id": "C2_9",
+    "answer": "1",
+    "reasoning": "l: HW1 is the first sentence, so F6=1."
+  },
+  {
+    "question_id": "C2_10",
+    "answer": "7",
+    "reasoning": "m: Sum for HW1 = 1+2+0+0+3+1=7."
+  },
+  {
+    "question_id": "C2_11",
+    "answer": "1",
+    "reasoning": "o: HW2 contains the number 'three'."
+  },
+  {
+    "question_id": "C2_12",
+    "answer": "7",
+    "reasoning": "p: Sum for HW2 = 1+1+0+1+4+0=7."
+  },
+  {
+    "question_id": "C3_1",
+    "answer": "HW1",
+    "reasoning": "Top scores: HW1 (7), HW2 (7), HW5 (6); order follows article."
+  },
+  {
+    "question_id": "C3_2",
+    "answer": "HW2",
+    "reasoning": "Second in original order among the top three."
+  },
+  {
+    "question_id": "C3_3",
+    "answer": "HW5",
+    "reasoning": "Third in original order among the top three."
+  },
+  {
+    "question_id": "C4_1",
+    "answer": "SSC1",
+    "reasoning": "Rows mapped by features: t→SSC1, q→SSC5, u→SSC4; choose top scores and keep order."
+  },
+  {
+    "question_id": "C4_2",
+    "answer": "SSC4",
+    "reasoning": "Second in original order among chosen SSC1, SSC4, SSC5."
+  },
+  {
+    "question_id": "C4_3",
+    "answer": "SSC5",
+    "reasoning": "Third in original order among chosen SSC1, SSC4, SSC5."
+  },
+  {
+    "question_id": "C5_1",
+    "answer": "vice",
+    "reasoning": "The person was the president, so 'vice' should be deleted."
+  },
+  {
+    "question_id": "C5_2",
+    "answer": "Made to Stick",
+    "reasoning": "Subject and rival are swapped; swap these phrases."
+  },
+  {
+    "question_id": "C5_3",
+    "answer": "Bigger Bubble",
+    "reasoning": "Subject and rival are swapped; swap these phrases."
+  },
+  {
+    "question_id": "C5_4",
+    "answer": "February",
+    "reasoning": "The date is wrong in the summary."
+  },
+  {
+    "question_id": "C5_5",
+    "answer": "January",
+    "reasoning": "Correct month from the article."
+  },
+  {
+    "question_id": "C6_1",
+    "answer": "SSC4",
+    "reasoning": "In the extractive summary for SSC, 'he' incorrectly refers to McBubble when it meant Sanders."
+  },
+  {
+    "question_id": "C6_2",
+    "answer": "he",
+    "reasoning": "Pronoun’s referent changes when SSC3 is omitted."
+  }
+]

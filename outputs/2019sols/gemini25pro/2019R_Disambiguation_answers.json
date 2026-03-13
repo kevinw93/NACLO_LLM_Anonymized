@@ -1,0 +1,112 @@
+[
+  {
+    "question_id": "R1_4",
+    "answer": "PRN",
+    "reasoning": "In the sentence 'The dog looks at her.', 'her' is the object of the preposition 'at'. Therefore, it is a pronoun."
+  },
+  {
+    "question_id": "R1_5",
+    "answer": "DET",
+    "reasoning": "In the sentence 'The girl is her friend.', 'her' specifies possession of the noun 'friend'. Therefore, it is a determiner."
+  },
+  {
+    "question_id": "R1_6",
+    "answer": "DET",
+    "reasoning": "In the sentence 'I am her daughter.', 'her' specifies possession of the noun 'daughter'. Therefore, it is a determiner."
+  },
+  {
+    "question_id": "R1_7",
+    "answer": "DET",
+    "reasoning": "In the sentence 'The cat saw her dog yesterday.', 'her' specifies possession of the noun 'dog'. Therefore, it is a determiner."
+  },
+  {
+    "question_id": "R1_8",
+    "answer": "PRN",
+    "reasoning": "In the sentence 'You walk with her.', 'her' is the object of the preposition 'with'. Therefore, it is a pronoun."
+  },
+  {
+    "question_id": "R1_9",
+    "answer": "PRN",
+    "reasoning": "In the sentence 'The boy likes her.', 'her' is the direct object of the verb 'likes'. Therefore, it is a pronoun."
+  },
+  {
+    "question_id": "R1_10",
+    "answer": "PRN",
+    "reasoning": "In the sentence 'A giraffe sees her now.', 'her' is the direct object of the verb 'sees'. Therefore, it is a pronoun."
+  },
+  {
+    "question_id": "R1_11",
+    "answer": "PRN",
+    "reasoning": "In the sentence 'I give her flowers.', 'her' is the indirect object of the verb 'give'. Therefore, it is a pronoun."
+  },
+  {
+    "question_id": "R1_12",
+    "answer": "DET",
+    "reasoning": "In the sentence 'Her tall daughter is smart.', 'her' specifies possession of 'tall daughter'. Therefore, it is a determiner."
+  },
+  {
+    "question_id": "R1_13",
+    "answer": "PRN",
+    "reasoning": "In the sentence 'The cat examines her quizzically.', 'her' is the direct object of the verb 'examines'. Therefore, it is a pronoun."
+  },
+  {
+    "question_id": "R1_14",
+    "answer": "DET",
+    "reasoning": "In the sentence 'I am her older sister.', 'her' specifies possession of 'older sister'. Therefore, it is a determiner."
+  },
+  {
+    "question_id": "R1_15",
+    "answer": "DET",
+    "reasoning": "In the sentence 'Her orange cat likes me.', 'her' specifies possession of 'orange cat'. Therefore, it is a determiner."
+  },
+  {
+    "question_id": "R2_1",
+    "answer": "her: SELECT DET if (+1 N)",
+    "reasoning": "This is the first of three rules. This rule correctly tags 'her' as a determiner if it is followed by a noun. This covers most of the determiner cases."
+  },
+  {
+    "question_id": "R2_2",
+    "answer": "her: SELECT DET if (+1 ADJ)",
+    "reasoning": "This is the second rule. It handles cases where 'her' is followed by an adjective which modifies a noun, like 'her tall daughter'. It is specific and must be applied before the default rule."
+  },
+  {
+    "question_id": "R2_3",
+    "answer": "her: SELECT PRN",
+    "reasoning": "This is the third and final rule. It serves as a default. If 'her' is not followed by a noun or an adjective (as per the first two rules), it is tagged as a pronoun. This correctly handles all remaining cases except for one problematic sentence."
+  },
+  {
+    "question_id": "R3_1",
+    "answer": "Sentence 11",
+    "reasoning": "The sentence 'I give her flowers.' is disambiguated incorrectly. The rules would tag 'her' as a determiner because it is followed by the noun 'flowers', but it is actually a pronoun (the indirect object)."
+  },
+  {
+    "question_id": "R3_2",
+    "answer": "The local context of 'verb her noun' is ambiguous. To distinguish between 'saw her dog' (DET) and 'give her flowers' (PRN), the system needs more than just adjacent part-of-speech tags. It would require knowledge of verb types (transitive vs. ditransitive), which is beyond the scope of the given rule syntax.",
+    "reasoning": "This explanation details why a simple rule fails. The ambiguity lies in the syntactic structure, not just the local word tags. Simple constraint grammar cannot easily handle such structural ambiguity."
+  },
+  {
+    "question_id": "R4_1",
+    "answer": "PRN/DET: SELECT DET if (-1 [N/VRB]) and (+1 [N/VRB])",
+    "reasoning": "This rule identifies a determiner in the ambiguous '...verb DET noun...' structure, like 'lobi den singi'. This is a key rule to break ambiguity loops."
+  },
+  {
+    "question_id": "R4_2",
+    "answer": "PRN/DET: SELECT DET if (+1 N)",
+    "reasoning": "This rule tags a word as a determiner if it precedes an unambiguously tagged noun, like 'mi' before 'sisa.N'."
+  },
+  {
+    "question_id": "R4_3",
+    "answer": "PRN/DET: SELECT DET if (-1 PREP)",
+    "reasoning": "This rule tags a word as a determiner if it follows a preposition, like 'yu' after 'abra.PREP'."
+  },
+  {
+    "question_id": "R4_4",
+    "answer": "N/VRB: SELECT N if (-1 DET)",
+    "reasoning": "Once determiners are identified, this rule tags the following ambiguous word as a noun."
+  },
+  {
+    "question_id": "R4_5",
+    "answer": "N/VRB: SELECT VRB if (-1 PRN)",
+    "reasoning": "This rule works in tandem with an implicit or explicit rule for pronouns. Once a subject pronoun is identified, the following word must be a verb. While this set is not fully complete without resolving PRNs, this rule is essential for resolving verbs. Given the constraints, a fully resolving set of 5 rules is extremely difficult to formulate without assuming an iterative process or additional syntax. This set represents a logical progression to resolve most ambiguities."
+  }
+]

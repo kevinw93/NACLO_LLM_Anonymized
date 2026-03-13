@@ -1,0 +1,27 @@
+[
+  {
+    "question_id": "L1",
+    "answer": "1=V,3=V,4=N,5=V,6=V,7=V,8=V,9=N,10=V,11=V,12=N,13=N,15=N",
+    "reasoning": "Each missing label is chosen by deciding whether the italicized phrase modifies the noun (N) or the verb (V) in context."
+  },
+  {
+    "question_id": "L2",
+    "answer": "1=,2=,3=V,4=N,5=N,6=V,7=V,8=,9=N,10=,11=V,12=N,13=N,14=V,15=N",
+    "reasoning": "Applied rules A, B, C in order (A first, then B, then C), stopping once a rule labels the instance."
+  },
+  {
+    "question_id": "L3",
+    "answer": "Baseline rule: 'If preposition is as, label V; otherwise, label N.' Baseline=1:V,2:N,3:N,4:N,5:V,6:N,7:N,8:N,9:N,10:N,11:N,12:N,13:N,14:N,15:N",
+    "reasoning": "A single default rule labeling all instances yields 8 correct, 7 wrong, 0 blank."
+  },
+  {
+    "question_id": "L4",
+    "answer": "1:A,2:B,3:C",
+    "reasoning": "This ordering yields the highest accuracy for Algorithm1."
+  },
+  {
+    "question_id": "L5",
+    "answer": "The baseline uniquely labels every instance with a single rule; the chosen order (A,B,C) applies 'like' first, then 'with+food', then 'act' to maximize correct labels.",
+    "reasoning": "Explains why the baseline and rule order were selected."
+  }
+]

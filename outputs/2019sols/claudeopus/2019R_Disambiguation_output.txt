@@ -1,0 +1,152 @@
+Model: claude-opus-4-20250514
+Generation Time: 43.98 seconds
+Timestamp: 2026-02-04 00:23:39
+================================================================================
+
+I'll work through this computational linguistics problem step by step.
+
+## Understanding the Task
+
+This is about disambiguation - identifying which part of speech a word has in a given sentence. The system uses constraint grammar rules to tag words.
+
+Key concepts:
+- Lemma: base form of word (lowercase before period)
+- Tags: part of speech markers (uppercase after period)
+- Available tags: DET, N, PRN, VRB, ADJ, ADV, PREP
+- Rules are applied top-down, left-to-right
+- Words with only one possible tag are pre-tagged
+
+## Part 1: English "her" Disambiguation
+
+Looking at sentences 4-15 to identify whether "her" is DET (determiner) or PRN (pronoun):
+
+4. "The dog looks at her." - PRN (object of preposition "at")
+5. "The girl is her friend." - DET (modifies "friend")
+6. "I am her daughter." - DET (modifies "daughter")
+7. "The cat saw her dog yesterday." - DET (modifies "dog")
+8. "You walk with her." - PRN (object of preposition "with")
+9. "The boy likes her." - PRN (direct object of "likes")
+10. "A giraffe sees her now." - PRN (direct object of "sees")
+11. "I give her flowers." - PRN (indirect object)
+12. "Her tall daughter is smart." - DET (modifies "daughter")
+13. "The cat examines her quizzically." - PRN (direct object of "examines")
+14. "I am her older sister." - DET (modifies "sister")
+15. "Her orange cat likes me." - DET (modifies "cat")
+
+## Part 2: Three Rules for Disambiguation
+
+Looking at the patterns, I need rules that can disambiguate all sentences except one:
+
+Rule 1: `her: SELECT DET if (+1 N)`
+- If the next word is a noun, select DET
+
+Rule 2: `her: SELECT DET if (+1 ADJ)`
+- If the next word is an adjective, select DET
+
+Rule 3: `her: SELECT PRN if (-1 PREP)`
+- If the previous word is a preposition, select PRN
+
+## Part 3: Which Sentence Fails?
+
+Sentence 9 ("The boy likes her.") would be incorrectly disambiguated. The word "her" comes after a verb "likes" and isn't followed by a noun or adjective, nor preceded by a preposition. A rule like "her: SELECT PRN if (-1 VRB)" would work, but this would incorrectly tag sentence 3 where "hears" is followed by "her daughter."
+
+## Part 4: Sranan Tongo Disambiguation
+
+Analyzing the Sranan Tongo sentences:
+
+Key ambiguities:
+- "lobi" can be N (love) or VRB (love)
+- "singi" can be N (songs/singing) or VRB (sing)
+- "mi" can be DET (my) or PRN (I/me)
+- "yu" can be DET (your) or PRN (you)
+- "den" can be DET (the) or PRN (they)
+
+Rules needed:
+
+1. `mi: SELECT PRN if (+1 VRB)`
+2. `den: SELECT PRN if (+1 VRB)`
+3. `lobi: SELECT VRB if (-1 PRN)`
+4. `singi: SELECT N if (-1 DET)`
+5. `yu: SELECT PRN if (+1 VRB)`
+
+These rules should successfully disambiguate all the given Sranan Tongo sentences.
+
+```json
+[
+  {
+    "question_id": "R1_4",
+    "answer": "PRN",
+    "reasoning": "In 'The dog looks at her', 'her' is the object of the preposition 'at', making it a pronoun"
+  },
+  {
+    "question_id": "R1_5",
+    "answer": "DET",
+    "reasoning": "In 'The girl is her friend', 'her' modifies the noun 'friend', making it a determiner"
+  },
+  {
+    "question_id": "R1_6",
+    "answer": "DET",
+    "reasoning": "In 'I am her daughter', 'her' modifies the noun 'daughter', making it a determiner"
+  },
+  {
+    "question_id": "R1_7",
+    "answer": "DET",
+    "reasoning": "In 'The cat saw her dog yesterday', 'her' modifies the noun 'dog', making it a determiner"
+  },
+  {
+    "question_id": "R1_8",
+    "answer": "PRN",
+    "reasoning": "In 'You walk with her', 'her' is the object of the preposition 'with', making it a pronoun"
+  },
+  {
+    "question_id": "R1_9",
+    "answer": "PRN",
+    "reasoning": "In 'The boy likes her', 'her' is the direct object of the verb 'likes', making it a pronoun"
+  },
+  {
+    "question_id": "R1_10",
+    "answer": "PRN",
+    "reasoning": "In 'A giraffe sees her now', 'her' is the direct object of the verb 'sees', making it a pronoun"
+  },
+  {
+    "question_id": "R1_11",
+    "answer": "PRN",
+    "reasoning": "In 'I give her flowers', 'her' is the indirect object of 'give', making it a pronoun"
+  },
+  {
+    "question_id": "R1_12",
+    "answer": "DET",
+    "reasoning": "In 'Her tall daughter is smart', 'her' modifies the noun 'daughter', making it a determiner"
+  },
+  {
+    "question_id": "R1_13",
+    "answer": "PRN",
+    "reasoning": "In 'The cat examines her quizzically', 'her' is the direct object of 'examines', making it a pronoun"
+  },
+  {
+    "question_id": "R1_14",
+    "answer": "DET",
+    "reasoning": "In 'I am her older sister', 'her' modifies the noun 'sister', making it a determiner"
+  },
+  {
+    "question_id": "R1_15",
+    "answer": "DET",
+    "reasoning": "In 'Her orange cat likes me', 'her' modifies the noun 'cat', making it a determiner"
+  },
+  {
+    "question_id": "R2",
+    "answer": "her: SELECT DET if (+1 N)\nher: SELECT DET if (+1 ADJ)\nher: SELECT PRN if (-1 PREP)",
+    "reasoning": "These three rules cover most disambiguation cases: DET when followed by noun, DET when followed by adjective, PRN when preceded by preposition"
+  },
+  {
+    "question_id": "R3",
+    "answer": "Sentence 9 would be disambiguated incorrectly because 'her' follows a verb but isn't preceded by a preposition, and creating a rule 'her: SELECT PRN if (-1 VRB)' would incorrectly tag sentence 3",
+    "reasoning": "The rules don't handle cases where 'her' is a direct object after a verb without other contextual clues"
+  },
+  {
+    "question_id": "R4",
+    "answer": "mi: SELECT PRN if (+1 VRB)\nden: SELECT PRN if (+1 VRB)\nlobi: SELECT VRB if (-1 PRN)\nsingi: SELECT N if (-1 DET)\nyu: SELECT PRN if (+1 VRB)",
+    "reasoning": "These rules disambiguate based on context: subjects before verbs are pronouns, words after pronouns are likely verbs, and words after determiners are likely nouns"
+  }
+]
+```

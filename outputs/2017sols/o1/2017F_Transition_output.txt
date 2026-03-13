@@ -1,0 +1,72 @@
+Model: o1
+Generation Time: 116.26 seconds
+Timestamp: 2025-12-29 04:51:14
+================================================================================
+
+[
+  {
+    "question_id": "F1_1",
+    "answer": "f 1 q 0",
+    "reasoning": "From S, rule f produces “six” and goes to state 1, then rule q adds “teen” and ends at 0."
+  },
+  {
+    "question_id": "F1_2",
+    "answer": "i 2 r S c 0",
+    "reasoning": "From S, rule i produces “nine” and goes to state 2, then rule r produces “ty” and returns to S, then rule c produces “three” and ends at 0."
+  },
+  {
+    "question_id": "F1_3",
+    "answer": "o 2 r S h 0",
+    "reasoning": "From S, rule o produces “twen” and goes to 2, then rule r produces “ty” and returns to S, then rule h produces “eight” and ends at 0."
+  },
+  {
+    "question_id": "F1_4",
+    "answer": "n 1 q 0",
+    "reasoning": "From S, rule n produces “fif” and goes to 1, then rule q adds “teen” and ends at 0."
+  },
+  {
+    "question_id": "F2_1",
+    "answer": "N",
+    "reasoning": "“oneten” cannot be formed, because “one” goes directly to 0 and cannot continue to produce “ten.”"
+  },
+  {
+    "question_id": "F2_2",
+    "answer": "Y",
+    "reasoning": "“fiftytwelve” can be formed: “fif”→2, “ty”→S, then “twelve”→0."
+  },
+  {
+    "question_id": "F2_3",
+    "answer": "N",
+    "reasoning": "“sixteensix” cannot be formed once “sixteen” ends at 0; no further production of “six.”"
+  },
+  {
+    "question_id": "F2_4",
+    "answer": "Y",
+    "reasoning": "“twentyfourteen” can be built by “twen”→2, “ty”→S, “four”→1, “teen”→0."
+  },
+  {
+    "question_id": "F2_5",
+    "answer": "Y",
+    "reasoning": "“fortythirty” can be formed by “for”→2, “ty”→S, “thir”→2, “ty”→0."
+  },
+  {
+    "question_id": "F2_6",
+    "answer": "N",
+    "reasoning": "“eleventythree” cannot be formed because “eleven” goes only to 0, so “three” cannot follow."
+  },
+  {
+    "question_id": "F2_7",
+    "answer": "N",
+    "reasoning": "“fivety” cannot be formed; “five” goes directly to 0, blocking addition of “ty.”"
+  },
+  {
+    "question_id": "F3_1",
+    "answer": "S: eigh -> 1,2",
+    "reasoning": "Allows correct spelling for “eighteen” (by going to 1 → teen) and “eighty” (by going to 2 → ty)."
+  },
+  {
+    "question_id": "F3_2",
+    "answer": "S: eight -> 0",
+    "reasoning": "Ensures “eight” is still generated correctly by ending directly at 0."
+  }
+]

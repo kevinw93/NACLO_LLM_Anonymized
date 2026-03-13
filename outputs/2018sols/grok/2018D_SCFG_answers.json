@@ -1,0 +1,47 @@
+[
+  {
+    "question_id": "D1_1",
+    "answer": "a cat saw girl chase book",
+    "reasoning": "The task requires an English sentence exactly 20 letters long using only words from the <English, Turkish> SCFG vocabulary: a, cat, girl, book, saw, chase, read. I analyzed the letter counts: a=1, cat=3, saw=3, girl=4, chase=5, book=4. Combining them as 'a cat saw girl chase book' gives 1+3+3+4+5+4=20 letters. This forms a sentence where 'a cat saw' is the main clause and 'girl chase book' is embedded, using available words without violating vocabulary limits. Patterns in the SCFG show simple structures, but for length requirement, a compound structure is used."
+  },
+  {
+    "question_id": "D1_2",
+    "answer": "bir kedi görd kız kovala kitap",
+    "reasoning": "To translate the English sentence using the <English, Turkish> SCFG, I map words using the rules: cat=a kedi (bir kedi), saw=görd, girl=kız, chase=kovala, book=kitap (bir kitap, but 'bir' used for articles). The SCFG supports S → NP NP V in Turkish for subject object verb order. For the main clause 'a cat saw', it becomes 'bir kedi görd'; for embedded 'girl chase book', 'kız kovala kitap' (adjusted to NP V NP but flattened). Combined as 'bir kedi görd kız kovala kitap' to reflect the structure and vocabulary correspondences without adding extra words."
+  },
+  {
+    "question_id": "D2_1",
+    "answer": "saw a cat",
+    "reasoning": "The Malagasy sentence 'nahita saka' is analyzed using the <Turkish, Malagasy> SCFG. 'nahita' corresponds to V=görd=saw, 'saka' to NP=bir kedi=a cat. This matches VP → <NP V, V NP>, so Malagasy VP=V NP corresponds to Turkish NP V='bir kedi görd' (a cat saw). However, considering Malagasy VOS order and simple structure, the English translation is the semantic meaning 'saw a cat', treating it as transitive verb with object, subject implied or elided in short form. Patterns show basic VP structure."
+  },
+  {
+    "question_id": "D2_2",
+    "answer": "a turtle chased a cat",
+    "reasoning": "The Malagasy sentence 'nahreni saka sokatra' is V NP NP. Using SCFG, V=nahreni=kovala=chased, NP1=saka=bir kedi=a cat, NP2=sokatra (from sokatra saka=bir kaplumbağa=a turtle). This matches S → <NP VP, VP NP> with VP → <NP V, V NP>, so Malagasy S= V NP NP corresponds to Turkish S= NP NP V='bir kaplumbağa bir kedi kovala' (a turtle a cat chased). English word order adjusts to SVO: 'a turtle chased a cat'. Patterns confirm VOS in Malagasy, SOV in Turkish."
+  },
+  {
+    "question_id": "D2_3",
+    "answer": "a turtle saw a cat chase",
+    "reasoning": "The Malagasy sentence 'nanaitra saka sokatra' is V NP NP, where 'nanaitra' is inferred as complex V for 'saw chase' (combining görd=nahita and kovala=nahreni forms, as grammar supports basic but example implies embedding). NP1=saka=a cat, NP2=sokatra=a turtle. Using same SCFG structure as D2_2, corresponds to Turkish NP NP V='bir kaplumbağa bir kedi görd kovala' (a turtle a cat saw chased). English: 'a turtle saw a cat chase', adjusting for embedding pattern without full Comp rule, focusing on semantic chain from data."
+  },
+  {
+    "question_id": "D2_4",
+    "answer": "know that a turtle chased a cat",
+    "reasoning": "The Malagasy sentence 'nihina na saka sokatra' is V Comp NP NP, where 'nihina'=know (inferred V), 'na'=that (Comp, pattern from embedding), NP1=saka=a cat, NP2=sokatra=a turtle. SCFG basic rules extended for Comp (implied by structure), corresponds to Turkish with Comp 'ki' for 'that', yielding 'bil ki bir kaplumbağa bir kedi kovala' (know that a turtle a cat chased). English SVO with embedding: 'know that a turtle chased a cat'. Patterns show added Comp for complex sentences from given data."
+  },
+  {
+    "question_id": "D3_1",
+    "answer": "Sa j",
+    "reasoning": "The sentence 'The pet.' is a nominal phrase, NP. Using <English, Klingon> SCFG, NP → <the pet, Sa j>. No VP needed for simple NP sentence. Patterns show direct mapping for NPs; grammar focuses on S=NP VP but allows NP as fragment. Conclusion: direct substitution."
+  },
+  {
+    "question_id": "D3_2",
+    "answer": "enterpray ghobrup qa' tlhInga pu'",
+    "reasoning": "The sentence 'The U.S.S. Enterprise will battle the Klingons.' is S=NP VP, VP=V NP. Using SCFG: NP → <the U.S.S. Enterprise, \"enterpray\">, V → <will battle, ghobrup qa'>, NP → <the Klingons, tlhInga pu'>. S → <NP VP, NP VP> keeps order. Patterns show transitive VP; direct mapping yields \"enterpray ghobrup qa' tlhInga pu'\"."
+  },
+  {
+    "question_id": "D3_3",
+    "answer": "DwI'pu' SovTah e' la' leghup e' gho nwetlh SovTah e' tlhInga pu' lughaj Sa j",
+    "reasoning": "The sentence has triple embedding: S=NP V Comp S (know), inner S=NP V Comp S (learned), inner S=NP V Comp S (saw), innermost S=NP V NP (have). Using SCFG: NP leaders=DwI'pu', V know=SovTah, Comp= e'; NP commander=la', V learned=leghup, Comp=e'; NP spy=gho nwetlh, V saw=SovTah (reused from know as closest perceptual verb, since no specific 'saw' rule); NP Klingons=tlhInga pu', V have=lughaj, NP pet=Sa j. S → <Comp S, S Comp> and VP → <V S, V S> for embeddings, order preserved. Patterns show recursive Comp S for subordination; assembled full string step-by-step from innermost outward."
+  }
+]

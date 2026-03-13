@@ -1,0 +1,28 @@
+Model: gpt-5
+Generation Time: 1152.54 seconds
+Timestamp: 2025-12-08 00:36:56
+================================================================================
+
+[
+  {"question_id":"R1_4","answer":"PRN","reasoning":"Object of preposition: at her"},
+  {"question_id":"R1_5","answer":"DET","reasoning":"Before noun: her friend"},
+  {"question_id":"R1_6","answer":"DET","reasoning":"Before noun: her daughter"},
+  {"question_id":"R1_7","answer":"DET","reasoning":"Before noun: her dog"},
+  {"question_id":"R1_8","answer":"PRN","reasoning":"Object of preposition: with her"},
+  {"question_id":"R1_9","answer":"PRN","reasoning":"Object of verb: likes her"},
+  {"question_id":"R1_10","answer":"PRN","reasoning":"Before adverb: sees her now"},
+  {"question_id":"R1_11","answer":"PRN","reasoning":"Indirect object: give her flowers"},
+  {"question_id":"R1_12","answer":"DET","reasoning":"Before adjective+noun: Her tall daughter"},
+  {"question_id":"R1_13","answer":"PRN","reasoning":"Object of verb: examines her"},
+  {"question_id":"R1_14","answer":"DET","reasoning":"Before adjective+noun: her older sister"},
+  {"question_id":"R1_15","answer":"DET","reasoning":"Before adjective+noun: Her orange cat"},
+  {"question_id":"R2_1","answer":"her: SELECT DET if (+1 N) or (+1 ADJ)","reasoning":"Determiner when directly followed by a noun or an adjective heading a noun phrase"},
+  {"question_id":"R2_2","answer":"her: SELECT PRN if (-1 PREP)","reasoning":"After a preposition, her functions as a pronoun"},
+  {"question_id":"R2_3","answer":"her: SELECT PRN if (-1 VRB)","reasoning":"After a verb (and not caught by rule 2), her is the verb’s object pronoun"},
+  {"question_id":"R3_1","answer":"11","reasoning":"In “I give her flowers,” her is a pronoun even though the next word is a noun. Simple POS‑context rules that key on +1 N (which normally signals a determiner) misclassify it; distinguishing this ditransitive pattern would require verb‑specific rules or deeper syntax"},
+  {"question_id":"R4_1","answer":"N/VRB: SELECT N if (-1 [DET])","reasoning":"Makes ambiguous words like lobi/singi nouns when preceded by a determiner (e.g., den/yu/mi)"},
+  {"question_id":"R4_2","answer":"N/VRB: SELECT VRB","reasoning":"Default verb for lobi/singi when rule R4_1 doesn’t apply"},
+  {"question_id":"R4_3","answer":"PRN/DET: SELECT DET if (+1 N)","reasoning":"Marks den/yu/mi as determiners when followed by a noun (e.g., den singi, yu singi, mi sisa, yu lobi)"},
+  {"question_id":"R4_4","answer":"PRN/DET: SELECT PRN if (+1 VRB)","reasoning":"Subjects before verbs (e.g., Den lobi, Mi singi, Mi lobi, Yu lobi)"},
+  {"question_id":"R4_5","answer":"PRN/DET: SELECT PRN if (-1 VRB)","reasoning":"Objects after verbs (e.g., Den lobi mi; Mi lobi yu)"}
+]

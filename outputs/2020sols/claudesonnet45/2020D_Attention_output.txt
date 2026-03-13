@@ -1,0 +1,237 @@
+Model: claude-sonnet-4-5-20250929
+Generation Time: 66.29 seconds
+Timestamp: 2026-01-27 02:04:42
+================================================================================
+
+I'll work through this problem step-by-step, analyzing the attention head patterns and filling in the missing data.
+
+## Understanding the Problem
+
+The task involves analyzing BERT attention heads that have learned to connect verbs to their direct objects. We have:
+- Attention head 8-10 connects verbs to their direct objects
+- We need to identify which sentences (A-G) correspond to the corpus sentences (1-7)
+- We need to fill in missing attention patterns
+
+## Analyzing the Corpus Sentences
+
+Let me identify the verb → direct object patterns in each corpus sentence:
+
+1. "My₁ experience₂ with₃ Gelda₄ 's₅ House₆ of₇ Gelbelgarg₈ has₉ been₁₀ extremely₁₁ wonderful₁₂"
+   - Verb: has₉ (auxiliary) - no clear direct object pattern expected
+
+2. "We₁ use₂ Google₃ 's₄ models₅ to₆ delve₇ into₈ the₉ inner₁₀ workings₁₁ of₁₂ language₁₃"
+   - Verb: use₂ → direct object: models₅
+   - Verb: delve₇ → into (prepositional, not direct object)
+
+3. "At₁ this₂ corporation₃ 's₄ meeting₅ people₆ are₇ concerned₈ about₉ the₁₀ company₁₁ 's₁₂ plans₁₃"
+   - Verb: are₇ concerned₈ - "concerned" is an adjective/participle, no direct object
+
+4. "In₁ July₂ we₃ will₄ interview₅ the₆ candidate₇ and₈ review₉ her₁₀ resumé₁₁ again₁₂"
+   - Verb: interview₅ → direct object: candidate₇
+   - Verb: review₉ → direct object: resumé₁₁
+
+5. "The₁ platypus₂ is₃ a₄ strange₅ animal₆ with₇ its₈ eggs₉ and₁₀ its₁₁ webbed₁₂ feet₁₃"
+   - Verb: is₃ - linking verb, no direct object
+
+6. "I₁ think₂ that₃ although₄ my₅ NACLO₆ exam₇ was₈ difficult₉ it₁₀ was₁₁ a₁₂ lot₁₃ of₁₄ fun₁₅"
+   - Verb: think₂ → could connect to "that" clause
+   - Verb: was₈, was₁₁ - linking verbs
+
+7. "Linguistics₁ is₂ a₃ beautiful₄ science₅ that₆ provides₇ interdisciplinary₈ insight₉ into₁₀ the₁₁ human₁₂ experience₁₃"
+   - Verb: is₂ - linking verb
+   - Verb: provides₇ → direct object: insight₉
+
+## Matching Sentences to Output Patterns
+
+**Sentence A: 12 → 13**
+- This shows one connection from word 12 to word 13
+- Sentence 4 has 12 words, so this can't be it
+- Sentence 7 has 13 words: provides₇ → insight₉ (but that would be 7→9)
+- Actually, looking at sentence 1 (12 words): This could be a connection at the end
+- Wait, I need to reconsider. Let me look at sentence 2: 13 words total, connection 12→13 would be "of₁₂→language₁₃" - not verb-object
+- Sentence 3: 13 words, 12→13 would be "'s₁₂→plans₁₃" - not verb-object
+- This is puzzling. Let me reconsider the pattern.
+
+Actually, looking more carefully at corpus sentence 7: "Linguistics₁ is₂ a₃ beautiful₄ science₅ that₆ provides₇ interdisciplinary₈ insight₉ into₁₀ the₁₁ human₁₂ experience₁₃"
+- Connection 12→13 would be "human₁₂→experience₁₃" - not verb-object
+
+Let me try sentence 2: If we have "language" as word 13, word 12 is "of", so 12→13 is not verb-object.
+
+After reconsideration, **Sentence A = Sentence 7** (12→13 fits the word count)
+
+**Sentence B: (a), 8→9, 11→12, None, 8→2, 11→2**
+- Has connections in columns 8-11, 7-6, and 5-4
+- Column 9-6 is "None"
+- This suggests multiple verbs
+- Sentence 4 has "interview₅→candidate₇" and "review₉→resumé₁₁"
+- For sentence 4 (12 words): 
+  - Head 8-11: Could be 5→7 (interview→candidate)? No, that would be listed as "5→7"
+  - Actually, the sentence has "will₄ interview₅" - "will" is word 4, interview is word 5
+- Wait, I'm confusing myself. Let me look at what verb-object pairs exist.
+
+Looking at sentence 6 (15 words): "I₁ think₂ that₃ although₄ my₅ NACLO₆ exam₇ was₈ difficult₉ it₁₀ was₁₁..."
+- Possible: think₂→exam₇? or think₂→that₃?
+- was₈→difficult₉ (not really direct object)
+- This seems complex enough to have multiple heads showing different patterns
+
+Actually, **Sentence B = Sentence 2** based on the complexity and "None" in column 9-6
+
+**Sentence C: 2→3, 10→11, (b), 4→5, 12→13, 11→3**
+- Multiple connections
+- Sentence 3 has "corporation₃" and could have complex possessive patterns
+- **Sentence C = Sentence 3**
+
+**Sentence D: (c), 4→5, 12→13, None**
+- Sentence 4 has "interview₅ the₆ candidate₇" and "review₉ her₁₀ resumé₁₁"
+- **Sentence D = Sentence 4**
+
+**Sentence E: 3→4, 11→12, (d), 10→12, 5→1**
+- **Sentence E = Sentence 6**
+
+**Sentence F: (e), 1→2, 5→6, 7→8, None**
+- **Sentence F = Sentence 1**
+
+**Sentence G: (f), (g), (h), (i)**
+- **Sentence G = Sentence 5**
+
+## D1 Answers
+
+Based on my analysis:
+- A = 7
+- B = 2
+- C = 3
+- D = 4
+- E = 6
+- F = 1
+- G = 5
+
+## D2 Answers - Fill in missing data
+
+Now I need to determine what connections would appear for each sentence:
+
+**(a) - Sentence B, head 8-11:** Sentence 2 has "use₂→models₅" (2→5), so connection would be **2→5**
+
+**(b) - Sentence C, head 9-6:** Sentence 3: Looking for verb-object. "are₇ concerned₈" about "plans₁₃". Connection might be **8→13** (concerned→plans) or **7→13**. Given the pattern, likely **7→13**
+
+**(c) - Sentence D, head 8-11:** Sentence 4: "interview₅→candidate₇" so **5→7**
+
+**(d) - Sentence E, head 7-6:** Sentence 6: "think₂" might connect somewhere, or "was₈". Looking at structure, likely **2→7** (think→exam)
+
+**(e) - Sentence F, head 8-11:** Sentence 1: Limited verb-object. Possibly **9→2** (has→experience) but that's backwards... Actually **2→4** might work if "experience with Gelda" - no. Let me reconsider: "has been" wonderful - no direct object. Maybe **None** or **9→12** (has→wonderful) but that's not right either. Going with **None**
+
+**(f) - Sentence G, head 8-11:** Sentence 5: "is₃" is linking verb, pattern might be **3→6** (is→animal)
+
+**(g) - Sentence G, head 7-6:** Sentence 5: Possibly **3→4** (is→a) or **3→6**. Let's say **3→6**
+
+**(h) - Sentence G, head 9-6:** Sentence 5: Maybe **3→9** (is→eggs)? No clear verb-object. Let's say **9→6** (eggs→animal) as a backwards connection or **None**. Going with **3→6**
+
+**(i) - Sentence G, head 5-4:** Sentence 5: **3→2** (is→platypus) as a backwards connection.
+
+Let me reconsider these more carefully by looking at actual verb-direct object relationships:
+
+Actually, reviewing the original example and instructions more carefully, I see the connections should represent verb→direct object primarily.
+
+Let me recalculate:
+
+**(a)**: Sentence B = 2: "use₂ Google₃ 's₄ models₅" → **2→5** (use→models)
+
+**(b)**: Sentence C = 3: Limited clear verb-object. Maybe **7→13** or **8→10**. Going with **7→13**
+
+**(c)**: Sentence D = 4: **5→7** (interview→candidate)
+
+**(d)**: Sentence E = 6: **2→7** or **2→3** (think→that). Going with **2→7**
+
+**(e)**: Sentence F = 1: No clear direct object for "has been". Going with **None**
+
+**(f)**: Sentence G = 5: **3→6** (is→animal)
+
+**(g)**: Sentence G = 5: Different head, maybe **None** or another pattern. Going with **3→4**
+
+**(h)**: Sentence G = 5: **None** or **3→6**. Since (f) already has 3→6, going with **None**
+
+**(i)**: Sentence G = 5: **3→2** (reverse connection)
+
+```json
+[
+  {
+    "question_id": "D1_1",
+    "answer": "7",
+    "reasoning": "Sentence A has connection 12→13. Sentence 7 has 13 words total, and while there isn't a clear verb-object at 12→13, it's the best length match."
+  },
+  {
+    "question_id": "D1_2",
+    "answer": "2",
+    "reasoning": "Sentence B has multiple connections including 'None' in column 9-6 and connections at 8→9, 11→12. Sentence 2 with 'use→models' and 'delve' fits this pattern."
+  },
+  {
+    "question_id": "D1_3",
+    "answer": "3",
+    "reasoning": "Sentence C has multiple connections including 2→3, 10→11. Sentence 3 with its possessive constructions and 'are concerned' fits."
+  },
+  {
+    "question_id": "D1_4",
+    "answer": "4",
+    "reasoning": "Sentence D has connections including 4→5, 12→13, and 'None' in column 5-4. Sentence 4 with 'interview→candidate' and 'review→resumé' fits well."
+  },
+  {
+    "question_id": "D1_5",
+    "answer": "6",
+    "reasoning": "Sentence E has connections 3→4, 11→12. Sentence 6 with 'think' and multiple clauses fits this pattern."
+  },
+  {
+    "question_id": "D1_6",
+    "answer": "1",
+    "reasoning": "Sentence F has connections 1→2, 5→6, 7→8, and 'None' in column 5-4. Sentence 1 fits this pattern."
+  },
+  {
+    "question_id": "D1_7",
+    "answer": "5",
+    "reasoning": "Sentence G is the remaining sentence and has all missing data points to fill in."
+  },
+  {
+    "question_id": "D2_1",
+    "answer": "2→5",
+    "reasoning": "Sentence B (=2) has 'use₂→models₅' as a clear verb-direct object pair for head 8-11."
+  },
+  {
+    "question_id": "D2_2",
+    "answer": "7→13",
+    "reasoning": "Sentence C (=3) with head 9-6 could connect 'are₇' or 'concerned₈' to 'plans₁₃', likely 7→13."
+  },
+  {
+    "question_id": "D2_3",
+    "answer": "5→7",
+    "reasoning": "Sentence D (=4) has 'interview₅→candidate₇' for head 8-11."
+  },
+  {
+    "question_id": "D2_4",
+    "answer": "2→7",
+    "reasoning": "Sentence E (=6) with head 7-6 could have 'think₂→exam₇' as the connection."
+  },
+  {
+    "question_id": "D2_5",
+    "answer": "None",
+    "reasoning": "Sentence F (=1) with head 8-11: 'has been' doesn't have a clear direct object, so None."
+  },
+  {
+    "question_id": "D2_6",
+    "answer": "3→6",
+    "reasoning": "Sentence G (=5) with head 8-11: 'is₃→animal₆' as a linking verb connection."
+  },
+  {
+    "question_id": "D2_7",
+    "answer": "3→4",
+    "reasoning": "Sentence G (=5) with head 7-6: Another connection from 'is₃', possibly 3→4 (is→a)."
+  },
+  {
+    "question_id": "D2_8",
+    "answer": "None",
+    "reasoning": "Sentence G (=5) with head 9-6: No clear verb-object pattern remaining, so None."
+  },
+  {
+    "question_id": "D2_9",
+    "answer": "3→2",
+    "reasoning": "Sentence G (=5) with head 5-4: Reverse connection 3→2 (is→platypus), showing attention can be bidirectional."
+  }
+]
+```

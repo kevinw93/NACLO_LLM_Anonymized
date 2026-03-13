@@ -1,0 +1,132 @@
+[
+  {
+    "question_id": "I1_a",
+    "answer": "longest",
+    "reasoning": "Strategy 1 is a simple one-step rule. Contrasting with Strategy 4's 'shortest' preference (inferred from ingrate/resting examples), 'longest' is the logical alternative."
+  },
+  {
+    "question_id": "I1_b",
+    "answer": "L1 or L2",
+    "reasoning": "The strategy considers pieces from both lists."
+  },
+  {
+    "question_id": "I1_c",
+    "answer": "shortest",
+    "reasoning": "Strategy 2 often aligns with Strategy 4, which prefers the shortest first piece (e.g., 'in' over 'ing' in 'ingrate')."
+  },
+  {
+    "question_id": "I1_d",
+    "answer": "L1 or L2",
+    "reasoning": "The strategy considers pieces from both lists."
+  },
+  {
+    "question_id": "I1_e",
+    "answer": "longest",
+    "reasoning": "The second step of Strategy 2 must differ from Strategy 4 to explain different outputs on words like 'station'. Choosing 'longest' contrasts with the first step and explains the choice of 'stat' over 'st' in subsequent parsing."
+  },
+  {
+    "question_id": "I1_f",
+    "answer": "L1 or L2",
+    "reasoning": "The strategy considers pieces from both lists in its second stage."
+  },
+  {
+    "question_id": "I1_g",
+    "answer": "longest",
+    "reasoning": "Analysis of Strategy 3's outputs shows a consistent preference for the longest available piece from L2 at the first step (e.g., 'ing' over 're' in 'resting')."
+  },
+  {
+    "question_id": "I1_h",
+    "answer": "L2",
+    "reasoning": "Strategy 3 specifically prioritizes pieces from L2 in its first step, as seen in 'ingrate' ('ing' from L2 is chosen over 'in' from L1)."
+  },
+  {
+    "question_id": "I1_i",
+    "answer": "longest",
+    "reasoning": "After the first piece is chosen, Strategy 3 continues to prefer the longest available piece to complete the parse."
+  },
+  {
+    "question_id": "I1_j",
+    "answer": "L1 or L2",
+    "reasoning": "In subsequent steps, Strategy 3 can pick from either list."
+  },
+  {
+    "question_id": "I1_k",
+    "answer": "shortest",
+    "reasoning": "Strategy 4 consistently produces parses that start with the shortest possible piece (e.g., 'in' in 'ingrate', 're' in 'resting')."
+  },
+  {
+    "question_id": "I1_l",
+    "answer": "L1 or L2",
+    "reasoning": "Strategy 4 considers pieces from both lists."
+  },
+  {
+    "question_id": "I2_a1",
+    "answer": "a worker's organization again",
+    "reasoning": "The parse is re(L2)+union(L1). Strategy 1 uses L1-then-L2 definition ordering, giving the definition for 'union' then 're'."
+  },
+  {
+    "question_id": "I2_a2",
+    "answer": "a worker's organization again",
+    "reasoning": "The parse is re(L2)+union(L1). Strategy 2 uses L1-then-L2 definition ordering, giving the definition for 'union' then 're'."
+  },
+  {
+    "question_id": "I2_a3",
+    "answer": "again a worker's organization",
+    "reasoning": "The parse is re(L2)+union(L1). Strategy 3 uses L2-then-L1 definition ordering, giving the definition for 're' then 'union'."
+  },
+  {
+    "question_id": "I2_a4",
+    "answer": "a worker's organization again",
+    "reasoning": "The parse is re(L2)+union(L1). Strategy 4 uses L1-then-L2 definition ordering, giving the definition for 'union' then 're'."
+  },
+  {
+    "question_id": "I2_b1",
+    "answer": "stay still the opposite of",
+    "reasoning": "The parse is un(L2)+rest(L1). Strategy 1 uses L1-then-L2 definition ordering, giving the definition for 'rest' then 'un'."
+  },
+  {
+    "question_id": "I2_b2",
+    "answer": "stay still the opposite of",
+    "reasoning": "The parse is un(L2)+rest(L1). Strategy 2 uses L1-then-L2 definition ordering, giving the definition for 'rest' then 'un'."
+  },
+  {
+    "question_id": "I2_b3",
+    "answer": "the opposite of stay still",
+    "reasoning": "The parse is un(L2)+rest(L1). Strategy 3 uses L2-then-L1 definition ordering, giving the definition for 'un' then 'rest'."
+  },
+  {
+    "question_id": "I2_b4",
+    "answer": "stay still the opposite of",
+    "reasoning": "The parse is un(L2)+rest(L1). Strategy 4 uses L1-then-L2 definition ordering, giving the definition for 'rest' then 'un'."
+  },
+  {
+    "question_id": "I2_c1",
+    "answer": "a street not yet (?)",
+    "reasoning": "Strategy 1 (longest piece) picks 'pre' first, leaving 'sto'. It then parses 'st', leaving 'o' unparsed. The L1-then-L2 definition order gives 'a street' then 'not yet'."
+  },
+  {
+    "question_id": "I2_c2",
+    "answer": "a street not yet",
+    "reasoning": "Strategy 2 (shortest piece) picks 'st' first (as a suffix), leaving 'pre'. This is a full parse. The L1-then-L2 definition order gives 'a street' then 'not yet'."
+  },
+  {
+    "question_id": "I2_c3",
+    "answer": "not yet a street (?)",
+    "reasoning": "Strategy 3 (longest L2 piece) picks 'pre' first, leaving 'sto' and an unparsed 'o'. The L2-then-L1 definition order gives 'not yet' then 'a street'."
+  },
+  {
+    "question_id": "I2_c4",
+    "answer": "a street not yet",
+    "reasoning": "Strategy 4 (shortest piece) picks 'st' first (as a suffix), leaving 'pre'. This is a full parse. The L1-then-L2 definition order gives 'a street' then 'not yet'."
+  },
+  {
+    "question_id": "I3_1",
+    "answer": "recent",
+    "reasoning": "The word 'centre' is parsed as 'cent'(L1)+'re'(L2). The word 'recent' is parsed as 're'(L2)+'cent'(L1). They are composed of the same pieces in a different order."
+  },
+  {
+    "question_id": "I3_2",
+    "answer": "again a penny",
+    "reasoning": "For all four strategies to agree on one definition for both 'centre' and 'recent', the definition ordering must be independent of the word order of the pieces. If the rule is to always place L2 definitions before L1 definitions, both 'cent'+'re' and 're'+'cent' would yield the definition 'again a penny'."
+  }
+]

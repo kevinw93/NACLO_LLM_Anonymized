@@ -1,0 +1,694 @@
+Model: claude-sonnet-4-5-20250929
+Generation Time: 167.15 seconds
+Timestamp: 2026-02-08 17:19:52
+================================================================================
+
+I'll analyze this Mongo language problem step by step.
+
+## Initial Analysis
+
+Looking at the table, I need to identify:
+1. The prefixes for different verb forms
+2. Sound change rules that apply
+3. Apply these to fill in missing forms
+
+Let me examine the patterns:
+
+### Identifying Prefixes
+
+**Imperative forms:** bota, kamba, imedʒa, usa, bata, ena, isa, dʒila, ina, bina, asa, sanga
+
+**2nd singular forms:** oota, okamba, wimedʒa, wusa, oata, wena, wisa, odʒila, wina, oina, wasa, osanga
+
+**3rd singular forms:** aota, akamba, imedʒa, usa, aata, ena, isa, adʒila, ina, aina, asa, asanga
+
+**3rd plural forms:** baota, bakamba, bimedʒa, busa, baata, bena, bisa, badʒila, bina, baina, basa, basanga
+
+### Pattern Analysis
+
+Looking at the roots and how they combine with prefixes:
+
+For verbs starting with vowels (like "ota" from bota, "asa" from asa):
+- Imperative: appears to be ∅- (empty)
+- 2nd singular: o-
+- 3rd singular: a-
+- 3rd plural: ba-
+
+For verbs starting with consonants (like "kamba", "sanga"):
+- Same prefix pattern, but no deletion occurs
+
+Wait, let me reconsider. Looking more carefully:
+
+**Root identification:**
+- bota → root seems to be "-ota" (imperative b-ota)
+- kamba → root seems to be "-amba" (imperative k-amba)
+- imedʒa → root could be "-imedʒa" or "-medʒa"
+- usa → root seems to be "-sa" (imperative u-sa)
+
+Actually, I notice:
+- When 2nd singular is "w-", it appears before vowels (wusa, wena, wisa, wina, wasa)
+- When 2nd singular is "o-", it appears before consonants (oota, okamba, oata, oina, osanga)
+
+Let me reconsider the structure by comparing forms:
+
+**Pattern for "ota" (beget):**
+- Imp: b-ota
+- 2sg: o-ota
+- 3sg: a-ota
+- 3pl: ba-ota
+
+**Pattern for "kamba" (work):**
+- Imp: ∅-kamba
+- 2sg: o-kamba
+- 3sg: a-kamba
+- 3pl: ba-kamba
+
+**Pattern for "sa" (throw):**
+- Imp: u-sa
+- 2sg: wu-sa
+- 3sg: ∅-usa (wait, this doesn't match)
+- 3pl: bu-sa
+
+Actually, looking at "usa" row more carefully:
+- Imperative: usa
+- 2nd singular: wusa
+- 3rd singular: usa
+- 3rd plural: busa
+
+This suggests the root is "-sa" and there's a vowel prefix "u-" in some forms.
+
+Let me look for **sound change rules**:
+
+1. **Two vowels in a row:** Looking at "oota" (2sg of bota), we have "o-ota" = "oota" (two o's). Looking at "wusa", we have "o-" becoming "w-" before "u". This suggests: o → w before a vowel (other than o?).
+
+2. **Delete something between two somethings:** Looking at "oata" vs expected "o-aata", one "a" is deleted. Rule: delete a vowel when two identical vowels meet.
+
+3. **Change something to something:** The "o" → "w" change before certain vowels.
+
+### Determining the answers:
+
+**(1) Imperative prefix:** Looking at patterns, some have ∅-, some have consonants. Actually "b-", "k-", "∅-", "u-", "b-", "∅-", "∅-", "dʒ-", "∅-", "b-", "∅-", "s-"... This varies by verb! 
+
+Wait, let me reconsider the ROOT itself:
+
+Maybe the root is the 3rd singular form? Let's check:
+- aota, akamba, imedʒa, usa, aata, ena, isa, adʒila, ina, aina, asa, asanga
+
+This makes more sense! The 3rd singular might be the base/root.
+
+**Revised Analysis:**
+
+Root = 3rd singular form (or close to it)
+
+**(1) Imperative prefix = ∅-** (empty)
+**(2) 2nd singular prefix = o-** (with modifications)
+**(3) 3rd singular prefix = ∅-** or **a-** 
+**(4) 3rd plural prefix = b-** or **ba-**
+
+**Sound Rules:**
+- (5) vowels, (6) one of them
+- (7) "o", (8) vowels (or "a"s)
+- (9) "o", (10) "w", (11) vowel (or "a")
+
+**Rule order:** (12) = 3, (13) = 1, (14) = 2
+
+Let me verify with examples:
+
+**For A2:**
+
+Row with bakisa → add:
+- Imperative: bakisa
+- (1) 2sg: o-bakisa → obakisa → ... wait
+
+Let me reconsider completely. Looking at the the simplest verb "asa" (search):
+- Imp: asa
+- 2sg: wasa  
+- 3sg: asa
+- 3pl: basa
+
+This suggests root is "-asa" with:
+- Imperative: ∅-
+- 2nd sg: w- (but why "w" not "o"?)
+- 3rd sg: ∅-
+- 3rd pl: b-
+
+The "w" appears before "a", suggesting **o → w / _V**
+
+Let me map this systematically for A1:
+
+The pattern that makes most sense:
+- **(1) ∅-** (empty imperative prefix)
+- **(2) o-** (2nd singular prefix)
+- **(3) a-** (3rd singular prefix) 
+- **(4) ba-** (3rd plural prefix)
+
+But wait - many 3rd singular forms don't show "a-". Let me look again:
+- bota/aota: maybe root is "ota", 3sg adds "a-" → "a-ota" → "aota" 
+- kamba/akamba: root "kamba", 3sg "a-kamba" → "akamba"
+- imedʒa/imedʒa: root "imedʒa", 3sg stays same
+- usa/usa: similar
+
+So prefix rules would be:
+- (3) could be **a-** but becomes ∅- before "i", "u", "e"
+
+Actually, simpler explanation:
+- **(1) ∅-**
+- **(2) o-** 
+- **(3) a-**
+- **(4) ba-**
+
+Sound changes:
+- **(5) vowels** (or "a"s)
+- **(6) one**
+- **(7) "a"** 
+- **(8) vowels** (or something else)
+- **(9) "o"**
+- **(10) "w"**
+- **(11) "a"** (or vowel)
+
+Rule order: **(12) 3, (13) 1, (14) 2**
+
+Let me test with "bota":
+- Root: "bota"
+- 2sg: o-bota → apply rules in order 3, 1, 2
+  - Rule 3: o→w/_a → doesn't apply (no "a" after "o")
+  - Rule 1: delete vowel when two vowels meet → o-bota → o-bota (no double vowels yet)
+  - Rule 2: delete "a" between vowels → not applicable
+  - Result: "obota" - but we see "oota"!
+
+I think I need to reconsider what the root is.
+
+**New approach:** What if the ROOT is what remains constant across forms?
+
+For "bota/oota/aota/baota":
+- Common part: "ota"
+- Imperative: b-ota
+- 2sg: o-ota  
+- 3sg: a-ota
+- 3pl: ba-ota
+
+So:
+- **(1) b-** (but varies - not consistent)
+
+Actually, looking more carefully, each verb seems to have its own imperative formation. Let me focus on the COMMON prefixes:
+
+Looking at consonant-initial roots like "kamba":
+- Imp: kamba (no prefix visible, or ∅-)
+- 2sg: o-kamba
+- 3sg: a-kamba  
+- 3pl: ba-kamba
+
+Looking at vowel-initial roots like "ota":
+- Imp: b-ota
+- 2sg: o-ota
+- 3sg: a-ota
+- 3pl: ba-ota
+
+So the **imperative prefix varies**: sometimes ∅-, sometimes a consonant that matches the 3rd plural "ba-" prefix.
+
+Given the pattern:
+- **(1) ∅-** (most common for imperative)
+- **(2) o-** (2nd singular)
+- **(3) a-** (3rd singular)
+- **(4) ba-** (3rd plural)
+
+For sound rules:
+
+Rule 1: Delete a vowel when two identical vowels meet
+- Two **(5) vowels**, delete **(6) one**
+
+Rule 2: Delete **(7) "a"** between two **(8) vowels**
+
+Rule 3: Change **(9) "o"** to **(10) "w"** before **(11) vowel**
+
+Rule order: **(12) 3, (13) 1, (14) 2**
+
+Let me test "bota" again with these rules:
+- Root: "ota"
+- 2sg: o-ota
+  - Rule 3 first: o→w before vowel → w-ota? No, the "o" prefix is before "o" of root
+  - Actually: o-ota, the "o" is before "o", so: o→w/_o → w-ota? We get "oota" not "wota"
+  
+Hmm, maybe rule 3 is: o→w before "a" specifically?
+
+Let me check "asa" (search):
+- Root: "asa"  
+- 2sg: o-asa
+  - Rule 3: o→w/_a → w-asa → "wasa" ✓
+
+Check "ena" (see):
+- Root: "ena"
+- 2sg: o-ena  
+  - Rule 3: o→w/_e → w-ena → "wena" ✓
+
+So rule 3: o→w before vowels (except "o"? or before "a" and "e"?)
+
+Check "isa" (hide):
+- 2sg should be: o-isa → w-isa → "wisa" ✓
+
+Check "ina" (hate):
+- 2sg: o-ina → w-ina → "wina" ✓
+
+Check "oota" (beget):
+- 2sg: o-ota → stays as "o-ota" (rule 3 doesn't apply before "o") → "oota" by rule 1 (delete one "o") ✓
+
+So:
+- **(9) o**
+- **(10) w**  
+- **(11) vowel** (but not "o", so maybe **(11) "a"** or we say the rule applies before "a, e, i, u")
+
+Given the answer format expects a single thing for (11), and most examples have "a", I'll say:
+- **(11) "a"** (though it also works before e, i, u)
+
+Now for rule 1 (delete vowel when two identical vowels):
+- "o-ota" → "oota" (two "o"s, delete one)
+- "o-oina" (from "o-aina") wait...
+
+Check "bina" (dance):
+- 2sg: "oina"
+- Working backwards: o-aina? → oaina → oina (delete an "a")
+- But root should be from 3sg: "aina"  
+- So: o-aina → rule 3: doesn't start with "a" after "o"... wait
+- o-aina: rule 3: o before "a" → w-aina? No, we get "oina"
+- Maybe: o-aina → rule 2: delete "a" between "o" and "i" → o-ina → rule 1: no double vowels → "oina" ✓
+
+So rule 2: delete **(7) "a"** when it appears between two **(8) vowels**
+
+Check "oata" (get):
+- 3sg: "aata"
+- 2sg: o-aata → rule 3: o before "a" → w-aata? No, we get "oata"
+- So: o-aata → doesn't become "w" here... 
+- Maybe rule applied: o-aata → delete "a" between "o" and "a" (rule 2) → o-ata → → "oata" ✓
+
+So rule 2: delete "a" between two vowels
+
+**(7) a**
+**(8) vowels**
+
+Rule order: First apply rule **(12) 3** (o→w), then rule **(13) 1** (delete double vowels), then rule **(14) 2** (delete "a" between vowels)
+
+Wait, let me recheck "oata":
+- o-aata
+- Rule 3 first: o→w/_a → w-aata
+- Rule 1: delete double vowels → w-ata (delete one "a")  
+- Rule 2: delete "a" between vowels → doesn't apply
+- Result: "wata" - but we want "oata"!
+
+This doesn't work. Let me reconsider.
+
+Maybe the order is: Rule 2, then Rule 1, then Rule 3?
+
+"oata" from "aata":
+- o-aata
+- Rule 2: delete "a" between "o" and "a" → o-ata
+- Rule 1: no double vowels → stays "o-ata"  
+- Rule 3: o→w before vowel... but this would give "w-ata"
+
+Still doesn't work. Let me think about what stops rule 3...
+
+Maybe rule 3 is more specific: o→w/_[vowel except when "a" follows after prefix]?
+
+Or maybe: after applying rule 2 first, which removes the "a" after the prefix, there's no longer a vowel immediately after "o", so rule 3 doesn't apply?
+
+Let me try order: 2, 1, 3
+
+"oata" from "aata":
+- o-aata
+- Rule 2: delete "a" between two vowels → o + aata, first "a" is between "o" and "a" → o-ata
+- Rule 1: no double vowels → "o-ata"
+- Rule 3: o before "a"? We now have "o-ata", is "a" immediately after? After rule 2, the "a" is now directly after "o", so o→w → "wata"
+
+Still wrong!
+
+Let me reconsider what rule 2 does. Maybe it's: delete "a" when it appears between two [specific vowels]?
+
+Or maybe I have the wrong prefixes entirely.
+
+**Fresh start - looking at minimal pairs:**
+
+"bata" (get): b-ata / o-ata / a-ata / ba-ata → "bata/oata/aata/baata"
+
+But we see: bata/oata/aata/baata - so no sound changes for 2sg!
+
+"usa" (throw): ?-sa / ?-sa / ?-sa / ?-sa → "usa/wusa/usa/busa"
+
+- Imp: usa (perhaps "u-sa")
+- 2sg: wusa (perhaps "u-sa" with o-prefix → "o-usa" → "wusa")  
+- 3sg: usa (perhaps "u-sa")
+- 3pl: busa (perhaps "bu-sa")
+
+This suggests vowel prefixes merge/change.
+
+I think the roots might include initial vowels, and there are vowel coalescence rules.
+
+Let me assume:
+- Some roots start with consonants (like "-kamba", "-sanga")
+- Some roots start with vowels (like "-ota", "-asa")
+- When prefix "o-" meets root starting with "a", we get coalescence
+
+Simpler model:
+- **(1) ∅-**
+- **(2) o-**
+- **(3) a-** 
+- **(4) b-** (not "ba-", just "b-")
+
+No wait, we clearly see "ba-" in forms like "baota", "bakamba".
+
+Let me try:
+- **(1) ∅-**
+- **(2) o-**
+- **(3) a-**
+- **(4) ba-**
+
+And roots include any initial vowels.
+
+Sound rules (let me try different interpretations):
+
+For "wasa" from "asa":
+- o-asa → wasa
+- This means: "oa" → "wa", so rule is: o → w / _a
+
+For "wena" from "ena":
+- o-ena → wena  
+- This means: "oe" → "we", so rule is: o → w / _e
+
+For "oota" from "ota":
+- o-ota → oota
+- "oo" → "oo" then reduce to "oo" (double o stays or one deleted)
+
+For "oata" from "aata":
+- o-aata → oata
+- "oa" should become "wa" (by rule above), but doesn't!
+- Unless: "oaa" → "oa" (delete middle "a"), then no further change
+
+So maybe:
+- Rule 1: When three vowels, delete middle one
+- Rule 2: Simplify double vowels to single  
+- Rule 3: o → w / _a,e,i,u (before vowels except "o")
+
+Let me test "o-aata":
+- Rule 1: "oaa" → "oa" (delete middle "a")
+- Rule 2: no double vowels
+- Rule 3: "oa" → "wa"? But we want "oata"
+
+Unless rule 3 applies only to original sequences, not derived ones?
+
+Or: maybe rule order matters and rule 1 creates "oata", and then rule 3 doesn't apply because it only looks at prefix+root boundary originally?
+
+**Let me try:** Rule 3 first, Rule 1 second, Rule 2 third
+
+"o-asa" (search):
+- Rule 3: o→w/_a → "w-asa" → "wasa" ✓
+
+"o-ota" (beget):
+- Rule 3: o→w/_o? No, only before "a" (let's say) → stays "o-ota"  
+- Rule 1: ? 
+- Rule 2: double "o" → single "o" → "oota"? No, we see "oota" with double!
+
+Okay, rule 2 must not be "simplify double vowels" but something else.
+
+**New interpretation:**
+
+Actually, looking at "oota", "oata", we keep double vowels! So rule 1 isn't about deleting double vowels.
+
+Rule 1: Delete **(6) one** **(5) vowel** when there are two **(5) vowels** in a row - but this must be specific vowels!
+
+Maybe: Rule 1: Delete one "a" when there are two "a"s in a row?
+
+"o-aata":
+- Rule 1: "aata" has "aa" → delete one → "o-ata" → "oata" (after rule 3 doesn't apply?) ✓
+
+But what about "o-aina"?
+- "aina" has "ai" not "aa"
+- Rule 2: delete "a" between vowels → "aina" → delete "a" between... where?
+- Maybe: "oaina" → delete "a" between "o" and "i" → "oina" ✓
+
+So:
+- **(5) = "a"s** (or same vowels)
+- **(6) = one**
+- **(7) = "a"**
+- **(8) = vowels** (consonants?)
+- **(9) = o**
+- **(10) = w**
+- **(11) = a** (or vowels excluding "o")
+
+Rule order: need to figure out
+
+Let me try: 1, 2, 3
+
+"o-aata":
+- Rule 1: two "a"s → delete one → "o-ata"  
+- Rule 2: delete "a" between vowels → "o-ata" has "a" between "o" and "a"... which "a"?
+- Rule 3: o→w/_a → "w-ata" = "wata" - Wrong!
+
+Try: 2, 1, 3
+
+"o-aata":
+- Rule 2: delete "a" between two vowels → "oaata" delete first "a" → "o-ata"
+- Rule 1: no double "a"s → stays "o-ata"
+- Rule 3: o→w/_a → "wata" - Wrong again!
+
+Try: 1, 3, 2
+
+"o-aata":
+- Rule 1: delete one "a" from "aa" → "o-ata"
+- Rule 3: o→w/_a → "wata" - Wrong!
+
+The problem is rule 3 keeps applying when it shouldn't!
+
+**Breakthrough idea:** Maybe rule 3 only applies when "o" is immediately followed by "a" at the prefix-root boundary, and rule 1/2 alter the structure so rule 3 no longer applies!
+
+Or: Rule order is 1, 2, 3 BUT rules apply to underlying form, then surface form is derived?
+
+Actually, simpler: maybe rule 3 is more restrictive. Let me check which forms have "w":
+
+Forms with "w": wusa, wimedʒa, wena, wisa, wina, wasa, all from 2sg.
+
+Roots (from imperative or 3sg): usa, imedʒa, ena, isa, ina, asa
+
+These roots all start with vowels "u", "i", "e", "i", "i", "a"!
+
+Forms with "o": oota, okamba, oata, odʒila, oina, osanga
+
+Roots: ota, kamba, aata, dʒila, aina, sanga
+
+Roots: "ota" (starts with "o"), "kamba" (starts with "k"), "aata" (starts with "a"), "dʒila" (starts with "dʒ"), "aina" (starts with "a"), "sanga" (starts with "s")
+
+So:
+- w- appears before roots starting with "u", "i", "e", "a" (when not doubled?)
+- o- appears before roots starting with "o", consonants, and "a" (when doubled/special cases?)
+
+Pattern: 
+- o → w / _{i, e, u} (and sometimes "a")
+- o → o / _{o, consonants, and "aa"}
+
+Maybe: o → w / _V[+high or +mid] (i.e., not before "o" or before "a" when there's a double "a" or another vowel after)
+
+Given the complexity, let me assume:
+- Rule 3: o → w / _"a" (before single "a" not followed by another "a" immediately)
+
+But this still doesn't work cleanly.
+
+Let me just go with the most straightforward interpretation for the answer:
+
+**(1) ∅**
+**(2) o**
+**(3) a**
+**(4) ba**
+**(5) vowels** (or "a"s)
+**(6) one**
+**(7) a**
+**(8) vowels**
+**(9) o**
+**(10) w**
+**(11) a** (or vowel)
+**(12) 1** (or 3)
+**(13) 2** (or 1)  
+**(14) 3** (or 2)
+
+For A2, let me apply these rules:
+
+**bakisa** (add):
+- Root: needs determining
+- 2sg: (1) = ?
+- 3sg: (2) = ?
+- 3pl: (3) = ?
+
+If imperative is "bakisa", and pattern is similar to "bakamba":
+- "bakamba": imp="kamba", 2sg="okamba", 3sg="akamba", 3pl="bakamba"
+
+So for "bakisa":
+- Root might be "kisa" or "akisa"
+- Imp: bakisa (given) = ∅-bakisa or b-akisa?
+
+If root is "akisa":
+- Imp: b-akisa = "bakisa" ✓
+- 2sg: o-akisa → apply rules → **(1) "oakisa"** or simplified?
+
+Let me assume rules give:
+- o-akisa → rule 1: no "aa" → rule 2: delete "a" between "o" and "k"? No, "k" is consonant → rule 3: o→w/_a → "wakisa"
+
+So: **(1) = wakisa** or **(1) = oakisa**
+
+Actually, let me look at similar pattern. "aata" (get):
+- 2sg: oata (from o-aata with one "a" deleted)
+
+"aina" (dance):
+- 2sg: oina (from o-aina with "a" deleted between "o" and "i")
+
+"akisa":
+- 2sg: o-akisa → delete "a" between "o" and "k"? No, wrong rule
+- Actually: o-akisa → rule 3: o→w/_a → "wakisa"
+- Unless there's no direct "a" after "o"... we have "o-akisa", so "a" IS after "o"
+- So: "wakisa" or rule 2 applies first to delete "a" giving "o-kisa" then no "a" after "o"?
+
+I think I need to just make consistent guesses:
+
+**(1) okisa** (assuming o-akisa → o-kisa by deleting one "a")
+**(2) akisa** (a-akisa → akisa by deleting one "a")  
+**(3) bakisa** (ba-akisa → bakisa by deleting one "a")
+
+Wait, but 3pl is already given as "bakisa"! So (3) is not a blank.
+
+Let me reread the table:
+
+| bakisa | (1) | (2) | (3) | 'add' |
+
+So:
+- Imperative: bakisa (given)
+- 2nd singular: (1) = ?
+- 3rd singular: (2) = ?
+- 3rd plural: (3) = ?
+
+If root is "akisa":
+- **(1) = okisa** (o-akisa → okisa)
+- **(2) = akisa** (a-akisa → akisa)
+- **(3) = bakisa** (ba-akisa → bakisa)
+
+Next row:
+| (4) | wanda | (5) | (6) | 'begin' |
+
+- Imperative: (4) = ?
+- 2nd singular: wanda (given)
+- 3rd singular: (5) = ?
+- 3rd plural: (6) = ?
+
+Working backwards from "wanda":
+- If 2sg is "wanda", and rule is o → w / _a
+- Then: o-anda → wanda
+- Root: "anda"
+- Imp: **(4) = anda** (∅-anda)
+- 3sg: **(5) = anda** (a-anda → aanda → anda, delete one "a")
+- 3pl: **(6) = banda** (ba-anda → banda)
+
+| solola | (7) | (8) | basolola | 'chat' |
+
+- Imp: solola
+- 2sg: (7) = ?
+- 3sg: (8) = ?
+- 3pl: basolola
+
+If 3pl is "basolola" = ba-asolola → basolola (delete one "a"):
+- Root: "asolola"
+- Imp: solola = ∅-asolola? No, should be s-asolola or ∅-solola
+- Actually, Imp might be ∅-solola, root is "solola"
+- Wait, but then 3pl would be ba-solola = "basolola" ✓
+- 2sg: **(7) = osolola** (o-solola)
+- 3sg: **(8) = asolola** (a-solola)
+
+| ponama | (9) | aponama | (10) | 'elect' |
+
+- Imp: ponama
+- 2sg: (9) = ?
+- 3sg: aponama (given)
+- 3pl: (10) = ?
+
+If 3sg is "aponama" = a-ponama:
+- Root: "ponama"
+- Imp: ponama = ∅-ponama ✓
+- 2sg: **(9) = oponama** (o-ponama)
+- 3pl: **(10) = baponama** (ba-ponama)
+
+| (11) | oowa | (12) | (13) | 'cure' |
+
+- Imp: (11) = ?
+- 2sg: oowa
+- 3sg: (12) = ?
+- 3pl: (13) = ?
+
+If 2sg is "oowa" = o-owa:
+- Root: "owa"
+- Imp: **(11) = owa** (∅-owa)
+- 2sg: oowa (o-owa) ✓
+- 3sg: **(12) = aowa** (a-owa)
+- 3pl: **(13) = baowa** (ba-owa)
+
+| (14) | (15) | aalusa | (16) | 'turn' |
+
+- Imp: (14) = ?
+- 2sg: (15) = ?
+- 3sg: aalusa
+- 3pl: (16) = ?
+
+If 3sg is "aalusa" = a-alusa (with double "a"):
+- Root: "alusa"
+- Imp: **(14) = alusa** (∅-alusa)
+- 2sg: **(15) = oalusa** or "walusa"? 
+  - o-alusa → rule 3: o→w/_a → walusa
+  - But we have "oata" not "wata", so maybe: o-alusa → rule 2: delete "a" between? → No
+  - I think: o-alusa → stay as "oalusa" (because it becomes "oalusa" and rule 3 doesn't apply after merging?)
+  - Let's go with **(15) = oalusa**
+- 3pl: **(16) = balusa** (ba-alusa → balusa)
+
+| longa | (17) | (18) | (19) | 'win' |
+
+- Imp: longa
+- 2sg: (17) = ?
+- 3sg: (18) = ?
+- 3pl: (19) = ?
+
+Root: "longa"
+- Imp: longa = ∅-longa ✓
+- 2sg: **(17) = olonga** (o-longa)
+- 3sg: **(18) = alonga** (a-longa)
+- 3pl: **(19) = balonga** (ba-longa)
+
+Now let me compile the final answers:
+
+```json
+[
+  {"question_id": "A1_1", "answer": "∅", "reasoning": "Imperative prefix is empty (∅) for most verbs based on consonant-initial roots like 'kamba' → imperative 'kamba'"},
+  {"question_id": "A1_2", "answer": "o", "reasoning": "2nd singular prefix is 'o' as seen in forms like 'okamba', 'oota', which may become 'w' before certain vowels"},
+  {"question_id": "A1_3", "answer": "a", "reasoning": "3rd singular prefix is 'a' as seen in forms like 'akamba', 'aota', 'aata'"},
+  {"question_id": "A1_4", "answer": "ba", "reasoning": "3rd plural prefix is 'ba' as consistently seen in forms like 'bakamba', 'baota', 'baata'"},
+  {"question_id": "A1_5", "answer": "vowels", "reasoning": "The deletion rule applies when two vowels (particularly 'a's) appear in sequence"},
+  {"question_id": "A1_6", "answer": "one", "reasoning": "When two identical vowels meet, one of them is deleted"},
+  {"question_id": "A1_7", "answer": "a", "reasoning": "The vowel 'a' is specifically deleted when it appears between two other vowels"},
+  {"question_id": "A1_8", "answer": "vowels", "reasoning": "'a' is deleted when it appears between two vowels"},
+  {"question_id": "A1_9", "answer": "o", "reasoning": "The prefix vowel 'o' changes to 'w' under certain conditions"},
+  {"question_id": "A1_10", "answer": "w", "reasoning": "'o' becomes 'w' before certain vowels, as seen in 'wasa', 'wena', 'wisa'"},
+  {"question_id": "A1_11", "answer": "a", "reasoning": "'o' becomes 'w' particularly before 'a' and other vowels (except 'o')"},
+  {"question_id": "A1_12", "answer": "1", "reasoning": "First apply the vowel deletion rule to create the proper environment"},
+  {"question_id": "A1_13", "answer": "2", "reasoning": "Then apply the 'a' deletion rule between vowels"},
+  {"question_id": "A1_14", "answer": "3", "reasoning": "Finally apply the o→w transformation rule"},
+  {"question_id": "A2_1", "answer": "okisa", "reasoning": "2sg of 'bakisa': o-akisa → okisa (after deleting one 'a')"},
+  {"question_id": "A2_2", "answer": "akisa", "reasoning": "3sg of 'bakisa': a-akisa → akisa (after deleting one 'a')"},
+  {"question_id": "A2_3", "answer": "bakisa", "reasoning": "3pl form is 'bakisa' (ba-akisa → bakisa)"},
+  {"question_id": "A2_4", "answer": "anda", "reasoning": "Imperative of 'wanda': root is 'anda', imperative has ∅ prefix"},
+  {"question_id": "A2_5", "answer": "anda", "reasoning": "3sg of 'wanda': a-anda → anda (after deleting one 'a')"},
+  {"question_id": "A2_6", "answer": "banda", "reasoning": "3pl of 'wanda': ba-anda → banda"},
+  {"question_id": "A2_7", "answer": "osolola", "reasoning": "2sg of 'solola': o-solola → osolola"},
+  {"question_id": "A2_8", "answer": "asolola", "reasoning": "3sg of 'solola': a-solola → asolola"},
+  {"question_id": "A2_9", "answer": "oponama", "reasoning": "2sg of 'ponama': o-ponama → oponama"},
+  {"question_id": "A2_10", "answer": "baponama", "reasoning": "3pl of 'ponama': ba-ponama → baponama"},
+  {"question_id": "A2_11", "answer": "owa", "reasoning": "Imperative with root 'owa': ∅-owa → owa"},
+  {"question_id": "A2_12", "answer": "aowa", "reasoning": "3sg of 'owa': a-owa → aowa"},
+  {"question_id": "A2_13", "answer": "baowa", "reasoning": "3pl of 'owa': ba-owa → baowa"},
+  {"question_id": "A2_14", "answer": "alusa", "reasoning": "Imperative with root 'alusa': ∅-alusa → alusa"},
+  {"question_id": "A2_15", "answer": "oalusa", "reasoning": "2sg of 'alusa': o-alusa → oalusa"},
+  {"question_id": "A2_16", "answer": "balusa", "reasoning": "3pl of 'alusa': ba-alusa → balusa"},
+  {"question_id": "A2_17", "answer": "olonga", "reasoning": "2sg of 'longa': o-longa → olonga"},
+  {"question_id": "A2_18", "answer": "alonga", "reasoning": "3sg of 'longa': a-longa → alonga"},
+  {"question_id": "A2_19", "answer": "balonga", "reasoning": "3pl of 'longa': ba-longa → balonga"}
+]
+```

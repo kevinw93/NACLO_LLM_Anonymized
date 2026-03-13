@@ -1,0 +1,111 @@
+Model: claude-opus-4-20250514
+Generation Time: 60.27 seconds
+Timestamp: 2026-02-03 06:07:34
+================================================================================
+
+Looking at this Bulgarian language problem, I need to match Bulgarian sentences with their English translations and then translate some additional sentences.
+
+Let me start by analyzing the given sentence pairs to identify patterns:
+
+First, I'll identify recurring words and their likely meanings:
+- "nahrani" appears in sentences a and f - both English translations involve feeding/cursing
+- "kotkata" appears in sentences c, d, g - these involve "the cat"
+- "sin" appears in sentences e and i - these involve "son"
+- "veshterăt" appears in sentences a and j - but with very different meanings (son vs wizard)
+- "prokle" appears in sentences d and e - might mean "scratched" or similar
+- "pregărna" appears in sentences c and j - might mean "dressed" or "hugged"
+
+Let me work through this more systematically:
+
+Looking at sentence g: "Kotkata te odraska" = could be "The cat scratched you" or "The camel walked"
+Since "kotkata" likely means "cat", option (D) "The cat scratched you" seems more plausible.
+
+From sentence d: "Veshtitsata prokle kotkata" - if "kotkata" is cat and this matches with (D) "The cat scratched you", then "prokle" might mean "scratched" and "veshtitsata" could be "witch".
+
+But wait, let me reconsider. Looking at all the options more carefully:
+
+For N1, matching sentences:
+- a. "Veshterăt nahrani maymunata" - Contains "nahrani" (fed?) and "maymunata" (monkey?)
+- Looking at options with feeding: (E) "You fed the son" or (I) "The wizard fed the monkey"
+- Since "maymunata" sounds like "monkey", this is likely (I)
+
+- b. "Kamilata vărvya" - Simple two-word sentence
+- Could be (G) "The camel walked" - "kamilata" sounds like "camel"
+
+- c. "Momicheto pregărna kotkata" - Has "kotkata" (cat)
+- Options with cat: (B), (D), (F), (H)
+- "pregărna" could mean "hugged" → (B) "The girl hugged the cat"
+
+- d. "Veshtitsata prokle kotkata" - Has "kotkata" (cat)
+- Remaining cat options: (D), (F), (H)
+- If "veshtitsata" is "witch" → (F) "The witch cursed the cat"
+
+- e. "Kotkata prokle tvoya sin" - Has both "kotkata" and "sin"
+- This matches (H) "The cat cursed your son"
+
+- f. "Ti nahrani sina" - Has "nahrani" and "sina"
+- This matches (E) "You fed the son"
+
+- g. "Kotkata te odraska" - Has "kotkata"
+- This matches (D) "The cat scratched you"
+
+- h. "Ti skochi" - Simple sentence with "Ti" (you)
+- This matches (K) "You jumped"
+
+- i. "Tvoyat sin te gleda" - Has "sin" (son)
+- This matches (A) "Your son watched you"
+
+- j. "Veshterăt pregărna edna kamila" - Has "pregărna" and "kamila"
+- This matches (L) "The wizard hugged a camel"
+
+- k. "Ti se obleche" - Has "Ti" (you)
+- This matches (C) "You dressed yourself"
+
+- l. "Sinăt obleche tvoeto bebe" - Has "sin" (son) and "bebe" (baby)
+- This matches (J) "The son dressed your baby"
+
+For N2, translating to English:
+a. "Maymunata gleda tvoyata veshtitsa" = "The monkey watched your witch"
+b. "Tvoyata kamila obleche edno momiche" = "Your camel dressed a girl"
+c. "Veshterăt se prokle" = "The wizard cursed himself"
+d. "Ti pregărna bebeto" = "You hugged the baby"
+e. "Ti vărvya" = "You walked"
+f. "Ti prokle edin veshter" = "You cursed a wizard"
+
+For N3, translating to Bulgarian:
+a. "The witch dressed you" = "Veshtitsata te obleche"
+b. "The baby watched the girl" = "Bebeto gleda momicheto"
+c. "The monkey jumped" = "Maymunata skochi"
+d. "You hugged a son" = "Ti pregărna edin sin"
+e. "Your son dressed a baby" = "Tvoyat sin obleche edno bebe"
+
+For N4, the explanation would focus on how Bulgarian uses different word order than English, has grammatical gender, and uses suffixes to indicate grammatical relationships. The definite article is attached as a suffix (-ta, -to, -t, -ăt) rather than as a separate word like English "the".
+
+```json
+[
+  {"question_id": "N1_1", "answer": "I", "reasoning": "Veshterăt nahrani maymunata matches 'The wizard fed the monkey' - maymunata sounds like monkey"},
+  {"question_id": "N1_2", "answer": "G", "reasoning": "Kamilata vărvya matches 'The camel walked' - kamilata sounds like camel"},
+  {"question_id": "N1_3", "answer": "B", "reasoning": "Momicheto pregărna kotkata matches 'The girl hugged the cat' - contains kotkata (cat) and pregărna (hugged)"},
+  {"question_id": "N1_4", "answer": "F", "reasoning": "Veshtitsata prokle kotkata matches 'The witch cursed the cat' - veshtitsata is witch, prokle is cursed"},
+  {"question_id": "N1_5", "answer": "H", "reasoning": "Kotkata prokle tvoya sin matches 'The cat cursed your son' - has both cat and son"},
+  {"question_id": "N1_6", "answer": "E", "reasoning": "Ti nahrani sina matches 'You fed the son' - nahrani means fed, sina is son"},
+  {"question_id": "N1_7", "answer": "D", "reasoning": "Kotkata te odraska matches 'The cat scratched you' - odraska means scratched"},
+  {"question_id": "N1_8", "answer": "K", "reasoning": "Ti skochi matches 'You jumped' - simple sentence with Ti (you)"},
+  {"question_id": "N1_9", "answer": "A", "reasoning": "Tvoyat sin te gleda matches 'Your son watched you' - gleda means watched"},
+  {"question_id": "N1_10", "answer": "L", "reasoning": "Veshterăt pregărna edna kamila matches 'The wizard hugged a camel'"},
+  {"question_id": "N1_11", "answer": "C", "reasoning": "Ti se obleche matches 'You dressed yourself' - reflexive construction"},
+  {"question_id": "N1_12", "answer": "J", "reasoning": "Sinăt obleche tvoeto bebe matches 'The son dressed your baby'"},
+  {"question_id": "N2_1", "answer": "The monkey watched your witch", "reasoning": "Maymunata=monkey, gleda=watched, tvoyata=your, veshtitsa=witch"},
+  {"question_id": "N2_2", "answer": "Your camel dressed a girl", "reasoning": "Tvoyata=your, kamila=camel, obleche=dressed, edno=a, momiche=girl"},
+  {"question_id": "N2_3", "answer": "The wizard cursed himself", "reasoning": "Veshterăt=wizard, se prokle=cursed himself (reflexive)"},
+  {"question_id": "N2_4", "answer": "You hugged the baby", "reasoning": "Ti=you, pregărna=hugged, bebeto=the baby"},
+  {"question_id": "N2_5", "answer": "You walked", "reasoning": "Ti=you, vărvya=walked"},
+  {"question_id": "N2_6", "answer": "You cursed a wizard", "reasoning": "Ti=you, prokle=cursed, edin=a, veshter=wizard"},
+  {"question_id": "N3_1", "answer": "Veshtitsata te obleche", "reasoning": "The witch=veshtitsata, dressed=obleche, you=te"},
+  {"question_id": "N3_2", "answer": "Bebeto gleda momicheto", "reasoning": "The baby=bebeto, watched=gleda, the girl=momicheto"},
+  {"question_id": "N3_3", "answer": "Maymunata skochi", "reasoning": "The monkey=maymunata, jumped=skochi"},
+  {"question_id": "N3_4", "answer": "Ti pregărna edin sin", "reasoning": "You=ti, hugged=pregărna, a son=edin sin"},
+  {"question_id": "N3_5", "answer": "Tvoyat sin obleche edno bebe", "reasoning": "Your son=tvoyat sin, dressed=obleche, a baby=edno bebe"},
+  {"question_id": "N4_1", "answer": "Bulgarian is a South Slavic language that differs from English in several ways. It uses suffixes to indicate definiteness (like -ta, -to, -ăt attached to nouns), has grammatical gender, and employs a more flexible word order though typically following SVO pattern. The language lacks infinitives and uses different verb forms. Personal pronouns can often be dropped as verb conjugations indicate the subject. Bulgarian also uses postpositive definite articles and has a rich case system in pronouns.", "reasoning": "Analysis of sentence patterns shows these linguistic features"}
+]
+```

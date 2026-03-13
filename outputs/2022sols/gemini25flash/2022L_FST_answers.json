@@ -1,0 +1,72 @@
+[
+  {
+    "question_id": "L1_1",
+    "answer": "TAYM",
+    "reasoning": "Input 'time'. Processing 't:T' (loop), 'i:AY' (loop), 'm:M' (loop as 'e' remains), 'e:Ø' (final). Output: TAYM."
+  },
+  {
+    "question_id": "L1_2",
+    "answer": "TREYDED",
+    "reasoning": "Input 'traded'. Processing 't:T' (loop), 'r:R' (loop), 'a:EY' (loop), 'd:D' (loop), then 'ed'. For 'ed', choose 'ed:D' (final) as in 'timed' rather than 'ed:UHD'. Output: TREYDED."
+  },
+  {
+    "question_id": "L1_3",
+    "answer": "STRAYDIHNG",
+    "reasoning": "Input 'striding'. Processing 's:S' (loop), 't:T' (loop), 'r:R' (loop), 'i:AY' (loop), 'd:D' (loop), 'ing:IHNG' (final). Output: STRAYDIHNG."
+  },
+  {
+    "question_id": "L1_4",
+    "answer": "FREYMIHNG",
+    "reasoning": "Input 'framing'. Processing 'f:F' (loop), 'r:R' (loop), 'a:EY' (loop), 'm:M' (loop as 'ing' remains), 'ing:IHNG' (final). Output: FREYMIHNG."
+  },
+  {
+    "question_id": "L2_1",
+    "answer": "stage",
+    "reasoning": "For 'stage', after 's', 't', 'a' are processed, the system is in state S1 with remaining input 'ge'. It has a choice for 'g': `g:G` or `g:DJ`. The transition `g:DJ` is from the 'intermediate to final' box, implying a terminal use. If `g:DJ` is tried as a final transition, 'e' remains, causing the path to get stuck. The system backtracks and tries `g:G` as a looping transition, followed by `e:Ø` as a final transition, which successfully completes the word (STEYG). Thus, 'stage' forces backtracking."
+  },
+  {
+    "question_id": "L3_1",
+    "answer": "STAYGIHNG",
+    "reasoning": "Input 'staging'. Processing 's:S', 't:T', 'a:EY'. For 'g', `g:DJ` would get stuck, so `g:G` is chosen (backtracking). Then 'ing:IHNG' (final). Output: STAYGIHNG."
+  },
+  {
+    "question_id": "L3_2",
+    "answer": "GAYMIHNG",
+    "reasoning": "Input 'gaming'. Processing 'g:G', 'a:EY', 'm:M', 'ing:IHNG' (final). Output: GAYMIHNG."
+  },
+  {
+    "question_id": "L4_1",
+    "answer": "E",
+    "reasoning": "For 'people', 'p:P' (E) is the first segment. Arrow (1) is the first path choice for 'people'."
+  },
+  {
+    "question_id": "L4_2",
+    "answer": "C",
+    "reasoning": "For 'colonel', 'c:K', 'o:UH', 'lo:R' (all in C) form the initial segment 'col'. Arrow (2) is the initial path for 'colonel'."
+  },
+  {
+    "question_id": "L4_3",
+    "answer": "B",
+    "reasoning": "For 'colonel', 'n:N' (B) follows the initial 'col' segment. Arrow (3) follows arrow (2) for this path."
+  },
+  {
+    "question_id": "L4_4",
+    "answer": "A",
+    "reasoning": "By elimination and for 'people', 'a:EY' (A) is processed after 'p:P' (E) by arrow (4). Also, 'phase' needs 'a:EY' (A) before 'se:Z' (D) and 'built' needs 'ui:IH' (A)."
+  },
+  {
+    "question_id": "L4_5",
+    "answer": "F",
+    "reasoning": "For 'colonel', 'el:UHL' (F) follows 'n:N' (B). Arrow (5) follows arrow (3) in this path."
+  },
+  {
+    "question_id": "L4_6",
+    "answer": "D",
+    "reasoning": "For 'people', 'l:L' (D) follows 'pe:PEA'. Arrow (6) is this transition. 'phase' also uses 'se:Z' (D) and 'built' uses 'l:L' (D)."
+  },
+  {
+    "question_id": "L5_1",
+    "answer": "loophle",
+    "reasoning": "Reversing RUHFLEA: R from 'lo:R' -> 'lo'; UH from 'o:UH' -> 'o'; F from 'ph:F' -> 'ph'; L from 'l:L' -> 'l'; EA from 'e:EA' -> 'e'. Concatenating these graphemes gives 'loophle'."
+  }
+]

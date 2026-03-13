@@ -1,0 +1,67 @@
+[
+  {
+    "question_id": "N1",
+    "answer": "Generate new true statements by combining or relating existing statements from the True List",
+    "reasoning": "The bot went from saying single statements to creating compound statements that combine information from multiple entries in the True List."
+  },
+  {
+    "question_id": "N2",
+    "answer": "The number varies depending on how many connections can be made. If the new statement can combine with existing ones, multiple statements will be generated. If it cannot combine, only the single new statement will be uttered",
+    "reasoning": "After the update, TruthBot creates combinations of statements, so the output depends on how the new statement relates to existing ones."
+  },
+  {
+    "question_id": "N3_a",
+    "answer": "Ruth has 4 siblings",
+    "reasoning": "This is the basic statement that would be added to the True List and uttered directly."
+  },
+  {
+    "question_id": "N3_b",
+    "answer": "Ruth knows that Ottawa is the capital city of Canada",
+    "reasoning": "TruthBot would combine Ruth's knowledge with the fact about Ottawa being the capital."
+  },
+  {
+    "question_id": "N3_c",
+    "answer": "Ruth prefers the Washington Capitals to the hockey team that plays home games in Ottawa",
+    "reasoning": "TruthBot would reference the Senators using the information it has about them."
+  },
+  {
+    "question_id": "N3_d",
+    "answer": "Ruth named her stuffed toy bear after the president who fought in the Spanish-American War",
+    "reasoning": "TruthBot would combine the naming fact with its knowledge about Theodore Roosevelt."
+  },
+  {
+    "question_id": "N3_e",
+    "answer": "Ruth's stuffed toy bear is named Theodore Roosevelt",
+    "reasoning": "This is a direct statement of the fact without additional connections."
+  },
+  {
+    "question_id": "N4_a",
+    "answer": "True",
+    "reasoning": "This is a plausible true statement TruthBot could generate by combining information."
+  },
+  {
+    "question_id": "N4_b",
+    "answer": "True",
+    "reasoning": "This is a straightforward true statement TruthBot could make."
+  },
+  {
+    "question_id": "N4_c",
+    "answer": "Weird",
+    "reasoning": "Comparing preferences between specific teams without that information in the True List seems odd."
+  },
+  {
+    "question_id": "N4_d",
+    "answer": "False",
+    "reasoning": "The phrase 'after Theodore Roosevelt' implies honoring him, which is different from just using the name."
+  },
+  {
+    "question_id": "N4_e",
+    "answer": "Weird",
+    "reasoning": "Simply stating a toy has the same name as a president without context is an unusual statement."
+  },
+  {
+    "question_id": "N5",
+    "answer": "Add validation rules to ensure combined statements maintain logical consistency, include semantic coherence checks, limit inference chain depth, add context requirements for ambiguous statements, and create rules about which types of facts can be meaningfully combined",
+    "reasoning": "These modifications would help TruthBot avoid generating false or weird statements while still creating new true combinations."
+  }
+]

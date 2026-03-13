@@ -1,0 +1,92 @@
+Model: gpt-5
+Generation Time: 504.92 seconds
+Timestamp: 2025-12-01 11:34:47
+================================================================================
+
+[
+  {
+    "question_id": "C1_1",
+    "answer": "H",
+    "reasoning": "From rules: A and B must be the two universal opposites (white vs black), so A=fresh snow and B=adult crow. C is the third (red=ripe strawberry). Rule 4 says D and F are the pair separated only when a language has ≥6 terms, so D=green (fresh grass) and F=blue. Rule 3 adds E=yellow (ripe banana). Rule 5 fits if G is clear sky and H is the remaining object (ripe plum). Thus ripe plum=H."
+  },
+  {
+    "question_id": "C1_2",
+    "answer": "C",
+    "reasoning": "Using the mapping deduced: ripe strawberry corresponds to the third basic color term (red)=C."
+  },
+  {
+    "question_id": "C1_3",
+    "answer": "E",
+    "reasoning": "Rule 3 requires a unique term for yellow at ≥5, matching ripe banana=E."
+  },
+  {
+    "question_id": "C1_4",
+    "answer": "D",
+    "reasoning": "D is the green member of the grue pair separated only at ≥6; thus fresh grass=D."
+  },
+  {
+    "question_id": "C1_5",
+    "answer": "G",
+    "reasoning": "With F as deep ocean (blue), G is clear sky; rule 5: clear sky is unique only when plum is also unique, which fits the tables."
+  },
+  {
+    "question_id": "C1_6",
+    "answer": "F",
+    "reasoning": "F is the blue member contrasted with D at ≥6; taking deep ocean as F matches the data."
+  },
+  {
+    "question_id": "C1_7",
+    "answer": "B",
+    "reasoning": "The second universal term is black; thus adult crow=B."
+  },
+  {
+    "question_id": "C1_8",
+    "answer": "A",
+    "reasoning": "The first universal term is white; thus fresh snow=A."
+  },
+  {
+    "question_id": "C2_1",
+    "answer": "YES",
+    "reasoning": "Kwerba has 4 terms; A,B,C are distinct; B and D share in 3-term languages only (not applicable); rule 5 holds since H isn’t unique and G shares with A; no rule is violated."
+  },
+  {
+    "question_id": "C2_2",
+    "answer": "YES",
+    "reasoning": "Lele has 4 terms; A,B,C distinct; G shares with D when H isn’t unique; all rules satisfied."
+  },
+  {
+    "question_id": "C2_3",
+    "answer": "NO",
+    "reasoning": "Ocaina has 6 terms but D (grass) and F (deep ocean) are the same, violating rule 4 (≥6 must distinguish green from blue)."
+  },
+  {
+    "question_id": "C2_4",
+    "answer": "YES",
+    "reasoning": "Waorani has 4 terms with A,B,C distinct; H not unique and G shares with D/F; other rules not triggered."
+  },
+  {
+    "question_id": "C2_5",
+    "answer": "NO",
+    "reasoning": "Yucuna has 6 terms but D (grass) equals F (deep ocean), so rule 4 is violated."
+  },
+  {
+    "question_id": "C2_6",
+    "answer": "YES",
+    "reasoning": "Zapotec has 7 terms; A,B,C distinct; E unique; D and F distinct; rule 5 is satisfied."
+  },
+  {
+    "question_id": "C3_1",
+    "answer": "nye wɔ finge",
+    "reasoning": "Nafaanra ends up with exactly 3 terms regardless of the choice. Rules 1–2 are met (A,B,C all distinct; B=D). Rule 5 holds since H isn’t unique and G shares with D/F. Therefore all three options are possible."
+  },
+  {
+    "question_id": "C3_2",
+    "answer": "sõa'ro ya'saro butiro",
+    "reasoning": "For Tucano (≥5 terms): D cannot be ɲiro (would equal B) and cannot be ewuro (would make E non-unique, violating rule 3). The choices sõa'ro, ya'saro, and butiro keep A,B,C distinct and preserve E’s uniqueness; rule 5 is satisfied."
+  },
+  {
+    "question_id": "C3_3",
+    "answer": "likañ minj-kimemb muk",
+    "reasoning": "For Kalam (≥6 terms): C must differ from A (tund) and B (mosimb) per rule 2, and cannot be walin since E must be unique (rule 3). Choices likañ, minj-kimemb, and muk satisfy all rules (D vs F are already distinct)."
+  }
+]

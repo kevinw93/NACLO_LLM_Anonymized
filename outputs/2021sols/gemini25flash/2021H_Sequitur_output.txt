@@ -1,0 +1,377 @@
+Model: gemini-2.5-flash
+Generation Time: 137.23 seconds
+Timestamp: 2025-11-17 00:08:13
+================================================================================
+
+Here's a step-by-step reasoning for each part of the problem.
+
+### Analysis of Sequitur and BPE
+
+**Sequitur Algorithm (deduced from example):**
+1.  **Append characters:** It seems to build the main string `S` by appending characters from the input one by one.
+2.  **Identify and apply rules for repeated digrams:** As the string `S` is built, if a digram (two adjacent symbols, terminals or non-terminals) is formed that has previously appeared, or if a digram already existing in the *full original input* is discovered, a new rule `A = digram` is created. All occurrences of that digram in the *current compressed representation* of the string are replaced by `A`. This process continues iteratively until no more compressible digrams are found.
+3.  The example shows that rules are introduced for `bc`, then `aX`, then `Yd`. The "S = ..." rule in Column 2 updates to reflect the current state of the main string in terms of defined non-terminals.
+
+**BPE (Byte Pair Encoding) Algorithm (deduced from description and example):**
+1.  **Count frequencies:** It identifies all unique adjacent symbol pairs in the *entire current string* and counts their occurrences.
+2.  **Replace most frequent:** The most frequent pair is chosen, a new rule `A = pair` is created, and all occurrences of that pair in the string are replaced by `A`.
+3.  **Iterate:** Steps 1 and 2 are repeated until no pair occurs more than once (or some other stopping condition, which for this problem implies no more compression is possible by finding new pairs).
+4.  **Tie-breaking:** When multiple pairs have the same highest frequency, BPE typically uses a tie-breaking rule (e.g., lexicographical order, or first occurrence). For the input "abcdbcabcd", the example implies a choice that leads to `X=bc` first, then `Y=aX`, then `Z=Yd`. This implicitly defines the tie-breaking behavior for this problem.
+
+**Commonality for "abcdbcabcd":** Both algorithms converge to `S = ZXZ; X = bc; Y = aX; Z = Yd`. This means the order of rule creation and the final compressed form are identical for this specific input, which is unusual for arbitrary inputs.
+
+---
+
+### H1. Fill in the blanks (Sequitur Table)
+
+Input: `abcdbcabcd`
+Final Output: `S = ZXZ; X = bc; Y = aX; Z = Yd`
+
+We trace the steps, filling in the blanks. Column 1 shows the current compressed string (or intermediate form), and Column 2 shows the grammar rules defined so far and the current definition of `S`.
+
+**Step-by-step derivation:**
+
+1.  `a` -> `S = a`
+2.  `ab` -> `S = ab`
+3.  `abc` -> `S = abc`
+4.  `abcd` -> `S = abcd`
+    *   (a): The string `S` grows by adding `d`.
+    *   **Reasoning (a):** `S` has expanded from `abc` to `abcd`. So, Column 1 (a) must be `abcd`.
+
+5.  `abcdb` -> `S = abcdb`
+    *   (b): `S` has expanded from `abcd` to `abcdb`.
+    *   **Reasoning (b):** The current main string `S` becomes `abcdb`.
+
+6.  `abcdbc` -> `S = abcdbc`
+    *   At this point, the digram `bc` (from `abcdbcabcd`) is detected as a repeating pattern. The rule `X = bc` is defined. The main string `S` (which is implicitly `abcdbcabcd`) is updated using this new rule.
+    *   `abcdbcabcd` becomes `aXdXaXd` using `X = bc`.
+    *   The table then shows `aXdX` in Column 1 and `S = aXdX` in Column 2. This implies `S` is updated to represent `abcdbc` as `aXdX` (`a(bc)d(bc)`).
+
+7.  After `aXdX` (which is `abcdbc`), the next character from input `abcdbcabcd` is `a`.
+    *   `S` in Column 2 should become `aXdXa`. This is blank (d).
+    *   In the string `aXdXa` (`abcdbca`), the digram `aX` (which is `a(bc)`) now repeats. So, the rule `Y = aX` is defined. This is blank (e).
+    *   Applying `Y = aX` to `aXdXa`: `(aX)d(X)a` becomes `YdXa`. This is blank (c).
+    *   **Reasoning (c), (d), (e):** Next character added is 'a', so `S` becomes `aXdXa`. The repeating digram `aX` is identified. `Y = aX` is defined. Applying `Y = aX` to `aXdXa` yields `YdXa`.
+
+8.  After `YdXa` (which is `abcdbca`), the next character from input is `b`.
+    *   `S` in Column 2 should become `YdXab`. This is blank (f).
+    *   Column 1 `aXdXab` is `YdXab` expanded (`a(bc)d(bc)ab`).
+    *   **Reasoning (f):** The next character 'b' is added, updating `S` to `YdXab`.
+
+9.  After `YdXab` (which is `abcdbcab`), the next character from input is `c`.
+    *   `S` in Column 2 becomes `YdXabc`. Column 1 shows `aXdXabc` (`YdXabc` expanded).
+    *   The `bc` at the end (`abc`) is replaced by `X`. So `S` becomes `YdXaX`. This is `aXdXaX` in Column 1.
+    *   At this point, `Y = aX` is active. So `(g)` contains `Y = aX`.
+    *   The string `aXdXaX` (which is `abcdbcabc`) can also be represented as `(aX)d(X)(aX)`, which is `YdXY`. This is blank (h).
+    *   So, `S` in Column 2 expressed in terms of `Y` would be `S = YdXY`. This is blank (i).
+    *   **Reasoning (g), (h), (i):** The next character 'c' is added, `bc` is replaced by `X` at the end of the string, making `S = YdXaX` or `aXdXaX`. The rule `Y = aX` is explicitly listed as `(g)`. The string `aXdXaX` is equivalent to `YdXY` using `Y=aX`.
+
+10. After `YdXY` (`abcdbcabc`), the final character from input is `d`.
+    *   The digram `Yd` (which is `(aX)d` or `abcd`) is now fully formed at the end and repeats (`Yd` at start, then `XYd` where `Yd` is the ending). So, the rule `Z = Yd` is defined.
+    *   Applying `Z = Yd` to `YdXY` (after adding `d` to `YdXY` to make `YdXYd`), or to `YdXYd` directly, yields `ZXZ`.
+    *   So, `S` in Column 2 becomes `S = ZXZ`. This is blank (k).
+    *   Column 1 is the final compressed string `ZXZ`. This is blank (j).
+    *   **Reasoning (j), (k):** The final character 'd' is processed. The digram `Yd` is identified as a pattern. `Z = Yd` is created. `YdXY` becomes `ZXZ`.
+
+### H1 Blanks Solution:
+
+*   **H1_a**: `abcd`
+*   **H1_b**: `S = abcdb`
+*   **H1_c**: `YdXa`
+*   **H1_d**: `S = aXdXa`
+*   **H1_e**: `Y = aX`
+*   **H1_f**: `S = YdXab`
+*   **H1_g**: `Y = aX`
+*   **H1_h**: `YdXY`
+*   **H1_i**: `S = YdXY`
+*   **H1_j**: `ZXZ`
+*   **H1_k**: `S = ZXZ`
+
+---
+
+### H2. Fill in the blanks (BPE Table)
+
+Input: `abcdbcabcd`
+Final Output: `S = ZXZ; X = bc; Y = aX; Z = Yd`
+
+We trace BPE, identifying the most frequent pair at each step.
+
+**Step-by-step derivation:**
+
+1.  Initial string: `abcdbcabcd`. No rules yet. `S = abcdbcabcd`.
+
+2.  Pairs in `abcdbcabcd` and their counts:
+    `ab`: 2, `bc`: 2, `cd`: 2, `db`: 1, `ca`: 1.
+    Most frequent: `ab`, `bc`, `cd` (all 2).
+    Given that the final output defines `X = bc`, BPE must have chosen `bc` as the first pair.
+    *   Define `X = bc`.
+    *   Replace `bc` with `X` in `abcdbcabcd`: `aXdXaXd`. This is blank (a).
+    *   The main string `S` is now represented by this new form. So `S = aXdXaXd`. This is blank (b).
+    *   **Reasoning (a), (b):** `bc` is the first pair chosen for replacement. `aXdXaXd` is the string after replacement. `S` is updated to reflect this.
+
+3.  Current string: `YdXYd`. (The example states `YdXYd` in Column 1).
+    From the final rules, `Y = aX` is the next rule. This means `aX` must have been the most frequent pair in the previous string `aXdXaXd`.
+    Let's check `aXdXaXd` pairs: `aX`: 2, `Xd`: 2, `dX`: 1.
+    Most frequent: `aX`, `Xd` (both 2). BPE must have chosen `aX`.
+    *   Define `Y = aX`. This is blank (c).
+    *   Replace `aX` with `Y` in `aXdXaXd`: `YdXYd`. This matches Column 1.
+    *   The main string `S` is now `YdXYd`. So `S = YdXYd`.
+    *   **Reasoning (c):** `aX` is the next pair chosen for replacement.
+
+4.  Current string: `ZXZ`.
+    From the final rules, `Z = Yd` is the next rule. This means `Yd` must have been the most frequent pair in `YdXYd`.
+    Pairs in `YdXYd`: `Yd`: 2, `dX`: 1, `XY`: 1.
+    Most frequent: `Yd` (2).
+    *   Define `Z = Yd`.
+    *   Replace `Yd` with `Z` in `YdXYd`: `ZXZ`. This matches Column 1.
+    *   The main string `S` is now `ZXZ`. So `S = ZXZ`.
+
+### H2 Blanks Solution:
+
+*   **H2_a**: `aXdXaXd`
+*   **H2_b**: `S = aXdXaXd`
+*   **H2_c**: `Y = aX`
+
+---
+
+### H3. Sequitur vs BPE Comparison
+
+For each input, we will simulate both algorithms and compare their final compressed output (grammar rules and main string representation). The explicit tie-breaking rules are not given for BPE, but we infer them from the "abcdbcabcd" example: `bc` was chosen over `ab` or `cd` for the first step, `aX` over `Xd` for the second step. For Sequitur, it applies rules for *all* occurrences of a repeated digram as they are identified.
+
+**H3a) `abcabdbcbc`**
+
+*   **Sequitur:**
+    1.  `abcabdbcbc`. When `abcab` is formed, `ab` repeats. Let `X = ab`.
+        String becomes `Xc d X c X c`. (`bc` appears, then `X` then `c`).
+        (`abcabdbcbc` -> `(ab)c d (ab)c (ab)c`).
+    2.  In `Xc d X c X c`, `Xc` repeats. Let `Y = Xc`.
+        String becomes `Y d Y X`.
+    3.  No more repeating digrams formed by new additions.
+    *   Output: `YdYX` with `X = ab`, `Y = Xc`.
+
+*   **BPE:**
+    1.  `abcabdbcbc`. Pairs: `ab`(2), `bc`(2), `ca`(1), `db`(1), `bd`(1), `cb`(1).
+        Most frequent: `ab`, `bc` (both 2). Let's assume BPE chooses `ab` (e.g., first occurrence or lexicographically).
+        `X = ab`. String: `X c X d bc bc`.
+    2.  Pairs in `Xc X d bc bc`: `Xc`(1), `cX`(1), `Xd`(1), `db`(1), `bc`(2).
+        Most frequent: `bc` (2).
+        `Y = bc`. String: `X c X d Y Y`.
+    3.  Pairs in `X c X d Y Y`: `Xc`(1), `cX`(1), `Xd`(1), `dY`(1), `YY`(1).
+        Most frequent: `YY` (1). No more compression by digrams occurring twice.
+        This is an incorrect assumption. BPE will still choose `YY` if it's the *only* repeating digram (even if only once).
+        Actually, BPE terminates when no pair occurs *more than once*. `YY` occurs once.
+        Thus, BPE would stop earlier if it only replaced pairs with count >= 2.
+        If BPE continues until only unique symbols remain, then `YY` would be picked.
+        Let `Z = YY`. String: `X c X d Z`.
+    *   Output: `XcXdZ` with `X = ab`, `Y = bc`, `Z = YY`.
+
+*   **Comparison:** `YdYX` vs `XcXdZ`. They are different.
+*   **Answer H3_a:** `Different`
+
+**H3b) `abbcaddca`**
+
+*   **Sequitur:**
+    1.  `abbcaddca`. `bb` is a repeating digram (occurs once as `bb`, not actually a repeat in this context for Sequitur unless it means any unique digram).
+        `ca` and `ad` are repeating.
+        Let's assume Sequitur processes the first repeating digram encountered or the most significant one.
+        `ca` occurs twice. `ad` occurs twice.
+        Let's assume `ca` is picked first. `X = ca`.
+        String: `abbXddX`.
+    *   Output: `abbXddX` with `X = ca`.
+
+*   **BPE:**
+    1.  `abbcaddca`. Pairs: `ab`(1), `bb`(1), `bc`(1), `ca`(2), `ad`(2), `dd`(1), `dc`(1).
+        Most frequent: `ca`, `ad` (both 2).
+        Let's choose `ca` first (consistent with Sequitur).
+        `X = ca`. String: `abbXddX`.
+    2.  Pairs in `abbXddX`: `ab`(1), `bb`(1), `bX`(1), `Xd`(1), `dd`(1), `dX`(1). No pairs occur twice or more.
+    *   Output: `abbXddX` with `X = ca`.
+
+*   **Comparison:** `abbXddX` vs `abbXddX`. They are the same.
+*   **Answer H3_b:** `Same`
+
+**H3c) `bacbcbabacbcba`**
+
+*   **Sequitur:**
+    1.  `bacbcbabacbcba`. `bc` repeats (3 times). Let `X = bc`.
+        String: `baXbXbaXbXba`.
+    2.  In `baXbXbaXbXba`, `ba` repeats (3 times). Let `Y = ba`.
+        String: `Y X b X Y X b X Y`.
+    3.  In `Y X b X Y X b X Y`, `bX` repeats (3 times). Let `Z = bX`.
+        String: `Y Z Y Z Y`.
+    4.  In `Y Z Y Z Y`, `YZ` repeats (2 times). Let `W = YZ`.
+        String: `W W Y`.
+    *   Output: `WWY` with `X = bc, Y = ba, Z = bX, W = YZ`.
+
+*   **BPE:**
+    1.  `bacbcbabacbcba`. Pairs: `ba`(3), `ac`(2), `cb`(2), `bc`(2), `ab`(2).
+        Most frequent: `ba` (3).
+        `X = ba`. String: `X c X b X c X b X`.
+    2.  Pairs in `Xc XbXc XbX`: `Xc`(2), `cX`(2), `Xb`(2), `bX`(1).
+        Most frequent: `Xc`, `cX`, `Xb` (all 2). Let's choose `Xc` (e.g., lexicographically or by first appearance after `ba` replacement).
+        `Y = Xc`. String: `Y Xb Y Xb X`.
+    3.  Pairs in `Y Xb Y Xb X`: `YXb`(2), `XbY`(1), `bYX`(1). (`YXb` occurs at index 0 and 2).
+        Most frequent: `YXb` is not a pair. `YX` occurs once, `Xb` occurs once.
+        Let's correct step 2 from `XcXbXcXbX`. If `Y = Xc`, then `Y b Y b X`.
+    2.  (Re-BPE Step 2): From `X c X b X c X b X`.
+        `Xc` appears twice. `Xb` appears twice. `cX` appears twice.
+        Let `Y = Xc`. String: `Y b Y b X`.
+    3.  Pairs in `YbYbX`: `Yb`(2), `bY`(1).
+        Most frequent: `Yb` (2).
+        Let `Z = Yb`. String: `Z Z X`.
+    *   Output: `ZZX` with `X = ba`, `Y = Xc`, `Z = Yb`.
+
+*   **Comparison:** `WWY` vs `ZZX`. They are different.
+*   **Answer H3_c:** `Different`
+
+**H3d) `ccdbccdbccacc`**
+
+*   **Sequitur:**
+    1.  `ccdbccdbccacc`. `cc` repeats (3 times). Let `X = cc`.
+        String: `XdbXdbXaX`.
+    2.  In `XdbXdbXaX`, `db` repeats (2 times). Let `Y = db`.
+        String: `XYXYaX`.
+    3.  In `XYXYaX`, `XY` repeats (2 times). Let `Z = XY`.
+        String: `ZZaX`.
+    *   Output: `ZZaX` with `X = cc, Y = db, Z = XY`.
+
+*   **BPE:**
+    1.  `ccdbccdbccacc`. Pairs: `cc`(3), `cd`(2), `db`(2), `bc`(2), `ca`(2), `ac`(1).
+        Most frequent: `cc` (3).
+        `X = cc`. String: `XdbXdbXaX`.
+    2.  Pairs in `XdbXdbXaX`: `Xd`(2), `db`(2), `bX`(2), `Xa`(1), `aX`(1).
+        Most frequent: `Xd`, `db`, `bX` (all 2). Let's choose `db` (to align with Sequitur's path for this example).
+        `Y = db`. String: `XYXYaX`.
+    3.  Pairs in `XYXYaX`: `XY`(2), `YX`(2), `Ya`(1), `aX`(1).
+        Most frequent: `XY`, `YX` (both 2). Let's choose `XY`.
+        `Z = XY`. String: `ZZaX`.
+    *   Output: `ZZaX` with `X = cc, Y = db, Z = XY`.
+
+*   **Comparison:** `ZZaX` vs `ZZaX`. They are the same.
+*   **Answer H3_d:** `Same`
+
+**H3e) `ccdbccdbccaccacca`**
+
+*   **Sequitur:**
+    1.  `ccdbccdbccaccacca`.
+        Steps 1-3 are same as H3d, leading to `ZZaX` for the prefix `ccdbccdbccacc`.
+        String: `ZZaXacca`. Rules: `X=cc, Y=db, Z=XY`.
+    2.  In `ZZaXacca`, `ac` repeats (2 times). Let `W = ac`.
+        String: `ZZaXWWa`. (Replaces both `ac` in `acca`).
+    *   Output: `ZZaXWWa` with `X=cc, Y=db, Z=XY, W=ac`.
+
+*   **BPE:**
+    1.  `ccdbccdbccaccacca`.
+        Steps 1-3 are same as H3d, leading to `ZZaX` and rules `X=cc, Y=db, Z=XY`.
+        String: `ZZaXacca`.
+    2.  Pairs in `ZZaXacca`: `ZZ`(1), `Za`(1), `aX`(1), `Xa`(1), `ac`(2), `ca`(2).
+        Most frequent: `ac`, `ca` (both 2). Let's choose `ac`.
+        `W = ac`. String: `ZZaXWca`. (Only the first `ac` of `acca` is replaced to form `Wca`. The `ca` is a new segment that is not `ac`).
+    *   Output: `ZZaXWca` with `X=cc, Y=db, Z=XY, W=ac`.
+
+*   **Comparison:** `ZZaXWWa` vs `ZZaXWca`. They are different.
+*   **Answer H3_e:** `Different`
+
+---
+
+### Final Answers JSON Array:
+
+```json
+[
+  {
+    "question_id": "H1_a",
+    "answer": "abcd",
+    "reasoning": "The string 'S' in Column 2 advances from 'abc' to 'abcd', implying 'd' was appended. Therefore, Column 1 (a) must show the current string 'abcd'."
+  },
+  {
+    "question_id": "H1_b",
+    "answer": "S = abcdb",
+    "reasoning": "Column 1 advances from 'abcd' to 'abcdb'. This indicates that 'S' is being updated by appending 'b'. Thus, Column 2 (b) defines 'S' as 'abcdb'."
+  },
+  {
+    "question_id": "H1_c",
+    "answer": "YdXa",
+    "reasoning": "Following the processing sequence, after 'abcdbc' (which is 'aXdX'), the next character 'a' is added, leading to 'S = aXdXa' (blank d). At this point, the digram 'aX' (which is 'a(bc)') repeats, so 'Y = aX' (blank e) is defined. Applying this rule to 'aXdXa' gives 'YdXa'."
+  },
+  {
+    "question_id": "H1_d",
+    "answer": "S = aXdXa",
+    "reasoning": "After `S = aXdX` (representing `abcdbc`), the next character 'a' from the input `abcdbcabcd` is processed. Therefore, `S` becomes `aXdXa`."
+  },
+  {
+    "question_id": "H1_e",
+    "answer": "Y = aX",
+    "reasoning": "After `S` becomes `aXdXa`, the digram `aX` repeats in the string. Sequitur identifies this pattern and defines a new rule `Y = aX`."
+  },
+  {
+    "question_id": "H1_f",
+    "answer": "S = YdXab",
+    "reasoning": "After `S = YdXa` (representing `abcdbca`), the next character 'b' from the input is processed. `S` is updated to `YdXab`, which expands to `aXdXab` in Column 1."
+  },
+  {
+    "question_id": "H1_g",
+    "answer": "Y = aX",
+    "reasoning": "After `S = aXdXabc`, the final 'bc' is replaced by 'X' (as `X = bc` is already a rule), leading to `S = aXdXaX`. The rule `Y = aX` is already established and is listed as part of the grammar at this step."
+  },
+  {
+    "question_id": "H1_h",
+    "answer": "YdXY",
+    "reasoning": "After `S = aXdXaX`, the string `aXdXaX` can be fully expressed using the `Y = aX` rule. `aXdXaX` -> `(aX)d(X)(aX)` -> `YdXY`. This is the string representation in Column 1 using the `Y` non-terminal."
+  },
+  {
+    "question_id": "H1_i",
+    "answer": "S = YdXY",
+    "reasoning": "If Column 1 (h) is `YdXY`, then Column 2 (i) defines `S` in terms of this new representation, `S = YdXY`."
+  },
+  {
+    "question_id": "H1_j",
+    "answer": "ZXZ",
+    "reasoning": "This is the final step, where the last character 'd' is processed and the `Z = Yd` rule is introduced. The current string `YdXY` (from step 9) with the appended 'd' implies `YdXYd`. With `Z = Yd`, this becomes `ZXZ`. This matches the overall final output shown at the bottom of the table, confirming it's the final compressed string representation."
+  },
+  {
+    "question_id": "H1_k",
+    "answer": "S = ZXZ",
+    "reasoning": "As Column 1 (j) is `ZXZ`, Column 2 (k) must define `S` as `ZXZ`, representing the fully compressed final output string."
+  },
+  {
+    "question_id": "H2_a",
+    "answer": "aXdXaXd",
+    "reasoning": "BPE identifies the most frequent pair. In 'abcdbcabcd', 'bc' is chosen (as per the final output rules). Replacing 'bc' with 'X' yields 'aXdXaXd'. This is the string in Column 1 for Step 2."
+  },
+  {
+    "question_id": "H2_b",
+    "answer": "S = aXdXaXd",
+    "reasoning": "After replacing 'bc' with 'X' to get 'aXdXaXd', the main string 'S' is updated to reflect this new compressed form. Thus, Column 2 (b) is `S = aXdXaXd`."
+  },
+  {
+    "question_id": "H2_c",
+    "answer": "Y = aX",
+    "reasoning": "In 'aXdXaXd', the pair 'aX' is chosen next (as per the final output rules). A new rule `Y = aX` is defined. This is blank (c) in Column 2."
+  },
+  {
+    "question_id": "H3_a",
+    "answer": "Different",
+    "reasoning": "Sequitur yields `YdYX` (with `X=ab, Y=Xc`). BPE (assuming `ab` is chosen first) yields `XcXdZ` (with `X=ab, Y=bc, Z=YY`). The resulting grammar and compressed string are different."
+  },
+  {
+    "question_id": "H3_b",
+    "answer": "Same",
+    "reasoning": "Sequitur identifies `ca` (or `ad`) as the first repeating digram, leading to `abbXddX` (with `X=ca`). BPE, in its first step, also identifies `ca` (or `ad`) as a most frequent pair, and replacing it leads to `abbXddX` (with `X=ca`). Both algorithms produce the same output."
+  },
+  {
+    "question_id": "H3_c",
+    "answer": "Different",
+    "reasoning": "Sequitur identifies `bc`, then `ba`, then `bX`, then `YZ` leading to `WWY`. BPE (assuming `ba` is chosen first, then `Xc`, then `Yb`) leads to `ZZX`. The resulting grammars and compressed strings are different."
+  },
+  {
+    "question_id": "H3_d",
+    "answer": "Same",
+    "reasoning": "Both Sequitur and BPE (with consistent tie-breaking) apply rules for `X=cc`, then `Y=db`, then `Z=XY`. Both algorithms ultimately derive `ZZaX` as the final compressed string with the same grammar rules."
+  },
+  {
+    "question_id": "H3_e",
+    "answer": "Different",
+    "reasoning": "For the prefix `ccdbccdbccacc`, both algorithms result in `ZZaX`. When `acca` is appended to `ZZaX`, Sequitur (replacing all occurrences of a newly defined pattern) derives `ZZaXWWa` (with `W=ac`). BPE (replacing the most frequent pair in the entire string) derives `ZZaXWca` (with `W=ac`). The final compressed strings are different."
+  }
+]
+```

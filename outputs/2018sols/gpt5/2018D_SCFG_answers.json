@@ -1,0 +1,47 @@
+[
+  {
+    "question_id": "D1_1",
+    "answer": "a turtle chased a turtle",
+    "reasoning": "Chose NP–V–NP from the SCFG with letter counts 7+6+7=20 (excluding spaces)."
+  },
+  {
+    "question_id": "D1_2",
+    "answer": "bir kaplumbağa bir kaplumbağa kovaladı",
+    "reasoning": "Mapped NP and V via the English–Turkish SCFG; Turkish VP order is NP V, so S is NP (subj) + NP (obj) + V."
+  },
+  {
+    "question_id": "D2_1",
+    "answer": "a cat saw a turtle",
+    "reasoning": "Malagasy order is V NP NP (VOS). nahita=saw; sokatra=turtle (object); saka=cat (subject). Convert to English SVO."
+  },
+  {
+    "question_id": "D2_2",
+    "answer": "a turtle chased a cat",
+    "reasoning": "nanenjika=chased; first NP object is saka=cat; final NP subject is sokatra=turtle."
+  },
+  {
+    "question_id": "D2_3",
+    "answer": "a turtle bit a cat",
+    "reasoning": "nanaikitra=bit; object saka=cat, subject sokatra=turtle; render as SVO in English."
+  },
+  {
+    "question_id": "D2_4",
+    "answer": "a turtle ate a cat",
+    "reasoning": "nihinana=ate; Malagasy VOS gives subject sokatra=turtle, object saka=cat."
+  },
+  {
+    "question_id": "D3_1",
+    "answer": "chop Saj",
+    "reasoning": "S→VP NP; VP→bites maps to chop; NP the pet→Saj; Klingon order VP NP."
+  },
+  {
+    "question_id": "D3_2",
+    "answer": "tlhInganpu’ ghobrupqa’ 'ejDo' 'entepray'",
+    "reasoning": "VP→V NP maps to NP V in Klingon: tlhInganpu’ ghobrupqa’. Then S→VP NP places subject 'ejDo' 'entepray' last."
+  },
+  {
+    "question_id": "D3_3",
+    "answer": "Saj lughaj tlhInganpu’ ’e’ leghpu’ ghoqwI’ ’e’ ghojpu’ la’ ’e’ SovTah tlhInganpu’ ’e’ SovTah DevwI’pu’",
+    "reasoning": "Translate inside-out: have NP→NP V; V S→S V; each English 'that' uses S→<Comp S,S Comp> putting ’e’ after the clause; final S is VP NP."
+  }
+]

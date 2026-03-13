@@ -1,0 +1,112 @@
+[
+  {
+    "question_id": "P1_a",
+    "answer": "mashed",
+    "reasoning": "The entry E12 is for a potato (B3544) that is a root vegetable (C0140) and is cooked/processed (F0013). The E-facet is E0310. Looking at the classification chart, E0310 is a sibling to E0215, which corresponds to 'purée' or 'sauce' (from E03 Applesauce and E11 Pumpkin purée). 'Mashed' is a form of preparation similar to puréeing and is a common way to serve potatoes, as mentioned in the glossary. Therefore, 'mashed' is the most fitting description."
+  },
+  {
+    "question_id": "P1_b",
+    "answer": "baked",
+    "reasoning": "The entry E13 is for a pumpkin (B1534) that is cooked/processed (F0013). Its E-facet is E0151, which corresponds to items in a relatively 'whole' or minimally processed form (like E01 'Apple, raw, with skin' and E04 'Beet greens, raw'). The K value of 919 mg/100g is very high compared to pumpkin purée (209 mg/100g), which suggests significant water loss. Baking or roasting a whole or sliced pumpkin would result in this concentration of nutrients. 'Baked' fits the description of a cooked, 'whole-form' pumpkin."
+  },
+  {
+    "question_id": "P2_c",
+    "answer": "2400",
+    "reasoning": "The K value for YUM FDC entries is estimated by finding the best match in the EL FDC based on the four main facets. The facets for Y7 are B1423, C0140, E1152, and F0001. These are an exact match for the facets of entry E10 (Beetroot powder, red or golden) in the EL FDC. Therefore, the K value from E10 is used. The K value for E10 is 2400 mg/100g."
+  },
+  {
+    "question_id": "P2_d",
+    "answer": "107",
+    "reasoning": "The facets for Y8 are B1245, C0121, E0151, and F0013. To find the estimated K value, we must find the best match in the EL FDC. Comparing Y8 to E01 (Apple, raw, with skin), we find that three of the four facets (B1245, C0121, E0151) are identical. The only mismatch is the F-facet (F0013 for Y8 vs. F0003 for E01). No other entry in the EL FDC has this many identical facets. Thus, E01 is the best match, and its K value of 107 is used."
+  },
+  {
+    "question_id": "P2_e",
+    "answer": "141.5",
+    "reasoning": "The facets for Y9 are B2530, C0126, E0215, and F0013. To find the best match, we compare these to the EL FDC entries. Two entries, E03 (Applesauce) and E11 (Pumpkin, canned purée), match Y9 on three facets perfectly: C0126, E0215, and F0013. The only mismatch is the B-facet (food item). Since both E03 and E11 are equally strong matches (a tie for 'best match'), the algorithm averages their K values. The K value for E03 is 74 and for E11 is 209. The average is (74 + 209) / 2 = 141.5."
+  },
+  {
+    "question_id": "P3_1",
+    "answer": "For each YUM FDC entry, the algorithm finds the best-matching entry or entries in the EL FDC by comparing the four main facets (B, C, E, F). A match score is calculated, where identical facets score higher than related facets (from the charts), which score higher than unrelated facets. The YUM entry's estimated K value is the average of the K values of all EL FDC entries that tie for the highest match score. If only one entry achieves the highest score, its K value is copied directly.",
+    "reasoning": "This describes the process deduced from the provided data. Cases like Y1 (perfect match) and Y4 (clear best match) result in copying the K value. The case of Y5, which has a K value of 189.5 (the average of K values for E07 and E11), indicates that when there is a tie for the best match, the values are averaged. This single, consistent rule explains both the copying and averaging behaviors observed in the YUM FDC table."
+  },
+  {
+    "question_id": "P4_B",
+    "answer": "The specific food item",
+    "reasoning": "The B-facets correspond to individual foods. For example, B1245 is 'Apple' (seen in E01 and E03), B1136 is 'Bacon' (E05, E06), and B1534 is 'Pumpkin' (E11, E13). This is the most specific level of food identification."
+  },
+  {
+    "question_id": "P4_C",
+    "answer": "The general food category",
+    "reasoning": "The C-facets represent broader classifications. For example, C0140 is for 'Root vegetable' (E10 Beetroot, E12 Potato), and C4545 is for 'Pork' (E05, E06 Bacon). The charts show these are hierarchical categories."
+  },
+  {
+    "question_id": "P4_E",
+    "answer": "The preparation or physical form",
+    "reasoning": "The E-facets describe how the food is prepared or its state. For instance, E1152 is 'powder' (E10), E0215 is 'purée' (E03, E11), and E0133 corresponds to sliced items like 'Pineapple rings' (E02) and 'Bacon' (E05)."
+  },
+  {
+    "question_id": "P4_A",
+    "answer": "The preservation method or source condition",
+    "reasoning": "The A-facets seem to group foods by how they are preserved or their condition when sourced. A2001 is associated with foods that are dried or processed for shelf stability (E02 oven-dried pineapple, E08 raisins, E10 beetroot powder). A2003 is associated with more standard or fresh items (E01 raw apple, E04 raw beet greens, E09 coconut water). A2002 appears unique to pumpkin in this dataset."
+  },
+  {
+    "question_id": "P5_a",
+    "answer": "Apple",
+    "reasoning": "The facet B1245 appears in the EL FDC for entry E01, 'Apple, raw, with skin', and E03, 'Applesauce...'. Both entries are for the food item apple."
+  },
+  {
+    "question_id": "P5_b",
+    "answer": "Coconut",
+    "reasoning": "The facet B1530 appears in the EL FDC for entry E09, 'Coconut water, from a coconut'. This facet represents the food item coconut."
+  },
+  {
+    "question_id": "P5_c",
+    "answer": "Leafy vegetable",
+    "reasoning": "The facet C0240 appears in the EL FDC for entry E04, 'Beet greens, raw'. The glossary defines beet greens as the leaves of a beet plant, which is a leafy vegetable."
+  },
+  {
+    "question_id": "P5_d",
+    "answer": "Mashed",
+    "reasoning": "The facet E0310 is assigned to E12, 'Potato'. As reasoned in P1(a), this preparation form is similar to 'puréed' (E0215), and the glossary notes that potatoes are often served mashed."
+  },
+  {
+    "question_id": "P5_e",
+    "answer": "Cooked or processed",
+    "reasoning": "The facet F0013 is associated with foods that have undergone some form of cooking or heat processing, such as 'oven-dried' (E02), 'canned' (E03, E11), and 'pan-fried or broiled' (E07). It contrasts with F0003, which represents raw foods."
+  },
+  {
+    "question_id": "P5_f",
+    "answer": "Processed (e.g., cured, dried)",
+    "reasoning": "The facet F0001 is associated with foods that are processed for preservation but not necessarily cooked for immediate consumption. Examples include 'Bacon' (cured, E05), 'Raisins' (dried, E08), and 'Beetroot powder' (dehydrated, E10)."
+  },
+  {
+    "question_id": "P6_1",
+    "answer": "Tofu",
+    "reasoning": "The facet B1438 is located in the classification chart under the same parent as B3544 (Potato) and B1452 (Meatless bacon). This suggests it is likely a starchy vegetable or a plant-based protein. Tofu, made from soybeans, fits well into the category of plant-based protein ingredients alongside meatless bacon."
+  },
+  {
+    "question_id": "P7_a",
+    "answer": "Apple, raw, sliced",
+    "reasoning": "The facets for Y4 are B1245 (Apple), C0126 (Fruit), E0133 (Sliced/rings, from bacon and pineapple rings), and F0003 (Raw). Combining these facet meanings yields the description 'Apple, raw, sliced'."
+  },
+  {
+    "question_id": "P7_b",
+    "answer": "Lentil purée, cooked",
+    "reasoning": "The facets for Y5 are B1430 (unknown food), C0120 (Plant-based), E0215 (Puréed), and F0013 (Cooked). In the charts, B1430 is a sibling to B1452 (Meatless bacon), suggesting it is another plant-based protein source like a legume. Lentils are a good candidate. Thus, a suitable description is 'Lentil purée, cooked'."
+  },
+  {
+    "question_id": "P7_c",
+    "answer": "Lentils, mashed, cooked",
+    "reasoning": "The facets for Y6 share B1430 (Lentil, from Y5) and C0120 (Plant-based) with Y5. Its E-facet is E0310 (Mashed) and F-facet is F0013 (Cooked). This leads to the description 'Lentils, mashed, cooked'."
+  },
+  {
+    "question_id": "P7_d",
+    "answer": "Butternut squash, puréed, cooked",
+    "reasoning": "The facets for Y9 are B2530 (unknown food), C0126 (Fruit category, which includes vegetables like pumpkin), E0215 (Puréed), and F0013 (Cooked). In the charts, B2530 is a sibling to B1534 (Pumpkin), suggesting it is another type of squash. 'Butternut squash, puréed, cooked' fits all facets."
+  },
+  {
+    "question_id": "P8_1",
+    "answer": "More accurate. The extra facet provides additional, structured information about each food item. Including it in the matching algorithm allows for more detailed and specific comparisons between the YUM and EL databases. This can help resolve ambiguities or break ties when multiple foods seem like a good match based on the other four facets, leading to the selection of a closer analogue and therefore a more accurate potassium estimate.",
+    "reasoning": "A fundamental principle of matching algorithms is that more relevant features lead to better performance. The A-facet is part of the classification system and thus carries meaningful information (likely about preservation). For example, in the case of Y5, its A-facet (A2002) matches E11's but not E07's. Including this facet would make E11 the unambiguous best match, changing the estimate from an average (189.5) to a specific value (209). This added specificity, assuming the facets are well-designed, should increase the accuracy of the estimations."
+  }
+]

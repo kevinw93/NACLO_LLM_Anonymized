@@ -1,0 +1,112 @@
+[
+  {
+    "question_id": "G1_1",
+    "answer": "unfilled circle",
+    "reasoning": "Under Rational Speech Acts theory, if the speaker wanted the filled circle, they could have said 'filled' (cost 1) to uniquely identify it. Since they said 'circle' which is ambiguous between the two circles, they likely mean the unfilled circle."
+  },
+  {
+    "question_id": "G2_1",
+    "answer": "5",
+    "reasoning": "The filled triangle is the only triangle among the shapes, so 'triangle' uniquely identifies it."
+  },
+  {
+    "question_id": "G2_2",
+    "answer": "1",
+    "reasoning": "Looking at all shapes, 'filled' uniquely identifies the filled circle as it's the only filled non-triangle shape."
+  },
+  {
+    "question_id": "G2_3",
+    "answer": "4",
+    "reasoning": "The unfilled circle is the only circle that isn't filled, and 'circle' distinguishes it from triangles and squares."
+  },
+  {
+    "question_id": "G2_4",
+    "answer": "2",
+    "reasoning": "'Unfilled' distinguishes the unfilled square from the striped square."
+  },
+  {
+    "question_id": "G2_5",
+    "answer": "3",
+    "reasoning": "The striped square is the only shape with stripes, so 'striped' uniquely identifies it."
+  },
+  {
+    "question_id": "G3_1",
+    "answer": "10",
+    "reasoning": "There are two triangles (filled and unfilled), so need 'filled triangle' to distinguish."
+  },
+  {
+    "question_id": "G3_2",
+    "answer": "11",
+    "reasoning": "To distinguish from filled triangle, need 'unfilled triangle'."
+  },
+  {
+    "question_id": "G3_3",
+    "answer": "3",
+    "reasoning": "Only shape with stripes, so 'striped' uniquely identifies it."
+  },
+  {
+    "question_id": "G3_4",
+    "answer": "13",
+    "reasoning": "Multiple squares and multiple unfilled shapes, need full 'unfilled square'."
+  },
+  {
+    "question_id": "G3_5",
+    "answer": "14",
+    "reasoning": "Multiple squares and multiple filled shapes, need full 'filled square'."
+  },
+  {
+    "question_id": "G3_6",
+    "answer": "7",
+    "reasoning": "Only circle in this set, so 'circle' uniquely identifies it."
+  },
+  {
+    "question_id": "G3_7",
+    "answer": "8",
+    "reasoning": "Only pentagon in the set, so 'pentagon' uniquely identifies it."
+  },
+  {
+    "question_id": "G3_8",
+    "answer": "4",
+    "reasoning": "Only spotted square, 'spotted' distinguishes from other squares."
+  },
+  {
+    "question_id": "G3_9",
+    "answer": "9",
+    "reasoning": "Only hexagon in the set, so 'hexagon' uniquely identifies it."
+  },
+  {
+    "question_id": "G4_1",
+    "answer": "0.00",
+    "reasoning": "'Unfilled Circle' uniquely identifies the unfilled circle, so error rate is 0."
+  },
+  {
+    "question_id": "G4_2",
+    "answer": "0.67",
+    "reasoning": "Empty description matches all 3 cards, so 2/3 error rate = 0.67."
+  },
+  {
+    "question_id": "G4_3",
+    "answer": "0.50",
+    "reasoning": "'Unfilled' matches 2 cards (unfilled circle and square), so 1/2 error = 0.50."
+  },
+  {
+    "question_id": "G5_1",
+    "answer": "Weight",
+    "reasoning": "Loss = Weight × (Error Rate + Cost) based on the examples."
+  },
+  {
+    "question_id": "G5_2",
+    "answer": "Error Rate",
+    "reasoning": "Loss = Weight × (Error Rate + Cost) based on the examples."
+  },
+  {
+    "question_id": "G5_3",
+    "answer": "Cost",
+    "reasoning": "Loss = Weight × (Error Rate + Cost) based on the examples."
+  },
+  {
+    "question_id": "G6_1",
+    "answer": "0.1 0.5",
+    "reasoning": "Lower weights make the system more sensitive to error rates relative to costs, potentially favoring more specific descriptions over saying nothing."
+  }
+]

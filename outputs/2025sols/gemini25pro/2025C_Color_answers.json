@@ -1,0 +1,87 @@
+[
+  {
+    "question_id": "C1_1",
+    "answer": "H",
+    "reasoning": "Identified by elimination as one of the last two objects, ripe plum or clear sky. Rule 5, 'Unique(G) -> Unique(H)', is violated if G=plum and H=sky (e.g., in English, 'purple' is unique but 'blue' is not). The reverse, G=sky and H=plum, holds for all languages."
+  },
+  {
+    "question_id": "C1_2",
+    "answer": "C",
+    "reasoning": "Following the Berlin & Kay hierarchy, the third color term to emerge is 'red'. Ripe strawberry is the best representation of red. Rule 2 requires A, B, and C to be distinct in all languages with 3 or more terms, which holds for C=ripe strawberry."
+  },
+  {
+    "question_id": "C1_3",
+    "answer": "E",
+    "reasoning": "Rule 3 states that in languages with 5 or more terms, E has a unique word. Checking all object columns, only 'ripe banana' has a unique term in every language with 5+ terms. This corresponds to 'yellow' in the color hierarchy."
+  },
+  {
+    "question_id": "C1_4",
+    "answer": "D",
+    "reasoning": "Rule 2 states that in 3-term languages, B and D share a word. B was identified as 'adult crow'. The objects sharing a word with 'crow' in both 3-term languages (Bété and Ejagham) are 'fresh grass', 'clear sky', and 'deep ocean'. 'Fresh grass' (green) is chosen as it is distinguished from F(blue/ocean) later, a common color distinction."
+  },
+  {
+    "question_id": "C1_5",
+    "answer": "G",
+    "reasoning": "Identified as one of the last two objects, G and H. Testing G=clear sky and H=ripe plum against Rule 5 shows this assignment is consistent with all language data provided."
+  },
+  {
+    "question_id": "C1_6",
+    "answer": "F",
+    "reasoning": "Rule 4 states that D(grass) and F are distinguished in languages with 6+ terms. This implies they might be the same in languages with fewer terms. 'Deep ocean' fits this, as it is often grouped with 'grass' in a 'grue' category in smaller systems but is distinguished in larger ones."
+  },
+  {
+    "question_id": "C1_7",
+    "answer": "B",
+    "reasoning": "Rule 1 requires A and B to always be distinct. 'Adult crow' (black) and 'fresh snow' (white) are the only pair of objects that have distinct terms in all 15 languages. B is assigned to 'crow' because in 3-term systems, B shares a word with D, and 'crow' shares its term with cool colors like green/blue, a common pattern."
+  },
+  {
+    "question_id": "C1_8",
+    "answer": "A",
+    "reasoning": "Paired with B as one of the two universally distinguished terms. A represents 'fresh snow' (white), the counterpart to B's 'adult crow' (black)."
+  },
+  {
+    "question_id": "C2_1",
+    "answer": "YES",
+    "reasoning": "Kwerba has 4 color terms. It satisfies all applicable rules: 1 (A/B distinct), 2 (A/B/C distinct), and 5 (G is not unique, H is not unique, and G shares a term with A)."
+  },
+  {
+    "question_id": "C2_2",
+    "answer": "YES",
+    "reasoning": "Lele has 4 color terms. It satisfies all applicable rules: 1 (A/B distinct), 2 (A/B/C distinct), and 5 (G is not unique, H is not unique, and G shares a term with D)."
+  },
+  {
+    "question_id": "C2_3",
+    "answer": "NO",
+    "reasoning": "Ocaina has 6 color terms. It violates Rule 4, which requires languages with 6 or more terms to distinguish D(grass) from F(ocean). In Ocaina, both are called 'moxooso'."
+  },
+  {
+    "question_id": "C2_4",
+    "answer": "YES",
+    "reasoning": "Waorani has 4 color terms. It satisfies all applicable rules: 1 (A/B distinct), 2 (A/B/C distinct), and 5 (G is not unique, H is not unique, and G shares a term with D and F)."
+  },
+  {
+    "question_id": "C2_5",
+    "answer": "NO",
+    "reasoning": "Yucuna has 6 color terms. It violates Rule 4, which requires languages with 6 or more terms to distinguish D(grass) from F(ocean). In Yucuna, both are called 'ipureni'."
+  },
+  {
+    "question_id": "C2_6",
+    "answer": "YES",
+    "reasoning": "Zapotec has 7 color terms. It satisfies all rules. For Rule 5, G(sky) is not unique while H(plum) is unique, which satisfies the condition 'Unique(G) -> Unique(H)' (as False implies True)."
+  },
+  {
+    "question_id": "C3_1",
+    "answer": "nye",
+    "reasoning": "Nafaanra is a 3-term system. While the rules alone allow 'nye', 'พɔ', or 'finge' for blank 'a' (E=banana), the pattern from other 3-term languages (Bété, Ejagham) shows that E(banana) shares its term with C(strawberry). The word for C is 'nye', so 'a' must be 'nye'."
+  },
+  {
+    "question_id": "C3_2",
+    "answer": "ya'saro",
+    "reasoning": "Tucano is a 5-term system. The rules require blank 'b' (D=grass) to be different from 'ñiro' (B=crow) and 'ewuro' (E=banana). This leaves 'sõa'ro', 'ya'saro', and 'butiro' as possibilities. In other 5-term systems (e.g., Apinaye, Seri), D(grass) is grouped with F(ocean) and G(sky). The word for F and G in Tucano is 'ya'saro', making it the most plausible choice for 'b'."
+  },
+  {
+    "question_id": "C3_3",
+    "answer": "likañ",
+    "reasoning": "Kalam is a >=6 term system. The rules constrain blank 'c' (C=strawberry) to be one of {'likañ', 'minj-kimemb', 'muk'}. In the data for other >=6 term systems, the term for C is either unique or groups with H(plum). Since a unique term is not possible with the options, C must group with H. The word for H in Kalam is 'likañ', so 'c' must be 'likañ'."
+  }
+]

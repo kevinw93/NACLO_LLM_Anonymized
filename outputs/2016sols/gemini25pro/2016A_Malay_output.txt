@@ -1,0 +1,102 @@
+Model: gemini-2.5-pro
+Generation Time: 65.52 seconds
+Timestamp: 2025-10-25 18:41:49
+================================================================================
+
+An analysis of the provided Malay sentences reveals key grammatical patterns.
+
+**Vocabulary and Morphemes:**
+*   **Nouns:** `Gadis` (girl), `Penyanyi` (singer), `Kekayaan` (wealth), `Wang` (money), `Kereta` (car), `Manusia` (man), `rumah` (house), `Hadiah` (gift), `bapa` (father), `medan` (field).
+*   **Adjectives:** `cantik` (beautiful), `kaya` (rich), `bahagia` (happy).
+*   **Verbs:** `datang` (coming), `menangis` (crying).
+*   **Prepositions:** `dari` (from), `depan` (in front of), `untuk` (for).
+*   **Determiner/Demonstrative:** `itu` (the, that).
+*   **Suffixes:** `-nya` (his/her possessive, as in `bapanya` - his father). `ke-...-an` (circumfix to form abstract nouns from adjectives, e.g., `kaya` (rich) -> `kekayaan` (wealth), `bahagia` (happy) -> `kebahagiaan` (happiness)).
+*   **Negators:** `tidak` and `bukan`.
+
+**Grammatical Rules Deduced:**
+1.  **Word Order:** Adjectives follow the noun they modify (e.g., `Gadis cantik` for "beautiful girl"). The determiner `itu` ("the") follows the entire noun phrase it modifies (e.g., `Gadis cantik itu` for "The beautiful girl").
+2.  **Negation Rule:** The choice of negator depends on the part of speech being negated.
+    *   `tidak` is used to negate **verbs** (e.g., `tidak datang`, `tidak menangis`) and **adjectives** (e.g., `tidak kaya`, `tidak bahagia`).
+    *   `bukan` is used to negate **nouns** (e.g., `bukan kebahagiaan`, `bukan penyanyi`) and **prepositional phrases** (e.g., `bukan dari bapanya`, `bukan untuk bapa itu`).
+
+With these rules, I will translate the required sentences.
+
+---
+### **a. Beauty is not a gift.**
+*   **Reasoning:**
+    1.  This sentence equates two nouns, with negation. The structure is [Noun] + `is not` + [Noun].
+    2.  "Gift" is `hadiah`.
+    3.  "Beauty" is the abstract noun form of the adjective `cantik` (beautiful). Following the pattern `bahagia` (happy) -> `kebahagiaan` (happiness), "beauty" can be derived as `kecantikan`.
+    4.  Since the predicate is a noun (`hadiah`), the correct negator is `bukan`.
+    5.  The sentence is constructed as: Subject Noun (`Kecantikan`) + Negator (`bukan`) + Predicate Noun (`hadiah`).
+*   **Answer:** `Kecantikan bukan hadiah.`
+
+---
+### **b. The rich girl is not a singer.**
+*   **Reasoning:**
+    1.  The structure is [Noun Phrase] + `is not` + [Noun].
+    2.  The subject "The rich girl" is formed as Noun (`Gadis`) + Adjective (`kaya`) + Determiner (`itu`), resulting in `Gadis kaya itu`.
+    3.  The predicate noun "a singer" is `penyanyi`.
+    4.  Since the predicate is a noun, the negator is `bukan`.
+    5.  The sentence is constructed as: Subject (`Gadis kaya itu`) + Negator (`bukan`) + Predicate Noun (`penyanyi`).
+*   **Answer:** `Gadis kaya itu bukan penyanyi.`
+
+---
+### **c. His wealth is not for the girl.**
+*   **Reasoning:**
+    1.  The structure is [Noun Phrase] + `is not` + [Prepositional Phrase].
+    2.  The subject "His wealth" is formed from the noun `kekayaan` (wealth) and the possessive suffix `-nya` (his), resulting in `Kekayaannya`.
+    3.  The predicate "for the girl" is a prepositional phrase. "For" is `untuk` and "the girl" is `gadis itu`. The phrase is `untuk gadis itu`.
+    4.  Since the predicate is a prepositional phrase, the negator is `bukan`.
+    5.  The sentence is constructed as: Subject (`Kekayaannya`) + Negator (`bukan`) + Predicate PP (`untuk gadis itu`).
+*   **Answer:** `Kekayaannya bukan untuk gadis itu.`
+
+---
+### **d. The man is not coming.**
+*   **Reasoning:**
+    1.  The structure is [Noun Phrase] + `is not` + [Verb].
+    2.  The subject "The man" is `Manusia itu`.
+    3.  The predicate verb "coming" is `datang`.
+    4.  Since the predicate is a verb, the correct negator is `tidak`.
+    5.  The sentence is constructed as: Subject (`Manusia itu`) + Negator (`tidak`) + Verb (`datang`).
+*   **Answer:** `Manusia itu tidak datang.`
+
+---
+### **e. The gift from the singer is not beautiful.**
+*   **Reasoning:**
+    1.  The structure is [Complex Noun Phrase] + `is not` + [Adjective].
+    2.  The predicate "not beautiful" is a negated adjective. "Beautiful" is `cantik`. The negator for adjectives is `tidak`. So, the predicate is `tidak cantik`.
+    3.  The subject "The gift from the singer" is a noun (`hadiah`) modified by a prepositional phrase (`dari penyanyi itu`). The modifying phrase follows the noun. So, the subject is `Hadiah dari penyanyi itu`.
+    4.  The sentence is constructed as: Subject (`Hadiah dari penyanyi itu`) + Predicate (`tidak cantik`).
+*   **Answer:** `Hadiah dari penyanyi itu tidak cantik.`
+
+```json
+[
+  {
+    "question_id": "A1_a",
+    "answer": "Kecantikan bukan hadiah.",
+    "reasoning": "The sentence negates a predicate noun ('gift' / 'hadiah'). The word for 'beauty' is derived from the adjective 'cantik' using the ke-...-an circumfix, becoming 'kecantikan'. The negator for nouns is 'bukan'. The structure is Noun + bukan + Noun."
+  },
+  {
+    "question_id": "A1_b",
+    "answer": "Gadis kaya itu bukan penyanyi.",
+    "reasoning": "The subject 'The rich girl' is formed with Noun-Adjective-Determiner order ('Gadis kaya itu'). The sentence negates a predicate noun ('singer' / 'penyanyi'), so the negator 'bukan' is used. The structure is Noun Phrase + bukan + Noun."
+  },
+  {
+    "question_id": "A1_c",
+    "answer": "Kekayaannya bukan untuk gadis itu.",
+    "reasoning": "The subject 'His wealth' is 'Kekayaannya' (noun 'kekayaan' + possessive '-nya'). The sentence negates a prepositional phrase ('for the girl' / 'untuk gadis itu'). The negator for prepositional phrases is 'bukan'. The structure is Noun-poss + bukan + Prepositional Phrase."
+  },
+  {
+    "question_id": "A1_d",
+    "answer": "Manusia itu tidak datang.",
+    "reasoning": "The subject 'The man' is 'Manusia itu'. The sentence negates a verb ('coming' / 'datang'). The negator for verbs is 'tidak'. The structure is Noun Phrase + tidak + Verb."
+  },
+  {
+    "question_id": "A1_e",
+    "answer": "Hadiah dari penyanyi itu tidak cantik.",
+    "reasoning": "The subject is a complex noun phrase 'The gift from the singer' ('Hadiah dari penyanyi itu'). The sentence negates a predicate adjective ('beautiful' / 'cantik'). The negator for adjectives is 'tidak'. The structure is Noun Phrase + tidak + Adjective."
+  }
+]
+```

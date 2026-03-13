@@ -1,0 +1,37 @@
+[
+  {
+    "question_id": "L1_1",
+    "answer": "take me home",
+    "reasoning": "The decoy words in the prompt ('cabins', 'food', 'basketball') are found in the second column of the table. The corresponding words in the first column are 'home', 'take', and 'me'. These words can be rearranged to form the plausible negative message 'take me home', which fits the context of Teal being unhappy at camp. The number '312' appears to be a red herring, as the primary decoding mechanism is the word association between the two columns."
+  },
+  {
+    "question_id": "L2_1",
+    "answer": "postcards, archery, tennis, lake",
+    "reasoning": "The decoded message is 'my counselor is mean'. I found the corresponding words (or their antonyms) in the first column of the word list and identified their associated decoy words from the second column. 'my' corresponds to 'postcards'. 'counselor' corresponds to 'archery'. 'is' corresponds to 'tennis'. 'mean' is the antonym of 'kind', which corresponds to 'lake'. The list of decoys is therefore 'postcards, archery, tennis, lake'."
+  },
+  {
+    "question_id": "L2_2",
+    "answer": "friends, soccer, postcards, turtle, crafts",
+    "reasoning": "The decoded message is 'someone stole my favorite shirt'. I found each of these words in the first column of the word list and identified their associated decoy words from the second column. 'someone' -> 'friends'. 'stole' -> 'soccer'. 'my' -> 'postcards'. 'favorite' -> 'turtle'. 'shirt' -> 'crafts'. The resulting list of decoys is 'friends, soccer, postcards, turtle, crafts'."
+  },
+  {
+    "question_id": "L2_3",
+    "answer": "food, basketball, cabins",
+    "reasoning": "The decoded message is 'take me home', as determined in question L1. I found each of these words in the first column of the word list and identified their associated decoy words from the second column. 'take' corresponds to 'food'. 'me' corresponds to 'basketball'. 'home' corresponds to 'cabins'. The list of decoys is therefore 'food, basketball, cabins'."
+  },
+  {
+    "question_id": "L3_1",
+    "answer": "I will give the fish to Hatem.",
+    "reasoning": "The mystery sequence is 3,[1,2,7],5,5,7. The initial '3' indicates future tense. The sequence [1,2,7] represents a sentence with a Subject (1), Verb (2), and a Recipient (7), corresponding to an English structure like 'S V DO to IO'. The Wari' sentence is 'Mi' ram con hwam Hatem.'. By analogy with other sentences, 'Mi'' is 'I' (Subject), 'con hwam' is 'the fish' (Direct Object), and 'Hatem' is the Recipient. Therefore, the sentence is 'I will give the fish to Hatem.'."
+  },
+  {
+    "question_id": "L3_2",
+    "answer": "Topa' will receive the fish from me.",
+    "reasoning": "The Wari' sentence 'Mi' ram con hwam Topa'.' is almost identical to that in L3(a), suggesting a similar meaning ('I will give the fish to Topa'). However, the mystery sequence is 3,[1,2,4], which represents a simple Subject-Verb-Object structure. This contradiction implies that the language requires a different grammatical construction for this meaning, perhaps due to the specific recipient, Topa'. A plausible SVO rephrasing of the intended meaning is 'Topa' will receive the fish from me.' This fits the SVO structure of [1,2,4]."
+  },
+  {
+    "question_id": "L3_3",
+    "answer": "Topa' 'inain con wom Hatem.",
+    "reasoning": "The English sentence is 'Topa' made Hatem a dress.' The mystery sequence's first number, 2, indicates past tense ('made'), and the core sequence [1,2,3] corresponds to a double object construction ('S V IO DO'). I constructed the Wari' sentence by analogy with other examples. 'Topa'' is the subject. The verb 'made' is ''inain' (from 'I made a bow'). The direct object 'a dress' is 'wom', which takes the marker 'con' (from '...con wom...'). 'Hatem' is the indirect object. The word order 'S V [con DO] IO' is analogous to the sentence 'Mi' 'inam con hwam Hatem.' ('I gave Hatem the fish.')."
+  }
+]

@@ -1,0 +1,100 @@
+Model: gemini-2.5-pro
+Generation Time: 73.21 seconds
+Timestamp: 2025-10-20 19:58:54
+================================================================================
+
+An analysis of the provided data reveals several systematic sound and structural correspondences between the Umbrian and Latin languages. By identifying these patterns, we can deduce the missing Umbrian words.
+
+### Pattern Analysis:
+
+1.  **Vowel Correspondences:**
+    *   Latin `i` often corresponds to Umbrian `e`. Examples: `sisto` -> `sestu`, `tibi` -> `tefe`, `tris` -> `tref`, `canito` -> `kanetu`, `istum` -> `estu`.
+    *   Latin `o` often corresponds to Umbrian `u`. Examples: `sisto` -> `sestu`, `populo` -> `puplu`, `ferto` -> `fertu`, `ostento` -> `ustetu`, `forum` -> `furu` (inferred).
+    *   Latin diphthong `au` corresponds to Umbrian `u`. Example: `auctor` -> `uhtur`.
+
+2.  **Consonant Correspondences:**
+    *   Latin `b` between vowels corresponds to Umbrian `f`. Examples: `tibi` -> `tefe`, `rubra` -> `rufra`.
+    *   Latin word-final `s` corresponds to Umbrian `f`. Examples: `tris` -> `tref`, `ovis` -> `uvef`.
+    *   Latin `c` (pronounced /k/) corresponds to Umbrian `k`. Examples: `catulum` -> `katlu`, `iuvencam` -> `iveka`.
+    *   Latin `ct` corresponds to Umbrian `ht`. Example: `auctor` -> `uhtur`.
+
+3.  **Nasal Deletion:**
+    *   Latin `n` before certain consonants (`t`, `c`) is often deleted in Umbrian. Examples: `ostento` -> `ustetu` (`nt` -> `t`), `Sanctam` -> `Sahta` (`nct` -> `ht`), `iuvencam` -> `iveka` (`nc` -> `k`).
+
+4.  **Word Endings:**
+    *   Latin word-final `m` is dropped in Umbrian. Examples: `Sanctam` -> `Sahta`, `catulum` -> `katlu`, `istum` -> `estu`.
+
+5.  **Syntactic Structure:**
+    *   The Latin preposition `pro` ("for") corresponds to the Umbrian postposition `per`, which follows the noun. Examples: `pro Petronia` -> `Petruniaper`, `pro populo` -> `pupluper`.
+
+### Step-by-Step Solutions:
+
+**I1_a. Latin: `ito`**
+*   **Step 1:** Apply the vowel change rule: Latin `i` -> Umbrian `e`. The word becomes `eto`.
+*   **Step 2:** Apply the vowel change rule: Latin final `o` -> Umbrian `u`. The word becomes `etu`.
+*   **Conclusion:** The Umbrian for `ito` is `etu`.
+
+**I1_b. Latin: `frictum`**
+*   **Step 1:** Apply the vowel change rule: Latin `i` -> Umbrian `e`. The word becomes `frectum`.
+*   **Step 2:** Apply the consonant cluster rule: Latin `ct` -> Umbrian `ht`. The word becomes `frehtum`.
+*   **Step 3:** Apply the word ending rule: Drop the final `m`. The word becomes `frehtu`.
+*   **Conclusion:** The Umbrian for `frictum` is `frehtu`.
+
+**I1_c. Latin: `pro re`**
+*   **Step 1:** Identify the syntactic pattern: Latin `pro` + Noun becomes Umbrian Noun + `per`.
+*   **Step 2:** Apply the pattern to `pro re`. The noun is `re`, and the postposition is `per`.
+*   **Conclusion:** The Umbrian for `pro re` is `reper`.
+
+**I1_d. Latin: `tauros`**
+*   **Step 1:** Apply the diphthong rule: Latin `au` -> Umbrian `u`. The word becomes `turos`.
+*   **Step 2:** Apply the vowel change rule: Latin `o` -> Umbrian `u`. The word becomes `turus`.
+*   **Step 3:** Apply the final consonant rule: Latin final `s` -> Umbrian `f`. The word becomes `turuf`.
+*   **Conclusion:** The Umbrian for `tauros` is `turuf`.
+
+**I1_e. Latin: `forum`**
+*   **Step 1:** Apply the vowel change rule: Latin `o` -> Umbrian `u`. The word becomes `furum`.
+*   **Step 2:** Apply the word ending rule: Drop the final `m`. The word becomes `furu`.
+*   **Conclusion:** The Umbrian for `forum` is `furu`.
+
+**I1_f. Latin: `inito`**
+*   **Step 1:** Deconstruct the Latin word into its prefix `in-` and its root `ito`.
+*   **Step 2:** Determine the Umbrian root. From question (a), the Umbrian for `ito` is `etu`.
+*   **Step 3:** Analyze the prefix `in-`. The `n` precedes a `t`. Based on the nasal deletion rule (`ostento` -> `ustetu`), the `n` is dropped, leaving `i-`.
+*   **Step 4:** Apply the vowel change rule to the remaining prefix: Latin `i` -> Umbrian `e`. The prefix becomes `e-`.
+*   **Step 5:** Combine the transformed prefix `e-` and root `etu`.
+*   **Conclusion:** The Umbrian for `inito` is `eetu`.
+
+```json
+[
+  {
+    "question_id": "I1_a",
+    "answer": "etu",
+    "reasoning": "The transformation from Latin 'ito' to Umbrian 'etu' follows two established vowel change rules from the provided data: Latin 'i' becomes Umbrian 'e' (as in 'sisto'/'sestu'), and Latin word-final 'o' becomes Umbrian 'u' (as in 'ferto'/'fertu')."
+  },
+  {
+    "question_id": "I1_b",
+    "answer": "frehtu",
+    "reasoning": "To derive the Umbrian word from Latin 'frictum', three rules are applied: 1) The Latin vowel 'i' changes to 'e' ('sisto'/'sestu'). 2) The Latin consonant cluster 'ct' becomes 'ht' ('auctor'/'uhtur'). 3) The final '-um' ending in Latin corresponds to '-u' in Umbrian ('istum'/'estu'). This results in 'frehtu'."
+  },
+  {
+    "question_id": "I1_c",
+    "answer": "reper",
+    "reasoning": "The data shows that the Latin preposition 'pro' corresponds to the Umbrian postposition 'per'. The structure changes from 'pro [Noun]' in Latin to '[Noun]per' in Umbrian (e.g., 'pro populo'/'pupluper'). Applying this syntactic rule to 'pro re' yields 'reper'."
+  },
+  {
+    "question_id": "I1_d",
+    "answer": "turuf",
+    "reasoning": "The Umbrian 'turuf' is derived from Latin 'tauros' through three sound changes: 1) The Latin diphthong 'au' becomes 'u' ('auctor'/'uhtur'). 2) The Latin vowel 'o' becomes 'u' ('populo'/'puplu'). 3) The Latin word-final 's' becomes 'f' ('tris'/'tref'). Applying these rules sequentially transforms 'tauros' to 'turuf'."
+  },
+  {
+    "question_id": "I1_e",
+    "answer": "furu",
+    "reasoning": "The transformation from Latin 'forum' to Umbrian 'furu' is based on two patterns: 1) The Latin vowel 'o' corresponds to Umbrian 'u' ('populo'/'puplu'). 2) The final '-um' in Latin becomes '-u' in Umbrian, dropping the 'm' ('istum'/'estu')."
+  },
+  {
+    "question_id": "I1_f",
+    "answer": "eetu",
+    "reasoning": "The Latin word 'inito' is a compound of 'in-' + 'ito'. The Umbrian for 'ito' is 'etu' (from I1_a). The prefix 'in-' loses its 'n' before the 't' of 'ito', following the pattern seen in 'ostento'/'ustetu'. The remaining vowel 'i' of the prefix then changes to 'e' ('sisto'/'sestu'). Combining the resulting prefix 'e-' with the root 'etu' gives 'eetu'."
+  }
+]
+```

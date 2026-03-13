@@ -1,0 +1,42 @@
+Model: grok-4-fast-reasoning
+Generation Time: 136.36 seconds
+Timestamp: 2026-02-04 02:41:13
+================================================================================
+
+[
+  {
+    "question_id": "S1_a",
+    "answer": "A small cat forgot his house.",
+    "reasoning": "Analyzing patterns from the example sentences, Jamsay follows SOV word order. 'wò' functions as an indefinite article or marker for 'a small' based on parallel structure in S2_a. 'nínwɛ́' matches 'cat' from sentence 7 (ninywɛ). 'kànbɛ́' is 'his house' where 'kan' is possessive 'his' (from sentence 5) and 'bɛ́' is 'house' (from sentence 1, bɛ for houses). 'nàŋjɛ́m' is the verb 'forgot' inferred from parallel in S2_a. Structure: S (a small cat) O (his house) V (forgot). No internet access used; derived from given data patterns."
+  },
+  {
+    "question_id": "S1_b",
+    "answer": "Peace follows the old dog, doesn't it?",
+    "reasoning": "This Jamsay sentence directly parallels the English in S2_b, confirming the translation via vocabulary matching. 'sùrgùn' = peace (language name derivation). 'ʔànsàrù kʉ̀' = the old, 'màŋgòlò' = dog (similar to mango root but contextual). 'dɔ̀n bɛ̀' = follows (verb from pattern in sentence 8 'bɛ:' for follow). 'sàbù bàŋtìw' = tag question 'doesn't it?' (pattern from tag questions in 5,9,10 with 'la:' or similar). SOV: S (peace) O (the old dog) V (follows) + tag. Patterns from examples show tag at end."
+  },
+  {
+    "question_id": "S1_c",
+    "answer": "The crooked thief has already taken down the fence, hasn't he?",
+    "reasoning": "Matches structure and vocabulary from sentence 10. 'gùgʉm' = crooked thief (gùgʉm ~ gugym). 'kʉ̀lʉ̀' = has already (aspect marker pattern like 'kus' in 3, 'ku' in 12). 'gɔ̀n' = taken down (verb from context). 'ʉ̀rɛ̀rɛ̀tʉ̀' = the fence (from 10 'sanaradʒɛ' for fence, variant form). 'là:' = , hasn't he? (tag from 5,10). SOV: S (crooked thief) V (has already taken down) O (the fence) + tag. No around the house here, so shortened."
+  },
+  {
+    "question_id": "S2_a",
+    "answer": "wò jémɛn kàn tɛrɛmɛ kàn ninywɛ nàŋjɛ́m",
+    "reasoning": "English: A small blacksmith forgot his sorghum and his cat. SOV order. 'wò' = a/small (from S1_a pattern). 'jémɛn' = blacksmith (sentence 3). 'kàn' = his (sentence 5). 'tɛrɛmɛ' = sorghum (sentence 11). 'ninywɛ' = cat (sentence 7,8). 'nàŋjɛ́m' = forgot (from S1_a). Coordinated objects juxtaposed without 'and' word (from 9 pattern with . for and, but here direct). Structure: S (a small blacksmith) O (his sorghum his cat) V (forgot). Tones approximated from examples; no extra words."
+  },
+  {
+    "question_id": "S2_b",
+    "answer": "sùrgùn kʉ̀ ʔànsàrù kʉ̀ màŋgòlò dɔ̀n bɛ̀ sàbù bàŋtìw",
+    "reasoning": "Direct reverse of S1_b translation. The given Jamsay in S1_b matches this English exactly, so output the Jamsay sentence as is. Patterns confirm S (peace) O (the old dog) V (follows) + tag. No changes needed; derived from bidirectional matching."
+  },
+  {
+    "question_id": "S2_c",
+    "answer": "wò lá sýrjɛ́ sàbù nmtm fù jú nɛ́dʒɛ́m màŋgò",
+    "reasoning": "English: You have already untied all the melons because you ate the mango. SOV with because clause. 'wò' = you (sentence 5). 'lá' = have already (aspect for 2sg from 5 'la'). 'sýrjɛ́' = untied (parallel to unlocked in 5 'syrjɛ'). 'sàbù' = all (sentences 3,9). 'nmtm' = the melons (from 3 'nmtm' for melon plural). 'fù' = because (sentence 3). Subordinate: 'jú' = you (subordinate form from 6,9 'ju'). 'nɛ́dʒɛ́m' = ate (from 12 'nɛdʒɛm'). 'màŋgò' = the mango (singular from 12 'màŋglo' plural). Structure: main S V O because sub S V O. Tones from examples."
+  },
+  {
+    "question_id": "S3",
+    "answer": "Jamsay is an SOV language. Adjectives, possessives ('kan'), and determiners ('sabu' for all/the plural) precede nouns. Locations use postpositions (e.g., 'ɔju' on, 'wro' in, 'gnin' around?). Cause clauses introduced by 'fu' (or 'systm' variants). Aspect 'have already' marked by pre-verbal particles varying by person/subjectivity (e.g., 'la' 2sg, 'kus' 3sg, 'ku' 1sg, 'gninku' 3sg). Pronouns vary by clause type (main 1sg 'm'/'dʒu', sub 'ju'; 2sg 'wò'/'anu'). Tag questions append 'la:' or 'a:' with dying-quail intonation. Objects coordinate by juxtaposition. Tonal (high ´, low `, rising ^, falling v) with length (:) and nasalization (~). No plural marker evident; context/inflection.",
+    "reasoning": "Patterns from 12 examples: Consistent SOV (e.g., 7 S cat V ro O old house; 12 S I O mangoes V have-eaten). Possessives before noun (5 'kan' his new house). All before noun (3,9 'sabu'). Because after main O (3,6,9 'fu' introduces sub SOV). Aspect prefixes vary (3 'kus', 5 'la', 12 'beku', 10 'gninku'). Pronoun shifts in embedded (6 'dʒu' main, 'ju' sub; 9 'anu' main). Tags at end (5,10 'a:/la:'). Coordination juxtaposed (9 and). Derived solely from data; no external access. Diacritics from notes integrated into observations."
+  }
+]

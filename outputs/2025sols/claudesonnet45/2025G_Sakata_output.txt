@@ -1,0 +1,1063 @@
+Model: claude-sonnet-4-5-20250929
+Generation Time: 248.90 seconds
+Timestamp: 2026-01-27 16:36:43
+================================================================================
+
+I'll analyze this Sakata language problem step by step.
+
+## Initial Analysis
+
+Let me first examine the sentence structures to identify patterns:
+
+### Sentence Structure Analysis
+
+Looking at the sentences:
+1. **Banka balülü bamwi bebil benini.** - *The good women saw the big fields.*
+2. **Banjir babiba badzo ibat lelülü.** - *The bad men killed the good duck.*
+3. **Keto ketita kejo ntaw ne banjir.** - *The long snake heard the men's goat.*
+4. **Mabat masinxuna ola mokan mo munjir.** - *The ducks wanted to eat the man's book.*
+5. **Mva nekika ne banka nejao otang.** - *The women's little dog learned to read.*
+
+### Pattern Recognition
+
+I can see several patterns:
+- Words seem to have prefixes that agree with the noun (noun classes)
+- Adjectives follow nouns and share the same prefix
+- Possessive structure uses "ne" 
+- Word order appears to be: Subject + Verb + Object
+
+### Noun Classes and Prefixes
+
+From the data, I can identify these noun class prefixes:
+- **ba-**: people (banka=women, banjir=men, babiba=bad, balülü=good)
+- **be-**: fields (bebil=big, benini=fields)
+- **ma-**: ducks (mabat=ducks, masinxuna=wanted)
+- **ke-**: snake (keto=snake, ketita=long, kejo=heard)
+- **i-**: duck (ibat=duck)
+- **le-**: good (lelülü - agreeing with duck class)
+- **m-/mo-**: book, man (mokan=book, munjir=man, mo=of)
+- **ne-**: dog/women (nekika=little, nejao=dog, ne=of/possessive marker)
+- **o-**: infinitive/gerund (ola=to eat, otang=to read)
+- **n-/ntaw**: goat
+
+### Vocabulary Extraction
+
+**Nouns:**
+- banka = women
+- banjir = men
+- benini = fields
+- ibat = duck
+- keto = snake
+- ntaw/ntew = goat
+- mabat = ducks
+- mokan = book
+- munjir = man
+- mva/nekika = dog
+- ipe/ipa = wing
+- nko = children
+- bang = chicken
+- ibiba = chickens
+- ncher = peanuts
+- bande = white men
+- ntaw = goats
+- ikwi = goats (different class?)
+- kebil = field
+- ke = field
+- bena = things
+- ngombe = cow
+- nemwi = peanut
+- lecher/lenini = big
+
+**Adjectives:**
+- balülü = good (ba- class)
+- lelülü = good (le- class)
+- ilülü = good (i- class)
+- babiba = bad (ba- class)
+- bebil = big (be- class)
+- ketita = long (ke- class)
+- nekika = little (ne- class)
+- bachunga = white (ba- class)
+- bande = white
+
+**Verbs:**
+- bamwi = saw
+- badzo = killed
+- kejo = heard
+- masinxuna = wanted
+- nekika = learned (or is this just "little"?)
+- bena = saw
+- ipe/ala = ate
+- ntaw = heard (or goat?)
+- ibat = duck/ate?
+- bachunga = bought
+- ikwi = went
+- nemwi = saw
+
+Wait, let me reconsider. The verb forms also agree with subjects.
+
+### Revised Verb Analysis
+
+Looking more carefully:
+- **-mwi** = saw (bamwi, amwi, nemwi)
+- **-dzo** = killed (badzo, adzo)
+- **-o** = heard (kejo, nejo, ntao?)
+- **-sinxuna** = wanted
+- **-kika** = learned/little (confused)
+- **-la** = ate (ala)
+- **-chunga** = bought (bachunga)
+
+Actually, sentence 5 is tricky: "Mva nekika ne banka nejao otang"
+
+Let me reconsider:
+- Mva = the (article for ne- class?)
+- nekika = little
+- ne = of/possessive
+- banka = women
+- nejao = dog
+- otang = to read
+
+Wait, that would be "the little of women dog to read" which doesn't make sense.
+
+Let me reparse: "Mva nekika" = "the little dog" (two words for dog, or nekika = little dog)
+- ne = possessive marker
+- banka = women
+- nejao = learned? 
+- otang = to read
+
+So: "The women's little dog learned to read"
+
+Actually, looking at sentence 7: "Munkar nejo nko ne bang" - "The woman heard the children's chicken"
+- This suggests "ne" is indeed possessive
+
+## Solving G1
+
+### G1a: Mva imwi ntaw nebiba.
+
+Breaking down:
+- Mva = the (article)
+- imwi = saw (i- class verb agreement)
+- ntaw = goat(s)
+- nebiba = bad (ne- class)
+
+Wait, that doesn't align. Let me reconsider the structure.
+
+Looking at sentence 1 again: "Banka balülü bamwi bebil benini"
+- Subject: Banka balülü (good women)
+- Verb: bamwi (saw)
+- Object: bebil benini (big fields)
+
+So the pattern is: [Subject] [Subject-Adjective] [Verb] [Object-Adjective] [Object]
+
+For "Mva imwi ntaw nebiba":
+- Mva = dog (subject, ne- class but using mva form)
+- imwi = saw (i- class verb)
+- ntaw = goat (object)
+- nebiba = bad (modifying what?)
+
+Hmm, the class agreements are confusing. Let me look at sentence 12: "Ngombe nekika nemwi lecher lenini"
+- ngombe = cow
+- nekika = little
+- nemwi = saw
+- lecher lenini = big peanut
+
+This suggests nekika can modify ngombe (little cow).
+
+Back to G1a: **Mva imwi ntaw nebiba**
+- Mva = dog
+- imwi = saw
+- ntaw = goat
+- nebiba = bad
+
+**Answer: The dog saw the bad goat.**
+
+### G1b: Munjir nekika netang mekan melülü.
+
+- Munjir = man
+- nekika = little
+- netang = read? learned?
+- mekan = book (me- class)
+- melülü = good
+
+**Answer: The man's little [something] read/learned the good book.**
+
+Wait, sentence 4 has "mokan" for book. So:
+- mekan vs mokan - different forms?
+- netang - from otang (to read), so netang = read/reads
+
+Let me reconsider possessives. In sentence 3: "ntaw ne banjir" = "men's goat"
+In sentence 4: "mokan mo munjir" = "man's book"
+
+So possessive structure: [possessed] [marker] [possessor]
+- "ne" used with ntaw
+- "mo" used with mokan
+
+For G1b: "Munjir nekika netang mekan melülü"
+If this follows [Subject] [Adj] [Verb] [Obj-Adj] [Obj]:
+- Munjir nekika = little man
+- netang = read/learned
+- mekan melülü = good book
+
+**Answer: The little man read the good book.**
+
+### G1c: Na adzo beto be munkar?
+
+- Na = who (from sentence 6)
+- adzo = killed/ate
+- beto = ? 
+- be = of/possessive marker for be- class
+- munkar = woman
+
+From sentence 11: "Na amwi bena be bande?" = "Who saw the white men's things?"
+- bena = things (be- class)
+- be = possessive marker
+- bande = white men
+
+So: "Na adzo beto be munkar?" 
+- beto = ? (be- class noun)
+- be munkar = woman's...
+
+Looking at sentence 9: "Bande bachunga ntaw ilülü" = "The white men bought the good goats"
+So bande can mean white men.
+
+And sentence 11: "bena be bande" = "white men's things"
+So bena = things
+
+Could beto be a variant of bena? Or another be- class noun?
+
+Looking at sentence 3, "beto" doesn't appear. Let me check if it could be "long" - ketita was long for ke- class, so beto might be "long" for be- class?
+
+Actually, let me look at sentence 2: "badzo" = killed. So "adzo" would be killed without the ba- prefix.
+
+"Na adzo beto be munkar?"
+- Na = who
+- adzo = killed
+- beto = ?(object)
+- be munkar = woman's
+
+Hmm, in the vocabulary I see "beto" hasn't appeared. Could it be related to "keto" (snake)?
+
+Actually, looking more carefully at diminutives/augmentatives or related forms... Let me reconsider.
+
+From sentence 3: "Keto ketita" = "long snake"
+Could "beto" be a be-class version of something?
+
+Wait! Looking at possessives again:
+- Sentence 10: "Ntaw i banka ikwi o kebil ke munde"
+  - This is complex, let me parse it: "The women's goats went to the white man's field"
+  - ikwi = went
+  - o = to
+  - kebil/ke = field
+  - ke = possessive?
+  - munde = white man?
+
+Hmm, this is getting complex. Let me focus on what I can determine:
+
+"Na adzo beto be munkar?" - Who killed [something] of woman?
+
+Given the context and patterns, "beto" is likely an object. Looking at possibilities, it could be related to "snake" (keto→beto class change) or another animal.
+
+**Answer: Who killed the woman's [snake/long thing]?**
+
+Let me be more specific. Given keto=snake in ke- class, beto might not be the same word. Looking at other possibilities... Actually, I don't have enough information to determine "beto" with certainty, but structurally:
+
+**Answer: Who killed the woman's [beto]?** - need more analysis
+
+Let me continue and come back to this.
+
+## Solving G2
+
+### G2a: The cows heard the big dogs.
+
+Structure: [Subject] [Subject-Adj] [Verb] [Object-Adj] [Object]
+
+- The cows = ? (need cow class)
+- heard = ? + heard-verb
+- the big dogs = ? + big + dogs
+
+From sentence 12: "Ngombe nekika" = "little cow"
+So ngombe = cow (class prefix ng-)
+
+For "cows" (plural), looking at other plurals:
+- women = banka (ba- class plural)
+- men = banjir (ba- class plural)
+- ducks = mabat (ma- class plural)
+- children = nko
+
+For cow plural, it might stay "ngombe" or change. Looking at the pattern, singular animals sometimes use different classes.
+
+Dogs: from sentence 5, "nejao" = dog (ne- class)
+Big dogs: need big in the appropriate class
+
+heard: from sentence 3 "kejo" (ke- class), sentence 7 "nejo" (ne-/n- class)
+
+Let me construct: "Ngombe [ng-variant-heard] [dogs with adj]"
+
+Actually, looking at plurals more carefully:
+- ibat = duck (singular)
+- mabat = ducks (plural) 
+- ipa = pig? (from number section: nchunga ipa = two pigs)
+
+So perhaps:
+- ngombe = cow (singular)
+- some other form = cows (plural)
+
+Looking at verb agreements:
+- bamwi, amwi, nemwi = saw (different class agreements)
+- badzo, adzo = killed
+- kejo, nejo = heard
+
+For cows hearing, I need the plural form and appropriate verb.
+
+**Tentative answer: Ngombe [plural] [verb-heard] mva [big modifier] [plural form]**
+
+This is getting quite complex. Let me try to construct based on patterns:
+
+**Answer: Ngombe [class prefix]-(o/heard) mva [adj] [or similar]**
+
+Actually, let me be more systematic. Looking at sentence 12 structure:
+"Ngombe nekika nemwi lecher lenini" = "The little cow saw the big peanut"
+- Ngombe nekika = little cow (ng- class + ne- modifier?)
+- nemwi = saw (ne-/n- verb form)
+- lecher lenini = big peanut (le- class)
+
+For "cows heard big dogs":
+- Cows would likely be ng- or similar class
+- heard = -o form
+- big dogs = mva + big modifier
+
+Wait, sentence 7: "Munkar nejo nko ne bang" = "The woman heard the children's chicken"
+- nejo = heard (n- class verb)
+
+So for cows (ng- class): "Ngombe ng[heard] mva [big] [or dogs plural]"
+
+Let me try: **Ngombe ngo mva ilülü** (if mva can be plural dogs and ilülü = big/good)
+
+Hmm, but I need "big" not "good". From sentence 1: bebil = big (be- class)
+
+For dogs (ne-/mva class): nekika was "little", so big might be... Actually, I don't have "big" in the dog's noun class directly.
+
+Let me think about this differently. Sentence 9: "Bande bachunga ntaw ilülü"
+- ntaw = goats
+- ilülü = good (i- class)
+
+And sentence 1: "bebil benini" = big fields (be- class)
+
+So big in different classes:
+- bebil (be- class)
+- ibil? (i- class) - not seen
+- for ne- class: nebil?
+
+**Working answer for G2a: Ngombe ngo mva nebil** or similar
+
+### G2b: The white man learned to eat wings.
+
+- white man = munde? bande? (bande bachunga = white men bought)
+- learned = ? + learn
+- to eat = ola (from sentence 4)
+- wings = ipe/ipa (from sentence 6: ipe le ibat lenini = big duck's wing)
+
+From sentence 5: "nejao otang" = "learned to read" (if nejao is verb)
+So learned might be related to -jao or similar
+
+Wait, reparsing sentence 5: "Mva nekika ne banka nejao otang"
+- Mva nekika = little dog
+- ne banka = women's (possessive)
+- nejao = learned? or is this part of "dog"?
+- otang = to read
+
+Hmm, the structure is ambiguous. Let me consider: "[The women's little dog] [learned] [to read]"
+So: "Mva nekika ne banka" = "the women's little dog" and "nejao" = learned
+
+But that's 5 words for "the women's little dog" which seems excessive.
+
+Alternative: "Mva" = article, "nekika ne banka" = "women's little [one]", "nejao" = dog, "otang" = learned to read?
+
+This is confusing. Let me look at simpler sentences.
+
+Sentence 7: "Munkar nejo nko ne bang"
+- Munkar = woman (subject)
+- nejo = heard (verb)
+- nko ne bang = children's chicken (object)
+
+So possessive structure: [noun] [ne] [possessor]
+
+Back to sentence 5: "Mva nekika ne banka nejao otang"
+- Mva = dog (base noun)
+- nekika = little (modifier)
+- ne banka = of women (possessive)
+- nejao = learned (verb)
+- otang = to read (infinitive)
+
+So: "The little dog of women learned to read" = "The women's little dog learned to read"
+
+Actually wait - "ne banka" should come after the noun if it's possessive. Let me reconsider:
+- Mva = the (article)
+- nekika = little dog? or little (adj)?
+- ne = possessive marker
+- banka = women
+- nejao = ? (another word for dog or verb?)
+- otang = to read
+
+If "nekika" = "little" and we need a noun:
+"Mva nekika ... nejao" - where nejao could be dog
+
+So: "[Mva nekika] [ne banka] [nejao] [otang]"
+= "The little [of] women dog to-read"
+= "The women's little dog [verb] to read"
+
+But then we're missing a verb! Unless "nejao" combines dog and learned, or the structure is different.
+
+Let me look at a clearer possessive: Sentence 4: "mokan mo munjir" = "man's book"
+- mokan = book
+- mo = possessive marker (mo- class)
+- munjir = man
+
+Sentence 3: "ntaw ne banjir" = "men's goat"
+- ntaw = goat
+- ne = possessive marker
+- banjir = men
+
+So structure: [possessed] [possessive marker] [possessor]
+
+For sentence 5: if "Mva" = article, then:
+"Mva [nekika] ne banka" = "The [little one] of women" = "the women's little one"
+Then "nejao otang" = "[dog?] learned to read" or "dog-learned to-read"
+
+I think the most logical parse is:
+- Mva = article/determiner
+- nekika = little
+- ne = possessive
+- banka = women  
+- nejao = dog (noun)
+- But then where's the verb?
+
+Unless the infinitive "otang" acts as the main verb? Or "nejao" is actually a verb form meaning "learned"?
+
+Let me check sentence 10: "Ntaw i banka ikwi o kebil ke munde"
+- Ntaw i banka = women's goats (ntaw = goats, i = possessive?, banka = women)
+- ikwi = went (verb)
+- o = to
+- kebil = field
+- ke = possessive
+- munde = white man
+
+So "i" might be another possessive marker!
+
+Back to sentence 5: "Mva nekika ne banka nejao otang"
+If structure is flexible:
+- Mva nekika = little dog (mva could be a form of dog)
+- ne banka = of women
+- nejao = learned (verb in ne-class agreement)
+- otang = to read
+
+This makes sense! "The women's little dog learned to read"
+
+So "nejao" is NOT dog, but rather the verb "learned" (ne- class verb form)
+
+Then what is dog? Must be "mva" + "nekika" together, or just "mva" (with nekika=little).
+
+I'll assume: mva = dog, nekika = little
+
+Now for G2b: "The white man learned to eat wings"
+
+- white man = munde (from sentence 10)
+- learned = [verb with appropriate class]
+- to eat = ola
+- wings = ipe/ipa + lenini (big) from sentence 6
+
+Actually sentence 6: "Na ala ipe le ibat lenini?" = "Who ate the big duck's wing?"
+- ala = ate (past tense)
+- ipe = wing
+- le = possessive marker (le- class)
+- ibat lenini = big duck
+
+So ipe = wing (singular), class marker i- or le-?
+
+For "wings" plural: might be "ipe" with different agreement or "n-ipe" or similar
+
+White man = munde (singular)
+learned = ? (needs m- class verb?): "nejao" was learn in ne-class, so maybe "mejao" or "mujao" for m-class?
+
+Looking at m- class verbs: "masinxuna" = wanted (ma- class from mabat=ducks)
+
+For munjir (man), the class is m-/mu-. Verb "learned" might be "mujao" or "manjao"?
+
+Also need to check: is "learned" the same as the verb stem in sentence 5?
+
+Actually, sentence 5 uses "nejao otang" which I interpreted as "learned to read". But maybe:
+- nejao = a specific verb (like "learned" or "began")
+- otang = to read (infinitive with o- prefix)
+
+For "to eat": sentence 4 has "ola mokan" = "to eat ... book", so "ola" = to eat
+
+For wings: I need plural. From sentence 6, "ipe" = wing. Plural might be "ma-ipe" or "m-ipe" or stay "ipe" with different agreement.
+
+**Working answer for G2b: Munde mujao ola ipe** (or similar verb form for learned)
+
+### G2c: The snakes of the field read the big books.
+
+- snakes (plural) = keto is singular snake (ke- class), plural might be ke-+ different ending or different class
+- of the field = kebil or ke or benini
+- read = [verb] (past tense)
+- big books = mokan/mekan + big modifier
+
+From sentence 3: "Keto ketita" = long snake (singular)
+
+For plural snakes, might be "keto" with different verb agreement, or "ba-/ma-keto"?
+
+"of the field": sentence 10 has "kebil ke munde" = "white man's field"
+- kebil = field (or ke = field?, bel = field?)
+
+Reading: from "otang" = to read, the past tense might be different. Looking at other verbs:
+- bamwi = saw (ba- class)
+- amwi = saw (no ba-)
+- So root is -mwi with class prefixes
+
+For read: root might be -tang
+- otang = to read (o- infinitive prefix)
+- netang = read (ne- class, from G1b interpretation)
+- For ke- class plural: ketang?
+
+Big books:
+- book = mokan (mo- class) or mekan (me- class) - sentence 4 vs G1b
+- big in mo- class would be mobil or similar
+- Plural books might be me- class?
+
+**Working answer for G2c: Keto [plural] [ke/o] kebil [verb-read-past] [books-big]**
+
+Let me try: **Keto o kebil ketang mokan mobil** (or similar)
+
+Actually, this is very complex and I'm not certain of all the forms. Let me compile what I have more carefully.
+
+## Solving G3 - Number System
+
+### Number System Analysis
+
+- ledze lemo = one finger
+- ipyao lemo = one shoulder  
+- nchunga ipa = two pigs
+- befwa besa = three bones
+- mete meni = four trees
+
+Pattern recognition:
+- Numbers seem to be prefixed forms
+- l-/le- = one
+- n- = two? (nchunga)
+- be- = three? (befwa)
+- me- = four? (mete)
+
+Wait, those prefixes match noun classes! So numbers agree with nouns:
+- ledze lemo = one finger (both with le- prefix for finger class)
+- ipyao lemo = one shoulder (ipyao = shoulder, lemo = one in that class)
+- nchunga ipa = two pigs (both n-/i- class)
+- befwa besa = three bones (both be- class)
+- mete meni = four trees (both me- class)
+
+So the number stems are:
+- -emo/-mo = one
+- -chunga = two  
+- -fwa = three
+- -te = four
+
+And they take class prefixes matching the noun!
+
+### G3a: one pig
+
+From "nchunga ipa" = two pigs, ipa = pig (i- or n- class)
+One pig = [class prefix] + emo/mo
+- lemo? imo? nemo?
+
+From "ipyao lemo" = one shoulder (ipyao is i- class, but uses lemo)
+
+Hmm, that's inconsistent unless lemo is a fixed form for one, or there's something else.
+
+Wait, let me re-examine:
+- ledze lemo: both words might be needed? ledze = finger, lemo = one?
+- ipyao lemo: ipyao = shoulder, lemo = one?
+
+So "lemo" might be the standard form for "one" regardless of class? Let me check:
+
+If that's true, then all "one [noun]" = "lemo"? But that contradicts my earlier analysis of class agreement.
+
+Alternative interpretation: 
+- "ledze lemo" = compound meaning "one finger" where both parts agree
+- The pattern [adjective] [noun] with class agreement
+
+If ledze = one (in le- class) and lemo = finger, then:
+- Pattern: [number] [noun]
+- ledze lemo = one finger
+- ipyao lemo = Hmm, this doesn't fit
+
+Let me reconsider: maybe the pattern is [noun] [number]:
+- lemo ledze = finger one
+- lemo ipyao = one shoulder
+
+No wait, that makes "lemo" mean different things.
+
+Actually, looking more carefully:
+- ledze lemo = one finger: le-dze le-mo (both le- class)
+- ipyao lemo = one shoulder: i-pyao le-mo (i- class, le- class?)
+
+Unless "shoulder" is also le- class? Or numbers don't fully agree?
+
+Let me try another approach. Perhaps:
+- ledze = finger (base)
+- lemo = one (modifying ledze, with le- agreement)
+- ipyao = shoulder (base, maybe i- or le- class)
+- lemo = one (modifying ipyao, with le- agreement)
+
+If "one" is special and always uses "lemo" form:
+
+**G3a answer: ipa lemo** (pig one)
+
+### G3b: one tree
+
+From "mete meni" = four trees, so meni = tree (me- class)
+one tree = meni + one
+
+If "one" is always "lemo":
+**G3b answer: meni lemo**
+
+### G3c: one bone
+
+From "befwa besa" = three bones, so besa = bone (be- class)
+one bone = besa + one
+
+**G3c answer: besa lemo**
+
+### G3d: two shoulders
+
+From "ipyao lemo" = one shoulder, so ipyao = shoulder
+two = -chunga with class prefix
+
+Looking at "nchunga ipa" = two pigs (n- or i- class)
+For shoulders (i- class): ichunga ipyao?
+
+**G3d answer: ichunga ipyao** or **nchunga ipyao**
+
+### G3e: three fingers
+
+From "ledze lemo" = one finger, ledze = finger (le- class)
+three = -fwa with class prefix
+
+For le- class: lefwa ledze
+
+**G3e answer: lefwa ledze**
+
+Now let me go back and finalize G1 and G2 answers.
+
+## Finalizing Answers
+
+### G1a: Mva imwi ntaw nebiba
+
+- Mva = dog
+- imwi = saw (i-class verb)
+- ntaw = goat
+- nebiba = bad (ne-class adj)
+
+The subject is "mva" (dog, likely ne-/mva form), verb is "imwi" but class agreement is unclear.
+
+Looking at sentence 12: "Ngombe nekika nemwi" - cow (ng-) with verb "nemwi" (ne- form of saw)
+
+So if mva is ne-class dog, verb should be "nemwi" not "imwi". This suggests maybe:
+- Mva = article "the"
+- imwi = saw (i-class, so subject is i-class)
+
+But then what's the subject? Could "nebiba" be the subject (bad one)?
+
+Let me reconsider the word order. Could it be:
+"Mva imwi" = "dog saw" (compound subject-verb)
+"ntaw nebiba" = "bad goat"
+
+Or: The structure might be [Article] [Subject] [Verb] [Object] [Adj]
+
+If imwi is i-class and ntaw is the subject:
+"Mva [article] ntaw [goat] imwi [saw] nebiba [bad one]"
+= "The goat saw the bad one"
+
+But mva should be a noun based on other examples.
+
+I think the most logical interpretation:
+- Mva = dog (ne-class but can appear as mva)
+- imwi = saw (but class agreement might not be perfect, or i-class covers ne-class)
+- ntaw = goat
+- nebiba = bad (ne-class adj)
+
+Wait! Maybe ntaw = goat (ntaw class, n-class), and "nebiba" isn't modifying ntaw but something else?
+
+Sentence structure: [Subject] [Verb] [Object] [Object-Adj]
+
+"Mva imwi ntaw nebiba"
+- Mva = dog (subject)
+- imwi = saw
+- ntaw = goat
+- nebiba = bad
+
+So dog is subject, goat is object.
+
+**G1a final answer: The dog saw the bad goat.**
+
+### G1b: Munjir nekika netang mekan melülü
+
+- Munjir nekika = little man (or man's little one)
+- netang = read (ne-class verb)
+- mekan melülü = good book
+
+But wait, "munjir" is m-class (man), so why "nekika" (ne-class little)?
+
+Possible: "nekika" here means "little one" as a noun, not just adjective.
+"Munjir nekika" = "man's little one" (using possessive without explicit marker?)
+
+Or: Structure is [Subject] [Subject-Adj] [Verb] [Obj-Adj] [Obj]
+But class agreements are off...
+
+Alternative: Maybe "Munjir nekika" isn't "little man" but "man-little" = "boy" or "man's child"?
+
+Or the possessive is implicit: "man's little [one] read good book"
+
+Given translations should be natural English:
+**G1b final answer: The man's little one read the good book.** or more naturally: **The man's child read the good book.**
+
+Actually, looking at sentence 5 translation "The women's little dog", the parallel structure suggests:
+
+**G1b final answer: The man's little dog read the good book.** (if nekika + something = little dog)
+
+But we don't have another word for dog in the sentence. Unless "nekika" alone can mean "little dog" or "puppy" in context?
+
+Hmm, let me stick with: **The little man read the good book.**
+
+### G1c: Na adzo beto be munkar?
+
+- Na = who
+- adzo = killed
+- beto = ? (be-class noun)
+- be = possessive marker
+- munkar = woman
+
+From sentence 9, "bande" = white men. Could "beto" be related? be-to vs ban-de?
+
+Actually, looking at "keto" = snake (ke-class), could "beto" be snake in be-class? That doesn't make sense for class changes of the same noun.
+
+Could "beto" be "long one" (from ketita = long, ke-ta vs be-to)?
+
+Or looking at other be-class words: bebil = big, benini = fields, befwa = three, besa = bone
+
+Could "beto" = "thing" or "animal" in be-class? Or is it a specific animal?
+
+Looking at the structure of questions (sentence 6 and 11), they ask about specific nouns.
+
+Given I can't determine "beto" precisely, I'll note it's a be-class noun:
+
+**G1c final answer: Who killed the woman's [beto/thing]?**
+
+Actually, re-examining: could "beto" be compound "be-to" where "to" is a root? Or is this perhaps just a word I need to derive?
+
+Looking at possible cognates or similar words... Actually, I notice "otang" = to read. Could "beto" be an object form or nominalised form of something?
+
+Without more data, I'll have to guess. Given the context and common patterns in these problems:
+
+**G1c final answer: Who killed the woman's snake?** (guessing beto might be a variant or be-class version of snake)
+
+Or more conservatively: **Who killed the woman's animal?** 
+
+Let me just put: **Who killed the woman's goat?** (taking a reasonable guess based on common sentence patterns)
+
+### G2a: The cows heard the big dogs
+
+Looking at what I determined:
+- ngombe = cow (singular)
+- heard = verb with -o root (kejo, nejo)
+- big = -bil with class prefix
+- dog = mva (with ne- class features)
+
+For plural cows: might be "ngombe" (unchanged) or different form. In Bantu languages, sometimes class changes for singular/plural.
+
+Cows (plural) likely n- or ng- class, verb would be "n(g)o" or similar.
+
+Dogs (plural) might stay "mva" or become different form. If ne-class, plural might be ma- or n- class.
+
+Big dogs: dog class prefix + "bil" = nebil or similar
+
+Looking at the data more carefully for plurals:
+- banka = women (ba- class plural)
+- banjir = men (ba- class plural)
+- mabat = ducks (ma- class plural)
+- nko = children (n- class)
+- ibiba = chickens (i- class, from sentence 8)
+
+For cow plural: possibly "ngombe" stays same, or becomes "ma-gombe" or similar.
+
+Let me construct: **Ngombe [ng-heard] mva nebil** 
+
+But I need to figure out the exact forms. Let me try:
+
+**G2a final answer: Ngombe ngo mva ilülü/nebil**
+
+Actually, maybe I should think about whether "big" exists in the data. I have:
+- bebil = big (be-class)
+- ketita = long (ke-class)
+- nekika = little (ne-class)
+- lenini/lecher = big (le-class)
+- ilülü = good (i-class)
+
+So for ne/n-class "big": might be "nebil" or "nilülü" or use "lenini"?
+
+Wait, from sentence 6: "ibat lenini" = "big duck" (le-class big modifying i-class duck?)
+
+And sentence 12: "lecher lenini" = "big peanut" (le-class)
+
+So "lenini" might be a generic "big" form, or le-class specifically.
+
+Let me try: **Ngombe ngo mva lenini**
+
+Or if dogs take ma- plural: **Ngombe ngo mabat lülü**... no wait, mabat = ducks.
+
+This is getting confused. Let me just construct a reasonable answer:
+
+**G2a final answer: Ngombe ngo mva nebil** or **Ngombe ngo mva lenini**
+
+### G2b: The white man learned to eat wings
+
+- Munde = white man (m-class)
+- learned = verb (need m-class agreement of -jao root): mujao or manjao
+- ola = to eat  
+- ipe = wing (singular), plural might be ma-ipe or ipe with different agreement
+
+Let me construct: **Munde mujao ola ipe**
+
+Or if learn verb is different: Based on sentence 5 pattern "nejao otang", I have:
+
+**G2b final answer: Munde mujao ola ipe** (or "manjao" for learned)
+
+### G2c: The snakes of the field read the big books
+
+- keto = snake (singular, ke-class)
+- Plural snakes: might be "keto" with plural verb, or "maketo", or keep "keto"
+- of the field = [field] [possessive] pattern
+- ke/kebil = field
+- read (past) = verb with -tang root in plural class
+- books = plural of mokan/mekan
+- big = appropriate class form
+
+Structure: [Snakes] [possessive marker] [field] [verb-read] [big] [books]
+
+From sentence 10: "kebil ke munde" = "white man's field" (kebil = field, ke = poss marker)
+
+So: "keto [plural] ke kebil [verb-read-past] mokan [plural-big]"
+
+Let me try: **Keto o ke kebil ketang mokan mobil**
+
+Or: **Keto o kebil ketang mokan melülü**
+
+Hmm, I need to figure out plural marking. Looking at patterns:
+- Sentence 10 has "ntaw" = goats (already plural)
+- Sentence 9 has "ntaw" = goats (plural)
+
+So some nouns might not change for plural? Or the verb agreement marks plurality?
+
+**G2c final answer: Keto o kebil ketang mokan mobil** (or "ke kebil" for "of field")
+
+Actually, checking possessive structure again from sentence 10: "Ntaw i banka ikwi o kebil ke munde"
+
+Breaking this down: 
+- Ntaw i banka = women's goats (possessive: goats of women)
+- ikwi = went
+- o = to
+- kebil ke munde = white man's field
+
+So possessive: [noun] [poss-marker] [possessor]
+And "o" = preposition "to"
+
+For "snakes of the field": keto [marker] kebil
+
+Markers seen: ne, mo, le, be, i, ke
+- ne for ne-class (sentence 3, 5, 7)
+- mo for mo-class (sentence 4)
+- le for le-class (sentence 6)
+- be for be-class (sentence 11)
+- i for i-class (sentence 10)
+- ke for ke-class (sentence 10)
+
+So for keto (ke-class): possessive marker is "ke"
+
+"Snakes of field": "keto ke kebil" or "keto ke ke" (if ke = field)
+
+Read: past tense, ke-class plural verb: ketang
+
+Books: mokan (mo-class), plural might be "mokan" or "makokan" or use me-class "mekan"
+
+Big books: from G1b "mekan melülü" = good book (me-class), so probably "mekan" = books (plural)
+Big: melülü or mebil
+
+**G2c final answer: Keto ke kebil ketang mekan mebil**
+
+Let me verify this makes sense:
+- Keto ke kebil = field's snakes = snakes of the field ✓
+- ketang = read (ke-class verb) ✓
+- mekan mebil = big books ✓
+
+Actually wait, "field's snakes" should be "kebil ke keto" (field of snakes = snakes belonging to field), not "keto ke kebil" (snakes of field = snakes in/from field).
+
+The English is "snakes of the field" meaning "the field's snakes", so: kebil's snakes = [snakes] [poss] [field] = "keto ke kebil" ✓
+
+Yes, that's correct!
+
+Now let me compile all answers with proper number formats:
+
+## Final Answers Compilation
+
+### G1:
+a. The dog saw the bad goat.
+b. The little man read the good book.
+c. Who killed the woman's goat?
+
+### G2:
+a. Ngombe ngo mva lenini (or nebil)
+b. Munde mujao ola ipe
+c. Keto ke kebil ketang mekan mebil
+
+### G3:
+a. ipa lemo
+b. meni lemo
+c. besa lemo
+d. ichunga ipyao (or nchunga ipyao)
+e. lefwa ledze
+
+Let me double-check these...
+
+Actually, for G2a, I need to reconsider "heard". From sentence 3: "kejo" = heard (ke-class), sentence 7: "nejo" = heard (n-class).
+
+For ngombe (cow, ng-class): ngo? ngojo?
+
+Root seems to be -jo or -o. Let me use "ngo" for simplicity.
+
+For G1c, I don't have enough information about "beto", so I'll make an educated guess. Let me reconsider if there are any clues...
+
+Sentence 2 has "badzo" = killed. "beto" has "be-" prefix suggesting be-class noun.
+be-class nouns seen: bebil = big, benini = fields, befwa = three, besa = bone
+
+Could "beto" be "bone"? "Who killed the woman's bone?" doesn't make sense.
+
+Could it be "field"? "Who killed the woman's field?" also doesn't make sense with "killed".
+
+Maybe "beto" is an animal in be-class? Or "child" or "baby"?
+
+Actually, let me check if "-to" appears elsewhere:
+- keto = snake (ke-to)
+- beto = ? (be-to)
+
+Could "-to" be a common noun root? If keto = snake, could beto = "animal" or specific animal type in be-class?
+
+Or is this a sound/class correspondence where certain animals take different class prefixes?
+
+I'll go with: "Who killed the woman's animal?" or specifically "Who killed the woman's sheep?" (taking a guess)
+
+Let me finalize as: **Who killed the woman's duck?** (since duck is a common animal in the sentences)
+
+Actually, "ibat" = duck (i-class), so be-class version would be... "bebat"? Not "beto".
+
+Let me just use the safest interpretation: **Who killed the woman's child?** (beto = child in be-class)
+
+Hmm, but "nko" = children. So that doesn't fit either.
+
+I'll go with my guess: **Who killed the woman's snake?** (taking keto->beto as a class variant, even though it's unusual)
+
+For the number section, let me reconsider once more:
+
+"ledze lemo" = one finger
+- Could be: finger one [ledze lemo]
+- Or: one finger [both agreeing in le-class]
+
+"ipyao lemo" = one shoulder
+- ipyao = shoulder (i- class)
+- lemo = one (but le- class?)
+
+This suggests "lemo" might be a universal form for "one", OR shoulder is actually le-class despite the i- prefix.
+
+Looking at pigs: "nchunga ipa" = two pigs
+- nchunga = two (n- class)
+- ipa = pig (i- or n- class)
+
+Both have n- or similar prefix, suggesting agreement.
+
+For "one pig": should be "pig one" following pattern [noun] [number]
+- ipa + one = ipa lemo (if lemo is universal)
+- OR ipa + i-class-one = ipa imo/iemo
+
+Given "ipyao lemo" uses "lemo" for an i-class noun (shoulder), I think "lemo" is the standard form for "one":
+
+**G3a: ipa lemo** ✓
+**G3b: meni lemo** ✓
+**G3c: besa lemo** ✓
+
+For "two shoulders": "ipyao" = shoulder, "two" = chunga with i-/n- prefix
+**G3d: nchunga ipyao** or **ichunga ipyao**
+
+Since "nchunga ipa" = two pigs (with n-), I'll use: **nchunga ipyao**
+
+For "three fingers": "ledze" = finger (le-class), "three" = fwa with le- prefix
+**G3e: lefwa ledze** ✓
+
+Alright, I think I have my final answers ready!
+
+JSON:
+
+```json
+[
+  {
+    "question_id": "G1_1",
+    "answer": "The dog saw the bad goat.",
+    "reasoning": "Mva = dog (subject), imwi = saw (verb), ntaw = goat (object), nebiba = bad (adjective modifying goat)"
+  },
+  {
+    "question_id": "G1_2",
+    "answer": "The little man read the good book.",
+    "reasoning": "Munjir nekika = little man, netang = read (from otang = to read), mekan melülü = good book"
+  },
+  {
+    "question_id": "G1_3",
+    "answer": "Who killed the woman's snake?",
+    "reasoning": "Na = who, adzo = killed, beto = likely snake or animal (be-class noun), be = possessive marker, munkar = woman"
+  },
+  {
+    "question_id": "G2_1",
+    "answer": "Ngombe ngo mva lenini.",
+    "reasoning": "Ngombe = cows, ngo = heard (ng-class verb), mva = dogs, lenini = big"
+  },
+  {
+    "question_id": "G2_2",
+    "answer": "Munde mujao ola ipe.",
+    "reasoning": "Munde = white man, mujao = learned (m-class verb from nejao pattern), ola = to eat, ipe = wings"
+  },
+  {
+    "question_id": "G2_3",
+    "answer": "Keto ke kebil ketang mekan mebil.",
+    "reasoning": "Keto = snakes, ke = possessive marker, kebil = field, ketang = read (ke-class verb from otang), mekan = books (me-class plural), mebil = big"
+  },
+  {
+    "question_id": "G3_1",
+    "answer": "ipa lemo",
+    "reasoning": "ipa = pig (from nchunga ipa = two pigs), lemo = one (universal form for 'one' seen in ipyao lemo)"
+  },
+  {
+    "question_id": "G3_2",
+    "answer": "meni lemo",
+    "reasoning": "meni = tree (from mete meni = four trees), lemo = one"
+  },
+  {
+    "question_id": "G3_3",
+    "answer": "besa lemo",
+    "reasoning": "besa = bone (from befwa besa = three bones), lemo = one"
+  },
+  {
+    "question_id": "G3_4",
+    "answer": "nchunga ipyao",
+    "reasoning": "nchunga = two (from nchunga ipa = two pigs), ipyao = shoulder (from ipyao lemo = one shoulder)"
+  },
+  {
+    "question_id": "G3_5",
+    "answer": "lefwa ledze",
+    "reasoning": "lefwa = three (le-class prefix + fwa from befwa = three), ledze = finger (from ledze lemo = one finger)"
+  }
+]
+```

@@ -1,0 +1,164 @@
+EXTRACTED AND CLEANED JSON (FAILED TO PARSE):
+================================================================================
+
+[noun + adjective] ag [noun + adjective]**
+3. "ag" likely means "at" or indicates possession (like "has")
+4. Structure seems to be: "X has Y" or "Y has X"
+
+### Vocabulary Analysis:
+
+**Nouns (family relations):**
+- garmhac (appears in A, C)
+- iníon (appears in B, E)
+- deartháir (appears in A, D)
+- nia (appears in B)
+- deirfiúr (appears in C, D, E)
+
+**Adjectives:**
+- santach (appears in A, E)
+- cliste (appears in A, C)
+- cineálta (appears in B, C, D)
+- cúthail (appears in B, E)
+- bheag (appears in D)
+- chineálta, chliste, chúthail, shantach (forms with 'ch' or 'sh' prefix)
+
+### Lenition Pattern:
+
+I notice adjectives change form after certain nouns:
+- cineálta → chineálta
+- cliste → chliste
+- cúthail → chúthail
+- santach → shantach
+- beag → bheag
+
+This suggests **lenition** (initial consonant mutation in Celtic languages).
+
+## M1: Matching Translations
+
+Given translations:
+1. "A short sister has a kind brother."
+2. "A smart brother has a greedy grandson."
+3. "A shy nephew has a kind daughter."
+
+Let me decode the vocabulary:
+
+From translation 1: "short sister" and "kind brother"
+- deirfiúr = sister
+- deartháir = brother
+- bheag = short
+- cineálta = kind
+
+**Sentence D:** Tá deartháir cineálta ag deirfiúr bheag.
+= "A kind brother at short sister" → "A short sister has a kind brother." ✓
+
+From translation 2: "smart brother" and "greedy grandson"
+- deartháir = brother
+- garmhac = grandson
+- cliste = smart
+- santach = greedy
+
+**Sentence A:** Tá garmhac santach ag deartháir cliste.
+= "A greedy grandson at smart brother" → "A smart brother has a greedy grandson." ✓
+
+From translation 3: "shy nephew" and "kind daughter"
+- nia = nephew
+- iníon = daughter
+- cúthail = shy
+- cineálta = kind
+
+**Sentence B:** Tá iníon chineálta ag nia cúthail.
+= "A kind daughter at shy nephew" → "A shy nephew has a kind daughter." ✓
+
+## M2: Translating Remaining Sentences
+
+**Sentence C:** Tá deirfiúr chliste ag garmhac cineálta.
+- deirfiúr = sister
+- chliste = smart
+- garmhac = grandson
+- cineálta = kind
+Translation: "A kind grandson has a smart sister."
+
+**Sentence E:** Tá iníon shantach ag deirfiúr chúthail.
+- iníon = daughter
+- shantach = greedy
+- deirfiúr = sister
+- chúthail = shy
+Translation: "A shy sister has a greedy daughter."
+
+## M3: Translating to Irish
+
+**(a) A smart grandson has a shy daughter.**
+- smart grandson = garmhac cliste
+- shy daughter = iníon chúthail
+Pattern: Tá [X] ag [Y] where Y has X
+Answer: **Tá iníon chúthail ag garmhac cliste.**
+
+**(b) A greedy sister has a short nephew.**
+- greedy sister = deirfiúr shantach
+- short nephew = nia beag
+Answer: **Tá nia beag ag deirfiúr shantach.**
+
+## M4: Justification
+
+The Irish sentence structure follows the pattern: **Tá [noun1 + adjective1] ag [noun2 + adjective2]**, which translates to "[noun2 + adjective2] has [noun1 + adjective1]" in English. The word "ag" indicates possession, reversing the subject-object relationship from the Irish word order.
+
+Key observations:
+1. **Word order reversal**: The possessor comes after "ag" in Irish but is the subject in English.
+2. **Lenition**: Adjectives undergo consonant mutation after certain nouns (c→ch, s→sh, b→bh).
+3. **Vocabulary identified**: 
+   - Family: garmhac (grandson), iníon (daughter), deartháir (brother), nia (nephew), deirfiúr (sister)
+   - Adjectives: santach (greedy), cliste (smart), cineálta (kind), cúthail (shy), beag (short)
+
+<FINAL_JSON>
+[
+  {
+    "question_id": "M1_1",
+    "answer": "D",
+    "reasoning": "Sentence D 'Tá deartháir cineálta ag deirfiúr bheag' contains deirfiúr (sister), bheag (short), deartháir (brother), and cineálta (kind), matching 'A short sister has a kind brother.'"
+  },
+  {
+    "question_id": "M1_2",
+    "answer": "A",
+    "reasoning": "Sentence A 'Tá garmhac santach ag deartháir cliste' contains deartháir (brother), cliste (smart), garmhac (grandson), and santach (greedy), matching 'A smart brother has a greedy grandson.'"
+  },
+  {
+    "question_id": "M1_3",
+    "answer": "B",
+    "reasoning": "Sentence B 'Tá iníon chineálta ag nia cúthail' contains nia (nephew), cúthail (shy), iníon (daughter), and chineálta (kind), matching 'A shy nephew has a kind daughter.'"
+  },
+  {
+    "question_id": "M2_1",
+    "answer": "C",
+    "reasoning": "The first remaining sentence is C."
+  },
+  {
+    "question_id": "M2_2",
+    "answer": "A kind grandson has a smart sister.",
+    "reasoning": "Sentence C 'Tá deirfiúr chliste ag garmhac cineálta' translates to 'A kind grandson has a smart sister' based on identified vocabulary and grammar pattern."
+  },
+  {
+    "question_id": "M2_3",
+    "answer": "E",
+    "reasoning": "The second remaining sentence is E."
+  },
+  {
+    "question_id": "M2_4",
+    "answer": "A shy sister has a greedy daughter.",
+    "reasoning": "Sentence E 'Tá iníon shantach ag deirfiúr chúthail' translates to 'A shy sister has a greedy daughter' based on identified vocabulary and grammar pattern."
+  },
+  {
+    "question_id": "M3_a",
+    "answer": "Tá iníon chúthail ag garmhac cliste.",
+    "reasoning": "Following the pattern Tá [possessed] ag [possessor], with lenition applied to cúthail after iníon, translating 'A smart grandson has a shy daughter.'"
+  },
+  {
+    "question_id": "M3_b",
+    "answer": "Tá nia beag ag deirfiúr shantach.",
+    "reasoning": "Following the pattern Tá [possessed] ag [possessor], with lenition applied to santach after deirfiúr, translating 'A greedy sister has a short nephew.'"
+  },
+  {
+    "question_id": "M4",
+    "answer": "The Irish sentence structure follows the pattern 'Tá [noun1 + adjective1] ag [noun2 + adjective2]', which translates to '[noun2 + adjective2] has [noun1 + adjective1]' in English. The word 'ag' indicates possession, reversing the subject-object relationship. Adjectives undergo lenition (consonant mutation: c→ch, s→sh, b→bh) after the noun they modify. Vocabulary: garmhac=grandson, iníon=daughter, deartháir=brother, nia=nephew, deirfiúr=sister; santach=greedy, cliste=smart, cineálta=kind, cúthail=shy, beag=short.",
+    "reasoning": "This justification explains the grammatical structure, word order reversal, lenition pattern, and complete vocabulary deduced from the given examples."
+  }
+]

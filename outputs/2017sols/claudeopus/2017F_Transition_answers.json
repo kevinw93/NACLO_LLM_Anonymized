@@ -1,0 +1,67 @@
+[
+  {
+    "question_id": "F1_a",
+    "answer": "[f] 1 [q] 0",
+    "reasoning": "sixteen = six + teen: S -[f]-> 1 -[q]-> 0"
+  },
+  {
+    "question_id": "F1_b",
+    "answer": "[i] 2 [r] S [c] 0",
+    "reasoning": "ninetythree = nine + ty + three: S -[i]-> 2 -[r]-> S -[c]-> 0"
+  },
+  {
+    "question_id": "F1_c",
+    "answer": "[o] 2 [r] S [h] 0",
+    "reasoning": "twentyeight = twen + ty + eight: S -[o]-> 2 -[r]-> S -[h]-> 0"
+  },
+  {
+    "question_id": "F1_d",
+    "answer": "[n] 1 [q] 0",
+    "reasoning": "fifteen = fif + teen: S -[n]-> 1 -[q]-> 0"
+  },
+  {
+    "question_id": "F2_a",
+    "answer": "N",
+    "reasoning": "oneten cannot be parsed by the network rules"
+  },
+  {
+    "question_id": "F2_b",
+    "answer": "Y",
+    "reasoning": "fiftytwelve = fif + ty + twelve can be generated"
+  },
+  {
+    "question_id": "F2_c",
+    "answer": "N",
+    "reasoning": "sixteensix would require continuing from finish state 0"
+  },
+  {
+    "question_id": "F2_d",
+    "answer": "Y",
+    "reasoning": "twentyfourteen = twen + ty + four + teen can be generated"
+  },
+  {
+    "question_id": "F2_e",
+    "answer": "Y",
+    "reasoning": "fortythirty = for + ty + thir + ty can be generated"
+  },
+  {
+    "question_id": "F2_f",
+    "answer": "N",
+    "reasoning": "eleventythree - no rule generates 'eleventy'"
+  },
+  {
+    "question_id": "F2_g",
+    "answer": "N",
+    "reasoning": "fivety - no rule generates 'fivety'"
+  },
+  {
+    "question_id": "F3_1",
+    "answer": "S: eigh -> 1",
+    "reasoning": "First part of eighteen = eigh, going to state 1"
+  },
+  {
+    "question_id": "F3_2",
+    "answer": "S: eight -> 0",
+    "reasoning": "Keep ability to generate eight as a standalone number"
+  }
+]

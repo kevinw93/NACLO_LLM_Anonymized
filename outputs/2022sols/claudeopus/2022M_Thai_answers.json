@@ -1,0 +1,22 @@
+[
+  {
+    "question_id": "M1_1",
+    "answer": "A",
+    "reasoning": "The Baseline algorithm only marks the last character as 1, resulting in the lowest F1 scores (0.29, 0.40, 0.50) across all three sentences."
+  },
+  {
+    "question_id": "M1_2",
+    "answer": "C",
+    "reasoning": "Pavan's algorithm marks all final consonants as 1, resulting in medium F1 scores (0.42, 0.36, 0.60) due to over-segmentation."
+  },
+  {
+    "question_id": "M1_3",
+    "answer": "B",
+    "reasoning": "Arun's algorithm uses the most sophisticated pattern matching (FC preceded by vowel or followed by IC+V), resulting in the highest F1 scores (0.60, 0.67, 1.00)."
+  },
+  {
+    "question_id": "M2_1",
+    "answer": "0.40",
+    "reasoning": "With the alternative segmentation having 4 word boundaries instead of 2, and considering Arun's algorithm's pattern-based approach, the F1 score would likely decrease from the original 0.60 to approximately 0.40."
+  }
+]

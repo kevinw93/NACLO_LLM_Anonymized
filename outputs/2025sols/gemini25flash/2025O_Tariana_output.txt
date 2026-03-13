@@ -1,0 +1,455 @@
+Model: gemini-2.5-flash
+Generation Time: 255.88 seconds
+Timestamp: 2025-11-16 22:12:34
+================================================================================
+
+Here's a step-by-step breakdown of the reasoning for each question:
+
+**General Problem Analysis & Key Information:**
+1.  **Patrilineal Inheritance:** A child's patrilect (native language) is their father's patrilect.
+2.  **Matrilect Definition:** A child's matrilect is their mother's native language. Given the patrilineal society, "mother's native language" refers to her patrilect. So, a child's matrilect = mother's patrilect.
+3.  **Exogamy:** Marriages occur between individuals who speak *different patrilects*.
+4.  **Ideal Marriage:** "All of the marriages are also ideal... except for the marriage between Mayẽ and Elizabete." This implies an "ideal" marriage meets an *additional* condition beyond exogamy. We will deduce this condition.
+5.  **Language Codes:** K = Kotiria, R = Tariana, T = Tukano, Y = Tuyuka. These are the four languages used in the problem.
+6.  **Diagram Notation:** Patrilect (left), Matrilect (right, underlined). Triangles = males, Circles = females.
+7.  **Q1 Answer Format:** The four answers for Q1 must be Kotiria, Tariana, Tukano, Tuyuka, used exactly once. These correspond to Mateus's patrilect, Mateus's matrilect, Sileia's patrilect, and Sileia's matrilect (the '?').
+
+---
+
+### O1. Fill in the gaps (1) - (4) on the family tree.
+
+**Reasoning:**
+
+1.  **Identify Mateus's Patrilect (1):**
+    *   Mateus's children are Agostinho, Emília, and Elizabete.
+    *   From the table, Agostinho's patrilect is Kotiria (K). Emília's patrilect is Kotiria (K).
+    *   By patrilineal inheritance, children's patrilects are their father's patrilect.
+    *   Therefore, Mateus's patrilect (labeled (1) on the tree) must be **Kotiria (K)**.
+    *   This also means Elizabete's patrilect (also labeled (1) on the tree) is Kotiria (K).
+    *   Consistently, Fausto's and Elsa's patrilects (also (1)) are K.
+
+2.  **Identify Fausto's and Elsa's Matrilect (4):**
+    *   Fausto and Elsa are children of Agostinho (K R) and Patricia (Y K).
+    *   A child's matrilect is their mother's patrilect. Their mother is Patricia.
+    *   Patricia's patrilect is Tuyuka (Y).
+    *   Therefore, Fausto's matrilect (labeled (4) on the tree) is **Tuyuka (Y)**.
+    *   Elsa's matrilect (also (4)) is also Tuyuka (Y).
+    *   The blank for Sileia's matrilect, which is indicated by '?' in the tree, corresponds to (4) in the Q1 answer boxes. So Sileia's matrilect is Y.
+
+3.  **Identify Mateus's Matrilect (2):**
+    *   We know (1) = Kotiria (K) and (4) = Tuyuka (Y).
+    *   The four languages for Q1 must be K, R, T, Y, used once. So (2) and (3) must be Tariana (R) and Tukano (T) in some order.
+    *   From the table, Emília (Mateus's daughter) states: "My dad does not understand Tukano."
+    *   Mateus is Emília's dad. Mateus's matrilect is (2).
+    *   Therefore, Mateus's matrilect (2) cannot be Tukano (T).
+    *   This implies Mateus's matrilect (2) is **Tariana (R)**.
+
+4.  **Identify Sileia's Patrilect (3):**
+    *   The only remaining language for (3) is Tukano (T).
+    *   Let's verify this: Sileia's patrilect is (3). By exogamy, Mateus's patrilect (K) must be different from Sileia's patrilect (3). K != T. This holds.
+    *   This completes the four languages for Q1: (1)=K, (2)=R, (3)=T, (4)=Y.
+
+5.  **Consistency Check with Matrilect Rule:**
+    *   Child's matrilect = Mother's patrilect. Sileia's patrilect is T.
+    *   Agostinho's matrilect (from table) is R. Here, R != T. So Agostinho's matrilect is an exception to the general rule.
+    *   Emília's matrilect (from table) is T. Here, T = T. Consistent.
+    *   Elizabete's matrilect (from tree, labeled (3)) is T. Here, T = T. Consistent.
+    *   This confirms that Elizabete and Emília follow the rule, while Agostinho is an exception. This resolves the initial contradiction.
+
+**Q1 Answers:**
+(1) Kotiria
+(2) Tariana
+(3) Tukano
+(4) Tuyuka
+
+---
+
+### O2. Match each statement to its English translation.
+
+**Reasoning:**
+
+1.  **Vocabulary and Pattern Recognition from Examples:**
+    *   `Yu` = I
+    *   `phukoro` = dad (from "Yu phukoro Dahsea thuʼoerara")
+    *   `Yi'î pako` = mom (from "Yi'î pako Akotí yee uumí")
+    *   `wedea` = speak (from "Yuu Docapúaraye wedea")
+    *   `yee uumí` = speaks (from "Yi'î pako Akotí yee uumí")
+    *   `thu'oha` = understand (from "Yu Tuyuka thu'oha")
+    *   `thu'oeraha` = do not understand (from "Yu Phaana thu'oeraha")
+    *   `thu'oerara` = does not understand (from "Yu phukoro Dahsea thuʼoerara")
+    *   `hiha` = am/speak (from "Yu Kotiriakoro hiha" for "I am Kotiria", per Footnote 1)
+    *   Language roots: `Akotí` (Kotiria), `Phaana` (Tariana), `Dahsea` (Tukano), `Tuyuka` (Tuyuka).
+    *   Suffixes like `-koro` in `Kotiriakoro` or `Dahseakoro` appear to be nominalizing/adjectival forms of the language name.
+
+2.  **Initial Matches (Highly Confident):**
+    *   **D. Yu Kotiriakoro hiha:** From Footnote 1, this translates to "I speak Kotiria". So **D = i**. (`Kotiriakoro` is Kotiria).
+    *   **E. Yu Tuyuka thu'oha:** Matches the "I understand X" pattern. `Tuyuka` is Tuyuka. So **E = iv**.
+
+3.  **"My mom speaks X" Statements (C & F):**
+    *   Statements C (`Yi'î pako Di'î yee uumí`) and F (`Yi'î Ye'pâ-masa yee uúkű`) clearly follow the "My mom speaks X" pattern.
+    *   Remaining "My mom speaks" translations are v (Kotiria), vi (Tukano), vii (Tuyuka).
+    *   Aldine's example `Akotí` means Kotiria. It's safe to assume `Di'î` and `Ye'pâ-masa` are the other two languages: Tukano and Tuyuka.
+    *   Looking at `Yu phukoro Dahseakoro hira` (A) and `Yu phukoro Dahsea thuʼoerara` (Emilia's example), `Dahsea` and `Dahseakoro` are forms of Tukano.
+    *   So, if `Di'î` is Tukano-related, **C = vi** (My mom speaks Tukano).
+    *   By elimination, `Ye'pâ-masa` is Tuyuka. So **F = vii** (My mom speaks Tuyuka).
+
+4.  **"I speak X" Statements (B & G):**
+    *   Statements B (`Nohá Taliá yarupe nu-tsaápeni-noka`) and G (`Nohádoa Panumápe yarupe du-tsaápeni-noka`) are the remaining "I speak X" statements from the translations (ii and iii).
+    *   Translations are ii (I speak Tariana) and iii (I speak Tukano).
+    *   From Agostinho's example, `Phaana` is Tariana. `Dahsea` is Tukano.
+    *   From A, `Dahseakoro` appears related to Tukano.
+    *   Assuming `Panumápe` is Tukano-related and `Taliá` is Tariana-related:
+        *   **B = ii** (I speak Tariana). (`Taliá` is Tariana).
+        *   **G = iii** (I speak Tukano). (`Panumápe` is Tukano).
+
+5.  **Remaining Statement (A) and Translation (v):**
+    *   Statement A is `Yu phukoro Dahseakoro hira`. This clearly contains `phukoro` ("dad") and `Dahseakoro` (Tukano-related). It implies "My dad X Tukano".
+    *   The remaining translation is v. "My mom speaks Kotiria".
+    *   There is a clear contradiction: Statement A is about "My dad" and Tukano, while translation v is about "My mom" and Kotiria. This is a flaw in the problem statement.
+    *   However, since all statements (A-G) must map to all translations (i-vii) exactly once, A *must* map to v by elimination. I will proceed with this forced mapping, noting the inconsistency.
+    *   **A = v**.
+
+**Q2 Answers:**
+A. v
+B. ii
+C. vi
+D. i
+E. iv
+F. vii
+G. iii
+
+---
+
+### O3. Match speakers to statements.
+
+**Reasoning:**
+We use the speaker's patrilect for "I speak X" statements and matrilect for "I understand X" statements. For "My mom speaks X", we use the mother's patrilect.
+
+*   **Speakers (with Patrilects and Matrilects from Q1):**
+    *   Cagüücü (T Y)
+    *   Mayẽ (R T)
+    *   Elizabete (K T)
+    *   Fausto (K Y)
+    *   Elsa (K Y)
+    *   Lucas (T K)
+    *   Kaly (R K)
+
+*   **Statements and Translations (from Q2):**
+    *   A = v (My mom speaks Kotiria)
+    *   B = ii (I speak Tariana)
+    *   C = vi (My mom speaks Tukano)
+    *   D = i (I speak Kotiria)
+    *   E = iv (I understand Tuyuka)
+    *   F = vii (My mom speaks Tuyuka)
+    *   G = iii (I speak Tukano)
+
+1.  **Cagüücü:** Matrilect is Y (Tuyuka). Statement E (`I understand Tuyuka`) matches this perfectly. So **Cagüücü = E**.
+
+2.  **Lucas:** Patrilect is T (Tukano). Statement G (`I speak Tukano`) matches this. So **Lucas = G**.
+
+3.  **Mayẽ:** Patrilect is R (Tariana). Statement B (`I speak Tariana`) matches this. So **Mayẽ = B**.
+
+4.  **Kaly:** Patrilect is R (Tariana). His statement cannot be B (already taken). His matrilect is K (Kotiria).
+    *   Consider statement A (`My mom speaks Kotiria`). Kaly's mom is Elizabete. Elizabete's patrilect is K (Kotiria). So Elizabete *speaks Kotiria*. This fits perfectly for Kaly. So **Kaly = A**.
+
+5.  **Elizabete:** Patrilect is K (Kotiria). Matrilect is T (Tukano).
+    *   Consider statement C (`My mom speaks Tukano`). Elizabete's mom is Sileia. Sileia's patrilect is T (Tukano). So Sileia *speaks Tukano*. This fits for Elizabete. So **Elizabete = C**.
+
+6.  **Fausto & Elsa:** Both have patrilect K (Kotiria) and matrilect Y (Tuyuka). Their mom is Patricia (Y K). Patricia's patrilect is Y (Tuyuka).
+    *   Remaining statements: D (`I speak Kotiria`), F (`My mom speaks Tuyuka`).
+    *   Both Fausto and Elsa have patrilect K, so both *can* say D.
+    *   Both Fausto and Elsa have mom Patricia (patrilect Y), so both *can* say F.
+    *   The crucial hint is: "María reads aloud, Yu Kotiriakoro hiha. Her brother Ricardo repeats after her, but María laughs and tells him he can't say that."
+    *   `Yu Kotiriakoro hiha` is statement D (`I speak Kotiria`).
+    *   María (female) can say D. Ricardo (male) cannot.
+    *   This implies D is for female speakers of Kotiria.
+    *   Elsa is female and has patrilect K. So Elsa can say D. **Elsa = D**.
+    *   Fausto is male and has patrilect K. He cannot say D.
+    *   Therefore, Fausto must say the remaining statement F (`My mom speaks Tuyuka`). Fausto's mom Patricia (Y K) has patrilect Y (Tuyuka). This fits. So **Fausto = F**.
+
+**Q3 Answers:**
+Cagüücü: E
+Mayẽ: B
+Elizabete: C
+Fausto: F
+Elsa: D
+Lucas: G
+Kaly: A
+
+---
+
+### O4. Ricardo needs your help saying, “My mom does not speak Tuyuka.” Write the corresponding sentence in Ricardo's patrilect:
+
+**Reasoning:**
+
+1.  **Ricardo's Patrilect:** Ricardo's father is Fausto (K Y). So Ricardo's patrilect is K (Kotiria).
+2.  **Ricardo's Mom:** Ricardo's mom is Elsa (K Y). Elsa's patrilect is K (Kotiria). Elsa's matrilect is Y (Tuyuka).
+3.  **Target Phrase:** "My mom does not speak Tuyuka."
+    *   "My mom": `Yi'î pako` (from examples in Q2).
+    *   "Tuyuka": From Q2, `Ye'pâ-masa` is used for Tuyuka in "My mom speaks Tuyuka" (F).
+    *   "speaks": `yee uumí` (from examples in Q2).
+    *   "does not speak": We need a negation for `yee uumí`.
+    *   From examples, negation for `understand` is `thu'oeraha` (or `thu'oerara`). This uses the suffix `-raha` or `-rara`.
+    *   Applying this pattern, "does not speak" would be `yee uumí-raha` or `yee uumí-rara`.
+    *   A sentence in Kotiria about *not* speaking a language.
+
+4.  **Constructing the sentence:** `Yi'î pako Ye'pâ-masa yee uumí-raha`
+
+**Q4 Answer:**
+Yi'î pako Ye'pâ-masa yee uumí-raha
+
+---
+
+### O5. Give a sentence in Ricardo's patrilect that conveys the same information as “My mom does not speak Tuyuka":
+
+**Reasoning:**
+
+1.  **Ricardo's Patrilect:** K (Kotiria).
+2.  **Information:** Ricardo's mom (Elsa) does not speak Tuyuka.
+    *   Elsa's patrilect is K (Kotiria). If she speaks Kotiria, then she does not speak Tuyuka (since one only speaks their ethnic language).
+    *   So, the statement "My mom does not speak Tuyuka" is equivalent to "My mom speaks Kotiria" (or "My mom is Kotiria").
+3.  **"My mom speaks Kotiria" in Ricardo's Patrilect (Kotiria):**
+    *   "My mom": `Yi'î pako`.
+    *   "Kotiria": `Kotiriakoro` (from D in Q2).
+    *   "speaks" / "is": `hiha` (from D in Q2, meaning "am" or "speak" in Kotiria).
+4.  **Constructing the sentence:** `Yi'î pako Kotiriakoro hiha`.
+
+**Q5 Answer:**
+Yi'î pako Kotiriakoro hiha
+
+---
+
+### O6. Identify the correct correspondences for spouses.
+
+**Reasoning:**
+
+1.  **Spouses (Males & Females):**
+    *   **Males (from the family tree - Patrilect, Matrilect from Q1):**
+        *   Fausto (K Y)
+        *   Elsa (K Y)
+        *   Lucas (T K)
+        *   Aldine (T K)
+        *   Kaly (R K)
+    *   **Females (Spouses A-E - Patrilect, Matrilect; also using I=T from Q1 deduction):**
+        *   A (K Y)
+        *   B (Y K)
+        *   C (Y K)
+        *   D (Y R)
+        *   E (K T)
+
+2.  **Ideal Marriage Conditions:**
+    *   **Condition 1 (Exogamy):** Spouses must have different patrilects.
+    *   **Condition 2 (No Shared Matrilects):** From the analysis for Q1, ideal marriages (e.g., Mateus & Sileia, Agostinho & Patricia, Cagüücü & Emília) have distinct matrilects for the spouses. The non-ideal marriage (Mayẽ & Elizabete) had shared matrilects (both T). So, for an ideal marriage, spouse's matrilects must be different.
+
+3.  **Applying Conditions to Males (Patrilect, Matrilect):**
+    *   **Fausto (K Y):**
+        *   Patrilect != K. So cannot marry A (K Y) or E (K T).
+        *   Matrilect != Y.
+        *   Remaining: B (Y K), C (Y K), D (Y R).
+        *   B (Y K): Matrilect K != Y. (Ideal)
+        *   C (Y K): Matrilect K != Y. (Ideal)
+        *   D (Y R): Matrilect R != Y. (Ideal)
+        *   Fausto can marry B, C, or D.
+
+    *   **Elsa (K Y):**
+        *   Same as Fausto. Patrilect != K. So cannot marry A (K Y) or E (K T).
+        *   Matrilect != Y.
+        *   Remaining: B (Y K), C (Y K), D (Y R).
+        *   Elsa can marry B, C, or D.
+
+    *   **Lucas (T K):**
+        *   Patrilect != T. Can marry A (K Y), B (Y K), C (Y K), D (Y R), E (K T).
+        *   Matrilect != K.
+        *   A (K Y): Matrilect Y != K. (Ideal)
+        *   B (Y K): Matrilect K = K. (NOT Ideal - Lucas cannot marry B)
+        *   C (Y K): Matrilect K = K. (NOT Ideal - Lucas cannot marry C)
+        *   D (Y R): Matrilect R != K. (Ideal)
+        *   E (K T): Matrilect T != K. (Ideal)
+        *   Lucas can marry A, D, or E.
+
+    *   **Aldine (T K):**
+        *   Same as Lucas. Patrilect != T, Matrilect != K.
+        *   Aldine can marry A, D, or E.
+
+    *   **Kaly (R K):**
+        *   Patrilect != R. Can marry A (K Y), B (Y K), C (Y K), D (Y R), E (K T).
+        *   Matrilect != K.
+        *   A (K Y): Matrilect Y != K. (Ideal)
+        *   B (Y K): Matrilect K = K. (NOT Ideal - Kaly cannot marry B)
+        *   C (Y K): Matrilect K = K. (NOT Ideal - Kaly cannot marry C)
+        *   D (Y R): Matrilect R != K. (Ideal)
+        *   E (K T): Matrilect T != K. (Ideal)
+        *   Kaly can marry A, D, or E.
+
+4.  **Consolidating Matches:**
+    *   Since Lucas, Aldine, and Kaly cannot marry B or C, it implies that **Fausto and Elsa *must* marry B and C.** (One to B, the other to C, order doesn't matter for the pairs).
+    *   Remaining men: Lucas, Aldine, Kaly.
+    *   Remaining women: A (K Y), D (Y R), E (K T).
+
+5.  **Addressing Ambiguity:** At this point, Lucas, Aldine, and Kaly can still marry any of A, D, or E, and all combinations would result in ideal marriages. The problem states "there is exactly one way to correctly match". This suggests a lack of a clear differentiating factor in the problem statement. Given the requirement for a unique answer, I will apply a lexicographical matching or simply assign them in order. Let's assume the question expects a direct order as given.
+
+    *   Fausto (K Y) gets B (Y K).
+    *   Elsa (K Y) gets C (Y K).
+    *   Lucas (T K) gets A (K Y).
+    *   Aldine (T K) gets D (Y R).
+    *   Kaly (R K) gets E (K T).
+
+    This assignment is consistent with all ideal marriage rules. However, without a further constraint, the specific permutation for Lucas/Aldine/Kaly is not uniquely determined. I have followed the "exactly one way" instruction by choosing one valid assignment.
+
+**Q6 Answers:**
+Fausto: B
+Elsa: C
+Lucas: A
+Aldine: D
+Kaly: E
+
+---
+
+### O7. Identify Sileia's matrilineal language, indicated by a ? on the family chart:
+
+**Reasoning:**
+*   "Sileia's matrilineal language" refers to Sileia's matrilect.
+*   On the family chart, Sileia's matrilect is indicated by a '?'.
+*   In Q1, we deduced the language for this blank was (4).
+*   From Q1, the language for (4) is **Tuyuka (Y)**.
+
+**Q7 Answer:**
+Tuyuka
+
+---
+**Final Answer Array Construction**
+
+```json
+[
+  {
+    "question_id": "O1_1",
+    "answer": "Kotiria",
+    "reasoning": "Mateus's children (Agostinho, Emília, Elizabete) all have Patrilect Kotiria (K), as shown in the table for Agostinho and Emília. By patrilineal inheritance, the child's patrilect is the father's patrilect. Thus, Mateus's patrilect (labeled (1) on the tree) is Kotiria."
+  },
+  {
+    "question_id": "O1_2",
+    "answer": "Tariana",
+    "reasoning": "From Q1 step 1, (1) = Kotiria (K). The four languages for Q1 must be Kotiria, Tariana, Tukano, Tuyuka, each used once. Emília, Mateus's daughter, states 'My dad does not understand Tukano'. Mateus's matrilect is labeled (2). Therefore, Mateus's matrilect (2) cannot be Tukano (T). Since (2) must be one of Tariana (R) or Tuyuka (Y), and Tuyuka is deduced for (4), (2) must be Tariana (R)."
+  },
+  {
+    "question_id": "O1_3",
+    "answer": "Tukano",
+    "reasoning": "From Q1 steps 1 and 3, (1) = Kotiria (K) and (2) = Tariana (R). From Q1 step 2, (4) = Tuyuka (Y). The only remaining language for (3) is Tukano (T). This is consistent with exogamy, as Mateus's patrilect (K) must be different from Sileia's patrilect (T)."
+  },
+  {
+    "question_id": "O1_4",
+    "answer": "Tuyuka",
+    "reasoning": "Fausto and Elsa are children of Patricia (Y K). A child's matrilect is their mother's patrilect. Patricia's patrilect is Tuyuka (Y). Thus, Fausto's and Elsa's matrilect (labeled (4) on the tree) is Tuyuka (Y). The blank for Sileia's matrilect, indicated by '?' on the tree, corresponds to (4) in the Q1 answer boxes."
+  },
+  {
+    "question_id": "O2_A",
+    "answer": "v",
+    "reasoning": "Statement A 'Yu phukoro Dahseakoro hira' contains 'phukoro' (dad) and 'Dahseakoro' (Tukano-related). This contradicts the English translation 'v. My mom speaks Kotiria'. However, given that all statements (A-G) must map to all translations (i-vii) exactly once, A is the only remaining statement to be matched with v by elimination. This indicates a likely inconsistency in the problem statement or intended translation."
+  },
+  {
+    "question_id": "O2_B",
+    "answer": "ii",
+    "reasoning": "Statements B ('Nohá Taliá yarupe nu-tsaápeni-noka') and G ('Nohádoa Panumápe yarupe du-tsaápeni-noka') are the two 'I speak X' translations (ii. I speak Tariana, iii. I speak Tukano). Based on general patterns (e.g., 'Phaana' for Tariana in Agostinho's example), 'Taliá' is inferred to be Tariana. Thus, B = ii."
+  },
+  {
+    "question_id": "O2_C",
+    "answer": "vi",
+    "reasoning": "Statements C ('Yi'î pako Di'î yee uumí') and F ('Yi'î Ye'pâ-masa yee uúkű') follow the 'My mom speaks X' pattern. Translations vi ('My mom speaks Tukano') and vii ('My mom speaks Tuyuka') are the remaining 'My mom speaks X' translations. Based on common root for Tukano being 'Dahsea'/'Dahseakoro', 'Di'î' is inferred to be Tukano. Thus, C = vi."
+  },
+  {
+    "question_id": "O2_D",
+    "answer": "i",
+    "reasoning": "Statement D 'Yu Kotiriakoro hiha' is explicitly translated as 'I speak Kotiria' in Footnote 1. Thus, D = i."
+  },
+  {
+    "question_id": "O2_E",
+    "answer": "iv",
+    "reasoning": "Statement E 'Yu Tuyuka thu'oha' follows the 'I understand X' pattern, and 'Tuyuka' refers to Tuyuka. Thus, E = iv (I understand Tuyuka)."
+  },
+  {
+    "question_id": "O2_F",
+    "answer": "vii",
+    "reasoning": "Statements C and F follow the 'My mom speaks X' pattern. Since C = vi (Tukano), F must be vii ('My mom speaks Tuyuka'). This infers 'Ye'pâ-masa' as Tuyuka."
+  },
+  {
+    "question_id": "O2_G",
+    "answer": "iii",
+    "reasoning": "Statements B and G are the two 'I speak X' translations. Since B = ii (Tariana), G must be iii ('I speak Tukano'). This infers 'Panumápe' as Tukano."
+  },
+  {
+    "question_id": "O3_Cagüücü",
+    "answer": "E",
+    "reasoning": "Cagüücü's matrilect is Tuyuka (Y). Statement E ('I understand Tuyuka') corresponds to a speaker whose matrilect is Tuyuka. Thus, Cagüücü = E."
+  },
+  {
+    "question_id": "O3_Mayẽ",
+    "answer": "B",
+    "reasoning": "Mayẽ's patrilect is Tariana (R). Statement B ('I speak Tariana') corresponds to a speaker whose patrilect is Tariana. Thus, Mayẽ = B."
+  },
+  {
+    "question_id": "O3_Elizabete",
+    "answer": "C",
+    "reasoning": "Elizabete's mom is Sileia. Sileia's patrilect is Tukano (T) (from Q1). Statement C ('My mom speaks Tukano') corresponds to a speaker whose mother's patrilect is Tukano. Thus, Elizabete = C."
+  },
+  {
+    "question_id": "O3_Fausto",
+    "answer": "F",
+    "reasoning": "Fausto's mom is Patricia. Patricia's patrilect is Tuyuka (Y). Statement F ('My mom speaks Tuyuka') corresponds to a speaker whose mother's patrilect is Tuyuka. Fausto is male, and the hint in Q3 implies male Kotiria speakers cannot say D ('I speak Kotiria'). Thus, Fausto = F."
+  },
+  {
+    "question_id": "O3_Elsa",
+    "answer": "D",
+    "reasoning": "Elsa's patrilect is Kotiria (K). Statement D ('I speak Kotiria') corresponds to a speaker whose patrilect is Kotiria. The hint in Q3 states that María (female) can say D, but Ricardo (male) cannot. Elsa is female and has patrilect K. Thus, Elsa = D."
+  },
+  {
+    "question_id": "O3_Lucas",
+    "answer": "G",
+    "reasoning": "Lucas's patrilect is Tukano (T). Statement G ('I speak Tukano') corresponds to a speaker whose patrilect is Tukano. Thus, Lucas = G."
+  },
+  {
+    "question_id": "O3_Kaly",
+    "answer": "A",
+    "reasoning": "Kaly's mom is Elizabete. Elizabete's patrilect is Kotiria (K). Statement A ('My mom speaks Kotiria') corresponds to a speaker whose mother's patrilect is Kotiria. Thus, Kaly = A."
+  },
+  {
+    "question_id": "O4_1",
+    "answer": "Yi'î pako Ye'pâ-masa yee uumí-raha",
+    "reasoning": "Ricardo's patrilect is Kotiria (K). He needs to say 'My mom does not speak Tuyuka'. 'My mom' is 'Yi'î pako'. 'Tuyuka' is 'Ye'pâ-masa' (from Q2.F). 'Speaks' is 'yee uumí'. Based on the negation pattern for 'understand' ('thu'oha' vs 'thu'oeraha'/'thu'oerara'), a likely negation suffix is '-raha'. Thus, 'does not speak' is inferred as 'yee uumí-raha'. Combining these gives 'Yi'î pako Ye'pâ-masa yee uumí-raha'."
+  },
+  {
+    "question_id": "O5_1",
+    "answer": "Yi'î pako Kotiriakoro hiha",
+    "reasoning": "Ricardo's patrilect is Kotiria (K). His mom is Elsa, whose patrilect is also Kotiria (K). The information 'My mom does not speak Tuyuka' means Elsa's patrilect is not Tuyuka. Since her patrilect is Kotiria, this information is equivalent to 'My mom speaks Kotiria' or 'My mom is Kotiria'. From Q2.D, 'I speak Kotiria' is 'Yu Kotiriakoro hiha'. Adapting this to 'My mom speaks Kotiria': 'My mom' is 'Yi'î pako' and 'Kotiria' is 'Kotiriakoro'. Thus, 'Yi'î pako Kotiriakoro hiha'."
+  },
+  {
+    "question_id": "O6_Fausto",
+    "answer": "B",
+    "reasoning": "Fausto (K Y) and Elsa (K Y) are the only men with patrilect K, so they must marry women whose patrilect is not K. Women B (Y K) and C (Y K) have patrilect Y. By the ideal marriage condition (no shared matrilects), Fausto's matrilect Y is distinct from B's matrilect K. Assuming an ordered assignment for identical siblings, Fausto takes B."
+  },
+  {
+    "question_id": "O6_Elsa",
+    "answer": "C",
+    "reasoning": "Elsa (K Y) is paired with the remaining woman from the identical pair B/C, which is C (Y K). Her matrilect Y is distinct from C's matrilect K, making it an ideal marriage."
+  },
+  {
+    "question_id": "O6_Lucas",
+    "answer": "A",
+    "reasoning": "Lucas (T K) and Aldine (T K) cannot marry B or C due to shared matrilect K. Kaly (R K) also cannot marry B or C for the same reason. Thus, Lucas, Aldine, and Kaly must marry A (K Y), D (Y R), and E (K T). Lucas's patrilect T is different from A's patrilect K, and his matrilect K is different from A's matrilect Y. Assuming an ordered assignment for the remaining unique spouses to the remaining men, Lucas takes A."
+  },
+  {
+    "question_id": "O6_Aldine",
+    "answer": "D",
+    "reasoning": "Aldine (T K) is paired with the next available unique spouse D (Y R). His patrilect T is different from D's patrilect Y, and his matrilect K is different from D's matrilect R, making it an ideal marriage."
+  },
+  {
+    "question_id": "O6_Kaly",
+    "answer": "E",
+    "reasoning": "Kaly (R K) is paired with the last available unique spouse E (K T). His patrilect R is different from E's patrilect K, and his matrilect K is different from E's matrilect T, making it an ideal marriage."
+  },
+  {
+    "question_id": "O7_1",
+    "answer": "Tuyuka",
+    "reasoning": "Sileia's matrilineal language is her matrilect, indicated by '?' on the family chart. In Q1, we deduced this blank corresponds to (4), which is Tuyuka (Y)."
+  }
+]
+```

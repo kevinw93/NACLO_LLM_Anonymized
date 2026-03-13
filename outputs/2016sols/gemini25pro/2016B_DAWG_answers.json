@@ -1,0 +1,77 @@
+[
+  {
+    "question_id": "B1_1",
+    "answer": "POODLE",
+    "reasoning": "Based on the unintended words POODHOUND and BLOODLE, which are chimeras formed from POODLE and BLOODHOUND."
+  },
+  {
+    "question_id": "B1_2",
+    "answer": "BLOODHOUND",
+    "reasoning": "Based on the unintended words POODHOUND, BLOODLE, and BLOMERANIAN, which are chimeras formed from parts of BLOODHOUND and other intended words (POODLE, POMERANIAN)."
+  },
+  {
+    "question_id": "B1_3",
+    "answer": "POMERANIAN",
+    "reasoning": "Based on the unintended word BLOMERANIAN, which is a chimera formed from BLOODHOUND and POMERANIAN."
+  },
+  {
+    "question_id": "B1_4",
+    "answer": "GREYHOUND",
+    "reasoning": "As a fourth intended word, GREYHOUND is a plausible candidate as it shares the common suffix '-HOUND' with BLOODHOUND, making it a likely word to be included in a DAWG with BLOODHOUND."
+  },
+  {
+    "question_id": "B1_5",
+    "answer": "STRAWBERRY",
+    "reasoning": "Deduced from the unintended words RAWBERRY (missing ST-) and STRASPBERRY (STR- + -ASPBERRY)."
+  },
+  {
+    "question_id": "B1_6",
+    "answer": "RASPBERRY",
+    "reasoning": "Deduced from the unintended word STRASPBERRY (STRA- + -RASPBERRY)."
+  },
+  {
+    "question_id": "B1_7",
+    "answer": "BLACKBERRY",
+    "reasoning": "Deduced from the unintended word BLACKLEBERRY, which combines the prefix of BLACKBERRY with a part of HUCKLEBERRY."
+  },
+  {
+    "question_id": "B1_8",
+    "answer": "HUCKLEBERRY",
+    "reasoning": "Deduced from the unintended words HUCKBERRY (missing -LE-) and BLACKLEBERRY (BLACK- + -LEBERRY)."
+  },
+  {
+    "question_id": "B1_9",
+    "answer": "CANADA",
+    "reasoning": "Deduced from unintended words like IRANADA (IRAN + NADA) and PANDA (PAN + DA)."
+  },
+  {
+    "question_id": "B1_10",
+    "answer": "GHANA",
+    "reasoning": "Deduced from unintended words like GHAQ (GHA + Q from IRAQ)."
+  },
+  {
+    "question_id": "B1_11",
+    "answer": "PANAMA",
+    "reasoning": "Deduced from unintended words like RWANAMA (RWAN + AMA) and PANDA (PAN + DA)."
+  },
+  {
+    "question_id": "B1_12",
+    "answer": "RWANDA",
+    "reasoning": "Deduced from unintended words like RWANAMA (RWAN + AMA)."
+  },
+  {
+    "question_id": "B2_1",
+    "answer": "28",
+    "reasoning": "To store POODLE, POMERANIAN, BLOODHOUND, GREYHOUND optimally. POODLE/POMERANIAN share a 'PO' prefix (2+4+8=14 nodes). BLOODHOUND/GREYHOUND share a 'HOUND' suffix (5+4+5=14 nodes). No further overlap exists between the two groups. Total = 14 + 14 = 28."
+  },
+  {
+    "question_id": "B2_2",
+    "answer": "25",
+    "reasoning": "To store STRAWBERRY, RASPBERRY, BLACKBERRY, HUCKLEBERRY optimally. All share the suffix 'BERRY' (5 nodes). The stems STRAW (5), RASP (4), BLACK (5), HUCKLE (6) have no overlaps. Total = 5+4+5+6+5 = 25."
+  },
+  {
+    "question_id": "B2_3",
+    "answer": "12",
+    "reasoning": "To store CANADA, GHANA, PANAMA, RWANDA optimally. A maximal merge can be constructed around the common infix 'AN'. Prefixes (C, GH, P, RW) require 6 nodes. The infix 'AN' requires 2 nodes. The unique suffix portions (A, DA, ADA, AMA) can be constructed with 4 additional nodes. Total = 6 + 2 + 4 = 12."
+  }
+]

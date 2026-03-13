@@ -1,0 +1,27 @@
+[
+  {
+    "question_id": "G1",
+    "answer": "45",
+    "reasoning": "The bag of letters [E,F,J,F,I,O,R,T,V,Y] is rearranged by the computer to form 'FORTY FIVE', which is 45, a smaller number than 'OVER FIFTY'. The J is extraneous or misread, but the resulting number is 45 people at the party."
+  },
+  {
+    "question_id": "G2",
+    "answer": "ethcfuajbfabsco",
+    "reasoning": "The representation is lettercode:position, with lettercode A=0, B=1, ..., Z=25. The pairs are (letter, position). Sorting by position ascending, the letters are E (pos1), T (pos3), H (pos7), C (pos8), U (pos10), A (pos11), J (pos12), B (pos13), F (pos15), A (pos16), B (pos17), S (pos18), C (pos21), O (pos22). For duplicate pos1 (E and F), take the first occurrence E. Concatenate the letters in position order, ignoring missing positions."
+  },
+  {
+    "question_id": "G3",
+    "answer": "backupplan",
+    "reasoning": "The representation is position:letter. The positions are 1:N,2:A,3:L,4:P,5:P,6:U,7:K,8:C,9:A,10:B. This is an alternative way to represent linear position. Sorting by position descending yields B (10), A (9), C (8), K (7), U (6), P (5), P (4), L (3), A (2), N (1), forming 'backupplan'."
+  },
+  {
+    "question_id": "G4",
+    "answer": "branchingout",
+    "reasoning": "The representation is a bag of (letter, path) pairs, where paths of L and R describe the location in the syntactic tree. The letters A,B,C,G,H,I,N,N,O,R,T,U can be arranged as the leaves of the tree in left-to-right order to form 'branching out', fitting the section title 'Barking Up the Right Tree' and the pattern of tree representations like the 'in the sea' example."
+  },
+  {
+    "question_id": "G5",
+    "answer": "donotusethebagofletters",
+    "reasoning": "The representation is a bag of Wickelleters, each a triple (previous, current, next) for the sequence, with # for boundaries and , for punctuation. The chain of triples reconstructs the sequence 'do not use the bag of letters', tying back to the theme of bag of letters causing confusion in G1, ignoring punctuation and spaces in the answer."
+  }
+]

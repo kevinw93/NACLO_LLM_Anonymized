@@ -1,0 +1,132 @@
+[
+  {
+    "question_id": "D1_1",
+    "answer": "G",
+    "reasoning": "Sentence 31: 'The tall detective saw the ballerina' follows training patterns with an additional adjective. C2 accepts sentences with adjectives seen in training, so should accept this."
+  },
+  {
+    "question_id": "D1_2",
+    "answer": "G",
+    "reasoning": "Sentence 32: 'The linguist saw the yodeler' directly follows the '[noun] saw [noun]' pattern from training sentence 2, so C2 should accept."
+  },
+  {
+    "question_id": "D1_3",
+    "answer": "U",
+    "reasoning": "Sentence 33: 'The visited met linguist programmer' has completely incorrect word order with adjectives in wrong positions, so C2 should reject as ungrammatical."
+  },
+  {
+    "question_id": "D1_4",
+    "answer": "G",
+    "reasoning": "Sentence 34: 'The yodeler met the woodcarver' follows the '[noun] met [noun]' pattern from training, so C2 should accept."
+  },
+  {
+    "question_id": "D1_5",
+    "answer": "G",
+    "reasoning": "Sentence 35: 'The watchmaker is famous' follows the 'X is [adjective]' pattern from training sentences 11-13, so C2 should accept."
+  },
+  {
+    "question_id": "D1_6",
+    "answer": "G",
+    "reasoning": "Sentence 36: 'The detective met the yodeler' follows training pattern structure for '[noun] met [noun]', so C1 should accept."
+  },
+  {
+    "question_id": "D1_7",
+    "answer": "G",
+    "reasoning": "Sentence 36: C2 accepts similar structures throughout, so should accept this grammatical sentence."
+  },
+  {
+    "question_id": "D1_8",
+    "answer": "G",
+    "reasoning": "Sentence 36: C4 matches human judgments and this is grammatical, so should be G."
+  },
+  {
+    "question_id": "D1_9",
+    "answer": "G",
+    "reasoning": "Sentence 37: 'The spy is talented' follows the 'X is [adjective]' pattern from training, so C1 should accept."
+  },
+  {
+    "question_id": "D1_10",
+    "answer": "G",
+    "reasoning": "Sentence 37: C2 accepts this structure throughout the test set."
+  },
+  {
+    "question_id": "D1_11",
+    "answer": "G",
+    "reasoning": "Sentence 37: C4 matches human judgments and this is clearly grammatical."
+  },
+  {
+    "question_id": "D1_12",
+    "answer": "G",
+    "reasoning": "Sentence 38: 'The programmer met the cartoonist' directly applies training patterns, so C1 should accept."
+  },
+  {
+    "question_id": "D1_13",
+    "answer": "G",
+    "reasoning": "Sentence 38: C2 accepts this clear application of training patterns."
+  },
+  {
+    "question_id": "D1_14",
+    "answer": "G",
+    "reasoning": "Sentence 38: C4 matches human judgments for this grammatical sentence."
+  },
+  {
+    "question_id": "D2_1",
+    "answer": "asleep",
+    "reasoning": "HIDDEN_WORD_1 appears in 'The watchmaker is ___' (both computers accept) and 'The ___ concierge visited the astronaut' (both accept). 'Asleep' works in both positions as seen in training sentence 3."
+  },
+  {
+    "question_id": "D2_2",
+    "answer": "main",
+    "reasoning": "HIDDEN_WORD_2 appears in 'The watchmaker is ___' (C2 rejects, C3 accepts) and 'The ___ concierge visited the astronaut' (both accept). 'Main' works as adjective but C2 rejects it as predicate adjective."
+  },
+  {
+    "question_id": "D2_3",
+    "answer": "happy",
+    "reasoning": "HIDDEN_WORD_3 appears in 'The watchmaker is ___' (both accept) and 'The ___ concierge visited the astronaut' (C2 rejects, C3 accepts). 'Happy' works as predicate but C2 is more restrictive about adjective position."
+  },
+  {
+    "question_id": "D3_1",
+    "answer": "C2: 5 agreements, C3: 6 agreements",
+    "reasoning": "Comparing my judgments: C2 and I differ on one sentence (likely sentence 41), while C3 accepts all sentences so matches if I judge them all grammatical."
+  },
+  {
+    "question_id": "D4_1",
+    "answer": "shrink",
+    "reasoning": "Context: 'I would be happy to ___ it for you' about making a picture smaller. 'Shrink' fits perfectly."
+  },
+  {
+    "question_id": "D4_2",
+    "answer": "dimensions",
+    "reasoning": "Context: 'The ___ of the smaller version' - referring to properties of resized image. 'Dimensions' fits the context."
+  },
+  {
+    "question_id": "D4_3",
+    "answer": "upside-down",
+    "reasoning": "Context: 'The picture is currently ___' describing a problem. The hyphenated format suggests 'upside-down'."
+  },
+  {
+    "question_id": "D4_4",
+    "answer": "him",
+    "reasoning": "Context: pointing at tallest person in picture. Three-letter pronoun, most likely 'him'."
+  },
+  {
+    "question_id": "D4_5",
+    "answer": "occurrence",
+    "reasoning": "Context: 'I will make this ___ soon' regarding an appointment. 'Occurrence' fits as a 10-letter word meaning event."
+  },
+  {
+    "question_id": "D4_6",
+    "answer": "scheduled",
+    "reasoning": "Context: 'I will request an appointment ___ next week'. 'Scheduled' fits for timing."
+  },
+  {
+    "question_id": "D4_7",
+    "answer": "afterwards",
+    "reasoning": "Context: 'But then, ___' transitioning in narrative. 'Afterwards' fits as temporal marker."
+  },
+  {
+    "question_id": "D4_8",
+    "answer": "advantages",
+    "reasoning": "Context: 'They thought our company had many ___' - positive business term. 'Advantages' fits perfectly."
+  }
+]

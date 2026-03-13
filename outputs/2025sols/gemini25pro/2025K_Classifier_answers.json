@@ -1,0 +1,67 @@
+[
+  {
+    "question_id": "K1_1",
+    "answer": "past tense verbs",
+    "reasoning": "The words labeled YES (wandered, thought, noticed, cheered) are all verbs in the simple past tense. The words labeled NO are verbs in other forms (present participle or third-person singular present), such as 'wandering' and 'wanders'. This indicates the classifier identifies past tense verbs."
+  },
+  {
+    "question_id": "K2_1",
+    "answer": "-1",
+    "reasoning": "The vector for w4 is [0, 0, 0, 0, 1, 1, 2] and the vector for squirrel is [7, 2, -2, -5, -10, 1, 4]. The dot product w4 • squirrel is calculated as (0*7) + (0*2) + (0*-2) + (0*-5) + (1*-10) + (1*1) + (2*4) = 0 + 0 + 0 + 0 - 10 + 1 + 8 = -1."
+  },
+  {
+    "question_id": "K3_1",
+    "answer": "w3",
+    "reasoning": "The context 'The person was chased by the ___' suggests an animate noun (an agent or animal). By testing all classifiers, I found that w3 gives a YES result for words like 'alligators', 'artists', and 'squirrel', which fit this category. Therefore, w3 is the correct classifier."
+  },
+  {
+    "question_id": "K3_2",
+    "answer": "w4",
+    "reasoning": "The context 'I ate the ___' suggests a food item. Classifier w4 gives a YES result for the food items in the list ('apple', 'oranges', 'pizza', 'salads'). Therefore, w4 is the correct classifier for this context."
+  },
+  {
+    "question_id": "K3_3",
+    "answer": "w2",
+    "reasoning": "The context 'Yesterday, the person ___' suggests a past tense verb. Classifier w2 gives a YES result for the past tense verbs in the list ('repaired', 'noticed', 'visited'). Thus, w2 is the correct classifier."
+  },
+  {
+    "question_id": "K3_4",
+    "answer": "Let's talk about ___",
+    "reasoning": "Classifier w5 identifies all nouns in the provided list, both singular and plural. The context 'Let's talk about ___' is general enough to be appropriately followed by any noun, which matches the function of w5."
+  },
+  {
+    "question_id": "K3_5",
+    "answer": "I saw an ___",
+    "reasoning": "Classifier w6 identifies singular nouns that begin with a vowel sound (like 'apple' and 'electrician'). Such words are typically preceded by the article 'an'. Therefore, the context 'I saw an ___' is a perfect fit."
+  },
+  {
+    "question_id": "K3_6",
+    "answer": "Be careful not to break the ___",
+    "reasoning": "Classifier w7 identifies the words 'mug', 'plates', 'sticks', and 'television'. A shared property of these items is that they are generally considered breakable. The context 'Be careful not to break the ___' fits this category well."
+  },
+  {
+    "question_id": "K3_7",
+    "answer": "There is one ___",
+    "reasoning": "Classifier w8 identifies all singular nouns in the list. A context that strongly prefers a singular noun is needed. The phrase 'There is one ___' forces the following word to be singular, matching the classifier's function."
+  },
+  {
+    "question_id": "K3_8",
+    "answer": "I opened the ___",
+    "reasoning": "Classifier w9 identifies 'book', 'envelopes', 'purse', and 'restaurant'. A common action associated with all these items is opening them. Therefore, the context 'I opened the ___' is a suitable match."
+  },
+  {
+    "question_id": "K4_1",
+    "answer": "box",
+    "reasoning": "Applying the 9 classifiers to the vector [5, -1, 2, -3, -3, -7, 4] reveals its properties: it is a singular (w8=YES), inanimate (w3=NO), non-food (w4=NO) noun that is breakable (w7=YES) and openable (w9=YES). The word 'box' fits all these characteristics."
+  },
+  {
+    "question_id": "K4_2",
+    "answer": "shoes",
+    "reasoning": "Applying the 9 classifiers to the vector [-5, -2, -1, -2, -12, 1, 2] reveals its properties: it is a plural (w1=YES), inanimate (w3=NO), non-food (w4=NO) noun that is not breakable (w7=NO) and not openable (w9=NO). The word 'shoes' fits this description."
+  },
+  {
+    "question_id": "K4_3",
+    "answer": "cracker",
+    "reasoning": "Applying the 9 classifiers to the vector [9, -4, 5, -9, 6, 3, 7] reveals its properties: it is a singular (w8=YES), inanimate (w3=NO) noun that is a food item (w4=YES), is breakable (w7=YES), and is not openable (w9=NO). The word 'cracker' is a perfect example."
+  }
+]

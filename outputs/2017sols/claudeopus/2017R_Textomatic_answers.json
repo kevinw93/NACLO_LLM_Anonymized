@@ -1,0 +1,62 @@
+[
+  {
+    "question_id": "R1_1",
+    "answer": "UN",
+    "reasoning": "Rule a converts UN to PREMIER as a special case for 'first'"
+  },
+  {
+    "question_id": "R1_2",
+    "answer": "PREMIER",
+    "reasoning": "Output for rule a when UN is input"
+  },
+  {
+    "question_id": "R1_3",
+    "answer": "CINQ",
+    "reasoning": "Rule b converts CINQ to CINQUIÈME, adding U before IÈME"
+  },
+  {
+    "question_id": "R1_4",
+    "answer": "CINQUIÈME",
+    "reasoning": "Output for rule b when CINQ is input"
+  },
+  {
+    "question_id": "R1_5",
+    "answer": "F",
+    "reasoning": "Rule c converts F to VIÈME, specifically for NEUF becoming NEUVIÈME"
+  },
+  {
+    "question_id": "R1_6",
+    "answer": "VIÈME",
+    "reasoning": "Output for rule c, changing F to V and adding IÈME"
+  },
+  {
+    "question_id": "R1_7",
+    "answer": "X",
+    "reasoning": "Rule d converts X to ZIÈME for numbers ending in X like DEUX, SIX, DIX"
+  },
+  {
+    "question_id": "R1_8",
+    "answer": "ZIÈME",
+    "reasoning": "Output for rule d, changing X to Z and adding IÈME"
+  },
+  {
+    "question_id": "R1_9",
+    "answer": "",
+    "reasoning": "Rule e is the general rule that adds IÈME to any remaining text"
+  },
+  {
+    "question_id": "R1_10",
+    "answer": "IÈME",
+    "reasoning": "Output for rule e, simply appending IÈME"
+  },
+  {
+    "question_id": "R2_1",
+    "answer": "Add a new rule at the beginning: -UN → -UNIÈME",
+    "reasoning": "This rule specifically handles compound numbers ending in -UN before the general UN → PREMIER rule applies"
+  },
+  {
+    "question_id": "R3_1",
+    "answer": "PREMIER ↔ UN\nVINGT-ET-UNIÈME ↔ VINGT-ET-UN\nQUATRE-VINGTIÈME ↔ QUATRE-VINGTS\nCINQUIÈME ↔ CINQ\nNEUVIÈME ↔ NEUF\nZIÈME ↔ X\nIÈME ↔",
+    "reasoning": "These bidirectional rules handle all special cases and can be reversed for the Text-o-matic 2000"
+  }
+]

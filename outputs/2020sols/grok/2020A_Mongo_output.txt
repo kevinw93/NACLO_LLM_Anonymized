@@ -1,0 +1,40 @@
+Model: grok-4-fast-reasoning
+Generation Time: 184.96 seconds
+Timestamp: 2026-01-28 01:59:35
+================================================================================
+
+[
+  {"question_id": "A2_1", "answer": "The", "reasoning": "The blank (1) follows the description of the imperative prefix and precedes the description of the 2nd singular prefix, serving as the start of the next sentence for grammatical correctness."},
+  {"question_id": "A2_2", "answer": "o-", "reasoning": "The 2nd singular prefix is 'o-', added before the root; it changes to 'w-' before a vowel via rule 3."},
+  {"question_id": "A2_3", "answer": "empty", "reasoning": "The imperative has no prefix; it is the bare root form."},
+  {"question_id": "A2_4", "answer": "a-", "reasoning": "The 3rd singular prefix is 'a-', added before the root; it is deleted before a vowel via rule 1."},
+  {"question_id": "A2_5", "answer": "vowels", "reasoning": "Rule 1 applies to two vowels in a row; (5) identifies what is duplicated in a row."},
+  {"question_id": "A2_6", "answer": "the first vowel", "reasoning": "In rule 1, when two vowels are adjacent, the first one (the prefix vowel) is deleted to resolve hiatus, except when changed by prior rules."},
+  {"question_id": "A2_7", "answer": "b", "reasoning": "Rule 2 deletes 'b' specifically when it occurs between two vowels."},
+  {"question_id": "A2_8", "answer": "vowels", "reasoning": "In rule 2, the 'b' is deleted when positioned between two vowels."},
+  {"question_id": "A2_9", "answer": "o", "reasoning": "Rule 3 changes the prefix 'o' to 'w' in the environment before a vowel."},
+  {"question_id": "A2_10", "answer": "w", "reasoning": "Rule 3 changes 'o' to 'w' before a vowel to form the glide."},
+  {"question_id": "A2_11", "answer": "vowel", "reasoning": "Rule 3 applies when 'o' precedes a vowel."},
+  {"question_id": "A2_12", "answer": "3", "reasoning": "Rules must be applied in order: first rule 3 (change), then rule 1 (vowel deletion), then rule 2 (b deletion), to ensure changes like o to w happen before potential hiatus resolution."},
+  {"question_id": "A2_13", "answer": "1", "reasoning": "Second in application order: after change, apply the adjacent vowels deletion."},
+  {"question_id": "A2_14", "answer": "2", "reasoning": "Last in application order: after resolving vowels, delete intervocalic b's."},
+  {"question_id": "A3_1", "answer": "oakisa", "reasoning": "Root bakisa (b before a vowel); 2sg: o- + bakisa = obakisa → rule 3 no; rule 1 no adjacent vowels; rule 2: b between o and a (vowels), delete b → oakisa."},
+  {"question_id": "A3_2", "answer": "aakisa", "reasoning": "3sg: a- + bakisa = abakisa → rule 3 no; rule 1 no; rule 2: b between a and a (vowels), delete b → aakisa."},
+  {"question_id": "A3_3", "answer": "baakisa", "reasoning": "3pl: ba- + bakisa = babakisa → rule 3 no; rule 1 no; rule 2: second b between a and a (vowels), delete b → baakisa."},
+  {"question_id": "A3_4", "answer": "anda", "reasoning": "From 2sg wanda (w- before vowel), root must be vowel-initial anda; imp: empty + anda = anda."},
+  {"question_id": "A3_5", "answer": "anda", "reasoning": "3sg: a- + anda = aanda → rule 3 no (a not o); rule 1: aa adjacent, delete first a → anda."},
+  {"question_id": "A3_6", "answer": "banda", "reasoning": "3pl: ba- + anda = baanda → rule 3 no; rule 1: aa adjacent, delete first a → banda."},
+  {"question_id": "A3_7", "answer": "osolola", "reasoning": "Root solola (s cons); 2sg: o- + solola = osolola → no rules apply (o before cons, no b, no adjacent vowels)."},
+  {"question_id": "A3_8", "answer": "asolola", "reasoning": "3sg: a- + solola = asolola → no rules apply."},
+  {"question_id": "A3_9", "answer": "oponama", "reasoning": "Root ponama (p cons); 2sg: o- + ponama = oponama → no rules apply."},
+  {"question_id": "A3_10", "answer": "baponama", "reasoning": "3pl: ba- + ponama = baponama → no rules apply."},
+  {"question_id": "A3_11", "answer": "bowa", "reasoning": "From 2sg oowa (after b deletion); root bowa (b before o vowel); imp: empty + bowa = bowa."},
+  {"question_id": "A3_12", "answer": "aowa", "reasoning": "3sg: a- + bowa = abowa → rule 3 no; rule 1 no; rule 2: b between a and o (vowels), delete b → aowa."},
+  {"question_id": "A3_13", "answer": "baowa", "reasoning": "3pl: ba- + bowa = babowa → rule 3 no; rule 1 no; rule 2: second b between a and o (vowels), delete b → baowa."},
+  {"question_id": "A3_14", "answer": "balusa", "reasoning": "From 3sg aalusa (after b deletion, aa kept); root balusa (b before a vowel); imp: empty + balusa = balusa."},
+  {"question_id": "A3_15", "answer": "oalusa", "reasoning": "2sg: o- + balusa = obalusa → rule 3 no; rule 1 no; rule 2: b between o and a (vowels), delete b → oalusa."},
+  {"question_id": "A3_16", "answer": "baalusa", "reasoning": "3pl: ba- + balusa = babalusa → rule 3 no; rule 1 no; rule 2: second b between a and a (vowels), delete b → baalusa."},
+  {"question_id": "A3_17", "answer": "olonga", "reasoning": "Root longa (l cons); 2sg: o- + longa = olonga → no rules apply."},
+  {"question_id": "A3_18", "answer": "alonga", "reasoning": "3sg: a- + longa = alonga → no rules apply."},
+  {"question_id": "A3_19", "answer": "balonga", "reasoning": "3pl: ba- + longa = balonga → no rules apply."}
+]

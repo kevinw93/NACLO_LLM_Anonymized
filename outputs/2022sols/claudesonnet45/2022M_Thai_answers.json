@@ -1,0 +1,32 @@
+[
+  {
+    "question_id": "M1_1",
+    "answer": "A",
+    "reasoning": "Baseline algorithm corresponds to Alg A based on consistently lower F1-scores (0.29, 0.40, 0.50), indicating the simplest approach that only labels the last character."
+  },
+  {
+    "question_id": "M1_2",
+    "answer": "B",
+    "reasoning": "Pavan's algorithm corresponds to Alg B based on consistently highest F1-scores (0.60, 0.67, 1.00), including a perfect score, indicating the improved approach of labeling Final consonants."
+  },
+  {
+    "question_id": "M1_3",
+    "answer": "C",
+    "reasoning": "Arun's algorithm corresponds to Alg C based on variable F1-scores (0.42, 0.36, 0.60), indicating the more complex pattern-matching approach with inconsistent performance."
+  },
+  {
+    "question_id": "M2_1",
+    "answer": "17/24",
+    "reasoning": "For the alternative segmentation (4) of the last sentence, the correct labels would place boundaries after each of the 4 words. Arun's algorithm output remains fixed. Comparing Arun's output with the new correct segmentation [0,0,1,0,0,1,0,0,0,1,0,0,1], calculating TP, FP, and FN, then applying F1 = TP/(TP + 0.5(FP + FN)) yields 17/24."
+  },
+  {
+    "question_id": "M3_1",
+    "answer": "FST for Pavan's algorithm: Start state connects to itself with 'Not Final consonant:0' and 'Final consonant:1', and transitions to accept state with 'Any:1' for the final character",
+    "reasoning": "Pavan's algorithm labels Final consonants as 1 and the last character as 1. The FST needs a state that outputs 0 for non-Final consonants, 1 for Final consonants, and ensures the last character is labeled 1."
+  },
+  {
+    "question_id": "M3_2",
+    "answer": "FST for Arun's algorithm: States track the pattern V→FC→IC→V. Start→(see V)→State1→(see FC)→State2:(output 1)→(see IC)→State3→(see V)→State4:(output 1)→return to start. Last character always outputs 1 via transition to accept state",
+    "reasoning": "Arun's algorithm requires tracking a 4-character pattern (V FC IC V) where the FC position gets labeled 1. The FST needs states to track: seeing Vowel, then Final consonant (output 1), then Initial consonant, then Vowel again (output 1), completing the pattern."
+  }
+]

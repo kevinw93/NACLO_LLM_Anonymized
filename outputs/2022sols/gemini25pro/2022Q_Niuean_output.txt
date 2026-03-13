@@ -1,0 +1,198 @@
+Model: gemini-2.5-pro
+Generation Time: 108.63 seconds
+Timestamp: 2025-10-21 00:33:24
+================================================================================
+
+Answering this question requires a careful breakdown of the provided Niuean sentences to deduce its vocabulary and grammatical rules.
+
+### Step 1: Vocabulary and Grammar Analysis
+
+First, I will build a lexicon and a set of grammatical rules from the sample sentences.
+
+**Vocabulary:**
+*   `au`: I, me
+*   `faiaoga`: teacher
+*   `fai`: to have, there is/are
+*   `fakatino`: picture
+*   `foki`: also
+*   `holoholo`: to wash
+*   `ia`: he, she, it
+*   `ika`: fish
+*   `kai`: to eat
+*   `kāmuta`: carpenter
+*   `kitia`: to see
+*   `Mele`: Mele (name)
+*   `moa`: bird
+*   `muhu`: to have plenty, be plentiful
+*   `noa`: only, just
+*   `Sione`: Sione (name)
+*   `tā`: to draw, build, make
+*   `takafaga`: to catch
+*   `tama`: child
+*   `totou`: to read
+*   `tūmau`: always
+*   `vaka`: canoe
+
+**Grammar:**
+1.  **Word Order:** The basic word order is Verb-Initial. The general structure is `Tense/Aspect + Verb + Arguments`.
+2.  **Tense/Aspect Markers:** These appear at the beginning of the sentence.
+    *   `Ne`: Past tense (e.g., #7 `Ne totou...`)
+    *   `To`: Future tense (e.g., #11 `To muhu...`)
+    *   `Kua`: Perfective aspect ("has/have done") (e.g., #1 `Kua kai...`)
+    *   No marker indicates present or progressive tense (e.g., #8 `Tā tūmau...`).
+3.  **Case System:** Niuean uses an ergative-absolutive case system to mark nouns.
+    *   **Ergative Case** (marks the subject of a transitive verb):
+        *   `e`: for pronouns (e.g., `e ia`, `e au`) and proper nouns (e.g., `e Mele`).
+        *   `he`: for common nouns (e.g., `he moa`, `he tama`).
+    *   **Absolutive Case** (marks the subject of an intransitive verb OR the object of a transitive verb):
+        *   `a`: for pronouns (e.g., `a au`, `a Sione`) and proper nouns.
+        *   `e`: for common nouns (e.g., `e ika`, `e fakatino`).
+4.  **Special Verbs:** Verbs of possession/existence like `fai` ("to have") and `muhu` ("to have plenty") appear to take an absolutive subject, treating the possessor as the subject of an intransitive-like verb (e.g., #4 `Ne fai faiaoga e kāmuta`, where `e kāmuta` is absolutive; #11 `To muhu ika a Mele`, where `a Mele` is absolutive).
+5.  **Relative Clauses:**
+    *   They follow the noun they modify.
+    *   They are introduced by tense-specific markers: `ne` for past relative clauses (e.g., #9 `...ika ne takafaga...`) and `ka` for future relative clauses (e.g., #12 `...tama ... ka kitia...`).
+    *   This can lead to ambiguity if a clause follows two nouns it could plausibly modify.
+
+With these rules, I can now solve the questions.
+
+---
+### Q1: Translations into English
+
+**(a) Fai moa noa.**
+*   **Breakdown:**
+    *   `Fai`: There are (present tense of "to have/exist").
+    *   `moa`: birds.
+    *   `noa`: only.
+*   **Reasoning:** The sentence follows the structure `Verb + Noun + Adverb`, similar to sentence #3 (`Muhu moa tūmau` - "There are always plenty of birds"). It describes a state of existence.
+*   **Translation:** There are only birds.
+
+**(b) Kua holoholo foki he faiaoga ne takafaga e au a ia.**
+*   **Breakdown:**
+    *   `Kua holoholo`: has washed (perfective aspect).
+    *   `foki`: also.
+    *   `he faiaoga`: (ergative) the teacher. This is the subject of "washed".
+    *   `ne takafaga e au`: a past relative clause, "that I caught" (`ne`: past RC marker; `takafaga`: caught; `e au`: (ergative) I).
+    *   `a ia`: (absolutive) him/her/it. This is the object of "washed".
+*   **Reasoning:** The relative clause `ne takafaga e au` follows the noun `faiaoga`, so it modifies "teacher". The main clause is `Kua holoholo foki he [subject] a [object]`.
+*   **Translation:** The teacher that I caught has also washed him/her/it.
+
+**(c) To muhu vaka e tama ka holoholo he moa.**
+*   **Breakdown:**
+    *   Main Clause: `To muhu vaka e tama` -> "The child will have plenty of canoes". (`To`: future; `muhu`: have plenty; `vaka`: canoes; `e tama`: (absolutive) the child). The verb `muhu` takes an absolutive subject.
+    *   Relative Clause: `ka holoholo he moa` -> "that the bird will wash". (`ka`: future RC marker; `holoholo`: wash; `he moa`: (ergative) the bird).
+*   **Reasoning:** The problem states there are two possible translations. This arises from ambiguity in what the relative clause modifies. It follows both `vaka` (canoes) and `tama` (the child).
+    *   **Possibility 1:** The RC modifies `tama`. The sentence structure is `To muhu vaka [e tama ka holoholo he moa]`.
+    *   **Possibility 2:** The RC modifies `vaka`. The sentence structure is `To muhu [vaka ka holoholo he moa] e tama`.
+*   **Translations:**
+    1.  The child that the bird will wash will have plenty of canoes.
+    2.  The child will have plenty of canoes that the bird will wash.
+
+---
+### Q2: Translations into Niuean
+
+**(a) He will also read.**
+*   **Breakdown:**
+    *   will: `To`
+    *   read: `totou` (intransitive)
+    *   also: `foki`
+    *   He: `ia`. As the subject of an intransitive verb, it takes the absolutive marker `a`. So, `a ia`.
+*   **Reasoning:** The structure is `Tense + Verb + Adverb + Subject`.
+*   **Translation:** To totou foki a ia.
+
+**(b) Sione has only had fish that the teacher will eat.**
+*   **Breakdown:**
+    *   has had: `Kua fai` (perfective of "to have"). `fai` takes an absolutive subject.
+    *   Sione: `Sione`. As the subject, it becomes `a Sione`.
+    *   only fish: `ika noa`.
+    *   that the teacher will eat (RC): `ka kai he faiaoga`. (`ka`: future RC marker; `kai`: eat; `he faiaoga`: (ergative) the teacher).
+*   **Reasoning:** The main clause is "Sione has only had fish" (`Kua fai ika noa a Sione`). The relative clause modifies `ika` (fish) and is placed after the main clause.
+*   **Translation:** Kua fai ika noa a Sione ka kai he faiaoga.
+
+**(c) The teacher that Mele saw built the canoe.**
+*   **Breakdown:**
+    *   built: `tā`. Past tense, so `Ne tā`. It's a transitive verb.
+    *   the canoe: `vaka`. As the object, it takes the absolutive marker `e`. So, `e vaka`.
+    *   The subject is "The teacher that Mele saw".
+        *   The teacher: `faiaoga`.
+        *   that Mele saw (RC): `ne kitia e Mele` (`ne`: past RC marker; `kitia`: saw; `e Mele`: (ergative) Mele).
+    *   The entire subject phrase "the teacher that Mele saw" (`faiaoga ne kitia e Mele`) is the agent of "built", so it needs an ergative marker. The head noun is `faiaoga` (common noun), so the marker is `he`.
+*   **Reasoning:** The full sentence structure is `Tense + Verb + Ergative Subject (with embedded RC) + Absolutive Object`.
+*   **Translation:** Ne tā he faiaoga ne kitia e Mele e vaka.
+
+**(d) There have always been plenty of carpenters.**
+*   **Breakdown:**
+    *   There have been: Perfective existential, so it starts with `Kua`.
+    *   plenty of: `muhu`.
+    *   carpenters: `kāmuta`.
+    *   always: `tūmau`.
+*   **Reasoning:** This sentence is structurally parallel to #3 (`Muhu moa tūmau` - "There are always plenty of birds"), but in the perfective aspect. The aspect marker `Kua` is placed at the beginning.
+*   **Translation:** Kua muhu kāmuta tūmau.
+
+---
+### Q3: Niuean Grammar Observations
+
+Based on the data provided, several key features of Niuean grammar can be observed.
+
+1.  **Word Order:** The language is verb-initial. The basic clause structure is `(Tense/Aspect) + Verb + Subject + Object`, although arguments can be shifted. Adverbs typically follow the verb or object.
+
+2.  **Ergative-Absolutive Case System:** Nouns are marked for case based on their grammatical role.
+    *   The **ergative** case marks the subject (agent) of a transitive verb. The marker is `e` for pronouns and proper nouns (e.g., `e ia`, `e Mele`) and `he` for common nouns (e.g., `he tama`).
+    *   The **absolutive** case marks the subject of an intransitive verb or the object of a transitive verb. The marker is `a` for pronouns and proper nouns (e.g., `a au`, `a Sione`) and `e` for common nouns (e.g., `e ika`).
+
+3.  **Tense and Aspect:** Tense and aspect are indicated by particles that precede the verb.
+    *   `Ne` marks the past tense.
+    *   `To` marks the future tense.
+    *   `Kua` marks the perfective aspect (completed action, similar to English "have done").
+    *   The absence of a marker signifies the present or progressive tense.
+
+4.  **Relative Clauses:**
+    *   Relative clauses follow the noun they modify.
+    *   They are introduced by tense-specific particles: `ne` for past events (e.g., `ne takafaga` - "that caught") and `ka` for future events (e.g., `ka kitia` - "that will see").
+    *   This structure can create ambiguity, as seen in Q1(c), where a relative clause could plausibly modify either of two preceding nouns.
+
+5.  **Possessive/Existential Verbs:** Verbs like `fai` ("to have, there are") and `muhu` ("to have plenty") behave differently from standard transitive verbs. They take an absolutive-marked subject rather than an ergative one, patterning more like intransitive verbs.
+
+```json
+[
+  {
+    "question_id": "Q1_a",
+    "answer": "There are only birds.",
+    "reasoning": "The sentence consists of `fai` ('there are'), `moa` ('birds'), and `noa` ('only'). It follows the Verb-Noun-Adverb structure seen in sentence #3, `Muhu moa tūmau` ('There are always plenty of birds'), making it an existential statement."
+  },
+  {
+    "question_id": "Q1_b",
+    "answer": "The teacher that I caught has also washed him/her/it.",
+    "reasoning": "The main verb is `Kua holoholo` ('has washed'). The subject is `he faiaoga` ('the teacher'), which is modified by the following relative clause `ne takafaga e au` ('that I caught'). The object is `a ia` ('him/her/it'). The word `foki` means 'also'."
+  },
+  {
+    "question_id": "Q1_c",
+    "answer": "1. The child that the bird will wash will have plenty of canoes.\n2. The child will have plenty of canoes that the bird will wash.",
+    "reasoning": "The sentence is ambiguous. The main clause is `To muhu vaka e tama` ('The child will have plenty of canoes'). The relative clause `ka holoholo he moa` ('that the bird will wash') follows two nouns, `vaka` ('canoes') and `tama` ('the child'). It can modify either one, leading to two distinct translations."
+  },
+  {
+    "question_id": "Q2_a",
+    "answer": "To totou foki a ia.",
+    "reasoning": "`To` is the future marker. `totou` means 'read'. `foki` means 'also'. 'He' (`ia`) is the subject of an intransitive verb, so it takes the absolutive marker `a`, becoming `a ia`."
+  },
+  {
+    "question_id": "Q2_b",
+    "answer": "Kua fai ika noa a Sione ka kai he faiaoga.",
+    "reasoning": "The main clause is 'Sione has only had fish', which translates to `Kua fai ika noa a Sione`. `Kua` is the perfective marker, `fai` is 'have', `ika` is 'fish', `noa` is 'only', and `a Sione` is the absolutive subject. The relative clause 'that the teacher will eat' modifies 'fish' and is `ka kai he faiaoga`."
+  },
+  {
+    "question_id": "Q2_c",
+    "answer": "Ne tā he faiaoga ne kitia e Mele e vaka.",
+    "reasoning": "The main verb is 'built' (`tā`) in the past (`Ne`). The object is 'the canoe' (`e vaka`). The subject is the complex phrase 'The teacher that Mele saw'. This is `faiaoga ne kitia e Mele`. As the ergative subject of `tā`, it takes the `he` marker: `he faiaoga ne kitia e Mele`."
+  },
+  {
+    "question_id": "Q2_d",
+    "answer": "Kua muhu kāmuta tūmau.",
+    "reasoning": "This sentence structure mirrors #3, `Muhu moa tūmau`. 'There have been' requires the perfective marker `Kua`. `muhu` means 'plenty of', `kāmuta` are 'carpenters', and `tūmau` means 'always'. The structure is Aspect-Verb-Noun-Adverb."
+  },
+  {
+    "question_id": "Q3_1",
+    "answer": "Niuean is a verb-initial language with an ergative-absolutive case system. The subject of a transitive verb is marked as ergative (`e` for pronouns/proper nouns, `he` for common nouns), while the subject of an intransitive verb and the object of a transitive verb are marked as absolutive (`a` for pronouns/proper nouns, `e` for common nouns). Tense/aspect is marked by pre-verbal particles (`Ne` for past, `To` for future, `Kua` for perfective). Relative clauses follow the noun they modify and are introduced by tense-specific markers (`ne` for past, `ka` for future). Some verbs, like `fai` ('to have') and `muhu` ('to have plenty'), take an absolutive subject, unlike typical transitive verbs.",
+    "reasoning": "This summary is derived from the patterns observed in the 13 sample sentences. Key observations include the VSO-like word order, the distinct sets of markers for ergative and absolutive cases, the functions of pre-verbal tense/aspect markers, and the structure of relative clauses. The special behavior of possessive verbs like `fai` and `muhu` is also a notable feature identified from the data."
+  }
+]
+```

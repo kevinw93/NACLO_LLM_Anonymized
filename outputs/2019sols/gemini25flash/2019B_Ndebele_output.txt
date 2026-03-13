@@ -1,0 +1,104 @@
+Model: gemini-2.5-flash
+Generation Time: 50.41 seconds
+Timestamp: 2025-11-17 16:24:46
+================================================================================
+
+Before providing the solutions, I will analyze the patterns and information gathered from the provided Ndebele phrases and their English translations.
+
+**1. Vocabulary and Noun Prefixes:**
+*   `Yebo` = Yes
+*   `na?` = Question marker (yes/no)
+*   `angithi?` = Tag question marker ("isn't he/she/it/they?")
+*   `njani?` = how?
+*   `ngaphi?` = where?
+*   `itiye` = tea
+*   `indebele` = Ndebele
+*   `Umfana` (boy) -> `Abafana` (boys) - shows `um-` is singular prefix and `aba-` is plural prefix for this noun class.
+*   `Umngane` (friend) -> `Abangane` (friends) - confirms the `um-/aba-` pattern.
+*   `Abantwana` (children) - Given this plural form, it's highly probable the singular form for "child" is `Umntwana`, following the `um-/aba-` pattern.
+*   `Ubaba` (Father) - Appears to be a singular noun that takes `u-` for its subject prefix in a verb.
+
+**2. Verb Stems:**
+*   `-funa` = want
+*   `-hamba` = go
+*   `-pheka` = cook
+*   `-funda` = learn
+*   `-natha` = drink
+*   `-thunga` = sew
+*   `-bona` = see
+*   `-khuluma` = speak
+
+**3. Pronoun Prefixes (Subject Markers):**
+These prefixes attach to the verb stem to indicate the subject.
+*   `Ngi-` = I (e.g., `Ngifunda` = I learn)
+*   `Si-` = We (e.g., `Sifuna` = We want)
+*   `U-` = You (singular) OR He/She (referring to a singular person, e.g., `Umfana` or `Umngane`, or `Ubaba`)
+    *   e.g., `Uthunga` = You sew, `Ufuna` = He/She wants (or you want)
+*   `Ba-` = They (referring to plural people, e.g., `Abafana`, `Abangane`, `Abantwana`)
+    *   e.g., `Bafuna` = They want
+
+**4. Infinitive Marker:**
+*   `uku-` + verb stem = to VERB
+    *   e.g., `ukuhamba` (to go), `ukupheka` (to cook), `ukufunda` (to learn), `ukunatha` (to drink), `ukukhuluma` (to speak).
+    *   By inference, `ukubona` would mean "to see".
+
+**5. Present Tense / Continuous Marker (`-ya-`):**
+This is the most inconsistent pattern.
+*   The `-ya-` marker appears in some continuous/present tense forms (e.g., `ngiyafuna`, `uyafuna`, `uyapheka`, `baya-hamba`, `uyanatha`).
+*   However, it is absent in other clear present tense/continuous forms (e.g., `Sifuna ukuhamba` (We want), `Ngifunda ukupheka` (I am learning), `Abafana banatha itiye na?` (Are the boys drinking?), `Uthunga njani?` (How do you sew?), `Ubaba ubona umfana.` (Father sees)).
+*   **Conclusion for `-ya-`:** There isn't a clear, consistent rule for the presence or absence of `-ya-` based solely on the provided examples. It appears to be optional, or dependent on nuances not explicitly defined. For translation, I will prioritize matching direct examples. If an example without `-ya-` is found for a similar subject-verb construction, I will opt for that simpler form unless there's a strong reason (like a direct parallel) to include `-ya-`.
+
+**6. Question Structures:**
+*   Yes/No questions: End with `na?` (e.g., `Ufuna ukunatha itiye na?`)
+*   Tag questions: End with `angithi?` (e.g., `Ufuna ukufunda angithi?`)
+*   Wh-questions: The interrogative word (`njani?`, `ngaphi?`) often appears at the end of the sentence (`Uthunga njani?`, `Ngifunda ... ngaphi?`).
+*   However, some Wh-words can also appear at the beginning, incorporating the subject prefix (e.g., `Banjani abantwana?` (How are the children? - `ba-njani`), `Bangaphi abafana?` (Where are the boys? - `ba-ngaphi`)). For a singular subject, this would imply `U-njani` or `U-ngaphi`.
+
+---
+
+Here are the solutions following the instructions:
+
+```json
+[
+  {
+    "question_id": "B1_1",
+    "answer": "Yes, they want to see.",
+    "reasoning": "Breaking down 'Yebo, bafuna ukubona.':\n- 'Yebo' translates to 'Yes' (from 'Yebo, ngiyafuna.').\n- 'bafuna': 'ba-' is the 'they' prefix (from 'Abafana bayahamba.'), and '-funa' is the verb stem for 'want' (from 'ngiyafuna.'). Therefore, 'bafuna' means 'they want'. The absence of '-ya-' is consistent with examples like 'Sifuna ukuhamba.' (We want).\n- 'ukubona': 'uku-' is the infinitive marker 'to' (from 'ukuhamba', 'ukupheka', etc.), and '-bona' is the verb stem for 'see' (from 'Ubaba ubona umfana.'). Thus, 'ukubona' means 'to see'."
+  },
+  {
+    "question_id": "B1_2",
+    "answer": "How does the boy learn to sew?",
+    "reasoning": "Breaking down 'Umfana ufunda ukuthunga njani?':\n- 'Umfana' translates to 'The boy' (from 'Umfana uyapheka.').\n- 'ufunda': 'u-' is the 'he' prefix (for 'Umfana'), and '-funda' is the verb stem for 'learn' (from 'Ngifunda ukupheka.'). So, 'ufunda' means 'he learns' or 'he is learning'. The absence of '-ya-' is consistent with 'Ngifunda'.\n- 'ukuthunga': 'uku-' is the infinitive marker 'to', and '-thunga' is the verb stem for 'sew' (from 'Uthunga njani?'). So, 'ukuthunga' means 'to sew'.\n- 'njani?' translates to 'how?' (from 'Uthunga njani?').\nCombining these elements, a natural English phrasing is 'How does the boy learn to sew?'."
+  },
+  {
+    "question_id": "B1_3",
+    "answer": "Where are we?",
+    "reasoning": "Breaking down 'Singaphi?':\n- 'Si-' is the 'we' prefix (from 'Sifuna ukuhamba.').\n- 'ngaphi?' translates to 'where?' (from 'Ngifunda ukukhuluma indebele ngaphi?').\nThis structure directly mirrors 'Bangaphi abafana?' (Where are the boys?), where 'Bangaphi' combines 'ba-' (they) with 'ngaphi' (where). Thus, 'Singaphi' combines 'Si-' (we) with 'ngaphi' (where)."
+  },
+  {
+    "question_id": "B1_4",
+    "answer": "I am cooking tea.",
+    "reasoning": "Breaking down 'Ngipheka itiye.':\n- 'Ngi-' is the 'I' prefix (from 'Ngiyafuna.').\n- '-pheka' is the verb stem for 'cook' (from 'Umfana uyapheka.'). So, 'Ngipheka' means 'I cook' or 'I am cooking'. The absence of '-ya-' is consistent with 'Ngifunda'.\n- 'itiye' translates to 'tea' (from 'Abafana banatha itiye na?')."
+  },
+  {
+    "question_id": "B2_1",
+    "answer": "Unjani umntwana?",
+    "reasoning": "Breaking down 'How is the child?':\n- 'How is (s)he?': From 'Banjani abantwana?' (How are the children?), we infer that 'Banjani' is 'ba-' (they) + 'njani' (how). For a singular 'child', the subject prefix would be 'u-', leading to 'Unjani'.\n- 'the child': From 'Abantwana' (the children), we infer the singular form for 'child' to be 'Umntwana', following the 'um-/aba-' pattern seen in 'Umfana/Abafana' and 'Umngane/Abangane'.\n- The structure 'Unjani umntwana?' places the subject after the interrogative pronoun, similar to 'Banjani abantwana?'."
+  },
+  {
+    "question_id": "B2_2",
+    "answer": "Sifunda ukupheka angithi?",
+    "reasoning": "Breaking down 'We are learning to cook, aren't we?':\n- 'We are learning': 'Si-' is the 'we' prefix (from 'Sifuna ukuhamba.'). '-funda' is the verb stem for 'learn' (from 'Ngifunda ukupheka.'). Combining them gives 'Sifunda'. The absence of '-ya-' is consistent with 'Ngifunda'.\n- 'to cook': 'ukupheka' (from 'Ngifunda ukupheka.').\n- 'aren't we?': 'angithi?' is the general tag question marker (from 'Ufuna ukufunda angithi?').\nCombining these elements yields 'Sifunda ukupheka angithi?'."
+  },
+  {
+    "question_id": "B2_3",
+    "answer": "Yebo, bakhuluma.",
+    "reasoning": "Breaking down 'Yes, they are speaking.':\n- 'Yes': 'Yebo' (from 'Yebo, ngiyafuna.').\n- 'they are speaking': 'ba-' is the 'they' prefix (from 'Abafana bayahamba.'). '-khuluma' is the verb stem for 'speak' (from 'ukukhuluma'). For 'they are speaking', based on examples like 'Abafana banatha itiye na?' (Are the boys drinking tea?) where 'banatha' (they drink/are drinking) omits '-ya-', 'bakhuluma' (they speak/are speaking) is the consistent choice without '-ya-'.\nThus, 'Yebo, bakhuluma.' is the translation."
+  },
+  {
+    "question_id": "B2_4",
+    "answer": "Bafuna ukubona ubaba na?",
+    "reasoning": "Breaking down 'Do they want to see the father?':\n- 'Do they want': 'ba-' is the 'they' prefix, and '-funa' is the verb stem for 'want'. 'Bafuna' (they want) is used in B1.a, confirming the form without '-ya-'.\n- 'to see': 'uku-' is the infinitive marker, and '-bona' is the verb stem for 'see' (from 'Ubaba ubona umfana.'). Thus, 'ukubona'.\n- 'the father': 'Ubaba' (from 'Ubaba ubona umfana.').\n- 'Do... ?': 'na?' is the yes/no question marker at the end of the sentence (from 'Abafana banatha itiye na?', 'Ufuna ukunatha itiye na?').\nCombining these elements in the order of a Ndebele question (verb phrase + object + question marker) yields 'Bafuna ukubona ubaba na?'."
+  }
+]
+```

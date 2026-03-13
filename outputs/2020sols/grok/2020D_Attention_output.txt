@@ -1,0 +1,87 @@
+Model: grok-4-fast-reasoning
+Generation Time: 230.06 seconds
+Timestamp: 2026-01-28 02:08:11
+================================================================================
+
+[
+  {
+    "question_id": "D1_1",
+    "answer": "2",
+    "reasoning": "Sentence A has connections involving up to word 14, matching the 14-word sentence 2, and specifically 14→13 wonderful to language fits the post-nominal modifier pattern for head 9-6."
+  },
+  {
+    "question_id": "D1_2",
+    "answer": "5",
+    "reasoning": "Sentence B has None for head 9-6 (no PP connections), and connections like 8→2, 11→2 for head 5-4 fitting the perturbed structure of sentence 5 with odd attendances to word 2 (plato); 7-6 8→9 exam-was, 11→12 it-was as subject-copula pairs."
+  },
+  {
+    "question_id": "D1_3",
+    "answer": "7",
+    "reasoning": "Sentence C has two adj-noun connections in 7-6: 4→5 beautiful-science, 12→13 human-experience, uniquely matching sentence 7's structure; 9-6 10→12 to-human (prep to PP head, skipping det)."
+  },
+  {
+    "question_id": "D1_4",
+    "answer": "6",
+    "reasoning": "Sentence D has 12→13 to-the in 9-6 (prep to det start of PP), 4→5 beautiful-my in 7-6 (perturbed modifier), None for 5-4 (no direct objects), matching sentence 6's structure."
+  },
+  {
+    "question_id": "D1_5",
+    "answer": "4",
+    "reasoning": "Sentence E matches the grammatical 'In July...' (sentence 4) with 3→4 we-will (subject-aux), 11→12 resume-again (object-adv); 9-6 10→12 her-again (perturbed but fits); 5-4 5→1 interview-In (verb to adverbial prep); 7-6 fills to det/poss-noun pairs."
+  },
+  {
+    "question_id": "D1_6",
+    "answer": "1",
+    "reasoning": "Sentence F has 1→2 My-experience, 5→6 's-House in 7-6 (det/poss-noun); 7→8 of-Gelberg in 9-6 (prep-object); None for 5-4 (no direct objects), uniquely matching sentence 1."
+  },
+  {
+    "question_id": "D1_7",
+    "answer": "3",
+    "reasoning": "Sentence G is the ungrammatical 'At July...' (sentence 3), similar to E=4 but with no 5→1 connection in 5-4 due to grammaticality affecting verb-adverbial link; other entries mirror E."
+  },
+  {
+    "question_id": "D2_1",
+    "answer": "1→2",
+    "reasoning": "(a) For B=5 head 8-11: The→plato (det-noun, fitting consecutive low-high pattern for determiners to heads in perturbed structure)."
+  },
+  {
+    "question_id": "D2_2",
+    "answer": "10→12",
+    "reasoning": "(b) For C=7 head 9-6: to→human (prep to PP head noun, skipping det 'the'), consistent with prep-object pattern skipping articles."
+  },
+  {
+    "question_id": "D2_3",
+    "answer": "2→3",
+    "reasoning": "(c) For D=6 head 8-11: that→a (complementizer to start of dependent clause 'a beautiful...'), matching pattern in C=7's 2→3."
+  },
+  {
+    "question_id": "D2_4",
+    "answer": "6→7, 10→11",
+    "reasoning": "(d) For E=4 head 7-6: the→candidate, her→resume (det-noun, poss-noun), consecutive modifier-head pairs consistent with head 7-6 pattern."
+  },
+  {
+    "question_id": "D2_5",
+    "answer": "3→4",
+    "reasoning": "(e) For F=1 head 8-11: with→Gelda (prep to object of PP), consecutive low-high, fitting head 8-11 pattern for phrase heads to dependents."
+  },
+  {
+    "question_id": "D2_6",
+    "answer": "3→4, 11→12",
+    "reasoning": "(f) For G=3 head 8-11: we→will, resume→again (same as E=4, since words 2-12 identical; subject-aux, object-adv links unaffected by word 1)."
+  },
+  {
+    "question_id": "D2_7",
+    "answer": "6→7, 10→11",
+    "reasoning": "(g) For G=3 head 7-6: the→candidate, her→resume (same as E=4's (d), modifier-noun pairs unaffected by initial prep difference)."
+  },
+  {
+    "question_id": "D2_8",
+    "answer": "10→12",
+    "reasoning": "(h) For G=3 head 9-6: her→again (same as E=4, unaffected by word 1; poss skipping to adv in the VP structure)."
+  },
+  {
+    "question_id": "D2_9",
+    "answer": "None",
+    "reasoning": "(i) For G=3 head 5-4: None (ungrammatical 'At July' lacks strong verb-adverbial connection from interview to 'At', unlike grammatical 'In July' in E; no object-verb or similar strong link)."
+  }
+]

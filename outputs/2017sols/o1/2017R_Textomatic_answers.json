@@ -1,0 +1,37 @@
+[
+  {
+    "question_id": "R1_a",
+    "answer": "<UN> → <PREMIER",
+    "reasoning": "Special-case rule for ‘UN’ becoming ‘PREMIER’."
+  },
+  {
+    "question_id": "R1_b",
+    "answer": "<DEUX> → <DEUXIÈME",
+    "reasoning": "Special-case rule for ‘DEUX’ becoming ‘DEUXIÈME’."
+  },
+  {
+    "question_id": "R1_c",
+    "answer": "<CINQ> → <CINQUIÈME",
+    "reasoning": "Special-case rule for ‘CINQ’ becoming ‘CINQUIÈME’."
+  },
+  {
+    "question_id": "R1_d",
+    "answer": "<NEUF> → <NEUVIÈME",
+    "reasoning": "Special-case rule for ‘NEUF’ becoming ‘NEUVIÈME’."
+  },
+  {
+    "question_id": "R1_e",
+    "answer": "<(.*)> → <\\1IÈME",
+    "reasoning": "Default rule: add ‘IÈME’ to any other input."
+  },
+  {
+    "question_id": "R2",
+    "answer": "Exclude ‘-et-’ cases from the ‘un’ rule so VINGT-ET-UN becomes VINGT-ET-UNIÈME.",
+    "reasoning": "Prevents matching <UN> inside ‘vingt-et-un’ and avoids turning it into ‘premier’."
+  },
+  {
+    "question_id": "R3",
+    "answer": "Use the same rules in reverse order, swapping each replacement’s right side back to the left side.",
+    "reasoning": "By ‘undoing’ rules bottom-to-top, we convert ordinals back to cardinals."
+  }
+]

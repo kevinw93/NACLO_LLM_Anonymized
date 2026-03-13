@@ -1,0 +1,82 @@
+[
+  {
+    "question_id": "D1_1",
+    "answer": "6",
+    "reasoning": "Sentence A's entry for Head 8-11 is `12 -> 13`. This matches Sentence 6 (`...a12 lot13...`), where a determiner points to the noun it modifies. This assignment is confirmed by checking Sentence 6 against the other known values for Row A for the other heads."
+  },
+  {
+    "question_id": "D1_2",
+    "answer": "5",
+    "reasoning": "Sentence B's entry for Head 7-6 is `8 -> 9, 11 -> 12`. Sentence 5 is the only sentence with possessives in exactly these positions (`its8 eggs9` and `its11 webbed12`)."
+  },
+  {
+    "question_id": "D1_3",
+    "answer": "3",
+    "reasoning": "Sentence C's entry for Head 7-6 is `4 -> 5, 12 -> 13`. Sentence 3 is the only sentence with possessives in exactly these positions (`'s4 meeting5` and `'s12 plans13`)."
+  },
+  {
+    "question_id": "D1_4",
+    "answer": "2",
+    "reasoning": "Sentence D's entry for Head 7-6 is `4 -> 5`. After assigning sentences 3 and 5, Sentence 2 is the only remaining sentence with a possessive at position 4 (`'s4 models5`)."
+  },
+  {
+    "question_id": "D1_5",
+    "answer": "7",
+    "reasoning": "Sentence E's entry for Head 8-11 is `3 -> 4, 11 -> 12`. This pattern of two determiner-modifier connections perfectly matches Sentence 7 (`a3 beautiful4` and `the11 human12`)."
+  },
+  {
+    "question_id": "D1_6",
+    "answer": "1",
+    "reasoning": "Sentence F's entry for Head 7-6 is `1 -> 2, 5 -> 6`. Sentence 1 is the only remaining sentence with two possessives in these positions (`My1 experience2` and `'s5 House6`)."
+  },
+  {
+    "question_id": "D1_7",
+    "answer": "4",
+    "reasoning": "Sentence 4 is the only sentence remaining after all others have been uniquely assigned based on strong pattern matches."
+  },
+  {
+    "question_id": "D2_a",
+    "answer": "1 -> 2, 4 -> 5, 8 -> 9, 11 -> 12",
+    "reasoning": "This is for Sentence B=5 and Head 8-11. The pattern is Determiner -> Next Word. Sentence 5 has four determiners: `The1`, `a4`, `its8`, and `its11`, resulting in four connections."
+  },
+  {
+    "question_id": "D2_b",
+    "answer": "None",
+    "reasoning": "This is for Sentence C=3 and Head 9-6. The pattern for this head is linking specific prepositions (`of`, `into`) to their objects. Sentence 3's prepositions are `At` and `about`, which do not fit the pattern, so there are no connections."
+  },
+  {
+    "question_id": "D2_c",
+    "answer": "9 -> 10",
+    "reasoning": "This is for Sentence D=2 and Head 8-11. The pattern is Determiner -> Next Word. Sentence 2 has one relevant determiner: `the9`, which modifies the phrase `inner10 workings11`. It connects to the next word, `inner10`."
+  },
+  {
+    "question_id": "D2_d",
+    "answer": "None",
+    "reasoning": "This is for Sentence E=7 and Head 7-6. The pattern for this head is Possessive -> Noun. Sentence 7 contains no possessive words."
+  },
+  {
+    "question_id": "D2_e",
+    "answer": "1 -> 2",
+    "reasoning": "This is for Sentence F=1 and Head 8-11. The pattern is Determiner -> Next Word. Sentence 1 has the possessive determiner `My1`, which connects to the following noun `experience2`."
+  },
+  {
+    "question_id": "D2_f",
+    "answer": "6 -> 7, 10 -> 11",
+    "reasoning": "This is for Sentence G=4 and Head 8-11. The pattern is Determiner -> Next Word. Sentence 4 has two determiners: `the6` (connecting to `candidate7`) and `her10` (connecting to `resumé11`)."
+  },
+  {
+    "question_id": "D2_g",
+    "answer": "10 -> 11",
+    "reasoning": "This is for Sentence G=4 and Head 7-6. The pattern is Possessive -> Noun. Sentence 4 has one possessive, `her10`, which modifies `resumé11`."
+  },
+  {
+    "question_id": "D2_h",
+    "answer": "None",
+    "reasoning": "This is for Sentence G=4 and Head 9-6. The pattern for this head is linking specific prepositions (`of`, `into`) to their objects. Sentence 4's preposition is `In`, which does not fit the pattern, so there are no connections."
+  },
+  {
+    "question_id": "D2_i",
+    "answer": "10 -> 7",
+    "reasoning": "This is for Sentence G=4 and Head 5-4. The pattern is Anaphora -> Antecedent. The pronoun `her10` refers to its antecedent `the candidate7`. The head connects the pronoun `her` (word 10) to the head of the antecedent phrase, `candidate` (word 7)."
+  }
+]

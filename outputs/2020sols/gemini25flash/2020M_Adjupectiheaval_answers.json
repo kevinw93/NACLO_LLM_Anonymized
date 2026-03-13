@@ -1,0 +1,57 @@
+[
+  {
+    "question_id": "M1_1",
+    "answer": "A",
+    "reasoning": "Sentence (A) 'At this restaurant, the cake is delicious yet satisfying' is spam. The conjunction 'yet' implies a contrast or unexpected relationship. However, 'delicious' and 'satisfying' are both positive and complementary attributes for a cake. Using 'yet' in this context creates a semantic awkwardness or an unnatural phrasing, which is characteristic of a spambot trying to mimic human language but misapplying a conjunction, similar to the problem's explanation of reviews that 'might not make sense'."
+  },
+  {
+    "question_id": "M2_1",
+    "answer": "real",
+    "reasoning": "Review 13 'Kemplang menggugah selera serta baik' combines two positive attributes ('menggugah selera' and 'baik') with 'serta'. This pattern (P serta P) is consistent with real reviews (e.g., #3, #9). While 'menggugah selera' is a new attribute for Kemplang in the given examples, only one new attribute paired with an existing one does not trigger the spam rule."
+  },
+  {
+    "question_id": "M2_2",
+    "answer": "spam",
+    "reasoning": "Review 14 'Rengginang hambar namun sehat' combines a negative attribute ('hambar') with a positive one ('sehat') using 'namun' in the order N namun P. In the provided real reviews (1-12), 'namun' consistently appears in the order P namun N (e.g., #1, #6, #7). This deviation from the observed pattern for 'namun' is a strong indicator of spam. Additionally, both 'hambar' and 'sehat' are entirely new attributes not previously associated with Rengginang in the examples (1-12), indicating a statistical anomaly typical of spambot generation."
+  },
+  {
+    "question_id": "M2_3",
+    "answer": "spam",
+    "reasoning": "Review 15 'Poffertjes baik namun tidak berminyak' combines two positive attributes ('baik' and 'tidak berminyak') using 'namun'. The initial problem (M1) established that connecting two complementary positive attributes with a contrastive conjunction like 'yet' (or 'namun' in this context) results in semantic awkwardness, making it spam (P namun P). This directly violates the pattern observed in real reviews (1-12) where 'namun' always connects attributes of opposite polarity."
+  },
+  {
+    "question_id": "M2_4",
+    "answer": "real",
+    "reasoning": "Review 16 'Rempeyek tidak manis serta berminyak' combines two negative attributes ('tidak manis' and 'berminyak') with 'serta'. This pattern (N serta N) is consistent with real reviews (e.g., #10, #11, #12). While 'tidak manis' is a new attribute for Rempeyek in the given examples, only one new attribute paired with an existing one does not trigger the spam rule."
+  },
+  {
+    "question_id": "M2_5",
+    "answer": "real",
+    "reasoning": "Review 17 'Lemang manis dan sehat' combines two positive attributes ('manis' and 'sehat') with 'dan'. This pattern (P dan P) is consistent with real reviews (e.g., #2, #4, #5, #8). Both 'manis' and 'sehat' are attributes already associated with Lemang in the provided examples (1-12)."
+  },
+  {
+    "question_id": "M2_6",
+    "answer": "spam",
+    "reasoning": "Review 18 'Onde-onde sehat namun tidak menggugah selera' combines a positive attribute ('sehat') with a negative one ('tidak menggugah selera') using 'namun' in the order P namun N, which is consistent with real reviews (e.g., #1, #6, #7). However, both 'sehat' and 'tidak menggugah selera' are entirely new attributes not previously associated with Onde-onde in the examples (1-12). The appearance of two completely novel attributes for a food item is a statistical anomaly, indicative of a spambot generating random descriptors rather than relying on established food characteristics from the learned data."
+  },
+  {
+    "question_id": "M3_1",
+    "answer": "real",
+    "reasoning": "Review 28 'Onde-onde halus serta mahal'. The dictionary describes Onde-onde as a 'cake,' which is consistent with 'halus' (soft/smooth). 'Mahal' (expensive) is a plausible attribute for any food. The conjunction 'serta' connecting a positive 'halus' and a negative 'mahal' (P serta N) is now considered plausible, as the 'confusing real' review #20 'Rengginang halus serta hambar' (P serta N) demonstrates that human reviews can exhibit such conjunction patterns, despite an algorithm's initial confusion."
+  },
+  {
+    "question_id": "M3_2",
+    "answer": "real",
+    "reasoning": "Review 29 'Rempeyek lembut namun tidak sehat'. The dictionary describes Rempeyek as a 'fried snack' or 'cracker,' which typically implies crunchiness. 'Lembut' (soft/tender) seems contradictory, like 'pudding crunchy.' However, the 'confusing real' reviews #20 'Rengginang halus' and #25 'Rengginang lembut' show that crackers (like Rengginang) can be described as 'soft' or 'smooth' by real humans. Therefore, 'lembut' for Rempeyek is a plausible, albeit atypical, human description. 'Tidak sehat' (not healthy) is a plausible attribute, and the P namun N conjunction is acceptable."
+  },
+  {
+    "question_id": "M3_3",
+    "answer": "real",
+    "reasoning": "Review 30 'Kemplang garing dan tidak berminyak'. The dictionary describes Kemplang as a 'fish cracker,' which is consistent with 'garing' (crispy/crunchy). 'Tidak berminyak' (not oily) is a plausible positive attribute for food. The conjunction 'dan' correctly connects two positive attributes (P dan P), which is a common and acceptable pattern in human reviews."
+  },
+  {
+    "question_id": "M3_4",
+    "answer": "spam",
+    "reasoning": "Review 31 'Poffertjes garing serta hambar'. The dictionary explicitly defines Poffertjes as a 'soft traditional Dutch cake... smaller and **sweet**'. 'Hambar' (bland) directly contradicts this fundamental, defining characteristic of Poffertjes being 'sweet.' This is a direct factual inconsistency akin to the 'pudding is crunchy' example given in the problem, which human-aware NLP should identify as highly unlikely for a real review. While 'garing' (crispy) is also atypical for a 'soft cake,' the contradiction of 'sweet' with 'bland' is a more definitive violation of the given knowledge."
+  }
+]

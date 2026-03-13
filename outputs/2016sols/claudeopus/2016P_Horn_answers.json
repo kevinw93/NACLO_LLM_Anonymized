@@ -1,0 +1,12 @@
+[
+  {
+    "question_id": "P1",
+    "answer": "N(John).\nN(Kim).\nV(help).\nV(let).\nS(xywz) :- N(x), V(y), N(w), V(z).",
+    "reasoning": "To handle embedded clauses with 'help' and 'let', I need facts declaring John and Kim as nouns, help and let as verbs, and a rule that allows a sentence structure with subject-verb-object-verb pattern, which captures constructions like 'Mary help John paint'."
+  },
+  {
+    "question_id": "P2",
+    "answer": "T(em, Jan).\nT(de, Hans).\nT(hälfe, hälfe).\nT(laa, laa).",
+    "reasoning": "Swiss German appears to use the pairing mechanism where 'em Jan' and 'de Hans' are treated as pairs that can be interleaved using the R rule. The verbs 'hälfe' (help) and 'laa' (let) are represented as identical pairs to allow their placement in the sentence structure."
+  }
+]

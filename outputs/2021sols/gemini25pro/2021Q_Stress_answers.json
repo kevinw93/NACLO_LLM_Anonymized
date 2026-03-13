@@ -1,0 +1,187 @@
+[
+  {
+    "question_id": "Q1_a",
+    "answer": "odd",
+    "reasoning": "Step 1 of the algorithm establishes the basic stress pattern. I tested assigning stress to odd-numbered and even-numbered syllables. Assigning stress to odd-numbered syllables (from the left: 1st, 3rd, 5th, etc.) successfully matched the locations of stressed syllables in words like 'galligaskins' (GALL.i.GAS.kins) and 'illustration' (IL.lu.STRA.tion). For other words, it created a superset of the correct stresses, which could then be corrected by Step 2. For instance, for 'elephant', it predicted stress on 'E' and 'phant', which is close to the correct '*E.le.phant'."
+  },
+  {
+    "question_id": "Q1_b",
+    "answer": "final",
+    "reasoning": "Step 2 is a correction rule that unstresses a syllable. I observed that after applying Step 1 (stressing odd syllables), words like 'elephant' (*E.le.PHANT) and 'vitamin' (*VI.ta.MIN) had an incorrect stress on their final syllable. The data shows these final syllables should be unstressed. Therefore, the rule must target the 'final' syllable for un-stressing."
+  },
+  {
+    "question_id": "Q1_c",
+    "answer": "one",
+    "reasoning": "The 'UNLESS' clause in Step 2 creates an exception to the un-stressing rule. Monosyllabic words like '*CRUSH' and '*DIME' consist of a single, final syllable that is stressed. According to the first part of Step 2, this syllable would be unstressed. However, the data shows it remains stressed. The exception clause 'UNLESS the word is one syllable long' correctly prevents these words from being unstressed, making the algorithm work for them."
+  },
+  {
+    "question_id": "Q1_d",
+    "answer": "stressed",
+    "reasoning": "Step 3 assigns primary stress from among the syllables that are already marked as stressed after Steps 1 and 2. For example, in 'galligaskins', the stressed syllables are GALL and GAS. The primary stress is on GAS. In 'ultracrepidarian', the stressed syllables are UL, CRE, and DA, with primary stress on DA. The rule must select from the set of 'stressed' syllables."
+  },
+  {
+    "question_id": "Q1_e",
+    "answer": "right",
+    "reasoning": "After identifying that primary stress is assigned to one of the already stressed syllables, I needed to determine its position. In all multi-stress examples ('illustration', 'galligaskins', 'ultracrepidarian', 'supercalifragilisticexpialidocious'), the syllable with primary stress (*) is the one that is farthest to the 'right' (i.e., the rightmost stressed syllable). For 'illustration' {IL, STRA}, it's STRA. For 'galligaskins' {GALL, GAS}, it's GAS. This pattern is consistent across all data."
+  },
+  {
+    "question_id": "Q2_1",
+    "answer": "One factor is the grammatical category (part of speech) of a word. For example, the noun 'an *EX.port' has stress on the first syllable, while the verb 'to ex.*PORT' has stress on the second. The same pattern is seen with *OB.ject (noun) / ob.*JECT (verb) and *PER.mit (noun) / per.*MIT (verb). Another factor is focus or contrastive stress, where speakers can override normal stress patterns to emphasize a particular word. This is shown by the stress on the pronouns '*SHE' and '*I' and the determiner '*THAT' in the conversation, which would normally be unstressed.",
+    "reasoning": "I analyzed the provided conversation to find stress patterns not explained by the simple alternating algorithm in Q1. I identified two-syllable noun/verb pairs with different stress patterns (e.g., *EX.port vs. ex.*PORT), which points to part of speech being a crucial factor. I also noticed that typically unstressed function words like 'she', 'I', and 'that' were stressed (*SHE, *I, *THAT), indicating that pragmatic factors like contrastive focus can alter stress placement. A third related factor is the distinction between content words, which generally receive stress, and function words, which generally don't, a distinction the Q1 algorithm doesn't make."
+  },
+  {
+    "question_id": "Q3_Mapudungun_1",
+    "answer": "left",
+    "reasoning": "In Mapudungun, the stress pattern is consistently on the 2nd, 4th, 6th, etc., syllables (e.g., e.*LU.mu.YU). This is an alternating pattern that begins near the start of the word, so the direction must be from the 'left'."
+  },
+  {
+    "question_id": "Q3_Mapudungun_2",
+    "answer": "skip",
+    "reasoning": "To generate stress on even-numbered syllables (2, 4, 6...) when starting from the left, the algorithm must 'skip' the first syllable before starting the alternating stress assignment."
+  },
+  {
+    "question_id": "Q3_Mapudungun_3",
+    "answer": "every alternating",
+    "reasoning": "The stress pattern affects all even syllables, not just the first one encountered (e.g., e.*LU.mu.YU has stress on the 2nd and 4th syllables). Therefore, the parameter must be 'every alternating'."
+  },
+  {
+    "question_id": "Q3_Mapudungun_4",
+    "answer": "leave it that way",
+    "reasoning": "In words where the alternating pattern stresses the final syllable (e.g., 'wule' -> wu.*LE, 'elumuyu' -> e.*LU.mu.YU), the data shows that the stress remains. Thus, the final syllable stress should be 'left that way'."
+  },
+  {
+    "question_id": "Q3_Mapudungun_5",
+    "answer": "leftmost",
+    "reasoning": "In words with multiple stressed syllables (e.g., e.*LU.mu.YU, ki.*MU.fa.LU.wu.LAY), the primary stress (marked with *) consistently falls on the first stressed syllable encountered, which is the 'leftmost' one."
+  },
+  {
+    "question_id": "Q3_Maranungku_1",
+    "answer": "left",
+    "reasoning": "In Maranungku, stress falls on the 1st, 3rd, 5th, etc., syllables (e.g., *YANG.ar.MA.ta). This alternating pattern starts at the beginning of the word, indicating a 'left' to right direction."
+  },
+  {
+    "question_id": "Q3_Maranungku_2",
+    "answer": "don't skip",
+    "reasoning": "To generate stress on odd-numbered syllables (1, 3, 5...) when starting from the left, the algorithm must 'don't skip' the initial syllable."
+  },
+  {
+    "question_id": "Q3_Maranungku_3",
+    "answer": "every alternating",
+    "reasoning": "The stress pattern applies to all odd syllables, not just the first one (e.g., *ME.re.PET has stress on the 1st and 3rd). So, the parameter must be 'every alternating'."
+  },
+  {
+    "question_id": "Q3_Maranungku_4",
+    "answer": "leave it that way",
+    "reasoning": "When the alternating rule stresses a final syllable (e.g., in 'merepet' and 'langkarateti'), the data shows the stress is kept. Therefore, the parameter is 'leave it that way'."
+  },
+  {
+    "question_id": "Q3_Maranungku_5",
+    "answer": "leftmost",
+    "reasoning": "In all the examples provided for Maranungku, the primary stress (*) is on the very first syllable of the word. This is always the 'leftmost' stressed syllable."
+  },
+  {
+    "question_id": "Q3_Weri_1",
+    "answer": "right",
+    "reasoning": "In Weri, stress falls on the 1st, 3rd, 5th, etc., syllables counting from the end of the word (e.g., u.LU.a.*MIT has stress on the 1st and 3rd syllables from the end). The pattern originates at the word's end, so the direction is from the 'right'."
+  },
+  {
+    "question_id": "Q3_Weri_2",
+    "answer": "don't skip",
+    "reasoning": "To generate stress on odd-numbered syllables (1, 3, 5...) counting from the right, the algorithm must 'don't skip' the initial syllable at the right edge."
+  },
+  {
+    "question_id": "Q3_Weri_3",
+    "answer": "every alternating",
+    "reasoning": "The pattern stresses all odd syllables from the right, not just the first one (e.g., 'kulipu' -> KU.li.*PU). The parameter must be 'every alternating'."
+  },
+  {
+    "question_id": "Q3_Weri_4",
+    "answer": "leave it that way",
+    "reasoning": "The rule (stressing odd syllables from the right) always stresses the final syllable of the word. The data shows the final syllable is always stressed. Thus, the setting must be 'leave it that way'."
+  },
+  {
+    "question_id": "Q3_Weri_5",
+    "answer": "rightmost",
+    "reasoning": "In all Weri examples with multiple stresses (e.g., KU.li.*PU, u.LU.a.*MIT), the primary stress (*) falls on the final syllable, which is the 'rightmost' stressed syllable."
+  },
+  {
+    "question_id": "Q3_Mansi_1",
+    "answer": "left",
+    "reasoning": "In Mansi, the basic pattern appears to be stress on odd-numbered syllables from the beginning of the word (e.g., *O.ma.TE.nel). This indicates a 'left' to right direction."
+  },
+  {
+    "question_id": "Q3_Mansi_2",
+    "answer": "don't skip",
+    "reasoning": "To stress the 1st, 3rd, etc., syllables from the left, the algorithm must 'don't skip' the first syllable."
+  },
+  {
+    "question_id": "Q3_Mansi_3",
+    "answer": "every alternating",
+    "reasoning": "Words like 'omatenel' (*O.ma.TE.nel) show stress on more than just the first odd syllable, so the parameter is 'every alternating'."
+  },
+  {
+    "question_id": "Q3_Mansi_4",
+    "answer": "un-stress it",
+    "reasoning": "Applying the 'odd syllables from the left' rule to 'atenel' would yield *A.te.NEL. However, the data is *A.te.nel. The final syllable is not stressed. The same applies to 'pocaganelnel'. This shows a consistent pattern of un-stressing a word's final syllable if it would have otherwise received stress."
+  },
+  {
+    "question_id": "Q3_Mansi_5",
+    "answer": "leftmost",
+    "reasoning": "In all Mansi examples, the primary stress (*) is on the first syllable of the word. This corresponds to the 'leftmost' stressed syllable."
+  },
+  {
+    "question_id": "Q3_Warao_1",
+    "answer": "right",
+    "reasoning": "The stress pattern in Warao is initially confusing, with some words having stress on odd syllables from the left and others on even syllables. However, a consistent pattern emerges when counting from the 'right': stress always falls on the 2nd, 4th, 6th, etc., syllables from the end (e.g., yi.WA.ra.*NA.e has stress on the 4th and 2nd syllables from the right)."
+  },
+  {
+    "question_id": "Q3_Warao_2",
+    "answer": "skip",
+    "reasoning": "To generate stress on even-numbered syllables (2, 4, 6...) from the right, the algorithm must 'skip' the first syllable at the right edge."
+  },
+  {
+    "question_id": "Q3_Warao_3",
+    "answer": "every alternating",
+    "reasoning": "The data shows that all even syllables from the right are stressed, not just one (e.g., YA.pu.RU.ki.TA.ne.*HA.se). Therefore, the parameter is 'every alternating'."
+  },
+  {
+    "question_id": "Q3_Warao_4",
+    "answer": "leave it that way",
+    "reasoning": "The rule (stressing even syllables from the right) never assigns stress to the final syllable (which is the 1st from the right). Therefore, this parameter is never applied, and either option would work. 'leave it that way' is a valid choice."
+  },
+  {
+    "question_id": "Q3_Warao_5",
+    "answer": "rightmost",
+    "reasoning": "In all Warao examples, the primary stress (*) falls on the stressed syllable that is closest to the end of the word (e.g., in NA.ho.RO.a.HA.ku.*TA.i, the stressed syllables are NA, RO, HA, TA, and the primary stress is on TA). This is the 'rightmost' stressed syllable."
+  },
+  {
+    "question_id": "Q3_Comalapa_Kaqchikel_1",
+    "answer": "right",
+    "reasoning": "In Comalapa Kaqchikel, stress is consistently on the final syllable of the word. The easiest way to model this is to start the procedure from the 'right' edge of the word."
+  },
+  {
+    "question_id": "Q3_Comalapa_Kaqchikel_2",
+    "answer": "don't skip",
+    "reasoning": "To target the final syllable (which is the first syllable from the right), the algorithm must 'don't skip' it."
+  },
+  {
+    "question_id": "Q3_Comalapa_Kaqchikel_3",
+    "answer": "only the first",
+    "reasoning": "The data shows that only one syllable—the final one—is ever stressed. By selecting 'only the first' syllable encountered from the right, the algorithm correctly stresses only the final syllable and no others."
+  },
+  {
+    "question_id": "Q3_Comalapa_Kaqchikel_4",
+    "answer": "leave it that way",
+    "reasoning": "The algorithm always stresses the final syllable, and the data confirms this stress is always present. Therefore, the parameter must be 'leave it that way'."
+  },
+  {
+    "question_id": "Q3_Comalapa_Kaqchikel_5",
+    "answer": "rightmost",
+    "reasoning": "Since only one syllable is ever stressed, it is simultaneously the leftmost and rightmost stressed syllable. Either choice is correct. I have chosen 'rightmost' for consistency."
+  },
+  {
+    "question_id": "Q4_1",
+    "answer": "Stress assignment in Selkup is determined by the presence and position of long vowels. If a word contains one or more long vowels (indicated by double letters like 'oo' or 'ii'), the stress falls on the rightmost syllable containing a long vowel. If a word has no long vowels, the stress falls on the first syllable.",
+    "reasoning": "I observed that the position of stress in Selkup was not fixed and did not follow a simple alternating pattern. I then noticed that some syllables contained double vowel letters ('oo', 'uu', 'ii'), likely representing long vowels. I formulated a hypothesis based on this observation: stress location depends on long vowels. I checked this hypothesis against the data. For words with long vowels (e.g., 'qumooqlilii' with 'oo' and 'ii'), stress fell on the rightmost one ('LII'). For words with only one long vowel (e.g., 'qumooqi' with 'oo'), it fell on that syllable ('MOO'). For words with no long vowels (e.g., 'quminik'), stress fell on the first syllable ('QU'). This two-part rule correctly predicted the stress for all given examples."
+  }
+]

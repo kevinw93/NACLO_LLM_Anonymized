@@ -1,0 +1,37 @@
+[
+  {
+    "question_id": "B1_1",
+    "answer": "0",
+    "reasoning": "For Northern Pame, the structure `X tenhiun Y` appears to be additive, meaning `X + Y`. From the given data:\n1.  `kara tenhiun sante = 9` => `kara + sante = 9`\n2.  `kara tenhiun gitʃ'aj = 13` => `kara + gitʃ'aj = 13`\n3.  `kanuje tenhiun sante = 17` => `kanuje + sante = 17`\n4.  `kanuje tenhiun giriuj = 20` => `kanuje + giriuj = 20`\n5.  `karnu? tenhiun nuji = 26` => `karnu? + nuji = 26`\n6.  `karnu? tenhiun tiria = 30` => `karnu? + tiria = 30`\n7.  `giriuj tenhiun rnu? = 35` => `giriuj + rnu? = 35`\n\nFrom these, we can derive relationships:\n*   (2) - (1) => `gitʃ'aj - sante = 4`\n*   (3) - (1) => `kanuje - kara = 8`\n*   (4) - (3) => `giriuj - sante = 3` => `giriuj = sante + 3`\n*   (6) - (5) => `tiria - nuji = 4`\n\nUsing the relationship `giriuj = sante + 3` and `kanuje + giriuj = 20`:\n*   `kanuje + (sante + 3) = 20` => `kanuje + sante = 17`. This is consistent with (3).\n\nLet's assume `kara = 1` (a common starting number):\n*   From `kara + sante = 9` (1) => `1 + sante = 9` => `sante = 8`.\n*   From `kanuje - kara = 8` => `kanuje - 1 = 8` => `kanuje = 9`.\n*   From `giriuj = sante + 3` => `giriuj = 8 + 3 = 11`.\n*   From `giriuj + rnu? = 35` (7) => `11 + rnu? = 35` => `rnu? = 24`.\n\nNow, we use the Central Pame information. First, determine Central Pame values.\n(3) `nda lien nda X nui = nui lien nui`\nAssuming `X lien Y` means `X * B + Y` (where `B` is a base like 10 or 20):\n`(nda * B + nda) * nui = (nui * B + nui)`\n`(B + 1) * nda * nui = (B + 1) * nui`. This implies `nda = 1` (assuming `nui` and `B+1` are not zero).\n\n(8) `nda + nui = ranhũ?` => `1 + nui = ranhũ?`\n(6) `seska?ai kik'ai + kik'ai = nui X seska?ai`\nAssuming `seska?ai kik'ai` is a compound word for a number, and `X Y` means `X * Y` for single digit numbers when `X` is explicit. Let's try `seska?ai=2`, `kik'ai=2`, `nui=3`.\n`N_seska?ai_kik'ai + 2 = 3 * 2` => `N_seska?ai_kik'ai = 4`. So `seska?ai kik'ai = 4`.\n`ranhũ? = 1 + nui = 1 + 3 = 4`. This is consistent: `ranhũ?` (4) and `seska?ai kik'ai` (4) are synonyms.\n\n(7) `kik'ai + ranhũ? = nda ntsaw?` => `2 + 4 = nda ntsaw?` => `nda ntsaw? = 6`.\n(2) `kinui + nda ntsaw? = seska?ai nui`. Assuming `seska?ai nui` is `seska?ai * nui` (if implicit multiplication of digits): `kinui + 6 = 2 * 3` => `kinui + 6 = 6` => `kinui = 0`.\n\nSo for Central Pame, we have: `kinui=0, nda=1, seska?ai=2, nui=3, ranhũ?=4, kik'ai=2`. Compound words: `nda ntsaw?=6`, `seska?ai nui=6`, `seska?ai kik'ai=4`.\n\nNow to determine `lien` (Base `B`): \n(5) `seska?ai ranhũ? X ranhũ? = nda lien seska?ai nda ntsaw? nda`\n`2 * 4 * 4 = nda lien (seska?ai * nda ntsaw? * nda)`\n`32 = 1 lien (2 * 6 * 1)` => `32 = 1 lien 12`\nIf `1 lien 12` means `1 * B + 12`, then `32 = B + 12` => `B = 20`. So `lien = 20`.\n\nNow back to Northern Pame and the connecting equation (9):\n`teriuhin X kara tenhiun nuji = ranhũ? lien seska?ai`\n`ranhũ? lien seska?ai = 4 * 20 + 2 = 82`.\nSo `teriuhin X (kara + nuji) = 82` (using the additive rule for Northern Pame).\n`teriuhin * (1 + nuji) = 82`.\n\nWe need `nuji` from `karnu? + nuji = 26` and `karnu? + tiria = 30`. (`tiria = nuji + 4`).\nWe also need to find integer solutions for `nuji` and `karnu?` that fit `teriuhin * (1 + nuji) = 82`.\nFactors of 82 are 1, 2, 41, 82.\nIf `1 + nuji = 1`, then `nuji = 0`. Then `teriuhin = 82 / 1 = 82`.\nIf `nuji = 0`:\n`karnu? + 0 = 26` => `karnu? = 26`.\n`tiria = 0 + 4 = 4`.\nThis set of values for Northern Pame is consistent.\n\nThus, `nuji = 0`."
+  },
+  {
+    "question_id": "B1_2",
+    "answer": "108",
+    "reasoning": "Following the Northern Pame values derived in B1.a:\n*   `karnu? = 26`\n*   `teriuhin = 82`\n\nThe number `karnu? tenhiun teriuhin` follows the additive rule for Northern Pame numbers: `karnu? + teriuhin`.\n`karnu? + teriuhin = 26 + 82 = 108`."
+  },
+  {
+    "question_id": "B2_1",
+    "answer": "nda",
+    "reasoning": "Based on the Central Pame analysis (see B1.a reasoning):\n*   `nda = 1`."
+  },
+  {
+    "question_id": "B2_2",
+    "answer": "nui",
+    "reasoning": "Based on the Central Pame analysis (see B1.a reasoning):\n*   `nui = 3`."
+  },
+  {
+    "question_id": "B2_3",
+    "answer": "nui X nui X nda",
+    "reasoning": "Based on the Central Pame analysis (see B1.a reasoning):\n*   We have `nda = 1`, `seska?ai = 2`, `nui = 3`, `ranhũ? = 4`.\n*   To represent `9`, we can compose it using multiplication, given that `X` explicitly means multiplication. `nui X nui X nda` represents `3 * 3 * 1 = 9`."
+  },
+  {
+    "question_id": "B2_4",
+    "answer": "nui X lien - ranhũ? X nda",
+    "reasoning": "Based on the Central Pame analysis (see B1.a reasoning):\n*   We have `nda = 1`, `seska?ai = 2`, `nui = 3`, `ranhũ? = 4`, `lien = 20`.\n*   To represent `56`, we can use the base-20 system and a subtractive form (common in Pame languages, as observed in the contradiction for `tilinũhũn` which implies a subtractive operation for 18 when it's `20-2`).\n*   `nui X lien` represents `3 * 20 = 60`.\n*   `ranhũ? X nda` represents `4 * 1 = 4`.\n*   So, `nui X lien - ranhũ? X nda` represents `60 - 4 = 56`."
+  },
+  {
+    "question_id": "B2_5",
+    "answer": "nui X lien",
+    "reasoning": "Based on the Central Pame analysis (see B1.a reasoning):\n*   We have `nui = 3`, `lien = 20`.\n*   To represent `60`, we can use the base-20 system.\n*   `nui X lien` represents `3 * 20 = 60`."
+  }
+]

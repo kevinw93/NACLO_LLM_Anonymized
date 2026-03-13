@@ -1,0 +1,47 @@
+Model: gpt-5
+Generation Time: 128.10 seconds
+Timestamp: 2025-12-01 12:24:40
+================================================================================
+
+[
+  {
+    "question_id": "M1_1",
+    "answer": "D",
+    "reasoning": "Tá X ag Y means Y has X; deirfiúr bheag = short sister (feminine triggers lenition), deartháir cineálta = kind brother."
+  },
+  {
+    "question_id": "M1_2",
+    "answer": "A",
+    "reasoning": "deartháir cliste = smart brother; garmhac santach = greedy grandson; pattern Tá X ag Y."
+  },
+  {
+    "question_id": "M1_3",
+    "answer": "B",
+    "reasoning": "nia cúthail = shy nephew; iníon chineálta = kind daughter; Tá X ag Y."
+  },
+  {
+    "question_id": "M2_1",
+    "answer": "C A kind grandson has a smart sister.",
+    "reasoning": "garmhac cineálta = kind grandson (no lenition after masculine); deirfiúr chliste = smart sister (lenition after feminine)."
+  },
+  {
+    "question_id": "M2_2",
+    "answer": "E A shy sister has a greedy daughter.",
+    "reasoning": "deirfiúr chúthail = shy sister; iníon shantach = greedy daughter; Tá X ag Y."
+  },
+  {
+    "question_id": "M3_1",
+    "answer": "Tá iníon chúthail ag garmhac cliste.",
+    "reasoning": "Translate ‘A smart grandson has a shy daughter’: Tá X ag Y; iníon (fem.) lenites adjective → chúthail; garmhac cliste unchanged."
+  },
+  {
+    "question_id": "M3_2",
+    "answer": "Tá nia beag ag deirfiúr shantach.",
+    "reasoning": "Translate ‘A greedy sister has a short nephew’: nia (masc.) takes beag without lenition; deirfiúr (fem.) lenites adjective → shantach."
+  },
+  {
+    "question_id": "M4_1",
+    "answer": "",
+    "reasoning": "Observations: Possession uses Tá X ag Y (‘Y has X’). Nouns: garmhac=grandson, deartháir=brother, deirfiúr=sister, iníon=daughter, nia=nephew. Adjectives follow nouns. After feminine singular nouns (deirfiúr, iníon), adjectives lenite (c→ch, s→sh, b→bh): deirfiúr bheag, deirfiúr chúthail, iníon chineálta, iníon shantach. After masculine nouns (deartháir, garmhac, nia) there is no lenition: deartháir cliste, garmhac cineálta, nia cúthail/beag. Using these patterns determines the matches and permits the new translations."
+  }
+]

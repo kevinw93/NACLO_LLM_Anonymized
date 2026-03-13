@@ -1,0 +1,97 @@
+Model: grok-4-fast-reasoning
+Generation Time: 118.64 seconds
+Timestamp: 2026-01-28 01:17:28
+================================================================================
+
+[
+  {
+    "question_id": "J1",
+    "answer": "consonant alternation: d → dz",
+    "reasoning": "From the examples, I see patterns of consonant changes in plural formation for masculine animate nouns, such as adwokat → adwokaci where t → c before -i. Similarly, for words ending in -d like darmozjad, the d alternates to dz before the -i ending, resulting in darmozjadzi instead of the naive *darmozjadi. This is a standard phonological alternation in Polish declension for such stems to ease pronunciation."
+  },
+  {
+    "question_id": "J2",
+    "answer": "wielkołudy (for ordinary/large humans); wielkołudowie (for mythical/legendary giants)",
+    "reasoning": "Analyzing examples, nouns referring to persons or titles often have -y/-i or -owie plurals. Kolega → koledzy uses -y with stem change, while kardynał → kardynałowie and emir → emirowie use -owie for formal or titled humans. Wielkołud 'giant' can refer to either oversized people (general, hard stem -ud → -udy) or mythical beings (like titles, -udowie). The dual forms reflect semantic distinction: everyday vs. legendary usage, consistent with variable plurals in Polish for nuanced meanings."
+  },
+  {
+    "question_id": "J3_A",
+    "answer": "kalendarze",
+    "reasoning": "Kalendarz is a masculine inanimate noun ending in -rz. From examples like pancerz → pancerze and adwersarz → adwersarze, nouns ending in sibilant -rz take -rze in plural. No adjective, so just the noun plural."
+  },
+  {
+    "question_id": "J3_B",
+    "answer": "jarskie kapelusze",
+    "reasoning": "Kapelusz is masculine inanimate ending in -usz, plural -usze like notariusze → notariusze. Adjective jarski (hard stem) in nominative plural for inanimate takes -ie (from patterns like biedne for inanimates). Full phrase plural: jarskie kapelusze."
+  },
+  {
+    "question_id": "J3_C",
+    "answer": "zbójnicy",
+    "reasoning": "Interpreting 'otrnik' as OCR error for 'zbójnik' (villain/robber, fits letters approximately). Zbójnik is masculine animate ending in -nik, plural -nicy with k → c, like robotnik → robotnicy (from later example) or optymista → optymisci. No adjective."
+  },
+  {
+    "question_id": "J3_D",
+    "answer": "robotnicy",
+    "reasoning": "Robotnik is masculine animate ending in -nik. Pattern from similar -nik like blonisty artysta → blonisci artyści (though artist), but specifically -tnik → -tnicy with k → c before i, as in chiński → chińscy. Hard stem takes -y but with cy for this."
+  },
+  {
+    "question_id": "J3_E",
+    "answer": "chorowici chirurdzy",
+    "reasoning": "Chirurg is masculine animate ending in -urg, plural chirurdzy with g → dz (voiced alternation before y, like antropolodzy). Adjective chorowity (y-adjective) plural m anim chorowici (y → i, no further alt). Patterns from blady → bladzi, autor → autorzy."
+  },
+  {
+    "question_id": "J3_F",
+    "answer": "partnerzy",
+    "reasoning": "Partner is masculine animate ending in -er, plural -erzy like autor → autorzy or dystrybutor → dystrybutorzy. Hard stem r takes -zy."
+  },
+  {
+    "question_id": "J3_G",
+    "answer": "zwaliści golfiści",
+    "reasoning": "Golfista masculine animate -ista → -iści like optymista → optymisci, blonisty artysta → artyści. Adjective zwalisty (y-adj) plural m anim zwaliści (y → i, similar to blady → bladzi)."
+  },
+  {
+    "question_id": "J3_H",
+    "answer": "zachodni europejscy akordeoniści",
+    "reasoning": "Akordeonista m anim -ista → -iści. Adjectives: zachodni (i-adj) plural m anim remains zachodni (no alt). Europejski (-ski adj) → europejscy (k → c, i → y for hard pl). Pattern from chiński → chińscy, polski implied in Polacy."
+  },
+  {
+    "question_id": "J3_I",
+    "answer": "szybcy piloci",
+    "reasoning": "Interpreting 'chybki' as OCR for 'szybki' (swift). Pilot m anim -lot → piloci (t → c before i, like adwokat → adwokaci). Adjective szybki (-ki adj) plural m anim szybcy (k → c)."
+  },
+  {
+    "question_id": "J3_J",
+    "answer": "czepki",
+    "reasoning": "Czep ek (diminutive bonnet) masculine inanimate -ek → -ki, like odcinek → odcinki, obojczyk → obojczyki. Inanimate object."
+  },
+  {
+    "question_id": "J3_K",
+    "answer": "grzejniki",
+    "reasoning": "Grzejnik m inanim -nik → -niki, like obojczyk → obojczyki (though animate, but -czyk → -czyki; for -nik inanim -niki). Hard stem."
+  },
+  {
+    "question_id": "J3_L",
+    "answer": "rude groby",
+    "reasoning": "Grób m inanim -ób → -oby like dochód → dochody (but -ód → -ody; similar vowel change). Adjective rudy (y-adj) inanim pl rude (-e)."
+  },
+  {
+    "question_id": "J3_M",
+    "answer": "szympansy",
+    "reasoning": "Szympans m animate -ans → -ansy, hard stem like indyk → indyki but y for ps? Wait, -ps hard, -y like Polacy (though acy), general animate hard -y."
+  },
+  {
+    "question_id": "J3_N",
+    "answer": "panowie",
+    "reasoning": "Pan m animate (person/title), special plural -owie like kolega? Wait, kolega koledzy, but pan → panowie (standard for 'mister/lord'). Pattern from kardynałowie, emirowie for human referents."
+  },
+  {
+    "question_id": "J3_O",
+    "answer": "zalążki",
+    "reasoning": "Zalążek m inanim diminutive -ążek → -ążki, like odcinek → odcinki (ek → ki), with ż preserved."
+  },
+  {
+    "question_id": "J4",
+    "answer": "Polish noun plurals depend on gender, animacy, and stem: masc. animate often -i/-y (soft/hard stems, e.g., -ista → -iści, -at → -aci w/ t→c; special -owie for persons); inanim. -y/-i/-e (e.g., -rz → -rze, -ek → -ki); alternations (d→dz, t→c, k→c, g→dz); adjs. agree (anim. -i/-y, inanim. -e); -y after hard cons. (incl. sz/rz/cz/dz/ń/f), -i after soft.",
+    "reasoning": "Synthesizing all examples: endings grouped by type (animate -i/y/owie/e, inanim -y/i/e); alternations from cases like adwokaci, antropolodzy, Polacy; adjs. from biedne, bladzi, chińscy; note emphasizes hard cons. for -y choice and y as vowel. Covers variations without external access."
+  }
+]

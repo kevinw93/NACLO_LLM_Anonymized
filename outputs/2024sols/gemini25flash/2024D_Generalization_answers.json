@@ -1,0 +1,132 @@
+[
+  {
+    "question_id": "D1_a",
+    "answer": "U",
+    "reasoning": "C1 marks sentences as 'U' unless they are an exact verbatim match to one of the 17 training sentences. Sentence 31 is not an exact match."
+  },
+  {
+    "question_id": "D1_b",
+    "answer": "U",
+    "reasoning": "C1 marks sentences as 'U' unless they are an exact verbatim match to one of the 17 training sentences. Sentence 32 is not an exact match."
+  },
+  {
+    "question_id": "D1_c",
+    "answer": "U",
+    "reasoning": "Sentence 33 ('The visited met linguist programmer.') is structurally illogical and ungrammatical for humans. C3 generally identifies such clearly ungrammatical sentences as 'U', similar to C2."
+  },
+  {
+    "question_id": "D1_d",
+    "answer": "G",
+    "reasoning": "Sentence 34 ('The yodeler met the woodcarver.') follows a standard Subject-Verb-Object pattern with words known from the training set. C2 generalizes well for such structures and has no specific 'agent-patient' rule against this combination."
+  },
+  {
+    "question_id": "D1_e",
+    "answer": "G",
+    "reasoning": "Sentence 35 ('The watchmaker is famous.') follows a standard 'Noun is Adjective' pattern with words known from the training set. C2 generalizes well for such structures."
+  },
+  {
+    "question_id": "D1_f",
+    "answer": "G",
+    "reasoning": "C1 marks sentences as 'G' only if they are an exact verbatim match to one of the 17 training sentences. Sentence 36 is an exact match to Training 10."
+  },
+  {
+    "question_id": "D1_g",
+    "answer": "G",
+    "reasoning": "Sentence 36 ('The detective met the yodeler.') is an exact match to a training sentence. C2 accepts such sentences."
+  },
+  {
+    "question_id": "D1_h",
+    "answer": "G",
+    "reasoning": "Sentence 36 ('The detective met the yodeler.') is an exact match to a training sentence. C4, despite overgeneralizing, would certainly mark exact matches as 'G'."
+  },
+  {
+    "question_id": "D1_i",
+    "answer": "U",
+    "reasoning": "C1 marks sentences as 'U' unless they are an exact verbatim match to one of the 17 training sentences. Sentence 37 is not an exact match."
+  },
+  {
+    "question_id": "D1_j",
+    "answer": "G",
+    "reasoning": "Sentence 37 ('The spy is talented.') follows a standard 'Noun is Adjective' pattern with words known from the training set. C2 generalizes well for such structures."
+  },
+  {
+    "question_id": "D1_k",
+    "answer": "G",
+    "reasoning": "Sentence 37 ('The spy is talented.') contains known words in a plausible structure. C4 is lenient and tends to overgeneralize, marking such sentences as 'G'."
+  },
+  {
+    "question_id": "D1_l",
+    "answer": "U",
+    "reasoning": "C1 marks sentences as 'U' unless they are an exact verbatim match to one of the 17 training sentences. Sentence 38 is not an exact match."
+  },
+  {
+    "question_id": "D1_m",
+    "answer": "G",
+    "reasoning": "Sentence 38 ('The programmer met the cartoonist.') follows a standard Subject-Verb-Object pattern with words known from the training set. C2 generalizes well for such structures."
+  },
+  {
+    "question_id": "D1_n",
+    "answer": "G",
+    "reasoning": "Sentence 38 ('The programmer met the cartoonist.') contains known words in a plausible structure. C4 is lenient and tends to overgeneralize, marking such sentences as 'G'."
+  },
+  {
+    "question_id": "D2_1",
+    "answer": "happy",
+    "reasoning": "HIDDEN_WORD_1 must be a predicative adjective (fits 'is X') and a pre-nominal adjective (fits 'X concierge'). 'Happy' fits both ('watchmaker is happy', 'happy concierge')."
+  },
+  {
+    "question_id": "D2_2",
+    "answer": "main",
+    "reasoning": "HIDDEN_WORD_2 must be a pre-nominal adjective (fits 'main concierge') but typically not a predicative adjective (e.g., 'watchmaker is main' is ungrammatical). This aligns with C2 marking sentence 41 as 'U' (ungrammatical) and sentence 42 as 'G' (grammatical)."
+  },
+  {
+    "question_id": "D2_3",
+    "answer": "asleep",
+    "reasoning": "HIDDEN_WORD_3 must be a predicative adjective (fits 'watchmaker is asleep') but not typically a pre-nominal adjective (e.g., 'asleep concierge' is awkward). This aligns with C2 marking sentence 44 as 'U' (ungrammatical) and sentence 43 as 'G' (grammatical)."
+  },
+  {
+    "question_id": "D3_1",
+    "answer": "6",
+    "reasoning": "Comparing human judgments for sentences 39-44 with C2's judgments: (39: G/G), (40: G/G), (41: U/U), (42: G/G), (43: G/G), (44: U/U). All 6 judgments match."
+  },
+  {
+    "question_id": "D3_2",
+    "answer": "4",
+    "reasoning": "Comparing human judgments for sentences 39-44 with C3's judgments: (39: G/G), (40: G/G), (41: U/G - Mismatch), (42: G/G), (43: G/G), (44: U/G - Mismatch). 4 judgments match."
+  },
+  {
+    "question_id": "D4_1",
+    "answer": "COMPRESS",
+    "reasoning": "Context: 'make this picture smaller for me? ... happy to QGTRHUUJ it for you!'. 'COMPRESS' is an 8-letter verb that perfectly fits the context and length of 'QGTRHUUJ'."
+  },
+  {
+    "question_id": "D4_2",
+    "answer": "REDUCIBILITY",
+    "reasoning": "Context: 'The RKQGKHEHDKBW of the smaller version should make it easier to move around.' 'REDUCIBILITY' is a 12-letter noun that fits the context of making something smaller and manageable, and matches the length of 'RKQGKHEHDKBW'."
+  },
+  {
+    "question_id": "D4_3",
+    "answer": "DISTORTED-IMAGE",
+    "reasoning": "Context: 'The picture is currently UQYETKFQ-DKAPE. ... it often distorts images.' This strongly suggests a visual quality issue. 'DISTORTED-IMAGE' fits the context. 'UQYETKFQ-DKAPE' is 10-5 letters. 'DISTORTED' is 9 letters, 'IMAGE' is 5 letters. There is a 1-letter mismatch for the first part, which I am accepting as the best contextual fit."
+  },
+  {
+    "question_id": "D4_4",
+    "answer": "JON",
+    "reasoning": "Context: 'Who is the tallest person in the picture? ... EPX!' This is a response pointing to a person, likely a name. 'JON' is a common 3-letter name that fits the length of 'EPX'. (E=J, P=O, X=N)."
+  },
+  {
+    "question_id": "D4_5",
+    "answer": "ACCEPTED",
+    "reasoning": "Context: 'I will make this HEEQRMEKXG soon. I will request an appointment TXRQCPQG next week.' This implies the status of the appointment. 'HEEQRMEKXG' is 10 letters. 'ACCEPTED' is an 8-letter word. 'CONFIRMED' (9 letters) or 'SCHEDULED' (9 letters) are good fits for context but mismatch by 1 letter in length. I choose 'ACCEPTED' despite the 2-letter mismatch to provide a unique answer with a strong contextual fit."
+  },
+  {
+    "question_id": "D4_6",
+    "answer": "THURSDAY",
+    "reasoning": "Context: 'I will request an appointment TXRQCPQG next week.' This is a specific day of the week. 'TXRQCPQG' is 8 letters. 'THURSDAY' is an 8-letter day that fits the context and length perfectly."
+  },
+  {
+    "question_id": "D4_7",
+    "answer": "CREDENTIALS",
+    "reasoning": "Context: 'They thought our company had many FHUUJXRRGAT, so they were happy to hire us.' This refers to the positive attributes that attracted clients. 'CREDENTIALS' is an 11-letter noun that perfectly fits the context and length of 'FHUUJXRRGAT'."
+  }
+]
